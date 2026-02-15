@@ -529,8 +529,7 @@ export default function Home() {
             <div className="space-y-6">
               {[
                 { lang: "English", level: "Native/Bilingual", pct: 100 },
-                { lang: "French", level: "Native/Bilingual", pct: 100 },
-                { lang: "Arabic", level: "Native/Bilingual", pct: 100 }
+                { lang: "French", level: "Native/Bilingual", pct: 100 }
               ].map((l, idx) => (
                 <div key={idx} className="space-y-2">
                   <div className="flex justify-between text-sm font-medium">
