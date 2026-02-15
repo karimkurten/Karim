@@ -94,13 +94,15 @@ export default function Home() {
               <Button size="lg" className="gap-2 shadow-lg shadow-primary/20" onClick={() => scrollToSection('achievements')}>
                 View My Work <ArrowRight className="h-4 w-4" />
               </Button>
-              <Button size="lg" variant="outline" className="gap-2 bg-white/50 backdrop-blur-sm">
-                Download Resume <Download className="h-4 w-4" />
+              <Button asChild size="lg" variant="outline" className="gap-2 bg-white/50 backdrop-blur-sm">
+                <a href="mailto:karim.chaouki@gmail.com?subject=Resume Request - Karim Chaouki">
+                  Download Resume <Download className="h-4 w-4" />
+                </a>
               </Button>
             </div>
 
             <div className="flex gap-4 pt-4 text-muted-foreground">
-              <a href="#" className="hover:text-primary transition-colors p-2 hover:bg-primary/5 rounded-full"><Linkedin className="h-6 w-6" /></a>
+              <a href="https://www.linkedin.com/in/karim-chaouki/" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors p-2 hover:bg-primary/5 rounded-full"><Linkedin className="h-6 w-6" /></a>
               <a href="mailto:karim.chaouki@gmail.com" className="hover:text-primary transition-colors p-2 hover:bg-primary/5 rounded-full"><Mail className="h-6 w-6" /></a>
             </div>
           </motion.div>
@@ -574,18 +576,22 @@ export default function Home() {
           </p>
           
           <div className="flex flex-col sm:flex-row justify-center gap-4 pt-4">
-            <Button size="lg" className="bg-white text-primary hover:bg-slate-100 border-2 border-white font-bold h-14 px-8 text-lg">
-              <Mail className="mr-2 h-5 w-5" /> Schedule a Call
+            <Button asChild size="lg" className="bg-white text-primary hover:bg-slate-100 border-2 border-white font-bold h-14 px-8 text-lg">
+              <a href="mailto:karim.chaouki@gmail.com?subject=Inquiry to Schedule a Call">
+                <Mail className="mr-2 h-5 w-5" /> Schedule a Call
+              </a>
             </Button>
-            <Button size="lg" variant="outline" className="border-2 border-white/30 text-white hover:bg-white/10 hover:text-white h-14 px-8 text-lg bg-transparent">
-              <Download className="mr-2 h-5 w-5" /> Download Resume
+            <Button asChild size="lg" variant="outline" className="border-2 border-white/30 text-white hover:bg-white/10 hover:text-white h-14 px-8 text-lg bg-transparent">
+              <a href="mailto:karim.chaouki@gmail.com?subject=Resume Request - Karim Chaouki">
+                <Download className="mr-2 h-5 w-5" /> Download Resume
+              </a>
             </Button>
           </div>
           
           <div className="pt-12 border-t border-white/10 mt-12 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-primary-foreground/60">
             <p>© {new Date().getFullYear()} Karim Chaouki. All rights reserved.</p>
             <div className="flex gap-6">
-              <a href="#" className="hover:text-white transition-colors">LinkedIn</a>
+              <a href="https://www.linkedin.com/in/karim-chaouki/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">LinkedIn</a>
               <a href="mailto:karim.chaouki@gmail.com" className="hover:text-white transition-colors">karim.chaouki@gmail.com</a>
             </div>
           </div>
