@@ -1,0 +1,346 @@
+═══════════════════════════════════════════════════════════════════════════════
+                    REPLIT PROMPT FOR PORTFOLIO WEBSITE
+                         Karim Chaouki - Project Manager
+═══════════════════════════════════════════════════════════════════════════════
+
+Copy and paste this ENTIRE prompt into Replit AI Agent:
+
+═══════════════════════════════════════════════════════════════════════════════
+
+Create a professional, modern portfolio website for Karim Chaouki, a Senior HCM Implementation Manager and Project Manager. This website should attract talent acquisition teams, consultancy companies, and stakeholders in HCM implementations and project management.
+
+TARGET AUDIENCE:
+- Recruiters and talent acquisition professionals
+- Consultancy firms (Big 4, HCM implementation partners)
+- Enterprise companies seeking HCM implementation experts
+- Project management offices (PMOs)
+- ADP partners and clients
+
+DESIGN REQUIREMENTS:
+1. Modern, professional aesthetic with clean lines
+2. Color scheme: Corporate blue (#2E75B6, #1F4E78) with white/light grey backgrounds
+3. Fully responsive (mobile, tablet, desktop)
+4. Fast loading and smooth animations
+5. Professional typography (Inter, Roboto, or similar sans-serif)
+6. ATS-friendly structure that highlights keywords
+
+WEBSITE STRUCTURE:
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+SECTION 1: HERO/LANDING SECTION
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+- Full viewport height with gradient background
+- Professional headshot placeholder (circular with subtle border)
+- Main headline: "Karim Chaouki, MBA, PMP, RMP, CSM"
+- Subheading: "Senior HCM Implementation Manager | ADP Workforce Now Expert"
+- Short tagline: "Delivering enterprise HCM transformations with 100% on-time delivery record"
+- Two CTA buttons: "View My Work" (primary) and "Download Resume" (secondary)
+- Subtle animated scroll indicator at bottom
+- Social links: LinkedIn, Email icons
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+SECTION 2: ABOUT/SUMMARY
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+- Section title: "About Me"
+- Two-column layout (desktop) / stacked (mobile):
+  LEFT: Professional summary paragraph
+  RIGHT: Quick stats cards showing:
+    • 50+ Implementations
+    • 100% On-Time Delivery
+    • 95% Client Retention
+    • 7+ Years Experience
+
+Content:
+"Award-winning Project Manager delivering enterprise HCM transformations for 50+ organizations across North America. I specialize in leading complex, multi-jurisdiction ADP Workforce Now implementations from discovery through post-go-live optimization. With a 100% on-time delivery record and 20% improvement in client satisfaction scores, I turn HCM implementations into strategic business advantages."
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+SECTION 3: KEY ACHIEVEMENTS (VISUAL IMPACT)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+- Section title: "Key Achievements"
+- Grid layout with 6 achievement cards (3x2 on desktop, 2x3 on tablet, 1 column on mobile)
+- Each card has an icon, metric, and description:
+
+1. 50+ Implementations | "Led enterprise HCM implementations across multiple industries"
+2. 98% System Accuracy | "Through optimized cross-border configuration strategies"
+3. 25% Faster Resolution | "Reduced critical issue resolution time while maintaining quality"
+4. 95% Client Retention | "Exceptional post-go-live satisfaction and support"
+5. 15+ Consultants Mentored | "Accelerated ramp-up time by 25%"
+6. Employee of the Year | "300% target achievement at Société Générale (2007)"
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+SECTION 4: CORE EXPERTISE (SKILLS OVERVIEW)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+- Section title: "Core Expertise"
+- Four-column grid (responsive) with category cards:
+
+COLUMN 1: HCM & Implementation
+• ADP Workforce Now
+• HRIS Implementation
+• Payroll Systems
+• Multi-Jurisdiction Compliance
+• Benefits Administration
+• Time & Attendance
+• Talent Management
+
+COLUMN 2: Project Management
+• PMP Certified
+• Program Management
+• Agile/Scrum (CSM)
+• Risk Management (RMP)
+• Stakeholder Management
+• Change Management
+• Budget & Resource Management
+
+COLUMN 3: Leadership
+• Cross-Functional Team Leadership
+• Executive Stakeholder Engagement
+• Client Relationship Management
+• Training & Development
+• Process Optimization
+• Mentoring
+
+COLUMN 4: Compliance & Systems
+• US/Canada Tax Compliance
+• AML/KYC
+• PCMLTF
+• SaaS/Cloud Platforms
+• System Integration
+• Data Migration
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+SECTION 5: EXPERIENCE TIMELINE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+- Section title: "Professional Experience"
+- Vertical timeline design with alternating left/right cards (desktop)
+- Each experience card includes:
+  • Company logo placeholder
+  • Job title (bold)
+  • Company name
+  • Duration and location
+  • 3-4 key bullet points (most impactful achievements)
+  • "View Details" expandable section for full description
+
+EXPERIENCES TO INCLUDE:
+
+1. ADP - Senior Project Implementation Consultant (June 2023 - Present)
+   Toronto, Ontario, Canada
+   Key highlights:
+   • Manage 50+ enterprise HCM implementations with 100% on-time completion
+   • Achieved 20% improvement in client satisfaction scores
+   • Reduced setup errors by 30%, improved accuracy to 98%
+   • Mentor 15+ consultants, reducing ramp-up time by 25%
+
+2. Laurentian Bank of Canada - Analyst, Financial Intelligence Unit (March 2022 - June 2023)
+   Toronto, Ontario, Canada
+   Key highlights:
+   • Led AML/KYC compliance framework implementation
+   • Increased high-risk transaction detection by 30%
+   • Achieved 100% accuracy in compliance reporting
+   • Reduced case review time by 20%
+
+3. Laurentian Bank of Canada - Bilingual Senior Customer Service Officer (March 2020 - March 2022)
+   Toronto, Ontario, Canada
+   Key highlights:
+   • Contributed to 15% increase in customer retention
+   • Maintained 95% client satisfaction score
+   • Reduced wait times by 30%
+   • Trained 12+ team members
+
+4. Laurentian Bank of Canada - Bilingual Customer Service Officer (Dec 2018 - March 2020)
+   Toronto, Ontario, Canada
+   Awards:
+   • GTACC Contact Center Excellence Award
+   • Top 10 Salesperson for RRSP (2019)
+
+5. Akalee - Project Coordinator (Sept 2017 - Nov 2018)
+   Casablanca, Morocco
+   Key highlights:
+   • 100% project deadline adherence rate
+   • Increased new accounts by 30%
+   • Reduced project delays by 20%
+
+6. Société Générale - Client Relationship Manager (Oct 2001 - Feb 2015)
+   Casablanca, Morocco
+   Key highlights:
+   • Employee of the Year (2007) - 300% target achievement
+   • Managed 500+ high-value accounts
+   • Increased retention by 40%
+   • Improved cross-selling by 35%
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+SECTION 6: CERTIFICATIONS & EDUCATION
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+- Section title: "Credentials"
+- Two subsections side by side:
+
+LEFT COLUMN - Certifications (with badge icons):
+• Project Management Professional (PMP) - PMI (2020)
+• Risk Management Professional (RMP) - PMI (2023)
+• Certified Scrum Master (CSM) - Scrum Alliance (2023)
+• Financial Intelligence Specialist (FIS) - ManchesterCF (2023)
+
+RIGHT COLUMN - Education:
+• MBA in Finance - Cardiff Metropolitan University (2015-2016)
+• Master's in Management & Strategy - Collège de Sherbrooke (2009-2011)
+• Bachelor's in Marketing - Collège de Sherbrooke (2007-2009)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+SECTION 7: AWARDS & RECOGNITION
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+- Section title: "Awards & Recognition"
+- Horizontal card slider or grid:
+  • Employee of the Year 2007 - Société Générale (300% Target Achievement)
+  • GTACC Contact Center Excellence Award
+  • Top 10 Salesperson - RRSP 2019
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+SECTION 8: LANGUAGES & ADDITIONAL SKILLS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+- Section title: "Languages & Tools"
+
+Languages (with proficiency bars):
+• English - Native/Bilingual
+• French - Native/Bilingual  
+• Arabic - Native/Bilingual
+
+Technical Tools (icon grid):
+• Microsoft Project
+• Jira
+• Asana
+• Confluence
+• MS Office Suite
+• Salesforce
+• MS Dynamics 365
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+SECTION 9: CALL TO ACTION
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+- Section title: "Let's Connect"
+- Centered content with background color or gradient
+- Headline: "Ready to Drive Your Next HCM Transformation?"
+- Subtext: "Currently seeking Senior Project Manager, Program Manager, and Implementation Director roles."
+- Two CTA buttons:
+  PRIMARY: "Schedule a Call" (links to Calendly or email)
+  SECONDARY: "Download Resume" (PDF download)
+- Contact information:
+  • Email: karim.chaouki@gmail.com
+  • LinkedIn: linkedin.com/in/karimchaouki
+  • Location: Toronto, Ontario, Canada
+  • Phone: 437-688-9403
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+FOOTER
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+- Copyright notice
+- Social media links
+- "Download Resume" link
+- Quick navigation links to sections
+- "Built with ❤️ in Toronto"
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+TECHNICAL REQUIREMENTS:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+TECHNOLOGY STACK:
+- Use React with Vite for fast development
+- Tailwind CSS for styling
+- Framer Motion for smooth animations
+- React Icons for iconography
+- Responsive design (mobile-first approach)
+
+FEATURES TO IMPLEMENT:
+1. Smooth scrolling navigation with sticky header
+2. Fade-in animations on scroll (using Intersection Observer)
+3. Dark mode toggle (optional but recommended)
+4. Contact form with email integration (EmailJS or similar)
+5. Resume download functionality (PDF)
+6. Analytics integration ready (Google Analytics placeholder)
+7. SEO optimized with meta tags
+8. Open Graph tags for social media sharing
+
+ANIMATION REQUIREMENTS:
+- Subtle fade-in on scroll for sections
+- Hover effects on cards and buttons
+- Smooth transitions between sections
+- Loading animation for initial page load
+- Parallax effect on hero section (optional)
+
+COLOR PALETTE:
+- Primary Blue: #2E75B6
+- Secondary Blue: #1F4E78
+- Accent Blue: #4472C4
+- Background: #FFFFFF
+- Light Grey: #F8F9FA
+- Dark Text: #1A1A1A
+- Light Text: #6C757D
+
+TYPOGRAPHY:
+- Headings: 'Inter' or 'Poppins' (bold)
+- Body: 'Inter' or 'Roboto' (regular)
+- Size scale: 14px (body), 16px (large body), 24px (h3), 32px (h2), 48px (h1)
+
+RESPONSIVE BREAKPOINTS:
+- Mobile: 320px - 767px
+- Tablet: 768px - 1023px
+- Desktop: 1024px+
+
+ACCESSIBILITY:
+- ARIA labels on all interactive elements
+- Keyboard navigation support
+- Sufficient color contrast ratios
+- Alt text for images
+- Skip to content link
+
+PERFORMANCE:
+- Lazy loading for images
+- Code splitting for faster initial load
+- Minified CSS and JS
+- Optimized images (WebP format with fallbacks)
+
+SEO ELEMENTS TO INCLUDE:
+<title>Karim Chaouki | Senior HCM Implementation Manager | PMP, RMP, CSM</title>
+<meta name="description" content="Award-winning Project Manager specializing in ADP Workforce Now implementations. 50+ successful enterprise HCM deployments with 100% on-time delivery. Expert in cross-border payroll, HRIS, and multi-jurisdiction compliance.">
+<meta name="keywords" content="HCM Implementation, Project Manager, ADP Workforce Now, HRIS, Payroll, PMP, Program Manager, Toronto, Bilingual">
+
+DEPLOYMENT:
+- Set up for easy deployment on Vercel, Netlify, or similar
+- Include README with setup instructions
+- Environment variables for contact form API keys
+
+ADDITIONAL NOTES:
+- Make the design stand out but remain professional
+- Focus on metrics and achievements (numbers speak to recruiters)
+- Ensure fast load times (under 3 seconds)
+- Mobile experience is critical (60%+ of traffic)
+- Use professional stock images for placeholders if needed
+- Add a "Publications" section if I provide the paper link later
+
+INSPIRATION STYLE:
+Think modern SaaS landing pages mixed with executive portfolio aesthetics. Examples:
+- Clean like Stripe's website
+- Professional like McKinsey career pages
+- Engaging like modern portfolio sites (but more corporate)
+
+START BY:
+1. Setting up the React + Vite + Tailwind project structure
+2. Creating the navigation component with smooth scrolling
+3. Building the hero section first (it's the most important)
+4. Then work section by section from top to bottom
+5. Test responsiveness at each step
+6. Add animations last
+
+MAKE IT:
+✓ Professional (corporate-friendly)
+✓ Clean and modern (not flashy)
+✓ Achievement-focused (data-driven)
+✓ Easy to navigate (intuitive UX)
+✓ Fast loading (performance optimized)
+✓ Mobile-first (responsive design)
+
+This website should make recruiters want to reach out immediately after viewing it. Every section should reinforce my expertise, achievements, and value proposition.
+
+Let me know when you're ready to start building!
+
+═══════════════════════════════════════════════════════════════════════════════
+END OF PROMPT
+═══════════════════════════════════════════════════════════════════════════════
