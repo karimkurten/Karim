@@ -1,0 +1,676 @@
+═══════════════════════════════════════════════════════════════════════════════
+           ADVANCED PROMPT FOR AI CODING ASSISTANT (V0/BOLT/CURSOR)
+                  LinkedIn Data Extraction & Portfolio Integration
+═══════════════════════════════════════════════════════════════════════════════
+
+Copy and paste this ENTIRE prompt into your AI coding assistant (v0.dev, Bolt.new, 
+Cursor, or similar):
+
+═══════════════════════════════════════════════════════════════════════════════
+
+OBJECTIVE:
+Build a professional portfolio website for Karim Chaouki by extracting ALL information from his LinkedIn profile, including experience, education, certifications, skills, recommendations (as testimonials), posts, and any other available data. The website should be modern, responsive, and optimized for attracting recruiters and consultancy firms in HCM implementation and project management.
+
+═══════════════════════════════════════════════════════════════════════════════
+STEP 1: DATA EXTRACTION FROM LINKEDIN
+═══════════════════════════════════════════════════════════════════════════════
+
+LinkedIn Profile URL: https://www.linkedin.com/in/karimchaouki/
+
+REQUIRED DATA TO EXTRACT:
+
+1. PROFILE HEADER
+   - Full name
+   - Current headline/title
+   - Profile photo URL
+   - Banner image URL
+   - Location
+   - Contact information (if available)
+
+2. ABOUT/SUMMARY SECTION
+   - Complete summary text
+   - Any featured links or media
+
+3. EXPERIENCE (ALL ROLES)
+   - Company name
+   - Company logo URL
+   - Job title
+   - Employment type (Full-time, Contract, etc.)
+   - Start date and end date
+   - Duration
+   - Location
+   - Complete job description with all bullet points
+   - Any associated media or links
+
+4. EDUCATION
+   - School name
+   - School logo URL
+   - Degree type
+   - Field of study
+   - Start and end dates
+   - Grade/honors (if listed)
+   - Activities and societies
+   - Description
+
+5. LICENSES & CERTIFICATIONS
+   - Certification name
+   - Issuing organization
+   - Issue date
+   - Expiration date (if any)
+   - Credential ID
+   - Credential URL
+
+6. SKILLS (ALL OF THEM)
+   - Skill name
+   - Number of endorsements
+   - Top skills (featured)
+   - Categorize by type if possible
+
+7. RECOMMENDATIONS (CRITICAL - USE AS TESTIMONIALS)
+   - Recommender's name
+   - Recommender's title
+   - Recommender's company
+   - Recommender's profile photo URL
+   - Relationship to Karim (worked together, managed, etc.)
+   - Full recommendation text
+   - Date given
+
+8. VOLUNTEER EXPERIENCE (if any)
+   - Organization
+   - Role
+   - Cause
+   - Dates
+   - Description
+
+9. PUBLICATIONS (if any)
+   - Title
+   - Publication/Publisher
+   - Date
+   - Authors
+   - Description/URL
+
+10. LANGUAGES
+    - Language name
+    - Proficiency level
+
+11. RECENT ACTIVITY/POSTS (if accessible)
+    - Post content
+    - Date posted
+    - Engagement metrics (likes, comments)
+    - Any media attached
+
+12. AWARDS & HONORS
+    - Award name
+    - Issuer
+    - Date
+    - Description
+
+═══════════════════════════════════════════════════════════════════════════════
+DATA EXTRACTION METHOD
+═══════════════════════════════════════════════════════════════════════════════
+
+Since you cannot directly scrape LinkedIn (against their TOS), use ONE of these approaches:
+
+OPTION A - MANUAL DATA INPUT (RECOMMENDED):
+I will provide you with all the extracted data in JSON format. Wait for my next message where I'll paste the complete LinkedIn data export.
+
+OPTION B - LINKEDIN API (if available):
+Use official LinkedIn API with proper authentication to fetch public profile data.
+
+OPTION C - USER-PROVIDED EXPORT:
+Ask me to download my LinkedIn profile data (Settings > Get a copy of your data) and I'll provide the JSON/CSV files.
+
+For now, proceed with building the website structure and I'll provide the data separately.
+
+═══════════════════════════════════════════════════════════════════════════════
+STEP 2: WEBSITE ARCHITECTURE
+═══════════════════════════════════════════════════════════════════════════════
+
+TECHNOLOGY STACK:
+- Frontend: React 18+ with TypeScript
+- Build Tool: Vite
+- Styling: Tailwind CSS
+- Animations: Framer Motion
+- Icons: React Icons + Lucide React
+- Form Handling: React Hook Form
+- Email Service: EmailJS or Resend
+- Analytics: Google Analytics 4 (optional)
+
+PROJECT STRUCTURE:
+```
+portfolio/
+├── src/
+│   ├── components/
+│   │   ├── layout/
+│   │   │   ├── Header.tsx
+│   │   │   ├── Footer.tsx
+│   │   │   └── Navigation.tsx
+│   │   ├── sections/
+│   │   │   ├── Hero.tsx
+│   │   │   ├── About.tsx
+│   │   │   ├── Achievements.tsx
+│   │   │   ├── Skills.tsx
+│   │   │   ├── Experience.tsx
+│   │   │   ├── Education.tsx
+│   │   │   ├── Certifications.tsx
+│   │   │   ├── Testimonials.tsx (FROM LINKEDIN RECOMMENDATIONS)
+│   │   │   ├── Awards.tsx
+│   │   │   ├── Publications.tsx
+│   │   │   ├── Contact.tsx
+│   │   │   └── RecentPosts.tsx (FROM LINKEDIN ACTIVITY)
+│   │   └── ui/
+│   │       ├── Button.tsx
+│   │       ├── Card.tsx
+│   │       ├── Badge.tsx
+│   │       ├── Timeline.tsx
+│   │       └── TestimonialCard.tsx
+│   ├── data/
+│   │   ├── linkedinData.json (EXTRACTED DATA GOES HERE)
+│   │   ├── achievements.json
+│   │   └── constants.ts
+│   ├── hooks/
+│   │   ├── useScrollAnimation.ts
+│   │   └── useIntersectionObserver.ts
+│   ├── utils/
+│   │   ├── dateFormatter.ts
+│   │   └── helpers.ts
+│   ├── App.tsx
+│   └── main.tsx
+├── public/
+│   ├── resume.pdf
+│   └── assets/
+└── package.json
+```
+
+═══════════════════════════════════════════════════════════════════════════════
+STEP 3: DETAILED SECTION SPECIFICATIONS
+═══════════════════════════════════════════════════════════════════════════════
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+1. HERO SECTION
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+- Full viewport height with gradient background
+- Profile photo (from LinkedIn) - circular, professional border
+- Name (from LinkedIn profile)
+- Current headline (from LinkedIn)
+- Location (from LinkedIn)
+- Animated tagline: "50+ Successful Implementations | 100% On-Time Delivery"
+- Two CTA buttons:
+  PRIMARY: "Schedule a Call" → Links to email or calendar
+  SECONDARY: "Download Resume" → PDF download
+- Social links: LinkedIn (direct link), Email, Phone
+- Smooth scroll down indicator
+
+ANIMATION: Fade in on load, typing effect for tagline (optional)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+2. ABOUT SECTION
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+- Pull complete summary from LinkedIn About section
+- Display verbatim (no truncation)
+- Two-column layout:
+  LEFT: Summary text
+  RIGHT: Stats cards (animated counters):
+    • Years of Experience (calculate from oldest role)
+    • Total Implementations
+    • Client Satisfaction Rate
+    • Team Members Mentored
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+3. EXPERIENCE SECTION (CRITICAL - USE ALL LINKEDIN ROLES)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+- Title: "Professional Journey"
+- Vertical timeline design
+- For EACH LinkedIn experience entry, create a timeline card with:
+  
+  CARD CONTENT:
+  - Company logo (if available from LinkedIn)
+  - Job title (bold, large text)
+  - Company name (linked to company LinkedIn page if possible)
+  - Employment dates (formatted as "Month Year - Month Year")
+  - Duration (calculate and display: "2 years 3 months")
+  - Location
+  - Employment type (Full-time, Part-time, Contract, etc.)
+  - Complete description with ALL bullet points from LinkedIn
+  - Skills used (if tagged in LinkedIn)
+  - "Expand/Collapse" functionality for long descriptions
+
+TIMELINE DESIGN:
+- Alternating left/right on desktop
+- Stacked on mobile
+- Animated on scroll (fade in from side)
+- Connection line between cards
+- Company logo as timeline nodes
+
+SORTING: Most recent first (current role at top)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+4. SKILLS SECTION
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+- Title: "Skills & Expertise"
+- Extract ALL skills from LinkedIn
+- Categorize into groups:
+  • HCM & Implementation
+  • Project Management
+  • Leadership & Soft Skills
+  • Compliance & Regulatory
+  • Technical Tools
+
+- Display as:
+  OPTION A: Skill cloud with sizes based on endorsement count
+  OPTION B: Categorized cards with skill badges
+  OPTION C: Interactive filter/search interface
+
+- Show endorsement count for each skill (if available)
+- Highlight top 3 skills prominently
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+5. TESTIMONIALS SECTION (FROM LINKEDIN RECOMMENDATIONS)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+⚠️ THIS IS CRITICAL - TESTIMONIALS ARE POWERFUL FOR RECRUITING
+
+- Title: "What People Say"
+- For EACH LinkedIn recommendation received, create a testimonial card:
+
+  TESTIMONIAL CARD DESIGN:
+  - Recommender's photo (circular, from LinkedIn)
+  - Full recommendation text (with "Read More" if long)
+  - Recommender's name (bold)
+  - Recommender's title and company
+  - Relationship type (e.g., "Managed Karim directly", "Worked with Karim at ADP")
+  - LinkedIn icon linking to their profile (if public)
+  - Date of recommendation
+  - Star rating visual (5 stars) - decorative
+
+LAYOUT OPTIONS:
+- Option A: Carousel/slider (3 cards visible at once on desktop)
+- Option B: Masonry grid layout
+- Option C: Stacked cards with "Load More" button
+
+ANIMATION: Fade in on scroll, subtle hover effect
+
+PRIORITY: Show most recent recommendations first
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+6. EDUCATION SECTION
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+- Title: "Education"
+- For EACH education entry from LinkedIn:
+  - School logo (if available)
+  - Degree type and field of study
+  - School name
+  - Dates attended
+  - Grade/honors (if listed)
+  - Description/activities (if any)
+
+LAYOUT: Card grid (2 columns on desktop, 1 on mobile)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+7. CERTIFICATIONS SECTION
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+- Title: "Certifications & Credentials"
+- For EACH certification from LinkedIn:
+  - Certification badge/logo (use issuer logo or generic badge)
+  - Certification name (bold)
+  - Issuing organization
+  - Issue date
+  - Expiration date (if applicable) or "No expiration"
+  - Credential ID (if available)
+  - "Verify" button linking to credential URL (if available)
+
+LAYOUT: 4-column grid on desktop, 2 on tablet, 1 on mobile
+HIGHLIGHT: Active/non-expired certifications prominently
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+8. AWARDS & HONORS SECTION
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+- Title: "Awards & Recognition"
+- Extract from LinkedIn honors/awards section
+- Display as highlight cards with:
+  - Trophy icon
+  - Award name
+  - Issuing organization
+  - Date received
+  - Description
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+9. PUBLICATIONS SECTION (if available)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+- Extract publications from LinkedIn
+- Display with:
+  - Publication title
+  - Publisher/journal
+  - Date
+  - Authors
+  - Link to full publication (if available)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+10. RECENT ACTIVITY/POSTS SECTION (if extractable)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+- Title: "Recent Insights"
+- If LinkedIn posts/articles are accessible, display 3-6 most recent
+- Post card format:
+  - Post content (truncated with "Read More")
+  - Date posted
+  - Engagement count (likes, comments)
+  - Link to original LinkedIn post
+  - Share buttons
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+11. LANGUAGES SECTION
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+- Extract from LinkedIn languages section
+- Display with proficiency bars or levels
+- Flag icons for each language (optional)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+12. CONTACT SECTION
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+- Title: "Let's Connect"
+- Contact form with fields:
+  • Name
+  • Email
+  • Company
+  • Message
+  • Submit button
+
+- Contact information (from LinkedIn):
+  • Email
+  • Phone
+  • LinkedIn profile link
+  • Location
+
+- Two CTAs:
+  • "Download Resume" (PDF)
+  • "Schedule a Call" (Calendly or email link)
+
+═══════════════════════════════════════════════════════════════════════════════
+STEP 4: DESIGN SPECIFICATIONS
+═══════════════════════════════════════════════════════════════════════════════
+
+COLOR PALETTE:
+Primary: #2E75B6 (LinkedIn Blue)
+Secondary: #1F4E78 (Dark Blue)
+Accent: #0A66C2 (LinkedIn Brand Blue)
+Background: #FFFFFF
+Light BG: #F3F6F8
+Dark Text: #1A1A1A
+Light Text: #666666
+Border: #E0E0E0
+
+TYPOGRAPHY:
+- Font Family: 'Inter', 'Segoe UI', system-ui
+- Headings: Bold, sizes 32px-48px
+- Body: Regular, 16px
+- Small text: 14px
+
+SPACING SYSTEM:
+Use Tailwind's spacing scale (4px base unit)
+
+COMPONENTS STYLING:
+- Cards: White background, subtle shadow, rounded corners (8px)
+- Buttons: Primary (blue), Secondary (outline), rounded (6px)
+- Hover states: Subtle lift effect (translateY)
+- Transitions: 300ms ease-in-out
+
+RESPONSIVE BREAKPOINTS:
+- Mobile: 320px - 767px
+- Tablet: 768px - 1023px
+- Desktop: 1024px+
+- Wide: 1440px+
+
+═══════════════════════════════════════════════════════════════════════════════
+STEP 5: ANIMATION & INTERACTION REQUIREMENTS
+═══════════════════════════════════════════════════════════════════════════════
+
+SCROLL ANIMATIONS:
+- Fade in on scroll for all sections
+- Slide in from left for timeline items (odd)
+- Slide in from right for timeline items (even)
+- Counter animations for statistics
+- Parallax effect on hero section (subtle)
+
+MICRO-INTERACTIONS:
+- Hover effects on all cards (subtle lift + shadow increase)
+- Button hover states (scale 1.02)
+- Smooth scrolling to sections from navigation
+- Loading animations for images
+- Skeleton loaders for content
+
+NAVIGATION:
+- Sticky header on scroll
+- Active section highlighting in nav
+- Mobile hamburger menu with smooth slide-in
+- Smooth scroll to section on click
+
+═══════════════════════════════════════════════════════════════════════════════
+STEP 6: DATA STRUCTURE (JSON FORMAT)
+═══════════════════════════════════════════════════════════════════════════════
+
+Create a data file: `src/data/linkedinData.json`
+
+Expected structure:
+```json
+{
+  "profile": {
+    "name": "Karim Chaouki",
+    "headline": "...",
+    "summary": "...",
+    "location": "...",
+    "photoUrl": "...",
+    "bannerUrl": "...",
+    "email": "...",
+    "phone": "...",
+    "linkedinUrl": "https://www.linkedin.com/in/karimchaouki/"
+  },
+  "experience": [
+    {
+      "id": "1",
+      "company": "ADP",
+      "companyLogoUrl": "...",
+      "title": "Senior Project Implementation Consultant",
+      "employmentType": "Full-time",
+      "location": "Toronto, Ontario, Canada",
+      "startDate": "2023-06",
+      "endDate": null,
+      "current": true,
+      "description": "...",
+      "skills": ["Project Management", "HCM", "..."]
+    }
+  ],
+  "education": [...],
+  "certifications": [...],
+  "skills": [...],
+  "recommendations": [
+    {
+      "id": "1",
+      "recommenderName": "...",
+      "recommenderTitle": "...",
+      "recommenderCompany": "...",
+      "recommenderPhotoUrl": "...",
+      "relationship": "Managed directly",
+      "text": "Full recommendation text here...",
+      "date": "2023-05"
+    }
+  ],
+  "awards": [...],
+  "publications": [...],
+  "languages": [...]
+}
+```
+
+═══════════════════════════════════════════════════════════════════════════════
+STEP 7: SEO & PERFORMANCE OPTIMIZATION
+═══════════════════════════════════════════════════════════════════════════════
+
+SEO META TAGS:
+```html
+<title>Karim Chaouki | Senior HCM Implementation Manager | PMP, RMP, CSM</title>
+<meta name="description" content="Award-winning Project Manager with 50+ enterprise HCM implementations. Expert in ADP Workforce Now, cross-border payroll, and HRIS. 100% on-time delivery record.">
+<meta name="keywords" content="Karim Chaouki, HCM Implementation, Project Manager, ADP Workforce Now, HRIS, Payroll, PMP, Program Manager, Toronto">
+<meta property="og:title" content="Karim Chaouki | Senior HCM Implementation Manager">
+<meta property="og:description" content="...">
+<meta property="og:image" content="[Profile Photo URL]">
+<meta property="og:url" content="[Website URL]">
+<meta name="twitter:card" content="summary_large_image">
+```
+
+PERFORMANCE:
+- Lazy load images below the fold
+- Code splitting by route/section
+- Compress images (WebP with JPEG fallback)
+- Minify CSS and JS
+- Use CDN for assets
+- Implement caching strategy
+- Target Lighthouse score: 90+
+
+ACCESSIBILITY:
+- ARIA labels on all interactive elements
+- Keyboard navigation support
+- Focus indicators
+- Alt text for all images
+- Semantic HTML
+- Color contrast ratio 4.5:1 minimum
+
+═══════════════════════════════════════════════════════════════════════════════
+STEP 8: FEATURES TO IMPLEMENT
+═══════════════════════════════════════════════════════════════════════════════
+
+MUST-HAVE:
+✓ Fully responsive design
+✓ Smooth scrolling navigation
+✓ Contact form with email integration
+✓ Resume download (PDF)
+✓ LinkedIn data integration
+✓ Testimonials from LinkedIn recommendations
+✓ All experience roles displayed
+✓ All skills with endorsement counts
+✓ Mobile-first approach
+
+NICE-TO-HAVE:
+○ Dark mode toggle
+○ Multi-language support (EN/FR)
+○ Blog section (if LinkedIn articles available)
+○ Animated background effects
+○ 3D elements (subtle)
+○ Print-friendly version
+○ Social share buttons
+○ Google Analytics integration
+
+═══════════════════════════════════════════════════════════════════════════════
+STEP 9: IMPLEMENTATION INSTRUCTIONS
+═══════════════════════════════════════════════════════════════════════════════
+
+BUILD PROCESS:
+
+1. SET UP PROJECT
+   ```bash
+   npm create vite@latest karim-portfolio -- --template react-ts
+   cd karim-portfolio
+   npm install tailwindcss postcss autoprefixer
+   npm install framer-motion react-icons lucide-react
+   npm install react-hook-form emailjs-com
+   npx tailwindcss init -p
+   ```
+
+2. CONFIGURE TAILWIND
+   - Set up custom colors
+   - Add custom utilities
+   - Configure responsive breakpoints
+
+3. CREATE COMPONENT STRUCTURE
+   - Build reusable UI components first
+   - Then section components
+   - Finally, compose in App.tsx
+
+4. ADD DATA LAYER
+   - Create linkedinData.json structure
+   - Build helper functions for data formatting
+   - Implement date formatters
+
+5. IMPLEMENT SECTIONS
+   - Start with Hero (most important)
+   - Then About
+   - Then Experience (with all LinkedIn roles)
+   - Then Testimonials (from LinkedIn recommendations)
+   - Continue with remaining sections
+
+6. ADD ANIMATIONS
+   - Implement scroll observers
+   - Add Framer Motion variants
+   - Test performance
+
+7. OPTIMIZE
+   - Lazy load images
+   - Code split
+   - Compress assets
+   - Test Lighthouse score
+
+8. TEST RESPONSIVENESS
+   - Test on mobile devices
+   - Test on tablets
+   - Test on desktop
+   - Test on ultra-wide screens
+
+9. DEPLOY
+   - Set up on Vercel/Netlify
+   - Configure domain
+   - Set up analytics
+   - Submit to search engines
+
+═══════════════════════════════════════════════════════════════════════════════
+CRITICAL REQUIREMENTS
+═══════════════════════════════════════════════════════════════════════════════
+
+⚠️ MUST-DO:
+1. Extract ALL experience entries from LinkedIn (not just recent ones)
+2. Convert ALL LinkedIn recommendations to testimonial cards
+3. Display ALL skills from LinkedIn profile
+4. Include ALL certifications with verification links
+5. Make it mobile-responsive (60%+ of traffic is mobile)
+6. Ensure fast loading (under 3 seconds)
+7. Make testimonials prominent (they're social proof)
+8. Include clear CTAs (Download Resume, Schedule Call)
+
+⚠️ DON'T:
+1. Don't truncate experience descriptions (use expand/collapse instead)
+2. Don't skip any LinkedIn recommendations
+3. Don't use generic placeholder text
+4. Don't ignore mobile experience
+5. Don't forget accessibility features
+
+═══════════════════════════════════════════════════════════════════════════════
+DATA HANDOFF
+═══════════════════════════════════════════════════════════════════════════════
+
+Since you cannot directly access LinkedIn, I will provide the extracted data in one of these formats:
+
+OPTION 1: I'll manually copy all data from my LinkedIn profile and provide it in JSON format in my next message
+
+OPTION 2: I'll download my LinkedIn data export and provide the files
+
+OPTION 3: I'll provide section-by-section data as you build each component
+
+Which option would you prefer? For now, please:
+
+1. Set up the project structure
+2. Create all component scaffolds
+3. Implement the design system (colors, typography, spacing)
+4. Build the UI components (Button, Card, Timeline, etc.)
+5. Wait for my data in the next message
+
+Once I provide the LinkedIn data, you'll populate all sections automatically.
+
+START BUILDING NOW with placeholder data, and I'll provide the real LinkedIn data next!
+
+═══════════════════════════════════════════════════════════════════════════════
+END OF PROMPT
+═══════════════════════════════════════════════════════════════════════════════
+
+NEXT STEPS FOR USER:
+After pasting this prompt, the AI will build the website structure. Then you need to:
+1. Manually copy your LinkedIn data OR
+2. Use LinkedIn's data export feature OR
+3. Provide data section by section
+
+The AI will then populate the website with your real LinkedIn information.
