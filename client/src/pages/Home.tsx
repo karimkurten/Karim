@@ -23,7 +23,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
 import { Progress } from "@/components/ui/progress";
-import headshot from "@/assets/headshot.jpg";
+import headshot from "@/assets/Picture_1771276526065.jpg";
 
 export default function Home() {
   const scrollToSection = (id: string) => {
