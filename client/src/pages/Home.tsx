@@ -95,7 +95,7 @@ export default function Home() {
                 View My Work <ArrowRight className="h-4 w-4" />
               </Button>
               <Button asChild size="lg" variant="outline" className="gap-2 bg-white/50 backdrop-blur-sm">
-                <a href="mailto:karim.chaouki@gmail.com?subject=Resume Request - Karim Chaouki">
+                <a href="/Karim_Chaouki_Resume.pdf" download="Karim_Chaouki_Resume.pdf">
                   Download Resume <Download className="h-4 w-4" />
                 </a>
               </Button>
@@ -582,7 +582,7 @@ export default function Home() {
               </a>
             </Button>
             <Button asChild size="lg" variant="outline" className="border-2 border-white/30 text-white hover:bg-white/10 hover:text-white h-14 px-8 text-lg bg-transparent">
-              <a href="mailto:karim.chaouki@gmail.com?subject=Resume Request - Karim Chaouki">
+              <a href="/Karim_Chaouki_Resume.pdf" download="Karim_Chaouki_Resume.pdf">
                 <Download className="mr-2 h-5 w-5" /> Download Resume
               </a>
             </Button>
