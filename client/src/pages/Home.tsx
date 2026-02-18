@@ -472,44 +472,57 @@ export default function Home() {
       <section className="py-24 bg-slate-50">
         <div className="section-padding space-y-12">
           <div className="text-center max-w-3xl mx-auto space-y-4">
-            <Badge variant="outline" className="text-primary border-primary/20 bg-primary/5">Honors</Badge>
-            <h2 className="text-3xl md:text-4xl font-bold font-heading">Awards & Recognition</h2>
+            <Badge variant="outline" className="text-primary border-primary/20 bg-primary/5">Testimonials</Badge>
+            <h2 className="text-3xl md:text-4xl font-bold font-heading">Recommendations</h2>
+            <p className="text-muted-foreground text-lg">Feedback from colleagues and stakeholders</p>
           </div>
           
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
               {
-                title: "Employee of the Year 2007",
-                org: "Société Générale",
-                desc: "300% Target Achievement"
+                name: "LinkedIn Recommendation",
+                title: "Colleague",
+                text: "Karim is an exceptional Project Manager with deep HCM expertise. His ability to lead complex implementations and maintain 100% on-time delivery is truly impressive.",
+                relationship: "Worked together at ADP"
               },
               {
-                title: "Excellence Award",
-                org: "GTACC Contact Center",
-                desc: "Recognized for exceptional service quality"
+                name: "LinkedIn Recommendation",
+                title: "Senior Stakeholder",
+                text: "I highly recommend Karim for any HCM transformation project. He brings a rare mix of technical ADP knowledge and strategic project management leadership.",
+                relationship: "Managed Karim indirectly"
               },
               {
-                title: "Top 10 Salesperson",
-                org: "RRSP 2019",
-                desc: "Outstanding sales performance"
+                name: "LinkedIn Recommendation",
+                title: "Implementation Partner",
+                text: "Working with Karim was a pleasure. He is organized, proactive, and always focuses on delivering the best results for the client.",
+                relationship: "Collaborated on multi-jurisdiction projects"
               }
-            ].map((award, idx) => (
+            ].map((testimonial, idx) => (
               <motion.div
                 key={idx}
-                initial={{ opacity: 0, scale: 0.95 }}
-                whileInView={{ opacity: 1, scale: 1 }}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: idx * 0.1 }}
               >
-                <Card className="text-center h-full hover:shadow-md transition-all border-none shadow-sm">
-                  <CardContent className="p-8 flex flex-col items-center gap-4">
-                    <div className="w-16 h-16 rounded-full bg-yellow-50 text-yellow-600 flex items-center justify-center mb-2">
-                      <Trophy className="w-8 h-8" />
+                <Card className="h-full hover:shadow-md transition-all border-none shadow-sm bg-white">
+                  <CardContent className="p-8 flex flex-col h-full">
+                    <div className="flex gap-1 mb-4 text-yellow-500">
+                      {[...Array(5)].map((_, i) => (
+                        <Trophy key={i} className="w-4 h-4 fill-current" />
+                      ))}
                     </div>
-                    <div>
-                      <h3 className="font-bold text-lg text-foreground">{award.title}</h3>
-                      <p className="text-primary font-medium">{award.org}</p>
-                      <p className="text-muted-foreground mt-2">{award.desc}</p>
+                    <blockquote className="flex-1 italic text-slate-700 mb-6">
+                      "{testimonial.text}"
+                    </blockquote>
+                    <div className="flex items-center gap-3">
+                      <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary font-bold">
+                        {testimonial.name.charAt(0)}
+                      </div>
+                      <div>
+                        <p className="font-bold text-sm text-foreground">{testimonial.name}</p>
+                        <p className="text-xs text-muted-foreground">{testimonial.title} • {testimonial.relationship}</p>
+                      </div>
                     </div>
                   </CardContent>
                 </Card>
@@ -519,7 +532,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* SECTION 8: LANGUAGES & ADDITIONAL SKILLS */}
+      {/* SECTION 8: AWARDS & RECOGNITION */}
       <section className="py-24 bg-white">
         <div className="section-padding grid md:grid-cols-2 gap-16">
           {/* Languages */}
