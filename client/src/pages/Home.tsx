@@ -480,22 +480,46 @@ export default function Home() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
               {
-                name: "LinkedIn Recommendation",
-                title: "Colleague",
-                text: "Karim is an exceptional Project Manager with deep HCM expertise. His ability to lead complex implementations and maintain 100% on-time delivery is truly impressive.",
-                relationship: "Worked together at ADP"
+                name: "Dr. Said El Mansour Cherkaoui",
+                title: "Policy Adviser & Distinguished News Editor",
+                text: "Karim has an extensive work experience in banking and financial institutions. He has always been following and adapting new solutions to every change occurred in his domain of engagement.",
+                relationship: "Mentor",
+                initials: "SC"
               },
               {
-                name: "LinkedIn Recommendation",
-                title: "Senior Stakeholder",
-                text: "I highly recommend Karim for any HCM transformation project. He brings a rare mix of technical ADP knowledge and strategic project management leadership.",
-                relationship: "Managed Karim indirectly"
+                name: "Nevine Beshara, PCP, BCom.",
+                title: "Senior Implementation Specialist at ADP",
+                text: "Karim consistently demonstrates what it truly means to be an outstanding Implementation Consultant. He brings a strong combination of client-centric focus, technical expertise, and a proactive mindset.",
+                relationship: "Worked on the same team at ADP",
+                initials: "NB"
               },
               {
-                name: "LinkedIn Recommendation",
-                title: "Implementation Partner",
-                text: "Working with Karim was a pleasure. He is organized, proactive, and always focuses on delivering the best results for the client.",
-                relationship: "Collaborated on multi-jurisdiction projects"
+                name: "Muhsin A.",
+                title: "Sr. Implementation Specialist, Human Resources",
+                text: "He is among one of the top in regards to his position at ADP. As a team, he has always been present to resolve any issues, very professional and is always on top of things.",
+                relationship: "Worked on the same team at ADP",
+                initials: "MA"
+              },
+              {
+                name: "Mateen Syed",
+                title: "Sr. HR Implementation Specialist at ADP",
+                text: "Karim is a great person to work with, he is very knowledgeable and has a strong work ethic. He goes the extra mile when it comes to delivering exceptional customer experiences.",
+                relationship: "Worked at ADP",
+                initials: "MS"
+              },
+              {
+                name: "Jessica Phillips",
+                title: "Technical Consultant at Dayforce",
+                text: "Karim consistently demonstrated an unwavering commitment to excellence. His most striking qualities lie in his compassion, patience, and kindness towards others.",
+                relationship: "Mentor",
+                initials: "JP"
+              },
+              {
+                name: "Beatrice Migale",
+                title: "Senior Manager, Sanctions & Anti-Corruption",
+                text: "Karim is a team player and is always eager to learn new things. He will definitely go far with such eagerness to continuously learn and to accept new challenges.",
+                relationship: "Senior Colleague at Laurentian Bank",
+                initials: "BM"
               }
             ].map((testimonial, idx) => (
               <motion.div
@@ -512,16 +536,17 @@ export default function Home() {
                         <Trophy key={i} className="w-4 h-4 fill-current" />
                       ))}
                     </div>
-                    <blockquote className="flex-1 italic text-slate-700 mb-6">
+                    <blockquote className="flex-1 italic text-slate-700 mb-6 line-clamp-6 overflow-hidden">
                       "{testimonial.text}"
                     </blockquote>
                     <div className="flex items-center gap-3">
-                      <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary font-bold">
-                        {testimonial.name.charAt(0)}
+                      <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary font-bold shrink-0">
+                        {testimonial.initials}
                       </div>
-                      <div>
-                        <p className="font-bold text-sm text-foreground">{testimonial.name}</p>
-                        <p className="text-xs text-muted-foreground">{testimonial.title} • {testimonial.relationship}</p>
+                      <div className="min-w-0">
+                        <p className="font-bold text-sm text-foreground truncate">{testimonial.name}</p>
+                        <p className="text-xs text-muted-foreground truncate">{testimonial.title}</p>
+                        <p className="text-[10px] text-muted-foreground/80 mt-0.5">{testimonial.relationship}</p>
                       </div>
                     </div>
                   </CardContent>
