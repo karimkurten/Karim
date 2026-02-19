@@ -1,0 +1,77 @@
+Here's a detailed prompt you can use to build your portfolio website — crafted specifically from your resume to attract recruiters, TA managers, and peer consultants:
+
+---
+
+## Portfolio Website Prompt for Karim Chaouki
+
+**Build a professional portfolio website for Karim Chaouki** — a Senior Project & Program Manager specializing in HCM software implementation, enterprise payroll systems, and cross-border deployments.
+
+---
+
+### 🎯 Target Audience & Goals
+- **Recruiters & Talent Acquisition Managers** at enterprise software, fintech, and consulting firms seeking senior PMs or implementation leads
+- **Peer Consultants & HCM Specialists** looking for collaboration on ADP Workforce Now, HRIS deployments, or cross-border compliance projects
+- **Decision-makers** evaluating Karim's fit for contract, full-time, or consulting engagements
+
+---
+
+### 🗂️ Required Sections
+
+1. **Hero / Above the Fold**
+   - Bold headline: *"Enterprise HCM Implementations. Zero Delays. 100% Client Retention."*
+   - Sub-headline: *"Senior Project Implementation Consultant | PMP | RMP | Scrum Master | Bilingual EN/FR"*
+   - Two CTAs: `Hire Me` (mailto link) and `View My Work`
+   - Animated stat counters: 50+ clients, 7+ years, 100% on-time delivery, 95% client retention
+
+2. **Value Proposition / Sales Pitch**
+   - Short punchy paragraph: why Karim is uniquely positioned — ADP Center of Excellence, cross-border US/Canada expertise, 3 certifications, bilingual
+   - Use a card or strip layout with 3–4 bold differentiators (e.g., "Multi-jurisdiction Payroll Expert," "Certified Risk Manager," "Enterprise HCM Specialist," "Change Management Leader")
+
+3. **Core Expertise / Skills**
+   - Visual icon-based grid covering: HCM & HRIS, Payroll Systems, Agile/Scrum, Risk Management, Stakeholder Engagement, Cross-border Compliance, Data Migration, Training & Mentorship
+
+4. **Experience Timeline**
+   - Animated vertical timeline (scroll-triggered) with:
+     - ADP Canada – Senior Project Implementation Consultant (2023–Present)
+     - Laurentian Bank – Analyst, Financial Intelligence Unit (2022–2023)
+     - Laurentian Bank – Bilingual Senior CSO (2018–2022)
+     - Akalee – Project Coordinator (2017–2018)
+     - Société Générale – CRM (2001–2015)
+   - Each entry: role, company, 2–3 key achievements with metrics
+
+5. **Certifications**
+   - Badge-style cards with visual icons for: PMP, RMP, CSM, Financial Intelligence Specialist
+
+6. **Key Metrics / Impact Wall**
+   - Highlight marquee or grid of numbers: 20% CSAT improvement, 30% fewer setup errors, 15% ops efficiency boost, 25% faster issue resolution, 15+ consultants mentored
+
+7. **Collaboration / Let's Work Together**
+   - Peer-to-peer message: *"Open to consulting partnerships, cross-functional collaborations, and knowledge-sharing with fellow HCM and project management professionals."*
+
+8. **Contact Section**
+   - Email, LinkedIn, Location (Toronto, ON), Languages (EN/FR/AR)
+   - Simple contact form or direct mailto CTA
+
+---
+
+### 🎨 Design Direction
+
+- **Aesthetic**: Luxury/refined corporate — dark navy or charcoal base with gold or electric teal accents. Think executive consulting firm meets modern SaaS. Clean, authoritative, high-contrast.
+- **Typography**: Pair a strong serif display font (e.g., Playfair Display or DM Serif) for headings with a clean humanist sans-serif for body text
+- **Animations**: Scroll-triggered section reveals, counter animations on the stats, smooth timeline draw-on effect, subtle parallax on hero, hover glow on cards
+- **Layout**: Full-screen hero, asymmetric section layouts, generous whitespace with moments of density (skills grid, metrics wall)
+- **No generic AI aesthetics** — avoid purple gradients, overused Inter font, cookie-cutter layouts
+
+---
+
+### ⚙️ Technical Requirements
+
+- Single-file HTML with embedded CSS and vanilla JS (or React JSX)
+- Fully responsive (mobile, tablet, desktop)
+- Smooth scroll navigation with sticky header
+- Intersection Observer for scroll-triggered animations
+- No external dependencies except Google Fonts and optionally a small icon library (Lucide or Font Awesome)
+
+---
+
+You can hand this prompt directly to Claude (or any AI builder) to generate the full website in one shot. Want me to go ahead and **build the website now** using this prompt?
