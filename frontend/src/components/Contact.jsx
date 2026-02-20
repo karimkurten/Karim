@@ -283,7 +283,7 @@ const Contact = () => {
                 KC
               </div>
               <span className="text-[#64748B] text-sm">
-                &copy; 2025 Karim Chaouki. All Rights Reserved.
+                &copy; {new Date().getFullYear()} Karim Chaouki. All Rights Reserved.
               </span>
             </div>
             <div className="flex items-center gap-4 text-sm">
