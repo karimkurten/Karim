@@ -139,7 +139,7 @@ const Hero = () => {
                 : 'opacity-0 translate-x-10'
             }`}
           >
-            <ProfileAvatar />
+            <ProfilePhoto />
           </div>
         </div>
 
