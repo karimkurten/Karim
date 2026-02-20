@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import axios from 'axios';
 import { personalInfo } from '../data/mockData';
 import { useScrollReveal } from '../hooks/useScrollReveal';
 import {
@@ -7,7 +8,12 @@ import {
   Globe,
   Send,
   CheckCircle,
+  AlertCircle,
+  Loader2,
 } from 'lucide-react';
+
+const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
+const API = `${BACKEND_URL}/api`;
 
 const Contact = () => {
   const [ref, isVisible] = useScrollReveal();
@@ -18,19 +24,30 @@ const Contact = () => {
     message: '',
   });
   const [submitted, setSubmitted] = useState(false);
+  const [sending, setSending] = useState(false);
+  const [error, setError] = useState('');
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    const messages = JSON.parse(
-      localStorage.getItem('contactMessages') || '[]'
-    );
-    messages.push({ ...formData, timestamp: new Date().toISOString() });
-    localStorage.setItem('contactMessages', JSON.stringify(messages));
-    setSubmitted(true);
-    setTimeout(() => {
-      setSubmitted(false);
-      setFormData({ name: '', email: '', subject: '', message: '' });
-    }, 3000);
+    setError('');
+    setSending(true);
+
+    try {
+      await axios.post(`${API}/contact`, formData);
+      setSubmitted(true);
+      setTimeout(() => {
+        setSubmitted(false);
+        setFormData({ name: '', email: '', subject: '', message: '' });
+      }, 4000);
+    } catch (err) {
+      const msg =
+        err.response?.data?.detail?.[0]?.msg ||
+        err.response?.data?.detail ||
+        'Something went wrong. Please try again or email directly.';
+      setError(typeof msg === 'string' ? msg : 'Failed to send message.');
+    } finally {
+      setSending(false);
+    }
   };
 
   const contactCards = [
