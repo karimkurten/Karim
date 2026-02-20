@@ -1,6 +1,7 @@
 import React from 'react';
 import { expertise } from '../data/mockData';
 import { useScrollReveal } from '../hooks/useScrollReveal';
+import { use3DTilt } from '../hooks/use3DTilt';
 import {
   Users,
   Calculator,
