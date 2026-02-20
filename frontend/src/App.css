@@ -47,6 +47,75 @@ html {
   animation: slide-up 0.5s ease-out forwards;
 }
 
+/* 3D Animation Utilities */
+.perspective-container {
+  perspective: 1200px;
+}
+
+@keyframes float-3d {
+  0%, 100% { transform: translateY(0) translateZ(0); }
+  50% { transform: translateY(-8px) translateZ(15px); }
+}
+
+@keyframes pulse-3d {
+  0%, 100% { transform: scale3d(1, 1, 1); box-shadow: 0 0 0 0 rgba(43, 108, 176, 0.3); }
+  50% { transform: scale3d(1.15, 1.15, 1.15); box-shadow: 0 0 12px 4px rgba(43, 108, 176, 0.15); }
+}
+
+@keyframes reveal-3d-left {
+  from { opacity: 0; transform: perspective(800px) rotateY(8deg) translateX(-60px); }
+  to { opacity: 1; transform: perspective(800px) rotateY(0deg) translateX(0); }
+}
+
+@keyframes reveal-3d-right {
+  from { opacity: 0; transform: perspective(800px) rotateY(-8deg) translateX(60px); }
+  to { opacity: 1; transform: perspective(800px) rotateY(0deg) translateX(0); }
+}
+
+@keyframes reveal-3d-up {
+  from { opacity: 0; transform: perspective(800px) rotateX(-6deg) translateY(40px) translateZ(-30px); }
+  to { opacity: 1; transform: perspective(800px) rotateX(0deg) translateY(0) translateZ(0); }
+}
+
+@keyframes glow-line {
+  0% { background-position: 0% 0%; }
+  100% { background-position: 0% 100%; }
+}
+
+.animate-float-3d {
+  animation: float-3d 4s ease-in-out infinite;
+}
+
+.animate-pulse-3d {
+  animation: pulse-3d 2.5s ease-in-out infinite;
+}
+
+.animate-reveal-3d-left {
+  animation: reveal-3d-left 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.animate-reveal-3d-right {
+  animation: reveal-3d-right 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.animate-reveal-3d-up {
+  animation: reveal-3d-up 0.7s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.card-3d {
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+
+.card-3d-inner {
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+}
+
+.card-3d:hover .card-3d-shine {
+  opacity: 1;
+}
+
 ::selection {
   background-color: rgba(43, 108, 176, 0.2);
   color: #1A202C;
