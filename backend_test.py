@@ -12,7 +12,7 @@ import time
 from datetime import datetime
 
 # Get the backend URL from frontend environment
-BACKEND_URL = "https://cross-border-pm.preview.emergentagent.com/api"
+BACKEND_URL = "https://pm-excellence-hub.preview.emergentagent.com/api"
 
 class ContactFormAPITester:
     def __init__(self, base_url: str):
