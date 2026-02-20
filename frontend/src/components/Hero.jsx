@@ -86,14 +86,19 @@ const Hero = () => {
 
             {/* Headline */}
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-serif font-bold text-[#1A202C] leading-[1.1] max-w-5xl">
-              Enterprise HCM Implementations.{' '}
-              <span className="text-[#2B6CB0]">Zero Delays.</span>
+              Your Strategic Partner for{' '}
+              <span className="text-[#2B6CB0]">HCM & ERP</span>
               <br className="hidden md:block" />
-              100% Client Retention.
+              Transformation
             </h1>
 
+            {/* Tagline */}
+            <p className="mt-6 text-lg md:text-xl text-[#475569] max-w-2xl leading-relaxed font-medium">
+              Proven expertise in navigating enterprise complexity with precision, transparency, and unwavering commitment to success.
+            </p>
+
             {/* Subtitle */}
-            <p className="mt-6 text-lg md:text-xl text-[#64748B] max-w-2xl leading-relaxed">
+            <p className="mt-4 text-base md:text-lg text-[#64748B] max-w-2xl leading-relaxed">
               {personalInfo.subtitle}
             </p>
 
