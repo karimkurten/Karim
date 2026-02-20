@@ -282,7 +282,7 @@ const Contact = () => {
               <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-[#2B6CB0] to-[#1E5090] flex items-center justify-center text-white font-bold text-sm font-serif">
                 KC
               </div>
-              <span className="text-[#94A3B8] text-sm">
+              <span className="text-[#64748B] text-sm">
                 &copy; 2025 Karim Chaouki. All Rights Reserved.
               </span>
             </div>
