@@ -220,11 +220,85 @@ export const education = [
   },
 ];
 
+export const testimonials = [
+  {
+    name: "Nevine Beshara, PCP, BCom.",
+    role: "Senior Implementation Specialist",
+    company: "ADP",
+    relationship: "ADP Team Member",
+    text: "Karim brought a strong combination of client-centric focus, technical expertise, and a proactive mindset that made him a reliable go-to person for both our clients and internal teams. His deep understanding of implementation processes, combined with his fluency in both English and French, allowed him to seamlessly guide clients through every phase — ensuring successful launches and high client satisfaction. If you're looking for someone who blends strategic thinking with hands-on execution and always puts the client first, Karim is that person.",
+  },
+  {
+    name: "Jessica Phillips",
+    role: "Technical Consultant",
+    company: "Dayforce",
+    relationship: "Karim's Mentor",
+    text: "Karim possessed an insatiable appetite for learning, coupled with an innate desire to assist his colleagues whenever needed. He consistently demonstrated an unwavering commitment to excellence, exemplified in his honorable work ethic and dedication to achieving nothing short of his best. Beyond his impressive certifications, Karim's most striking qualities lie in his compassion, patience, and kindness towards others. I am confident that his talent and dedication will continue to shine brightly wherever his career path may lead.",
+  },
+  {
+    name: "Dr. Said El Mansour Cherkaoui",
+    role: "Strategic Catalyst & Policy Adviser",
+    company: "International Affairs",
+    relationship: "Karim's Mentor",
+    text: "Karim has crossed many countries in terms of business cultures and operational management. He has extensive work experience in banking within international institutions. He has also extended his practical knowledge of management by managing directly in Canada several services offering direct solutions to clients at the level of finance, insurance and banking. Karim has been always following and adapting new solutions to every change occurred in his domain of engagement.",
+  },
+  {
+    name: "Tanvi Patel",
+    role: "Financial Services Professional",
+    company: "Wealthsimple (Formerly Laurentian Bank)",
+    relationship: "Colleague",
+    text: "It's rare that you come across a standout leader like Karim. I've had the opportunity to work closely with him for two years. He is a fountain of knowledge and experience and always makes time to teach patiently while completing all of his other responsibilities. I continue to be impressed by Karim's ability to handle the toughest clients and situations effortlessly while maintaining objectivity and a positive outlook. Karim earns my highest recommendation.",
+  },
+  {
+    name: "Affie Mobin, PMP",
+    role: "AVP, Unsecured Lending & Credit Cards",
+    company: "Laurentian Bank",
+    relationship: "Cross-Team Colleague",
+    text: "I have worked with Karim over the last couple of years and have found him to be a breath of fresh air. He has a customer first approach and has championed multiple innovative ideas and solutions. I have seen instances where Karim has influenced leadership and pushed for cost savings and efficiency enhancements. Overall Karim is a great contributor and delivers value and is passionate about serving our customers.",
+  },
+  {
+    name: "Christina Hutchinson, CTDP, M.Ed.",
+    role: "Senior Learning Manager/Partner",
+    company: "ERPM",
+    relationship: "Colleague",
+    text: "Karim is an outstanding team player who exhibits a great amount of passion in what he does. His openness to sharing his extensive knowledge in the banking industry proved to be invaluable to new hires. Karim communicates ideas effectively by relating with those he engages with and his passion and knowledge are unmatched. I would recommend Karim if you're looking for a superstar who inspires others with his ambition to succeed.",
+  },
+  {
+    name: "ASAD DARHBAR",
+    role: "Cyber Security Consultant",
+    company: "CISSP, CRISC, CISM, CISA",
+    relationship: "Karim's Client",
+    text: "Karim has strong technical and management skills especially in project management. He has a large experience in managing projects even in complex environments. Karim is a hard worker who always respects his engagements, with a big capacity of listening, communicating and leading a group to realize objectives. I really recommend him as a project manager.",
+  },
+  {
+    name: "Kiran Patel",
+    role: "Manager, Administration",
+    company: "Laurentian Bank",
+    relationship: "Direct Manager",
+    text: "I was impressed with Karim's ability to handle any situation calmly and patiently, even with the toughest and difficult callers. This skill of de-escalating and building positive customer experiences created loyalty. Karim is a valuable asset to any organization.",
+  },
+  {
+    name: "Muhsin A.",
+    role: "Sr. Implementation Specialist, HR",
+    company: "ADP",
+    relationship: "ADP Team Member",
+    text: "I would say he is among one of the top in regards to his position at ADP. As a team, he has always been present to resolve any issues, very professional and is always on top of his things. It has always been a pleasure working alongside Karim.",
+  },
+  {
+    name: "Laurent Ngono Kede, CIA",
+    role: "Lead Risk Internal Auditor",
+    company: "Laurentian Bank",
+    relationship: "Colleague",
+    text: "Supportive, knowledgeable, inspirational and highly committed are strengths that describe Karim. We had the opportunity to collaborate at Laurentian Bank, thus I can testify how trustworthy Karim is. Working with Karim has been my best professional experience since I started my career.",
+  },
+];
+
 export const navLinks = [
   { label: "About", href: "#about" },
   { label: "Expertise", href: "#expertise" },
   { label: "Experience", href: "#experience" },
   { label: "Certifications", href: "#certifications" },
   { label: "Impact", href: "#impact" },
+  { label: "Testimonials", href: "#testimonials" },
   { label: "Contact", href: "#contact" },
 ];
