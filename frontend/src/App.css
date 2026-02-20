@@ -32,6 +32,11 @@ html {
   background: #C8A94E;
 }
 
+::selection {
+  background-color: rgba(200, 169, 78, 0.3);
+  color: #F1F5F9;
+}
+
 @keyframes slide-up {
   from {
     opacity: 0;
