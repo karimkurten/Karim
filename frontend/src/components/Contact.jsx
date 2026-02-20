@@ -268,12 +268,6 @@ const Contact = () => {
               >
                 <Linkedin size={18} />
               </a>
-              <a
-                href={`tel:${personalInfo.phone}`}
-                className="text-[#64748B] hover:text-[#C8A94E] transition-colors duration-300"
-              >
-                <Phone size={18} />
-              </a>
             </div>
           </div>
         </div>
