@@ -42,7 +42,7 @@ const Certifications = () => {
         </div>
 
         {/* Certification Badges */}
-        <div className="mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+        <div className="mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 perspective-container">
           {certifications.map((cert, i) => {
             const Icon = iconMap[cert.icon];
             return (
