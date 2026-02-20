@@ -4,8 +4,9 @@ export const personalInfo = {
   subtitle: "Senior Project Implementation Consultant | PMP | RMP | Scrum Master | Bilingual EN/FR",
   email: "karim.chaouki@gmail.com",
   phone: "437-688-9403",
-  linkedin: "https://linkedin.com/in/karimchaouki",
+  linkedin: "https://www.linkedin.com/in/karimchaouki",
   location: "Toronto, ON, Canada",
+  resumeUrl: "/resume/KC_PM_Resume.pdf",
   languages: [
     { lang: "English", level: "Fluent" },
     { lang: "French", level: "Fluent" },
