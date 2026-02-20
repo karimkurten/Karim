@@ -1,6 +1,7 @@
 import React from 'react';
 import { personalInfo, differentiators } from '../data/mockData';
 import { useScrollReveal } from '../hooks/useScrollReveal';
+import { use3DTilt } from '../hooks/use3DTilt';
 import { Globe, Shield, Building2, TrendingUp } from 'lucide-react';
 
 const iconMap = {
