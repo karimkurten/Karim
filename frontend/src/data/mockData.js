@@ -1,6 +1,6 @@
 export const personalInfo = {
   name: "Karim Chaouki",
-  headline: "Enterprise HCM Implementations. Zero Delays. 100% Client Retention.",
+  headline: "Your Strategic Partner for HCM & ERP Transformation",
   subtitle: "Senior Project Implementation Consultant | PMP | RMP | Scrum Master | Bilingual EN/FR",
   email: "karim.chaouki@gmail.com",
   phone: "437-688-9403",
