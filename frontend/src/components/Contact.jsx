@@ -253,7 +253,7 @@ const Contact = () => {
                   <button
                     type="submit"
                     disabled={sending}
-                    className="w-full flex items-center justify-center gap-2 px-8 py-4 bg-[#2B6CB0] text-[#0B1120] font-semibold rounded-xl hover:bg-[#2563EB] transition-all duration-300 hover:shadow-xl hover:shadow-[#2B6CB0]/20 disabled:opacity-60 disabled:cursor-not-allowed"
+                    className="w-full flex items-center justify-center gap-2 px-8 py-4 bg-[#2B6CB0] text-white font-semibold rounded-xl hover:bg-[#2563EB] transition-all duration-300 hover:shadow-xl hover:shadow-[#2B6CB0]/20 disabled:opacity-60 disabled:cursor-not-allowed"
                   >
                     {sending ? (
                       <>
@@ -279,7 +279,7 @@ const Contact = () => {
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="flex flex-col md:flex-row items-center justify-between gap-6">
             <div className="flex items-center gap-3">
-              <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-[#2B6CB0] to-[#1E5090] flex items-center justify-center text-[#0B1120] font-bold text-sm font-serif">
+              <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-[#2B6CB0] to-[#1E5090] flex items-center justify-center text-white font-bold text-sm font-serif">
                 KC
               </div>
               <span className="text-[#94A3B8] text-sm">

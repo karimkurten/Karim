@@ -22,7 +22,7 @@ const CookieConsent = () => {
 
   return (
     <div className="fixed bottom-0 left-0 right-0 z-[100] p-4 md:p-6 animate-slide-up">
-      <div className="max-w-4xl mx-auto p-5 md:p-6 rounded-2xl bg-white/95 backdrop-blur-xl border border-[#E2E8F0] shadow-2xl shadow-black/10">
+      <div className="max-w-4xl mx-auto p-5 md:p-6 rounded-2xl bg-white/95 backdrop-blur-xl border border-[#E2E8F0] shadow-xl shadow-2xl shadow-black/10">
         <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4">
           <Cookie size={24} className="text-[#2B6CB0] flex-shrink-0 mt-0.5 sm:mt-0" />
           <p className="text-sm text-[#94A3B8] leading-relaxed flex-1">
