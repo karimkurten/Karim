@@ -51,25 +51,11 @@ const Expertise = () => {
         </div>
 
         {/* Skills Grid */}
-        <div className="mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
-          {expertise.map((skill, i) => {
-            const Icon = iconMap[skill.icon];
-            return (
-              <div
-                key={i}
-                className={`group relative p-6 rounded-2xl border border-[#E2E8F0] bg-white/40 hover:border-[#2B6CB0]/30 hover:bg-[#2B6CB0]/5 transition-all duration-500 hover:-translate-y-1 ${
-                  isVisible
-                    ? 'opacity-100 translate-y-0'
-                    : 'opacity-0 translate-y-8'
-                }`}
-                style={{ transitionDelay: `${150 + i * 80}ms` }}
-              >
-                <div className="w-11 h-11 rounded-lg bg-[#2B6CB0]/10 flex items-center justify-center mb-4 group-hover:bg-[#2B6CB0]/20 transition-colors duration-300">
-                  <Icon size={20} className="text-[#2B6CB0]" />
-                </div>
-                <h3 className="text-lg font-semibold text-[#1A202C] mb-3">
-                  {skill.name}
-                </h3>
+        <div className="mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 perspective-container">
+          {expertise.map((skill, i) => (
+            <SkillCard key={i} skill={skill} index={i} isVisible={isVisible} />
+          ))}
+        </div>
                 <ul className="space-y-1.5">
                   {skill.items.map((item, j) => (
                     <li
