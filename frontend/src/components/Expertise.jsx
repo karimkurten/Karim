@@ -56,21 +56,6 @@ const Expertise = () => {
             <SkillCard key={i} skill={skill} index={i} isVisible={isVisible} />
           ))}
         </div>
-                <ul className="space-y-1.5">
-                  {skill.items.map((item, j) => (
-                    <li
-                      key={j}
-                      className="text-sm text-[#94A3B8] flex items-center gap-2"
-                    >
-                      <span className="w-1 h-1 rounded-full bg-[#2B6CB0]/50 flex-shrink-0" />
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            );
-          })}
-        </div>
       </div>
     </section>
   );
