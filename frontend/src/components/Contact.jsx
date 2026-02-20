@@ -3,8 +3,6 @@ import { personalInfo } from '../data/mockData';
 import { useScrollReveal } from '../hooks/useScrollReveal';
 import {
   Mail,
-  Phone,
-  MapPin,
   Linkedin,
   Globe,
   Send,
