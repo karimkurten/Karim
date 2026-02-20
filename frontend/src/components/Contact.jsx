@@ -41,18 +41,6 @@ const Contact = () => {
       href: `mailto:${personalInfo.email}`,
     },
     {
-      icon: Phone,
-      label: 'Phone',
-      value: personalInfo.phone,
-      href: `tel:${personalInfo.phone}`,
-    },
-    {
-      icon: MapPin,
-      label: 'Location',
-      value: personalInfo.location,
-      href: null,
-    },
-    {
       icon: Linkedin,
       label: 'LinkedIn',
       value: 'karimchaouki',
