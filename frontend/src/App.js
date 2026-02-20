@@ -7,6 +7,7 @@ import Expertise from './components/Expertise';
 import Timeline from './components/Timeline';
 import Certifications from './components/Certifications';
 import ImpactMetrics from './components/ImpactMetrics';
+import Testimonials from './components/Testimonials';
 import Contact from './components/Contact';
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
         <Timeline />
         <Certifications />
         <ImpactMetrics />
+        <Testimonials />
         <Contact />
       </main>
     </div>
