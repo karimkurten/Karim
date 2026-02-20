@@ -293,7 +293,7 @@ const Contact = () => {
               >
                 Privacy Policy
               </Link>
-              <span className="text-[#1E293B]">|</span>
+              <span className="text-[#E2E8F0]">|</span>
               <Link
                 to="/terms-and-conditions"
                 className="text-[#94A3B8] hover:text-[#2B6CB0] transition-colors duration-300"
