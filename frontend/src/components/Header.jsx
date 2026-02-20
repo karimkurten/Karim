@@ -25,7 +25,7 @@ const Header = () => {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         scrolled
-          ? 'bg-[#0B1120]/90 backdrop-blur-xl border-b border-[#C8A94E]/10 shadow-lg shadow-black/20'
+          ? 'bg-white/90 backdrop-blur-xl border-b border-[#E2E8F0] shadow-sm'
           : 'bg-transparent'
       }`}
     >
@@ -36,10 +36,10 @@ const Header = () => {
             onClick={(e) => handleNavClick(e, '#hero')}
             className="group flex items-center gap-3"
           >
-            <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-[#C8A94E] to-[#A08030] flex items-center justify-center text-[#0B1120] font-bold text-lg font-serif">
+            <div className="w-10 h-10 rounded-lg bg-[#2B6CB0] flex items-center justify-center text-white font-bold text-lg font-serif">
               KC
             </div>
-            <span className="hidden sm:block text-[#F1F5F9] font-semibold tracking-wide group-hover:text-[#C8A94E] transition-colors duration-300">
+            <span className="hidden sm:block text-[#1A202C] font-semibold tracking-wide group-hover:text-[#2B6CB0] transition-colors duration-300">
               {personalInfo.name}
             </span>
           </a>
@@ -50,15 +50,15 @@ const Header = () => {
                 key={link.href}
                 href={link.href}
                 onClick={(e) => handleNavClick(e, link.href)}
-                className="px-4 py-2 text-sm text-[#94A3B8] hover:text-[#C8A94E] transition-colors duration-300 relative group"
+                className="px-4 py-2 text-sm text-[#64748B] hover:text-[#2B6CB0] transition-colors duration-300 relative group"
               >
                 {link.label}
-                <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 group-hover:w-2/3 h-[2px] bg-[#C8A94E] transition-all duration-300" />
+                <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 group-hover:w-2/3 h-[2px] bg-[#2B6CB0] transition-all duration-300" />
               </a>
             ))}
             <a
               href={`mailto:${personalInfo.email}`}
-              className="ml-4 px-6 py-2.5 text-sm font-semibold text-[#0B1120] bg-[#C8A94E] rounded-lg hover:bg-[#E2C878] transition-all duration-300 hover:shadow-lg hover:shadow-[#C8A94E]/20"
+              className="ml-4 px-6 py-2.5 text-sm font-semibold text-white bg-[#2B6CB0] rounded-lg hover:bg-[#2563EB] transition-all duration-300 hover:shadow-lg hover:shadow-[#2B6CB0]/20"
             >
               Hire Me
             </a>
@@ -66,7 +66,7 @@ const Header = () => {
 
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
-            className="lg:hidden p-2 text-[#94A3B8] hover:text-[#C8A94E] transition-colors"
+            className="lg:hidden p-2 text-[#64748B] hover:text-[#2B6CB0] transition-colors"
           >
             {mobileOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
@@ -78,20 +78,20 @@ const Header = () => {
           mobileOpen ? 'max-h-[500px] opacity-100' : 'max-h-0 opacity-0'
         }`}
       >
-        <div className="bg-[#0B1120]/95 backdrop-blur-xl border-t border-[#C8A94E]/10 px-6 py-4 space-y-1">
+        <div className="bg-white/95 backdrop-blur-xl border-t border-[#E2E8F0] px-6 py-4 space-y-1">
           {navLinks.map((link) => (
             <a
               key={link.href}
               href={link.href}
               onClick={(e) => handleNavClick(e, link.href)}
-              className="block px-4 py-3 text-[#94A3B8] hover:text-[#C8A94E] hover:bg-[#C8A94E]/5 rounded-lg transition-all duration-300"
+              className="block px-4 py-3 text-[#64748B] hover:text-[#2B6CB0] hover:bg-[#2B6CB0]/5 rounded-lg transition-all duration-300"
             >
               {link.label}
             </a>
           ))}
           <a
             href={`mailto:${personalInfo.email}`}
-            className="block text-center mt-4 px-6 py-3 text-sm font-semibold text-[#0B1120] bg-[#C8A94E] rounded-lg hover:bg-[#E2C878] transition-all duration-300"
+            className="block text-center mt-4 px-6 py-3 text-sm font-semibold text-white bg-[#2B6CB0] rounded-lg hover:bg-[#2563EB] transition-all duration-300"
           >
             Hire Me
           </a>
