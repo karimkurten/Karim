@@ -277,15 +277,29 @@ const Contact = () => {
       {/* Footer */}
       <footer className="bg-[#0B1120] border-t border-[#1E293B] py-10">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-4">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-6">
             <div className="flex items-center gap-3">
               <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-[#C8A94E] to-[#A08030] flex items-center justify-center text-[#0B1120] font-bold text-sm font-serif">
                 KC
               </div>
               <span className="text-[#94A3B8] text-sm">
-                &copy; {new Date().getFullYear()} Karim Chaouki. All rights
-                reserved.
+                &copy; 2025 Karim Chaouki. All Rights Reserved.
               </span>
+            </div>
+            <div className="flex items-center gap-4 text-sm">
+              <Link
+                to="/privacy-policy"
+                className="text-[#64748B] hover:text-[#C8A94E] transition-colors duration-300"
+              >
+                Privacy Policy
+              </Link>
+              <span className="text-[#1E293B]">|</span>
+              <Link
+                to="/terms-and-conditions"
+                className="text-[#64748B] hover:text-[#C8A94E] transition-colors duration-300"
+              >
+                Terms & Conditions
+              </Link>
             </div>
             <div className="flex items-center gap-6">
               <a
