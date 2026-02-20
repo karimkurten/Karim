@@ -20,48 +20,19 @@ const StatCounter = ({ value, suffix, label }) => {
   );
 };
 
-const ProfileAvatar = () => {
-  const [photo, setPhoto] = useState(() => localStorage.getItem('profilePhoto') || null);
-  const fileRef = useRef(null);
-
-  const handlePhotoUpload = (e) => {
-    const file = e.target.files?.[0];
-    if (!file) return;
-    const reader = new FileReader();
-    reader.onload = (ev) => {
-      const dataUrl = ev.target.result;
-      setPhoto(dataUrl);
-      localStorage.setItem('profilePhoto', dataUrl);
-    };
-    reader.readAsDataURL(file);
-  };
-
-  return (
-    <div className="relative group">
-      <div className="w-40 h-40 md:w-52 md:h-52 rounded-full border-2 border-[#C8A94E]/30 bg-[#111827] overflow-hidden flex items-center justify-center shadow-2xl shadow-[#C8A94E]/10">
-        {photo ? (
-          <img src={photo} alt="Karim Chaouki" className="w-full h-full object-cover" />
-        ) : (
-          <User size={64} className="text-[#C8A94E]/40" />
-        )}
-      </div>
-      <button
-        onClick={() => fileRef.current?.click()}
-        className="absolute bottom-1 right-1 w-10 h-10 rounded-full bg-[#C8A94E] flex items-center justify-center text-[#0B1120] opacity-0 group-hover:opacity-100 transition-opacity duration-300 hover:bg-[#E2C878] shadow-lg"
-        title="Upload photo"
-      >
-        <Camera size={18} />
-      </button>
-      <input
-        ref={fileRef}
-        type="file"
-        accept="image/*"
-        onChange={handlePhotoUpload}
-        className="hidden"
+const ProfilePhoto = () => (
+  <div className="relative">
+    <div className="w-44 h-44 md:w-56 md:h-56 lg:w-64 lg:h-64 rounded-full border-2 border-[#C8A94E]/30 overflow-hidden shadow-2xl shadow-[#C8A94E]/10 ring-4 ring-[#0B1120] ring-offset-2 ring-offset-[#C8A94E]/20">
+      <img
+        src="/images/karim-chaouki.jpg"
+        alt="Karim Chaouki"
+        className="w-full h-full object-cover"
+        style={{ transform: 'scaleX(-1)' }}
       />
     </div>
-  );
-};
+    <div className="absolute -bottom-2 -right-2 w-8 h-8 rounded-full bg-[#C8A94E] border-4 border-[#0B1120]" />
+  </div>
+);
 
 const Hero = () => {
   const [ref, isVisible] = useScrollReveal(0.1);
