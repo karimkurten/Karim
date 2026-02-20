@@ -11,6 +11,24 @@ const iconMap = {
   trendingUp: TrendingUp,
 };
 
+const TiltCard = ({ children, index, isVisible }) => {
+  const { ref, style, handleMouseMove, handleMouseLeave } = use3DTilt(7);
+  return (
+    <div
+      ref={ref}
+      onMouseMove={handleMouseMove}
+      onMouseLeave={handleMouseLeave}
+      style={style}
+      className={`group card-3d p-8 rounded-2xl border border-[#E2E8F0] bg-white hover:border-[#2B6CB0]/30 hover:shadow-xl hover:shadow-[#2B6CB0]/5 transition-shadow duration-500 relative overflow-hidden ${
+        isVisible ? 'animate-reveal-3d-up' : 'opacity-0'
+      }`}
+    >
+      <div className="card-3d-shine absolute inset-0 opacity-0 transition-opacity duration-500 pointer-events-none bg-gradient-to-tr from-transparent via-[#2B6CB0]/[0.03] to-transparent" />
+      <div className="relative z-10">{children}</div>
+    </div>
+  );
+};
+
 const ValueProposition = () => {
   const [ref, isVisible] = useScrollReveal();
 
