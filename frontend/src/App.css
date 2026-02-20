@@ -2,8 +2,8 @@
 
 .App {
   font-family: 'Plus Jakarta Sans', sans-serif;
-  background-color: #0B1120;
-  color: #F1F5F9;
+  background-color: #F0F4F8;
+  color: #1A202C;
   overflow-x: hidden;
 }
 
@@ -20,21 +20,16 @@ html {
 }
 
 ::-webkit-scrollbar-track {
-  background: #0B1120;
+  background: #F0F4F8;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #1E293B;
+  background: #CBD5E1;
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #C8A94E;
-}
-
-::selection {
-  background-color: rgba(200, 169, 78, 0.3);
-  color: #F1F5F9;
+  background: #2B6CB0;
 }
 
 @keyframes slide-up {
@@ -50,4 +45,9 @@ html {
 
 .animate-slide-up {
   animation: slide-up 0.5s ease-out forwards;
+}
+
+::selection {
+  background-color: rgba(43, 108, 176, 0.2);
+  color: #1A202C;
 }
