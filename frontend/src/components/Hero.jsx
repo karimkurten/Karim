@@ -1,7 +1,7 @@
-import React, { useRef, useState } from 'react';
+import React from 'react';
 import { personalInfo, stats } from '../data/mockData';
 import { useScrollReveal, useCounter } from '../hooks/useScrollReveal';
-import { ArrowDown, ExternalLink, Download, User, Camera } from 'lucide-react';
+import { ArrowDown, ExternalLink, Download } from 'lucide-react';
 
 const StatCounter = ({ value, suffix, label }) => {
   const [ref, isVisible] = useScrollReveal(0.5);
