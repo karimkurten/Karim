@@ -68,8 +68,8 @@ const Contact = () => {
 
   return (
     <>
-      <section id="contact" className="relative py-24 md:py-32 bg-[#0F172A]">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_rgba(200,169,78,0.04)_0%,_transparent_60%)]" />
+      <section id="contact" className="relative py-24 md:py-32 bg-white">
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_rgba(43,108,176,0.04)_0%,_transparent_60%)]" />
 
         <div
           ref={ref}
@@ -82,10 +82,10 @@ const Contact = () => {
                 : 'opacity-0 translate-y-8'
             }`}
           >
-            <span className="text-[#C8A94E] text-sm font-semibold uppercase tracking-[0.2em]">
+            <span className="text-[#2B6CB0] text-sm font-semibold uppercase tracking-[0.2em]">
               Get In Touch
             </span>
-            <h2 className="mt-4 text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-[#F1F5F9]">
+            <h2 className="mt-4 text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-[#1A202C]">
               Contact
             </h2>
           </div>
@@ -120,16 +120,16 @@ const Contact = () => {
                     <Tag
                       key={i}
                       {...linkProps}
-                      className="flex items-center gap-4 p-5 rounded-xl border border-[#1E293B] bg-[#111827]/50 hover:border-[#C8A94E]/20 hover:bg-[#C8A94E]/5 transition-all duration-300 group cursor-pointer"
+                      className="flex items-center gap-4 p-5 rounded-xl border border-[#E2E8F0] bg-white/50 hover:border-[#2B6CB0]/20 hover:bg-[#2B6CB0]/5 transition-all duration-300 group cursor-pointer"
                     >
-                      <div className="w-12 h-12 rounded-xl bg-[#C8A94E]/10 flex items-center justify-center group-hover:bg-[#C8A94E]/20 transition-colors duration-300">
-                        <Icon size={20} className="text-[#C8A94E]" />
+                      <div className="w-12 h-12 rounded-xl bg-[#2B6CB0]/10 flex items-center justify-center group-hover:bg-[#2B6CB0]/20 transition-colors duration-300">
+                        <Icon size={20} className="text-[#2B6CB0]" />
                       </div>
                       <div>
-                        <p className="text-xs text-[#64748B] uppercase tracking-wider">
+                        <p className="text-xs text-[#94A3B8] uppercase tracking-wider">
                           {card.label}
                         </p>
-                        <p className="text-[#F1F5F9] font-medium">
+                        <p className="text-[#1A202C] font-medium">
                           {card.value}
                         </p>
                       </div>
@@ -139,16 +139,16 @@ const Contact = () => {
               </div>
 
               {/* Languages */}
-              <div className="mt-8 p-5 rounded-xl border border-[#1E293B] bg-[#111827]/50">
+              <div className="mt-8 p-5 rounded-xl border border-[#E2E8F0] bg-white/50">
                 <div className="flex items-center gap-3 mb-4">
-                  <Globe size={20} className="text-[#C8A94E]" />
-                  <h3 className="text-[#F1F5F9] font-semibold">Languages</h3>
+                  <Globe size={20} className="text-[#2B6CB0]" />
+                  <h3 className="text-[#1A202C] font-semibold">Languages</h3>
                 </div>
                 <div className="flex flex-wrap gap-3">
                   {personalInfo.languages.map((l, i) => (
                     <span
                       key={i}
-                      className="px-4 py-2 rounded-lg bg-[#C8A94E]/10 text-sm text-[#C8A94E] font-medium border border-[#C8A94E]/20"
+                      className="px-4 py-2 rounded-lg bg-[#2B6CB0]/10 text-sm text-[#2B6CB0] font-medium border border-[#2B6CB0]/20"
                     >
                       {l.lang} — {l.level}
                     </span>
@@ -166,13 +166,13 @@ const Contact = () => {
               }`}
             >
               {submitted ? (
-                <div className="h-full flex items-center justify-center p-8 rounded-2xl border border-[#C8A94E]/30 bg-[#C8A94E]/5">
+                <div className="h-full flex items-center justify-center p-8 rounded-2xl border border-[#2B6CB0]/30 bg-[#2B6CB0]/5">
                   <div className="text-center">
                     <CheckCircle
                       size={48}
-                      className="text-[#C8A94E] mx-auto mb-4"
+                      className="text-[#2B6CB0] mx-auto mb-4"
                     />
-                    <h3 className="text-xl font-semibold text-[#F1F5F9]">
+                    <h3 className="text-xl font-semibold text-[#1A202C]">
                       Message Sent!
                     </h3>
                     <p className="mt-2 text-[#94A3B8]">
@@ -194,7 +194,7 @@ const Contact = () => {
                         onChange={(e) =>
                           setFormData({ ...formData, name: e.target.value })
                         }
-                        className="w-full px-4 py-3 rounded-xl bg-[#111827] border border-[#1E293B] text-[#F1F5F9] placeholder-[#475569] focus:outline-none focus:border-[#C8A94E]/50 focus:ring-1 focus:ring-[#C8A94E]/30 transition-all duration-300"
+                        className="w-full px-4 py-3 rounded-xl bg-white border border-[#E2E8F0] text-[#1A202C] placeholder-[#475569] focus:outline-none focus:border-[#2B6CB0]/50 focus:ring-1 focus:ring-[#2B6CB0]/30 transition-all duration-300"
                         placeholder="Your name"
                       />
                     </div>
@@ -209,7 +209,7 @@ const Contact = () => {
                         onChange={(e) =>
                           setFormData({ ...formData, email: e.target.value })
                         }
-                        className="w-full px-4 py-3 rounded-xl bg-[#111827] border border-[#1E293B] text-[#F1F5F9] placeholder-[#475569] focus:outline-none focus:border-[#C8A94E]/50 focus:ring-1 focus:ring-[#C8A94E]/30 transition-all duration-300"
+                        className="w-full px-4 py-3 rounded-xl bg-white border border-[#E2E8F0] text-[#1A202C] placeholder-[#475569] focus:outline-none focus:border-[#2B6CB0]/50 focus:ring-1 focus:ring-[#2B6CB0]/30 transition-all duration-300"
                         placeholder="your@email.com"
                       />
                     </div>
@@ -225,7 +225,7 @@ const Contact = () => {
                       onChange={(e) =>
                         setFormData({ ...formData, subject: e.target.value })
                       }
-                      className="w-full px-4 py-3 rounded-xl bg-[#111827] border border-[#1E293B] text-[#F1F5F9] placeholder-[#475569] focus:outline-none focus:border-[#C8A94E]/50 focus:ring-1 focus:ring-[#C8A94E]/30 transition-all duration-300"
+                      className="w-full px-4 py-3 rounded-xl bg-white border border-[#E2E8F0] text-[#1A202C] placeholder-[#475569] focus:outline-none focus:border-[#2B6CB0]/50 focus:ring-1 focus:ring-[#2B6CB0]/30 transition-all duration-300"
                       placeholder="Project inquiry, collaboration, etc."
                     />
                   </div>
@@ -240,7 +240,7 @@ const Contact = () => {
                       onChange={(e) =>
                         setFormData({ ...formData, message: e.target.value })
                       }
-                      className="w-full px-4 py-3 rounded-xl bg-[#111827] border border-[#1E293B] text-[#F1F5F9] placeholder-[#475569] focus:outline-none focus:border-[#C8A94E]/50 focus:ring-1 focus:ring-[#C8A94E]/30 transition-all duration-300 resize-none"
+                      className="w-full px-4 py-3 rounded-xl bg-white border border-[#E2E8F0] text-[#1A202C] placeholder-[#475569] focus:outline-none focus:border-[#2B6CB0]/50 focus:ring-1 focus:ring-[#2B6CB0]/30 transition-all duration-300 resize-none"
                       placeholder="Tell me about your project..."
                     />
                   </div>
@@ -253,7 +253,7 @@ const Contact = () => {
                   <button
                     type="submit"
                     disabled={sending}
-                    className="w-full flex items-center justify-center gap-2 px-8 py-4 bg-[#C8A94E] text-[#0B1120] font-semibold rounded-xl hover:bg-[#E2C878] transition-all duration-300 hover:shadow-xl hover:shadow-[#C8A94E]/20 disabled:opacity-60 disabled:cursor-not-allowed"
+                    className="w-full flex items-center justify-center gap-2 px-8 py-4 bg-[#2B6CB0] text-[#0B1120] font-semibold rounded-xl hover:bg-[#2563EB] transition-all duration-300 hover:shadow-xl hover:shadow-[#2B6CB0]/20 disabled:opacity-60 disabled:cursor-not-allowed"
                   >
                     {sending ? (
                       <>
@@ -275,11 +275,11 @@ const Contact = () => {
       </section>
 
       {/* Footer */}
-      <footer className="bg-[#0B1120] border-t border-[#1E293B] py-10">
+      <footer className="bg-[#F0F4F8] border-t border-[#E2E8F0] py-10">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="flex flex-col md:flex-row items-center justify-between gap-6">
             <div className="flex items-center gap-3">
-              <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-[#C8A94E] to-[#A08030] flex items-center justify-center text-[#0B1120] font-bold text-sm font-serif">
+              <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-[#2B6CB0] to-[#1E5090] flex items-center justify-center text-[#0B1120] font-bold text-sm font-serif">
                 KC
               </div>
               <span className="text-[#94A3B8] text-sm">
@@ -289,14 +289,14 @@ const Contact = () => {
             <div className="flex items-center gap-4 text-sm">
               <Link
                 to="/privacy-policy"
-                className="text-[#64748B] hover:text-[#C8A94E] transition-colors duration-300"
+                className="text-[#94A3B8] hover:text-[#2B6CB0] transition-colors duration-300"
               >
                 Privacy Policy
               </Link>
               <span className="text-[#1E293B]">|</span>
               <Link
                 to="/terms-and-conditions"
-                className="text-[#64748B] hover:text-[#C8A94E] transition-colors duration-300"
+                className="text-[#94A3B8] hover:text-[#2B6CB0] transition-colors duration-300"
               >
                 Terms & Conditions
               </Link>
@@ -304,7 +304,7 @@ const Contact = () => {
             <div className="flex items-center gap-6">
               <a
                 href={`mailto:${personalInfo.email}`}
-                className="text-[#64748B] hover:text-[#C8A94E] transition-colors duration-300"
+                className="text-[#94A3B8] hover:text-[#2B6CB0] transition-colors duration-300"
               >
                 <Mail size={18} />
               </a>
@@ -312,7 +312,7 @@ const Contact = () => {
                 href={personalInfo.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-[#64748B] hover:text-[#C8A94E] transition-colors duration-300"
+                className="text-[#94A3B8] hover:text-[#2B6CB0] transition-colors duration-300"
               >
                 <Linkedin size={18} />
               </a>

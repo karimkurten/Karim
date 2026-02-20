@@ -8,16 +8,16 @@ const TimelineEntry = ({ item, index, isLast }) => {
   const isLeft = index % 2 === 0;
 
   const cardContent = (
-    <div className="p-7 rounded-2xl border border-[#1E293B] bg-[#111827]/50 hover:border-[#C8A94E]/20 transition-all duration-500 hover:shadow-xl hover:shadow-[#C8A94E]/5">
+    <div className="p-7 rounded-2xl border border-[#E2E8F0] bg-white/50 hover:border-[#2B6CB0]/20 transition-all duration-500 hover:shadow-xl hover:shadow-[#2B6CB0]/5">
       <div className="flex items-center gap-2 mb-2">
-        <MapPin size={14} className="text-[#64748B]" />
-        <span className="text-sm text-[#64748B]">{item.location}</span>
+        <MapPin size={14} className="text-[#94A3B8]" />
+        <span className="text-sm text-[#94A3B8]">{item.location}</span>
       </div>
-      <span className="inline-block px-3 py-1 rounded-full bg-[#C8A94E]/10 text-[#C8A94E] text-xs font-semibold mb-3">
+      <span className="inline-block px-3 py-1 rounded-full bg-[#2B6CB0]/10 text-[#2B6CB0] text-xs font-semibold mb-3">
         {item.period}
       </span>
-      <h3 className="text-xl font-bold text-[#F1F5F9]">{item.role}</h3>
-      <p className="text-[#C8A94E]/80 font-medium mt-1">
+      <h3 className="text-xl font-bold text-[#1A202C]">{item.role}</h3>
+      <p className="text-[#2B6CB0]/80 font-medium mt-1">
         {item.company} &middot; {item.subtitle}
       </p>
       <ul className="mt-4 space-y-2">
@@ -25,7 +25,7 @@ const TimelineEntry = ({ item, index, isLast }) => {
           <li key={j} className="flex items-start gap-2 text-sm text-[#94A3B8]">
             <ChevronRight
               size={14}
-              className="text-[#C8A94E]/50 mt-0.5 flex-shrink-0"
+              className="text-[#2B6CB0]/50 mt-0.5 flex-shrink-0"
             />
             <span>{a}</span>
           </li>
@@ -59,14 +59,14 @@ const TimelineEntry = ({ item, index, isLast }) => {
         {/* Center Line + Dot */}
         <div className="flex flex-col items-center">
           <div
-            className={`w-4 h-4 rounded-full border-2 border-[#C8A94E] bg-[#0B1120] z-10 transition-all duration-500 ${
+            className={`w-4 h-4 rounded-full border-2 border-[#2B6CB0] bg-[#F0F4F8] z-10 transition-all duration-500 ${
               isVisible ? 'scale-100 opacity-100' : 'scale-0 opacity-0'
             }`}
             style={{ transitionDelay: '100ms' }}
           />
           {!isLast && (
             <div
-              className={`w-[2px] flex-1 min-h-[40px] bg-gradient-to-b from-[#C8A94E]/30 to-[#1E293B] transition-all duration-700 ${
+              className={`w-[2px] flex-1 min-h-[40px] bg-gradient-to-b from-[#2B6CB0]/30 to-[#1E293B] transition-all duration-700 ${
                 isVisible ? 'opacity-100' : 'opacity-0'
               }`}
             />
@@ -96,12 +96,12 @@ const TimelineEntry = ({ item, index, isLast }) => {
       <div className="lg:hidden flex gap-4">
         <div className="flex flex-col items-center">
           <div
-            className={`w-3 h-3 rounded-full border-2 border-[#C8A94E] bg-[#0B1120] z-10 mt-2 transition-all duration-500 ${
+            className={`w-3 h-3 rounded-full border-2 border-[#2B6CB0] bg-[#F0F4F8] z-10 mt-2 transition-all duration-500 ${
               isVisible ? 'scale-100 opacity-100' : 'scale-0 opacity-0'
             }`}
           />
           {!isLast && (
-            <div className="w-[2px] flex-1 bg-gradient-to-b from-[#C8A94E]/30 to-[#1E293B]" />
+            <div className="w-[2px] flex-1 bg-gradient-to-b from-[#2B6CB0]/30 to-[#1E293B]" />
           )}
         </div>
         <div
@@ -123,8 +123,8 @@ const Timeline = () => {
   const [ref, isVisible] = useScrollReveal();
 
   return (
-    <section id="experience" className="relative py-24 md:py-32 bg-[#0F172A]">
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_right,_rgba(200,169,78,0.04)_0%,_transparent_60%)]" />
+    <section id="experience" className="relative py-24 md:py-32 bg-white">
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_right,_rgba(43,108,176,0.04)_0%,_transparent_60%)]" />
 
       <div ref={ref} className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
         {/* Section Header */}
@@ -135,10 +135,10 @@ const Timeline = () => {
               : 'opacity-0 translate-y-8'
           }`}
         >
-          <span className="text-[#C8A94E] text-sm font-semibold uppercase tracking-[0.2em]">
+          <span className="text-[#2B6CB0] text-sm font-semibold uppercase tracking-[0.2em]">
             Career Journey
           </span>
-          <h2 className="mt-4 text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-[#F1F5F9]">
+          <h2 className="mt-4 text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-[#1A202C]">
             Professional Experience
           </h2>
         </div>

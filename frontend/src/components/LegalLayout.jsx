@@ -10,13 +10,13 @@ const LegalLayout = ({ children }) => {
   }, [location.pathname]);
 
   return (
-    <div className="min-h-screen bg-[#0B1120] text-[#F1F5F9] font-sans">
+    <div className="min-h-screen bg-[#F0F4F8] text-[#1A202C] font-sans">
       {/* Sticky Header */}
-      <header className="sticky top-0 z-50 bg-[#0B1120]/90 backdrop-blur-xl border-b border-[#1E293B]">
+      <header className="sticky top-0 z-50 bg-[#F0F4F8]/90 backdrop-blur-xl border-b border-[#E2E8F0]">
         <div className="max-w-[860px] mx-auto px-6 py-4 flex items-center justify-between">
           <Link
             to="/"
-            className="group inline-flex items-center gap-2 text-[#94A3B8] hover:text-[#C8A94E] transition-colors duration-300"
+            className="group inline-flex items-center gap-2 text-[#94A3B8] hover:text-[#2B6CB0] transition-colors duration-300"
           >
             <ArrowLeft size={18} className="group-hover:-translate-x-0.5 transition-transform" />
             <span className="text-sm font-medium">Back to Portfolio</span>
@@ -25,7 +25,7 @@ const LegalLayout = ({ children }) => {
             to="/"
             className="flex items-center gap-2"
           >
-            <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-[#C8A94E] to-[#A08030] flex items-center justify-center text-[#0B1120] font-bold text-xs font-serif">
+            <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-[#2B6CB0] to-[#1E5090] flex items-center justify-center text-[#0B1120] font-bold text-xs font-serif">
               KC
             </div>
           </Link>
@@ -38,16 +38,16 @@ const LegalLayout = ({ children }) => {
       </main>
 
       {/* Footer */}
-      <footer className="border-t border-[#1E293B] bg-[#0B1120]">
+      <footer className="border-t border-[#E2E8F0] bg-[#F0F4F8]">
         <div className="max-w-[860px] mx-auto px-6 py-10">
           <div className="flex flex-col md:flex-row items-center justify-between gap-6">
             <div className="flex items-center gap-4 text-sm">
               <Link
                 to="/privacy-policy"
-                className={`hover:text-[#C8A94E] transition-colors ${
+                className={`hover:text-[#2B6CB0] transition-colors ${
                   location.pathname === '/privacy-policy'
-                    ? 'text-[#C8A94E]'
-                    : 'text-[#64748B]'
+                    ? 'text-[#2B6CB0]'
+                    : 'text-[#94A3B8]'
                 }`}
               >
                 Privacy Policy
@@ -55,10 +55,10 @@ const LegalLayout = ({ children }) => {
               <span className="text-[#1E293B]">|</span>
               <Link
                 to="/terms-and-conditions"
-                className={`hover:text-[#C8A94E] transition-colors ${
+                className={`hover:text-[#2B6CB0] transition-colors ${
                   location.pathname === '/terms-and-conditions'
-                    ? 'text-[#C8A94E]'
-                    : 'text-[#64748B]'
+                    ? 'text-[#2B6CB0]'
+                    : 'text-[#94A3B8]'
                 }`}
               >
                 Terms & Conditions
@@ -70,7 +70,7 @@ const LegalLayout = ({ children }) => {
             <div className="flex items-center gap-4">
               <a
                 href="mailto:karim.chaouki@gmail.com"
-                className="text-[#64748B] hover:text-[#C8A94E] transition-colors"
+                className="text-[#94A3B8] hover:text-[#2B6CB0] transition-colors"
               >
                 <Mail size={16} />
               </a>
@@ -78,7 +78,7 @@ const LegalLayout = ({ children }) => {
                 href="https://www.linkedin.com/in/karimchaouki"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-[#64748B] hover:text-[#C8A94E] transition-colors"
+                className="text-[#94A3B8] hover:text-[#2B6CB0] transition-colors"
               >
                 <Linkedin size={16} />
               </a>

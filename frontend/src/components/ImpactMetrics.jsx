@@ -6,12 +6,12 @@ import { Handshake } from 'lucide-react';
 const MetricCard = ({ item, index, isVisible }) => {
   return (
     <div
-      className={`group p-6 rounded-2xl border border-[#1E293B] bg-[#111827]/50 text-center hover:border-[#C8A94E]/30 hover:bg-[#C8A94E]/5 transition-all duration-500 hover:-translate-y-1 hover:shadow-lg hover:shadow-[#C8A94E]/5 ${
+      className={`group p-6 rounded-2xl border border-[#E2E8F0] bg-white/50 text-center hover:border-[#2B6CB0]/30 hover:bg-[#2B6CB0]/5 transition-all duration-500 hover:-translate-y-1 hover:shadow-lg hover:shadow-[#2B6CB0]/5 ${
         isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-95'
       }`}
       style={{ transitionDelay: `${150 + index * 80}ms` }}
     >
-      <div className="text-3xl md:text-4xl font-bold text-[#C8A94E] font-serif">
+      <div className="text-3xl md:text-4xl font-bold text-[#2B6CB0] font-serif">
         {item.value}
       </div>
       <div className="mt-2 text-sm text-[#94A3B8] uppercase tracking-wider">
@@ -28,8 +28,8 @@ const ImpactMetrics = () => {
   return (
     <>
       {/* Impact Metrics Section */}
-      <section id="impact" className="relative py-24 md:py-32 bg-[#0F172A]">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom,_rgba(200,169,78,0.05)_0%,_transparent_60%)]" />
+      <section id="impact" className="relative py-24 md:py-32 bg-white">
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom,_rgba(43,108,176,0.05)_0%,_transparent_60%)]" />
 
         <div ref={ref} className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
           <div
@@ -39,10 +39,10 @@ const ImpactMetrics = () => {
                 : 'opacity-0 translate-y-8'
             }`}
           >
-            <span className="text-[#C8A94E] text-sm font-semibold uppercase tracking-[0.2em]">
+            <span className="text-[#2B6CB0] text-sm font-semibold uppercase tracking-[0.2em]">
               Results That Matter
             </span>
-            <h2 className="mt-4 text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-[#F1F5F9]">
+            <h2 className="mt-4 text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-[#1A202C]">
               Impact Wall
             </h2>
             <p className="mt-4 text-[#94A3B8]">
@@ -65,8 +65,8 @@ const ImpactMetrics = () => {
       </section>
 
       {/* Collaboration CTA */}
-      <section className="relative py-24 md:py-32 bg-[#0B1120]">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(200,169,78,0.03)_0%,_transparent_50%)]" />
+      <section className="relative py-24 md:py-32 bg-[#F0F4F8]">
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(43,108,176,0.03)_0%,_transparent_50%)]" />
         <div
           ref={collabRef}
           className="relative z-10 max-w-4xl mx-auto px-6 lg:px-8 text-center"
@@ -78,10 +78,10 @@ const ImpactMetrics = () => {
                 : 'opacity-0 translate-y-8'
             }`}
           >
-            <div className="w-16 h-16 mx-auto rounded-2xl bg-[#C8A94E]/10 flex items-center justify-center mb-6">
-              <Handshake size={32} className="text-[#C8A94E]" />
+            <div className="w-16 h-16 mx-auto rounded-2xl bg-[#2B6CB0]/10 flex items-center justify-center mb-6">
+              <Handshake size={32} className="text-[#2B6CB0]" />
             </div>
-            <h2 className="text-3xl md:text-4xl font-serif font-bold text-[#F1F5F9]">
+            <h2 className="text-3xl md:text-4xl font-serif font-bold text-[#1A202C]">
               Let's Collaborate
             </h2>
             <p className="mt-6 text-lg text-[#94A3B8] max-w-2xl mx-auto leading-relaxed">
@@ -92,7 +92,7 @@ const ImpactMetrics = () => {
             <div className="mt-10 flex flex-wrap justify-center gap-4">
               <a
                 href={`mailto:${personalInfo.email}`}
-                className="inline-flex items-center gap-2 px-8 py-4 bg-[#C8A94E] text-[#0B1120] font-semibold rounded-lg hover:bg-[#E2C878] transition-all duration-300 hover:shadow-xl hover:shadow-[#C8A94E]/20 hover:-translate-y-0.5"
+                className="inline-flex items-center gap-2 px-8 py-4 bg-[#2B6CB0] text-[#0B1120] font-semibold rounded-lg hover:bg-[#2563EB] transition-all duration-300 hover:shadow-xl hover:shadow-[#2B6CB0]/20 hover:-translate-y-0.5"
               >
                 Start a Conversation
               </a>
@@ -100,7 +100,7 @@ const ImpactMetrics = () => {
                 href={personalInfo.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-8 py-4 border border-[#C8A94E]/30 text-[#C8A94E] font-semibold rounded-lg hover:bg-[#C8A94E]/10 hover:border-[#C8A94E]/50 transition-all duration-300 hover:-translate-y-0.5"
+                className="inline-flex items-center gap-2 px-8 py-4 border border-[#2B6CB0]/30 text-[#2B6CB0] font-semibold rounded-lg hover:bg-[#2B6CB0]/10 hover:border-[#2B6CB0]/50 transition-all duration-300 hover:-translate-y-0.5"
               >
                 Connect on LinkedIn
               </a>

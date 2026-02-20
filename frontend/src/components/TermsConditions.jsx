@@ -4,13 +4,13 @@ import { Scale } from 'lucide-react';
 
 const Section = ({ title, children }) => (
   <section className="mb-10">
-    <h2 className="text-xl md:text-2xl font-serif font-bold text-[#F1F5F9] mb-4">
+    <h2 className="text-xl md:text-2xl font-serif font-bold text-[#1A202C] mb-4">
       {title}
     </h2>
     <div className="text-[#94A3B8] leading-[1.8] space-y-4 text-[0.938rem]">
       {children}
     </div>
-    <hr className="mt-10 border-[#1E293B]" />
+    <hr className="mt-10 border-[#E2E8F0]" />
   </section>
 );
 
@@ -18,21 +18,21 @@ const TermsConditions = () => (
   <LegalLayout>
     {/* Page Header */}
     <div className="mb-14">
-      <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-[#C8A94E]/20 bg-[#C8A94E]/5 mb-6">
-        <Scale size={16} className="text-[#C8A94E]" />
-        <span className="text-sm text-[#C8A94E] font-medium">Legal</span>
+      <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-[#2B6CB0]/20 bg-[#2B6CB0]/5 mb-6">
+        <Scale size={16} className="text-[#2B6CB0]" />
+        <span className="text-sm text-[#2B6CB0] font-medium">Legal</span>
       </div>
-      <h1 className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-[#F1F5F9] mb-4">
+      <h1 className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-[#1A202C] mb-4">
         Terms &amp; Conditions
       </h1>
-      <p className="text-[#64748B] text-sm">
+      <p className="text-[#94A3B8] text-sm">
         Effective Date: January 1, 2025 &middot; Last Updated: July 2025
       </p>
     </div>
 
     <Section title="1. Purpose of This Website">
       <p>
-        This website (<strong className="text-[#F1F5F9]">karimchaouki.com</strong>) is the
+        This website (<strong className="text-[#1A202C]">karimchaouki.com</strong>) is the
         personal professional portfolio of Karim Chaouki. It serves as an
         informational resource to showcase professional experience,
         certifications, skills, and career achievements. This site is not a
@@ -51,7 +51,7 @@ const TermsConditions = () => (
         All content on this website — including but not limited to text,
         graphics, photographs, logos, icons, design elements, layout, code, and
         multimedia — is the intellectual property of{' '}
-        <strong className="text-[#F1F5F9]">Karim Chaouki</strong> unless otherwise
+        <strong className="text-[#1A202C]">Karim Chaouki</strong> unless otherwise
         attributed, and is protected by applicable Canadian and international
         copyright, trademark, and intellectual property laws.
       </p>
@@ -102,7 +102,7 @@ const TermsConditions = () => (
         <li>Any interruption, suspension, or discontinuation of the website</li>
       </ul>
       <p>
-        This website is provided on an <strong className="text-[#F1F5F9]">"as is" and "as available"</strong>{' '}
+        This website is provided on an <strong className="text-[#1A202C]">"as is" and "as available"</strong>{' '}
         basis without warranties of any kind, whether express or implied,
         including but not limited to implied warranties of merchantability,
         fitness for a particular purpose, and non-infringement.
@@ -131,7 +131,7 @@ const TermsConditions = () => (
 
     <Section title="6. Acceptable Use">
       <p>
-        When using this website, you agree <strong className="text-[#F1F5F9]">not to</strong>:
+        When using this website, you agree <strong className="text-[#1A202C]">not to</strong>:
       </p>
       <ul className="list-disc list-inside space-y-2 ml-2">
         <li>Use automated tools, bots, or scrapers to extract data or content from this website</li>
@@ -164,8 +164,8 @@ const TermsConditions = () => (
     <Section title="8. Governing Law">
       <p>
         These Terms &amp; Conditions shall be governed by and construed in
-        accordance with the laws of the <strong className="text-[#F1F5F9]">Province of Ontario</strong>{' '}
-        and the federal laws of <strong className="text-[#F1F5F9]">Canada</strong> applicable
+        accordance with the laws of the <strong className="text-[#1A202C]">Province of Ontario</strong>{' '}
+        and the federal laws of <strong className="text-[#1A202C]">Canada</strong> applicable
         therein, without regard to conflict of law principles.
       </p>
       <p>
@@ -193,11 +193,11 @@ const TermsConditions = () => (
         If you have any questions or concerns regarding these Terms &amp;
         Conditions, please contact:
       </p>
-      <div className="p-5 rounded-xl border border-[#1E293B] bg-[#111827]/50 mt-4">
-        <p className="text-[#F1F5F9] font-semibold">Karim Chaouki</p>
+      <div className="p-5 rounded-xl border border-[#E2E8F0] bg-white/50 mt-4">
+        <p className="text-[#1A202C] font-semibold">Karim Chaouki</p>
         <p className="text-[#94A3B8] mt-1">Toronto, Ontario, Canada</p>
         <p className="mt-2">
-          <a href="mailto:karim.chaouki@gmail.com" className="text-[#C8A94E] hover:text-[#E2C878] underline underline-offset-2 transition-colors">
+          <a href="mailto:karim.chaouki@gmail.com" className="text-[#2B6CB0] hover:text-[#2563EB] underline underline-offset-2 transition-colors">
             karim.chaouki@gmail.com
           </a>
         </p>

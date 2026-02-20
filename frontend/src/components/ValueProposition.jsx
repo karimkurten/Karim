@@ -14,8 +14,8 @@ const ValueProposition = () => {
   const [ref, isVisible] = useScrollReveal();
 
   return (
-    <section id="about" className="relative py-24 md:py-32 bg-[#0F172A]">
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(200,169,78,0.04)_0%,_transparent_70%)]" />
+    <section id="about" className="relative py-24 md:py-32 bg-white">
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(43,108,176,0.04)_0%,_transparent_70%)]" />
 
       <div ref={ref} className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
         {/* Section Header */}
@@ -26,10 +26,10 @@ const ValueProposition = () => {
               : 'opacity-0 translate-y-8'
           }`}
         >
-          <span className="text-[#C8A94E] text-sm font-semibold uppercase tracking-[0.2em]">
+          <span className="text-[#2B6CB0] text-sm font-semibold uppercase tracking-[0.2em]">
             Why Karim
           </span>
-          <h2 className="mt-4 text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-[#F1F5F9] leading-tight">
+          <h2 className="mt-4 text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-[#1A202C] leading-tight">
             Uniquely Positioned to Deliver
           </h2>
           <p className="mt-6 text-lg text-[#94A3B8] leading-relaxed">
@@ -47,17 +47,17 @@ const ValueProposition = () => {
             return (
               <div
                 key={i}
-                className={`group p-8 rounded-2xl border border-[#1E293B] bg-[#111827]/50 hover:border-[#C8A94E]/30 hover:bg-[#C8A94E]/5 transition-all duration-500 hover:-translate-y-1 hover:shadow-xl hover:shadow-[#C8A94E]/5 ${
+                className={`group p-8 rounded-2xl border border-[#E2E8F0] bg-white/50 hover:border-[#2B6CB0]/30 hover:bg-[#2B6CB0]/5 transition-all duration-500 hover:-translate-y-1 hover:shadow-xl hover:shadow-[#2B6CB0]/5 ${
                   isVisible
                     ? 'opacity-100 translate-y-0'
                     : 'opacity-0 translate-y-8'
                 }`}
                 style={{ transitionDelay: `${200 + i * 100}ms` }}
               >
-                <div className="w-12 h-12 rounded-xl bg-[#C8A94E]/10 flex items-center justify-center mb-5 group-hover:bg-[#C8A94E]/20 transition-colors duration-300">
-                  <Icon size={24} className="text-[#C8A94E]" />
+                <div className="w-12 h-12 rounded-xl bg-[#2B6CB0]/10 flex items-center justify-center mb-5 group-hover:bg-[#2B6CB0]/20 transition-colors duration-300">
+                  <Icon size={24} className="text-[#2B6CB0]" />
                 </div>
-                <h3 className="text-xl font-semibold text-[#F1F5F9] mb-3">
+                <h3 className="text-xl font-semibold text-[#1A202C] mb-3">
                   {item.title}
                 </h3>
                 <p className="text-[#94A3B8] leading-relaxed">

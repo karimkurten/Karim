@@ -4,13 +4,13 @@ import { Shield } from 'lucide-react';
 
 const Section = ({ title, children }) => (
   <section className="mb-10">
-    <h2 className="text-xl md:text-2xl font-serif font-bold text-[#F1F5F9] mb-4">
+    <h2 className="text-xl md:text-2xl font-serif font-bold text-[#1A202C] mb-4">
       {title}
     </h2>
     <div className="text-[#94A3B8] leading-[1.8] space-y-4 text-[0.938rem]">
       {children}
     </div>
-    <hr className="mt-10 border-[#1E293B]" />
+    <hr className="mt-10 border-[#E2E8F0]" />
   </section>
 );
 
@@ -18,34 +18,34 @@ const PrivacyPolicy = () => (
   <LegalLayout>
     {/* Page Header */}
     <div className="mb-14">
-      <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-[#C8A94E]/20 bg-[#C8A94E]/5 mb-6">
-        <Shield size={16} className="text-[#C8A94E]" />
-        <span className="text-sm text-[#C8A94E] font-medium">Legal</span>
+      <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-[#2B6CB0]/20 bg-[#2B6CB0]/5 mb-6">
+        <Shield size={16} className="text-[#2B6CB0]" />
+        <span className="text-sm text-[#2B6CB0] font-medium">Legal</span>
       </div>
-      <h1 className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-[#F1F5F9] mb-4">
+      <h1 className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-[#1A202C] mb-4">
         Privacy Policy
       </h1>
-      <p className="text-[#64748B] text-sm">
+      <p className="text-[#94A3B8] text-sm">
         Effective Date: January 1, 2025 &middot; Last Updated: July 2025
       </p>
     </div>
 
     <Section title="1. Who I Am">
       <p>
-        This website is the personal professional portfolio of <strong className="text-[#F1F5F9]">Karim Chaouki</strong>,
+        This website is the personal professional portfolio of <strong className="text-[#1A202C]">Karim Chaouki</strong>,
         a Senior Project &amp; Program Manager based in Toronto, Ontario, Canada. The
         purpose of this site is to showcase professional experience, skills, and
         certifications to attract recruiters, talent acquisition managers, and
         peer consultants for career and collaboration opportunities.
       </p>
       <p>
-        <strong className="text-[#F1F5F9]">Contact:</strong>{' '}
-        <a href="mailto:karim.chaouki@gmail.com" className="text-[#C8A94E] hover:text-[#E2C878] underline underline-offset-2 transition-colors">
+        <strong className="text-[#1A202C]">Contact:</strong>{' '}
+        <a href="mailto:karim.chaouki@gmail.com" className="text-[#2B6CB0] hover:text-[#2563EB] underline underline-offset-2 transition-colors">
           karim.chaouki@gmail.com
         </a>
         <br />
-        <strong className="text-[#F1F5F9]">LinkedIn:</strong>{' '}
-        <a href="https://www.linkedin.com/in/karimchaouki" target="_blank" rel="noopener noreferrer" className="text-[#C8A94E] hover:text-[#E2C878] underline underline-offset-2 transition-colors">
+        <strong className="text-[#1A202C]">LinkedIn:</strong>{' '}
+        <a href="https://www.linkedin.com/in/karimchaouki" target="_blank" rel="noopener noreferrer" className="text-[#2B6CB0] hover:text-[#2563EB] underline underline-offset-2 transition-colors">
           linkedin.com/in/karimchaouki
         </a>
       </p>
@@ -56,13 +56,13 @@ const PrivacyPolicy = () => (
         We collect information in two ways:
       </p>
       <p>
-        <strong className="text-[#F1F5F9]">a) Information You Provide Directly</strong><br />
+        <strong className="text-[#1A202C]">a) Information You Provide Directly</strong><br />
         When you use the contact form, you voluntarily submit your name, email
         address, subject, and message. This data is stored securely and used
         solely to respond to your inquiry.
       </p>
       <p>
-        <strong className="text-[#F1F5F9]">b) Information Collected Automatically</strong><br />
+        <strong className="text-[#1A202C]">b) Information Collected Automatically</strong><br />
         When you visit this site, certain technical data may be collected
         automatically, including your IP address, browser type and version,
         operating system, referring URL, pages visited, time spent on pages, and
@@ -86,18 +86,18 @@ const PrivacyPolicy = () => (
       <p>We process your personal data based on the following legal grounds:</p>
       <ul className="list-disc list-inside space-y-2 ml-2">
         <li>
-          <strong className="text-[#F1F5F9]">Consent (Art. 6(1)(a)):</strong> When you
+          <strong className="text-[#1A202C]">Consent (Art. 6(1)(a)):</strong> When you
           submit the contact form or accept cookies, you provide explicit
           consent for the processing of your data for those specific purposes.
         </li>
         <li>
-          <strong className="text-[#F1F5F9]">Legitimate Interest (Art. 6(1)(f)):</strong>{' '}
+          <strong className="text-[#1A202C]">Legitimate Interest (Art. 6(1)(f)):</strong>{' '}
           We have a legitimate interest in analyzing website traffic to improve
           user experience and in processing inquiries from potential
           collaborators and employers.
         </li>
         <li>
-          <strong className="text-[#F1F5F9]">Contractual Necessity (Art. 6(1)(b)):</strong>{' '}
+          <strong className="text-[#1A202C]">Contractual Necessity (Art. 6(1)(b)):</strong>{' '}
           When you reach out regarding a potential professional engagement, the
           processing of your data is necessary for pre-contractual measures
           taken at your request.
@@ -107,14 +107,14 @@ const PrivacyPolicy = () => (
 
     <Section title="5. Data Retention">
       <p>
-        <strong className="text-[#F1F5F9]">Contact Form Data:</strong> Messages submitted
-        through the contact form are retained for a maximum of <strong className="text-[#F1F5F9]">12 months</strong>{' '}
+        <strong className="text-[#1A202C]">Contact Form Data:</strong> Messages submitted
+        through the contact form are retained for a maximum of <strong className="text-[#1A202C]">12 months</strong>{' '}
         from the date of submission, after which they are permanently deleted
         unless an ongoing professional relationship requires continued
         retention.
       </p>
       <p>
-        <strong className="text-[#F1F5F9]">Analytics Data:</strong> Any analytics data
+        <strong className="text-[#1A202C]">Analytics Data:</strong> Any analytics data
         collected is subject to the retention policies of the respective
         third-party analytics tools used. We do not independently store
         analytics data beyond what these tools retain.
@@ -123,14 +123,14 @@ const PrivacyPolicy = () => (
 
     <Section title="6. Third-Party Sharing">
       <p>
-        We do <strong className="text-[#F1F5F9]">not sell, trade, rent, or otherwise share</strong>{' '}
+        We do <strong className="text-[#1A202C]">not sell, trade, rent, or otherwise share</strong>{' '}
         your personal data with third parties for marketing purposes. Your data
         may be processed by the following service providers solely for the
         operation of this website:
       </p>
       <ul className="list-disc list-inside space-y-2 ml-2">
-        <li><strong className="text-[#F1F5F9]">Email Delivery:</strong> Gmail (Google LLC) — for sending and receiving contact form notifications</li>
-        <li><strong className="text-[#F1F5F9]">Hosting Provider:</strong> The website hosting service that stores and serves the site</li>
+        <li><strong className="text-[#1A202C]">Email Delivery:</strong> Gmail (Google LLC) — for sending and receiving contact form notifications</li>
+        <li><strong className="text-[#1A202C]">Hosting Provider:</strong> The website hosting service that stores and serves the site</li>
       </ul>
       <p>
         Each of these providers is bound by their own privacy policies and data
@@ -144,17 +144,17 @@ const PrivacyPolicy = () => (
         have the following rights under the General Data Protection Regulation:
       </p>
       <ul className="list-disc list-inside space-y-2 ml-2">
-        <li><strong className="text-[#F1F5F9]">Right of Access:</strong> You may request a copy of the personal data we hold about you.</li>
-        <li><strong className="text-[#F1F5F9]">Right to Rectification:</strong> You may request correction of inaccurate or incomplete data.</li>
-        <li><strong className="text-[#F1F5F9]">Right to Erasure:</strong> You may request deletion of your personal data ("right to be forgotten").</li>
-        <li><strong className="text-[#F1F5F9]">Right to Restriction:</strong> You may request that we limit the processing of your data.</li>
-        <li><strong className="text-[#F1F5F9]">Right to Data Portability:</strong> You may request your data in a structured, commonly used format.</li>
-        <li><strong className="text-[#F1F5F9]">Right to Object:</strong> You may object to the processing of your data based on legitimate interest.</li>
-        <li><strong className="text-[#F1F5F9]">Right to Lodge a Complaint:</strong> You have the right to file a complaint with a supervisory authority in your EU/EEA member state.</li>
+        <li><strong className="text-[#1A202C]">Right of Access:</strong> You may request a copy of the personal data we hold about you.</li>
+        <li><strong className="text-[#1A202C]">Right to Rectification:</strong> You may request correction of inaccurate or incomplete data.</li>
+        <li><strong className="text-[#1A202C]">Right to Erasure:</strong> You may request deletion of your personal data ("right to be forgotten").</li>
+        <li><strong className="text-[#1A202C]">Right to Restriction:</strong> You may request that we limit the processing of your data.</li>
+        <li><strong className="text-[#1A202C]">Right to Data Portability:</strong> You may request your data in a structured, commonly used format.</li>
+        <li><strong className="text-[#1A202C]">Right to Object:</strong> You may object to the processing of your data based on legitimate interest.</li>
+        <li><strong className="text-[#1A202C]">Right to Lodge a Complaint:</strong> You have the right to file a complaint with a supervisory authority in your EU/EEA member state.</li>
       </ul>
       <p>
         To exercise any of these rights, please contact us at{' '}
-        <a href="mailto:karim.chaouki@gmail.com" className="text-[#C8A94E] hover:text-[#E2C878] underline underline-offset-2 transition-colors">
+        <a href="mailto:karim.chaouki@gmail.com" className="text-[#2B6CB0] hover:text-[#2563EB] underline underline-offset-2 transition-colors">
           karim.chaouki@gmail.com
         </a>.
         We will respond to your request within 30 days.
@@ -167,12 +167,12 @@ const PrivacyPolicy = () => (
         enhance your browsing experience.
       </p>
       <p>
-        <strong className="text-[#F1F5F9]">Functional Cookies:</strong> These are essential
+        <strong className="text-[#1A202C]">Functional Cookies:</strong> These are essential
         for the website to function properly, including remembering your cookie
         consent preference. These cannot be disabled.
       </p>
       <p>
-        <strong className="text-[#F1F5F9]">Analytics Cookies:</strong> These help us
+        <strong className="text-[#1A202C]">Analytics Cookies:</strong> These help us
         understand how visitors interact with the website by collecting
         anonymized usage statistics. You may opt out of analytics cookies by
         using your browser's cookie management settings or by declining
@@ -187,7 +187,7 @@ const PrivacyPolicy = () => (
 
     <Section title="9. International Transfers">
       <p>
-        This website is operated from <strong className="text-[#F1F5F9]">Toronto, Ontario, Canada</strong>.
+        This website is operated from <strong className="text-[#1A202C]">Toronto, Ontario, Canada</strong>.
         Canada's Personal Information Protection and Electronic Documents Act
         (PIPEDA) governs the collection and use of personal data as the primary
         jurisdiction.
@@ -204,7 +204,7 @@ const PrivacyPolicy = () => (
     <Section title="10. CASL Compliance">
       <p>
         In accordance with Canada's Anti-Spam Legislation (CASL), this website
-        does <strong className="text-[#F1F5F9]">not send unsolicited commercial electronic messages</strong>.
+        does <strong className="text-[#1A202C]">not send unsolicited commercial electronic messages</strong>.
         Any email communication initiated as a result of a contact form
         submission is a direct response to your inquiry and does not constitute
         commercial messaging.
@@ -216,11 +216,11 @@ const PrivacyPolicy = () => (
         For any questions, concerns, or requests regarding your personal data or
         this privacy policy, please contact:
       </p>
-      <div className="p-5 rounded-xl border border-[#1E293B] bg-[#111827]/50 mt-4">
-        <p className="text-[#F1F5F9] font-semibold">Karim Chaouki</p>
+      <div className="p-5 rounded-xl border border-[#E2E8F0] bg-white/50 mt-4">
+        <p className="text-[#1A202C] font-semibold">Karim Chaouki</p>
         <p className="text-[#94A3B8] mt-1">Data Controller</p>
         <p className="mt-2">
-          <a href="mailto:karim.chaouki@gmail.com" className="text-[#C8A94E] hover:text-[#E2C878] underline underline-offset-2 transition-colors">
+          <a href="mailto:karim.chaouki@gmail.com" className="text-[#2B6CB0] hover:text-[#2563EB] underline underline-offset-2 transition-colors">
             karim.chaouki@gmail.com
           </a>
         </p>

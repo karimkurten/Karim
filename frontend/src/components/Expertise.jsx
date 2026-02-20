@@ -27,7 +27,7 @@ const Expertise = () => {
   const [ref, isVisible] = useScrollReveal();
 
   return (
-    <section id="expertise" className="relative py-24 md:py-32 bg-[#0B1120]">
+    <section id="expertise" className="relative py-24 md:py-32 bg-[#F0F4F8]">
       <div ref={ref} className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
         {/* Section Header */}
         <div
@@ -37,10 +37,10 @@ const Expertise = () => {
               : 'opacity-0 translate-y-8'
           }`}
         >
-          <span className="text-[#C8A94E] text-sm font-semibold uppercase tracking-[0.2em]">
+          <span className="text-[#2B6CB0] text-sm font-semibold uppercase tracking-[0.2em]">
             Core Expertise
           </span>
-          <h2 className="mt-4 text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-[#F1F5F9]">
+          <h2 className="mt-4 text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-[#1A202C]">
             Skills & Capabilities
           </h2>
           <p className="mt-4 text-[#94A3B8]">
@@ -56,17 +56,17 @@ const Expertise = () => {
             return (
               <div
                 key={i}
-                className={`group relative p-6 rounded-2xl border border-[#1E293B] bg-[#111827]/40 hover:border-[#C8A94E]/30 hover:bg-[#C8A94E]/5 transition-all duration-500 hover:-translate-y-1 ${
+                className={`group relative p-6 rounded-2xl border border-[#E2E8F0] bg-white/40 hover:border-[#2B6CB0]/30 hover:bg-[#2B6CB0]/5 transition-all duration-500 hover:-translate-y-1 ${
                   isVisible
                     ? 'opacity-100 translate-y-0'
                     : 'opacity-0 translate-y-8'
                 }`}
                 style={{ transitionDelay: `${150 + i * 80}ms` }}
               >
-                <div className="w-11 h-11 rounded-lg bg-[#C8A94E]/10 flex items-center justify-center mb-4 group-hover:bg-[#C8A94E]/20 transition-colors duration-300">
-                  <Icon size={20} className="text-[#C8A94E]" />
+                <div className="w-11 h-11 rounded-lg bg-[#2B6CB0]/10 flex items-center justify-center mb-4 group-hover:bg-[#2B6CB0]/20 transition-colors duration-300">
+                  <Icon size={20} className="text-[#2B6CB0]" />
                 </div>
-                <h3 className="text-lg font-semibold text-[#F1F5F9] mb-3">
+                <h3 className="text-lg font-semibold text-[#1A202C] mb-3">
                   {skill.name}
                 </h3>
                 <ul className="space-y-1.5">
@@ -75,7 +75,7 @@ const Expertise = () => {
                       key={j}
                       className="text-sm text-[#94A3B8] flex items-center gap-2"
                     >
-                      <span className="w-1 h-1 rounded-full bg-[#C8A94E]/50 flex-shrink-0" />
+                      <span className="w-1 h-1 rounded-full bg-[#2B6CB0]/50 flex-shrink-0" />
                       {item}
                     </li>
                   ))}
