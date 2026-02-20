@@ -42,29 +42,21 @@ const ValueProposition = () => {
         </div>
 
         {/* Differentiator Cards */}
-        <div className="mt-16 grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="mt-16 grid grid-cols-1 md:grid-cols-2 gap-6 perspective-container">
           {differentiators.map((item, i) => {
             const Icon = iconMap[item.icon];
             return (
-              <div
-                key={i}
-                className={`group p-8 rounded-2xl border border-[#E2E8F0] bg-white/50 hover:border-[#2B6CB0]/30 hover:bg-[#2B6CB0]/5 transition-all duration-500 hover:-translate-y-1 hover:shadow-xl hover:shadow-[#2B6CB0]/5 ${
-                  isVisible
-                    ? 'opacity-100 translate-y-0'
-                    : 'opacity-0 translate-y-8'
-                }`}
-                style={{ transitionDelay: `${200 + i * 100}ms` }}
-              >
+              <TiltCard key={i} index={i} isVisible={isVisible}>
                 <div className="w-12 h-12 rounded-xl bg-[#2B6CB0]/10 flex items-center justify-center mb-5 group-hover:bg-[#2B6CB0]/20 transition-colors duration-300">
                   <Icon size={24} className="text-[#2B6CB0]" />
                 </div>
                 <h3 className="text-xl font-semibold text-[#1A202C] mb-3">
                   {item.title}
                 </h3>
-                <p className="text-[#94A3B8] leading-relaxed">
+                <p className="text-[#64748B] leading-relaxed">
                   {item.description}
                 </p>
-              </div>
+              </TiltCard>
             );
           })}
         </div>
