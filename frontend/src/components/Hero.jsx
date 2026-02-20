@@ -89,62 +89,86 @@ const Hero = () => {
         ref={ref}
         className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 w-full pt-32 pb-20"
       >
-        <div
-          className={`transition-all duration-1000 ${
-            isVisible
-              ? 'opacity-100 translate-y-0'
-              : 'opacity-0 translate-y-10'
-          }`}
-        >
-          {/* Availability badge */}
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-[#C8A94E]/20 bg-[#C8A94E]/5 mb-8">
-            <span className="w-2 h-2 rounded-full bg-[#C8A94E] animate-pulse" />
-            <span className="text-sm text-[#C8A94E] font-medium">
-              Available for New Engagements
-            </span>
+        <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-12">
+          <div
+            className={`flex-1 transition-all duration-1000 ${
+              isVisible
+                ? 'opacity-100 translate-y-0'
+                : 'opacity-0 translate-y-10'
+            }`}
+          >
+            {/* Availability badge */}
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-[#C8A94E]/20 bg-[#C8A94E]/5 mb-8">
+              <span className="w-2 h-2 rounded-full bg-[#C8A94E] animate-pulse" />
+              <span className="text-sm text-[#C8A94E] font-medium">
+                Available for New Engagements
+              </span>
+            </div>
+
+            {/* Headline */}
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-serif font-bold text-[#F1F5F9] leading-[1.1] max-w-5xl">
+              Enterprise HCM Implementations.{' '}
+              <span className="text-[#C8A94E]">Zero Delays.</span>
+              <br className="hidden md:block" />
+              100% Client Retention.
+            </h1>
+
+            {/* Subtitle */}
+            <p className="mt-6 text-lg md:text-xl text-[#94A3B8] max-w-2xl leading-relaxed">
+              {personalInfo.subtitle}
+            </p>
+
+            {/* CTAs */}
+            <div className="mt-10 flex flex-wrap gap-4">
+              <a
+                href={`mailto:${personalInfo.email}`}
+                className="group inline-flex items-center gap-2 px-8 py-4 bg-[#C8A94E] text-[#0B1120] font-semibold rounded-lg hover:bg-[#E2C878] transition-all duration-300 hover:shadow-xl hover:shadow-[#C8A94E]/20 hover:-translate-y-0.5"
+              >
+                Hire Me
+                <ExternalLink
+                  size={18}
+                  className="group-hover:translate-x-0.5 transition-transform"
+                />
+              </a>
+              <a
+                href="#experience"
+                onClick={(e) => {
+                  e.preventDefault();
+                  document
+                    .querySelector('#experience')
+                    ?.scrollIntoView({ behavior: 'smooth' });
+                }}
+                className="group inline-flex items-center gap-2 px-8 py-4 border border-[#C8A94E]/30 text-[#C8A94E] font-semibold rounded-lg hover:bg-[#C8A94E]/10 hover:border-[#C8A94E]/50 transition-all duration-300 hover:-translate-y-0.5"
+              >
+                View My Work
+                <ArrowDown
+                  size={18}
+                  className="group-hover:translate-y-0.5 transition-transform"
+                />
+              </a>
+              <a
+                href={personalInfo.resumeUrl}
+                download="Karim_Chaouki_Resume.pdf"
+                className="group inline-flex items-center gap-2 px-8 py-4 border border-[#1E293B] text-[#94A3B8] font-semibold rounded-lg hover:bg-[#1E293B]/50 hover:text-[#F1F5F9] hover:border-[#334155] transition-all duration-300 hover:-translate-y-0.5"
+              >
+                Download Resume
+                <Download
+                  size={18}
+                  className="group-hover:translate-y-0.5 transition-transform"
+                />
+              </a>
+            </div>
           </div>
 
-          {/* Headline */}
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-serif font-bold text-[#F1F5F9] leading-[1.1] max-w-5xl">
-            Enterprise HCM Implementations.{' '}
-            <span className="text-[#C8A94E]">Zero Delays.</span>
-            <br className="hidden md:block" />
-            100% Client Retention.
-          </h1>
-
-          {/* Subtitle */}
-          <p className="mt-6 text-lg md:text-xl text-[#94A3B8] max-w-2xl leading-relaxed">
-            {personalInfo.subtitle}
-          </p>
-
-          {/* CTAs */}
-          <div className="mt-10 flex flex-wrap gap-4">
-            <a
-              href={`mailto:${personalInfo.email}`}
-              className="group inline-flex items-center gap-2 px-8 py-4 bg-[#C8A94E] text-[#0B1120] font-semibold rounded-lg hover:bg-[#E2C878] transition-all duration-300 hover:shadow-xl hover:shadow-[#C8A94E]/20 hover:-translate-y-0.5"
-            >
-              Hire Me
-              <ExternalLink
-                size={18}
-                className="group-hover:translate-x-0.5 transition-transform"
-              />
-            </a>
-            <a
-              href="#experience"
-              onClick={(e) => {
-                e.preventDefault();
-                document
-                  .querySelector('#experience')
-                  ?.scrollIntoView({ behavior: 'smooth' });
-              }}
-              className="group inline-flex items-center gap-2 px-8 py-4 border border-[#C8A94E]/30 text-[#C8A94E] font-semibold rounded-lg hover:bg-[#C8A94E]/10 hover:border-[#C8A94E]/50 transition-all duration-300 hover:-translate-y-0.5"
-            >
-              View My Work
-              <ArrowDown
-                size={18}
-                className="group-hover:translate-y-0.5 transition-transform"
-              />
-            </a>
+          {/* Profile Picture */}
+          <div
+            className={`flex-shrink-0 flex justify-center lg:justify-end transition-all duration-1000 delay-200 ${
+              isVisible
+                ? 'opacity-100 translate-x-0'
+                : 'opacity-0 translate-x-10'
+            }`}
+          >
+            <ProfileAvatar />
           </div>
         </div>
 
