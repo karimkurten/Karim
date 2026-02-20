@@ -243,12 +243,28 @@ const Contact = () => {
                       placeholder="Tell me about your project..."
                     />
                   </div>
+                  {error && (
+                    <div className="flex items-center gap-2 p-4 rounded-xl bg-red-500/10 border border-red-500/20 text-red-400 text-sm">
+                      <AlertCircle size={16} className="flex-shrink-0" />
+                      {error}
+                    </div>
+                  )}
                   <button
                     type="submit"
-                    className="w-full flex items-center justify-center gap-2 px-8 py-4 bg-[#C8A94E] text-[#0B1120] font-semibold rounded-xl hover:bg-[#E2C878] transition-all duration-300 hover:shadow-xl hover:shadow-[#C8A94E]/20"
+                    disabled={sending}
+                    className="w-full flex items-center justify-center gap-2 px-8 py-4 bg-[#C8A94E] text-[#0B1120] font-semibold rounded-xl hover:bg-[#E2C878] transition-all duration-300 hover:shadow-xl hover:shadow-[#C8A94E]/20 disabled:opacity-60 disabled:cursor-not-allowed"
                   >
-                    <Send size={18} />
-                    Send Message
+                    {sending ? (
+                      <>
+                        <Loader2 size={18} className="animate-spin" />
+                        Sending...
+                      </>
+                    ) : (
+                      <>
+                        <Send size={18} />
+                        Send Message
+                      </>
+                    )}
                   </button>
                 </form>
               )}
