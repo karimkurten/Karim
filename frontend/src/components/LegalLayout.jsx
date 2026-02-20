@@ -65,7 +65,7 @@ const LegalLayout = ({ children }) => {
               </Link>
             </div>
             <p className="text-xs text-[#475569]">
-              &copy; 2025 Karim Chaouki. All Rights Reserved.
+              &copy; {new Date().getFullYear()} Karim Chaouki. All Rights Reserved.
             </p>
             <div className="flex items-center gap-4">
               <a
