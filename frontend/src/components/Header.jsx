@@ -36,9 +36,11 @@ const Header = () => {
             onClick={(e) => handleNavClick(e, '#hero')}
             className="group flex items-center gap-3"
           >
-            <div className="w-10 h-10 rounded-lg bg-[#2B6CB0] flex items-center justify-center text-white font-bold text-lg font-serif">
-              KC
-            </div>
+            <img 
+              src="/logo.png" 
+              alt="Karim Chaouki Logo" 
+              className="w-10 h-10 rounded-lg object-contain"
+            />
             <span className="hidden sm:block text-[#1A202C] font-semibold tracking-wide group-hover:text-[#2B6CB0] transition-colors duration-300">
               {personalInfo.name}
             </span>
