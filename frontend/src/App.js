@@ -9,6 +9,7 @@ import Timeline from './components/Timeline';
 import Certifications from './components/Certifications';
 import ImpactMetrics from './components/ImpactMetrics';
 import Testimonials from './components/Testimonials';
+import FAQ from './components/FAQ';
 import Contact from './components/Contact';
 import CookieConsent from './components/CookieConsent';
 import PrivacyPolicy from './components/PrivacyPolicy';
@@ -25,6 +26,7 @@ const Portfolio = () => (
       <Certifications />
       <ImpactMetrics />
       <Testimonials />
+      <FAQ />
       <Contact />
     </main>
   </>
