@@ -279,9 +279,11 @@ const Contact = () => {
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="flex flex-col md:flex-row items-center justify-between gap-6">
             <div className="flex items-center gap-3">
-              <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-[#2B6CB0] to-[#1E5090] flex items-center justify-center text-white font-bold text-sm font-serif">
-                KC
-              </div>
+              <img 
+                src="/logo.png" 
+                alt="Karim Chaouki Logo" 
+                className="w-8 h-8 rounded-lg object-contain"
+              />
               <span className="text-[#64748B] text-sm">
                 &copy; {new Date().getFullYear()} Karim Chaouki. All Rights Reserved.
               </span>
