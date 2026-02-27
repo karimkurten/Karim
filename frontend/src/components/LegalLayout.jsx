@@ -25,9 +25,11 @@ const LegalLayout = ({ children }) => {
             to="/"
             className="flex items-center gap-2"
           >
-            <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-[#2B6CB0] to-[#1E5090] flex items-center justify-center text-[#0B1120] font-bold text-xs font-serif">
-              KC
-            </div>
+            <img 
+              src="/logo.png" 
+              alt="Karim Chaouki Logo" 
+              className="w-8 h-8 rounded-lg object-contain"
+            />
           </Link>
         </div>
       </header>
