@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import '@/App.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { Analytics } from '@vercel/analytics/react';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import ValueProposition from './components/ValueProposition';
@@ -77,6 +78,7 @@ function App() {
         </Routes>
         <CookieConsent />
       </BrowserRouter>
+      <Analytics />
     </div>
   );
 }
