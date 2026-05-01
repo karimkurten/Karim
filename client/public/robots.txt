@@ -1,0 +1,12 @@
+# robots.txt — karimchaouki.com
+# Generated for SEO optimization
+
+User-agent: *
+Allow: /
+
+# Block crawling of legal/utility pages that add no SEO value
+Disallow: /privacy-policy
+Disallow: /terms-and-conditions
+
+# Sitemap location
+Sitemap: https://karimchaouki.com/sitemap.xml
