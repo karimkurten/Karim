@@ -7,13 +7,17 @@ const schema = {
   '@context': 'https://schema.org',
   '@graph': [
     buildServiceSchema(
-      'ADP Workforce Now Implementation Specialist — Canada',
-      'Senior ADP Workforce Now implementation consultant for HCM, Payroll, Benefits, Time & Attendance, and Talent deployments across Canadian and US organizations.',
-      '/services/adp-workforce-now-implementation'
+      'ADP Workforce Now Implementation Consultant US/CAN',
+      'Senior ADP Workforce Now implementation consultant for HCM, Payroll, Benefits, Time & Attendance, and Talent deployments across United States and Canadian organizations.',
+      '/services/adp-workforce-now-implementation',
+      [
+        { '@type': 'Country', name: 'United States' },
+        { '@type': 'Country', name: 'Canada' },
+      ]
     ),
     buildBreadcrumb([
       { name: 'Home', path: '/' },
-      { name: 'ADP Workforce Now Implementation', path: '/services/adp-workforce-now-implementation' },
+      { name: 'ADP Workforce Now Implementation Consultant US/CAN', path: '/services/adp-workforce-now-implementation' },
     ]),
     buildFAQSchema([
       {
@@ -79,8 +83,8 @@ export default function ServiceADPWorkforceNow() {
   return (
     <>
       <SEO
-        title="ADP Workforce Now Implementation Specialist Canada — HCM & Payroll Expert | Karim Chaouki"
-        description="Senior ADP Workforce Now implementation consultant for Canadian and US organizations. Specializing in Workforce Now Payroll, HCM, Benefits, Time & Attendance, and Talent. PMP Certified. Bilingual EN/FR. Toronto, Canada."
+        title="ADP Workforce Now Implementation Consultant US/CAN — HCM & Payroll Expert | Karim Chaouki"
+        description="Senior ADP Workforce Now implementation consultant for US and Canadian organizations. Specializing in Workforce Now Payroll, HCM, Benefits, Time & Attendance, and Talent. Cross-border US/Canada expert. PMP Certified. Bilingual EN/FR."
         canonical="/services/adp-workforce-now-implementation"
         schema={schema}
       />
@@ -94,16 +98,16 @@ export default function ServiceADPWorkforceNow() {
               <ol className="flex items-center gap-2 text-sm text-blue-300">
                 <li><Link to="/" className="hover:text-white transition-colors">Home</Link></li>
                 <li aria-hidden="true" className="text-blue-500">›</li>
-                <li className="text-white font-medium">ADP Workforce Now Implementation</li>
+                <li className="text-white font-medium">ADP Workforce Now Implementation Consultant US/CAN</li>
               </ol>
             </nav>
             <h1 className="text-4xl md:text-5xl font-bold mb-4 leading-tight">
-              Senior ADP Workforce Now Implementation Specialist — Canada
+              ADP Workforce Now Implementation Consultant — US/CAN
             </h1>
             <p className="text-xl text-blue-200 max-w-2xl leading-relaxed mb-8">
-              Full-cycle ADP Workforce Now HCM, Payroll, Benefits, and Time deployments for Canadian and
-              cross-border US organizations. Delivered on time, compliant with Canadian and US regulations,
-              and configured for your business — by an ADP Center of Excellence consultant.
+              Full-cycle ADP Workforce Now HCM, Payroll, Benefits, and Time deployments for US and
+              Canadian organizations. Cross-border expertise from an ADP Center of Excellence consultant —
+              delivered on time, compliant with US and Canadian regulations, and configured for your business.
             </p>
             <div className="flex flex-wrap gap-4">
               <Link
@@ -122,7 +126,7 @@ export default function ServiceADPWorkforceNow() {
           <div className="max-w-5xl mx-auto grid md:grid-cols-3 gap-12">
             <div className="md:col-span-2 prose max-w-none">
               <h2 className="text-3xl font-bold text-slate-900 mb-4">
-                ADP Workforce Now Implementation for Canadian &amp; Cross-Border Organizations
+                ADP Workforce Now Implementation for US &amp; Canadian Organizations
               </h2>
               <p className="text-slate-600 leading-relaxed mb-4">
                 An ADP Workforce Now implementation is one of the most consequential HR-technology investments
@@ -131,18 +135,18 @@ export default function ServiceADPWorkforceNow() {
                 live payroll is a success or a crisis.
               </p>
               <p className="text-slate-600 leading-relaxed mb-4">
-                As a <strong className="text-slate-800">senior ADP Workforce Now implementation specialist</strong>{' '}
-                currently leading projects in ADP Canada&apos;s Center of Excellence, I bring project management
+                As a <strong className="text-slate-800">senior ADP Workforce Now implementation consultant</strong>{' '}
+                currently leading projects in ADP&apos;s Center of Excellence, I bring project management
                 discipline and deep functional knowledge to every phase of your Workforce Now journey. I&apos;ve
-                delivered 50+ enterprise deployments across Canadian financial institutions, healthcare networks,
-                manufacturing, and cross-border US/Canada organizations — with a 100% on-time go-live record.
+                delivered 50+ enterprise deployments across US and Canadian financial institutions, healthcare
+                networks, manufacturing, and cross-border organizations — with a 100% on-time go-live record.
               </p>
               <p className="text-slate-600 leading-relaxed mb-8">
-                Canadian payroll in Workforce Now is meaningfully more complex than US-only deployments.
-                CPP and EI contributions, T4/T4A year-end, Record of Employment (ROE) generation, federal
-                and provincial tax tables, Quebec&apos;s QPIP and CSST, and multi-province pay rule design
-                demand a practitioner who has built and tested these configurations many times — not someone
-                learning them on your project&apos;s dime.
+                Cross-border US/Canada Workforce Now deployments are meaningfully more complex than single-country
+                rollouts. US federal/state/local payroll tax, multi-state reciprocity, I-9 compliance, CPP and EI
+                contributions, T4/T4A year-end, ROE generation, federal and provincial Canadian tax tables,
+                Quebec&apos;s QPIP and CSST, and dual-country tenant configurations all demand a practitioner who
+                has built and tested these many times — not someone learning them on your project&apos;s dime.
               </p>
 
               <blockquote className="border-l-4 border-blue-600 pl-6 py-2 bg-slate-50 rounded-r-lg my-8">

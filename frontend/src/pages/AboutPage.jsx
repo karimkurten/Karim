@@ -224,7 +224,7 @@ export default function AboutPage() {
             <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
               {[
                 { title: 'AML Compliance', href: '/services/aml-consultant-canada', icon: '🛡️' },
-                { title: 'ADP Workforce Now Implementation', href: '/services/adp-workforce-now-implementation', icon: '⚙️' },
+                { title: 'ADP Workforce Now Implementation US/CAN', href: '/services/adp-workforce-now-implementation', icon: '⚙️' },
                 { title: 'Payroll Systems PM', href: '/services/project-manager-payroll-systems', icon: '💰' },
                 { title: 'Bilingual Delivery', href: '/services/bilingual-implementation-manager', icon: '🌐' },
               ].map((s) => (

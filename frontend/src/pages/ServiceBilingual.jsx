@@ -233,7 +233,7 @@ export default function ServiceBilingual() {
             <h2 className="text-xl font-bold text-slate-900 mb-4">Services Available Bilingually</h2>
             <div className="flex flex-wrap gap-3">
               <Link to="/services/aml-consultant-canada" className="bg-white border border-blue-200 text-blue-700 font-semibold px-4 py-2 rounded-lg text-sm hover:bg-blue-50 transition-colors">AML Compliance Consulting →</Link>
-              <Link to="/services/adp-workforce-now-implementation" className="bg-white border border-blue-200 text-blue-700 font-semibold px-4 py-2 rounded-lg text-sm hover:bg-blue-50 transition-colors">ADP Workforce Now Implementation →</Link>
+              <Link to="/services/adp-workforce-now-implementation" className="bg-white border border-blue-200 text-blue-700 font-semibold px-4 py-2 rounded-lg text-sm hover:bg-blue-50 transition-colors">ADP Workforce Now Implementation US/CAN →</Link>
               <Link to="/services/project-manager-payroll-systems" className="bg-white border border-blue-200 text-blue-700 font-semibold px-4 py-2 rounded-lg text-sm hover:bg-blue-50 transition-colors">Payroll Systems PM →</Link>
             </div>
           </div>

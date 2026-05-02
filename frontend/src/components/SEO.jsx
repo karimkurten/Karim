@@ -110,14 +110,14 @@ export const personSchema = {
   sameAs: ['https://www.linkedin.com/in/karimchaouki'],
 };
 
-export const buildServiceSchema = (name, description, path) => ({
+export const buildServiceSchema = (name, description, path, areaServed = [{ '@type': 'Country', name: 'Canada' }]) => ({
   '@context': 'https://schema.org',
   '@type': 'ProfessionalService',
   name,
   description,
   url: `${SITE_URL}${path}`,
   provider: { '@type': 'Person', name: 'Karim Chaouki', url: SITE_URL },
-  areaServed: { '@type': 'Country', name: 'Canada' },
+  areaServed,
   availableLanguage: ['English', 'French'],
 });
 
