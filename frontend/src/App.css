@@ -1,34 +1,145 @@
-.App-logo {
-    height: 40vmin;
-    pointer-events: none;
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+
+.App {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  background-color: #F0F4F8;
+  color: #1A202C;
+  overflow-x: hidden;
+  /* Disable text selection */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-    .App-logo {
-        animation: App-logo-spin infinite 20s linear;
-    }
+/* Allow text selection in form inputs */
+input, textarea {
+  -webkit-user-select: text !important;
+  -moz-user-select: text !important;
+  -ms-user-select: text !important;
+  user-select: text !important;
 }
 
-.App-header {
-    background-color: #0f0f10;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: calc(10px + 2vmin);
-    color: white;
+/* Prevent image dragging and saving */
+img {
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+  user-drag: none;
+  pointer-events: none;
 }
 
-.App-link {
-    color: #61dafb;
+.font-serif {
+  font-family: 'DM Serif Display', serif !important;
 }
 
-@keyframes App-logo-spin {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
+html {
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F0F4F8;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #CBD5E1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #2B6CB0;
+}
+
+@keyframes slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-slide-up {
+  animation: slide-up 0.5s ease-out forwards;
+}
+
+/* 3D Animation Utilities */
+.perspective-container {
+  perspective: 1200px;
+}
+
+@keyframes float-3d {
+  0%, 100% { transform: translateY(0) translateZ(0); }
+  50% { transform: translateY(-8px) translateZ(15px); }
+}
+
+@keyframes pulse-3d {
+  0%, 100% { transform: scale3d(1, 1, 1); box-shadow: 0 0 0 0 rgba(43, 108, 176, 0.3); }
+  50% { transform: scale3d(1.15, 1.15, 1.15); box-shadow: 0 0 12px 4px rgba(43, 108, 176, 0.15); }
+}
+
+@keyframes reveal-3d-left {
+  from { opacity: 0; transform: perspective(800px) rotateY(8deg) translateX(-60px); }
+  to { opacity: 1; transform: perspective(800px) rotateY(0deg) translateX(0); }
+}
+
+@keyframes reveal-3d-right {
+  from { opacity: 0; transform: perspective(800px) rotateY(-8deg) translateX(60px); }
+  to { opacity: 1; transform: perspective(800px) rotateY(0deg) translateX(0); }
+}
+
+@keyframes reveal-3d-up {
+  from { opacity: 0; transform: perspective(800px) rotateX(-6deg) translateY(40px) translateZ(-30px); }
+  to { opacity: 1; transform: perspective(800px) rotateX(0deg) translateY(0) translateZ(0); }
+}
+
+@keyframes glow-line {
+  0% { background-position: 0% 0%; }
+  100% { background-position: 0% 100%; }
+}
+
+.animate-float-3d {
+  animation: float-3d 4s ease-in-out infinite;
+}
+
+.animate-pulse-3d {
+  animation: pulse-3d 2.5s ease-in-out infinite;
+}
+
+.animate-reveal-3d-left {
+  animation: reveal-3d-left 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.animate-reveal-3d-right {
+  animation: reveal-3d-right 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.animate-reveal-3d-up {
+  animation: reveal-3d-up 0.7s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.card-3d {
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+
+.card-3d-inner {
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+}
+
+.card-3d:hover .card-3d-shine {
+  opacity: 1;
+}
+
+::selection {
+  background-color: rgba(43, 108, 176, 0.2);
+  color: #1A202C;
 }

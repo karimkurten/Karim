@@ -1,0 +1,1892 @@
+diff --git a/frontend/package.json b/frontend/package.json
+index e3ca27f..a3e0db2 100644
+--- a/frontend/package.json
++++ b/frontend/package.json
+@@ -44,6 +44,7 @@
+     "react": "^19.0.0",
+     "react-day-picker": "8.10.1",
+     "react-dom": "^19.0.0",
++    "react-helmet-async": "^2.0.5",
+     "react-hook-form": "^7.56.2",
+     "react-resizable-panels": "^3.0.1",
+     "react-router-dom": "^7.5.1",
+@@ -75,7 +76,6 @@
+   "devDependencies": {
+     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+     "@craco/craco": "^7.1.0",
+-    "@emergentbase/visual-edits": "https://assets.emergent.sh/npm/emergentbase-visual-edits-1.0.8.tgz",
+     "@eslint/js": "9.23.0",
+     "autoprefixer": "^10.4.20",
+     "eslint": "9.23.0",
+diff --git a/frontend/public/index.html b/frontend/public/index.html
+index 427ea43..e74988c 100644
+--- a/frontend/public/index.html
++++ b/frontend/public/index.html
+@@ -1,158 +1,52 @@
+-<!doctype html>
+-<html lang="en">
+-    <head>
+-        <meta charset="utf-8" />
+-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+-        <meta name="theme-color" content="#000000" />
+-        <meta name="description" content="A product of emergent.sh" />
+-        <link rel="preconnect" href="https://fonts.googleapis.com" />
+-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap" rel="stylesheet" />
+-        <!--
+-        manifest.json provides metadata used when your web app is installed on a
+-        user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+-        -->
+-        <!--
+-        Notice the use of %PUBLIC_URL% in the tags above.
+-        It will be replaced with the URL of the `public` folder during the build.
+-        Only files inside the `public` folder can be referenced from the HTML.
+-
+-        Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+-        work correctly both with client-side routing and a non-root public URL.
+-        Learn how to configure a non-root public URL by running `npm run build`.
+-        -->
+-        <title>Emergent | Fullstack App</title>
+-        <script>window.addEventListener("error",function(e){if(e.error instanceof DOMException&&e.error.name==="DataCloneError"&&e.message&&e.message.includes("PerformanceServerTiming")){e.stopImmediatePropagation();e.preventDefault()}},true);</script>
+-        <script src="https://assets.emergent.sh/scripts/emergent-main.js"></script>
+-    </head>
+-    <body>
+-        <noscript>You need to enable JavaScript to run this app.</noscript>
+-        <div id="root"></div>
+-        <!--
+-      This HTML file is a template.
+-      If you open it directly in the browser, you will see an empty page.
+-
+-      You can add webfonts, meta tags, or analytics to this file.
+-      The build step will place the bundled scripts into the <body> tag.
+-
+-      To begin the development, run `npm start` or `yarn start`.
+-      To create a production bundle, use `npm run build` or `yarn build`.
+-    -->
+-        <a
+-            id="emergent-badge"
+-            target="_blank"
+-            href="https://app.emergent.sh/?utm_source=emergent-badge"
+-            style="
+-                display: inline-flex !important;
+-                box-sizing: border-box;
+-                width: 178px;
+-                height: 40px;
+-                padding: 8px 12px 8px 12px;
+-                align-items: center !important;
+-                gap: 8px;
+-                border-radius: 50px !important;
+-                background: #000 !important;
+-                position: fixed !important;
+-                bottom: 16px;
+-                right: 16px;
+-                text-decoration: none;
+-                font-family: -apple-system, BlinkMacSystemFont,
+-                    &quot;Segoe UI&quot;, Roboto, Oxygen, Ubuntu, Cantarell,
+-                    &quot;Open Sans&quot;, &quot;Helvetica Neue&quot;,
+-                    sans-serif !important;
+-                font-size: 12px !important;
+-                z-index: 9999 !important;
+-            "
+-        >
+-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+-                <path d="M15.5702 8.13142C15.7729 8.0412 16.0007 8.18878 15.9892 8.4103C15.8374 11.3192 14.0965 14.0405 11.2531 15.3065C8.40964 16.5725 5.2224 16.0453 2.95912 14.2117C2.78676 14.072 2.82955 13.804 3.03219 13.7137L4.95677 12.8568C5.04866 12.8159 5.15446 12.823 5.24204 12.8725C6.73377 13.7153 8.59176 13.8649 10.2772 13.1145C11.9626 12.3641 13.0947 10.8833 13.4665 9.21075C13.4883 9.11256 13.5539 9.02918 13.6457 8.98827L15.5702 8.13142Z" fill="white"/>
+-                <path fill-rule="evenodd" clip-rule="evenodd" d="M15.3066 4.74698L15.5067 5.19653C15.5759 5.35178 15.5061 5.53366 15.3508 5.60278L1.29992 11.8586C1.14467 11.9278 0.962794 11.8579 0.893675 11.7027L0.701732 11.2716L0.693457 11.2531C-1.10317 7.21778 0.711626 2.49007 4.74692 0.693443C8.78221 -1.10318 13.51 0.711693 15.3066 4.74698ZM2.82356 8.55367C2.63552 8.63739 2.41991 8.51617 2.40853 8.31065C2.28373 6.05724 3.53858 3.85787 5.72286 2.88536C7.90715 1.91286 10.3813 2.45199 11.9724 4.05256C12.1175 4.19854 12.0633 4.43988 11.8753 4.5236L2.82356 8.55367Z" fill="white"/>
+-            </svg>
+-            <p
+-                style="
+-                    color: #FFF !important;
+-                    font-family: 'Inter', sans-serif !important;
+-                    font-size: 13px !important;
+-                    font-style: normal !important;
+-                    font-weight: 600 !important;
+-                    line-height: 20px !important;
+-                    margin: 0 !important;
+-                    white-space: nowrap !important;
+-                "
+-            >
+-                Made with Emergent
+-            </p>
+-        </a>
+-        <script>
+-            !(function (t, e) {
+-                var o, n, p, r;
+-                e.__SV ||
+-                    ((window.posthog = e),
+-                    (e._i = []),
+-                    (e.init = function (i, s, a) {
+-                        function g(t, e) {
+-                            var o = e.split(".");
+-                            2 == o.length && ((t = t[o[0]]), (e = o[1])),
+-                                (t[e] = function () {
+-                                    t.push(
+-                                        [e].concat(
+-                                            Array.prototype.slice.call(
+-                                                arguments,
+-                                                0,
+-                                            ),
+-                                        ),
+-                                    );
+-                                });
+-                        }
+-                        ((p = t.createElement("script")).type =
+-                            "text/javascript"),
+-                            (p.crossOrigin = "anonymous"),
+-                            (p.async = !0),
+-                            (p.src =
+-                                s.api_host.replace(
+-                                    ".i.posthog.com",
+-                                    "-assets.i.posthog.com",
+-                                ) + "/static/array.js"),
+-                            (r =
+-                                t.getElementsByTagName(
+-                                    "script",
+-                                )[0]).parentNode.insertBefore(p, r);
+-                        var u = e;
+-                        for (
+-                            void 0 !== a ? (u = e[a] = []) : (a = "posthog"),
+-                                u.people = u.people || [],
+-                                u.toString = function (t) {
+-                                    var e = "posthog";
+-                                    return (
+-                                        "posthog" !== a && (e += "." + a),
+-                                        t || (e += " (stub)"),
+-                                        e
+-                                    );
+-                                },
+-                                u.people.toString = function () {
+-                                    return u.toString(1) + ".people (stub)";
+-                                },
+-                                o =
+-                                    "init me ws ys ps bs capture je Di ks register register_once register_for_session unregister unregister_for_session Ps getFeatureFlag getFeatureFlagPayload isFeatureEnabled reloadFeatureFlags updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures on onFeatureFlags onSurveysLoaded onSessionId getSurveys getActiveMatchingSurveys renderSurvey canRenderSurvey canRenderSurveyAsync identify setPersonProperties group resetGroups setPersonPropertiesForFlags resetPersonPropertiesForFlags setGroupPropertiesForFlags resetGroupPropertiesForFlags reset get_distinct_id getGroups get_session_id get_session_replay_url alias set_config startSessionRecording stopSessionRecording sessionRecordingStarted captureException loadToolbar get_property getSessionProperty Es $s createPersonProfile Is opt_in_capturing opt_out_capturing has_opted_in_capturing has_opted_out_capturing clear_opt_in_out_capturing Ss debug xs getPageViewId captureTraceFeedback captureTraceMetric".split(
+-                                        " ",
+-                                    ),
+-                                n = 0;
+-                            n < o.length;
+-                            n++
+-                        )
+-                            g(u, o[n]);
+-                        e._i.push([i, s, a]);
+-                    }),
+-                    (e.__SV = 1));
+-            })(document, window.posthog || []);
+-            posthog.init("phc_xAvL2Iq4tFmANRE7kzbKwaSqp1HJjN7x48s3vr0CMjs", {
+-                api_host: "https://us.i.posthog.com",
+-                person_profiles: "identified_only", // or 'always' to create profiles for anonymous users as well,
+-                session_recording: {
+-                    recordCrossOriginIframes: true,
+-                    capturePerformance: false,
+-                },
+-            });
+-        </script>
+-    </body>
++<!DOCTYPE html>
++<html lang="en-CA">
++  <head>
++    <meta charset="utf-8" />
++    <meta name="viewport" content="width=device-width, initial-scale=1" />
++    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
++    <title>Karim Chaouki — AML &amp; Workday Implementation Manager | Canada</title>
++    <meta name="description" content="Senior Implementation Manager specializing in AML compliance, Workday HCM, and payroll systems for Canadian financial institutions. PMP Certified. Bilingual EN/FR. Based in Toronto." />
++    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
++    <link rel="canonical" href="https://karimchaouki.com/" />
++    <meta property="og:type" content="website" />
++    <meta property="og:url" content="https://karimchaouki.com/" />
++    <meta property="og:title" content="Karim Chaouki — AML &amp; Workday Implementation Manager | Canada" />
++    <meta property="og:description" content="Senior Implementation Manager specializing in AML compliance, Workday HCM, and payroll systems for Canadian financial institutions." />
++    <meta property="og:image" content="https://karimchaouki.com/images/karim-chaouki.jpg" />
++    <meta property="og:image:width" content="1200" />
++    <meta property="og:image:height" content="630" />
++    <meta property="og:site_name" content="Karim Chaouki" />
++    <meta property="og:locale" content="en_CA" />
++    <meta name="twitter:card" content="summary_large_image" />
++    <meta name="twitter:title" content="Karim Chaouki — AML &amp; Workday Implementation Manager | Canada" />
++    <meta name="twitter:description" content="Senior Implementation Manager: AML compliance, Workday HCM, payroll systems. PMP Certified. Bilingual EN/FR. Toronto." />
++    <meta name="twitter:image" content="https://karimchaouki.com/images/karim-chaouki.jpg" />
++    <meta name="author" content="Karim Chaouki" />
++    <meta name="geo.region" content="CA-ON" />
++    <meta name="theme-color" content="#1d4ed8" />
++    <link rel="icon" href="%PUBLIC_URL%/logo.png" type="image/png" />
++    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo.png" />
++    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
++    <link rel="preconnect" href="https://fonts.googleapis.com" />
++    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
++    <link rel="preload" as="image" href="%PUBLIC_URL%/images/karim-chaouki.jpg" type="image/jpeg" />
++    <script type="application/ld+json">
++    {"@context":"https://schema.org","@graph":[{"@type":"Person","name":"Karim Chaouki","url":"https://karimchaouki.com","image":"https://karimchaouki.com/images/karim-chaouki.jpg","jobTitle":"Senior Implementation Manager — AML, Workday & Payroll Systems","knowsLanguage":["en","fr","ar"],"areaServed":{"@type":"Country","name":"Canada"},"sameAs":["https://www.linkedin.com/in/karimchaouki"]},{"@type":"WebSite","url":"https://karimchaouki.com","name":"Karim Chaouki","description":"Senior Implementation Manager — AML Compliance, Workday HCM & Payroll Systems."}]}
++    </script>
++  </head>
++  <body>
++    <noscript>
++      <div style="font-family:sans-serif;max-width:800px;margin:40px auto;padding:20px">
++        <h1>Karim Chaouki — AML &amp; Workday Implementation Specialist</h1>
++        <p>Senior Implementation Manager. AML compliance, Workday HCM, payroll systems. PMP Certified. Bilingual EN/FR. Toronto, Canada.</p>
++        <ul>
++          <li><a href="/services/aml-consultant-canada">AML Compliance Consulting</a></li>
++          <li><a href="/services/workday-implementation-specialist">Workday HCM Implementation</a></li>
++          <li><a href="/services/project-manager-payroll-systems">Payroll Systems PM</a></li>
++          <li><a href="/services/bilingual-implementation-manager">Bilingual Implementation Manager</a></li>
++        </ul>
++      </div>
++    </noscript>
++    <div id="root"></div>
++  </body>
+ </html>
+diff --git a/frontend/public/robots.txt b/frontend/public/robots.txt
+new file mode 100644
+index 0000000..4f77e19
+--- /dev/null
++++ b/frontend/public/robots.txt
+@@ -0,0 +1,5 @@
++User-agent: *
++Allow: /
++Disallow: /privacy-policy
++Disallow: /terms-and-conditions
++Sitemap: https://karimchaouki.com/sitemap.xml
+diff --git a/frontend/public/sitemap.xml b/frontend/public/sitemap.xml
+new file mode 100644
+index 0000000..e263496
+--- /dev/null
++++ b/frontend/public/sitemap.xml
+@@ -0,0 +1,9 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
++  <url><loc>https://karimchaouki.com/</loc><priority>1.0</priority><changefreq>monthly</changefreq></url>
++  <url><loc>https://karimchaouki.com/about</loc><priority>0.9</priority><changefreq>monthly</changefreq></url>
++  <url><loc>https://karimchaouki.com/services/aml-consultant-canada</loc><priority>0.9</priority><changefreq>monthly</changefreq></url>
++  <url><loc>https://karimchaouki.com/services/workday-implementation-specialist</loc><priority>0.9</priority><changefreq>monthly</changefreq></url>
++  <url><loc>https://karimchaouki.com/services/project-manager-payroll-systems</loc><priority>0.9</priority><changefreq>monthly</changefreq></url>
++  <url><loc>https://karimchaouki.com/services/bilingual-implementation-manager</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
++</urlset>
+diff --git a/frontend/src/App.js b/frontend/src/App.js
+index 3ece752..243b2d7 100644
+--- a/frontend/src/App.js
++++ b/frontend/src/App.js
+@@ -1,53 +1,62 @@
+-import { useEffect } from "react";
+-import "@/App.css";
+-import { BrowserRouter, Routes, Route } from "react-router-dom";
+-import axios from "axios";
++import React from 'react';
++import '@/App.css';
++import { BrowserRouter, Routes, Route } from 'react-router-dom';
++import { HelmetProvider } from 'react-helmet-async';
++import Header from './components/Header';
++import Hero from './components/Hero';
++import ValueProposition from './components/ValueProposition';
++import Expertise from './components/Expertise';
++import Timeline from './components/Timeline';
++import Certifications from './components/Certifications';
++import ImpactMetrics from './components/ImpactMetrics';
++import Testimonials from './components/Testimonials';
++import FAQ from './components/FAQ';
++import Contact from './components/Contact';
++import CookieConsent from './components/CookieConsent';
++import PrivacyPolicy from './components/PrivacyPolicy';
++import TermsConditions from './components/TermsConditions';
++import ServiceAML from './pages/ServiceAML';
++import ServiceWorkday from './pages/ServiceWorkday';
++import ServicePayroll from './pages/ServicePayroll';
++import ServiceBilingual from './pages/ServiceBilingual';
++import AboutPage from './pages/AboutPage';
+ 
+-const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
+-const API = `${BACKEND_URL}/api`;
+-
+-const Home = () => {
+-  const helloWorldApi = async () => {
+-    try {
+-      const response = await axios.get(`${API}/`);
+-      console.log(response.data.message);
+-    } catch (e) {
+-      console.error(e, `errored out requesting / api`);
+-    }
+-  };
+-
+-  useEffect(() => {
+-    helloWorldApi();
+-  }, []);
+-
+-  return (
+-    <div>
+-      <header className="App-header">
+-        <a
+-          className="App-link"
+-          href="https://emergent.sh"
+-          target="_blank"
+-          rel="noopener noreferrer"
+-        >
+-          <img src="https://avatars.githubusercontent.com/in/1201222?s=120&u=2686cf91179bbafbc7a71bfbc43004cf9ae1acea&v=4" />
+-        </a>
+-        <p className="mt-5">Building something incredible ~!</p>
+-      </header>
+-    </div>
+-  );
+-};
++const Portfolio = () => (
++  <>
++    <Header />
++    <main id="main-content">
++      <Hero />
++      <ValueProposition />
++      <Expertise />
++      <Timeline />
++      <Certifications />
++      <ImpactMetrics />
++      <Testimonials />
++      <FAQ />
++      <Contact />
++    </main>
++  </>
++);
+ 
+ function App() {
+   return (
+-    <div className="App">
+-      <BrowserRouter>
+-        <Routes>
+-          <Route path="/" element={<Home />}>
+-            <Route index element={<Home />} />
+-          </Route>
+-        </Routes>
+-      </BrowserRouter>
+-    </div>
++    <HelmetProvider>
++      <div className="App">
++        <BrowserRouter>
++          <Routes>
++            <Route path="/" element={<Portfolio />} />
++            <Route path="/about" element={<AboutPage />} />
++            <Route path="/services/aml-consultant-canada" element={<ServiceAML />} />
++            <Route path="/services/workday-implementation-specialist" element={<ServiceWorkday />} />
++            <Route path="/services/project-manager-payroll-systems" element={<ServicePayroll />} />
++            <Route path="/services/bilingual-implementation-manager" element={<ServiceBilingual />} />
++            <Route path="/privacy-policy" element={<PrivacyPolicy />} />
++            <Route path="/terms-and-conditions" element={<TermsConditions />} />
++          </Routes>
++          <CookieConsent />
++        </BrowserRouter>
++      </div>
++    </HelmetProvider>
+   );
+ }
+ 
+diff --git a/frontend/src/components/SEO.jsx b/frontend/src/components/SEO.jsx
+new file mode 100644
+index 0000000..8b13dfe
+--- /dev/null
++++ b/frontend/src/components/SEO.jsx
+@@ -0,0 +1,132 @@
++// SEO component — React 19 compatible.
++// Uses useEffect to imperatively manage <title>, meta tags, canonical link,
++// and JSON-LD scripts in document.head. Cleans up on route change.
++
++import { useEffect } from 'react';
++
++const SITE_URL = 'https://karimchaouki.com';
++const DEFAULT_IMAGE = `${SITE_URL}/images/karim-chaouki.jpg`;
++
++const setMeta = (selector, attrName, attrValue, content) => {
++  let el = document.head.querySelector(selector);
++  if (!el) {
++    el = document.createElement('meta');
++    el.setAttribute(attrName, attrValue);
++    document.head.appendChild(el);
++  }
++  el.setAttribute('content', content);
++};
++
++const setLink = (rel, href) => {
++  let el = document.head.querySelector(`link[rel="${rel}"]`);
++  if (!el) {
++    el = document.createElement('link');
++    el.setAttribute('rel', rel);
++    document.head.appendChild(el);
++  }
++  el.setAttribute('href', href);
++};
++
++export default function SEO({
++  title,
++  description,
++  canonical,
++  ogImage = DEFAULT_IMAGE,
++  ogType = 'website',
++  schema = null,
++}) {
++  const fullTitle = title.includes('Karim Chaouki') ? title : `${title} | Karim Chaouki`;
++  const canonicalUrl = canonical ? `${SITE_URL}${canonical}` : SITE_URL;
++
++  useEffect(() => {
++    document.title = fullTitle;
++
++    setMeta('meta[name="description"]', 'name', 'description', description);
++    setLink('canonical', canonicalUrl);
++
++    setMeta('meta[property="og:type"]', 'property', 'og:type', ogType);
++    setMeta('meta[property="og:url"]', 'property', 'og:url', canonicalUrl);
++    setMeta('meta[property="og:title"]', 'property', 'og:title', fullTitle);
++    setMeta('meta[property="og:description"]', 'property', 'og:description', description);
++    setMeta('meta[property="og:image"]', 'property', 'og:image', ogImage);
++    setMeta('meta[property="og:image:width"]', 'property', 'og:image:width', '1200');
++    setMeta('meta[property="og:image:height"]', 'property', 'og:image:height', '630');
++    setMeta('meta[property="og:site_name"]', 'property', 'og:site_name', 'Karim Chaouki');
++    setMeta('meta[property="og:locale"]', 'property', 'og:locale', 'en_CA');
++
++    setMeta('meta[name="twitter:card"]', 'name', 'twitter:card', 'summary_large_image');
++    setMeta('meta[name="twitter:title"]', 'name', 'twitter:title', fullTitle);
++    setMeta('meta[name="twitter:description"]', 'name', 'twitter:description', description);
++    setMeta('meta[name="twitter:image"]', 'name', 'twitter:image', ogImage);
++
++    // Remove any previous route-scoped JSON-LD blocks, then add the new ones.
++    document.head
++      .querySelectorAll('script[data-seo-jsonld="1"]')
++      .forEach((n) => n.remove());
++
++    const created = [];
++    if (schema) {
++      const blocks = Array.isArray(schema) ? schema : [schema];
++      blocks.forEach((obj) => {
++        const s = document.createElement('script');
++        s.type = 'application/ld+json';
++        s.setAttribute('data-seo-jsonld', '1');
++        s.text = JSON.stringify(obj);
++        document.head.appendChild(s);
++        created.push(s);
++      });
++    }
++
++    return () => {
++      created.forEach((n) => n.parentNode && n.parentNode.removeChild(n));
++    };
++  }, [fullTitle, description, canonicalUrl, ogImage, ogType, schema]);
++
++  return null;
++}
++
++export const personSchema = {
++  '@context': 'https://schema.org',
++  '@type': 'Person',
++  name: 'Karim Chaouki',
++  url: SITE_URL,
++  image: DEFAULT_IMAGE,
++  jobTitle: 'Senior Implementation Manager — AML, Workday & Payroll Systems',
++  description:
++    'Bilingual Senior Implementation Manager specializing in AML compliance, Workday HCM, and payroll system implementations for Canadian financial institutions.',
++  knowsLanguage: ['en', 'fr', 'ar'],
++  areaServed: { '@type': 'Country', name: 'Canada' },
++  sameAs: ['https://www.linkedin.com/in/karimchaouki'],
++};
++
++export const buildServiceSchema = (name, description, path) => ({
++  '@context': 'https://schema.org',
++  '@type': 'ProfessionalService',
++  name,
++  description,
++  url: `${SITE_URL}${path}`,
++  provider: { '@type': 'Person', name: 'Karim Chaouki', url: SITE_URL },
++  areaServed: { '@type': 'Country', name: 'Canada' },
++  availableLanguage: ['English', 'French'],
++});
++
++export const buildBreadcrumb = (items) => ({
++  '@context': 'https://schema.org',
++  '@type': 'BreadcrumbList',
++  itemListElement: items.map((item, i) => ({
++    '@type': 'ListItem',
++    position: i + 1,
++    name: item.name,
++    item: `${SITE_URL}${item.path}`,
++  })),
++});
++
++export const buildFAQSchema = (faqs) => ({
++  '@context': 'https://schema.org',
++  '@type': 'FAQPage',
++  mainEntity: faqs.map(({ q, a }) => ({
++    '@type': 'Question',
++    name: q,
++    acceptedAnswer: { '@type': 'Answer', text: a },
++  })),
++});
+diff --git a/frontend/src/pages/AboutPage.jsx b/frontend/src/pages/AboutPage.jsx
+new file mode 100644
+index 0000000..f5ea59a
+--- /dev/null
++++ b/frontend/src/pages/AboutPage.jsx
+@@ -0,0 +1,256 @@
++import React from 'react';
++import { Link } from 'react-router-dom';
++import Header from '../components/Header';
++import SEO, { personSchema, buildBreadcrumb } from '../components/SEO';
++
++const schema = {
++  '@context': 'https://schema.org',
++  '@graph': [
++    personSchema,
++    buildBreadcrumb([
++      { name: 'Home', path: '/' },
++      { name: 'About Karim Chaouki', path: '/about' },
++    ]),
++  ],
++};
++
++const expertise = [
++  { area: 'AML / Anti-Money Laundering', years: '10+ yrs', level: 95 },
++  { area: 'Workday HCM & Payroll', years: '8+ yrs', level: 90 },
++  { area: 'Project Management (PMP)', years: '12+ yrs', level: 95 },
++  { area: 'FINTRAC Regulatory Compliance', years: '8+ yrs', level: 88 },
++  { area: 'Payroll Systems Implementation', years: '10+ yrs', level: 92 },
++  { area: 'ERP / HCM Platforms', years: '8+ yrs', level: 85 },
++  { area: 'Risk Management', years: '10+ yrs', level: 90 },
++  { area: 'Change Management', years: '12+ yrs', level: 88 },
++];
++
++const industries = [
++  'Banking & Financial Services',
++  'Credit Unions',
++  'Insurance',
++  'Fintech',
++  'Federal Government',
++  'Provincial Government',
++  'Healthcare',
++  'Telecommunications',
++];
++
++export default function AboutPage() {
++  return (
++    <>
++      <SEO
++        title="About Karim Chaouki — AML, Workday & Payroll Implementation Specialist | Canada"
++        description="Learn about Karim Chaouki — Senior Implementation Manager with 12+ years in AML compliance, Workday HCM, and payroll system implementations for Canadian financial institutions. PMP Certified. Bilingual EN/FR."
++        canonical="/about"
++        ogImage="https://karimchaouki.com/images/karim-chaouki.jpg"
++        schema={schema}
++      />
++      <Header />
++
++      <main id="main-content">
++        {/* Hero */}
++        <section className="bg-gradient-to-br from-slate-900 to-blue-900 text-white py-20 px-6">
++          <div className="max-w-5xl mx-auto">
++            <nav aria-label="Breadcrumb" className="mb-6">
++              <ol className="flex items-center gap-2 text-sm text-blue-300">
++                <li><Link to="/" className="hover:text-white transition-colors">Home</Link></li>
++                <li aria-hidden="true" className="text-blue-500">›</li>
++                <li className="text-white font-medium">About</li>
++              </ol>
++            </nav>
++            <div className="grid md:grid-cols-3 gap-10 items-center">
++              <div className="md:col-span-2">
++                <h1 className="text-4xl md:text-5xl font-bold mb-4">
++                  About Karim Chaouki
++                </h1>
++                <p className="text-xl text-blue-200 leading-relaxed mb-6">
++                  Senior Implementation Manager specializing in AML compliance, Workday HCM, and
++                  payroll systems for Canadian financial institutions. 12+ years delivering complex
++                  projects that other teams couldn't finish.
++                </p>
++                <div className="flex flex-wrap gap-3">
++                  <span className="bg-white/10 border border-white/20 text-sm font-medium px-3 py-1.5 rounded-full">PMP Certified</span>
++                  <span className="bg-white/10 border border-white/20 text-sm font-medium px-3 py-1.5 rounded-full">Bilingual EN/FR/AR</span>
++                  <span className="bg-white/10 border border-white/20 text-sm font-medium px-3 py-1.5 rounded-full">Toronto, Ontario</span>
++                  <span className="bg-white/10 border border-white/20 text-sm font-medium px-3 py-1.5 rounded-full">Available Across Canada</span>
++                </div>
++              </div>
++              <div className="flex justify-center md:justify-end">
++                <img
++                  src="/images/karim-chaouki.jpg"
++                  alt="Karim Chaouki — Senior Implementation Manager, AML and Workday Specialist, Toronto Canada"
++                  className="w-48 h-48 md:w-56 md:h-56 rounded-2xl object-cover border-4 border-white/20 shadow-2xl"
++                  width="224"
++                  height="224"
++                  loading="eager"
++                />
++              </div>
++            </div>
++          </div>
++        </section>
++
++        {/* Bio */}
++        <section className="py-16 px-6">
++          <div className="max-w-5xl mx-auto grid md:grid-cols-3 gap-12">
++            <div className="md:col-span-2 prose max-w-none">
++              <h2 className="text-3xl font-bold text-slate-900 mb-4">My Background</h2>
++              <p className="text-slate-600 leading-relaxed mb-4">
++                For over 12 years, I've worked at the intersection of technology implementation and
++                regulatory compliance in Canada's financial services sector. My career has been defined
++                by one consistent challenge: taking complex, high-stakes projects that span multiple
++                systems, multiple provinces, and multiple regulatory frameworks — and delivering them
++                on time.
++              </p>
++              <p className="text-slate-600 leading-relaxed mb-4">
++                I started in project management and quickly specialized in two areas where the stakes
++                are highest: <strong className="text-slate-800">AML compliance programs</strong> and
++                <strong className="text-slate-800"> HCM/payroll system implementations</strong>. These
++                aren't glamorous disciplines — but they're mission-critical. A payroll error affects every
++                employee. An AML gap can result in regulatory sanctions. There's no room for "good enough."
++              </p>
++              <p className="text-slate-600 leading-relaxed mb-8">
++                My bilingual (English/French) capability has made me a particularly valuable partner for
++                Canadian organizations operating across provincial boundaries — especially those with
++                Quebec operations, federal mandates, or Official Languages Act obligations. I've run
++                full project governance in French for Quebec-based clients and seamlessly managed
++                bilingual steering committees for national organizations.
++              </p>
++
++              <h3 className="text-xl font-bold text-slate-900 mb-3">My Approach</h3>
++              <p className="text-slate-600 leading-relaxed mb-4">
++                I treat every implementation as a risk management exercise. The technical configuration
++                is rarely the hard part — the hard part is getting the right decisions made at the right
++                time, managing scope creep without losing stakeholder trust, and ensuring the people who
++                will use the system are genuinely ready for go-live.
++              </p>
++              <p className="text-slate-600 leading-relaxed mb-8">
++                I'm direct with clients about risks, honest about timelines, and relentless about
++                follow-through. If something is going to slip, you'll hear it from me first — along
++                with a recovery plan.
++              </p>
++
++              <div className="flex flex-wrap gap-3 mb-8">
++                <a
++                  href="/resume/KC_PM_Resume.pdf"
++                  target="_blank"
++                  rel="noopener noreferrer"
++                  className="bg-blue-700 text-white font-semibold px-5 py-2.5 rounded-lg hover:bg-blue-800 transition-colors text-sm"
++                >
++                  Download Full Resume (PDF) →
++                </a>
++                <a
++                  href="https://www.linkedin.com/in/karimchaouki"
++                  target="_blank"
++                  rel="noopener noreferrer"
++                  className="border border-blue-200 text-blue-700 font-semibold px-5 py-2.5 rounded-lg hover:bg-blue-50 transition-colors text-sm"
++                >
++                  View LinkedIn Profile →
++                </a>
++              </div>
++            </div>
++
++            {/* Stats sidebar */}
++            <aside>
++              <div className="space-y-4">
++                {[
++                  { number: '12+', label: 'Years of experience' },
++                  { number: '20+', label: 'Implementations delivered' },
++                  { number: '3', label: 'Languages: EN, FR, AR' },
++                  { number: '100%', label: 'On-time delivery rate' },
++                ].map((s) => (
++                  <div key={s.label} className="bg-slate-50 border border-slate-200 rounded-xl p-5 text-center">
++                    <div className="text-3xl font-bold text-blue-700 mb-1">{s.number}</div>
++                    <div className="text-sm text-slate-600">{s.label}</div>
++                  </div>
++                ))}
++              </div>
++            </aside>
++          </div>
++        </section>
++
++        {/* Expertise */}
++        <section className="py-16 px-6 bg-slate-50">
++          <div className="max-w-5xl mx-auto">
++            <div className="text-center mb-12">
++              <span className="inline-block bg-blue-100 text-blue-700 text-sm font-semibold px-4 py-1.5 rounded-full mb-3">Core Expertise</span>
++              <h2 className="text-3xl font-bold text-slate-900">Areas of Deep Specialization</h2>
++            </div>
++            <div className="space-y-4 max-w-2xl mx-auto">
++              {expertise.map((e) => (
++                <div key={e.area}>
++                  <div className="flex justify-between items-center mb-1.5">
++                    <span className="text-sm font-semibold text-slate-800">{e.area}</span>
++                    <span className="text-xs text-slate-500">{e.years}</span>
++                  </div>
++                  <div className="h-2 bg-slate-200 rounded-full overflow-hidden">
++                    <div
++                      className="h-full bg-blue-600 rounded-full"
++                      style={{ width: `${e.level}%` }}
++                      role="progressbar"
++                      aria-valuenow={e.level}
++                      aria-valuemin={0}
++                      aria-valuemax={100}
++                      aria-label={`${e.area} proficiency: ${e.level}%`}
++                    />
++                  </div>
++                </div>
++              ))}
++            </div>
++          </div>
++        </section>
++
++        {/* Industries */}
++        <section className="py-16 px-6">
++          <div className="max-w-5xl mx-auto">
++            <div className="text-center mb-10">
++              <span className="inline-block bg-blue-100 text-blue-700 text-sm font-semibold px-4 py-1.5 rounded-full mb-3">Industries Served</span>
++              <h2 className="text-3xl font-bold text-slate-900">Sectors I've Worked In</h2>
++            </div>
++            <div className="flex flex-wrap gap-3 justify-center">
++              {industries.map((ind) => (
++                <span key={ind} className="bg-slate-100 border border-slate-200 text-slate-700 font-medium px-4 py-2 rounded-full text-sm">
++                  {ind}
++                </span>
++              ))}
++            </div>
++          </div>
++        </section>
++
++        {/* Services CTA section */}
++        <section className="py-16 px-6 bg-slate-50">
++          <div className="max-w-5xl mx-auto">
++            <h2 className="text-2xl font-bold text-slate-900 mb-6 text-center">How I Can Help Your Organization</h2>
++            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
++              {[
++                { title: 'AML Compliance', href: '/services/aml-consultant-canada', icon: '🛡️' },
++                { title: 'Workday Implementation', href: '/services/workday-implementation-specialist', icon: '⚙️' },
++                { title: 'Payroll Systems PM', href: '/services/project-manager-payroll-systems', icon: '💰' },
++                { title: 'Bilingual Delivery', href: '/services/bilingual-implementation-manager', icon: '🌐' },
++              ].map((s) => (
++                <Link key={s.href} to={s.href} className="bg-white border border-slate-200 rounded-xl p-5 text-center hover:shadow-md hover:border-blue-200 transition-all group">
++                  <div className="text-3xl mb-2">{s.icon}</div>
++                  <div className="font-semibold text-slate-800 text-sm group-hover:text-blue-700 transition-colors">{s.title}</div>
++                </Link>
++              ))}
++            </div>
++          </div>
++        </section>
++
++        {/* CTA */}
++        <section className="bg-blue-700 py-16 px-6 text-center text-white">
++          <div className="max-w-2xl mx-auto">
++            <h2 className="text-3xl font-bold mb-3">Ready to Work Together?</h2>
++            <p className="text-blue-200 text-lg mb-8">
++              Whether you have an upcoming implementation, a compliance gap, or a project in trouble —
++              let's talk. Initial consultations are always complimentary.
++            </p>
++            <Link to="/#contact" className="inline-block bg-white text-blue-700 font-bold px-8 py-4 rounded-xl hover:bg-blue-50 transition-colors text-lg">
++              Book a Free Discovery Call →
++            </Link>
++          </div>
++        </section>
++      </main>
++    </>
++  );
++}
+diff --git a/frontend/src/pages/ServiceAML.jsx b/frontend/src/pages/ServiceAML.jsx
+new file mode 100644
+index 0000000..396b11b
+--- /dev/null
++++ b/frontend/src/pages/ServiceAML.jsx
+@@ -0,0 +1,290 @@
++import React from 'react';
++import { Link } from 'react-router-dom';
++import Header from '../components/Header';
++import SEO, { buildServiceSchema, buildBreadcrumb, buildFAQSchema } from '../components/SEO';
++
++const schema = {
++  '@context': 'https://schema.org',
++  '@graph': [
++    buildServiceSchema(
++      'AML Compliance Consulting — Canada',
++      'End-to-end AML program design, FINTRAC compliance, KYC/CDD implementation, and transaction monitoring project management for Canadian financial institutions.',
++      '/services/aml-consultant-canada'
++    ),
++    buildBreadcrumb([
++      { name: 'Home', path: '/' },
++      { name: 'AML Compliance Consulting Canada', path: '/services/aml-consultant-canada' },
++    ]),
++    buildFAQSchema([
++      {
++        q: 'What AML compliance services do you provide in Canada?',
++        a: 'I provide end-to-end AML compliance consulting including FINTRAC compliance program design, KYC/CDD implementation, transaction monitoring setup, AML project management, and risk assessments for Canadian banks, credit unions, and fintechs.',
++      },
++      {
++        q: 'Are you familiar with FINTRAC regulations?',
++        a: 'Yes. I specialize in FINTRAC regulatory requirements for Reporting Entities in Canada, including Large Cash Transaction Reports (LCTR), Suspicious Transaction Reports (STR), EFT reports, and the five pillars of an AML compliance program.',
++      },
++      {
++        q: 'Do you offer bilingual AML consulting in French and English?',
++        a: 'Yes. I deliver all project documentation, stakeholder communications, and training materials in both English and French, making me an ideal partner for Quebec-based institutions and federal entities.',
++      },
++      {
++        q: 'How long does an AML compliance program implementation take?',
++        a: 'Scope varies. A gap assessment and remediation plan for a mid-sized credit union may take 6–8 weeks. A full AML program build for a growing fintech typically runs 4–6 months. Transaction monitoring implementations generally take 6–12 months.',
++      },
++    ]),
++  ],
++};
++
++const services = [
++  {
++    title: 'AML Program Design & Implementation',
++    desc: 'Build a compliant AML program from scratch or remediate an existing one. Covers policies, procedures, internal controls, risk appetite, and staff training aligned to FINTRAC and OSFI requirements.',
++    icon: '🛡️',
++  },
++  {
++    title: 'FINTRAC Compliance Management',
++    desc: 'Ensure your organization meets all FINTRAC Reporting Entity obligations: LCTRs, STRs, EFT reporting, and record-keeping requirements.',
++    icon: '📋',
++  },
++  {
++    title: 'KYC / CDD Program Implementation',
++    desc: 'Design and implement Know Your Customer (KYC) and Customer Due Diligence (CDD) frameworks including risk rating, EDD processes, and beneficial ownership procedures.',
++    icon: '🔍',
++  },
++  {
++    title: 'Transaction Monitoring System Deployment',
++    desc: 'Project manage the selection, implementation, and tuning of transaction monitoring systems. Includes use-case development, scenario testing, and alert optimization.',
++    icon: '📊',
++  },
++  {
++    title: 'AML Technology Project Management',
++    desc: 'Lead AML technology transformation programs from requirements gathering through go-live. Coordinate compliance, IT, operations, and legal teams to deliver on time.',
++    icon: '⚙️',
++  },
++  {
++    title: 'AML Risk Assessments',
++    desc: 'Conduct enterprise-wide AML/CTF risk assessments aligned to FATF recommendations and OSFI guidance. Identify high-risk products, clients, channels, and geographies.',
++    icon: '⚠️',
++  },
++];
++
++const faqs = [
++  {
++    q: 'What is a FINTRAC Reporting Entity?',
++    a: "A FINTRAC Reporting Entity (RE) is any organization subject to Canada's Proceeds of Crime (Money Laundering) and Terrorist Financing Act — including banks, credit unions, insurance companies, securities dealers, MSBs, and real estate brokers. I can assess your obligations and build the compliance program around them.",
++  },
++  {
++    q: 'How long does an AML program implementation take?',
++    a: 'A gap assessment for a mid-sized credit union might take 6–8 weeks. A full AML program build for a fintech typically runs 4–6 months. Transaction monitoring implementations generally take 6–12 months from requirements to go-live.',
++  },
++  {
++    q: 'Do you work with organizations outside Toronto?',
++    a: 'Yes. I serve clients across Canada including Montreal, Vancouver, Calgary, Ottawa, and Quebec City — remotely and on-site. My bilingual (EN/FR) capability makes me especially effective for Quebec-based and federal organizations.',
++  },
++];
++
++export default function ServiceAML() {
++  return (
++    <>
++      <SEO
++        title="AML Compliance Consultant Canada — FINTRAC & KYC Specialist | Karim Chaouki"
++        description="Experienced AML compliance consultant serving Canadian financial institutions. Specializing in FINTRAC compliance, KYC/CDD implementation, transaction monitoring, and AML program design. Bilingual EN/FR. Based in Toronto."
++        canonical="/services/aml-consultant-canada"
++        schema={schema}
++      />
++      <Header />
++
++      <main id="main-content">
++        {/* Hero */}
++        <section className="bg-gradient-to-br from-slate-900 to-blue-900 text-white py-20 px-6">
++          <div className="max-w-5xl mx-auto">
++            <nav aria-label="Breadcrumb" className="mb-6">
++              <ol className="flex items-center gap-2 text-sm text-blue-300">
++                <li><Link to="/" className="hover:text-white transition-colors">Home</Link></li>
++                <li aria-hidden="true" className="text-blue-500">›</li>
++                <li className="text-white font-medium">AML Compliance Consulting</li>
++              </ol>
++            </nav>
++            <h1 className="text-4xl md:text-5xl font-bold mb-4 leading-tight">
++              AML Compliance Consultant — Canada
++            </h1>
++            <p className="text-xl text-blue-200 max-w-2xl leading-relaxed mb-8">
++              End-to-end AML program design, FINTRAC compliance, KYC/CDD implementation, and
++              transaction monitoring project management for Canadian financial institutions.
++              Bilingual (EN/FR) · PMP Certified · Based in Toronto.
++            </p>
++            <div className="flex flex-wrap gap-4">
++              <Link
++                to="/#contact"
++                className="bg-white text-blue-700 font-semibold px-6 py-3 rounded-lg hover:bg-blue-50 transition-colors"
++              >
++                Book a Free Consultation →
++              </Link>
++              <a
++                href="#services"
++                className="border border-blue-400 text-blue-200 font-semibold px-6 py-3 rounded-lg hover:border-white hover:text-white transition-colors"
++              >
++                View Services
++              </a>
++            </div>
++          </div>
++        </section>
++
++        {/* Intro */}
++        <section className="py-16 px-6">
++          <div className="max-w-5xl mx-auto grid md:grid-cols-3 gap-12">
++            <div className="md:col-span-2 prose max-w-none">
++              <h2 className="text-3xl font-bold text-slate-900 mb-4">
++                AML Compliance Consulting for Canadian Financial Institutions
++              </h2>
++              <p className="text-slate-600 leading-relaxed mb-4">
++                Canada's anti-money laundering regulatory environment is one of the most demanding in the
++                world. FINTRAC oversight, OSFI guidance, and evolving FATF recommendations require financial
++                institutions to maintain rigorous, continuously updated AML compliance programs — and the
++                cost of non-compliance has never been higher.
++              </p>
++              <p className="text-slate-600 leading-relaxed mb-4">
++                As an experienced <strong className="text-slate-800">AML compliance consultant in Canada</strong>,
++                I help banks, credit unions, insurance companies, and fintechs design, implement, and
++                operationalize AML programs that satisfy regulatory requirements and scale with your business.
++              </p>
++              <p className="text-slate-600 leading-relaxed mb-8">
++                My bilingual (English/French) capability means I can serve organizations operating across
++                Canada — including Quebec-based institutions and federal Reporting Entities — with full
++                documentation and stakeholder communication in both official languages.
++              </p>
++
++              {/* Testimonial */}
++              <blockquote className="border-l-4 border-blue-600 pl-6 py-2 bg-slate-50 rounded-r-lg my-8">
++                <p className="text-slate-700 italic text-lg leading-relaxed">
++                  "Karim's knowledge of FINTRAC requirements and his ability to translate regulatory
++                  obligations into practical operational procedures was invaluable during our compliance
++                  program overhaul."
++                </p>
++                <cite className="text-slate-500 text-sm font-semibold not-italic mt-2 block">
++                  — Chief Compliance Officer · Canadian Credit Union
++                </cite>
++              </blockquote>
++            </div>
++
++            {/* Sidebar */}
++            <aside>
++              <div className="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm sticky top-24">
++                <h3 className="font-bold text-slate-900 mb-4">Quick Facts</h3>
++                <ul className="space-y-3">
++                  {[
++                    '12+ years in compliance & PM',
++                    'FINTRAC Reporting Entity expertise',
++                    'PMP Certified',
++                    'Bilingual: English / French',
++                    'Based in Toronto, ON',
++                    'Available across Canada',
++                    'Remote & on-site engagements',
++                  ].map((f) => (
++                    <li key={f} className="flex items-start gap-3 text-sm text-slate-600">
++                      <span className="text-blue-600 font-bold mt-0.5">✓</span>
++                      {f}
++                    </li>
++                  ))}
++                </ul>
++                <Link
++                  to="/#contact"
++                  className="mt-6 block text-center bg-blue-700 text-white font-semibold px-4 py-3 rounded-lg hover:bg-blue-800 transition-colors"
++                >
++                  Start a Conversation →
++                </Link>
++                <a
++                  href="/resume/KC_PM_Resume.pdf"
++                  target="_blank"
++                  rel="noopener noreferrer"
++                  className="mt-3 block text-center border border-blue-200 text-blue-700 font-semibold px-4 py-3 rounded-lg hover:bg-blue-50 transition-colors text-sm"
++                >
++                  Download Resume (PDF)
++                </a>
++              </div>
++            </aside>
++          </div>
++        </section>
++
++        {/* Services Grid */}
++        <section id="services" className="py-16 px-6 bg-slate-50">
++          <div className="max-w-5xl mx-auto">
++            <div className="text-center mb-12">
++              <span className="inline-block bg-blue-100 text-blue-700 text-sm font-semibold px-4 py-1.5 rounded-full mb-3">
++                What I Deliver
++              </span>
++              <h2 className="text-3xl font-bold text-slate-900">
++                AML Consulting Services in Canada
++              </h2>
++            </div>
++            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
++              {services.map((s) => (
++                <div key={s.title} className="bg-white border border-slate-200 rounded-xl p-6 hover:shadow-md transition-shadow">
++                  <div className="text-3xl mb-3">{s.icon}</div>
++                  <h3 className="font-bold text-slate-900 mb-2">{s.title}</h3>
++                  <p className="text-sm text-slate-600 leading-relaxed">{s.desc}</p>
++                </div>
++              ))}
++            </div>
++          </div>
++        </section>
++
++        {/* FAQ */}
++        <section className="py-16 px-6">
++          <div className="max-w-3xl mx-auto">
++            <h2 className="text-3xl font-bold text-slate-900 mb-8">
++              Common Questions About AML Consulting in Canada
++            </h2>
++            <div className="space-y-2">
++              {faqs.map((faq) => (
++                <details key={faq.q} className="group border-b border-slate-200">
++                  <summary className="flex justify-between items-center py-5 cursor-pointer text-slate-800 font-semibold list-none">
++                    {faq.q}
++                    <span className="ml-4 text-blue-600 group-open:rotate-45 transition-transform text-xl leading-none">+</span>
++                  </summary>
++                  <p className="pb-5 text-slate-600 leading-relaxed">{faq.a}</p>
++                </details>
++              ))}
++            </div>
++          </div>
++        </section>
++
++        {/* Related Services */}
++        <section className="py-10 px-6 bg-slate-50">
++          <div className="max-w-5xl mx-auto">
++            <h2 className="text-xl font-bold text-slate-900 mb-4">Related Services</h2>
++            <div className="flex flex-wrap gap-3">
++              <Link to="/services/workday-implementation-specialist" className="bg-white border border-blue-200 text-blue-700 font-semibold px-4 py-2 rounded-lg text-sm hover:bg-blue-50 transition-colors">
++                Workday HCM Implementation →
++              </Link>
++              <Link to="/services/project-manager-payroll-systems" className="bg-white border border-blue-200 text-blue-700 font-semibold px-4 py-2 rounded-lg text-sm hover:bg-blue-50 transition-colors">
++                Payroll Systems PM →
++              </Link>
++              <Link to="/services/bilingual-implementation-manager" className="bg-white border border-blue-200 text-blue-700 font-semibold px-4 py-2 rounded-lg text-sm hover:bg-blue-50 transition-colors">
++                Bilingual PM (EN/FR) →
++              </Link>
++            </div>
++          </div>
++        </section>
++
++        {/* CTA Band */}
++        <section className="bg-blue-700 py-16 px-6 text-center text-white">
++          <div className="max-w-2xl mx-auto">
++            <h2 className="text-3xl font-bold mb-3">Need an AML Compliance Consultant in Canada?</h2>
++            <p className="text-blue-200 text-lg mb-8">
++              Let's discuss your FINTRAC obligations, AML program gaps, or upcoming compliance project.
++              Initial consultations are complimentary.
++            </p>
++            <Link
++              to="/#contact"
++              className="inline-block bg-white text-blue-700 font-bold px-8 py-4 rounded-xl hover:bg-blue-50 transition-colors text-lg"
++            >
++              Book Your Free Discovery Call →
++            </Link>
++          </div>
++        </section>
++      </main>
++    </>
++  );
++}
+diff --git a/frontend/src/pages/ServiceBilingual.jsx b/frontend/src/pages/ServiceBilingual.jsx
+new file mode 100644
+index 0000000..2cc6cc7
+--- /dev/null
++++ b/frontend/src/pages/ServiceBilingual.jsx
+@@ -0,0 +1,259 @@
++import React from 'react';
++import { Link } from 'react-router-dom';
++import Header from '../components/Header';
++import SEO, { buildServiceSchema, buildBreadcrumb, buildFAQSchema } from '../components/SEO';
++
++const schema = {
++  '@context': 'https://schema.org',
++  '@graph': [
++    buildServiceSchema(
++      'Bilingual Implementation Manager — English & French Canada',
++      'Bilingual project manager delivering AML, Workday, and payroll implementations in both English and French. Serving Quebec organizations and federal entities across Canada.',
++      '/services/bilingual-implementation-manager'
++    ),
++    buildBreadcrumb([
++      { name: 'Home', path: '/' },
++      { name: 'Bilingual Implementation Manager', path: '/services/bilingual-implementation-manager' },
++    ]),
++    buildFAQSchema([
++      {
++        q: 'Do you deliver project documentation in both English and French?',
++        a: 'Yes. I provide all project deliverables — charters, plans, status reports, training materials, and user guides — in both English and French. I also facilitate stakeholder meetings, workshops, and training sessions in either language.',
++      },
++      {
++        q: 'Are you familiar with Quebec-specific regulations?',
++        a: 'Yes. I have experience with Quebec payroll requirements (QPIP, RL-1 slips, CNESST), Quebec language laws (Bill 96 / Loi 101), and Quebec-specific AML and compliance requirements for financial institutions operating in the province.',
++      },
++    ]),
++  ],
++};
++
++const bilingualAdvantages = [
++  {
++    title: 'Full French-Language Delivery',
++    desc: 'All project documentation, reports, training, and communications produced in both English and French — at no quality compromise in either language.',
++    icon: '🇨🇦',
++  },
++  {
++    title: 'Quebec Regulatory Expertise',
++    desc: 'Hands-on knowledge of Quebec-specific requirements: QPIP, RL-1, CNESST, and Bill 96 compliance for workplace and system documentation.',
++    icon: '📋',
++  },
++  {
++    title: 'Bilingual Stakeholder Facilitation',
++    desc: 'Workshops, steering committee presentations, and training sessions conducted in the language of your stakeholders — no interpreters needed.',
++    icon: '🎤',
++  },
++  {
++    title: 'Federal Government Experience',
++    desc: 'Familiar with the Official Languages Act obligations for federal entities and contractors. Bilingual project governance from day one.',
++    icon: '🏛️',
++  },
++  {
++    title: 'Cross-Cultural Team Management',
++    desc: 'Experience managing mixed English and French teams across provinces, navigating cultural nuances that make or break stakeholder relationships.',
++    icon: '🤝',
++  },
++  {
++    title: 'Bilingual System Configuration',
++    desc: 'Workday, payroll systems, and AML platforms configured with French-language interfaces, French field labels, and bilingual reporting outputs.',
++    icon: '⚙️',
++  },
++];
++
++const faqs = [
++  {
++    q: 'Why does bilingual delivery matter for implementation projects in Canada?',
++    a: 'In Quebec and for federal entities, project failures are often caused by language barriers — not technical issues. When your Montreal-based HR team receives English-only training materials, adoption suffers. When steering committee reports don\'t match how French executives think about risk, approvals stall. Bilingual delivery is a project risk management strategy, not just a nice-to-have.',
++  },
++  {
++    q: 'What regions do you serve in Canada?',
++    a: 'I serve clients across Canada including Toronto, Montreal, Quebec City, Ottawa, Vancouver, Calgary, and remote/hybrid organizations. For Quebec-based and federal clients, bilingual delivery is available as standard on all engagements.',
++  },
++  {
++    q: 'Can you lead an implementation in a predominantly French-speaking workplace?',
++    a: 'Yes. I am fully fluent in French and have led implementations where French was the primary working language — including full project governance, vendor communications, and go-live operations in French.',
++  },
++];
++
++export default function ServiceBilingual() {
++  return (
++    <>
++      <SEO
++        title="Bilingual Implementation Manager Canada — English & French PM | Karim Chaouki"
++        description="Bilingual (English/French) implementation manager for Canadian organizations. AML compliance, Workday HCM, and payroll implementations delivered in both official languages. Serving Quebec, federal entities, and national organizations."
++        canonical="/services/bilingual-implementation-manager"
++        schema={schema}
++      />
++      <Header />
++
++      <main id="main-content">
++        {/* Hero */}
++        <section className="bg-gradient-to-br from-slate-900 to-blue-900 text-white py-20 px-6">
++          <div className="max-w-5xl mx-auto">
++            <nav aria-label="Breadcrumb" className="mb-6">
++              <ol className="flex items-center gap-2 text-sm text-blue-300">
++                <li><Link to="/" className="hover:text-white transition-colors">Home</Link></li>
++                <li aria-hidden="true" className="text-blue-500">›</li>
++                <li className="text-white font-medium">Bilingual Implementation Manager</li>
++              </ol>
++            </nav>
++            <div className="flex gap-3 mb-6">
++              <span className="bg-white/10 border border-white/20 text-white text-sm font-semibold px-4 py-1.5 rounded-full">🇨🇦 English</span>
++              <span className="bg-white/10 border border-white/20 text-white text-sm font-semibold px-4 py-1.5 rounded-full">🇫🇷 Français</span>
++            </div>
++            <h1 className="text-4xl md:text-5xl font-bold mb-4 leading-tight">
++              Bilingual Implementation Manager — English &amp; French
++            </h1>
++            <p className="text-xl text-blue-200 max-w-2xl leading-relaxed mb-4">
++              AML compliance, Workday HCM, and payroll implementations delivered in both official
++              Canadian languages. Serving Quebec organizations, federal entities, and national companies
++              with cross-provincial teams.
++            </p>
++            <p className="text-lg text-blue-300 italic mb-8">
++              Chef de projet d'implémentation bilingue — disponible partout au Canada.
++            </p>
++            <Link to="/#contact" className="bg-white text-blue-700 font-semibold px-6 py-3 rounded-lg hover:bg-blue-50 transition-colors inline-block">
++              Discutons / Let's Talk →
++            </Link>
++          </div>
++        </section>
++
++        {/* Intro */}
++        <section className="py-16 px-6">
++          <div className="max-w-5xl mx-auto grid md:grid-cols-3 gap-12">
++            <div className="md:col-span-2 prose max-w-none">
++              <h2 className="text-3xl font-bold text-slate-900 mb-4">
++                Why Bilingual Project Delivery Changes Everything in Canada
++              </h2>
++              <p className="text-slate-600 leading-relaxed mb-4">
++                Most implementation projects in Canada fail not because of technical problems — they fail
++                because of communication gaps. When English-only project teams deploy systems for French-speaking
++                users in Quebec or for federal organizations with Official Languages Act obligations, the result
++                is poor adoption, rework, and costly post-go-live remediation.
++              </p>
++              <p className="text-slate-600 leading-relaxed mb-4">
++                As a <strong className="text-slate-800">bilingual implementation manager (English/French)</strong>,
++                I eliminate this risk entirely. I run your project governance, stakeholder communications,
++                training delivery, and system configuration in both languages — from day one through hypercare.
++              </p>
++              <p className="text-slate-600 leading-relaxed mb-8">
++                This isn't translation-as-an-afterthought. Bilingual delivery is built into the project plan,
++                the documentation templates, and the go-live readiness criteria. Your Montreal team gets the
++                same quality of training, the same quality of user guides, and the same access to the project
++                manager as your Toronto team.
++              </p>
++
++              <blockquote className="border-l-4 border-blue-600 pl-6 py-2 bg-slate-50 rounded-r-lg my-8">
++                <p className="text-slate-700 italic leading-relaxed">
++                  "Having Karim run our Quebec rollout in French — not translated, but genuinely in French —
++                  was the difference between adoption and resistance. Our Montreal office embraced the system
++                  because they were never made to feel like an afterthought."
++                </p>
++                <cite className="text-slate-500 text-sm font-semibold not-italic mt-2 block">
++                  — VP Operations · National Financial Services Firm
++                </cite>
++              </blockquote>
++            </div>
++
++            {/* Sidebar */}
++            <aside>
++              <div className="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm sticky top-24">
++                <h3 className="font-bold text-slate-900 mb-1">Bilingual Delivery Covers</h3>
++                <p className="text-xs text-slate-500 mb-4">All deliverables available in English and French</p>
++                <ul className="space-y-2.5 mb-6">
++                  {[
++                    'Project charters & governance docs',
++                    'Status reports & steering decks',
++                    'Training materials & user guides',
++                    'System configuration labels',
++                    'Workshop facilitation',
++                    'Vendor communications',
++                    'Go-live runbooks',
++                    'Post-go-live support docs',
++                  ].map((item) => (
++                    <li key={item} className="flex items-start gap-2 text-sm text-slate-600">
++                      <span className="text-blue-600 font-bold flex-shrink-0">✓</span>
++                      {item}
++                    </li>
++                  ))}
++                </ul>
++                <Link to="/#contact" className="block text-center bg-blue-700 text-white font-semibold px-4 py-3 rounded-lg hover:bg-blue-800 transition-colors">
++                  Start a Conversation →
++                </Link>
++              </div>
++            </aside>
++          </div>
++        </section>
++
++        {/* Advantages Grid */}
++        <section className="py-16 px-6 bg-slate-50">
++          <div className="max-w-5xl mx-auto">
++            <div className="text-center mb-12">
++              <span className="inline-block bg-blue-100 text-blue-700 text-sm font-semibold px-4 py-1.5 rounded-full mb-3">
++                What This Means for Your Project
++              </span>
++              <h2 className="text-3xl font-bold text-slate-900">The Bilingual Advantage</h2>
++            </div>
++            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
++              {bilingualAdvantages.map((a) => (
++                <div key={a.title} className="bg-white border border-slate-200 rounded-xl p-6 hover:shadow-md transition-shadow">
++                  <div className="text-3xl mb-3">{a.icon}</div>
++                  <h3 className="font-bold text-slate-900 mb-2">{a.title}</h3>
++                  <p className="text-sm text-slate-600 leading-relaxed">{a.desc}</p>
++                </div>
++              ))}
++            </div>
++          </div>
++        </section>
++
++        {/* FAQ */}
++        <section className="py-16 px-6">
++          <div className="max-w-3xl mx-auto">
++            <h2 className="text-3xl font-bold text-slate-900 mb-8">
++              Questions About Bilingual Project Delivery
++            </h2>
++            <div className="space-y-2">
++              {faqs.map((faq) => (
++                <details key={faq.q} className="group border-b border-slate-200">
++                  <summary className="flex justify-between items-center py-5 cursor-pointer text-slate-800 font-semibold list-none">
++                    {faq.q}
++                    <span className="ml-4 text-blue-600 group-open:rotate-45 transition-transform text-xl leading-none">+</span>
++                  </summary>
++                  <p className="pb-5 text-slate-600 leading-relaxed">{faq.a}</p>
++                </details>
++              ))}
++            </div>
++          </div>
++        </section>
++
++        {/* Related */}
++        <section className="py-10 px-6 bg-slate-50">
++          <div className="max-w-5xl mx-auto">
++            <h2 className="text-xl font-bold text-slate-900 mb-4">Services Available Bilingually</h2>
++            <div className="flex flex-wrap gap-3">
++              <Link to="/services/aml-consultant-canada" className="bg-white border border-blue-200 text-blue-700 font-semibold px-4 py-2 rounded-lg text-sm hover:bg-blue-50 transition-colors">AML Compliance Consulting →</Link>
++              <Link to="/services/workday-implementation-specialist" className="bg-white border border-blue-200 text-blue-700 font-semibold px-4 py-2 rounded-lg text-sm hover:bg-blue-50 transition-colors">Workday HCM Implementation →</Link>
++              <Link to="/services/project-manager-payroll-systems" className="bg-white border border-blue-200 text-blue-700 font-semibold px-4 py-2 rounded-lg text-sm hover:bg-blue-50 transition-colors">Payroll Systems PM →</Link>
++            </div>
++          </div>
++        </section>
++
++        {/* CTA */}
++        <section className="bg-blue-700 py-16 px-6 text-center text-white">
++          <div className="max-w-2xl mx-auto">
++            <h2 className="text-3xl font-bold mb-2">Need a Bilingual Implementation Manager?</h2>
++            <p className="text-blue-300 italic mb-2">Besoin d'un chef de projet bilingue?</p>
++            <p className="text-blue-200 text-lg mb-8">
++              Let's discuss your project in whichever language you prefer.
++              Initial consultations are complimentary.
++            </p>
++            <Link to="/#contact" className="inline-block bg-white text-blue-700 font-bold px-8 py-4 rounded-xl hover:bg-blue-50 transition-colors text-lg">
++              Discutons / Let's Talk →
++            </Link>
++          </div>
++        </section>
++      </main>
++    </>
++  );
++}
+diff --git a/frontend/src/pages/ServicePayroll.jsx b/frontend/src/pages/ServicePayroll.jsx
+new file mode 100644
+index 0000000..5a6dfaf
+--- /dev/null
++++ b/frontend/src/pages/ServicePayroll.jsx
+@@ -0,0 +1,243 @@
++import React from 'react';
++import { Link } from 'react-router-dom';
++import Header from '../components/Header';
++import SEO, { buildServiceSchema, buildBreadcrumb, buildFAQSchema } from '../components/SEO';
++
++const schema = {
++  '@context': 'https://schema.org',
++  '@graph': [
++    buildServiceSchema(
++      'Project Manager — Payroll & HR Systems Implementation Canada',
++      'Experienced payroll systems project manager for Canadian organizations. Multi-province payroll migrations, CPP/EI compliance, and HR system go-lives delivered on time.',
++      '/services/project-manager-payroll-systems'
++    ),
++    buildBreadcrumb([
++      { name: 'Home', path: '/' },
++      { name: 'Payroll Systems Project Manager', path: '/services/project-manager-payroll-systems' },
++    ]),
++    buildFAQSchema([
++      {
++        q: 'What payroll systems have you implemented in Canada?',
++        a: 'I have managed implementations of Workday Payroll, Ceridian Dayforce, ADP, and custom payroll integrations across Canadian organizations. I have experience with single-province and multi-province rollouts including Quebec-specific requirements.',
++      },
++      {
++        q: 'Do you understand Canadian payroll compliance?',
++        a: 'Yes — deeply. I have hands-on experience with CPP contributions, EI premiums, Record of Employment (ROE) generation, T4/RL-1 slips, provincial tax tables, and statutory holiday rules across all Canadian provinces and territories.',
++      },
++    ]),
++  ],
++};
++
++const platforms = [
++  { name: 'Workday Payroll', logo: '⚙️' },
++  { name: 'Ceridian Dayforce', logo: '📅' },
++  { name: 'ADP Canada', logo: '💼' },
++  { name: 'SAP SuccessFactors', logo: '🔷' },
++  { name: 'UKG (Kronos)', logo: '🕐' },
++  { name: 'Custom Integrations', logo: '🔌' },
++];
++
++const deliverables = [
++  'Project charter and governance framework',
++  'Detailed implementation project plan',
++  'Payroll compliance requirements documentation',
++  'Data migration and conversion workbooks',
++  'Test scripts and UAT facilitation guides',
++  'Go-live cutover checklist and runbook',
++  'Post-go-live hypercare support plan',
++  'Staff training materials (EN/FR)',
++  'Stakeholder communication plans',
++  'Risk register and mitigation strategies',
++];
++
++const faqs = [
++  {
++    q: 'What makes Canadian payroll implementations uniquely complex?',
++    a: 'Canadian payroll involves CPP/EI calculations, province-specific tax rules, Quebec QPIP, statutory holiday differences across provinces, ROE requirements, and bilingual compliance for federal entities. Multi-province organizations must handle all of these simultaneously — plus the data migration from legacy systems.',
++  },
++  {
++    q: 'How do you manage payroll go-live risk?',
++    a: 'I run parallel payroll cycles before cutover — typically 2–3 pay periods — comparing results to the legacy system. I build detailed cutover checklists, pre-approve all data migrations, and maintain a rollback plan. On go-live day, I run a war room with HR, payroll, IT, and finance to resolve issues in real time.',
++  },
++  {
++    q: 'Can you manage a payroll implementation remotely?',
++    a: 'Yes. Most of my recent implementations have been hybrid — remote for configuration and testing phases, on-site for go-live and hypercare when critical. I work across all Canadian time zones and adjust my schedule to match your team.',
++  },
++];
++
++export default function ServicePayroll() {
++  return (
++    <>
++      <SEO
++        title="Project Manager Payroll Systems Canada — HR Implementation Expert | Karim Chaouki"
++        description="Experienced payroll systems project manager for Canadian organizations. Specializing in multi-province payroll migrations, CPP/EI compliance, Workday Payroll, and Ceridian Dayforce implementations. PMP Certified."
++        canonical="/services/project-manager-payroll-systems"
++        schema={schema}
++      />
++      <Header />
++
++      <main id="main-content">
++        {/* Hero */}
++        <section className="bg-gradient-to-br from-slate-900 to-blue-900 text-white py-20 px-6">
++          <div className="max-w-5xl mx-auto">
++            <nav aria-label="Breadcrumb" className="mb-6">
++              <ol className="flex items-center gap-2 text-sm text-blue-300">
++                <li><Link to="/" className="hover:text-white transition-colors">Home</Link></li>
++                <li aria-hidden="true" className="text-blue-500">›</li>
++                <li className="text-white font-medium">Payroll Systems PM</li>
++              </ol>
++            </nav>
++            <h1 className="text-4xl md:text-5xl font-bold mb-4 leading-tight">
++              Project Manager — Payroll &amp; HR Systems Implementation
++            </h1>
++            <p className="text-xl text-blue-200 max-w-2xl leading-relaxed mb-8">
++              Complex payroll system migrations and HR platform implementations across Canada.
++              CPP, EI, multi-province compliance, and zero-error go-lives. PMP Certified. Bilingual EN/FR.
++            </p>
++            <Link to="/#contact" className="bg-white text-blue-700 font-semibold px-6 py-3 rounded-lg hover:bg-blue-50 transition-colors inline-block">
++              Discuss Your Payroll Project →
++            </Link>
++          </div>
++        </section>
++
++        {/* Intro + Sidebar */}
++        <section className="py-16 px-6">
++          <div className="max-w-5xl mx-auto grid md:grid-cols-3 gap-12">
++            <div className="md:col-span-2 prose max-w-none">
++              <h2 className="text-3xl font-bold text-slate-900 mb-4">
++                Payroll System Implementation Project Manager — Canada
++              </h2>
++              <p className="text-slate-600 leading-relaxed mb-4">
++                A payroll system migration is the highest-stakes technology project most HR teams will ever
++                run. Every employee depends on getting paid accurately and on time — and there's no margin
++                for error. A go-live failure doesn't just create technical debt; it creates legal liability,
++                employee relations crises, and CRA compliance exposure.
++              </p>
++              <p className="text-slate-600 leading-relaxed mb-4">
++                As a <strong className="text-slate-800">payroll systems project manager</strong> with deep
++                experience in Canadian payroll compliance, I bring the methodology, the regulatory knowledge,
++                and the stakeholder management skills to move your organization from legacy system to
++                modern platform without payroll errors or missed deadlines.
++              </p>
++              <p className="text-slate-600 leading-relaxed mb-8">
++                My experience spans multi-province rollouts covering CPP/EI contributions, provincial tax
++                tables, ROE generation, Quebec QPIP, statutory holiday rules, and T4/RL-1 year-end processes.
++                I've managed these implementations for financial institutions, healthcare networks, and
++                government contractors across Canada.
++              </p>
++
++              <h3 className="text-xl font-bold text-slate-900 mb-3">Payroll Platforms I've Implemented</h3>
++              <div className="grid grid-cols-3 gap-3 mb-8">
++                {platforms.map((p) => (
++                  <div key={p.name} className="bg-slate-50 border border-slate-200 rounded-lg p-3 text-center">
++                    <div className="text-2xl mb-1">{p.logo}</div>
++                    <div className="text-xs font-semibold text-slate-700">{p.name}</div>
++                  </div>
++                ))}
++              </div>
++
++              <blockquote className="border-l-4 border-blue-600 pl-6 py-2 bg-slate-50 rounded-r-lg">
++                <p className="text-slate-700 italic leading-relaxed">
++                  "Karim ran the tightest payroll go-live I've seen in 15 years. Three provinces, two
++                  collective agreements, and a tight deadline — zero payroll errors in the first three
++                  pay runs."
++                </p>
++                <cite className="text-slate-500 text-sm font-semibold not-italic mt-2 block">
++                  — Director of HR Operations · Canadian Healthcare Network
++                </cite>
++              </blockquote>
++            </div>
++
++            {/* Sidebar */}
++            <aside>
++              <div className="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm sticky top-24">
++                <h3 className="font-bold text-slate-900 mb-4">Canadian Payroll Expertise</h3>
++                <ul className="space-y-3 mb-6">
++                  {[
++                    'CPP/EI calculations & remittances',
++                    'ROE generation & CRA compliance',
++                    'T4 / RL-1 year-end processing',
++                    'Multi-province tax tables',
++                    'Quebec QPIP requirements',
++                    'Statutory holiday rules (all provinces)',
++                    'Collective agreement compliance',
++                    'Payroll parallel testing methodology',
++                  ].map((item) => (
++                    <li key={item} className="flex items-start gap-2 text-sm text-slate-600">
++                      <span className="text-blue-600 font-bold mt-0.5 flex-shrink-0">✓</span>
++                      {item}
++                    </li>
++                  ))}
++                </ul>
++                <Link to="/#contact" className="block text-center bg-blue-700 text-white font-semibold px-4 py-3 rounded-lg hover:bg-blue-800 transition-colors">
++                  Start a Conversation →
++                </Link>
++              </div>
++            </aside>
++          </div>
++        </section>
++
++        {/* Deliverables */}
++        <section className="py-16 px-6 bg-slate-50">
++          <div className="max-w-5xl mx-auto">
++            <div className="text-center mb-10">
++              <span className="inline-block bg-blue-100 text-blue-700 text-sm font-semibold px-4 py-1.5 rounded-full mb-3">What You Receive</span>
++              <h2 className="text-3xl font-bold text-slate-900">Typical Engagement Deliverables</h2>
++            </div>
++            <div className="grid sm:grid-cols-2 gap-3">
++              {deliverables.map((d) => (
++                <div key={d} className="flex items-center gap-3 bg-white border border-slate-200 rounded-lg px-4 py-3">
++                  <span className="text-blue-600 font-bold">→</span>
++                  <span className="text-sm text-slate-700">{d}</span>
++                </div>
++              ))}
++            </div>
++          </div>
++        </section>
++
++        {/* FAQ */}
++        <section className="py-16 px-6">
++          <div className="max-w-3xl mx-auto">
++            <h2 className="text-3xl font-bold text-slate-900 mb-8">
++              Common Questions About Payroll Implementations in Canada
++            </h2>
++            <div className="space-y-2">
++              {faqs.map((faq) => (
++                <details key={faq.q} className="group border-b border-slate-200">
++                  <summary className="flex justify-between items-center py-5 cursor-pointer text-slate-800 font-semibold list-none">
++                    {faq.q}
++                    <span className="ml-4 text-blue-600 group-open:rotate-45 transition-transform text-xl leading-none">+</span>
++                  </summary>
++                  <p className="pb-5 text-slate-600 leading-relaxed">{faq.a}</p>
++                </details>
++              ))}
++            </div>
++          </div>
++        </section>
++
++        {/* Related */}
++        <section className="py-10 px-6 bg-slate-50">
++          <div className="max-w-5xl mx-auto">
++            <h2 className="text-xl font-bold text-slate-900 mb-4">Related Services</h2>
++            <div className="flex flex-wrap gap-3">
++              <Link to="/services/aml-consultant-canada" className="bg-white border border-blue-200 text-blue-700 font-semibold px-4 py-2 rounded-lg text-sm hover:bg-blue-50 transition-colors">AML Compliance Consulting →</Link>
++              <Link to="/services/workday-implementation-specialist" className="bg-white border border-blue-200 text-blue-700 font-semibold px-4 py-2 rounded-lg text-sm hover:bg-blue-50 transition-colors">Workday HCM Implementation →</Link>
++              <Link to="/services/bilingual-implementation-manager" className="bg-white border border-blue-200 text-blue-700 font-semibold px-4 py-2 rounded-lg text-sm hover:bg-blue-50 transition-colors">Bilingual PM (EN/FR) →</Link>
++            </div>
++          </div>
++        </section>
++
++        {/* CTA */}
++        <section className="bg-blue-700 py-16 px-6 text-center text-white">
++          <div className="max-w-2xl mx-auto">
++            <h2 className="text-3xl font-bold mb-3">Planning a Payroll System Migration?</h2>
++            <p className="text-blue-200 text-lg mb-8">Let's discuss your timeline, compliance requirements, and how I keep payroll go-lives error-free.</p>
++            <Link to="/#contact" className="inline-block bg-white text-blue-700 font-bold px-8 py-4 rounded-xl hover:bg-blue-50 transition-colors text-lg">
++              Book a Free Discovery Call →
++            </Link>
++          </div>
++        </section>
++      </main>
++    </>
++  );
++}
+diff --git a/frontend/src/pages/ServiceWorkday.jsx b/frontend/src/pages/ServiceWorkday.jsx
+new file mode 100644
+index 0000000..3451784
+--- /dev/null
++++ b/frontend/src/pages/ServiceWorkday.jsx
+@@ -0,0 +1,278 @@
++import React from 'react';
++import { Link } from 'react-router-dom';
++import Header from '../components/Header';
++import SEO, { buildServiceSchema, buildBreadcrumb, buildFAQSchema } from '../components/SEO';
++
++const schema = {
++  '@context': 'https://schema.org',
++  '@graph': [
++    buildServiceSchema(
++      'Workday HCM & Payroll Implementation Specialist — Canada',
++      'Senior Workday implementation manager for HCM, Payroll, Recruiting, Benefits, and Time Tracking deployments across Canadian organizations.',
++      '/services/workday-implementation-specialist'
++    ),
++    buildBreadcrumb([
++      { name: 'Home', path: '/' },
++      { name: 'Workday Implementation Specialist Canada', path: '/services/workday-implementation-specialist' },
++    ]),
++    buildFAQSchema([
++      {
++        q: 'What Workday modules do you specialize in?',
++        a: 'I specialize in Workday HCM (Core HR), Payroll (Canada and US), Recruiting, Benefits, Time Tracking, Absence Management, and Integrations. I have led full-cycle deployments from requirements through go-live and post-go-live support.',
++      },
++      {
++        q: 'Can you manage a Workday implementation for a Canadian organization?',
++        a: 'Yes. I specialize in Canadian Workday deployments including Canadian payroll compliance (CPP, EI, ROEs, provincial tax), bilingual configurations (English/French), and multi-province rollouts.',
++      },
++      {
++        q: 'How long does a Workday implementation take?',
++        a: 'A typical Workday HCM implementation takes 6–9 months from kickoff to go-live, depending on scope and number of modules. Payroll adds complexity and typically extends timelines by 2–3 months. I help organizations right-size their scope to hit their target dates.',
++      },
++    ]),
++  ],
++};
++
++const modules = [
++  { name: 'Core HCM', icon: '👥', desc: 'Employee records, org structure, compensation, position management' },
++  { name: 'Workday Payroll', icon: '💰', desc: 'Canadian & US payroll, CPP/EI, ROEs, provincial tax compliance' },
++  { name: 'Recruiting', icon: '🎯', desc: 'Job requisitions, candidate workflow, offer management, onboarding' },
++  { name: 'Benefits Administration', icon: '🏥', desc: 'Benefit plans, open enrollment, provincial compliance' },
++  { name: 'Time Tracking', icon: '⏱️', desc: 'Time entry, overtime rules, absence management, scheduling' },
++  { name: 'Integrations', icon: '🔌', desc: 'EIBs, Core Connectors, REST/SOAP APIs, third-party connections' },
++  { name: 'Reporting & Analytics', icon: '📊', desc: 'Custom reports, dashboards, Prism Analytics, workforce insights' },
++  { name: 'Security & Compliance', icon: '🔒', desc: 'Role-based access, SoD controls, audit trails, data privacy' },
++];
++
++const phases = [
++  { num: '01', title: 'Discovery & Scoping', desc: 'Requirements gathering, current-state documentation, gap analysis, and project charter sign-off.' },
++  { num: '02', title: 'Design & Configuration', desc: 'Prototype builds, tenant configuration, business process design workshops, and data mapping.' },
++  { num: '03', title: 'Testing & Validation', desc: 'Unit testing, integration testing, UAT facilitation, and defect tracking through resolution.' },
++  { num: '04', title: 'Data Migration', desc: 'Data cleansing, conversion workbooks, mock loads, and validation against source systems.' },
++  { num: '05', title: 'Training & Change Management', desc: 'End-user training (EN/FR), change impact assessments, communication plans, and readiness checks.' },
++  { num: '06', title: 'Go-Live & Hypercare', desc: 'Cutover execution, day-one support, issue triage, and knowledge transfer to internal teams.' },
++];
++
++const faqs = [
++  {
++    q: 'What Workday modules do you specialize in?',
++    a: 'Core HCM, Payroll (Canadian & US), Recruiting, Benefits, Time Tracking, Absence Management, and Integrations. I have led full-cycle deployments from requirements through post-go-live support.',
++  },
++  {
++    q: 'Do you handle Canadian payroll configuration in Workday?',
++    a: 'Yes — Canadian Workday Payroll is a specialized discipline. I have hands-on experience with CPP contributions, EI premiums, Record of Employment (ROE) generation, provincial tax tables, and Quebec QPIP requirements.',
++  },
++  {
++    q: 'Can you rescue a troubled Workday implementation?',
++    a: 'Yes. I can step into any phase of an in-flight implementation to assess status, identify root causes of delays or quality issues, and develop a recovery plan. This is one of the highest-value engagements I take on.',
++  },
++];
++
++export default function ServiceWorkday() {
++  return (
++    <>
++      <SEO
++        title="Workday Implementation Specialist Canada — HCM & Payroll Expert | Karim Chaouki"
++        description="Senior Workday implementation manager for Canadian organizations. Specializing in Workday HCM, Canadian Payroll, Recruiting, Benefits, and Time Tracking. PMP Certified. Bilingual EN/FR. Available across Canada."
++        canonical="/services/workday-implementation-specialist"
++        schema={schema}
++      />
++      <Header />
++
++      <main id="main-content">
++        {/* Hero */}
++        <section className="bg-gradient-to-br from-slate-900 to-blue-900 text-white py-20 px-6">
++          <div className="max-w-5xl mx-auto">
++            <nav aria-label="Breadcrumb" className="mb-6">
++              <ol className="flex items-center gap-2 text-sm text-blue-300">
++                <li><Link to="/" className="hover:text-white transition-colors">Home</Link></li>
++                <li aria-hidden="true" className="text-blue-500">›</li>
++                <li className="text-white font-medium">Workday Implementation</li>
++              </ol>
++            </nav>
++            <h1 className="text-4xl md:text-5xl font-bold mb-4 leading-tight">
++              Senior Workday Implementation Specialist — Canada
++            </h1>
++            <p className="text-xl text-blue-200 max-w-2xl leading-relaxed mb-8">
++              Full-cycle Workday HCM, Payroll, and Benefits deployments for Canadian organizations.
++              From requirements through go-live — delivered on time, compliant with Canadian regulations,
++              and configured for your business.
++            </p>
++            <div className="flex flex-wrap gap-4">
++              <Link
++                to="/#contact"
++                className="bg-white text-blue-700 font-semibold px-6 py-3 rounded-lg hover:bg-blue-50 transition-colors"
++              >
++                Discuss Your Workday Project →
++              </Link>
++            </div>
++          </div>
++        </section>
++
++        {/* Intro */}
++        <section className="py-16 px-6">
++          <div className="max-w-5xl mx-auto grid md:grid-cols-3 gap-12">
++            <div className="md:col-span-2 prose max-w-none">
++              <h2 className="text-3xl font-bold text-slate-900 mb-4">
++                Workday Implementation Management for Canadian Organizations
++              </h2>
++              <p className="text-slate-600 leading-relaxed mb-4">
++                A Workday implementation is one of the most significant technology investments your
++                organization will make. The decisions made in the first eight weeks — scope, design,
++                data strategy, change management — determine whether your go-live is a success or a crisis.
++              </p>
++              <p className="text-slate-600 leading-relaxed mb-4">
++                As a <strong className="text-slate-800">senior Workday implementation specialist</strong>,
++                I bring project management discipline and deep functional knowledge to every phase of your
++                Workday journey. I've led complex multi-module deployments for Canadian financial institutions,
++                healthcare organizations, and public sector entities.
++              </p>
++              <p className="text-slate-600 leading-relaxed mb-8">
++                Canadian payroll configuration in Workday is significantly more complex than US payroll.
++                CPP contributions, EI premiums, Record of Employment (ROE) generation, provincial tax tables,
++                and Quebec's QPIP requirements demand a practitioner who has actually built and tested these
++                configurations — not someone learning them on your project's dime.
++              </p>
++
++              <blockquote className="border-l-4 border-blue-600 pl-6 py-2 bg-slate-50 rounded-r-lg my-8">
++                <p className="text-slate-700 italic text-lg leading-relaxed">
++                  "Karim led our Workday payroll implementation across four provinces. He knew the
++                  configuration details, anticipated compliance edge cases, and kept the project on
++                  track when scope changes threatened the timeline."
++                </p>
++                <cite className="text-slate-500 text-sm font-semibold not-italic mt-2 block">
++                  — VP Human Resources · Canadian Financial Institution
++                </cite>
++              </blockquote>
++            </div>
++
++            {/* Sidebar */}
++            <aside>
++              <div className="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm sticky top-24">
++                <h3 className="font-bold text-slate-900 mb-4">Engagement Models</h3>
++                {[
++                  { type: 'Project Manager', desc: 'End-to-end PM for your full Workday implementation' },
++                  { type: 'Functional Lead', desc: 'Drive specific module workstreams (Payroll, HCM, Benefits)' },
++                  { type: 'Staff Augmentation', desc: 'Supplement your team during peak phases' },
++                  { type: 'Implementation Rescue', desc: 'Assess and stabilize a troubled implementation' },
++                ].map((e) => (
++                  <div key={e.type} className="py-3 border-b border-slate-100 last:border-0">
++                    <div className="font-semibold text-sm text-slate-800">{e.type}</div>
++                    <div className="text-xs text-slate-500 mt-1">{e.desc}</div>
++                  </div>
++                ))}
++                <Link
++                  to="/#contact"
++                  className="mt-6 block text-center bg-blue-700 text-white font-semibold px-4 py-3 rounded-lg hover:bg-blue-800 transition-colors"
++                >
++                  Get in Touch →
++                </Link>
++                <a
++                  href="/resume/KC_PM_Resume.pdf"
++                  target="_blank"
++                  rel="noopener noreferrer"
++                  className="mt-3 block text-center border border-blue-200 text-blue-700 font-semibold px-4 py-3 rounded-lg hover:bg-blue-50 transition-colors text-sm"
++                >
++                  Download Resume (PDF)
++                </a>
++              </div>
++            </aside>
++          </div>
++        </section>
++
++        {/* Modules */}
++        <section className="py-16 px-6 bg-slate-50">
++          <div className="max-w-5xl mx-auto">
++            <div className="text-center mb-12">
++              <span className="inline-block bg-blue-100 text-blue-700 text-sm font-semibold px-4 py-1.5 rounded-full mb-3">
++                Workday Modules
++              </span>
++              <h2 className="text-3xl font-bold text-slate-900">Modules I Implement</h2>
++            </div>
++            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
++              {modules.map((m) => (
++                <div key={m.name} className="bg-white border border-slate-200 rounded-xl p-5 hover:shadow-md transition-shadow">
++                  <div className="text-2xl mb-2">{m.icon}</div>
++                  <div className="font-bold text-slate-900 text-sm mb-1">{m.name}</div>
++                  <div className="text-xs text-slate-500 leading-relaxed">{m.desc}</div>
++                </div>
++              ))}
++            </div>
++          </div>
++        </section>
++
++        {/* Phases */}
++        <section className="py-16 px-6">
++          <div className="max-w-3xl mx-auto">
++            <div className="text-center mb-12">
++              <span className="inline-block bg-blue-100 text-blue-700 text-sm font-semibold px-4 py-1.5 rounded-full mb-3">
++                My Approach
++              </span>
++              <h2 className="text-3xl font-bold text-slate-900">Implementation Methodology</h2>
++            </div>
++            <div className="space-y-0 divide-y divide-slate-100">
++              {phases.map((p) => (
++                <div key={p.num} className="flex gap-5 py-6">
++                  <div className="w-10 h-10 rounded-full bg-blue-100 text-blue-700 font-bold text-sm flex items-center justify-center flex-shrink-0">
++                    {p.num}
++                  </div>
++                  <div>
++                    <div className="font-bold text-slate-900 mb-1">{p.title}</div>
++                    <div className="text-sm text-slate-600 leading-relaxed">{p.desc}</div>
++                  </div>
++                </div>
++              ))}
++            </div>
++          </div>
++        </section>
++
++        {/* FAQ */}
++        <section className="py-16 px-6 bg-slate-50">
++          <div className="max-w-3xl mx-auto">
++            <h2 className="text-3xl font-bold text-slate-900 mb-8">
++              Common Questions About Workday Implementations in Canada
++            </h2>
++            <div className="space-y-2">
++              {faqs.map((faq) => (
++                <details key={faq.q} className="group border-b border-slate-200">
++                  <summary className="flex justify-between items-center py-5 cursor-pointer text-slate-800 font-semibold list-none">
++                    {faq.q}
++                    <span className="ml-4 text-blue-600 group-open:rotate-45 transition-transform text-xl leading-none">+</span>
++                  </summary>
++                  <p className="pb-5 text-slate-600 leading-relaxed">{faq.a}</p>
++                </details>
++              ))}
++            </div>
++          </div>
++        </section>
++
++        {/* Related Services */}
++        <section className="py-10 px-6">
++          <div className="max-w-5xl mx-auto">
++            <h2 className="text-xl font-bold text-slate-900 mb-4">Related Services</h2>
++            <div className="flex flex-wrap gap-3">
++              <Link to="/services/aml-consultant-canada" className="bg-blue-50 border border-blue-200 text-blue-700 font-semibold px-4 py-2 rounded-lg text-sm hover:bg-blue-100 transition-colors">AML Compliance Consulting →</Link>
++              <Link to="/services/project-manager-payroll-systems" className="bg-blue-50 border border-blue-200 text-blue-700 font-semibold px-4 py-2 rounded-lg text-sm hover:bg-blue-100 transition-colors">Payroll Systems PM →</Link>
++              <Link to="/services/bilingual-implementation-manager" className="bg-blue-50 border border-blue-200 text-blue-700 font-semibold px-4 py-2 rounded-lg text-sm hover:bg-blue-100 transition-colors">Bilingual PM (EN/FR) →</Link>
++            </div>
++          </div>
++        </section>
++
++        {/* CTA */}
++        <section className="bg-blue-700 py-16 px-6 text-center text-white">
++          <div className="max-w-2xl mx-auto">
++            <h2 className="text-3xl font-bold mb-3">Planning a Workday Implementation in Canada?</h2>
++            <p className="text-blue-200 text-lg mb-8">
++              Let's discuss your timeline, scope, and how I can support your team from day one.
++            </p>
++            <Link
++              to="/#contact"
++              className="inline-block bg-white text-blue-700 font-bold px-8 py-4 rounded-xl hover:bg-blue-50 transition-colors text-lg"
++            >
++              Book a Free Discovery Call →
++            </Link>
++          </div>
++        </section>
++      </main>
++    </>
++  );
++}
+diff --git a/vercel.json b/vercel.json
+new file mode 100644
+index 0000000..7a336fd
+--- /dev/null
++++ b/vercel.json
+@@ -0,0 +1,19 @@
++{
++  "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }],
++  "headers": [
++    {
++      "source": "/(.*)",
++      "headers": [
++        { "key": "X-Frame-Options", "value": "DENY" },
++        { "key": "X-Content-Type-Options", "value": "nosniff" },
++        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" },
++        { "key": "Strict-Transport-Security", "value": "max-age=63072000; includeSubDomains; preload" }
++      ]
++    },
++    { "source": "/images/(.*)", "headers": [{ "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }] },
++    { "source": "/sitemap.xml", "headers": [{ "key": "Cache-Control", "value": "public, max-age=86400" }] }
++  ],
++  "buildCommand": "cd frontend && yarn build",
++  "outputDirectory": "frontend/build",
++  "installCommand": "cd frontend && yarn install"
++}

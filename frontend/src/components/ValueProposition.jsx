@@ -1,0 +1,86 @@
+import React from 'react';
+import { personalInfo, differentiators } from '../data/mockData';
+import { useScrollReveal } from '../hooks/useScrollReveal';
+import { use3DTilt } from '../hooks/use3DTilt';
+import { Globe, Shield, Building2, TrendingUp } from 'lucide-react';
+
+const iconMap = {
+  globe: Globe,
+  shield: Shield,
+  building: Building2,
+  trendingUp: TrendingUp,
+};
+
+const TiltCard = ({ children, index, isVisible }) => {
+  const { ref, style, handleMouseMove, handleMouseLeave } = use3DTilt(7);
+  return (
+    <div
+      ref={ref}
+      onMouseMove={handleMouseMove}
+      onMouseLeave={handleMouseLeave}
+      style={style}
+      className={`group card-3d p-8 rounded-2xl border border-[#E2E8F0] bg-white hover:border-[#2B6CB0]/30 hover:shadow-xl hover:shadow-[#2B6CB0]/5 transition-shadow duration-500 relative overflow-hidden ${
+        isVisible ? 'animate-reveal-3d-up' : 'opacity-0'
+      }`}
+    >
+      <div className="card-3d-shine absolute inset-0 opacity-0 transition-opacity duration-500 pointer-events-none bg-gradient-to-tr from-transparent via-[#2B6CB0]/[0.03] to-transparent" />
+      <div className="relative z-10">{children}</div>
+    </div>
+  );
+};
+
+const ValueProposition = () => {
+  const [ref, isVisible] = useScrollReveal();
+
+  return (
+    <section id="about" className="relative py-24 md:py-32 bg-white">
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(43,108,176,0.04)_0%,_transparent_70%)]" />
+
+      <div ref={ref} className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
+        {/* Section Header */}
+        <div
+          className={`max-w-3xl transition-all duration-700 ${
+            isVisible
+              ? 'opacity-100 translate-y-0'
+              : 'opacity-0 translate-y-8'
+          }`}
+        >
+          <span className="text-[#2B6CB0] text-sm font-semibold uppercase tracking-[0.2em]">
+            Why Karim
+          </span>
+          <h2 className="mt-4 text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-[#1A202C] leading-tight">
+            Uniquely Positioned to Deliver
+          </h2>
+          <p className="mt-6 text-lg text-[#94A3B8] leading-relaxed">
+            {personalInfo.summary} Certified PMP, RMP, and Scrum Master —
+            bringing structured methodology, risk-aware planning, and agile
+            execution to every engagement. Bilingual in English and French with
+            deep cross-cultural competency.
+          </p>
+        </div>
+
+        {/* Differentiator Cards */}
+        <div className="mt-16 grid grid-cols-1 md:grid-cols-2 gap-6 perspective-container">
+          {differentiators.map((item, i) => {
+            const Icon = iconMap[item.icon];
+            return (
+              <TiltCard key={i} index={i} isVisible={isVisible}>
+                <div className="w-12 h-12 rounded-xl bg-[#2B6CB0]/10 flex items-center justify-center mb-5 group-hover:bg-[#2B6CB0]/20 transition-colors duration-300">
+                  <Icon size={24} className="text-[#2B6CB0]" />
+                </div>
+                <h3 className="text-xl font-semibold text-[#1A202C] mb-3">
+                  {item.title}
+                </h3>
+                <p className="text-[#64748B] leading-relaxed">
+                  {item.description}
+                </p>
+              </TiltCard>
+            );
+          })}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default ValueProposition;
