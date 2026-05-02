@@ -1,4 +1,11 @@
 {
+  "redirects": [
+    {
+      "source": "/services/workday-implementation-specialist",
+      "destination": "/services/adp-workforce-now-implementation",
+      "permanent": true
+    }
+  ],
   "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }],
   "headers": [
     {

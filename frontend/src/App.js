@@ -16,7 +16,7 @@ import CookieConsent from './components/CookieConsent';
 import PrivacyPolicy from './components/PrivacyPolicy';
 import TermsConditions from './components/TermsConditions';
 import ServiceAML from './pages/ServiceAML';
-import ServiceWorkday from './pages/ServiceWorkday';
+import ServiceADPWorkforceNow from './pages/ServiceADPWorkforceNow';
 import ServicePayroll from './pages/ServicePayroll';
 import ServiceBilingual from './pages/ServiceBilingual';
 import AboutPage from './pages/AboutPage';
@@ -47,7 +47,7 @@ function App() {
             <Route path="/" element={<Portfolio />} />
             <Route path="/about" element={<AboutPage />} />
             <Route path="/services/aml-consultant-canada" element={<ServiceAML />} />
-            <Route path="/services/workday-implementation-specialist" element={<ServiceWorkday />} />
+            <Route path="/services/adp-workforce-now-implementation" element={<ServiceADPWorkforceNow />} />
             <Route path="/services/project-manager-payroll-systems" element={<ServicePayroll />} />
             <Route path="/services/bilingual-implementation-manager" element={<ServiceBilingual />} />
             <Route path="/privacy-policy" element={<PrivacyPolicy />} />

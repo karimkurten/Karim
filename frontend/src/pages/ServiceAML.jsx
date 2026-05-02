@@ -255,8 +255,8 @@ export default function ServiceAML() {
           <div className="max-w-5xl mx-auto">
             <h2 className="text-xl font-bold text-slate-900 mb-4">Related Services</h2>
             <div className="flex flex-wrap gap-3">
-              <Link to="/services/workday-implementation-specialist" className="bg-white border border-blue-200 text-blue-700 font-semibold px-4 py-2 rounded-lg text-sm hover:bg-blue-50 transition-colors">
-                Workday HCM Implementation →
+              <Link to="/services/adp-workforce-now-implementation" className="bg-white border border-blue-200 text-blue-700 font-semibold px-4 py-2 rounded-lg text-sm hover:bg-blue-50 transition-colors">
+                ADP Workforce Now Implementation →
               </Link>
               <Link to="/services/project-manager-payroll-systems" className="bg-white border border-blue-200 text-blue-700 font-semibold px-4 py-2 rounded-lg text-sm hover:bg-blue-50 transition-colors">
                 Payroll Systems PM →

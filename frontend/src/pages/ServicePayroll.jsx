@@ -221,7 +221,7 @@ export default function ServicePayroll() {
             <h2 className="text-xl font-bold text-slate-900 mb-4">Related Services</h2>
             <div className="flex flex-wrap gap-3">
               <Link to="/services/aml-consultant-canada" className="bg-white border border-blue-200 text-blue-700 font-semibold px-4 py-2 rounded-lg text-sm hover:bg-blue-50 transition-colors">AML Compliance Consulting →</Link>
-              <Link to="/services/workday-implementation-specialist" className="bg-white border border-blue-200 text-blue-700 font-semibold px-4 py-2 rounded-lg text-sm hover:bg-blue-50 transition-colors">Workday HCM Implementation →</Link>
+              <Link to="/services/adp-workforce-now-implementation" className="bg-white border border-blue-200 text-blue-700 font-semibold px-4 py-2 rounded-lg text-sm hover:bg-blue-50 transition-colors">ADP Workforce Now Implementation →</Link>
               <Link to="/services/bilingual-implementation-manager" className="bg-white border border-blue-200 text-blue-700 font-semibold px-4 py-2 rounded-lg text-sm hover:bg-blue-50 transition-colors">Bilingual PM (EN/FR) →</Link>
             </div>
           </div>

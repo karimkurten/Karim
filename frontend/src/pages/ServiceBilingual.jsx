@@ -8,7 +8,7 @@ const schema = {
   '@graph': [
     buildServiceSchema(
       'Bilingual Implementation Manager — English & French Canada',
-      'Bilingual project manager delivering AML, Workday, and payroll implementations in both English and French. Serving Quebec organizations and federal entities across Canada.',
+      'Bilingual project manager delivering AML, ADP Workforce Now, and payroll implementations in both English and French. Serving Quebec organizations and federal entities across Canada.',
       '/services/bilingual-implementation-manager'
     ),
     buildBreadcrumb([
@@ -56,7 +56,7 @@ const bilingualAdvantages = [
   },
   {
     title: 'Bilingual System Configuration',
-    desc: 'Workday, payroll systems, and AML platforms configured with French-language interfaces, French field labels, and bilingual reporting outputs.',
+    desc: 'ADP Workforce Now, payroll systems, and AML platforms configured with French-language interfaces, French field labels, and bilingual reporting outputs.',
     icon: '⚙️',
   },
 ];
@@ -81,7 +81,7 @@ export default function ServiceBilingual() {
     <>
       <SEO
         title="Bilingual Implementation Manager Canada — English & French PM | Karim Chaouki"
-        description="Bilingual (English/French) implementation manager for Canadian organizations. AML compliance, Workday HCM, and payroll implementations delivered in both official languages. Serving Quebec, federal entities, and national organizations."
+        description="Bilingual (English/French) implementation manager for Canadian organizations. AML compliance, ADP Workforce Now HCM, and payroll implementations delivered in both official languages. Serving Quebec, federal entities, and national organizations."
         canonical="/services/bilingual-implementation-manager"
         schema={schema}
       />
@@ -106,7 +106,7 @@ export default function ServiceBilingual() {
               Bilingual Implementation Manager — English &amp; French
             </h1>
             <p className="text-xl text-blue-200 max-w-2xl leading-relaxed mb-4">
-              AML compliance, Workday HCM, and payroll implementations delivered in both official
+              AML compliance, ADP Workforce Now HCM, and payroll implementations delivered in both official
               Canadian languages. Serving Quebec organizations, federal entities, and national companies
               with cross-provincial teams.
             </p>
@@ -233,7 +233,7 @@ export default function ServiceBilingual() {
             <h2 className="text-xl font-bold text-slate-900 mb-4">Services Available Bilingually</h2>
             <div className="flex flex-wrap gap-3">
               <Link to="/services/aml-consultant-canada" className="bg-white border border-blue-200 text-blue-700 font-semibold px-4 py-2 rounded-lg text-sm hover:bg-blue-50 transition-colors">AML Compliance Consulting →</Link>
-              <Link to="/services/workday-implementation-specialist" className="bg-white border border-blue-200 text-blue-700 font-semibold px-4 py-2 rounded-lg text-sm hover:bg-blue-50 transition-colors">Workday HCM Implementation →</Link>
+              <Link to="/services/adp-workforce-now-implementation" className="bg-white border border-blue-200 text-blue-700 font-semibold px-4 py-2 rounded-lg text-sm hover:bg-blue-50 transition-colors">ADP Workforce Now Implementation →</Link>
               <Link to="/services/project-manager-payroll-systems" className="bg-white border border-blue-200 text-blue-700 font-semibold px-4 py-2 rounded-lg text-sm hover:bg-blue-50 transition-colors">Payroll Systems PM →</Link>
             </div>
           </div>

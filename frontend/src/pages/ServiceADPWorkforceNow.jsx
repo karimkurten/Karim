@@ -7,73 +7,81 @@ const schema = {
   '@context': 'https://schema.org',
   '@graph': [
     buildServiceSchema(
-      'Workday HCM & Payroll Implementation Specialist — Canada',
-      'Senior Workday implementation manager for HCM, Payroll, Recruiting, Benefits, and Time Tracking deployments across Canadian organizations.',
-      '/services/workday-implementation-specialist'
+      'ADP Workforce Now Implementation Specialist — Canada',
+      'Senior ADP Workforce Now implementation consultant for HCM, Payroll, Benefits, Time & Attendance, and Talent deployments across Canadian and US organizations.',
+      '/services/adp-workforce-now-implementation'
     ),
     buildBreadcrumb([
       { name: 'Home', path: '/' },
-      { name: 'Workday Implementation Specialist Canada', path: '/services/workday-implementation-specialist' },
+      { name: 'ADP Workforce Now Implementation', path: '/services/adp-workforce-now-implementation' },
     ]),
     buildFAQSchema([
       {
-        q: 'What Workday modules do you specialize in?',
-        a: 'I specialize in Workday HCM (Core HR), Payroll (Canada and US), Recruiting, Benefits, Time Tracking, Absence Management, and Integrations. I have led full-cycle deployments from requirements through go-live and post-go-live support.',
+        q: 'What ADP Workforce Now modules do you implement?',
+        a: 'I implement the full ADP Workforce Now suite: Payroll (Canadian and US), HR Management, Benefits Administration, Time & Attendance, Talent (Recruitment, Performance, Compensation), Onboarding, Reporting, and ADP Marketplace integrations. I have led 50+ enterprise rollouts from ADP\'s Center of Excellence.',
       },
       {
-        q: 'Can you manage a Workday implementation for a Canadian organization?',
-        a: 'Yes. I specialize in Canadian Workday deployments including Canadian payroll compliance (CPP, EI, ROEs, provincial tax), bilingual configurations (English/French), and multi-province rollouts.',
+        q: 'Are you familiar with Canadian payroll requirements in ADP Workforce Now?',
+        a: 'Yes. I specialize in Canadian payroll configuration in ADP Workforce Now: CPP, EI, federal and provincial tax tables, ROEs, T4/T4A year-end reporting, Quebec QPIP and CSST requirements, and multi-province deployments.',
       },
       {
-        q: 'How long does a Workday implementation take?',
-        a: 'A typical Workday HCM implementation takes 6–9 months from kickoff to go-live, depending on scope and number of modules. Payroll adds complexity and typically extends timelines by 2–3 months. I help organizations right-size their scope to hit their target dates.',
+        q: 'Can you handle cross-border US/Canada ADP Workforce Now deployments?',
+        a: 'Yes. Cross-border US/Canada implementations are my deepest specialty. I have managed 50+ such projects with 100% on-time delivery, including US payroll tax (federal/state/local), I-9 compliance, multi-state reciprocity, and integration between US and Canadian Workforce Now tenants.',
+      },
+      {
+        q: 'How long does an ADP Workforce Now implementation take?',
+        a: 'A typical ADP Workforce Now implementation takes 12–16 weeks from kickoff to go-live for HCM + Payroll. Adding Time & Attendance, Benefits, and Talent extends the timeline to 4–6 months. Cross-border deployments add 4–8 weeks for parallel US/Canada configuration.',
       },
     ]),
   ],
 };
 
 const modules = [
-  { name: 'Core HCM', icon: '👥', desc: 'Employee records, org structure, compensation, position management' },
-  { name: 'Workday Payroll', icon: '💰', desc: 'Canadian & US payroll, CPP/EI, ROEs, provincial tax compliance' },
-  { name: 'Recruiting', icon: '🎯', desc: 'Job requisitions, candidate workflow, offer management, onboarding' },
-  { name: 'Benefits Administration', icon: '🏥', desc: 'Benefit plans, open enrollment, provincial compliance' },
-  { name: 'Time Tracking', icon: '⏱️', desc: 'Time entry, overtime rules, absence management, scheduling' },
-  { name: 'Integrations', icon: '🔌', desc: 'EIBs, Core Connectors, REST/SOAP APIs, third-party connections' },
-  { name: 'Reporting & Analytics', icon: '📊', desc: 'Custom reports, dashboards, Prism Analytics, workforce insights' },
-  { name: 'Security & Compliance', icon: '🔒', desc: 'Role-based access, SoD controls, audit trails, data privacy' },
+  { name: 'ADP Workforce Now Payroll', icon: '💰', desc: 'Canadian & US payroll, CPP/EI, ROEs, T4/T4A, provincial tax compliance' },
+  { name: 'HR Management (HRMS)', icon: '👥', desc: 'Employee records, org structure, position management, lifecycle events' },
+  { name: 'Benefits Administration', icon: '🏥', desc: 'Plan setup, open enrollment, life events, carrier connections' },
+  { name: 'Time & Attendance', icon: '⏱️', desc: 'Time tracking, scheduling, overtime rules, absence management' },
+  { name: 'Talent Management', icon: '🎯', desc: 'Recruitment, performance, compensation, succession planning' },
+  { name: 'Onboarding', icon: '📝', desc: 'New hire workflows, document e-sign, task assignments, compliance forms' },
+  { name: 'Reporting & Analytics', icon: '📊', desc: 'Custom reports, dashboards, ADP DataCloud, workforce insights' },
+  { name: 'ADP Marketplace Integrations', icon: '🔌', desc: 'Third-party connectors, custom APIs, single sign-on, data feeds' },
 ];
 
 const phases = [
   { num: '01', title: 'Discovery & Scoping', desc: 'Requirements gathering, current-state documentation, gap analysis, and project charter sign-off.' },
-  { num: '02', title: 'Design & Configuration', desc: 'Prototype builds, tenant configuration, business process design workshops, and data mapping.' },
-  { num: '03', title: 'Testing & Validation', desc: 'Unit testing, integration testing, UAT facilitation, and defect tracking through resolution.' },
-  { num: '04', title: 'Data Migration', desc: 'Data cleansing, conversion workbooks, mock loads, and validation against source systems.' },
-  { num: '05', title: 'Training & Change Management', desc: 'End-user training (EN/FR), change impact assessments, communication plans, and readiness checks.' },
-  { num: '06', title: 'Go-Live & Hypercare', desc: 'Cutover execution, day-one support, issue triage, and knowledge transfer to internal teams.' },
+  { num: '02', title: 'Design & Configuration', desc: 'Tenant build, business process design workshops, payroll/benefits configuration, and pay rule mapping.' },
+  { num: '03', title: 'Testing & Validation', desc: 'Unit testing, parallel payrolls, UAT facilitation, and defect tracking through resolution.' },
+  { num: '04', title: 'Data Migration', desc: 'Data cleansing, ADP conversion templates, mock loads, and validation against legacy system reports.' },
+  { num: '05', title: 'Training & Change Management', desc: 'End-user training (EN/FR), manager self-service rollout, communication plans, and readiness checks.' },
+  { num: '06', title: 'Go-Live & Hypercare', desc: 'Cutover execution, first live payroll support, issue triage, and knowledge transfer to internal teams.' },
 ];
 
 const faqs = [
   {
-    q: 'What Workday modules do you specialize in?',
-    a: 'Core HCM, Payroll (Canadian & US), Recruiting, Benefits, Time Tracking, Absence Management, and Integrations. I have led full-cycle deployments from requirements through post-go-live support.',
+    q: 'What ADP Workforce Now modules do you specialize in?',
+    a: 'The full Workforce Now suite — Payroll (Canadian & US), HR Management, Benefits, Time & Attendance, Talent (Recruitment, Performance, Compensation), Onboarding, and ADP Marketplace integrations. I currently lead Center of Excellence implementations at ADP Canada.',
   },
   {
-    q: 'Do you handle Canadian payroll configuration in Workday?',
-    a: 'Yes — Canadian Workday Payroll is a specialized discipline. I have hands-on experience with CPP contributions, EI premiums, Record of Employment (ROE) generation, provincial tax tables, and Quebec QPIP requirements.',
+    q: 'Do you handle Canadian payroll configuration in ADP Workforce Now?',
+    a: 'Yes — Canadian Workforce Now Payroll is my home turf. CPP contributions, EI premiums, Record of Employment (ROE) generation, T4/T4A year-end, federal and provincial tax tables, Quebec QPIP and CSST, and multi-province configurations are all part of my standard delivery.',
   },
   {
-    q: 'Can you rescue a troubled Workday implementation?',
+    q: 'What about cross-border US/Canada implementations?',
+    a: 'Cross-border US/Canada deployments are my deepest specialty. I have led 50+ such projects from ADP\'s Center of Excellence with 100% on-time delivery. This includes US federal/state/local payroll tax, I-9 compliance, multi-state reciprocity, and dual-country tenant configurations.',
+  },
+  {
+    q: 'Can you rescue a troubled ADP Workforce Now implementation?',
     a: 'Yes. I can step into any phase of an in-flight implementation to assess status, identify root causes of delays or quality issues, and develop a recovery plan. This is one of the highest-value engagements I take on.',
   },
 ];
 
-export default function ServiceWorkday() {
+export default function ServiceADPWorkforceNow() {
   return (
     <>
       <SEO
-        title="Workday Implementation Specialist Canada — HCM & Payroll Expert | Karim Chaouki"
-        description="Senior Workday implementation manager for Canadian organizations. Specializing in Workday HCM, Canadian Payroll, Recruiting, Benefits, and Time Tracking. PMP Certified. Bilingual EN/FR. Available across Canada."
-        canonical="/services/workday-implementation-specialist"
+        title="ADP Workforce Now Implementation Specialist Canada — HCM & Payroll Expert | Karim Chaouki"
+        description="Senior ADP Workforce Now implementation consultant for Canadian and US organizations. Specializing in Workforce Now Payroll, HCM, Benefits, Time & Attendance, and Talent. PMP Certified. Bilingual EN/FR. Toronto, Canada."
+        canonical="/services/adp-workforce-now-implementation"
         schema={schema}
       />
       <Header />
@@ -86,23 +94,24 @@ export default function ServiceWorkday() {
               <ol className="flex items-center gap-2 text-sm text-blue-300">
                 <li><Link to="/" className="hover:text-white transition-colors">Home</Link></li>
                 <li aria-hidden="true" className="text-blue-500">›</li>
-                <li className="text-white font-medium">Workday Implementation</li>
+                <li className="text-white font-medium">ADP Workforce Now Implementation</li>
               </ol>
             </nav>
             <h1 className="text-4xl md:text-5xl font-bold mb-4 leading-tight">
-              Senior Workday Implementation Specialist — Canada
+              Senior ADP Workforce Now Implementation Specialist — Canada
             </h1>
             <p className="text-xl text-blue-200 max-w-2xl leading-relaxed mb-8">
-              Full-cycle Workday HCM, Payroll, and Benefits deployments for Canadian organizations.
-              From requirements through go-live — delivered on time, compliant with Canadian regulations,
-              and configured for your business.
+              Full-cycle ADP Workforce Now HCM, Payroll, Benefits, and Time deployments for Canadian and
+              cross-border US organizations. Delivered on time, compliant with Canadian and US regulations,
+              and configured for your business — by an ADP Center of Excellence consultant.
             </p>
             <div className="flex flex-wrap gap-4">
               <Link
                 to="/#contact"
+                data-testid="hero-cta-discuss-project"
                 className="bg-white text-blue-700 font-semibold px-6 py-3 rounded-lg hover:bg-blue-50 transition-colors"
               >
-                Discuss Your Workday Project →
+                Discuss Your Workforce Now Project →
               </Link>
             </div>
           </div>
@@ -113,31 +122,34 @@ export default function ServiceWorkday() {
           <div className="max-w-5xl mx-auto grid md:grid-cols-3 gap-12">
             <div className="md:col-span-2 prose max-w-none">
               <h2 className="text-3xl font-bold text-slate-900 mb-4">
-                Workday Implementation Management for Canadian Organizations
+                ADP Workforce Now Implementation for Canadian &amp; Cross-Border Organizations
               </h2>
               <p className="text-slate-600 leading-relaxed mb-4">
-                A Workday implementation is one of the most significant technology investments your
-                organization will make. The decisions made in the first eight weeks — scope, design,
-                data strategy, change management — determine whether your go-live is a success or a crisis.
+                An ADP Workforce Now implementation is one of the most consequential HR-technology investments
+                your organization will make. The decisions made in the first eight weeks — pay rule design,
+                benefit plan configuration, data strategy, change management — determine whether your first
+                live payroll is a success or a crisis.
               </p>
               <p className="text-slate-600 leading-relaxed mb-4">
-                As a <strong className="text-slate-800">senior Workday implementation specialist</strong>,
-                I bring project management discipline and deep functional knowledge to every phase of your
-                Workday journey. I've led complex multi-module deployments for Canadian financial institutions,
-                healthcare organizations, and public sector entities.
+                As a <strong className="text-slate-800">senior ADP Workforce Now implementation specialist</strong>{' '}
+                currently leading projects in ADP Canada&apos;s Center of Excellence, I bring project management
+                discipline and deep functional knowledge to every phase of your Workforce Now journey. I&apos;ve
+                delivered 50+ enterprise deployments across Canadian financial institutions, healthcare networks,
+                manufacturing, and cross-border US/Canada organizations — with a 100% on-time go-live record.
               </p>
               <p className="text-slate-600 leading-relaxed mb-8">
-                Canadian payroll configuration in Workday is significantly more complex than US payroll.
-                CPP contributions, EI premiums, Record of Employment (ROE) generation, provincial tax tables,
-                and Quebec's QPIP requirements demand a practitioner who has actually built and tested these
-                configurations — not someone learning them on your project's dime.
+                Canadian payroll in Workforce Now is meaningfully more complex than US-only deployments.
+                CPP and EI contributions, T4/T4A year-end, Record of Employment (ROE) generation, federal
+                and provincial tax tables, Quebec&apos;s QPIP and CSST, and multi-province pay rule design
+                demand a practitioner who has built and tested these configurations many times — not someone
+                learning them on your project&apos;s dime.
               </p>
 
               <blockquote className="border-l-4 border-blue-600 pl-6 py-2 bg-slate-50 rounded-r-lg my-8">
                 <p className="text-slate-700 italic text-lg leading-relaxed">
-                  "Karim led our Workday payroll implementation across four provinces. He knew the
-                  configuration details, anticipated compliance edge cases, and kept the project on
-                  track when scope changes threatened the timeline."
+                  &ldquo;Karim led our Workforce Now payroll implementation across four provinces.
+                  He knew the configuration details, anticipated compliance edge cases, and kept the
+                  project on track when scope changes threatened the timeline.&rdquo;
                 </p>
                 <cite className="text-slate-500 text-sm font-semibold not-italic mt-2 block">
                   — VP Human Resources · Canadian Financial Institution
@@ -150,7 +162,7 @@ export default function ServiceWorkday() {
               <div className="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm sticky top-24">
                 <h3 className="font-bold text-slate-900 mb-4">Engagement Models</h3>
                 {[
-                  { type: 'Project Manager', desc: 'End-to-end PM for your full Workday implementation' },
+                  { type: 'Project Manager', desc: 'End-to-end PM for your full Workforce Now implementation' },
                   { type: 'Functional Lead', desc: 'Drive specific module workstreams (Payroll, HCM, Benefits)' },
                   { type: 'Staff Augmentation', desc: 'Supplement your team during peak phases' },
                   { type: 'Implementation Rescue', desc: 'Assess and stabilize a troubled implementation' },
@@ -162,6 +174,7 @@ export default function ServiceWorkday() {
                 ))}
                 <Link
                   to="/#contact"
+                  data-testid="sidebar-cta-get-in-touch"
                   className="mt-6 block text-center bg-blue-700 text-white font-semibold px-4 py-3 rounded-lg hover:bg-blue-800 transition-colors"
                 >
                   Get in Touch →
@@ -184,7 +197,7 @@ export default function ServiceWorkday() {
           <div className="max-w-5xl mx-auto">
             <div className="text-center mb-12">
               <span className="inline-block bg-blue-100 text-blue-700 text-sm font-semibold px-4 py-1.5 rounded-full mb-3">
-                Workday Modules
+                Workforce Now Modules
               </span>
               <h2 className="text-3xl font-bold text-slate-900">Modules I Implement</h2>
             </div>
@@ -229,7 +242,7 @@ export default function ServiceWorkday() {
         <section className="py-16 px-6 bg-slate-50">
           <div className="max-w-3xl mx-auto">
             <h2 className="text-3xl font-bold text-slate-900 mb-8">
-              Common Questions About Workday Implementations in Canada
+              Common Questions About ADP Workforce Now Implementations
             </h2>
             <div className="space-y-2">
               {faqs.map((faq) => (
@@ -260,12 +273,13 @@ export default function ServiceWorkday() {
         {/* CTA */}
         <section className="bg-blue-700 py-16 px-6 text-center text-white">
           <div className="max-w-2xl mx-auto">
-            <h2 className="text-3xl font-bold mb-3">Planning a Workday Implementation in Canada?</h2>
+            <h2 className="text-3xl font-bold mb-3">Planning an ADP Workforce Now Implementation?</h2>
             <p className="text-blue-200 text-lg mb-8">
-              Let's discuss your timeline, scope, and how I can support your team from day one.
+              Let&apos;s discuss your timeline, scope, and how I can support your team from day one.
             </p>
             <Link
               to="/#contact"
+              data-testid="footer-cta-book-call"
               className="inline-block bg-white text-blue-700 font-bold px-8 py-4 rounded-xl hover:bg-blue-50 transition-colors text-lg"
             >
               Book a Free Discovery Call →

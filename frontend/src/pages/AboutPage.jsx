@@ -16,7 +16,7 @@ const schema = {
 
 const expertise = [
   { area: 'AML / Anti-Money Laundering', years: '10+ yrs', level: 95 },
-  { area: 'Workday HCM & Payroll', years: '8+ yrs', level: 90 },
+  { area: 'ADP Workforce Now HCM & Payroll', years: '8+ yrs', level: 90 },
   { area: 'Project Management (PMP)', years: '12+ yrs', level: 95 },
   { area: 'FINTRAC Regulatory Compliance', years: '8+ yrs', level: 88 },
   { area: 'Payroll Systems Implementation', years: '10+ yrs', level: 92 },
@@ -40,8 +40,8 @@ export default function AboutPage() {
   return (
     <>
       <SEO
-        title="About Karim Chaouki — AML, Workday & Payroll Implementation Specialist | Canada"
-        description="Learn about Karim Chaouki — Senior Implementation Manager with 12+ years in AML compliance, Workday HCM, and payroll system implementations for Canadian financial institutions. PMP Certified. Bilingual EN/FR."
+        title="About Karim Chaouki — AML, ADP Workforce Now & Payroll Implementation Consultant | Canada"
+        description="Learn about Karim Chaouki — Senior Implementation Consultant with 12+ years in AML compliance, ADP Workforce Now HCM, and payroll system implementations for Canadian financial institutions. PMP Certified. Bilingual EN/FR."
         canonical="/about"
         ogImage="https://karimchaouki.com/images/karim-chaouki.jpg"
         schema={schema}
@@ -65,7 +65,7 @@ export default function AboutPage() {
                   About Karim Chaouki
                 </h1>
                 <p className="text-xl text-blue-200 leading-relaxed mb-6">
-                  Senior Implementation Manager specializing in AML compliance, Workday HCM, and
+                  Senior Implementation Consultant specializing in AML compliance, ADP Workforce Now HCM, and
                   payroll systems for Canadian financial institutions. 12+ years delivering complex
                   projects that other teams couldn't finish.
                 </p>
@@ -79,7 +79,7 @@ export default function AboutPage() {
               <div className="flex justify-center md:justify-end">
                 <img
                   src="/images/karim-chaouki.jpg"
-                  alt="Karim Chaouki — Senior Implementation Manager, AML and Workday Specialist, Toronto Canada"
+                  alt="Karim Chaouki — Senior Implementation Consultant, AML and ADP Workforce Now Specialist, Toronto Canada"
                   className="w-48 h-48 md:w-56 md:h-56 rounded-2xl object-cover border-4 border-white/20 shadow-2xl"
                   width="224"
                   height="224"
@@ -224,7 +224,7 @@ export default function AboutPage() {
             <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
               {[
                 { title: 'AML Compliance', href: '/services/aml-consultant-canada', icon: '🛡️' },
-                { title: 'Workday Implementation', href: '/services/workday-implementation-specialist', icon: '⚙️' },
+                { title: 'ADP Workforce Now Implementation', href: '/services/adp-workforce-now-implementation', icon: '⚙️' },
                 { title: 'Payroll Systems PM', href: '/services/project-manager-payroll-systems', icon: '💰' },
                 { title: 'Bilingual Delivery', href: '/services/bilingual-implementation-manager', icon: '🌐' },
               ].map((s) => (
