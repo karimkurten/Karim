@@ -1,0 +1,45 @@
+[
+  {
+    "slug": "aml-compliance-canadian-financial-institutions",
+    "title": "AML Compliance for Canadian Financial Institutions — What FIs Get Wrong",
+    "excerpt": "Five common failures I see in AML program implementations — from FINTRAC reporting gaps to weak customer due diligence. A field guide for compliance officers and project managers at Canadian banks, credit unions, and fintechs.",
+    "publishedAt": "2026-03-15",
+    "readingTime": "6 min read",
+    "cover": "/images/karim-chaouki.jpg",
+    "tags": ["AML", "FINTRAC", "Compliance", "Canada"],
+    "linkedinUrl": "https://www.linkedin.com/in/karimchaouki/recent-activity/articles/",
+    "content": [
+      { "type": "p", "text": "Replace this placeholder with the first paragraph of your LinkedIn article. You can copy-paste directly from LinkedIn's article editor." },
+      { "type": "h2", "text": "Section heading" },
+      { "type": "p", "text": "Another paragraph of the article body. Keep paragraphs focused and under 4 sentences for readability." },
+      { "type": "ul", "items": ["Bullet one", "Bullet two", "Bullet three"] },
+      { "type": "p", "text": "Closing thought or call-to-action paragraph." }
+    ]
+  },
+  {
+    "slug": "cross-border-payroll-us-canada-common-mistakes",
+    "title": "Cross-Border Payroll US/Canada — 7 Mistakes That Derail Go-Lives",
+    "excerpt": "Multi-country ADP Workforce Now deployments fail at the same seven points every time. Here's what to watch for during scoping, configuration, and cutover — with examples from 50+ implementations.",
+    "publishedAt": "2026-02-20",
+    "readingTime": "8 min read",
+    "cover": "/images/karim-chaouki.jpg",
+    "tags": ["Payroll", "ADP Workforce Now", "Cross-Border", "Implementation"],
+    "linkedinUrl": "https://www.linkedin.com/in/karimchaouki/recent-activity/articles/",
+    "content": [
+      { "type": "p", "text": "Replace this placeholder with your actual article content from LinkedIn." }
+    ]
+  },
+  {
+    "slug": "workforce-now-implementation-methodology-canada",
+    "title": "An Implementation Methodology That Actually Hits Go-Live Dates",
+    "excerpt": "The six-phase methodology I use to deliver HCM implementations on time — refined over 50+ enterprise projects at ADP's Center of Excellence.",
+    "publishedAt": "2026-01-10",
+    "readingTime": "5 min read",
+    "cover": "/images/karim-chaouki.jpg",
+    "tags": ["Project Management", "HCM", "Methodology", "PMP"],
+    "linkedinUrl": "https://www.linkedin.com/in/karimchaouki/recent-activity/articles/",
+    "content": [
+      { "type": "p", "text": "Replace this placeholder with your actual article content from LinkedIn." }
+    ]
+  }
+]

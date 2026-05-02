@@ -20,6 +20,8 @@ import ServiceADPWorkforceNow from './pages/ServiceADPWorkforceNow';
 import ServicePayroll from './pages/ServicePayroll';
 import ServiceBilingual from './pages/ServiceBilingual';
 import AboutPage from './pages/AboutPage';
+import BlogIndex from './pages/BlogIndex';
+import BlogPost from './pages/BlogPost';
 
 const Portfolio = () => (
   <>
@@ -46,6 +48,8 @@ function App() {
           <Routes>
             <Route path="/" element={<Portfolio />} />
             <Route path="/about" element={<AboutPage />} />
+            <Route path="/blog" element={<BlogIndex />} />
+            <Route path="/blog/:slug" element={<BlogPost />} />
             <Route path="/services/aml-consultant-canada" element={<ServiceAML />} />
             <Route path="/services/adp-workforce-now-implementation" element={<ServiceADPWorkforceNow />} />
             <Route path="/services/project-manager-payroll-systems" element={<ServicePayroll />} />

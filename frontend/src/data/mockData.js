@@ -296,6 +296,7 @@ export const testimonials = [
 
 export const navLinks = [
   { label: "About", href: "#about" },
+  { label: "Blog", href: "/blog", route: true },
   { label: "Expertise", href: "#expertise" },
   { label: "Experience", href: "#experience" },
   { label: "Certifications", href: "#certifications" },
