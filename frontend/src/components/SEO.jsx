@@ -102,9 +102,9 @@ export const personSchema = {
   name: 'Karim Chaouki',
   url: SITE_URL,
   image: DEFAULT_IMAGE,
-  jobTitle: 'Senior Implementation Manager — AML, Workday & Payroll Systems',
+  jobTitle: 'AML and Workforce Now Implementation Consultant',
   description:
-    'Bilingual Senior Implementation Manager specializing in AML compliance, Workday HCM, and payroll system implementations for Canadian financial institutions.',
+    'Bilingual Senior Implementation Consultant specializing in AML compliance, ADP Workforce Now HCM, and payroll system implementations for Canadian financial institutions.',
   knowsLanguage: ['en', 'fr', 'ar'],
   areaServed: { '@type': 'Country', name: 'Canada' },
   sameAs: ['https://www.linkedin.com/in/karimchaouki'],
