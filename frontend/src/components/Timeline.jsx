@@ -31,8 +31,8 @@ const TimelineCard = ({ item }) => {
           {item.company} &middot; {item.subtitle}
         </p>
         <ul className="mt-4 space-y-2">
-          {item.achievements.map((a, j) => (
-            <li key={j} className="flex items-start gap-2 text-sm text-[#64748B]">
+          {item.achievements.map((a) => (
+            <li key={a} className="flex items-start gap-2 text-sm text-[#64748B]">
               <ChevronRight
                 size={14}
                 className="text-[#2B6CB0]/50 mt-0.5 flex-shrink-0"
@@ -164,7 +164,7 @@ const Timeline = () => {
         <div className="relative">
           {experience.map((item, i) => (
             <TimelineEntry
-              key={i}
+              key={`${item.company}-${item.period}-${item.role}`}
               item={item}
               index={i}
               isLast={i === experience.length - 1}

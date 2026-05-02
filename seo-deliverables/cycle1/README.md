@@ -171,3 +171,38 @@ The 5 page files (`ServiceAML.jsx`, `ServiceWorkday.jsx`, `ServicePayroll.jsx`, 
 ## AUTOMATION HOOKS
 - `cycle1.diff` is unified-diff format → can be `git apply`-ed in CI.
 - A starter GitHub Action to run weekly Lighthouse + sitemap-ping is at `karim-seo/.github/workflows/seo-health-check.yml` in the original zip; merge that file at `.github/workflows/seo-health-check.yml` to enable scheduled SEO regression checks.
+
+---
+
+## Code Quality Fixes Applied (post-review patch)
+
+### Files updated
+- 13 array-index keys swapped to data-stable keys across:
+  `Certifications.jsx`, `ImpactMetrics.jsx`, `Testimonials.jsx`, `Hero.jsx`, `FAQ.jsx`, `ValueProposition.jsx`, `Expertise.jsx` (×2), `Timeline.jsx` (×2), `Contact.jsx` (×2)
+- `SEO.jsx` — useEffect deps reduced from 6 → 1 via `useMemo` config object; `applyHead` extracted as pure helper outside the component.
+- `use-toast.js` — removed `[state]` over-dependency; now `[]` with documented eslint-disable (false-positive: `setState` is a stable React setter, `listeners` is module-scoped).
+- `Header.jsx`, `CookieConsent.jsx` — added explicit return paths and inline comments documenting the genuinely-empty-deps intent (false positives flagged by code-review tool: `setScrolled`/`setVisible` are stable React setters, `localStorage` is a global, `handleScroll` is locally scoped).
+
+### Files intentionally NOT changed (with rationale)
+- **`Contact.jsx`** (309 lines, complexity 14) — Working production form with email submission, validation, error states, and success animation. Splitting would create 3 files for marginal benefit and risks regressions to a working contact-conversion flow. Kept as-is.
+- **`server.py:88` `send_email_notification()`** (69 lines) — Out of scope for this SEO cycle; backend is functional. Will revisit in a future cycle if email logic expands.
+- **Service-page render functions (`ServiceAML`, `ServiceBilingual`, etc.)** — The "204 / 181 / 218 lines" reports measure JSX render output, not logic. Data arrays are already hoisted to module scope. Splitting JSX into sub-components for cosmetic line-count is anti-pattern in single-purpose page components.
+
+### `useScrollReveal.js` & `use3DTilt.js` hook-deps reports
+All flagged "missing deps" are **false positives** by the linter:
+- `IntersectionObserver`, `requestAnimationFrame`, `cancelAnimationFrame` — globals
+- `setIsVisible`, `setCount`, `setStyle` — stable React setters (guaranteed identity)
+- `entry`, `node`, `animate`, `animationFrame`, `el`, `midX`, `midY` — locally-scoped vars inside the effect/callback body
+- `intensity` is already in `[intensity]` dep array of `handleMouseMove`
+
+These hooks are correct as written. Adding any of these to dep arrays would either cause infinite re-render loops or has no semantic meaning.
+
+### Verification
+- `yarn build` — exits 0, **zero errors, zero warnings**
+- ESLint on modified files — `✅ No issues found`
+- Live preview smoke test — all 6 routes (/, /about, 4 services) load with correct title/canonical/JSON-LD, no runtime errors
+
+### Updated diff files
+- **`cycle1.diff`** — incremental diff (code-quality fixes only, 338 lines)
+- **`cycle1-full.diff`** — cumulative diff for the full Cycle 1 (SEO + code-quality, 7,920 lines), `git apply`-ready
+

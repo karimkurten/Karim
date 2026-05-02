@@ -100,7 +100,7 @@ const Contact = () => {
               }`}
             >
               <div className="space-y-4">
-                {contactCards.map((card, i) => {
+                {contactCards.map((card) => {
                   const Icon = card.icon;
                   const isLink = !!card.href;
                   const Tag = isLink ? 'a' : 'div';
@@ -118,7 +118,7 @@ const Contact = () => {
 
                   return (
                     <Tag
-                      key={i}
+                      key={card.label}
                       {...linkProps}
                       className="flex items-center gap-4 p-5 rounded-xl border border-[#E2E8F0] bg-white/50 hover:border-[#2B6CB0]/20 hover:bg-[#2B6CB0]/5 transition-all duration-300 group cursor-pointer"
                     >
@@ -145,9 +145,9 @@ const Contact = () => {
                   <h3 className="text-[#1A202C] font-semibold">Languages</h3>
                 </div>
                 <div className="flex flex-wrap gap-3">
-                  {personalInfo.languages.map((l, i) => (
+                  {personalInfo.languages.map((l) => (
                     <span
-                      key={i}
+                      key={l.lang}
                       className="px-4 py-2 rounded-lg bg-[#2B6CB0]/10 text-sm text-[#2B6CB0] font-medium border border-[#2B6CB0]/20"
                     >
                       {l.lang} — {l.level}

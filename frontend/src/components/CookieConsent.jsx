@@ -11,6 +11,8 @@ const CookieConsent = () => {
       const timer = setTimeout(() => setVisible(true), 1500);
       return () => clearTimeout(timer);
     }
+    return undefined;
+    // setVisible is a stable React setter; localStorage is a global.
   }, []);
 
   const handleAccept = () => {

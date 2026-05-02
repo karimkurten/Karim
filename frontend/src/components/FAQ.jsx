@@ -96,7 +96,7 @@ const FAQ = () => {
         <div className="mt-12 space-y-4">
           {faqData.map((item, i) => (
             <FAQItem
-              key={i}
+              key={item.question}
               item={item}
               index={i}
               isOpen={openIndex === i}

@@ -10,6 +10,7 @@ const Header = () => {
     const handleScroll = () => setScrolled(window.scrollY > 50);
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
+    // setScrolled is a stable React setter; no other external deps.
   }, []);
 
   const handleNavClick = (e, href) => {

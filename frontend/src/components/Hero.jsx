@@ -164,8 +164,8 @@ const Hero = () => {
               : 'opacity-0 translate-y-10'
           }`}
         >
-          {stats.map((stat, i) => (
-            <StatCounter key={i} {...stat} />
+          {stats.map((stat) => (
+            <StatCounter key={stat.label} {...stat} />
           ))}
         </div>
 

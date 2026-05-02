@@ -47,7 +47,7 @@ const Certifications = () => {
             const Icon = iconMap[cert.icon];
             return (
               <div
-                key={i}
+                key={cert.name}
                 className={`group relative p-6 rounded-2xl border border-[#E2E8F0] bg-white/50 hover:border-[#2B6CB0]/30 text-center transition-all duration-500 hover:-translate-y-1 hover:shadow-xl hover:shadow-[#2B6CB0]/5 ${
                   isVisible
                     ? 'opacity-100 translate-y-0'
@@ -86,7 +86,7 @@ const Certifications = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
             {education.map((edu, i) => (
               <div
-                key={i}
+                key={`${edu.school}-${edu.degree}`}
                 className={`p-6 rounded-2xl border border-[#E2E8F0] bg-white/30 hover:border-[#2B6CB0]/20 hover:bg-[#2B6CB0]/5 transition-all duration-500 ${
                   isVisible
                     ? 'opacity-100 translate-y-0'

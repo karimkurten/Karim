@@ -64,7 +64,7 @@ const ValueProposition = () => {
           {differentiators.map((item, i) => {
             const Icon = iconMap[item.icon];
             return (
-              <TiltCard key={i} index={i} isVisible={isVisible}>
+              <TiltCard key={item.title} index={i} isVisible={isVisible}>
                 <div className="w-12 h-12 rounded-xl bg-[#2B6CB0]/10 flex items-center justify-center mb-5 group-hover:bg-[#2B6CB0]/20 transition-colors duration-300">
                   <Icon size={24} className="text-[#2B6CB0]" />
                 </div>

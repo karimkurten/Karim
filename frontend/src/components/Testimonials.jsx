@@ -68,7 +68,7 @@ const Testimonials = () => {
         <div className="mt-16 grid grid-cols-1 md:grid-cols-2 gap-6 perspective-container">
           {displayed.map((item, i) => (
             <TestimonialCard
-              key={i}
+              key={`${item.name}-${item.company}`}
               item={item}
               index={i}
               isVisible={isVisible}

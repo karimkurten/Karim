@@ -54,7 +54,7 @@ const ImpactMetrics = () => {
           <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-5 perspective-container">
             {metrics.map((item, i) => (
               <MetricCard
-                key={i}
+                key={item.label}
                 item={item}
                 index={i}
                 isVisible={isVisible}
