@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" role="img" aria-label="Typical HCM implementation phase timeline showing sequencing and overlaps">
+  <rect x="0" y="0" width="1200" height="700" fill="#F4F6F8"/>
+  <rect x="16" y="16" width="1168" height="668" rx="16" fill="#FFFFFF"/>
+
+  <text x="60" y="66" font-size="26" font-weight="700" fill="#16294A">HCM Implementation Phase Timeline</text>
+  <text x="60" y="94" font-size="14" fill="#5A6C7D">Typical sequencing and overlaps of the eight phases — illustrative only; durations vary widely by scope.</text>
+
+  <!-- Gridlines -->
+  <g stroke="#E2E8F0" stroke-dasharray="5 5">
+    <line x1="475" y1="120" x2="475" y2="560"/>
+    <line x1="700" y1="120" x2="700" y2="560"/>
+    <line x1="925" y1="120" x2="925" y2="560"/>
+  </g>
+
+  <!-- Row 1: Plan -->
+  <text x="60" y="146" font-size="15" font-weight="700" fill="#16294A">1 · Plan</text>
+  <text x="60" y="166" font-size="12" fill="#5A6C7D">Charter, governance, scope</text>
+  <rect x="250" y="126" width="126" height="34" rx="17" fill="#1E3A5F"/>
+  <polygon points="376,143 388,155 376,167 364,155" fill="#E8A33D"/>
+
+  <!-- Row 2: Discover -->
+  <text x="60" y="202" font-size="15" font-weight="700" fill="#16294A">2 · Discover</text>
+  <text x="60" y="222" font-size="12" fill="#5A6C7D">Current state, requirements</text>
+  <rect x="304" y="182" width="189" height="34" rx="17" fill="#1E3A5F"/>
+  <polygon points="493,199 505,211 493,223 481,211" fill="#E8A33D"/>
+
+  <!-- Row 3: Design -->
+  <text x="60" y="258" font-size="15" font-weight="700" fill="#16294A">3 · Design</text>
+  <text x="60" y="278" font-size="12" fill="#5A6C7D">Future state, solution design</text>
+  <rect x="439" y="238" width="225" height="34" rx="17" fill="#1E3A5F"/>
+  <polygon points="664,255 676,267 664,279 652,267" fill="#E8A33D"/>
+
+  <!-- Row 4: Configure -->
+  <text x="60" y="314" font-size="15" font-weight="700" fill="#16294A">4 · Configure</text>
+  <text x="60" y="334" font-size="12" fill="#5A6C7D">Build, integrations, demos</text>
+  <rect x="610" y="294" width="270" height="34" rx="17" fill="#1E3A5F"/>
+  <polygon points="880,311 892,323 880,335 868,323" fill="#E8A33D"/>
+
+  <!-- Row 5: Migrate -->
+  <text x="60" y="370" font-size="15" font-weight="700" fill="#16294A">5 · Migrate</text>
+  <text x="60" y="390" font-size="12" fill="#5A6C7D">Extract, cleanse, load, reconcile</text>
+  <rect x="718" y="350" width="288" height="34" rx="17" fill="#1E3A5F"/>
+  <polygon points="1006,367 1018,379 1006,391 994,379" fill="#E8A33D"/>
+
+  <!-- Row 6: Test -->
+  <text x="60" y="426" font-size="15" font-weight="700" fill="#16294A">6 · Test</text>
+  <text x="60" y="446" font-size="12" fill="#5A6C7D">System, integration, UAT, parallel</text>
+  <rect x="844" y="406" width="216" height="34" rx="17" fill="#1E3A5F"/>
+  <polygon points="1060,423 1072,435 1060,447 1048,435" fill="#E8A33D"/>
+
+  <!-- Row 7: Train -->
+  <text x="60" y="482" font-size="15" font-weight="700" fill="#16294A">7 · Train</text>
+  <text x="60" y="502" font-size="12" fill="#5A6C7D">Role-based enablement</text>
+  <rect x="970" y="462" width="135" height="34" rx="17" fill="#1E3A5F"/>
+  <polygon points="1105,479 1117,491 1105,503 1093,491" fill="#E8A33D"/>
+
+  <!-- Row 8: Deploy -->
+  <text x="60" y="538" font-size="15" font-weight="700" fill="#16294A">8 · Deploy</text>
+  <text x="60" y="558" font-size="12" fill="#5A6C7D">Cutover, go-live, hypercare</text>
+  <rect x="1060" y="518" width="90" height="34" rx="17" fill="#1E3A5F"/>
+  <polygon points="1150,535 1162,547 1150,559 1138,547" fill="#E8A33D"/>
+
+  <!-- Legend: phase gates -->
+  <text x="60" y="596" font-size="13" font-weight="700" fill="#16294A">Phase gates (amber markers):</text>
+  <g font-size="12" fill="#33475B">
+    <text x="60" y="620">1 — Charter signed, plan baselined</text>
+    <text x="60" y="644">2 — Requirements signed off</text>
+    <text x="330" y="620">3 — Design signed off</text>
+    <text x="330" y="644">4 — Configuration reviewed</text>
+    <text x="600" y="620">5 — Mock load reconciled</text>
+    <text x="600" y="644">6 — UAT signed, criticals at zero</text>
+    <text x="870" y="620">7 — Training targets met</text>
+    <text x="870" y="644">8 — Go / no-go</text>
+  </g>
+
+  <text x="60" y="672" font-size="12" font-style="italic" fill="#5A6C7D">A gate that cannot be passed honestly is a scheduling problem — never a reason to skip it.</text>
+</svg>
