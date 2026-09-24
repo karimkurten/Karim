@@ -2,6 +2,7 @@ import React from 'react';
 import { useParams, Link, Navigate } from 'react-router-dom';
 import Header from '../components/Header';
 import SEO, { buildBreadcrumb } from '../components/SEO';
+import { InteractiveBlock, INTERACTIVE_TYPES } from '../components/InteractiveWidgets';
 import posts from '../data/blogPosts.json';
 import { Calendar, Clock, ArrowLeft, ExternalLink, Tag } from 'lucide-react';
 
@@ -69,6 +70,9 @@ const ContentBlock = ({ block }) => {
         )}
       </figure>
     );
+  }
+  if (INTERACTIVE_TYPES.includes(block.type)) {
+    return <InteractiveBlock block={block} />;
   }
   return null;
 };
