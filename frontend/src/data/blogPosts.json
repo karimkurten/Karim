@@ -1,5 +1,242 @@
 [
   {
+    "slug": "discovery-workshops-guide",
+    "title": "Discovery Workshops: How to Run Them for HCM Implementations",
+    "excerpt": "Plan and facilitate discovery workshops for HCM implementations: participants, sample agendas, facilitation techniques, and the mistakes that cost projects weeks.",
+    "publishedAt": "2026-09-24",
+    "readingTime": "7 min read",
+    "cover": "/images/blog/discovery-workshops-guide-cover.webp",
+    "tags": [
+      "HCM",
+      "Discovery",
+      "Workshops"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "Interviews collect opinions. Workshops collect decisions. That distinction is why discovery workshops — not one-on-one interviews, not emailed questionnaires — are the backbone of requirements gathering in enterprise HCM implementations."
+      },
+      {
+        "type": "p",
+        "text": "A discovery workshop brings the people who own, operate, and are governed by an HR process into one room, physical or virtual, with a facilitator, a fixed agenda, and one job: agree on how the process works today and what the new system must do. Done well, a workshop series produces the current-state maps, the decision log, and the raw requirements that feed fit-gap analysis and solution design. Done badly, it produces three weeks of meetings and a document nobody trusts."
+      },
+      {
+        "type": "p",
+        "text": "Here is how to run them well."
+      },
+      {
+        "type": "img",
+        "src": "/images/blog/discovery-workshops-guide-cover.webp",
+        "alt": "Facilitator leading an HCM discovery workshop with process flow mapping on a whiteboard",
+        "caption": "Discovery workshops — not interviews — are where implementations are won or lost."
+      },
+      {
+        "type": "h2",
+        "text": "What a Discovery Workshop Actually Is"
+      },
+      {
+        "type": "p",
+        "text": "A discovery workshop is a facilitated working session with three properties: the right people are present, the agenda is fixed in advance, and the session ends with captured decisions — not just notes. It is not a demo, not a status meeting, and not a brainstorming session. Every workshop should answer specific questions: Who approves a leave request, and where can it be delegated? Which employee groups are exempt from overtime? What happens when a timesheet is submitted late?"
+      },
+      {
+        "type": "p",
+        "text": "Workshops beat interviews for HCM discovery because group dynamics surface contradictions that one-on-ones miss. In an interview, payroll tells you overtime is calculated weekly. In a workshop, the plant supervisor corrects them: \"Weekly for office staff — the warehouse is biweekly.\" That contradiction, caught in week three instead of in UAT, is the entire return on investment of the workshop format."
+      },
+      {
+        "type": "h2",
+        "text": "Prepare Before Anyone Enters the Room"
+      },
+      {
+        "type": "p",
+        "text": "Most bad workshops are lost in preparation, not facilitation."
+      },
+      {
+        "type": "ul",
+        "items": [
+          "Invite the people who know the exceptions. For each process area, you need the process owner (who signs off), the operators (who do the work daily), a compliance or legal contact for jurisdiction-specific rules, and IT for integrations and security. Managers alone are not enough — the people processing payroll adjustments know the edge cases their manager has never seen. Confirm attendance the day before; a workshop without the payroll lead is a workshop you will repeat.",
+          "Send pre-reads. A one-page brief per workshop: the process areas in scope, the questions to be answered, and any current-state documentation you already have. Ask participants to bring real artifacts — a redacted pay stub with an unusual deduction, the spreadsheet used for manual adjustments. Real examples beat abstract discussion every time.",
+          "Build the agenda with timings. A typical half-day workshop agenda:"
+        ]
+      },
+      {
+        "type": "ul",
+        "items": [
+          "Current-state walkthrough (60 min) — Agree on how the process works today",
+          "Pain points and workarounds (30 min) — Capture what must improve",
+          "Future-state needs (60 min) — Define what the new system must do",
+          "Decisions and parking lot (30 min) — Record decisions, defer the rest"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Timebox ruthlessly. A workshop that runs over teaches participants that the schedule is decorative."
+      },
+      {
+        "type": "img",
+        "src": "/images/blog/discovery-workshops-guide-1.svg",
+        "alt": "Half-day discovery workshop agenda with four timeboxed blocks",
+        "caption": "A typical half-day workshop agenda — timeboxed blocks keep discovery on track."
+      },
+      {
+        "type": "h2",
+        "text": "Structure the Series by Process Area"
+      },
+      {
+        "type": "p",
+        "text": "Run workshops by process area, not by org chart: payroll, time and attendance, benefits, core HR, recruiting, integrations. Each area gets its own session with its own experts. Cross-cutting topics — approval routing, security roles, reporting — get a dedicated session once the areas are mapped, because you cannot design enterprise-wide approval routing before you understand each area's needs."
+      },
+      {
+        "type": "p",
+        "text": "Sequence matters. Start with core HR and payroll — they carry the most compliance risk and the most integration dependencies. A practical order:"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "1. Core HR (employee data, org structure)",
+          "2. Payroll (pay rules, deductions, compliance)",
+          "3. Time and attendance",
+          "4. Benefits and leave",
+          "5. Talent modules (recruiting, performance)",
+          "6. Integrations and reporting"
+        ]
+      },
+      {
+        "type": "img",
+        "src": "/images/blog/discovery-workshops-guide-2.svg",
+        "alt": "Workshop series sequence from core HR through integrations and reporting",
+        "caption": "Sequence the workshop series by process area, starting with core HR and payroll."
+      },
+      {
+        "type": "p",
+        "text": "For cross-border implementations, run jurisdiction-specific breakouts. Ontario overtime rules (overtime after 44 hours per week under provincial employment standards) and US federal rules (overtime after 40 hours under the FLSA) should not be designed in the same conversation — separate the sessions, then reconcile the shared processes."
+      },
+      {
+        "type": "h2",
+        "text": "Facilitation Techniques That Surface the Truth"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "Ask for the exception, not the rule. \"How does overtime work?\" gets you the policy. \"Tell me about the last overtime dispute\" gets you the reality. Every process has a documented version and an operated version; your job is to capture the operated one.",
+          "Make disagreement visible. When two participants contradict each other, stop and resolve it in the room. Write both versions on the board, ask who can verify, and record the decision with a named owner. Unresolved contradictions become defects — a decision log entry today is a defect avoided in testing.",
+          "Protect the quiet voices. The payroll specialist who has processed adjustments for twelve years often says the least and knows the most. Direct questions to individuals by name: \"Does that match what you see in the biweekly run?\" Round-robin check-ins at the end of each block catch what group discussion misses.",
+          "Capture decisions in real time. Assign a dedicated scribe — never the facilitator. Decisions, open items, and owners go into a decision log during the session, and the log is circulated within 24 hours while memories are fresh. \"We agreed\" without a written record is a future argument."
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Handle the Difficult Dynamics"
+      },
+      {
+        "type": "p",
+        "text": "Every workshop series hits the same four dynamics. Plan for them:"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "The dominant voice. One senior participant answers every question. Counter it structurally: go around the table, collect written input before discussion, and break into small groups for detailed topics.",
+          "The scope pusher. \"While we're at it, could the system also…\" Park it visibly in the parking lot with an owner and a date for evaluation — never debate scope inside a discovery workshop.",
+          "The absent owner. If a required decision-maker cannot attend, do not run the workshop without a delegated decision-maker. Reschedule. A workshop that cannot make decisions is an expensive interview.",
+          "The solutioneer. Participants who jump to system design (\"just add a field for that\") before the requirement is understood. Redirect firmly: \"Let's capture the need first — design comes later.\""
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Outputs: What \"Done\" Looks Like"
+      },
+      {
+        "type": "p",
+        "text": "A workshop is not done when the meeting ends. It is done when these exist:"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "Current-state process map for the area, agreed by participants",
+          "Decision log entries with named owners and dates",
+          "Draft requirements with unique IDs, ready for fit-gap analysis",
+          "Parking lot items with owners and follow-up dates",
+          "Notes circulated within 24 hours, with a 48-hour correction window"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Feed the draft requirements into fit-gap analysis while the workshop context is fresh — the same week, not the next month."
+      },
+      {
+        "type": "h2",
+        "text": "Common Mistakes"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "1. Workshops without decision-makers. If nobody in the room can decide, you have a discussion group, not a workshop.",
+          "2. Mixing discovery and design. Capturing \"what we need\" and debating \"how the system will do it\" in the same session produces neither good requirements nor good design.",
+          "3. No scribe. The facilitator cannot facilitate and capture at the same time. One of the two jobs will fail.",
+          "4. Letting the parking lot become a graveyard. Every parked item needs an owner and a date, or it resurfaces as a surprise in UAT.",
+          "5. Skipping the 24-hour notes. Memories decay fast; uncirculated workshops get re-litigated."
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Key Takeaways"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "Workshops beat interviews because group dynamics surface contradictions early, when they are cheap to resolve.",
+          "Preparation — the right people, pre-reads, a timed agenda — determines the outcome more than facilitation skill.",
+          "Structure the series by process area; separate jurisdiction-specific sessions for cross-border rules.",
+          "Capture decisions in real time with a dedicated scribe and a decision log.",
+          "A workshop is done when maps, decisions, and draft requirements exist — not when the meeting ends."
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "FAQ"
+      },
+      {
+        "type": "h3",
+        "text": "What is a discovery workshop in an HCM implementation?"
+      },
+      {
+        "type": "p",
+        "text": "A facilitated working session where process owners, operators, compliance, and IT agree on how HR processes work today and what the new system must do — producing current-state maps, decisions, and draft requirements."
+      },
+      {
+        "type": "h3",
+        "text": "Who should attend HCM discovery workshops?"
+      },
+      {
+        "type": "p",
+        "text": "Process owners who can sign off, the operators who do the work daily, compliance or legal for jurisdiction rules, and IT for integrations and security. Workshops without decision-makers should be rescheduled."
+      },
+      {
+        "type": "h3",
+        "text": "How long should a discovery workshop be?"
+      },
+      {
+        "type": "p",
+        "text": "Half-day sessions (3–4 hours) per process area work best — long enough for depth, short enough to hold attention. Full-day workshops see quality collapse after lunch."
+      },
+      {
+        "type": "h3",
+        "text": "What is the difference between discovery workshops and requirements gathering?"
+      },
+      {
+        "type": "p",
+        "text": "Workshops are the primary technique within requirements gathering: the sessions where requirements are surfaced, debated, and agreed. Requirements gathering also includes document review, stakeholder interviews, and fit-gap analysis."
+      },
+      {
+        "type": "h2",
+        "text": "Next Steps"
+      },
+      {
+        "type": "p",
+        "text": "Continue to Requirements Gathering for HCM Implementation, Current-State vs Future-State Process Mapping, Fit-Gap Analysis in HCM Projects, or contact Karim."
+      }
+    ]
+  },
+  {
     "slug": "complete-guide-hcm-implementation",
     "title": "The Complete Guide to HCM Implementation",
     "excerpt": "The definitive guide to HCM implementation: phases, methodology, data migration, testing, UAT, go-live, risks, and templates — from a certified implementation practitioner.",
