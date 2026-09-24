@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 560" font-family="-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif">
+  <defs>
+    <linearGradient id="navy" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#274a76"/><stop offset="1" stop-color="#16294A"/>
+    </linearGradient>
+    <linearGradient id="amber" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f5b942"/><stop offset="1" stop-color="#dd8f1c"/>
+    </linearGradient>
+    <linearGradient id="panel" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#eef2f7"/>
+    </linearGradient>
+    <linearGradient id="lane" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1E3A5F"/><stop offset="1" stop-color="#142c4c"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="3" stdDeviation="6" flood-color="#16294A" flood-opacity="0.28"/>
+    </filter>
+  </defs>
+  <rect x="0" y="0" width="960" height="560" rx="14" fill="url(#panel)"/>
+  <text x="30" y="44" font-size="22" font-weight="700" fill="#16294A">The Process-Mapping Journey</text>
+  <text x="30" y="66" font-size="13" fill="#5b6478">From evidence to design: how current-state maps become the future state</text>
+
+  <!-- Stage cards -->
+  <g filter="url(#shadow)">
+    <rect x="30" y="95" width="272" height="380" rx="12" fill="url(#navy)"/>
+    <rect x="30" y="95" width="272" height="52" rx="12" fill="#0f1f3a" opacity="0.55"/>
+    <rect x="30" y="135" width="272" height="12" fill="#0f1f3a" opacity="0.55"/>
+    <text x="166" y="128" text-anchor="middle" font-size="14" font-weight="700" fill="#ffffff">1 · CAPTURE</text>
+    <text x="166" y="180" text-anchor="middle" font-size="16" font-weight="700" fill="#f5b942">Current State</text>
+    <text x="166" y="204" text-anchor="middle" font-size="12" fill="#c9d3e6">as-is · how work gets done today</text>
+  </g>
+  <g filter="url(#shadow)">
+    <rect x="344" y="95" width="272" height="380" rx="12" fill="url(#amber)"/>
+    <text x="480" y="128" text-anchor="middle" font-size="14" font-weight="700" fill="#16294A">2 · ANALYZE</text>
+    <text x="480" y="180" text-anchor="middle" font-size="16" font-weight="700" fill="#16294A">Challenge &amp; Design</text>
+    <text x="480" y="204" text-anchor="middle" font-size="12" fill="#5a3d0c">question every step · fit-gap</text>
+  </g>
+  <g filter="url(#shadow)">
+    <rect x="658" y="95" width="272" height="380" rx="12" fill="url(#navy)"/>
+    <rect x="658" y="95" width="272" height="52" rx="12" fill="#0f1f3a" opacity="0.55"/>
+    <rect x="658" y="135" width="272" height="12" fill="#0f1f3a" opacity="0.55"/>
+    <text x="794" y="128" text-anchor="middle" font-size="14" font-weight="700" fill="#ffffff">3 · BUILD</text>
+    <text x="794" y="180" text-anchor="middle" font-size="16" font-weight="700" fill="#f5b942">Future State</text>
+    <text x="794" y="204" text-anchor="middle" font-size="12" fill="#c9d3e6">to-be · the design the team builds</text>
+  </g>
+
+  <!-- Bullets column 1 -->
+  <g font-size="12.5" fill="#e8edf5">
+    <circle cx="52" cy="238" r="4" fill="#f5b942"/><text x="66" y="242">Walk processes end to end</text>
+    <circle cx="52" cy="268" r="4" fill="#f5b942"/><text x="66" y="272">Capture workarounds &amp; shadow steps</text>
+    <circle cx="52" cy="298" r="4" fill="#f5b942"/><text x="66" y="302">Note every handoff &amp; wait</text>
+    <circle cx="52" cy="328" r="4" fill="#f5b942"/><text x="66" y="332">Operators in the room, not just managers</text>
+    <circle cx="52" cy="368" r="4" fill="#f5b942"/><text x="66" y="372">Outcome: evidence of pain points</text>
+  </g>
+  <!-- Bullets column 2 -->
+  <g font-size="12.5" fill="#16294A">
+    <circle cx="366" cy="238" r="4" fill="#16294A"/><text x="380" y="242">“Pave the cow path” test</text>
+    <circle cx="366" cy="268" r="4" fill="#16294A"/><text x="380" y="272">Keep compliance-bound steps</text>
+    <circle cx="366" cy="298" r="4" fill="#16294A"/><text x="380" y="302">Challenge habit-bound steps</text>
+    <circle cx="366" cy="328" r="4" fill="#16294A"/><text x="380" y="332">Fit-gap: adopt vs. adapt vs. build</text>
+    <circle cx="366" cy="368" r="4" fill="#16294A"/><text x="380" y="372">Outcome: signed design decisions</text>
+  </g>
+  <!-- Bullets column 3 -->
+  <g font-size="12.5" fill="#e8edf5">
+    <circle cx="680" cy="238" r="4" fill="#f5b942"/><text x="694" y="242">Swimlanes: who does what</text>
+    <circle cx="680" cy="268" r="4" fill="#f5b942"/><text x="694" y="272">Named decisions &amp; exception paths</text>
+    <circle cx="680" cy="298" r="4" fill="#f5b942"/><text x="694" y="302">Controls marked for audit</text>
+    <circle cx="680" cy="328" r="4" fill="#f5b942"/><text x="694" y="332">System vs. human actions separated</text>
+    <circle cx="680" cy="368" r="4" fill="#f5b942"/><text x="694" y="372">Outcome: the build &amp; test reference</text>
+  </g>
+
+  <!-- Arrows between stages -->
+  <g fill="#E8A33D">
+    <path d="M302 270 l34 0 m-10 -10 l10 10 l-10 10" stroke="#E8A33D" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M616 270 l34 0 m-10 -10 l10 10 l-10 10" stroke="#E8A33D" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <text x="318" y="296" text-anchor="middle" font-size="11" font-weight="700" fill="#16294A">sign-off</text>
+  <text x="632" y="296" text-anchor="middle" font-size="11" font-weight="700" fill="#16294A">design</text>
+
+  <!-- Reuse ribbon -->
+  <g filter="url(#shadow)">
+    <rect x="30" y="495" width="900" height="42" rx="10" fill="#ffffff" stroke="#e3e8f0"/>
+    <text x="52" y="522" font-size="12.5" fill="#16294A"><tspan font-weight="700">Reuse the maps in every phase:</tspan>  configuration · data migration · UAT scripts · training · hypercare</text>
+    <circle cx="886" cy="516" r="13" fill="url(#amber)"/><text x="886" y="521" text-anchor="middle" font-size="14" fill="#16294A">↻</text>
+  </g>
+</svg>
