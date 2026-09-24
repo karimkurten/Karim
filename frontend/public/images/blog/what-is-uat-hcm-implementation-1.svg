@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 400" font-family="-apple-system, 'Segoe UI', Inter, Helvetica, Arial, sans-serif" role="img" aria-label="UAT process flow: plan, prepare, execute, defect triage, and sign-off">
+  <defs>
+    <marker id="uat-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#1E3A5F"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="1200" height="400" rx="24" fill="#F4F6F8"/>
+
+  <text x="40" y="56" font-size="24" font-weight="700" fill="#16294A">The UAT Cycle: From Planning to Sign-Off</text>
+  <text x="40" y="82" font-size="14" fill="#5A6B7C">The five phases business users and the project team work through before go-live</text>
+
+  <!-- Step 1 -->
+  <g>
+    <rect x="40" y="110" width="188" height="200" rx="14" fill="#FFFFFF"/>
+    <circle cx="134" cy="152" r="21" fill="#1E3A5F"/>
+    <text x="134" y="160" font-size="19" font-weight="700" fill="#FFFFFF" text-anchor="middle">1</text>
+    <text x="134" y="196" font-size="16" font-weight="700" fill="#16294A" text-anchor="middle">Plan</text>
+    <text x="134" y="222" font-size="12.5" fill="#5A6B7C" text-anchor="middle">Scope, schedule,</text>
+    <text x="134" y="242" font-size="12.5" fill="#5A6B7C" text-anchor="middle">and business testers</text>
+  </g>
+
+  <line x1="233" y1="210" x2="268" y2="210" stroke="#1E3A5F" stroke-width="2.5" marker-end="url(#uat-arrow)"/>
+
+  <!-- Step 2 -->
+  <g>
+    <rect x="273" y="110" width="188" height="200" rx="14" fill="#FFFFFF"/>
+    <circle cx="367" cy="152" r="21" fill="#1E3A5F"/>
+    <text x="367" y="160" font-size="19" font-weight="700" fill="#FFFFFF" text-anchor="middle">2</text>
+    <text x="367" y="196" font-size="16" font-weight="700" fill="#16294A" text-anchor="middle">Prepare</text>
+    <text x="367" y="222" font-size="12.5" fill="#5A6B7C" text-anchor="middle">Scripts with expected</text>
+    <text x="367" y="242" font-size="12.5" fill="#5A6B7C" text-anchor="middle">results</text>
+  </g>
+
+  <line x1="466" y1="210" x2="501" y2="210" stroke="#1E3A5F" stroke-width="2.5" marker-end="url(#uat-arrow)"/>
+
+  <!-- Step 3 -->
+  <g>
+    <rect x="506" y="110" width="188" height="200" rx="14" fill="#FFFFFF"/>
+    <circle cx="600" cy="152" r="21" fill="#E8A33D"/>
+    <text x="600" y="160" font-size="19" font-weight="700" fill="#16294A" text-anchor="middle">3</text>
+    <text x="600" y="196" font-size="16" font-weight="700" fill="#16294A" text-anchor="middle">Execute</text>
+    <text x="600" y="222" font-size="12.5" fill="#5A6B7C" text-anchor="middle">Users run real-world</text>
+    <text x="600" y="242" font-size="12.5" fill="#5A6B7C" text-anchor="middle">scenarios end to end</text>
+  </g>
+
+  <line x1="699" y1="210" x2="734" y2="210" stroke="#1E3A5F" stroke-width="2.5" marker-end="url(#uat-arrow)"/>
+
+  <!-- Step 4 -->
+  <g>
+    <rect x="739" y="110" width="188" height="200" rx="14" fill="#FFFFFF"/>
+    <circle cx="833" cy="152" r="21" fill="#1E3A5F"/>
+    <text x="833" y="160" font-size="19" font-weight="700" fill="#FFFFFF" text-anchor="middle">4</text>
+    <text x="833" y="196" font-size="16" font-weight="700" fill="#16294A" text-anchor="middle">Triage Defects</text>
+    <text x="833" y="222" font-size="12.5" fill="#5A6B7C" text-anchor="middle">Severity, fix,</text>
+    <text x="833" y="242" font-size="12.5" fill="#5A6B7C" text-anchor="middle">retest, repeat</text>
+  </g>
+
+  <line x1="932" y1="210" x2="967" y2="210" stroke="#1E3A5F" stroke-width="2.5" marker-end="url(#uat-arrow)"/>
+
+  <!-- Step 5 -->
+  <g>
+    <rect x="972" y="110" width="188" height="200" rx="14" fill="#FFFFFF"/>
+    <circle cx="1066" cy="152" r="21" fill="#E8A33D"/>
+    <text x="1066" y="160" font-size="19" font-weight="700" fill="#16294A" text-anchor="middle">5</text>
+    <text x="1066" y="196" font-size="16" font-weight="700" fill="#16294A" text-anchor="middle">Sign-Off</text>
+    <text x="1066" y="222" font-size="12.5" fill="#5A6B7C" text-anchor="middle">Written decision from</text>
+    <text x="1066" y="242" font-size="12.5" fill="#5A6B7C" text-anchor="middle">process owners</text>
+  </g>
+
+  <text x="600" y="356" font-size="13" font-style="italic" fill="#5A6B7C" text-anchor="middle">UAT cannot start until system testing is genuinely complete &#8212; it is the last meaningful gate before go-live.</text>
+</svg>
