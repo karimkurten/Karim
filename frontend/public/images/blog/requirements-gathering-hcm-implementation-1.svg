@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 640" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" role="img" aria-label="Six-step requirements gathering process flow for HCM implementation">
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+      <polygon points="0 0, 10 4, 0 8" fill="#E8A33D"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="1200" height="640" rx="24" fill="#F4F6F8"/>
+  <text x="600" y="58" text-anchor="middle" font-size="30" font-weight="700" fill="#16294A">Requirements Gathering: 6-Step Flow</text>
+
+  <!-- Row 1: steps 1-3 -->
+  <!-- Step 1 -->
+  <rect x="60" y="100" width="320" height="150" rx="16" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="2"/>
+  <circle cx="104" cy="140" r="24" fill="#1E3A5F"/>
+  <text x="104" y="148" text-anchor="middle" font-size="22" font-weight="700" fill="#FFFFFF">1</text>
+  <text x="140" y="149" font-size="20" font-weight="700" fill="#16294A">Stakeholders</text>
+  <text x="88" y="196" font-size="15" fill="#5B6B7F">Map process owners,</text>
+  <text x="88" y="220" font-size="15" fill="#5B6B7F">end users, compliance, IT</text>
+
+  <!-- Step 2 -->
+  <rect x="440" y="100" width="320" height="150" rx="16" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="2"/>
+  <circle cx="484" cy="140" r="24" fill="#1E3A5F"/>
+  <text x="484" y="148" text-anchor="middle" font-size="22" font-weight="700" fill="#FFFFFF">2</text>
+  <text x="520" y="149" font-size="20" font-weight="700" fill="#16294A">Current State</text>
+  <text x="468" y="196" font-size="15" fill="#5B6B7F">Capture processes,</text>
+  <text x="468" y="220" font-size="15" fill="#5B6B7F">pain points, workarounds</text>
+
+  <!-- Step 3 -->
+  <rect x="820" y="100" width="320" height="150" rx="16" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="2"/>
+  <circle cx="864" cy="140" r="24" fill="#1E3A5F"/>
+  <text x="864" y="148" text-anchor="middle" font-size="22" font-weight="700" fill="#FFFFFF">3</text>
+  <text x="900" y="149" font-size="20" font-weight="700" fill="#16294A">Workshops</text>
+  <text x="848" y="196" font-size="15" fill="#5B6B7F">By process area;</text>
+  <text x="848" y="220" font-size="15" fill="#5B6B7F">timeboxed, with a scribe</text>
+
+  <!-- arrows row 1 -->
+  <line x1="382" y1="175" x2="434" y2="175" stroke="#E8A33D" stroke-width="4" marker-end="url(#arrowhead)"/>
+  <line x1="762" y1="175" x2="814" y2="175" stroke="#E8A33D" stroke-width="4" marker-end="url(#arrowhead)"/>
+
+  <!-- down arrow to row 2 -->
+  <line x1="980" y1="252" x2="980" y2="368" stroke="#E8A33D" stroke-width="4" marker-end="url(#arrowhead)"/>
+
+  <!-- Row 2 (snake flow, right to left): steps 4-6 -->
+  <!-- Step 4 -->
+  <rect x="820" y="380" width="320" height="150" rx="16" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="2"/>
+  <circle cx="864" cy="420" r="24" fill="#1E3A5F"/>
+  <text x="864" y="428" text-anchor="middle" font-size="22" font-weight="700" fill="#FFFFFF">4</text>
+  <text x="900" y="429" font-size="20" font-weight="700" fill="#16294A">Requirements</text>
+  <text x="848" y="476" font-size="15" fill="#5B6B7F">Unique ID, precise rules,</text>
+  <text x="848" y="500" font-size="15" fill="#5B6B7F">acceptance criteria</text>
+
+  <!-- Step 5 -->
+  <rect x="440" y="380" width="320" height="150" rx="16" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="2"/>
+  <circle cx="484" cy="420" r="24" fill="#1E3A5F"/>
+  <text x="484" y="428" text-anchor="middle" font-size="22" font-weight="700" fill="#FFFFFF">5</text>
+  <text x="520" y="429" font-size="20" font-weight="700" fill="#16294A">Fit-Gap Analysis</text>
+  <text x="468" y="476" font-size="15" fill="#5B6B7F">Classify each requirement:</text>
+  <text x="468" y="500" font-size="15" fill="#5B6B7F">fit / gap / custom</text>
+
+  <!-- Step 6 -->
+  <rect x="60" y="380" width="320" height="150" rx="16" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="2"/>
+  <circle cx="104" cy="420" r="24" fill="#E8A33D"/>
+  <text x="104" y="428" text-anchor="middle" font-size="22" font-weight="700" fill="#16294A">6</text>
+  <text x="140" y="429" font-size="20" font-weight="700" fill="#16294A">Sign-Off</text>
+  <text x="88" y="476" font-size="15" fill="#5B6B7F">Written sign-off; changes</text>
+  <text x="88" y="500" font-size="15" fill="#5B6B7F">go through change control</text>
+
+  <!-- arrows row 2 (pointing left) -->
+  <line x1="818" y1="455" x2="766" y2="455" stroke="#E8A33D" stroke-width="4" marker-end="url(#arrowhead)"/>
+  <line x1="438" y1="455" x2="386" y2="455" stroke="#E8A33D" stroke-width="4" marker-end="url(#arrowhead)"/>
+
+  <text x="600" y="592" text-anchor="middle" font-size="17" font-style="italic" fill="#5B6B7F">Follow the flow in order — skipping steps is where defects hide.</text>
+</svg>
