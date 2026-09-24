@@ -128,3 +128,24 @@ workaround that breaks periodically, or violates LinkedIn's terms of service.
 The most SEO-valuable approach is actually to **publish on your site FIRST**,
 then cross-post to LinkedIn. That way Google indexes `karimchaouki.com` as
 the canonical source — dramatically better for your organic search rankings.
+
+---
+
+## Interactive content blocks (added 2026-09-24)
+
+The blog renderer (`frontend/src/pages/BlogPost.jsx`) supports interactive widgets via `frontend/src/components/InteractiveWidgets.jsx`. Use 1–3 per article so readers enjoy the read. All text is plain (no markdown). Styling is site-aligned automatically (slate-900/blue-900 hero accents, #1A202C serif headings, #2B6CB0 accent blue, #F0F4F8 panels).
+
+- **tabs** — tabbed panels, e.g. current-state vs future-state:
+  `{"type":"tabs","label":"...","items":[{"tab":"Current state","heading":"...","paragraphs":["..."]}]}`
+- **accordion** — expandable FAQ / mistake cards (one open at a time):
+  `{"type":"accordion","label":"...","items":[{"q":"...","a":"..."}]}`
+- **steps** — click-through walkthrough with progress bar and dots:
+  `{"type":"steps","label":"...","intro":"...","items":[{"title":"...","text":"..."}]}`
+- **flip** — 3D flip cards, e.g. before/after or term/definition:
+  `{"type":"flip","label":"...","items":[{"front":"...","back":"..."}]}`
+- **quiz** — self-check questions with instant feedback, score, and retry:
+  `{"type":"quiz","label":"Check your understanding","questions":[{"q":"...","options":[{"text":"...","correct":true,"why":"..."}]}]}`
+- **compare** — before/after drag slider:
+  `{"type":"compare","label":"...","beforeTitle":"Before","afterTitle":"After","before":"...","after":"...","beforeItems":["..."],"afterItems":["..."]}`
+
+Rules: never invent numbers or survey data to fill a widget; quiz explanations must be grounded in the article; keep each widget focused (3–5 tabs/steps/questions max).
