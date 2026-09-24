@@ -1,5 +1,196 @@
 [
   {
+    "slug": "what-is-uat-hcm-implementation",
+    "title": "What Is UAT in an HCM Implementation?",
+    "excerpt": "What is user acceptance testing in an HCM implementation? Who participates, how test scripts work, defect triage, and what sign-off really means.",
+    "publishedAt": "2026-09-24",
+    "readingTime": "4 min read",
+    "cover": "/images/blog/what-is-uat-hcm-implementation-cover.webp",
+    "tags": [
+      "HCM",
+      "Testing",
+      "UAT"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "UAT — User Acceptance Testing — is the phase where the people who will actually use the system test whether it does what the business needs. Not whether the software works (that's system testing), but whether it's right: the pay rules calculate correctly, the approvals route properly, the reports show what HR needs."
+      },
+      {
+        "type": "p",
+        "text": "UAT is the last meaningful gate before go-live. Everything after it is cutover mechanics."
+      },
+      {
+        "type": "img",
+        "src": "/images/blog/what-is-uat-hcm-implementation-cover.webp",
+        "alt": "Business users performing user acceptance testing on an HCM system before go-live",
+        "caption": ""
+      },
+      {
+        "type": "h2",
+        "text": "How UAT Fits in the Testing Layers"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "1. System testing — consultants validate configuration against design documents",
+          "2. Integration testing — data flows between modules and external systems",
+          "3. UAT — business users execute real-world scenarios end to end",
+          "4. Parallel runs — for payroll: full pay cycles processed in old and new systems, reconciled line by line"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "UAT cannot start until system testing is genuinely complete. Starting UAT on an untested configuration wastes business users' time and burns the goodwill you'll need later."
+      },
+      {
+        "type": "img",
+        "src": "/images/blog/what-is-uat-hcm-implementation-1.svg",
+        "alt": "UAT process flow: plan, prepare, execute, defect triage, and sign-off",
+        "caption": "The five phases of the UAT cycle, from planning through written sign-off."
+      },
+      {
+        "type": "h2",
+        "text": "Who Participates"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "Payroll administrators — test pay runs, adjustments, off-cycles",
+          "HR operations — test hires, terminations, transfers, leave",
+          "Managers — test approvals, team changes, self-service",
+          "IT — support environments and integration validation"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Participants must be the people who know the business rules — not whoever is available. A UAT tester who doesn't know the correct overtime rule can't tell you the system is wrong."
+      },
+      {
+        "type": "h2",
+        "text": "How UAT Test Scripts Work"
+      },
+      {
+        "type": "p",
+        "text": "Test scripts are step-by-step scenarios with expected results:"
+      },
+      {
+        "type": "quote",
+        "text": "Script PAY-014: Process an off-cycle payment for a terminated employee in Ontario with outstanding vacation payout. Steps: 1. Enter termination... 2. Calculate final pay... 3. Verify vacation payout at 4%... Expected result: Net pay = $X, ROE code correct, vacation paid per policy."
+      },
+      {
+        "type": "p",
+        "text": "Scripts should cover: happy paths, exceptions (terminations, retro pay, garnishments), and jurisdiction variations. Aim coverage at business risk, not system features."
+      },
+      {
+        "type": "h2",
+        "text": "Defect Triage"
+      },
+      {
+        "type": "p",
+        "text": "Not every failed script blocks go-live. Triage defects by severity:"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "Critical — pay accuracy or compliance impact; must fix before go-live",
+          "High — broken process with no workaround; must fix or formally accept",
+          "Medium — workaround exists; fix in hypercare",
+          "Low — cosmetic; backlog"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "The defect list trends to zero on criticals/highs — that's the entry condition for go-live discussions."
+      },
+      {
+        "type": "img",
+        "src": "/images/blog/what-is-uat-hcm-implementation-2.svg",
+        "alt": "UAT defect severity levels: critical, high, medium, and low, and how each gates go-live",
+        "caption": "Severity decides what blocks go-live: criticals must be fixed, while mediums and lows follow their own path."
+      },
+      {
+        "type": "h2",
+        "text": "What Sign-Off Really Means"
+      },
+      {
+        "type": "p",
+        "text": "UAT sign-off is a written business decision that the system is acceptable for production use. It must come from process owners, not the project team, and it should explicitly list any accepted defects with their remediation plans. Verbal \"looks good\" is not sign-off."
+      },
+      {
+        "type": "h2",
+        "text": "Common Mistakes"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "1. Starting UAT before system testing finishes — testers drown in configuration bugs.",
+          "2. Using testers who don't know the rules — they validate nothing.",
+          "3. No defect SLAs — critical defects need fix-and-retest turnaround commitments.",
+          "4. Retesting skipped — every fix gets retested; \"it's a small change\" is how regressions ship.",
+          "5. Sign-off by the project team — the business accepts the system, not the people who built it."
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Key Takeaways"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "UAT answers \"is it right?\" — not \"does it work?\"",
+          "Testers must know the business rules, or they validate nothing.",
+          "Triage by severity; criticals and highs must trend to zero before go-live.",
+          "Sign-off is written, from process owners, with accepted defects explicitly listed."
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "FAQ"
+      },
+      {
+        "type": "h3",
+        "text": "What does UAT stand for?"
+      },
+      {
+        "type": "p",
+        "text": "User Acceptance Testing — the phase where business users validate that the configured system meets business requirements before go-live."
+      },
+      {
+        "type": "h3",
+        "text": "Who performs UAT in an HCM implementation?"
+      },
+      {
+        "type": "p",
+        "text": "Payroll administrators, HR operations staff, managers, and IT support — specifically the people who know the business rules being tested."
+      },
+      {
+        "type": "h3",
+        "text": "What is the difference between system testing and UAT?"
+      },
+      {
+        "type": "p",
+        "text": "System testing (by consultants) verifies the configuration matches design documents. UAT (by business users) verifies the system handles real-world scenarios correctly."
+      },
+      {
+        "type": "h3",
+        "text": "Can we skip UAT to save time?"
+      },
+      {
+        "type": "p",
+        "text": "No. Skipping UAT converts testing risk into production risk — where defects affect real pay. Compress scope or timeline instead."
+      },
+      {
+        "type": "h2",
+        "text": "Next Steps"
+      },
+      {
+        "type": "p",
+        "text": "Continue to Writing Effective UAT Test Scripts, UAT Readiness Checklist, or contact Karim."
+      }
+    ]
+  },
+  {
     "slug": "implementation-risk-register-template",
     "title": "Implementation Risk Register Template and Field Guide",
     "excerpt": "A practical implementation risk register template: every field explained, a filled example with 8 real risks, scoring model, and review cadence.",
