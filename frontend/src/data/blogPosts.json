@@ -1,5 +1,199 @@
 [
   {
+    "slug": "hcm-go-live-checklist",
+    "title": "30-Point HCM Go-Live Checklist",
+    "excerpt": "The 30-point HCM go-live checklist: configuration, data, testing, training, cutover, and hypercare — every gate that must be green before launch.",
+    "publishedAt": "2026-09-24",
+    "readingTime": "3 min read",
+    "cover": "/images/blog/hcm-go-live-checklist-cover.webp",
+    "tags": [
+      "HCM",
+      "Go-Live",
+      "Checklist"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "Go-live is a gate, not a date. This checklist is the gate. Every item should be verifiably complete — not “in progress,” not “almost” — before launch. Use it in your go/no-go meeting."
+      },
+      {
+        "type": "img",
+        "src": "/images/blog/hcm-go-live-checklist-cover.webp",
+        "alt": "Go-live readiness checklist with verification checkpoints across configuration, data, testing, and training",
+        "caption": "A go-live is a launch: every system verified before liftoff."
+      },
+      {
+        "type": "h2",
+        "text": "Configuration (1–6)"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "1. All in-scope modules configured per signed-off design documents",
+          "2. Out-of-scope items explicitly documented (no ambiguity)",
+          "3. Security roles configured and tested (managers see only their teams)",
+          "4. Approval workflows tested end to end for every process",
+          "5. All customizations documented with maintenance notes",
+          "6. Configuration workbook complete and handed to support"
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Data (7–12)"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "7. Final data migration reconciled: headcount by status, entity, pay group",
+          "8. Year-to-date earnings, deductions, and taxes reconciled to zero tolerance",
+          "9. Accrual balances (vacation, sick, other banks) verified per employee",
+          "10. Benefits elections and dependents validated",
+          "11. Data freeze enforced and communicated (no legacy edits)",
+          "12. Reconciliation reports signed off by business owners"
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Testing (13–18)"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "13. System testing complete with all critical defects closed",
+          "14. Integration testing complete (payroll, benefits, time, bank files)",
+          "15. UAT complete with written sign-off from process owners",
+          "16. Accepted defects explicitly listed with remediation plans and dates",
+          "17. At least one successful parallel payroll run, fully reconciled",
+          "18. Regression testing complete after final configuration changes"
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Compliance (19–21)"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "19. Tax setup validated for every jurisdiction (federal, state/province, local)",
+          "20. Compliance review completed for all legal entities",
+          "21. Data privacy requirements verified (retention, access, consent)"
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Training & Change (22–25)"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "22. HR administrators trained and assessed",
+          "23. Managers trained on approvals and team workflows (completion >=90%)",
+          "24. Employees informed: self-service access, what's changing, where to get help",
+          "25. Go-live communications sent per the communication plan"
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Cutover (26–28)"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "26. Cutover runbook finalized: every task, owner, and timing for go-live weekend",
+          "27. Rollback/contingency plan documented, understood, and rehearsed",
+          "28. Mock go-live (dress rehearsal) completed successfully"
+        ]
+      },
+      {
+        "type": "img",
+        "src": "/images/blog/hcm-go-live-checklist-1.svg",
+        "alt": "Go-live cutover timeline: mock go-live rehearsal, data freeze, final migration, cutover weekend, go-live, and hypercare — every gate in sequence",
+        "caption": "The cutover sequence — readiness, cutover, launch, hypercare."
+      },
+      {
+        "type": "h2",
+        "text": "Hypercare & Support (29–30)"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "29. Hypercare roster published: names, coverage hours, escalation paths, SLAs",
+          "30. Hypercare exit criteria agreed in writing with the business"
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "How to Use This in a Go/No-Go Meeting"
+      },
+      {
+        "type": "p",
+        "text": "Go through all 30. Any unchecked item gets one of three dispositions: complete it before launch (date moves), accept the risk formally (sponsor signs, remediation dated), or descoping (documented, communicated). “We’ll figure it out after go-live” is not a disposition."
+      },
+      {
+        "type": "img",
+        "src": "/images/blog/hcm-go-live-checklist-2.svg",
+        "alt": "Go/no-go decision flow: an unchecked checklist item must be completed before launch, formally risk-accepted by the sponsor, or descoped — “we’ll figure it out after go-live” is not a disposition",
+        "caption": "Three valid dispositions for an unchecked item. “We’ll figure it out after go-live” isn’t one."
+      },
+      {
+        "type": "h2",
+        "text": "Key Takeaways"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "30 checks across configuration, data, testing, compliance, training, cutover, and support.",
+          "Every item verifiably complete — “almost” doesn’t count.",
+          "Unchecked items get completed, formally accepted, or descoped — never ignored."
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "FAQ"
+      },
+      {
+        "type": "h3",
+        "text": "When should we run the go-live checklist?"
+      },
+      {
+        "type": "p",
+        "text": "Continuously in the final 4–6 weeks, and formally in the go/no-go meeting 1–2 weeks before cutover."
+      },
+      {
+        "type": "h3",
+        "text": "What if we can’t check every box?"
+      },
+      {
+        "type": "p",
+        "text": "Then you have three options: delay, formally accept the risk with sponsor sign-off and a remediation date, or descope. Launching with unknown gaps is the fourth option — don’t take it."
+      },
+      {
+        "type": "h3",
+        "text": "Who attends the go/no-go meeting?"
+      },
+      {
+        "type": "p",
+        "text": "Executive sponsor, project manager, workstream leads, and business process owners. The people who sign off must be in the room."
+      },
+      {
+        "type": "h3",
+        "text": "Is 30 points enough?"
+      },
+      {
+        "type": "p",
+        "text": "It’s the floor, not the ceiling. Add project-specific items (carrier integrations, union rules, country specifics) — never remove gates to make the list pass."
+      },
+      {
+        "type": "h2",
+        "text": "Next Steps"
+      },
+      {
+        "type": "p",
+        "text": "Continue to Project Manager’s Guide to Go-Live, How to Prepare for HCM Go-Live, or contact Karim."
+      }
+    ]
+  },
+  {
     "slug": "discovery-workshops-guide",
     "title": "Discovery Workshops: How to Run Them for HCM Implementations",
     "excerpt": "Plan and facilitate discovery workshops for HCM implementations: participants, sample agendas, facilitation techniques, and the mistakes that cost projects weeks.",
