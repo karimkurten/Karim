@@ -584,7 +584,7 @@
   background: #2B6CB0;
   transform: translateX(-50%);
   pointer-events: none;
-  box-shadow: 0 0 12px rgba(245, 158, 11, 0.7);
+  box-shadow: 0 0 12px rgba(43, 108, 176, 0.7);
 }
 .iw-compare-grip {
   position: absolute;
@@ -599,7 +599,7 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 6px 18px rgba(245, 158, 11, 0.5);
+  box-shadow: 0 6px 18px rgba(43, 108, 176, 0.5);
 }
 .iw-compare-range {
   width: 100%;
