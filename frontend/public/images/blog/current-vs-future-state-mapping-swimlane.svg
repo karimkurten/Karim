@@ -1,0 +1,113 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600" font-family="-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif">
+  <defs>
+    <linearGradient id="sw2-navy" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#274a76"/><stop offset="1" stop-color="#16294A"/>
+    </linearGradient>
+    <linearGradient id="sw2-amber" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f5b942"/><stop offset="1" stop-color="#dd8f1c"/>
+    </linearGradient>
+    <linearGradient id="sw2-step" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#e9eef5"/>
+    </linearGradient>
+    <linearGradient id="sw2-sys" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fff3dd"/><stop offset="1" stop-color="#ffe3ae"/>
+    </linearGradient>
+    <filter id="sw2-shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="3" stdDeviation="5" flood-color="#16294A" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+  <rect x="0" y="0" width="960" height="600" rx="14" fill="#f4f6f8"/>
+  <text x="30" y="40" font-size="21" font-weight="700" fill="#16294A">Future-State Example: New-Hire Onboarding Flow</text>
+  <text x="30" y="62" font-size="12.5" fill="#5b6478">swimlanes expose handoffs · diamonds are decisions · ⚙ marks system actions · ✓ marks controls</text>
+
+  <!-- Legend -->
+  <g font-size="11.5" fill="#16294A">
+    <rect x="660" y="22" width="270" height="46" rx="9" fill="#ffffff" stroke="#e3e8f0" filter="url(#sw2-shadow)"/>
+    <rect x="676" y="34" width="26" height="16" rx="4" fill="url(#sw2-sys)" stroke="#dd8f1c"/>
+    <text x="708" y="47">= system action</text>
+    <rect x="792" y="34" width="26" height="16" rx="4" fill="url(#sw2-step)" stroke="#1E3A5F"/>
+    <text x="824" y="47">= human task</text>
+  </g>
+
+  <!-- Lanes -->
+  <g font-size="12" font-weight="700">
+    <rect x="30" y="86" width="120" height="130" rx="10" fill="url(#sw2-navy)" filter="url(#sw2-shadow)"/>
+    <text x="90" y="142" text-anchor="middle" fill="#ffffff">HR</text>
+    <text x="90" y="162" text-anchor="middle" fill="#c9d3e6" font-weight="400" font-size="10.5">Shared Services</text>
+    <rect x="30" y="226" width="120" height="130" rx="10" fill="url(#sw2-amber)" filter="url(#sw2-shadow)"/>
+    <text x="90" y="282" text-anchor="middle" fill="#16294A">Hiring</text>
+    <text x="90" y="300" text-anchor="middle" fill="#16294A" font-size="11.5">Manager</text>
+    <rect x="30" y="366" width="120" height="130" rx="10" fill="url(#sw2-navy)" filter="url(#sw2-shadow)"/>
+    <text x="90" y="422" text-anchor="middle" fill="#ffffff">Payroll</text>
+    <text x="90" y="442" text-anchor="middle" fill="#c9d3e6" font-weight="400" font-size="10.5">&amp; IT</text>
+  </g>
+
+  <!-- Grid -->
+  <g stroke="#e3e8f0" stroke-width="1">
+    <line x1="150" y1="86" x2="150" y2="496"/><line x1="150" y1="216" x2="930" y2="216"/>
+    <line x1="150" y1="356" x2="930" y2="356"/><line x1="150" y1="496" x2="930" y2="496"/>
+  </g>
+
+  <!-- HR lane steps -->
+  <g filter="url(#sw2-shadow)" font-size="11" fill="#16294A">
+    <rect x="170" y="120" width="150" height="62" rx="9" fill="url(#sw2-sys)" stroke="#dd8f1c" stroke-width="1.5"/>
+    <text x="245" y="143" text-anchor="middle" font-weight="700">Offer accepted</text>
+    <text x="245" y="160" text-anchor="middle" font-size="10" fill="#5b6478">⚙ auto-creates profile</text>
+    <rect x="380" y="120" width="150" height="62" rx="9" fill="url(#sw2-step)" stroke="#1E3A5F" stroke-width="1.5"/>
+    <text x="455" y="143" text-anchor="middle" font-weight="700">Verify documents</text>
+    <text x="455" y="160" text-anchor="middle" font-size="10" fill="#5b6478">✓ eligibility control</text>
+    <rect x="740" y="120" width="150" height="62" rx="9" fill="url(#sw2-step)" stroke="#1E3A5F" stroke-width="1.5"/>
+    <text x="815" y="143" text-anchor="middle" font-weight="700">Day-1 check-in</text>
+    <text x="815" y="160" text-anchor="middle" font-size="10" fill="#5b6478">confirm all steps done</text>
+  </g>
+
+  <!-- Manager lane -->
+  <g filter="url(#sw2-shadow)" font-size="11" fill="#16294A">
+    <rect x="380" y="260" width="150" height="62" rx="9" fill="url(#sw2-step)" stroke="#1E3A5F" stroke-width="1.5"/>
+    <text x="455" y="283" text-anchor="middle" font-weight="700">Assign buddy &amp; plan</text>
+    <text x="455" y="300" text-anchor="middle" font-size="10" fill="#5b6478">first-week agenda</text>
+    <rect x="590" y="260" width="150" height="62" rx="9" fill="url(#sw2-step)" stroke="#1E3A5F" stroke-width="1.5"/>
+    <text x="665" y="283" text-anchor="middle" font-weight="700">Equipment ready?</text>
+    <text x="665" y="300" text-anchor="middle" font-size="10" fill="#5b6478">decision point</text>
+  </g>
+
+  <!-- Payroll/IT lane -->
+  <g filter="url(#sw2-shadow)" font-size="11" fill="#16294A">
+    <rect x="170" y="400" width="150" height="62" rx="9" fill="url(#sw2-sys)" stroke="#dd8f1c" stroke-width="1.5"/>
+    <text x="245" y="423" text-anchor="middle" font-weight="700">Provision accounts</text>
+    <text x="245" y="440" text-anchor="middle" font-size="10" fill="#5b6478">⚙ triggered on hire date</text>
+    <rect x="380" y="400" width="150" height="62" rx="9" fill="url(#sw2-sys)" stroke="#dd8f1c" stroke-width="1.5"/>
+    <text x="455" y="423" text-anchor="middle" font-weight="700">Create pay record</text>
+    <text x="455" y="440" text-anchor="middle" font-size="10" fill="#5b6478">⚙ from HR profile data</text>
+    <rect x="590" y="400" width="150" height="62" rx="9" fill="url(#sw2-step)" stroke="#1E3A5F" stroke-width="1.5"/>
+    <text x="665" y="423" text-anchor="middle" font-weight="700">Validate bank details</text>
+    <text x="665" y="440" text-anchor="middle" font-size="10" fill="#5b6478">✓ segregation control</text>
+  </g>
+
+  <!-- Decision diamond -->
+  <g filter="url(#sw2-shadow)">
+    <path d="M665 130 l48 40 l-48 40 l-48 -40 z" fill="#ffffff" stroke="#E8A33D" stroke-width="3"/>
+    <text x="665" y="172" text-anchor="middle" font-size="11" font-weight="700" fill="#16294A">Docs OK?</text>
+  </g>
+  <text x="713" y="118" font-size="10.5" fill="#1E7d34" font-weight="700">yes ↓</text>
+  <text x="600" y="196" font-size="10.5" fill="#b3402e" font-weight="700">← no: request again</text>
+
+  <!-- Connectors -->
+  <g stroke="#1E3A5F" stroke-width="2.2" fill="none" stroke-linecap="round">
+    <path d="M320 151 h30 l15 0"/>
+    <path d="M665 170 v60" />
+    <path d="M665 211 h75 v49" />
+    <path d="M530 291 h60" />
+    <path d="M320 431 h60" />
+    <path d="M530 431 h60" />
+    <path d="M245 182 v120" />
+    <path d="M455 182 v78" />
+    <path d="M665 322 v78" />
+    <path d="M815 182 v240 h-75" />
+  </g>
+  <g fill="#1E3A5F">
+    <circle cx="665" cy="211" r="4"/><circle cx="245" cy="302" r="4"/><circle cx="455" cy="260" r="4"/>
+  </g>
+
+  <text x="30" y="548" font-size="12" fill="#16294A"><tspan font-weight="700">Reading the map:</tspan> every line crossing a lane is a handoff — handoffs are where processes break. Every ⚙ is configuration; every ✓ is an audit control.</text>
+</svg>
