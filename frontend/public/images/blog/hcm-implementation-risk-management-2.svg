@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 712" role="img" aria-label="Diagram of the four risk response strategies: avoid, mitigate, transfer, and accept">
+  <rect width="900" height="712" fill="#F4F6F8"/>
+  <text x="450" y="48" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="30" font-weight="700" fill="#16294A">Risk Response Strategies</text>
+  <text x="450" y="78" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="16" fill="#5A6C7D">Four classic strategies, with implementation-specific notes</text>
+
+  <!-- Card 1: Avoid -->
+  <rect x="50" y="100" width="380" height="230" rx="14" fill="#FFFFFF" stroke="#DCE2EA" stroke-width="1.5"/>
+  <circle cx="102" cy="158" r="26" fill="none" stroke="#1E3A5F" stroke-width="6"/>
+  <line x1="86" y1="142" x2="118" y2="174" stroke="#1E3A5F" stroke-width="6" stroke-linecap="round"/>
+  <text x="146" y="166" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="22" font-weight="700" fill="#16294A">Avoid</text>
+  <g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="14.5" fill="#3A4A5C">
+    <text x="86" y="210">Eliminate the risk so it cannot occur.</text>
+    <text x="86" y="233">Example: freeze scope after design sign-off</text>
+    <text x="86" y="256">with formal change control.</text>
+  </g>
+
+  <!-- Card 2: Mitigate -->
+  <rect x="470" y="100" width="380" height="230" rx="14" fill="#FFFFFF" stroke="#DCE2EA" stroke-width="1.5"/>
+  <circle cx="522" cy="158" r="26" fill="none" stroke="#E8A33D" stroke-width="6"/>
+  <path d="M 508 150 L 522 168 L 536 150" fill="none" stroke="#E8A33D" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="566" y="166" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="22" font-weight="700" fill="#16294A">Mitigate</text>
+  <g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="14.5" fill="#3A4A5C">
+    <text x="506" y="210">Reduce probability or impact.</text>
+    <text x="506" y="233">Example: run data-cleansing sprints before</text>
+    <text x="506" y="256">migration instead of during testing.</text>
+  </g>
+
+  <!-- Card 3: Transfer -->
+  <rect x="50" y="360" width="380" height="230" rx="14" fill="#FFFFFF" stroke="#DCE2EA" stroke-width="1.5"/>
+  <circle cx="102" cy="418" r="26" fill="none" stroke="#1E3A5F" stroke-width="6"/>
+  <path d="M 90 412 L 114 412 M 106 404 L 116 412 L 106 420" fill="none" stroke="#1E3A5F" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 114 424 L 90 424 M 98 416 L 88 424 L 98 432" fill="none" stroke="#1E3A5F" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="146" y="426" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="22" font-weight="700" fill="#16294A">Transfer</text>
+  <g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="14.5" fill="#3A4A5C">
+    <text x="86" y="470">Shift ownership of the risk to a third party.</text>
+    <text x="86" y="493">Example: contractual SLAs with integration</text>
+    <text x="86" y="516">vendors. Note: you can transfer work &#8212;</text>
+    <text x="86" y="539">never accountability for payday.</text>
+  </g>
+
+  <!-- Card 4: Accept -->
+  <rect x="470" y="360" width="380" height="230" rx="14" fill="#FFFFFF" stroke="#DCE2EA" stroke-width="1.5"/>
+  <circle cx="522" cy="418" r="26" fill="none" stroke="#E8A33D" stroke-width="6"/>
+  <path d="M 511 419 L 520 428 L 534 409" fill="none" stroke="#E8A33D" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="566" y="426" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="22" font-weight="700" fill="#16294A">Accept</text>
+  <g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="14.5" fill="#3A4A5C">
+    <text x="506" y="470">For low-score risks, document the acceptance</text>
+    <text x="506" y="493">consciously &#8212; rather than discovering</text>
+    <text x="506" y="516">it later.</text>
+  </g>
+
+  <!-- Callout: avoidance through sequencing -->
+  <rect x="50" y="612" width="800" height="64" rx="12" fill="#FDF3E3" stroke="#E8A33D" stroke-width="1.5"/>
+  <g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="15" fill="#16294A">
+    <text x="74" y="638" font-weight="700">Most underused: avoidance through sequencing &#8212;</text>
+    <text x="74" y="662">restructure the plan so the risk can&#8217;t occur.</text>
+  </g>
+</svg>
