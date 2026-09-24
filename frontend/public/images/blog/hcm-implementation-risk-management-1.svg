@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 560" role="img" aria-label="3x3 risk scoring matrix of probability versus impact">
+  <rect width="800" height="560" fill="#F4F6F8"/>
+  <text x="400" y="48" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="30" font-weight="700" fill="#16294A">Risk Scoring Matrix</text>
+  <text x="400" y="78" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="16" fill="#5A6C7D">Probability &#215; Impact</text>
+
+  <!-- Impact (column) labels -->
+  <text x="295" y="102" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="15" font-weight="600" fill="#16294A">Low impact (1)</text>
+  <text x="491" y="102" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="15" font-weight="600" fill="#16294A">Medium impact (2)</text>
+  <text x="687" y="102" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="15" font-weight="600" fill="#16294A">High impact (3)</text>
+
+  <!-- Probability (row) labels -->
+  <text x="186" y="174" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="15" font-weight="600" fill="#16294A">High probability (3)</text>
+  <text x="186" y="288" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="15" font-weight="600" fill="#16294A">Medium probability (2)</text>
+  <text x="186" y="402" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="15" font-weight="600" fill="#16294A">Low probability (1)</text>
+  <text x="44" y="276" text-anchor="middle" transform="rotate(-90 44 276)" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="14" letter-spacing="5" fill="#5A6C7D">PROBABILITY</text>
+
+  <!-- Matrix cells: row = probability, column = impact. x: 200/396/592, y: 114/228/342, w=190, h=108 -->
+  <rect x="200" y="114" width="190" height="108" rx="10" fill="#2E9E63"/>
+  <rect x="396" y="114" width="190" height="108" rx="10" fill="#E8A33D"/>
+  <rect x="592" y="114" width="190" height="108" rx="10" fill="#C0392B"/>
+  <rect x="200" y="228" width="190" height="108" rx="10" fill="#2E9E63"/>
+  <rect x="396" y="228" width="190" height="108" rx="10" fill="#E8A33D"/>
+  <rect x="592" y="228" width="190" height="108" rx="10" fill="#E8A33D"/>
+  <rect x="200" y="342" width="190" height="108" rx="10" fill="#2E9E63"/>
+  <rect x="396" y="342" width="190" height="108" rx="10" fill="#2E9E63"/>
+  <rect x="592" y="342" width="190" height="108" rx="10" fill="#2E9E63"/>
+
+  <!-- Scores -->
+  <g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="38" font-weight="700" text-anchor="middle">
+    <text x="295" y="181" fill="#FFFFFF">3</text>
+    <text x="491" y="181" fill="#16294A">6</text>
+    <text x="687" y="181" fill="#FFFFFF">9</text>
+    <text x="295" y="295" fill="#FFFFFF">2</text>
+    <text x="491" y="295" fill="#16294A">4</text>
+    <text x="687" y="295" fill="#16294A">6</text>
+    <text x="295" y="409" fill="#FFFFFF">1</text>
+    <text x="491" y="409" fill="#FFFFFF">2</text>
+    <text x="687" y="409" fill="#FFFFFF">3</text>
+  </g>
+
+  <!-- Legend -->
+  <g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+    <rect x="70" y="474" width="26" height="26" rx="6" fill="#2E9E63"/>
+    <text x="106" y="494" font-size="16" font-weight="700" fill="#16294A">1&#8211;3 &#183; Low</text>
+    <text x="106" y="518" font-size="14" fill="#5A6C7D">Watchlist &#8212; review monthly</text>
+
+    <rect x="300" y="474" width="26" height="26" rx="6" fill="#E8A33D"/>
+    <text x="336" y="494" font-size="16" font-weight="700" fill="#16294A">4&#8211;6 &#183; Medium</text>
+    <text x="336" y="518" font-size="14" fill="#5A6C7D">Plan drafted &#8212; review biweekly</text>
+
+    <rect x="530" y="474" width="26" height="26" rx="6" fill="#C0392B"/>
+    <text x="566" y="494" font-size="16" font-weight="700" fill="#16294A">7&#8211;9 &#183; High</text>
+    <text x="566" y="518" font-size="14" fill="#5A6C7D">Active plan &#8212; review weekly</text>
+  </g>
+</svg>
