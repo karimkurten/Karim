@@ -1,5 +1,192 @@
 [
   {
+    "slug": "requirements-gathering-hcm-implementation",
+    "title": "Requirements Gathering for HCM Implementation: A Step-by-Step Guide",
+    "excerpt": "How to gather requirements for an HCM implementation: stakeholder workshops, process mapping, fit-gap analysis, and writing requirements developers can configure against.",
+    "publishedAt": "2026-09-24",
+    "readingTime": "3 min read",
+    "cover": "/images/blog/requirements-gathering-hcm-implementation-cover.webp",
+    "tags": [
+      "HCM",
+      "Requirements",
+      "Business Analysis"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "Bad requirements are the most expensive defect in an HCM implementation. A misunderstood pay rule discovered in UAT costs ten times what it costs in discovery — and if it reaches production, it costs trust."
+      },
+      {
+        "type": "p",
+        "text": "Requirements gathering is the structured process of capturing what the business needs the system to do, at a level of detail the configuration team can build against. Here's how to do it well."
+      },
+      {
+        "type": "img",
+        "src": "/images/blog/requirements-gathering-hcm-implementation-cover.webp",
+        "alt": "Requirements gathering workshop with process mapping for HCM implementation",
+        "caption": "Workshop-style discovery surfaces the contradictions that one-on-ones miss."
+      },
+      {
+        "type": "img",
+        "src": "/images/blog/requirements-gathering-hcm-implementation-1.svg",
+        "alt": "Six-step requirements gathering flow for HCM implementation: stakeholders, current state, workshops, requirements, fit-gap analysis, sign-off",
+        "caption": "The six-step requirements gathering flow for HCM implementations."
+      },
+      {
+        "type": "h2",
+        "text": "Step 1: Identify the Right Stakeholders"
+      },
+      {
+        "type": "p",
+        "text": "Map stakeholders across four groups:"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "Process owners — payroll, benefits, HR operations leads who know the current rules",
+          "End users — managers and employees who will live in the system",
+          "Compliance — legal/tax for jurisdiction-specific rules",
+          "IT — integrations, security, data"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Missing stakeholder groups are the top cause of late requirements. If payroll isn't in the room, payroll rules won't be in the document."
+      },
+      {
+        "type": "h2",
+        "text": "Step 2: Document the Current State"
+      },
+      {
+        "type": "p",
+        "text": "Before designing the future, capture the present: current processes, pain points, workarounds, and the \"tribal knowledge\" that lives in people's heads. Use simple flowcharts — not to preserve the current state, but to make sure everyone agrees on what it is."
+      },
+      {
+        "type": "h2",
+        "text": "Step 3: Run Structured Workshops"
+      },
+      {
+        "type": "p",
+        "text": "Workshops beat interviews for HCM discovery. Group dynamics surface contradictions (\"we calculate overtime weekly\" / \"no, it's biweekly\") that one-on-ones miss."
+      },
+      {
+        "type": "p",
+        "text": "Run workshops by process area — payroll, time, benefits, core HR — with a fixed agenda: current process, pain points, future-state needs, decisions needed. Timebox ruthlessly and assign a scribe."
+      },
+      {
+        "type": "h2",
+        "text": "Step 4: Write Requirements That Can Be Configured"
+      },
+      {
+        "type": "p",
+        "text": "The test of a good requirement: could a consultant configure the system from it without asking a follow-up question? Compare:"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "Weak: \"The system should handle overtime.\"",
+          "Strong: \"Overtime is calculated weekly at 1.5× the regular rate for hours over 44/week per Ontario employment standards. Double-time does not apply. The following employee groups are exempt: [list].\""
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Every requirement needs: a unique ID, the process area, the rule stated precisely, the source stakeholder, and acceptance criteria."
+      },
+      {
+        "type": "h2",
+        "text": "Step 5: Run Fit-Gap Analysis"
+      },
+      {
+        "type": "p",
+        "text": "Map each requirement against standard system functionality: fit (covered out of the box), gap (needs configuration or workaround), or custom (needs development). Challenge every \"custom\" — most are preferences, not needs, and each one adds testing surface and upgrade risk."
+      },
+      {
+        "type": "img",
+        "src": "/images/blog/requirements-gathering-hcm-implementation-2.svg",
+        "alt": "Fit-gap classification diagram: fit (covered out of the box), gap (needs configuration or workaround), custom (needs development)",
+        "caption": "Every requirement classifies as fit, gap, or custom — challenge every custom."
+      },
+      {
+        "type": "h2",
+        "text": "Step 6: Get Formal Sign-Off"
+      },
+      {
+        "type": "p",
+        "text": "Requirements are baselined with written sign-off from process owners. After sign-off, changes go through change control — with impact assessment on timeline and cost. This single discipline prevents most scope creep."
+      },
+      {
+        "type": "h2",
+        "text": "Common Mistakes"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "1. Gathering requirements from managers only — the people doing the work know the exceptions.",
+          "2. Accepting vague requirements — \"flexible approval workflows\" means nothing until defined.",
+          "3. Skipping the compliance review — jurisdiction rules discovered in testing are redesigns.",
+          "4. No traceability — every requirement should trace to a design element and a test case."
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Key Takeaways"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "Requirements quality determines configuration quality — invest in discovery.",
+          "Write requirements precisely enough to configure against without follow-up questions.",
+          "Fit-gap discipline keeps customizations (and their costs) under control.",
+          "Baseline with sign-off; everything after goes through change control."
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "FAQ"
+      },
+      {
+        "type": "h3",
+        "text": "What is requirements gathering in an HCM implementation?"
+      },
+      {
+        "type": "p",
+        "text": "The structured process of capturing business needs — pay rules, workflows, compliance requirements — at a level of detail the implementation team can configure the system against."
+      },
+      {
+        "type": "h3",
+        "text": "Who should participate in requirements workshops?"
+      },
+      {
+        "type": "p",
+        "text": "Process owners (payroll, HR ops), end users (managers, employees), compliance/legal, and IT. Missing groups cause late requirements."
+      },
+      {
+        "type": "h3",
+        "text": "What is fit-gap analysis?"
+      },
+      {
+        "type": "p",
+        "text": "Mapping each requirement against standard system functionality to classify it as fit (out of the box), gap (configuration needed), or custom (development needed)."
+      },
+      {
+        "type": "h3",
+        "text": "How detailed should HCM requirements be?"
+      },
+      {
+        "type": "p",
+        "text": "Detailed enough that a consultant can configure without follow-up questions — specific rules, thresholds, exceptions, and acceptance criteria."
+      },
+      {
+        "type": "h2",
+        "text": "Next Steps"
+      },
+      {
+        "type": "p",
+        "text": "Continue to Solution Design Documents: What Good Looks Like, Fit-Gap Analysis in HCM Projects, or contact Karim."
+      }
+    ]
+  },
+  {
     "slug": "hcm-data-migration-guide",
     "title": "Data Migration in HCM Implementations: A Practical Guide",
     "excerpt": "A practical guide to HCM data migration: cleansing legacy HR data, mapping pay codes, test loads, and reconciliation — the phase where implementations are won or lost.",
