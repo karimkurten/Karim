@@ -149,3 +149,5 @@ The blog renderer (`frontend/src/pages/BlogPost.jsx`) supports interactive widge
   `{"type":"compare","label":"...","beforeTitle":"Before","afterTitle":"After","before":"...","after":"...","beforeItems":["..."],"afterItems":["..."]}`
 
 Rules: never invent numbers or survey data to fill a widget; quiz explanations must be grounded in the article; keep each widget focused (3–5 tabs/steps/questions max).
+
+<!-- CI nudge: retrigger Vercel build after article-09 publish (2026-09-24) -->
