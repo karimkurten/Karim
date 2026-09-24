@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 440" font-family="-apple-system, 'Segoe UI', Inter, Helvetica, Arial, sans-serif" role="img" aria-label="UAT defect severity levels: critical, high, medium, and low, and how each gates go-live">
+  <rect x="0" y="0" width="1200" height="440" rx="24" fill="#F4F6F8"/>
+
+  <text x="40" y="56" font-size="24" font-weight="700" fill="#16294A">Defect Triage: Severity Decides What Blocks Go-Live</text>
+  <text x="40" y="82" font-size="14" fill="#5A6B7C">Not every failed script blocks go-live &#8212; each defect is logged and triaged by severity</text>
+
+  <!-- Critical -->
+  <g>
+    <rect x="36" y="110" width="262" height="230" rx="14" fill="#FFFFFF"/>
+    <rect x="36" y="110" width="262" height="66" rx="14" fill="#16294A"/>
+    <rect x="36" y="162" width="262" height="14" fill="#16294A"/>
+    <text x="167" y="151" font-size="18" font-weight="700" fill="#FFFFFF" text-anchor="middle">CRITICAL</text>
+    <text x="167" y="212" font-size="13.5" fill="#16294A" text-anchor="middle">Pay accuracy or</text>
+    <text x="167" y="234" font-size="13.5" fill="#16294A" text-anchor="middle">compliance impact</text>
+    <text x="167" y="282" font-size="13.5" font-weight="700" fill="#16294A" text-anchor="middle">Must fix before go-live</text>
+  </g>
+
+  <!-- High -->
+  <g>
+    <rect x="326" y="110" width="262" height="230" rx="14" fill="#FFFFFF"/>
+    <rect x="326" y="110" width="262" height="66" rx="14" fill="#1E3A5F"/>
+    <rect x="326" y="162" width="262" height="14" fill="#1E3A5F"/>
+    <text x="457" y="151" font-size="18" font-weight="700" fill="#FFFFFF" text-anchor="middle">HIGH</text>
+    <text x="457" y="212" font-size="13.5" fill="#16294A" text-anchor="middle">Broken process with</text>
+    <text x="457" y="234" font-size="13.5" fill="#16294A" text-anchor="middle">no workaround</text>
+    <text x="457" y="282" font-size="13.5" font-weight="700" fill="#16294A" text-anchor="middle">Fix or formally accept</text>
+  </g>
+
+  <!-- Medium -->
+  <g>
+    <rect x="616" y="110" width="262" height="230" rx="14" fill="#FFFFFF"/>
+    <rect x="616" y="110" width="262" height="66" rx="14" fill="#E8A33D"/>
+    <rect x="616" y="162" width="262" height="14" fill="#E8A33D"/>
+    <text x="747" y="151" font-size="18" font-weight="700" fill="#16294A" text-anchor="middle">MEDIUM</text>
+    <text x="747" y="212" font-size="13.5" fill="#16294A" text-anchor="middle">Workaround exists;</text>
+    <text x="747" y="234" font-size="13.5" fill="#16294A" text-anchor="middle">fix in hypercare</text>
+    <text x="747" y="282" font-size="13.5" font-weight="700" fill="#16294A" text-anchor="middle">Fix in hypercare</text>
+  </g>
+
+  <!-- Low -->
+  <g>
+    <rect x="906" y="110" width="262" height="230" rx="14" fill="#FFFFFF"/>
+    <rect x="906" y="110" width="262" height="66" rx="14" fill="#C9D2DC"/>
+    <rect x="906" y="162" width="262" height="14" fill="#C9D2DC"/>
+    <text x="1037" y="151" font-size="18" font-weight="700" fill="#16294A" text-anchor="middle">LOW</text>
+    <text x="1037" y="212" font-size="13.5" fill="#16294A" text-anchor="middle">Cosmetic</text>
+    <text x="1037" y="234" font-size="13.5" fill="#16294A" text-anchor="middle">issues</text>
+    <text x="1037" y="282" font-size="13.5" font-weight="700" fill="#16294A" text-anchor="middle">Backlog</text>
+  </g>
+
+  <text x="600" y="388" font-size="13" font-style="italic" fill="#5A6B7C" text-anchor="middle">The defect list trends to zero on criticals and highs &#8212; that is the entry condition for go-live discussions.</text>
+</svg>
