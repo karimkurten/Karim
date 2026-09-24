@@ -1,5 +1,177 @@
 [
   {
+    "slug": "implementation-risk-register-template",
+    "title": "Implementation Risk Register Template and Field Guide",
+    "excerpt": "A practical implementation risk register template: every field explained, a filled example with 8 real risks, scoring model, and review cadence.",
+    "publishedAt": "2026-09-24",
+    "readingTime": "5 min read",
+    "cover": "/images/blog/implementation-risk-register-template-cover.webp",
+    "tags": [
+      "Risk Management",
+      "Templates",
+      "Project Management"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "A risk register is only useful if people fill it honestly and review it regularly. This guide gives you the template — every field, what goes in it, and a filled example with eight realistic implementation risks."
+      },
+      {
+        "type": "img",
+        "src": "/images/blog/implementation-risk-register-template-cover.webp",
+        "alt": "Flat-vector illustration of a project team reviewing a large risk register board with a magnifying glass, a shield, and a life-buoy",
+        "caption": "Review the register on a fixed cadence: reds weekly, top risks at every steering meeting, a full sweep monthly."
+      },
+      {
+        "type": "h2",
+        "text": "The Template: Every Field Explained"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "ID — Unique number (R-001…)",
+          "Risk statement — \"If [condition], then [consequence]\"",
+          "Category — Scope, Data, Resources, Schedule, Technology, Compliance, Change, Vendor, Governance, Cutover",
+          "Probability — High / Medium / Low",
+          "Impact — High / Medium / Low",
+          "Score — 1–9 (probability × impact on a 3×3 matrix)",
+          "Owner — Named person",
+          "Response — Avoid / Mitigate / Transfer / Accept + specific actions",
+          "Trigger — Observable event that activates the response",
+          "Status — Open / Mitigated / Occurred / Closed"
+        ]
+      },
+      {
+        "type": "img",
+        "src": "/images/blog/implementation-risk-register-template-1.svg",
+        "alt": "Risk register template diagram showing annotated columns for risk statement, probability, impact, owner, mitigation, and status, with two filled example rows",
+        "caption": "Each column annotated: one row per risk, every field filled honestly."
+      },
+      {
+        "type": "h2",
+        "text": "The Scoring Model"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "Low probability x Low impact: 1 (green)",
+          "Low probability x Medium impact: 2 (green)",
+          "Low probability x High impact: 3 (green)",
+          "Medium probability x Low impact: 2 (green)",
+          "Medium probability x Medium impact: 4 (amber)",
+          "Medium probability x High impact: 6 (amber)",
+          "High probability x Low impact: 3 (green)",
+          "High probability x Medium impact: 6 (amber)",
+          "High probability x High impact: 9 (red)"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "7–9: red — active plan, executive visibility, weekly review. 4–6: amber — plan drafted, biweekly review. 1–3: green — watchlist, monthly review."
+      },
+      {
+        "type": "img",
+        "src": "/images/blog/implementation-risk-register-template-2.svg",
+        "alt": "3×3 risk scoring heat map of probability versus impact, with red 7–9, amber 4–6, and green 1–3 zones",
+        "caption": "Score = probability × impact. Reds get weekly executive visibility; ambers biweekly review; greens sit on the monthly watchlist."
+      },
+      {
+        "type": "h2",
+        "text": "Filled Example: 8 Realistic Risks"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "R-001 · If requirements continue to expand after design sign-off, then configuration rework will push go-live by 4–6 weeks. · Scope · H×H = 9 · Owner: Project Manager · Response (Avoid): freeze scope at sign-off; all changes via change control with impact assessment · Trigger: any new requirement raised post-sign-off · Status: Open",
+          "R-002 · If legacy time-keeping data is not cleansed before migration, then UAT will surface pay-rule defects late, delaying go-live. · Data · H×H = 9 · Owner: Data Lead · Response (Mitigate): two cleansing sprints before first mock load; reconciliation sign-off gates each load · Trigger: mock load reconciliation variances >0 · Status: Open",
+          "R-003 · If the client payroll lead has no protected capacity, then design decisions will queue and the schedule will slip. · Resources · H×H = 9 · Owner: Executive Sponsor · Response (Mitigate): 50% capacity formally allocated in writing; backfill identified · Trigger: decision turnaround exceeds 5 business days · Status: Open",
+          "R-004 · If the benefits carrier EDI file fails in integration testing, then enrollment data will require manual entry at go-live. · Technology · M×H = 6 · Owner: Integration Lead · Response (Mitigate): early carrier connectivity test in month 1; manual-entry contingency staffed · Trigger: first connectivity test fails · Status: Open",
+          "R-005 · If managers don't complete approval training, then time-off requests will bottleneck after go-live. · Change · M×M = 4 · Owner: Change Lead · Response (Mitigate): training completion tracked as go-live gate; manager champions per department · Trigger: training completion <90% at T-2 weeks · Status: Open",
+          "R-006 · If Quebec-specific tax rules are misconfigured, then the first payroll will produce incorrect deductions. · Compliance · L×H = 3… scored honestly? Reassess: a multi-jurisdiction project makes this M×H = 6 · Owner: Payroll Lead · Response (Avoid): jurisdiction review workshop before design sign-off; parallel run includes Quebec scenarios · Trigger: parallel run variance in Quebec deductions · Status: Open",
+          "R-007 · If the steering committee cannot reach decisions within one meeting cycle, then dependent workstreams will idle. · Governance · M×M = 4 · Owner: Project Manager · Response (Mitigate): decision log with due dates; escalation path to sponsor defined · Trigger: any decision open >10 business days · Status: Open",
+          "R-008 · If the legacy system remains editable during the data freeze, then migration reconciliation will be invalidated. · Cutover · M×H = 6 · Owner: Cutover Manager · Response (Avoid): freeze communicated 4 weeks ahead; read-only access enforced technically · Trigger: any write detected during freeze window · Status: Open"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Note R-006: scoring is a thinking tool. When the context changes the probability, rescore — don't defend the old number."
+      },
+      {
+        "type": "h2",
+        "text": "Review Cadence"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "Weekly: red and amber risks, in the project team meeting",
+          "Steering committee: top risks as the first agenda item, every meeting",
+          "Monthly: full register review, including green watchlist items"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "A risk stays open until its mitigation is verified — the parallel run reconciled, the training completed, the freeze held. \"Plan in progress\" is not \"mitigated.\""
+      },
+      {
+        "type": "h2",
+        "text": "Key Takeaways"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "Write every risk as \"if X, then Y\" — condition plus consequence.",
+          "Every risk gets a named owner, a response, and an observable trigger.",
+          "Score on a 3×3 matrix; review reds weekly, ambers biweekly.",
+          "Risks stay open until mitigations are verified, not just planned."
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "FAQ"
+      },
+      {
+        "type": "h3",
+        "text": "What should an implementation risk register contain?"
+      },
+      {
+        "type": "p",
+        "text": "Risk statements, category, probability/impact scores, named owner, response plan, trigger, and status — reviewed on a fixed cadence."
+      },
+      {
+        "type": "h3",
+        "text": "How many risks should be in the register?"
+      },
+      {
+        "type": "p",
+        "text": "As many as are real — typically 15–30 for a mid-size implementation. Fewer usually means under-identification, not low risk."
+      },
+      {
+        "type": "h3",
+        "text": "Who owns risks in the register?"
+      },
+      {
+        "type": "p",
+        "text": "Named individuals, never \"the team.\" The project manager maintains the register; owners execute responses."
+      },
+      {
+        "type": "h3",
+        "text": "What's the difference between a risk and an issue?"
+      },
+      {
+        "type": "p",
+        "text": "A risk might happen; an issue already happened. Issues go in the issue log with action plans; risks stay in the register until they occur or are retired."
+      },
+      {
+        "type": "h2",
+        "text": "Next Steps"
+      },
+      {
+        "type": "p",
+        "text": "Continue to HCM Implementation Risk Management Framework · What Should a Risk Register Contain? · or contact Karim."
+      }
+    ]
+  },
+  {
     "slug": "hcm-go-live-checklist",
     "title": "30-Point HCM Go-Live Checklist",
     "excerpt": "The 30-point HCM go-live checklist: configuration, data, testing, training, cutover, and hypercare — every gate that must be green before launch.",
