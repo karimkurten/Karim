@@ -1,5 +1,217 @@
 [
   {
+    "slug": "hcm-data-migration-guide",
+    "title": "Data Migration in HCM Implementations: A Practical Guide",
+    "excerpt": "A practical guide to HCM data migration: cleansing legacy HR data, mapping pay codes, test loads, and reconciliation — the phase where implementations are won or lost.",
+    "publishedAt": "2026-09-24",
+    "readingTime": "4 min read",
+    "cover": "/images/blog/hcm-data-migration-guide-cover.webp",
+    "tags": [
+      "HCM",
+      "Data Migration",
+      "Implementation"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "Ask implementation veterans where projects actually break, and data migration wins the poll. Not the software, not the methodology — the data. Duplicate employee records, inconsistent job codes, accrual balances that don't reconcile: legacy data carries years of accumulated entropy, and migration is where the bill comes due."
+      },
+      {
+        "type": "img",
+        "src": "/images/blog/hcm-data-migration-guide-cover.webp",
+        "alt": "Data migration flow from legacy HR systems to a new HCM platform with validation checkpoints",
+        "caption": "Migration is the phase where HCM implementations are won or lost — data first, always."
+      },
+      {
+        "type": "h2",
+        "text": "The Migration Sequence"
+      },
+      {
+        "type": "p",
+        "text": "Every migration follows five steps, in order:"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "1. Extract — pull data from legacy systems into a staging area",
+          "2. Cleanse — fix it before it touches the new system",
+          "3. Transform — map legacy structures to new structures",
+          "4. Load — import into the target environment",
+          "5. Reconcile — prove the load is correct"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Skipping or compressing any step just moves the pain downstream, where it's more expensive."
+      },
+      {
+        "type": "img",
+        "src": "/images/blog/hcm-data-migration-guide-1.svg",
+        "alt": "Flow diagram of the five-step HCM data migration sequence: extract, cleanse, transform, load, reconcile",
+        "caption": "The five-step migration sequence — in that order, every time."
+      },
+      {
+        "type": "h2",
+        "text": "Cleanse Before You Migrate, Not During"
+      },
+      {
+        "type": "p",
+        "text": "The cardinal rule: cleansing happens in step 2, never in step 5. Common defects to hunt:"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "Duplicate employee records (rehires, name variations)",
+          "Inconsistent job codes and department names",
+          "Missing or invalid tax IDs and banking details",
+          "Accrual balances that don't match any source of truth",
+          "Terminated employees still flagged active"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Assign data ownership to the business — HR and payroll must validate their own data. IT can move it; only the business can say it's right."
+      },
+      {
+        "type": "h2",
+        "text": "Map Everything Explicitly"
+      },
+      {
+        "type": "p",
+        "text": "Every legacy field needs a documented mapping: source field to transformation rule to target field. Pay special attention to:"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "Pay codes — legacy earnings/deduction codes rarely map 1:1; document every merge and split",
+          "Organizational structure — hierarchies drive security, approvals, and reporting",
+          "Employment statuses — full-time/part-time/contractor definitions vary by system"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Unmapped fields are a decision to lose data. Make it conscious."
+      },
+      {
+        "type": "h2",
+        "text": "Run Multiple Migration Passes"
+      },
+      {
+        "type": "p",
+        "text": "Plan for at least three loads:"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "1. Trial load into a test environment — validates the mechanics",
+          "2. Full mock load — validates the data, reconciled completely",
+          "3. Production load — the real thing, during the cutover window"
+        ]
+      },
+      {
+        "type": "img",
+        "src": "/images/blog/hcm-data-migration-guide-2.svg",
+        "alt": "Diagram of the three migration passes — trial load, full mock load, and production load — with defects feeding back into cleansing",
+        "caption": "Plan at least three migration passes — each must be cleaner than the last."
+      },
+      {
+        "type": "p",
+        "text": "Each pass should get cleaner. If pass 2 surfaces the same defects as pass 1, the cleansing process is broken — fix the process, not just the data."
+      },
+      {
+        "type": "h2",
+        "text": "Reconcile to the Penny"
+      },
+      {
+        "type": "p",
+        "text": "Reconciliation is not \"the headcount looks about right.\" For each load, reconcile:"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "Employee headcount by status, pay group, and entity",
+          "Year-to-date earnings, deductions, and taxes",
+          "Accrual balances (vacation, sick, other banks)",
+          "Benefits elections and dependent records"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Define tolerance thresholds in advance (usually zero for financial figures) and require business sign-off on every reconciliation report."
+      },
+      {
+        "type": "h2",
+        "text": "Common Mistakes"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "1. Underestimating cleansing effort — budget 30-40% of the migration workstream for cleansing.",
+          "2. Migrating too much history — more history means more defects; see How Much History to Migrate.",
+          "3. No data freeze discipline — changes in the legacy system during migration invalidate reconciliation.",
+          "4. Treating migration as an IT task — it's a business validation task that IT enables."
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Key Takeaways"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "Migration follows extract, cleanse, transform, load, reconcile. In that order, every time.",
+          "Cleanse before loading, never during testing.",
+          "Run at least three migration passes; each must be cleaner than the last.",
+          "Reconcile financial figures to zero tolerance with business sign-off."
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "FAQ"
+      },
+      {
+        "type": "h3",
+        "text": "What is data migration in an HCM implementation?"
+      },
+      {
+        "type": "p",
+        "text": "Moving employee records, payroll history, accrual balances, and configuration data from legacy systems into the new HCM platform — including cleansing, mapping, loading, and reconciliation."
+      },
+      {
+        "type": "h3",
+        "text": "What causes most data migration failures?"
+      },
+      {
+        "type": "p",
+        "text": "Poor legacy data quality combined with cleansing attempted too late. Defects found in testing cost far more than defects fixed before loading."
+      },
+      {
+        "type": "h3",
+        "text": "How many test migration loads should we run?"
+      },
+      {
+        "type": "p",
+        "text": "At minimum: a trial load (mechanics), a full mock load (data validation), then the production load. Complex projects need more."
+      },
+      {
+        "type": "h3",
+        "text": "Who owns data quality in a migration?"
+      },
+      {
+        "type": "p",
+        "text": "The business — HR and payroll validate their data. IT enables the movement; only the business can certify correctness."
+      },
+      {
+        "type": "h2",
+        "text": "Next Steps"
+      },
+      {
+        "type": "p",
+        "text": "Continue to Data Cleansing Playbook, Data Migration Checklist, or contact Karim."
+      }
+    ]
+  },
+  {
     "slug": "what-is-uat-hcm-implementation",
     "title": "What Is UAT in an HCM Implementation?",
     "excerpt": "What is user acceptance testing in an HCM implementation? Who participates, how test scripts work, defect triage, and what sign-off really means.",
