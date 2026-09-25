@@ -209,7 +209,7 @@ export const metrics = [
   { value: "15%", label: "Ops Efficiency Boost" },
   { value: "25%", label: "Faster Issue Resolution" },
   { value: "15+", label: "Consultants Mentored" },
-  { value: "50+", label: "Enterprise Clients" },
+  { value: () => `${getClientsServed()}+`, label: "Enterprise Clients" },
   { value: "98%", label: "System Accuracy" },
   { value: "100%", label: "On-Time Delivery" },
 ];

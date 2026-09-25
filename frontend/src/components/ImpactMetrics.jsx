@@ -4,6 +4,8 @@ import { useScrollReveal } from '../hooks/useScrollReveal';
 import { Handshake } from 'lucide-react';
 
 const MetricCard = ({ item, index, isVisible }) => {
+  const value = typeof item.value === 'function' ? item.value() : item.value;
+
   return (
     <div
       className={`group p-6 rounded-2xl border border-[#E2E8F0] bg-white/50 text-center hover:border-[#2B6CB0]/30 hover:bg-[#2B6CB0]/5 transition-all duration-500 hover:-translate-y-1 hover:shadow-lg hover:shadow-[#2B6CB0]/5 ${
@@ -12,7 +14,7 @@ const MetricCard = ({ item, index, isVisible }) => {
       style={{ transitionDelay: `${150 + index * 80}ms` }}
     >
       <div className="text-3xl md:text-4xl font-bold text-[#2B6CB0] font-serif">
-        {item.value}
+        {value}
       </div>
       <div className="mt-2 text-sm text-[#94A3B8] uppercase tracking-wider">
         {item.label}
