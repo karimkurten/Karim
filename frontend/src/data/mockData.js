@@ -16,8 +16,22 @@ export const personalInfo = {
     "Strategic Project and Program Manager with 7+ years of progressive experience in HCM software implementation, multi-project portfolio management, and cross-border client onboarding. Currently leading implementations in ADP's Center of Excellence for enterprise clients across Canada and the United States.",
 };
 
+const getClientsServed = () => {
+  const baseValue = 100;
+  const startDate = new Date('2026-09-25T00:00:00-04:00');
+  const now = new Date();
+
+  const startYear = startDate.getFullYear();
+  const startMonth = startDate.getMonth();
+  const nowYear = now.getFullYear();
+  const nowMonth = now.getMonth();
+
+  const monthsElapsed = (nowYear - startYear) * 12 + (nowMonth - startMonth);
+  return Math.max(baseValue, baseValue + monthsElapsed);
+};
+
 export const stats = [
-  { value: 50, suffix: "+", label: "Clients Served" },
+  { value: getClientsServed, suffix: "+", label: "Clients Served" },
   { value: 7, suffix: "+", label: "Years Experience" },
   { value: 100, suffix: "%", label: "On-Time Delivery" },
   { value: 95, suffix: "%", label: "Client Retention" },

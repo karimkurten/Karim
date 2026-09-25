@@ -4,8 +4,9 @@ import { useScrollReveal, useCounter } from '../hooks/useScrollReveal';
 import { ArrowDown, ExternalLink, Download } from 'lucide-react';
 
 const StatCounter = ({ value, suffix, label }) => {
+  const resolvedValue = typeof value === 'function' ? value() : value;
   const [ref, isVisible] = useScrollReveal(0.5);
-  const count = useCounter(value, 2200, isVisible);
+  const count = useCounter(resolvedValue, 2200, isVisible);
 
   return (
     <div ref={ref} className="text-center">
