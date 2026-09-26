@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1240 640" font-family="-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif">
+  <defs>
+    <linearGradient id="hero2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1e3a5f"/><stop offset="1" stop-color="#0f172a"/>
+    </linearGradient>
+    <linearGradient id="panel2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#F0F4F8"/>
+    </linearGradient>
+    <filter id="shadow2" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="3" stdDeviation="6" flood-color="#0f172a" flood-opacity="0.22"/>
+    </filter>
+  </defs>
+  <rect x="0" y="0" width="1240" height="640" rx="14" fill="#F0F4F8"/>
+  <rect x="0" y="0" width="1240" height="640" rx="14" fill="none" stroke="#E2E8F0" stroke-width="2"/>
+  <text x="40" y="48" font-size="26" font-weight="700" fill="#1A202C">Three Delivery Models, One HCM Reality</text>
+  <text x="40" y="74" font-size="14" fill="#64748B">Waterfall, agile, and hybrid as they actually behave on HCM projects — none is pure, and the project chooses per workstream</text>
+
+  <!-- Waterfall column -->
+  <g filter="url(#shadow2)">
+    <rect x="40" y="110" width="368" height="460" rx="12" fill="url(#hero2)"/>
+    <text x="224" y="152" text-anchor="middle" font-size="19" font-weight="700" fill="#ffffff">Waterfall</text>
+    <text x="224" y="178" text-anchor="middle" font-size="12.5" fill="#93C5FD">Sequential phases, formal gates</text>
+    <line x1="72" y1="198" x2="376" y2="198" stroke="#2B6CB0" stroke-width="1"/>
+    <g font-size="13" fill="#c9d3e6">
+      <text x="72" y="228" font-weight="700" fill="#ffffff">Strengths</text>
+      <text x="72" y="252">Predictable plan and budget</text>
+      <text x="72" y="274">Clear accountability per phase</text>
+      <text x="72" y="296">Fits regulated payroll areas</text>
+      <text x="72" y="334" font-weight="700" fill="#ffffff">Trade-offs</text>
+      <text x="72" y="358">Late feedback — surprises in UAT</text>
+      <text x="72" y="380">Change is expensive after sign-off</text>
+      <text x="72" y="402">Assumes requirements are stable</text>
+      <text x="72" y="440" font-weight="700" fill="#ffffff">Best for</text>
+      <text x="72" y="464">Payroll, compliance, benefits</text>
+      <text x="72" y="486">workstreams with fixed rules</text>
+    </g>
+    <text x="224" y="540" text-anchor="middle" font-size="12" font-weight="700" fill="#93C5FD">Plan-driven · low tolerance for rework</text>
+  </g>
+
+  <!-- Agile column -->
+  <g filter="url(#shadow2)">
+    <rect x="436" y="110" width="368" height="460" rx="12" fill="url(#panel2)" stroke="#E2E8F0" stroke-width="2"/>
+    <text x="620" y="152" text-anchor="middle" font-size="19" font-weight="700" fill="#1A202C">Agile</text>
+    <text x="620" y="178" text-anchor="middle" font-size="12.5" fill="#2B6CB0">Iterative build, fast feedback</text>
+    <line x1="468" y1="198" x2="772" y2="198" stroke="#E2E8F0" stroke-width="1"/>
+    <g font-size="13" fill="#475569">
+      <text x="468" y="228" font-weight="700" fill="#1A202C">Strengths</text>
+      <text x="468" y="252">Early visibility of the solution</text>
+      <text x="468" y="274">Fast course correction</text>
+      <text x="468" y="296">Stakeholder engagement stays high</text>
+      <text x="468" y="334" font-weight="700" fill="#1A202C">Trade-offs</text>
+      <text x="468" y="358">Scope can drift without discipline</text>
+      <text x="468" y="380">Hard to fix-price and fix-date</text>
+      <text x="468" y="402">Needs constant business availability</text>
+      <text x="468" y="440" font-weight="700" fill="#1A202C">Best for</text>
+      <text x="468" y="464">Talent, performance, learning —</text>
+      <text x="468" y="486">areas where process can evolve</text>
+    </g>
+    <text x="620" y="540" text-anchor="middle" font-size="12" font-weight="700" fill="#2B6CB0">Adapt-driven · feedback is the control</text>
+  </g>
+
+  <!-- Hybrid column -->
+  <g filter="url(#shadow2)">
+    <rect x="832" y="110" width="368" height="460" rx="12" fill="#ffffff" stroke="#2B6CB0" stroke-width="3"/>
+    <text x="1016" y="152" text-anchor="middle" font-size="19" font-weight="700" fill="#2B6CB0">Hybrid — the HCM norm</text>
+    <text x="1016" y="178" text-anchor="middle" font-size="12.5" fill="#64748B">Phased gates + iterative cycles inside them</text>
+    <line x1="864" y1="198" x2="1168" y2="198" stroke="#E2E8F0" stroke-width="1"/>
+    <g font-size="13" fill="#475569">
+      <text x="864" y="228" font-weight="700" fill="#1A202C">How it works</text>
+      <text x="864" y="252">Phases with entry/exit gates,</text>
+      <text x="864" y="274">iterative configuration sprints</text>
+      <text x="864" y="296">inside Design and Build</text>
+      <text x="864" y="334" font-weight="700" fill="#1A202C">Why it wins</text>
+      <text x="864" y="358">Payroll gets its fixed gates;</text>
+      <text x="864" y="380">talent areas get fast feedback</text>
+      <text x="864" y="402">Governance without rigidity</text>
+      <text x="864" y="440" font-weight="700" fill="#1A202C">Watch out</text>
+      <text x="864" y="464">Agile rituals can hide a</text>
+      <text x="864" y="486">waterfall mindset — decide which</text>
+      <text x="864" y="508">model owns each decision</text>
+    </g>
+    <text x="1016" y="552" text-anchor="middle" font-size="12" font-weight="700" fill="#2B6CB0">Disciplined flexibility · most HCM projects land here</text>
+  </g>
+
+  <!-- Footer -->
+  <rect x="40" y="592" width="1160" height="1.5" fill="#E2E8F0"/>
+  <text x="40" y="618" font-size="12.5" fill="#64748B">The model debate is secondary — what matters is that every workstream knows its cadence, its gate, and who decides.</text>
+</svg>
