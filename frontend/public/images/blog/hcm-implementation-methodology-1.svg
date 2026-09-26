@@ -1,0 +1,113 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1240 560" font-family="-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif">
+  <defs>
+    <linearGradient id="hero" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1e3a5f"/><stop offset="1" stop-color="#0f172a"/>
+    </linearGradient>
+    <linearGradient id="panel" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#F0F4F8"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="3" stdDeviation="6" flood-color="#0f172a" flood-opacity="0.22"/>
+    </filter>
+    <filter id="shadow-deep" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="6" stdDeviation="10" flood-color="#0f172a" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+  <rect x="0" y="0" width="1240" height="560" rx="14" fill="#F0F4F8"/>
+  <rect x="0" y="0" width="1240" height="560" rx="14" fill="none" stroke="#E2E8F0" stroke-width="2"/>
+  <text x="40" y="48" font-size="26" font-weight="700" fill="#1A202C">Six Delivery Phases: What Each Phase Owns</text>
+  <text x="40" y="74" font-size="14" fill="#64748B">Entry criteria open the gate — exit criteria close it. Nothing moves forward unsigned.</text>
+
+  <!-- Connector band -->
+  <rect x="40" y="236" width="1160" height="10" rx="5" fill="#E2E8F0"/>
+  <rect x="40" y="236" width="1160" height="10" rx="5" fill="none" stroke="#cbd5e1" stroke-width="1"/>
+
+  <!-- Phase cards -->
+  <g font-size="12.5" fill="#475569">
+    <g filter="url(#shadow)">
+      <rect x="40" y="110" width="176" height="330" rx="12" fill="url(#hero)"/>
+      <text x="128" y="148" text-anchor="middle" font-size="15" font-weight="700" fill="#ffffff">1 · Initiate</text>
+      <text x="128" y="172" text-anchor="middle" font-size="12" fill="#93C5FD">Charter · scope · team</text>
+      <line x1="64" y1="188" x2="192" y2="188" stroke="#2B6CB0" stroke-width="1"/>
+      <text x="128" y="212" text-anchor="middle" font-size="11.5" fill="#c9d3e6">Kickoff, roles,</text>
+      <text x="128" y="230" text-anchor="middle" font-size="11.5" fill="#c9d3e6">governance model</text>
+      <text x="128" y="252" text-anchor="middle" font-size="11.5" fill="#c9d3e6">Plan, RAID setup</text>
+      <line x1="64" y1="272" x2="192" y2="272" stroke="#2B6CB0" stroke-width="1"/>
+      <text x="128" y="296" text-anchor="middle" font-size="11" font-weight="700" fill="#ffffff">Exit: approved</text>
+      <text x="128" y="312" text-anchor="middle" font-size="11" font-weight="700" fill="#ffffff">charter + plan</text>
+    </g>
+    <g filter="url(#shadow)">
+      <rect x="232" y="110" width="176" height="330" rx="12" fill="url(#panel)" stroke="#E2E8F0" stroke-width="2"/>
+      <text x="320" y="148" text-anchor="middle" font-size="15" font-weight="700" fill="#1A202C">2 · Design</text>
+      <text x="320" y="172" text-anchor="middle" font-size="12" fill="#2B6CB0">Requirements · fit-gap</text>
+      <line x1="256" y1="188" x2="384" y2="188" stroke="#E2E8F0" stroke-width="1"/>
+      <text x="320" y="212" text-anchor="middle" font-size="11.5">Workshops, gap log,</text>
+      <text x="320" y="230" text-anchor="middle" font-size="11.5">future-state design</text>
+      <text x="320" y="252" text-anchor="middle" font-size="11.5">Solution blueprint</text>
+      <line x1="256" y1="272" x2="384" y2="272" stroke="#E2E8F0" stroke-width="1"/>
+      <text x="320" y="296" text-anchor="middle" font-size="11" font-weight="700" fill="#1A202C">Exit: signed-off</text>
+      <text x="320" y="312" text-anchor="middle" font-size="11" font-weight="700" fill="#1A202C">design baseline</text>
+    </g>
+    <g filter="url(#shadow)">
+      <rect x="424" y="110" width="176" height="330" rx="12" fill="url(#panel)" stroke="#E2E8F0" stroke-width="2"/>
+      <text x="512" y="148" text-anchor="middle" font-size="15" font-weight="700" fill="#1A202C">3 · Build</text>
+      <text x="512" y="172" text-anchor="middle" font-size="12" fill="#2B6CB0">Configure · migrate</text>
+      <line x1="448" y1="188" x2="576" y2="188" stroke="#E2E8F0" stroke-width="1"/>
+      <text x="512" y="212" text-anchor="middle" font-size="11.5">Configuration, data</text>
+      <text x="512" y="230" text-anchor="middle" font-size="11.5">migration passes</text>
+      <text x="512" y="252" text-anchor="middle" font-size="11.5">Integration wiring</text>
+      <line x1="448" y1="272" x2="576" y2="272" stroke="#E2E8F0" stroke-width="1"/>
+      <text x="512" y="296" text-anchor="middle" font-size="11" font-weight="700" fill="#1A202C">Exit: working</text>
+      <text x="512" y="312" text-anchor="middle" font-size="11" font-weight="700" fill="#1A202C">system in staging</text>
+    </g>
+    <g filter="url(#shadow-deep)">
+      <rect x="616" y="110" width="176" height="330" rx="12" fill="#ffffff" stroke="#2B6CB0" stroke-width="3"/>
+      <text x="704" y="148" text-anchor="middle" font-size="15" font-weight="700" fill="#2B6CB0">4 · Validate</text>
+      <text x="704" y="172" text-anchor="middle" font-size="12" fill="#64748B">Test · UAT · train</text>
+      <line x1="640" y1="188" x2="768" y2="188" stroke="#E2E8F0" stroke-width="1"/>
+      <text x="704" y="212" text-anchor="middle" font-size="11.5">System, integration,</text>
+      <text x="704" y="230" text-anchor="middle" font-size="11.5">and UAT execution</text>
+      <text x="704" y="252" text-anchor="middle" font-size="11.5">End-user training</text>
+      <line x1="640" y1="272" x2="768" y2="272" stroke="#E2E8F0" stroke-width="1"/>
+      <text x="704" y="296" text-anchor="middle" font-size="11" font-weight="700" fill="#1A202C">Exit: UAT sign-off,</text>
+      <text x="704" y="312" text-anchor="middle" font-size="11" font-weight="700" fill="#1A202C">zero critical defects</text>
+    </g>
+    <g filter="url(#shadow)">
+      <rect x="808" y="110" width="176" height="330" rx="12" fill="url(#panel)" stroke="#E2E8F0" stroke-width="2"/>
+      <text x="896" y="148" text-anchor="middle" font-size="15" font-weight="700" fill="#1A202C">5 · Deploy</text>
+      <text x="896" y="172" text-anchor="middle" font-size="12" fill="#2B6CB0">Cutover · go-live</text>
+      <line x1="832" y1="188" x2="960" y2="188" stroke="#E2E8F0" stroke-width="1"/>
+      <text x="896" y="212" text-anchor="middle" font-size="11.5">Cutover runbook,</text>
+      <text x="896" y="230" text-anchor="middle" font-size="11.5">hypercare command</text>
+      <text x="896" y="252" text-anchor="middle" font-size="11.5">center stand-up</text>
+      <line x1="832" y1="272" x2="960" y2="272" stroke="#E2E8F0" stroke-width="1"/>
+      <text x="896" y="296" text-anchor="middle" font-size="11" font-weight="700" fill="#1A202C">Exit: successful</text>
+      <text x="896" y="312" text-anchor="middle" font-size="11" font-weight="700" fill="#1A202C">payroll / cycle one</text>
+    </g>
+    <g filter="url(#shadow)">
+      <rect x="1000" y="110" width="176" height="330" rx="12" fill="url(#panel)" stroke="#E2E8F0" stroke-width="2"/>
+      <text x="1088" y="148" text-anchor="middle" font-size="15" font-weight="700" fill="#1A202C">6 · Sustain</text>
+      <text x="1088" y="172" text-anchor="middle" font-size="12" fill="#2B6CB0">Support · optimize</text>
+      <line x1="1024" y1="188" x2="1152" y2="188" stroke="#E2E8F0" stroke-width="1"/>
+      <text x="1088" y="212" text-anchor="middle" font-size="11.5">Knowledge transfer,</text>
+      <text x="1088" y="230" text-anchor="middle" font-size="11.5">support handover</text>
+      <text x="1088" y="252" text-anchor="middle" font-size="11.5">Lessons learned</text>
+      <line x1="1024" y1="272" x2="1152" y2="272" stroke="#E2E8F0" stroke-width="1"/>
+      <text x="1088" y="296" text-anchor="middle" font-size="11" font-weight="700" fill="#1A202C">Exit: closure</text>
+      <text x="1088" y="312" text-anchor="middle" font-size="11" font-weight="700" fill="#1A202C">accepted by sponsor</text>
+    </g>
+  </g>
+
+  <!-- Flow chevrons -->
+  <g fill="#2B6CB0" opacity="0.85">
+    <polygon points="216,236 226,228 226,244"/>
+    <polygon points="408,236 418,228 418,244"/>
+    <polygon points="600,236 610,228 610,244"/>
+    <polygon points="792,236 802,228 802,244"/>
+    <polygon points="984,236 994,228 994,244"/>
+  </g>
+
+  <!-- Footers -->
+  <text x="40" y="486" font-size="12.5" fill="#64748B">Underneath every phase, three engines run continuously: risk management, data migration readiness, and change management.</text>
+  <text x="40" y="516" font-size="12.5" fill="#64748B">A phase that borrows its exit criteria from the next phase has already failed — the gate is the discipline.</text>
+</svg>
