@@ -1,0 +1,145 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="680" viewBox="0 0 1200 680" role="img" aria-label="Timeline diagram of an HCM implementation showing four parallel workstreams converging on milestones, with the critical path highlighted in blue">
+  <defs>
+    <linearGradient id="hero2" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#0f172a"/>
+      <stop offset="1" stop-color="#1e3a5f"/>
+    </linearGradient>
+    <linearGradient id="crit" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#2B6CB0"/>
+      <stop offset="1" stop-color="#3b82c4"/>
+    </linearGradient>
+    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="0" stdDeviation="5" flood-color="#2B6CB0" flood-opacity="0.55"/>
+    </filter>
+    <filter id="soft2" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#0f172a" flood-opacity="0.15"/>
+    </filter>
+    <marker id="arrowDep" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+      <polygon points="0,0 8,4 0,8" fill="#64748B"/>
+    </marker>
+    <marker id="arrowCrit" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+      <polygon points="0,0 8,4 0,8" fill="#2B6CB0"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="1200" height="680" rx="16" fill="#F0F4F8"/>
+
+  <!-- Header -->
+  <rect x="0" y="0" width="1200" height="104" rx="16" fill="url(#hero2)"/>
+  <text x="40" y="44" font-family="Georgia, serif" font-size="28" fill="#ffffff">Reading the Critical Path</text>
+  <text x="40" y="74" font-family="Arial, sans-serif" font-size="15" fill="#94A3B8">Four workstreams, one chain of dependencies that sets the end date — every delay on the blue path moves go-live</text>
+
+  <!-- Timeline grid -->
+  <g font-family="Arial, sans-serif" font-size="12" fill="#64748B">
+    <line x1="230" y1="120" x2="230" y2="560" stroke="#E2E8F0" stroke-width="1"/>
+    <line x1="344" y1="120" x2="344" y2="560" stroke="#E2E8F0" stroke-width="1"/>
+    <line x1="458" y1="120" x2="458" y2="560" stroke="#E2E8F0" stroke-width="1"/>
+    <line x1="572" y1="120" x2="572" y2="560" stroke="#E2E8F0" stroke-width="1"/>
+    <line x1="686" y1="120" x2="686" y2="560" stroke="#E2E8F0" stroke-width="1"/>
+    <line x1="800" y1="120" x2="800" y2="560" stroke="#E2E8F0" stroke-width="1"/>
+    <line x1="914" y1="120" x2="914" y2="560" stroke="#E2E8F0" stroke-width="1"/>
+    <line x1="1028" y1="120" x2="1028" y2="560" stroke="#E2E8F0" stroke-width="1"/>
+    <line x1="1140" y1="120" x2="1140" y2="560" stroke="#E2E8F0" stroke-width="1"/>
+    <text x="230" y="140" text-anchor="middle">M1</text>
+    <text x="344" y="140" text-anchor="middle">M2</text>
+    <text x="458" y="140" text-anchor="middle">M3</text>
+    <text x="572" y="140" text-anchor="middle">M4</text>
+    <text x="686" y="140" text-anchor="middle">M5</text>
+    <text x="800" y="140" text-anchor="middle">M6</text>
+    <text x="914" y="140" text-anchor="middle">M7</text>
+    <text x="1028" y="140" text-anchor="middle">M8</text>
+  </g>
+
+  <!-- Lane labels -->
+  <g font-family="Arial, sans-serif">
+    <rect x="20" y="170" width="190" height="76" rx="8" fill="#1e3a5f"/>
+    <text x="115" y="202" font-size="13" font-weight="bold" fill="#ffffff" text-anchor="middle">Design &amp;</text>
+    <text x="115" y="220" font-size="13" font-weight="bold" fill="#ffffff" text-anchor="middle">Configuration</text>
+
+    <rect x="20" y="266" width="190" height="76" rx="8" fill="#ffffff" stroke="#E2E8F0" stroke-width="1.5"/>
+    <text x="115" y="298" font-size="13" font-weight="bold" fill="#1A202C" text-anchor="middle">Data</text>
+    <text x="115" y="316" font-size="13" font-weight="bold" fill="#1A202C" text-anchor="middle">Migration</text>
+
+    <rect x="20" y="362" width="190" height="76" rx="8" fill="#ffffff" stroke="#E2E8F0" stroke-width="1.5"/>
+    <text x="115" y="402" font-size="13" font-weight="bold" fill="#1A202C" text-anchor="middle">Integrations</text>
+
+    <rect x="20" y="458" width="190" height="76" rx="8" fill="#ffffff" stroke="#E2E8F0" stroke-width="1.5"/>
+    <text x="115" y="498" font-size="13" font-weight="bold" fill="#1A202C" text-anchor="middle">Testing &amp; UAT</text>
+  </g>
+
+  <!-- Non-critical bars (muted) -->
+  <g filter="url(#soft2)" font-family="Arial, sans-serif">
+    <rect x="230" y="274" width="228" height="30" rx="6" fill="#94A3B8"/>
+    <text x="344" y="294" font-size="12" fill="#ffffff" text-anchor="middle">Extraction &amp; profiling</text>
+    <rect x="458" y="308" width="228" height="30" rx="6" fill="#94A3B8"/>
+    <text x="572" y="328" font-size="12" fill="#ffffff" text-anchor="middle">Trial loads &amp; cleansing</text>
+    <rect x="344" y="396" width="228" height="30" rx="6" fill="#94A3B8"/>
+    <text x="458" y="416" font-size="12" fill="#ffffff" text-anchor="middle">Interface design</text>
+    <rect x="572" y="396" width="200" height="30" rx="6" fill="#94A3B8"/>
+    <text x="672" y="416" font-size="12" fill="#ffffff" text-anchor="middle">Build &amp; unit test</text>
+  </g>
+
+  <!-- Critical path bars (glowing blue) -->
+  <g filter="url(#glow)" font-family="Arial, sans-serif">
+    <rect x="230" y="200" width="114" height="30" rx="6" fill="url(#crit)"/>
+    <text x="287" y="220" font-size="12" fill="#ffffff" text-anchor="middle">Workshops</text>
+    <rect x="344" y="200" width="114" height="30" rx="6" fill="url(#crit)"/>
+    <text x="401" y="220" font-size="12" fill="#ffffff" text-anchor="middle">Fit-gap</text>
+    <rect x="458" y="200" width="228" height="30" rx="6" fill="url(#crit)"/>
+    <text x="572" y="220" font-size="12" fill="#ffffff" text-anchor="middle">Configuration cycles</text>
+    <rect x="686" y="492" width="114" height="30" rx="6" fill="url(#crit)"/>
+    <text x="743" y="512" font-size="12" fill="#ffffff" text-anchor="middle">Syst. test</text>
+    <rect x="800" y="492" width="114" height="30" rx="6" fill="url(#crit)"/>
+    <text x="857" y="512" font-size="12" fill="#ffffff" text-anchor="middle">UAT</text>
+    <rect x="914" y="492" width="114" height="30" rx="6" fill="url(#crit)"/>
+    <text x="971" y="512" font-size="12" fill="#ffffff" text-anchor="middle">Cutover</text>
+  </g>
+
+  <!-- Critical-path dependency arrows (blue) -->
+  <g stroke="#2B6CB0" stroke-width="2" fill="none">
+    <line x1="332" y1="215" x2="356" y2="215" marker-end="url(#arrowCrit)"/>
+    <line x1="446" y1="215" x2="470" y2="215" marker-end="url(#arrowCrit)"/>
+    <line x1="686" y1="215" x2="790" y2="215"/>
+    <line x1="790" y1="215" x2="790" y2="488" marker-end="url(#arrowCrit)"/>
+    <line x1="788" y1="507" x2="812" y2="507" marker-end="url(#arrowCrit)"/>
+    <line x1="902" y1="507" x2="926" y2="507" marker-end="url(#arrowCrit)"/>
+    <line x1="1028" y1="522" x2="1028" y2="536" marker-end="url(#arrowCrit)"/>
+  </g>
+
+  <!-- Feeding dependencies (grey) -->
+  <g stroke="#64748B" stroke-width="1.5" fill="none">
+    <line x1="458" y1="300" x2="458" y2="312" marker-end="url(#arrowDep)"/>
+    <line x1="560" y1="411" x2="584" y2="411" marker-end="url(#arrowDep)"/>
+    <line x1="740" y1="426" x2="740" y2="488" marker-end="url(#arrowDep)"/>
+  </g>
+
+  <!-- Milestones -->
+  <g font-family="Arial, sans-serif" font-size="12" fill="#1A202C">
+    <polygon points="458,540 470,552 458,564 446,552" fill="#2B6CB0"/>
+    <text x="458" y="588" text-anchor="middle" font-weight="bold">Design baseline</text>
+    <polygon points="686,540 698,552 686,564 674,552" fill="#2B6CB0"/>
+    <text x="686" y="588" text-anchor="middle" font-weight="bold">Build complete</text>
+    <polygon points="914,540 926,552 914,564 902,552" fill="#2B6CB0"/>
+    <text x="914" y="588" text-anchor="middle" font-weight="bold">UAT sign-off</text>
+    <polygon points="1028,540 1040,552 1028,564 1016,552" fill="#0f172a"/>
+    <text x="1028" y="588" text-anchor="middle" font-weight="bold">Go-live</text>
+  </g>
+
+  <!-- Float note -->
+  <g font-family="Arial, sans-serif">
+    <rect x="920" y="352" width="220" height="54" rx="8" fill="#ffffff" stroke="#E2E8F0" stroke-width="1.5"/>
+    <text x="1030" y="374" font-size="12" fill="#475569" text-anchor="middle">Integrations carries <tspan font-weight="bold" fill="#1A202C">float</tspan> —</text>
+    <text x="1030" y="392" font-size="12" fill="#475569" text-anchor="middle">slack that does not move go-live</text>
+  </g>
+
+  <!-- Legend -->
+  <g font-family="Arial, sans-serif" font-size="13" fill="#1A202C">
+    <rect x="40" y="616" width="1120" height="48" rx="8" fill="#ffffff" stroke="#E2E8F0" stroke-width="1.5"/>
+    <rect x="70" y="630" width="60" height="18" rx="4" fill="url(#crit)"/>
+    <text x="142" y="644">Critical path — delays here move the end date</text>
+    <rect x="470" y="630" width="60" height="18" rx="4" fill="#94A3B8"/>
+    <text x="542" y="644">Non-critical — has float</text>
+    <polygon points="830,630 840,639 830,648 820,639" fill="#2B6CB0"/>
+    <text x="852" y="644">Milestone — zero-duration decision</text>
+  </g>
+</svg>
