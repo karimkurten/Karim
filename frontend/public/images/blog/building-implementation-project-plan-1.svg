@@ -1,0 +1,140 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="780" viewBox="0 0 1200 780" role="img" aria-label="Layered diagram showing how an implementation plan is built: work breakdown by phase and workstream feeds milestones, which are guarded by phase gates">
+  <defs>
+    <linearGradient id="hero" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#0f172a"/>
+      <stop offset="1" stop-color="#1e3a5f"/>
+    </linearGradient>
+    <linearGradient id="bar" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#2B6CB0"/>
+      <stop offset="1" stop-color="#1e3a5f"/>
+    </linearGradient>
+    <linearGradient id="panel3d" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#F0F4F8"/>
+    </linearGradient>
+    <filter id="soft" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="6" stdDeviation="10" flood-color="#0f172a" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+
+  <rect x="0" y="0" width="1200" height="780" rx="16" fill="#F0F4F8"/>
+
+  <!-- Header -->
+  <rect x="0" y="0" width="1200" height="110" rx="16" fill="url(#hero)"/>
+  <rect x="0" y="94" width="1200" height="16" fill="#0f172a" opacity="0"/>
+  <text x="40" y="48" font-family="Georgia, 'DM Serif Display', serif" font-size="30" fill="#ffffff">From Scope to Schedule</text>
+  <text x="40" y="80" font-family="Arial, Helvetica, sans-serif" font-size="16" fill="#94A3B8">The anatomy of an implementation project plan: break down the work, set the milestones, guard the gates</text>
+
+  <!-- Column 1: WBS -->
+  <g filter="url(#soft)">
+    <rect x="60" y="150" width="330" height="560" rx="12" fill="#0f172a" opacity="0.10"/>
+    <rect x="52" y="144" width="330" height="560" rx="12" fill="url(#panel3d)" stroke="#E2E8F0" stroke-width="1.5"/>
+  </g>
+  <text x="72" y="180" font-family="Georgia, serif" font-size="20" font-weight="bold" fill="#1A202C">1 · Work Breakdown</text>
+  <text x="72" y="202" font-family="Arial, sans-serif" font-size="13" fill="#64748B">Scope split by phase × workstream</text>
+
+  <!-- Phase blocks -->
+  <g font-family="Arial, sans-serif">
+    <rect x="72" y="220" width="290" height="64" rx="8" fill="url(#bar)"/>
+    <text x="86" y="246" font-size="14" font-weight="bold" fill="#ffffff">Initiate</text>
+    <text x="86" y="266" font-size="12" fill="#dbeafe">Charter · scope · governance · RACI</text>
+
+    <rect x="72" y="296" width="290" height="64" rx="8" fill="url(#bar)" opacity="0.92"/>
+    <text x="86" y="322" font-size="14" font-weight="bold" fill="#ffffff">Design</text>
+    <text x="86" y="342" font-size="12" fill="#dbeafe">Workshops · requirements · fit-gap · baseline</text>
+
+    <rect x="72" y="372" width="290" height="64" rx="8" fill="url(#bar)" opacity="0.84"/>
+    <text x="86" y="398" font-size="14" font-weight="bold" fill="#ffffff">Build</text>
+    <text x="86" y="418" font-size="12" fill="#dbeafe">Configuration · data loads · integrations</text>
+
+    <rect x="72" y="448" width="290" height="64" rx="8" fill="url(#bar)" opacity="0.76"/>
+    <text x="86" y="474" font-size="14" font-weight="bold" fill="#ffffff">Validate</text>
+    <text x="86" y="494" font-size="12" fill="#dbeafe">System test · integration test · UAT</text>
+
+    <rect x="72" y="524" width="290" height="64" rx="8" fill="url(#bar)" opacity="0.68"/>
+    <text x="86" y="550" font-size="14" font-weight="bold" fill="#ffffff">Deploy</text>
+    <text x="86" y="570" font-size="12" fill="#dbeafe">Cutover · go-live · hypercare</text>
+
+    <rect x="72" y="600" width="290" height="64" rx="8" fill="url(#bar)" opacity="0.60"/>
+    <text x="86" y="626" font-size="14" font-weight="bold" fill="#ffffff">Sustain</text>
+    <text x="86" y="646" font-size="12" fill="#dbeafe">Knowledge transfer · handover · closure</text>
+  </g>
+
+  <!-- Arrow 1 -->
+  <g>
+    <line x1="392" y1="424" x2="438" y2="424" stroke="#2B6CB0" stroke-width="3"/>
+    <polygon points="438,412 458,424 438,436" fill="#2B6CB0"/>
+    <text x="392" y="408" font-family="Arial, sans-serif" font-size="12" fill="#64748B">every phase ends in</text>
+  </g>
+
+  <!-- Column 2: Milestones -->
+  <g filter="url(#soft)">
+    <rect x="478" y="150" width="300" height="560" rx="12" fill="#0f172a" opacity="0.10"/>
+    <rect x="470" y="144" width="300" height="560" rx="12" fill="url(#panel3d)" stroke="#E2E8F0" stroke-width="1.5"/>
+  </g>
+  <text x="490" y="180" font-family="Georgia, serif" font-size="20" font-weight="bold" fill="#1A202C">2 · Milestones</text>
+  <text x="490" y="202" font-family="Arial, sans-serif" font-size="13" fill="#64748B">Zero-duration decision points</text>
+
+  <g font-family="Arial, sans-serif">
+    <polygon points="620,240 652,272 620,304 588,272" fill="#2B6CB0"/>
+    <text x="490" y="350" font-size="14" font-weight="bold" fill="#1A202C">Charter approved</text>
+    <text x="490" y="370" font-size="12" fill="#475569">Scope, team, governance</text>
+    <text x="490" y="386" font-size="12" fill="#475569">and plan signed off</text>
+
+    <polygon points="620,420 652,452 620,484 588,452" fill="#2B6CB0" opacity="0.85"/>
+    <text x="490" y="530" font-size="14" font-weight="bold" fill="#1A202C">Design baseline signed</text>
+    <text x="490" y="550" font-size="12" fill="#475569">Requirements, fit-gap, and</text>
+    <text x="490" y="566" font-size="12" fill="#475569">maps approved by business</text>
+
+    <polygon points="620,600 652,632 620,664 588,632" fill="#2B6CB0" opacity="0.70"/>
+    <text x="490" y="710" font-size="14" font-weight="bold" fill="#1A202C">UAT accepted</text>
+    <text x="490" y="730" font-size="12" fill="#475569">Zero open critical defects</text>
+  </g>
+
+  <!-- Arrow 2 -->
+  <g>
+    <line x1="780" y1="424" x2="826" y2="424" stroke="#2B6CB0" stroke-width="3"/>
+    <polygon points="826,412 846,424 826,436" fill="#2B6CB0"/>
+    <text x="776" y="408" font-family="Arial, sans-serif" font-size="12" fill="#64748B">each guarded by</text>
+  </g>
+
+  <!-- Column 3: Gates -->
+  <g filter="url(#soft)">
+    <rect x="866" y="150" width="282" height="560" rx="12" fill="#0f172a" opacity="0.10"/>
+    <rect x="858" y="144" width="282" height="560" rx="12" fill="url(#panel3d)" stroke="#E2E8F0" stroke-width="1.5"/>
+  </g>
+  <text x="878" y="180" font-family="Georgia, serif" font-size="20" font-weight="bold" fill="#1A202C">3 · Phase Gates</text>
+  <text x="878" y="202" font-family="Arial, sans-serif" font-size="13" fill="#64748B">Entry and exit criteria</text>
+
+  <g font-family="Arial, sans-serif">
+    <rect x="878" y="220" width="242" height="120" rx="8" fill="#F0F4F8" stroke="#2B6CB0" stroke-width="2"/>
+    <text x="892" y="246" font-size="14" font-weight="bold" fill="#1A202C">Gate: end of Design</text>
+    <text x="892" y="270" font-size="12" fill="#64748B">ENTRY</text>
+    <text x="892" y="288" font-size="12" fill="#475569">Workshops complete, gap log</text>
+    <text x="892" y="304" font-size="12" fill="#475569">reviewed by process owners</text>
+    <text x="892" y="326" font-size="12" fill="#64748B">EXIT</text>
+    <text x="892" y="344" font-size="12" fill="#475569">Signed design baseline,</text>
+    <text x="892" y="360" font-size="12" fill="#475569">steering approval on record</text>
+
+    <rect x="878" y="360" width="242" height="120" rx="8" fill="#F0F4F8" stroke="#2B6CB0" stroke-width="2" opacity="0.9"/>
+    <text x="892" y="386" font-size="14" font-weight="bold" fill="#1A202C">Gate: end of Validate</text>
+    <text x="892" y="410" font-size="12" fill="#64748B">ENTRY</text>
+    <text x="892" y="428" font-size="12" fill="#475569">Stable test environment,</text>
+    <text x="892" y="444" font-size="12" fill="#475569">scripts reviewed, data loaded</text>
+    <text x="892" y="466" font-size="12" fill="#64748B">EXIT</text>
+    <text x="892" y="484" font-size="12" fill="#475569">Signed UAT acceptance,</text>
+    <text x="892" y="500" font-size="12" fill="#475569">zero critical defects open</text>
+
+    <rect x="878" y="500" width="242" height="150" rx="8" fill="#1e3a5f"/>
+    <text x="892" y="526" font-size="14" font-weight="bold" fill="#ffffff">The baseline</text>
+    <text x="892" y="548" font-size="12" fill="#dbeafe">The WBS, milestones, and gates</text>
+    <text x="892" y="564" font-size="12" fill="#dbeafe">form the agreed baseline.</text>
+    <text x="892" y="586" font-size="12" fill="#dbeafe">Every status report measures</text>
+    <text x="892" y="602" font-size="12" fill="#dbeafe">variance against it — never</text>
+    <text x="892" y="618" font-size="12" fill="#dbeafe">against a remembered plan.</text>
+  </g>
+
+  <!-- Footer strip -->
+  <rect x="52" y="724" width="1096" height="40" rx="8" fill="#0f172a"/>
+  <text x="72" y="750" font-family="Arial, sans-serif" font-size="14" fill="#ffffff">Break down the work → mark the decisions → guard the gates. <tspan fill="#94A3B8">A plan without all three is a date list, not a plan.</tspan></text>
+</svg>
