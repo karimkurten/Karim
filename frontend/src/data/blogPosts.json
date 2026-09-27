@@ -1,5 +1,258 @@
 [
   {
+    "slug": "building-implementation-project-plan",
+    "title": "Building the Implementation Project Plan: From Scope to Scheduled Delivery",
+    "excerpt": "A practitioner's guide to building a real HCM implementation plan: work breakdown, milestones, critical path, payroll-cycle constraints, and schedule control.",
+    "publishedAt": "2026-09-27",
+    "readingTime": "8 min read",
+    "cover": "/images/blog/building-implementation-project-plan-cover.webp",
+    "tags": [
+      "HCM",
+      "Project Management",
+      "Implementation"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "Every HCM implementation eventually faces the same uncomfortable meeting: someone asks whether the go-live date is real, and the room goes quiet. The date was set in a sales cycle or a steering deck months ago, the work was never broken down against it, and the project is discovering — week by week — that the date was a wish with a calendar attached."
+      },
+      {
+        "type": "p",
+        "text": "Building a real plan is the moment scope gets translated into time, people, and sequencing — and where the trade-offs the sponsor will eventually face become visible early enough to act on. Here is how professional teams build it: work breakdown, milestones and gates, dependencies and the critical path, estimation, resource loading, immovable constraints, and keeping the plan honest once work starts."
+      },
+      {
+        "type": "h2",
+        "text": "What a Project Plan Actually Is — and What It Isn't"
+      },
+      {
+        "type": "p",
+        "text": "A project plan is not a list of dates. It is the documented logic connecting approved scope to scheduled delivery: what work exists, what order it must happen in, who does it, how long it takes, and which decisions confirm progress. Dates are the output of that logic, not the input. Starting from a fixed go-live date and working backward without testing whether the work fits produces a promise, not a plan."
+      },
+      {
+        "type": "p",
+        "text": "That distinction is what lets a plan survive challenge: sponsors ask for earlier dates, scope expands, resources leave. A plan built forward from the work answers with evidence — the dependency chain behind the end date, what compressing it costs, what scope must defer."
+      },
+      {
+        "type": "h2",
+        "text": "Start with the Work Breakdown Structure"
+      },
+      {
+        "type": "p",
+        "text": "Every defensible plan starts with a work breakdown structure (WBS): the total scope decomposed into manageable pieces. For HCM implementations, the natural first cut is phase by workstream — each phase of the delivery methodology crossed with the continuous workstreams (project management, solution design and configuration, data migration, integrations, testing, change management and training, cutover). A good work package is estimable in days or weeks, owned by one person, with a clear done criterion."
+      },
+      {
+        "type": "p",
+        "text": "The WBS enforces the 100% rule: the children of any element must account for all of that element's work — nothing in scope left out, nothing duplicated. This is where amateur plans fail quietly: data cleansing estimated at zero because \"the client handles data,\" hypercare staffing forgotten until go-live week. Walking the breakdown with every workstream lead and asking \"what's missing\" is the cheapest quality control the project will ever buy."
+      },
+      {
+        "type": "h2",
+        "text": "Milestones and Phase Gates"
+      },
+      {
+        "type": "p",
+        "text": "Milestones are the plan's decision points: zero-duration markers that say something important is true. Design baseline signed. Build complete. UAT accepted. Go-live. They consume no time and no resources — they mark the moments the project formally agrees it is ready for the next thing. A plan with tasks but no milestones is a schedule with no way to declare progress."
+      },
+      {
+        "type": "p",
+        "text": "Each milestone between phases is guarded by a gate — the entry and exit criteria from the methodology. The gate gives the milestone teeth: \"UAT accepted\" means signed acceptance and zero unresolved critical defects, not a feeling that testing went well. And space milestones at every phase boundary, so the hard conversations happen while there is still time to act — which is the entire point of planning."
+      },
+      {
+        "type": "img",
+        "src": "/images/blog/building-implementation-project-plan-1.svg",
+        "alt": "Layered diagram showing how an implementation plan is built: the work breakdown structure by phase feeds zero-duration milestones, each guarded by entry and exit gate criteria",
+        "caption": "How an implementation plan is built: the WBS feeds zero-duration milestones, each guarded by entry and exit gate criteria."
+      },
+      {
+        "type": "h2",
+        "text": "Dependencies and the Critical Path"
+      },
+      {
+        "type": "p",
+        "text": "With work broken down and milestones set, the plan needs sequencing logic: dependencies. Most HCM dependencies are finish-to-start (configuration must finish before system testing begins), but the others matter too. Start-to-start links configuration cycles with data trial loads that can overlap once begun; finish-to-finish ties training completion to the UAT exit it must not outrun. Linking everything finish-to-start produces a serial plan for work that could overlap — stretching the timeline and hiding real options."
+      },
+      {
+        "type": "p",
+        "text": "Once dependencies are set, the schedule reveals its critical path: the longest chain of dependent work, which determines the earliest the project can finish. Everything off the path has float — slack that absorbs delay without moving the end date. This is the single most useful thing a schedule produces: crashing a non-critical task buys nothing, while a two-week delay on the critical path moves go-live by two weeks, full stop. Recompute it every status cycle — the path shifts as work progresses."
+      },
+      {
+        "type": "img",
+        "src": "/images/blog/building-implementation-project-plan-2.svg",
+        "alt": "Timeline diagram of four parallel HCM workstreams — design, data migration, integrations, testing — converging on milestones, with the critical path highlighted in blue",
+        "caption": "Four parallel HCM workstreams converging on milestones, with the critical path highlighted in blue."
+      },
+      {
+        "type": "h2",
+        "text": "Estimating Durations and Loading Resources"
+      },
+      {
+        "type": "p",
+        "text": "Durations come from the people doing the work, never from the calendar. For each work package the owner estimates effort, and the plan converts effort to duration through availability — ten person-days from someone half-allocated takes four weeks, not two. Three-point estimation (optimistic, most likely, pessimistic) forces the conversation past single-number guesses and flags which estimates carry the most uncertainty; those get revisited first when the schedule slips."
+      },
+      {
+        "type": "p",
+        "text": "Resource loading is where plans meet reality. Build a resource calendar — availability, holidays, known blackouts — and load named people against it, not roles. Two tasks assigned to the same person in the same week is a conflict the plan should surface before week one. And sequence around contention explicitly: where one person is the bottleneck across workstreams, the schedule is fiction unless their work is sequenced."
+      },
+      {
+        "type": "h2",
+        "text": "Scheduling Around Immovable Constraints"
+      },
+      {
+        "type": "p",
+        "text": "Some dates do not negotiate. Payroll cycles are the classic immovable constraint: in a cross-border US/Canada deployment, for example, parallel payroll testing must align with both countries' processing calendars, and a missed parallel run cannot simply happen \"next week\" — the next window is a full cycle away. Year-end is a hard blackout for most payroll go-lives; fiscal boundaries, benefits enrollment, and union contract dates can each pin a go-live window shut."
+      },
+      {
+        "type": "p",
+        "text": "Treat these as schedule anchors, not footnotes. Work backward from the payroll calendar to place testing windows, then fit the remaining work around them — and build the constraint list with the client's payroll and HR operations leads, not just the project team. They know the calendar the project must live inside."
+      },
+      {
+        "type": "h2",
+        "text": "Baselining, Then Controlling the Schedule"
+      },
+      {
+        "type": "p",
+        "text": "Once the plan is built, reviewed, and approved, it becomes the baseline: the agreed reference every status report measures against. Baselining is a governance act — steering approves it the way it approves scope — done once, deliberately, before execution begins in earnest."
+      },
+      {
+        "type": "p",
+        "text": "Schedule control is the weekly discipline of comparing actual progress to the baseline: percent complete, milestones met or missed, critical-path variance, updated forecasts. A two-week slip found in week three is a resourcing conversation; found in week ten, it is a crisis. Re-baselining should be rare, explicit, and approved, and it must never be silent: moving dates without a recorded decision is how projects \"stay green\" all the way to a failed go-live."
+      },
+      {
+        "type": "steps",
+        "label": "Build the plan in six moves",
+        "intro": "A defensible schedule is built in a fixed order. Click through the six moves, in sequence — each one feeds the next.",
+        "items": [
+          {
+            "title": "1 · Break down the work",
+            "text": "Build the WBS with the workstream leads: phase by workstream, every package estimable, one owner each, clear done criteria. Run the what's-missing review before any dates are set."
+          },
+          {
+            "title": "2 · Set the milestones and gates",
+            "text": "Place zero-duration milestones at every phase boundary and attach entry and exit criteria to each. A milestone nobody can fail is decoration."
+          },
+          {
+            "title": "3 · Wire the dependencies",
+            "text": "Link the work packages honestly: finish-to-start where truly serial, start-to-start and finish-to-finish where work can overlap. Find the critical path — the longest chain sets the end date."
+          },
+          {
+            "title": "4 · Estimate and load resources",
+            "text": "Durations come from the people doing the work, converted through real availability. Load named people against a resource calendar with holidays and blackout periods marked."
+          },
+          {
+            "title": "5 · Anchor the immovable constraints",
+            "text": "Payroll cycles, year-end blackouts, enrollment windows go in first. Work backward from the payroll calendar to place testing windows, then fit the rest around them."
+          },
+          {
+            "title": "6 · Baseline and control",
+            "text": "Get steering approval on the baseline, then status against it weekly: percent complete, milestone hits and misses, critical-path variance. Re-baseline only with a recorded decision."
+          }
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Common Mistakes"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "Starting from the date instead of the work. Backward-scheduling from a fixed go-live without testing fit produces a promise, not a plan.",
+          "A WBS with no owner per package. Work without a named owner is work nobody statuses.",
+          "Everything linked finish-to-start. Serial plans for parallelizable work stretch the timeline and hide options.",
+          "Estimating without availability. Ten person-days at half allocation is four weeks.",
+          "Milestones without gates. A milestone nobody can fail is decoration.",
+          "Silent re-baselining. Moving dates without a recorded decision erases the project's memory.",
+          "Discovering the payroll calendar mid-project. Immovable constraints go in first."
+        ]
+      },
+      {
+        "type": "compare",
+        "label": "Plan or date list: spot the difference",
+        "beforeTitle": "A date list",
+        "beforeItems": [
+          "Go-live date chosen in a steering deck",
+          "Tasks listed, nobody owns them",
+          "Everything linked finish-to-start",
+          "Durations guessed without availability",
+          "Payroll calendar discovered mid-project",
+          "Dates moved quietly when they slip"
+        ],
+        "afterTitle": "A real project plan",
+        "afterItems": [
+          "End date computed from the work",
+          "WBS packages with one named owner each",
+          "Dependencies model real parallel work",
+          "Estimates converted through resource calendars",
+          "Immovable constraints anchored first",
+          "Baseline approved; changes logged and approved"
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Key Takeaways"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "A real plan is the logic connecting scope to scheduled delivery — dates are the output, never the input.",
+          "The WBS enforces completeness: every package estimable, owned by one person, with a clear done criterion.",
+          "Milestones mark decisions, gates give them teeth, and the critical path shows where delays move go-live.",
+          "Durations come from the people doing the work, converted through real availability.",
+          "Payroll cycles, year-ends, and blackouts are schedule anchors that go in first.",
+          "Baseline once, measure honestly every week, never re-baseline silently."
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "FAQ"
+      },
+      {
+        "type": "h3",
+        "text": "How detailed should the plan be?"
+      },
+      {
+        "type": "p",
+        "text": "Detailed enough to status honestly. Packages of days to two weeks, one owner each — weekly truth without administrative bloat."
+      },
+      {
+        "type": "h3",
+        "text": "Who should build the schedule — the project manager or the workstream leads?"
+      },
+      {
+        "type": "p",
+        "text": "Both, in sequence. The leads own the WBS and estimates; the project manager owns dependencies, the critical path, resource loading, and the baseline."
+      },
+      {
+        "type": "h3",
+        "text": "What is the difference between the plan and the methodology?"
+      },
+      {
+        "type": "p",
+        "text": "The methodology structures delivery — phases, gates, roles, governance. The plan schedules the work inside it: tasks, dependencies, dates, resources."
+      },
+      {
+        "type": "h3",
+        "text": "How often should the schedule be updated?"
+      },
+      {
+        "type": "p",
+        "text": "Weekly status, critical-path recomputation with every update, formal review at each phase gate. A stale plan teaches the team to ignore it."
+      },
+      {
+        "type": "h2",
+        "text": "Next Steps"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "Build the WBS with your workstream leads — one owner per package — and run the \"what's missing\" review before setting dates.",
+          "Place milestones at every phase boundary with gate criteria from the delivery methodology.",
+          "Map dependencies honestly, find the critical path, and protect it.",
+          "Load named resources against real calendars and anchor to the payroll cycle — see the go-live checklist for cutover detail.",
+          "Baseline with steering approval, link risks to your risk register, and review the full journey."
+        ]
+      }
+    ]
+  },
+  {
     "slug": "hcm-implementation-methodology",
     "title": "HCM Implementation Methodology: How Consulting Teams Structure Delivery",
     "excerpt": "A practitioner's guide to HCM implementation methodology: phased delivery models, workstreams, governance, and entry/exit criteria that hold.",
