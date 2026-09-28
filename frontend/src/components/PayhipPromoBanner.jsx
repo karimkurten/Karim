@@ -166,9 +166,11 @@ const PayhipPromoBanner = ({
   return (
     <aside
       ref={bannerRef}
-      aria-label="Career resource recommendation"
-      className={`my-10 rounded-2xl border border-[#2B6CB0]/15 bg-gradient-to-br from-[#F0F4F8] to-white p-6 md:p-8 shadow-sm hover:shadow-md transition-shadow ${
-        isEnd ? 'bg-gradient-to-br from-slate-900 to-blue-900 text-white border-transparent' : ''
+      aria-label={`${isEnd ? 'End-of-article' : 'Inline'} career resource recommendation`}
+      className={`my-10 rounded-2xl p-6 md:p-8 shadow-sm hover:shadow-md transition-shadow ${
+        isEnd
+          ? 'bg-gradient-to-br from-slate-900 to-blue-900 text-white border border-transparent'
+          : 'bg-gradient-to-br from-[#F0F4F8] to-white border border-[#2B6CB0]/15'
       }`}
     >
       <div className="flex flex-col md:flex-row gap-6 items-start md:items-center">
