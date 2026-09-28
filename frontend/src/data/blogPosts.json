@@ -1,5 +1,339 @@
 [
   {
+    "slug": "solution-design-documents",
+    "title": "Solution Design Documents: What Good Looks Like",
+    "excerpt": "A practitioner's guide to solution design documents in HCM implementations: structure, testable statements, traceability, and sign-off that sticks.",
+    "publishedAt": "2026-09-28",
+    "readingTime": "8 min read",
+    "cover": "/images/blog/solution-design-documents-cover.webp",
+    "tags": [
+      "HCM",
+      "Project Management",
+      "Implementation"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "Every HCM implementation has a moment when two people describe the same design and it is not the same design. The consultant says the overtime rule \"handles\" shift differentials; the payroll lead heard they stay legacy for year one. Both read the document. Both are sure."
+      },
+      {
+        "type": "p",
+        "text": "Most expensive build-phase arguments do not start in build. They start in design: a sentence that could mean two things, an assumption nobody wrote down, a workshop decision that never reached the document. A good solution design document (SDD) is the project's memory of every decision. A bad one is a shelf-warmer — consulted by nobody when it counts."
+      },
+      {
+        "type": "p",
+        "text": "Here is what a good one contains, how it is written, and how it stays alive through build, testing, and go-live."
+      },
+      {
+        "type": "h2",
+        "text": "What the SDD Is Actually For"
+      },
+      {
+        "type": "p",
+        "text": "The solution design document sits between requirements and configuration. Requirements describe what the organization needs; configuration is the platform-specific expression of how those needs are met. The design document is the translation layer — it records how the solution will behave, precisely enough that a consultant can configure it and a tester can verify it without inventing intent."
+      },
+      {
+        "type": "p",
+        "text": "Think of it as the project's design contract: the single place where \"we decided\" lives. When the answer to a build question is not in the SDD, that is a design gap — treat it as one instead of resolving it over coffee and forgetting it."
+      },
+      {
+        "type": "p",
+        "text": "What it is not matters too: not a vendor configuration manual with the client's logo, not a requirements document with a new title, not a build log written after the fact. If the document describes what was configured instead of what was decided, it was written backward."
+      },
+      {
+        "type": "h2",
+        "text": "The Anatomy of a Good SDD"
+      },
+      {
+        "type": "p",
+        "text": "Section names vary; the layers are nearly universal — and a design missing any of them has a gap that surfaces at the worst time."
+      },
+      {
+        "type": "ul",
+        "items": [
+          "Design principles — ground rules every decision is measured against: standard functionality first, one source of truth for employee data.",
+          "Scope boundaries — what is in scope, and explicitly out. Exclusions matter most: \"contractor time tracking is out of phase one.\"",
+          "Process design — future-state flows: steps, handoffs, decision points, exception paths. Where process maps graduate from workshop artifacts into approved design.",
+          "Data model and field rules — objects, fields, defaults, validation logic. Name the exact validation and the exact error the operator sees.",
+          "Integrations — where data moves between systems: sources, destinations, direction, frequency, failure handling. A requirement says \"integrate\"; the SDD says how.",
+          "Security and roles — who can see and do what: roles, permissions, approval chains, segregation of duties. Auditors ask later; design it now.",
+          "Assumptions and constraints — everything the design depends on being true. Written assumptions are reviewable; verbal ones are remembered differently.",
+          "Open decisions — a living register of unresolved items, each with an owner and a due date. Empty by build, present from the first draft."
+        ]
+      },
+      {
+        "type": "img",
+        "src": "/images/blog/solution-design-documents-1.svg",
+        "alt": "Layered diagram of the eight sections of a solution design document: design principles, scope boundaries, process design, data model and field rules, integrations, security and roles, assumptions, and open decisions",
+        "caption": "The eight layers of a solution design document: principles, scope boundaries, process design, data and field rules, integrations, security and roles, assumptions, and open decisions."
+      },
+      {
+        "type": "h2",
+        "text": "Writing Quality: Design Statements That Survive Testing"
+      },
+      {
+        "type": "p",
+        "text": "The unit of a design document is the design statement — one declarative sentence about how the solution behaves. The bar: every statement must be testable, scriptable by a tester and configurable without questions."
+      },
+      {
+        "type": "p",
+        "text": "\"The system will support flexible time-off accruals\" is a hope with a verb. Compare: \"Full-time employees accrue vacation at 1.25 days per month for the first five years of service and 1.67 days thereafter, capped at 25 days, with a 5-day maximum carryover.\" A tester can build boundary cases from that sentence; a payroll lead can spot a wrong carryover — which is the point."
+      },
+      {
+        "type": "p",
+        "text": "Run the cold-reader test: hand each statement to someone unfamiliar. If they ask what it means — or confidently describe something different — rewrite it. Watch for \"flexible,\" \"appropriate,\" \"as needed\" — each is a decision deferred to whoever reads it later."
+      },
+      {
+        "type": "quiz",
+        "label": "Can this design statement survive testing?",
+        "questions": [
+          {
+            "q": "Which of these design statements can a tester turn into a test script?",
+            "why": "Testability is the quality bar: a statement is finished when a tester can script it and a consultant can configure it without asking what it means.",
+            "options": [
+              {
+                "text": "The system will support flexible approval workflows.",
+                "correct": false,
+                "why": "Flexible defers every decision — who approves, at what threshold, in what order. Nothing here is checkable."
+              },
+              {
+                "text": "Expense reports above $500 require manager approval; above $2,500 require manager and finance approval.",
+                "correct": true,
+                "why": "Thresholds, roles, and conditions are all explicit. A tester can write boundary cases; a configurator can build it as written."
+              },
+              {
+                "text": "Approvals should generally follow company policy.",
+                "correct": false,
+                "why": "Generally and policy are both undefined. This is a pointer to a document, not a design decision."
+              }
+            ]
+          },
+          {
+            "q": "A design statement reads: Overtime is calculated according to jurisdictional rules. What is wrong with it?",
+            "why": "Deferring the actual rule to whoever reads the sentence later is how two people end up describing the same design differently.",
+            "options": [
+              {
+                "text": "Nothing — jurisdictional rules are standard and well understood.",
+                "correct": false,
+                "why": "Which jurisdiction, which rule, which rate? None of it is in the sentence."
+              },
+              {
+                "text": "It defers the real design to the reader — no tester can write a script from it.",
+                "correct": true,
+                "why": "The statement names a topic, not a behavior. The rate, the threshold, and the eligibility all still need deciding."
+              },
+              {
+                "text": "It is too long to be useful.",
+                "correct": false,
+                "why": "Length is not the problem. Brevity that omits the decision is just ambiguity in fewer words."
+              }
+            ]
+          },
+          {
+            "q": "You hand a design statement to someone cold. What proves it is well written?",
+            "why": "The cold-reader test is the cheapest quality gate a design document has.",
+            "options": [
+              {
+                "text": "They can describe the expected behavior without asking what it means.",
+                "correct": true,
+                "why": "Exact match between the writer's intent and the reader's understanding — the statement is unambiguous."
+              },
+              {
+                "text": "They agree it sounds reasonable.",
+                "correct": false,
+                "why": "Agreement without precision is the demo-description trap: easy to sign, impossible to build from."
+              },
+              {
+                "text": "They recognize it from the vendor documentation.",
+                "correct": false,
+                "why": "That is the vendor-manual anti-pattern — product capability pasted in, client decision absent."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Traceability: The Thread That Holds the Project Together"
+      },
+      {
+        "type": "p",
+        "text": "Every design statement should trace backward to a requirement and forward to a build item and a test — the chain that makes the document operational instead of decorative."
+      },
+      {
+        "type": "p",
+        "text": "Forward: an overtime requirement is designed in the SDD, configured as a rule set, proven by a test script. Backward: a failed UAT test traces to the behavior, to the decision, to the requirement — and the team sees which link broke."
+      },
+      {
+        "type": "p",
+        "text": "No exotic tooling needed: requirement IDs in the design sections, design references in the test scripts, one shared matrix. The discipline is what matters — no statement without a requirement behind it, no test without a statement it proves."
+      },
+      {
+        "type": "img",
+        "src": "/images/blog/solution-design-documents-2.svg",
+        "alt": "Flow diagram of the traceability chain: a requirement flows to a design decision, to build, to test, with sign-off closing the loop back to the approved design",
+        "caption": "The traceability chain: requirement → design decision → build → test, with sign-off closing the loop."
+      },
+      {
+        "type": "h2",
+        "text": "Sign-Off Mechanics That Make Decisions Stick"
+      },
+      {
+        "type": "p",
+        "text": "A design document nobody signs is a suggestion. Sign-off turns decisions into commitments — and the mechanics matter more than the signature."
+      },
+      {
+        "type": "p",
+        "text": "Be precise about who signs what. The consultant drafts; the functional lead reviews; the process owner — who will live with the process — approves. Sign-off by a steering committee that never read the document is theater."
+      },
+      {
+        "type": "p",
+        "text": "Sign off in stages, not in one mega-review: build can begin on signed sections while later ones are still designed — which is how the project plan stays honest. Attach every sign-off to a version. After sign-off the document is baselined, and every change goes through change control: logged, impact-assessed, approved."
+      },
+      {
+        "type": "steps",
+        "label": "Sign off the design in six moves",
+        "intro": "Sign-off is a sequence, not an event. Click through the six moves — each one makes the next one honest.",
+        "items": [
+          {
+            "title": "1 · Draft by workstream",
+            "text": "The consultant drafts one workstream section at a time. Small, reviewable chunks beat a single 200-page drop nobody can properly read."
+          },
+          {
+            "title": "2 · Internal review first",
+            "text": "The delivery team reviews for precision and consistency before the client ever sees it. Weak statements and silent gaps get caught here, cheaply."
+          },
+          {
+            "title": "3 · Walkthrough workshop",
+            "text": "Read the design back to the process owners, section by section. Capture corrections live. This is where the cold-reader test runs at full scale."
+          },
+          {
+            "title": "4 · Triage the open decisions",
+            "text": "Every unresolved item gets an owner and a due date in the open-decisions register. Nothing ships to sign-off with silent gaps."
+          },
+          {
+            "title": "5 · Formal sign-off",
+            "text": "The process owner — the person who will live with the process — signs a versioned, dated baseline. Sign-off means the decision is final unless changed formally."
+          },
+          {
+            "title": "6 · Baseline and change control",
+            "text": "Lock the version. Every later change is logged, impact-assessed, and approved. This is the mechanism that keeps small tweaks from becoming silent scope creep."
+          }
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Anti-Patterns: What the Shelf-Warmers Have in Common"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "The vendor manual with a logo — product capability pasted from vendor docs. It describes what the platform can do instead of what was decided.",
+          "The TBD graveyard — every hard question deferred, no owners. Open decisions are allowed; silent ones are not.",
+          "Design by hallway conversation — real decisions happen in chats and calls while the document describes an earlier, fictional design. The split surfaces in UAT.",
+          "The 400-page monster — volume mistaken for rigor. Nobody reads it, nobody owns it, and every design question gets answered from memory.",
+          "The demo-description design — the vendor's standard demo, not the client's reality. Easy to agree with; collapses on contact with payroll data."
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Keeping the Document Alive Through Build and Testing"
+      },
+      {
+        "type": "p",
+        "text": "A signed design is a baseline, not a tombstone. Testing uncovers edge cases the workshops missed; data migration reveals legacy realities nobody described. The question is never whether the design will change, but whether the document changes with it."
+      },
+      {
+        "type": "p",
+        "text": "Keep a design change log — what changed, why, who approved it — and update the affected sections, not just the log. Review the open-decisions register weekly; it should be empty before system testing."
+      },
+      {
+        "type": "p",
+        "text": "At handover, the living document becomes the support team's inheritance: an as-built design, signed baseline plus every approved change. File the final version where the people who run the system can find it."
+      },
+      {
+        "type": "h2",
+        "text": "Common Mistakes"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "Writing requirements with a new title. \"The system must calculate overtime\" is a requirement; the SDD explains how.",
+          "Design statements nobody can test. If a tester cannot script the sentence, it is not finished.",
+          "No version, no baseline. A document that changes without versions has no history and no authority.",
+          "Sign-off by people who will not live with the process. Get the process owners.",
+          "One mega-review for everything. Stage sign-off by workstream.",
+          "Freezing the document at sign-off. Designs change; update the document through change control."
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Key Takeaways"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "The SDD is the translation layer between requirements and configuration: the single place where \"we decided\" lives.",
+          "Eight layers make a complete design: principles, scope, process design, data rules, integrations, security, assumptions, open decisions.",
+          "Every design statement must be testable: a tester can script it, a consultant can configure it, a client lead can verify it.",
+          "Traceability chains every statement back to a requirement and forward to build and test — in both directions.",
+          "Sign-off works when the right people sign staged sections against a versioned baseline.",
+          "The document stays alive through build and testing, and reaches handover as an as-built record."
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "FAQ"
+      },
+      {
+        "type": "h3",
+        "text": "How long should a solution design document be?"
+      },
+      {
+        "type": "p",
+        "text": "As long as precision requires. A focused design the build team references beats a 400-page document nobody opens."
+      },
+      {
+        "type": "h3",
+        "text": "Who writes the SDD — the consultant or the client?"
+      },
+      {
+        "type": "p",
+        "text": "The consulting team drafts it; the client validates and signs it."
+      },
+      {
+        "type": "h3",
+        "text": "What is the difference between the SDD and the requirements document?"
+      },
+      {
+        "type": "p",
+        "text": "The requirements document captures what the solution must do. The SDD captures how it will do it — the chosen configuration, flows, and behaviors."
+      },
+      {
+        "type": "h3",
+        "text": "Should the SDD include configuration details?"
+      },
+      {
+        "type": "p",
+        "text": "Everything a configurator needs to build without guessing: field rules, calculation logic, approval chains, validation messages. Not a screen-by-screen click manual."
+      },
+      {
+        "type": "h2",
+        "text": "Next Steps"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "Check your design against the eight layers — close the thinnest one before build.",
+          "Rewrite your weakest design statements with the cold-reader test.",
+          "Build the traceability chain from requirements through design to test scripts.",
+          "Set up staged sign-off with named process owners, versioned baselines, and change control.",
+          "Plan the as-built handover to support."
+        ]
+      }
+    ]
+  },
+  {
     "slug": "project-management-for-enterprise-implementations",
     "title": "The Complete Guide to Project Management for Enterprise Implementations",
     "excerpt": "The definitive guide to managing enterprise implementation projects: methodology, hybrid delivery, governance, risk, metrics, and templates — from a PMP/RMP/CSM practitioner.",
