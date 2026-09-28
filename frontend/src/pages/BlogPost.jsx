@@ -5,6 +5,7 @@ import SEO, { buildBreadcrumb } from '../components/SEO';
 import { InteractiveBlock, INTERACTIVE_TYPES } from '../components/InteractiveWidgets';
 import posts from '../data/blogPosts.json';
 import { Calendar, Clock, ArrowLeft, ExternalLink, Tag, Share2, Link2, Check } from 'lucide-react';
+import PayhipPromoBanner from '../components/PayhipPromoBanner';
 
 const SITE_URL = 'https://karimchaouki.com';
 
@@ -343,9 +344,14 @@ export default function BlogPost() {
 
               <div className="prose max-w-none">
                 {(post.content || []).map((block, idx) => (
-                  <ContentBlock key={`${post.slug}-block-${idx}`} block={block} />
+                  <React.Fragment key={`${post.slug}-block-${idx}`}>
+                    <ContentBlock block={block} />
+                    {idx === 1 && <PayhipPromoBanner post={post} placement="inline" />}
+                  </React.Fragment>
                 ))}
               </div>
+
+              <PayhipPromoBanner post={post} placement="end" />
 
               {post.linkedinUrl && (
                 <div className="mt-10 p-5 rounded-xl border border-[#E2E8F0] bg-[#F0F4F8] flex items-center justify-between gap-4 flex-wrap">
