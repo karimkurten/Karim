@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 560" role="img" aria-label="Traceability chain: requirement to design decision to build to test to sign-off">
+  <defs>
+    <linearGradient id="hero2" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#0f172a"/>
+      <stop offset="1" stop-color="#1e3a5f"/>
+    </linearGradient>
+    <filter id="soft2" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="3" stdDeviation="6" flood-color="#0f172a" flood-opacity="0.12"/>
+    </filter>
+    <marker id="arr" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#2B6CB0"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="1200" height="560" rx="16" fill="#F0F4F8"/>
+
+  <path d="M0,16 Q0,0 16,0 L1184,0 Q1200,0 1200,16 L1200,96 L0,96 Z" fill="url(#hero2)"/>
+  <text x="48" y="58" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="30" font-weight="700" fill="#ffffff">The Traceability Chain</text>
+  <text x="48" y="128" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="18" fill="#64748B">One design decision, followed from requirement to sign-off. Every link must hold.</text>
+
+  <g filter="url(#soft2)">
+    <rect x="30" y="180" width="192" height="190" rx="12" fill="#ffffff" stroke="#E2E8F0" stroke-width="1.5"/>
+    <rect x="30" y="180" width="192" height="10" rx="5" fill="#2B6CB0"/>
+    <text x="126" y="226" text-anchor="middle" font-family="system-ui, sans-serif" font-size="21" font-weight="700" fill="#1A202C">Requirement</text>
+    <text x="126" y="258" text-anchor="middle" font-family="system-ui, sans-serif" font-size="15" fill="#475569">REQ-014</text>
+    <text x="126" y="284" text-anchor="middle" font-family="system-ui, sans-serif" font-size="15" fill="#475569">Overtime paid at</text>
+    <text x="126" y="306" text-anchor="middle" font-family="system-ui, sans-serif" font-size="15" fill="#475569">1.5x after 44</text>
+    <text x="126" y="328" text-anchor="middle" font-family="system-ui, sans-serif" font-size="15" fill="#475569">hours per week</text>
+  </g>
+
+  <line x1="232" y1="275" x2="312" y2="275" stroke="#2B6CB0" stroke-width="3" marker-end="url(#arr)"/>
+  <text x="272" y="262" text-anchor="middle" font-family="system-ui, sans-serif" font-size="14" font-style="italic" fill="#2B6CB0">designs</text>
+
+  <g filter="url(#soft2)">
+    <rect x="322" y="180" width="192" height="190" rx="12" fill="#ffffff" stroke="#E2E8F0" stroke-width="1.5"/>
+    <rect x="322" y="180" width="192" height="10" rx="5" fill="#2B6CB0"/>
+    <text x="418" y="226" text-anchor="middle" font-family="system-ui, sans-serif" font-size="21" font-weight="700" fill="#1A202C">Design Decision</text>
+    <text x="418" y="258" text-anchor="middle" font-family="system-ui, sans-serif" font-size="15" fill="#475569">SDD section 4.2</text>
+    <text x="418" y="284" text-anchor="middle" font-family="system-ui, sans-serif" font-size="15" fill="#475569">Rate rule, eligibility,</text>
+    <text x="418" y="306" text-anchor="middle" font-family="system-ui, sans-serif" font-size="15" fill="#475569">and payroll timing</text>
+    <text x="418" y="328" text-anchor="middle" font-family="system-ui, sans-serif" font-size="15" fill="#475569">documented</text>
+  </g>
+
+  <line x1="524" y1="275" x2="604" y2="275" stroke="#2B6CB0" stroke-width="3" marker-end="url(#arr)"/>
+  <text x="564" y="262" text-anchor="middle" font-family="system-ui, sans-serif" font-size="14" font-style="italic" fill="#2B6CB0">configures</text>
+
+  <g filter="url(#soft2)">
+    <rect x="614" y="180" width="192" height="190" rx="12" fill="#ffffff" stroke="#E2E8F0" stroke-width="1.5"/>
+    <rect x="614" y="180" width="192" height="10" rx="5" fill="#2B6CB0"/>
+    <text x="710" y="226" text-anchor="middle" font-family="system-ui, sans-serif" font-size="21" font-weight="700" fill="#1A202C">Build</text>
+    <text x="710" y="258" text-anchor="middle" font-family="system-ui, sans-serif" font-size="15" fill="#475569">Configured rule set</text>
+    <text x="710" y="284" text-anchor="middle" font-family="system-ui, sans-serif" font-size="15" fill="#475569">plus field validations,</text>
+    <text x="710" y="306" text-anchor="middle" font-family="system-ui, sans-serif" font-size="15" fill="#475569">built to the design,</text>
+    <text x="710" y="328" text-anchor="middle" font-family="system-ui, sans-serif" font-size="15" fill="#475569">nothing improvised</text>
+  </g>
+
+  <line x1="816" y1="275" x2="896" y2="275" stroke="#2B6CB0" stroke-width="3" marker-end="url(#arr)"/>
+  <text x="856" y="262" text-anchor="middle" font-family="system-ui, sans-serif" font-size="14" font-style="italic" fill="#2B6CB0">proves</text>
+
+  <g filter="url(#soft2)">
+    <rect x="906" y="180" width="192" height="190" rx="12" fill="#ffffff" stroke="#E2E8F0" stroke-width="1.5"/>
+    <rect x="906" y="180" width="192" height="10" rx="5" fill="#2B6CB0"/>
+    <text x="1002" y="226" text-anchor="middle" font-family="system-ui, sans-serif" font-size="21" font-weight="700" fill="#1A202C">Test</text>
+    <text x="1002" y="258" text-anchor="middle" font-family="system-ui, sans-serif" font-size="15" fill="#475569">UAT script TR-31</text>
+    <text x="1002" y="284" text-anchor="middle" font-family="system-ui, sans-serif" font-size="15" fill="#475569">44.5-hour week</text>
+    <text x="1002" y="306" text-anchor="middle" font-family="system-ui, sans-serif" font-size="15" fill="#475569">scenario, expected</text>
+    <text x="1002" y="328" text-anchor="middle" font-family="system-ui, sans-serif" font-size="15" fill="#475569">result asserted</text>
+  </g>
+
+  <rect x="30" y="410" width="1068" height="96" rx="12" fill="#ffffff" stroke="#2B6CB0" stroke-width="2"/>
+  <text x="60" y="448" font-family="system-ui, sans-serif" font-size="20" font-weight="700" fill="#1A202C">Sign-off closes the loop</text>
+  <text x="60" y="478" font-family="system-ui, sans-serif" font-size="16" fill="#475569">The process owner confirms the built behavior matches the approved design. The chain runs both ways: a failed test traces back to a design decision, and every design decision traces forward to what was built.</text>
+
+  <text x="48" y="538" font-family="system-ui, sans-serif" font-size="16" font-style="italic" fill="#64748B">Break one link and the chain fails: a signed design nobody configured, a build nobody tested, a test with no expected result.</text>
+</svg>
