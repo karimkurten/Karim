@@ -1,0 +1,122 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1240" role="img" aria-labelledby="f1title f1desc">
+  <title id="f1title">Customization decision flowchart</title>
+  <desc id="f1desc">A decision flowchart for evaluating an HCM requirement through four gates: is it real, can standard deliver the outcome, is it mandated or differentiating, and is the lifecycle priced and owned.</desc>
+  <defs>
+    <linearGradient id="bg1" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0f172a"/>
+      <stop offset="1" stop-color="#1e3a5f"/>
+    </linearGradient>
+    <linearGradient id="panel1" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#F0F4F8"/>
+    </linearGradient>
+    <filter id="soft1" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="3" stdDeviation="5" flood-color="#0f172a" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+
+  <rect x="0" y="0" width="900" height="1240" rx="18" fill="url(#bg1)"/>
+  <text x="450" y="58" text-anchor="middle" font-family="Georgia, 'DM Serif Display', serif" font-size="30" fill="#ffffff">Should We Customize? The Four Gates</text>
+  <text x="450" y="88" text-anchor="middle" font-family="Verdana, Arial, sans-serif" font-size="15" fill="#94A3B8">Run every gap through these gates, in order — the first gate that fails ends the discussion.</text>
+
+  <!-- Start -->
+  <g filter="url(#soft1)">
+    <rect x="270" y="120" width="360" height="64" rx="32" fill="url(#panel1)" stroke="#2B6CB0" stroke-width="2.5"/>
+  </g>
+  <text x="450" y="146" text-anchor="middle" font-family="Verdana, Arial, sans-serif" font-size="16" fill="#1A202C" font-weight="bold">Gap: standard platform</text>
+  <text x="450" y="168" text-anchor="middle" font-family="Verdana, Arial, sans-serif" font-size="16" fill="#1A202C">cannot meet the requirement</text>
+
+  <!-- connector -->
+  <line x1="450" y1="184" x2="450" y2="214" stroke="#94A3B8" stroke-width="2"/>
+
+  <!-- Gate 1 diamond -->
+  <g filter="url(#soft1)">
+    <path d="M450,214 L620,314 L450,414 L280,314 Z" fill="url(#panel1)" stroke="#2B6CB0" stroke-width="2.5"/>
+  </g>
+  <text x="450" y="300" text-anchor="middle" font-family="Verdana, Arial, sans-serif" font-size="16" fill="#2B6CB0" font-weight="bold">GATE 1</text>
+  <text x="450" y="324" text-anchor="middle" font-family="Verdana, Arial, sans-serif" font-size="15" fill="#1A202C">Is the requirement real,</text>
+  <text x="450" y="346" text-anchor="middle" font-family="Verdana, Arial, sans-serif" font-size="15" fill="#1A202C">or the old process talking?</text>
+  <text x="560" y="300" font-family="Verdana, Arial, sans-serif" font-size="14" fill="#64748B" font-weight="bold">NO →</text>
+
+  <!-- No-1 box (right) -->
+  <line x1="620" y1="314" x2="700" y2="314" stroke="#94A3B8" stroke-width="2"/>
+  <g filter="url(#soft1)">
+    <rect x="700" y="278" width="180" height="72" rx="10" fill="#E2E8F0" stroke="#64748B" stroke-width="2"/>
+  </g>
+  <text x="790" y="305" text-anchor="middle" font-family="Verdana, Arial, sans-serif" font-size="14" fill="#1A202C" font-weight="bold">Change the process</text>
+  <text x="790" y="326" text-anchor="middle" font-family="Verdana, Arial, sans-serif" font-size="14" fill="#1A202C">or drop the requirement</text>
+
+  <!-- yes down -->
+  <line x1="450" y1="414" x2="450" y2="444" stroke="#94A3B8" stroke-width="2"/>
+  <text x="462" y="438" font-family="Verdana, Arial, sans-serif" font-size="14" fill="#94A3B8" font-weight="bold">YES</text>
+
+  <!-- Gate 2 diamond -->
+  <g filter="url(#soft1)">
+    <path d="M450,444 L620,544 L450,644 L280,544 Z" fill="url(#panel1)" stroke="#2B6CB0" stroke-width="2.5"/>
+  </g>
+  <text x="450" y="530" text-anchor="middle" font-family="Verdana, Arial, sans-serif" font-size="16" fill="#2B6CB0" font-weight="bold">GATE 2</text>
+  <text x="450" y="554" text-anchor="middle" font-family="Verdana, Arial, sans-serif" font-size="15" fill="#1A202C">Can the standard path</text>
+  <text x="450" y="576" text-anchor="middle" font-family="Verdana, Arial, sans-serif" font-size="15" fill="#1A202C">deliver the same outcome?</text>
+  <text x="548" y="532" font-family="Verdana, Arial, sans-serif" font-size="14" fill="#64748B" font-weight="bold">YES →</text>
+
+  <!-- Yes-2 box (right) -->
+  <line x1="620" y1="544" x2="700" y2="544" stroke="#94A3B8" stroke-width="2"/>
+  <g filter="url(#soft1)">
+    <rect x="700" y="508" width="180" height="72" rx="10" fill="#2B6CB0" stroke="#2B6CB0" stroke-width="2"/>
+  </g>
+  <text x="790" y="535" text-anchor="middle" font-family="Verdana, Arial, sans-serif" font-size="14" fill="#ffffff" font-weight="bold">Configure + train</text>
+  <text x="790" y="556" text-anchor="middle" font-family="Verdana, Arial, sans-serif" font-size="14" fill="#ffffff">No customization</text>
+
+  <!-- no down -->
+  <line x1="450" y1="644" x2="450" y2="674" stroke="#94A3B8" stroke-width="2"/>
+  <text x="462" y="668" font-family="Verdana, Arial, sans-serif" font-size="14" fill="#94A3B8" font-weight="bold">NO</text>
+
+  <!-- Gate 3 diamond -->
+  <g filter="url(#soft1)">
+    <path d="M450,674 L620,774 L450,874 L280,774 Z" fill="url(#panel1)" stroke="#2B6CB0" stroke-width="2.5"/>
+  </g>
+  <text x="450" y="760" text-anchor="middle" font-family="Verdana, Arial, sans-serif" font-size="16" fill="#2B6CB0" font-weight="bold">GATE 3</text>
+  <text x="450" y="784" text-anchor="middle" font-family="Verdana, Arial, sans-serif" font-size="15" fill="#1A202C">Mandated by law, or a</text>
+  <text x="450" y="806" text-anchor="middle" font-family="Verdana, Arial, sans-serif" font-size="15" fill="#1A202C">genuine differentiator?</text>
+  <text x="560" y="762" font-family="Verdana, Arial, sans-serif" font-size="14" fill="#64748B" font-weight="bold">NO →</text>
+
+  <!-- No-3 box (right) -->
+  <line x1="620" y1="774" x2="700" y2="774" stroke="#94A3B8" stroke-width="2"/>
+  <g filter="url(#soft1)">
+    <rect x="700" y="738" width="180" height="72" rx="10" fill="#E2E8F0" stroke="#64748B" stroke-width="2"/>
+  </g>
+  <text x="790" y="765" text-anchor="middle" font-family="Verdana, Arial, sans-serif" font-size="14" fill="#1A202C" font-weight="bold">Revisit: configure,</text>
+  <text x="790" y="786" text-anchor="middle" font-family="Verdana, Arial, sans-serif" font-size="14" fill="#1A202C">change process, or drop</text>
+
+  <!-- yes down -->
+  <line x1="450" y1="874" x2="450" y2="904" stroke="#94A3B8" stroke-width="2"/>
+  <text x="462" y="898" font-family="Verdana, Arial, sans-serif" font-size="14" fill="#94A3B8" font-weight="bold">YES</text>
+
+  <!-- Gate 4 diamond -->
+  <g filter="url(#soft1)">
+    <path d="M450,904 L620,1004 L450,1104 L280,1004 Z" fill="url(#panel1)" stroke="#2B6CB0" stroke-width="2.5"/>
+  </g>
+  <text x="450" y="990" text-anchor="middle" font-family="Verdana, Arial, sans-serif" font-size="16" fill="#2B6CB0" font-weight="bold">GATE 4</text>
+  <text x="450" y="1014" text-anchor="middle" font-family="Verdana, Arial, sans-serif" font-size="15" fill="#1A202C">Lifecycle priced</text>
+  <text x="450" y="1036" text-anchor="middle" font-family="Verdana, Arial, sans-serif" font-size="15" fill="#1A202C">and owner assigned?</text>
+  <text x="560" y="992" font-family="Verdana, Arial, sans-serif" font-size="14" fill="#64748B" font-weight="bold">NO →</text>
+
+  <!-- No-4 box (right) -->
+  <line x1="620" y1="1004" x2="700" y2="1004" stroke="#94A3B8" stroke-width="2"/>
+  <g filter="url(#soft1)">
+    <rect x="700" y="968" width="180" height="72" rx="10" fill="#E2E8F0" stroke="#64748B" stroke-width="2"/>
+  </g>
+  <text x="790" y="995" text-anchor="middle" font-family="Verdana, Arial, sans-serif" font-size="14" fill="#1A202C" font-weight="bold">Back to the gates —</text>
+  <text x="790" y="1016" text-anchor="middle" font-family="Verdana, Arial, sans-serif" font-size="14" fill="#1A202C">a preference, not a case</text>
+
+  <!-- yes down to outcome -->
+  <line x1="450" y1="1104" x2="450" y2="1130" stroke="#94A3B8" stroke-width="2"/>
+  <text x="462" y="1124" font-family="Verdana, Arial, sans-serif" font-size="14" fill="#94A3B8" font-weight="bold">YES</text>
+  <g filter="url(#soft1)">
+    <rect x="250" y="1130" width="400" height="60" rx="12" fill="#2B6CB0" stroke="#2B6CB0" stroke-width="2"/>
+  </g>
+  <text x="450" y="1154" text-anchor="middle" font-family="Verdana, Arial, sans-serif" font-size="15" fill="#ffffff" font-weight="bold">Customize — minimum viable departure,</text>
+  <text x="450" y="1176" text-anchor="middle" font-family="Verdana, Arial, sans-serif" font-size="15" fill="#ffffff">registered, approved, and scheduled for review</text>
+
+  <text x="450" y="1218" text-anchor="middle" font-family="Verdana, Arial, sans-serif" font-size="13" fill="#94A3B8">Only a requirement that passes all four gates earns a customization.</text>
+</svg>
