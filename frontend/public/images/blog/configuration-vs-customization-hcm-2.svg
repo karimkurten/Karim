@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 640" role="img" aria-labelledby="f2title f2desc">
+  <title id="f2title">Configuration versus customization trade-offs</title>
+  <desc id="f2desc">A conceptual comparison of configuration versus customization across five dimensions — initial effort, ongoing maintenance, upgrade risk, long-term cost, and business fit — using relative low, medium, and high levels with no invented numbers.</desc>
+  <defs>
+    <linearGradient id="bg2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0f172a"/>
+      <stop offset="1" stop-color="#1e3a5f"/>
+    </linearGradient>
+    <linearGradient id="barA" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#2B6CB0"/>
+      <stop offset="1" stop-color="#5b9bd5"/>
+    </linearGradient>
+    <linearGradient id="barB" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#0f172a"/>
+      <stop offset="1" stop-color="#334155"/>
+    </linearGradient>
+    <filter id="soft2" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+
+  <rect x="0" y="0" width="900" height="640" rx="18" fill="url(#bg2)"/>
+  <text x="450" y="56" text-anchor="middle" font-family="Georgia, 'DM Serif Display', serif" font-size="30" fill="#ffffff">The Long-Term Trade-Off</text>
+  <text x="450" y="86" text-anchor="middle" font-family="Verdana, Arial, sans-serif" font-size="15" fill="#94A3B8">Configuration versus customization — relative levels, no invented numbers.</text>
+
+  <!-- Legend -->
+  <g font-family="Verdana, Arial, sans-serif" font-size="14">
+    <rect x="300" y="108" width="22" height="14" rx="4" fill="url(#barA)"/>
+    <text x="330" y="120" fill="#ffffff">Configuration</text>
+    <rect x="500" y="108" width="22" height="14" rx="4" fill="url(#barB)"/>
+    <text x="530" y="120" fill="#ffffff">Customization</text>
+  </g>
+
+  <!-- Scale markers -->
+  <g font-family="Verdana, Arial, sans-serif" font-size="12" fill="#94A3B8">
+    <line x1="300" y1="150" x2="300" y2="560" stroke="#334155" stroke-width="1" stroke-dasharray="5,5"/>
+    <line x1="410" y1="150" x2="410" y2="560" stroke="#334155" stroke-width="1" stroke-dasharray="5,5"/>
+    <line x1="520" y1="150" x2="520" y2="560" stroke="#334155" stroke-width="1" stroke-dasharray="5,5"/>
+    <text x="300" y="575" text-anchor="middle">Low</text>
+    <text x="410" y="575" text-anchor="middle">Medium</text>
+    <text x="520" y="575" text-anchor="middle">High</text>
+  </g>
+
+  <!-- Row 1: Initial effort -->
+  <text x="60" y="192" font-family="Verdana, Arial, sans-serif" font-size="16" fill="#ffffff" font-weight="bold">Initial effort</text>
+  <text x="60" y="212" font-family="Verdana, Arial, sans-serif" font-size="13" fill="#94A3B8">Config often comparable at build time</text>
+  <g filter="url(#soft2)">
+    <rect x="300" y="172" width="110" height="24" rx="6" fill="url(#barA)"/>
+    <rect x="300" y="202" width="220" height="24" rx="6" fill="url(#barB)"/>
+  </g>
+  <text x="418" y="190" font-family="Verdana, Arial, sans-serif" font-size="13" fill="#ffffff">Medium</text>
+  <text x="528" y="220" font-family="Verdana, Arial, sans-serif" font-size="13" fill="#ffffff">High</text>
+
+  <!-- Row 2: Ongoing maintenance -->
+  <text x="60" y="282" font-family="Verdana, Arial, sans-serif" font-size="16" fill="#ffffff" font-weight="bold">Ongoing maintenance</text>
+  <text x="60" y="302" font-family="Verdana, Arial, sans-serif" font-size="13" fill="#94A3B8">Every release re-opens custom work</text>
+  <g filter="url(#soft2)">
+    <rect x="300" y="262" width="12" height="24" rx="6" fill="url(#barA)"/>
+    <rect x="300" y="292" width="220" height="24" rx="6" fill="url(#barB)"/>
+  </g>
+  <text x="320" y="280" font-family="Verdana, Arial, sans-serif" font-size="13" fill="#ffffff">Low</text>
+  <text x="528" y="310" font-family="Verdana, Arial, sans-serif" font-size="13" fill="#ffffff">High</text>
+
+  <!-- Row 3: Upgrade risk -->
+  <text x="60" y="372" font-family="Verdana, Arial, sans-serif" font-size="16" fill="#ffffff" font-weight="bold">Upgrade risk</text>
+  <text x="60" y="392" font-family="Verdana, Arial, sans-serif" font-size="13" fill="#94A3B8">Custom behavior can break on patch</text>
+  <g filter="url(#soft2)">
+    <rect x="300" y="352" width="12" height="24" rx="6" fill="url(#barA)"/>
+    <rect x="300" y="382" width="220" height="24" rx="6" fill="url(#barB)"/>
+  </g>
+  <text x="320" y="370" font-family="Verdana, Arial, sans-serif" font-size="13" fill="#ffffff">Low</text>
+  <text x="528" y="400" font-family="Verdana, Arial, sans-serif" font-size="13" fill="#ffffff">High</text>
+
+  <!-- Row 4: Long-term cost -->
+  <text x="60" y="462" font-family="Verdana, Arial, sans-serif" font-size="16" fill="#ffffff" font-weight="bold">Long-term cost</text>
+  <text x="60" y="482" font-family="Verdana, Arial, sans-serif" font-size="13" fill="#94A3B8">The maintenance tail dwarfs the build</text>
+  <g filter="url(#soft2)">
+    <rect x="300" y="442" width="12" height="24" rx="6" fill="url(#barA)"/>
+    <rect x="300" y="472" width="220" height="24" rx="6" fill="url(#barB)"/>
+  </g>
+  <text x="320" y="460" font-family="Verdana, Arial, sans-serif" font-size="13" fill="#ffffff">Low</text>
+  <text x="528" y="490" font-family="Verdana, Arial, sans-serif" font-size="13" fill="#ffffff">High</text>
+
+  <!-- Row 5: Business fit -->
+  <text x="60" y="542" font-family="Verdana, Arial, sans-serif" font-size="16" fill="#ffffff" font-weight="bold">Business fit</text>
+  <text x="60" y="562" font-family="Verdana, Arial, sans-serif" font-size="13" fill="#94A3B8">Where customization earns its place</text>
+  <g filter="url(#soft2)">
+    <rect x="300" y="522" width="110" height="24" rx="6" fill="url(#barA)"/>
+    <rect x="300" y="546" width="220" height="24" rx="6" fill="url(#barB)"/>
+  </g>
+  <text x="418" y="540" font-family="Verdana, Arial, sans-serif" font-size="13" fill="#ffffff">Medium</text>
+  <text x="528" y="564" font-family="Verdana, Arial, sans-serif" font-size="13" fill="#ffffff">High</text>
+
+  <text x="450" y="620" text-anchor="middle" font-family="Verdana, Arial, sans-serif" font-size="13" fill="#94A3B8">Decision priced at build time ignores the right-hand column — price the full lifecycle.</text>
+</svg>
