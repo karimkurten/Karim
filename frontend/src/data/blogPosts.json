@@ -1,5 +1,323 @@
 [
   {
+    "slug": "configuration-vs-customization-hcm",
+    "title": "Configuration vs Customization in HCM Projects: Where the Line Is and How to Hold It",
+    "excerpt": "A practitioner's guide to the configuration vs customization decision in HCM implementations: the spectrum, evaluation gates, and governance.",
+    "publishedAt": "2026-09-29",
+    "readingTime": "7 min read",
+    "cover": "/images/blog/configuration-vs-customization-hcm-cover.webp",
+    "tags": [
+      "HCM",
+      "HR Technology",
+      "Implementation"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "Few decisions shape an HCM implementation's long-term health like configuration versus customization. It comes up constantly — every fit-gap review, every design workshop, every \"the system can't quite do what we do today\" moment forces the question. And it is the decision projects get wrong most quietly: nobody remembers the workshop where a customization was approved, but everybody remembers the upgrade three years later that broke it."
+      },
+      {
+        "type": "p",
+        "text": "Configuration works within the platform's designed flexibility — toggles, rules, workflows, templates, approval chains — options the vendor built, tests against every release, and supports. Customization goes outside that envelope: code changes, scripts that bypass the standard data model."
+      },
+      {
+        "type": "p",
+        "text": "This guide covers where the line actually is, how to evaluate the gaps that don't fit, and the governance that keeps the count where you left it."
+      },
+      {
+        "type": "h2",
+        "text": "A Spectrum, Not a Switch"
+      },
+      {
+        "type": "p",
+        "text": "Configuration and customization are a spectrum, not two buckets — and most of the dangerous territory lives in the gray middle."
+      },
+      {
+        "type": "p",
+        "text": "At one end is pure configuration: a new pay code with standard attributes, an approval workflow built in the vendor's designer — vendor-tested, upgrade-safe, documented. At the other is deep customization: a script writing directly to core tables — it can break on upgrade, fall outside support, and concentrate knowledge in one person's head."
+      },
+      {
+        "type": "p",
+        "text": "The middle is where the trouble starts. Workarounds use configuration outside its intended purpose: a dummy record to route a payment, a free-text field carrying unstructured data. Cheap on go-live day, toxic in support. Extensions use the platform's sanctioned tools — APIs, extension frameworks — to add capability the vendor anticipated. Often genuinely safe, but still departures from standard that belong under governance. The mistake is treating extensions and workarounds as the same thing, or treating extensions as \"not really customization\" so they escape governance."
+      },
+      {
+        "type": "p",
+        "text": "A mid-size company I worked with reported zero customizations — everything was labeled \"configuration.\" But one workstream had built custom automation replicating an approval the standard workflow handled natively; the team had never been trained on it. Fragile and undocumented, it behaved like a customization while enjoying the configuration label."
+      },
+      {
+        "type": "p",
+        "text": "The honest question is never \"configuration or customization?\" It is \"how far off the supported path does this take us, and what will that cost later?\" Anything past pure configuration gets evaluated, not assumed."
+      },
+      {
+        "type": "h2",
+        "text": "Why the Distinction Matters: The Cost Nobody Prices"
+      },
+      {
+        "type": "p",
+        "text": "The real cost of customization is almost entirely deferred. At decision time, configuration looks like three days of compromise and a customization like five days of build. The comparison is missing the tail."
+      },
+      {
+        "type": "p",
+        "text": "Every customization carries an ongoing tax. Each upgrade or patch requires re-testing the customized behavior and rework when the vendor changes underlying behavior. Custom objects don't appear in standard reporting or documentation, so every support handoff costs more. And when the vendor releases a standard feature that replaces the custom build — which happens constantly in HCM — the project keeps paying or throws the investment away."
+      },
+      {
+        "type": "p",
+        "text": "Configuration rides the vendor's investment instead: every platform improvement flows to configured solutions automatically. Over five years, a configured solution usually costs a fraction of a customized one — because the maintenance tail is thinner. Price the decision in full lifecycle terms, not build-week terms."
+      },
+      {
+        "type": "img",
+        "src": "/images/blog/configuration-vs-customization-hcm-2.svg",
+        "alt": "Conceptual comparison of configuration versus customization across five dimensions — initial effort, ongoing maintenance, upgrade risk, long-term cost, and business fit — with relative low, medium, and high levels",
+        "caption": "Configuration vs customization: where the trade-offs land across five dimensions (relative levels, not measured data)."
+      },
+      {
+        "type": "h2",
+        "text": "The Evaluation: Four Gates Before Any Customization"
+      },
+      {
+        "type": "p",
+        "text": "Run any gap the standard platform cannot meet through four gates — ordered so the weakest candidates are rejected first."
+      },
+      {
+        "type": "ul",
+        "items": [
+          "Gate 1: Is the requirement real, or is it the old process talking? — The most common \"requirement\" for customization is a habit. A company I worked with insisted the system allow retroactive pay adjustments going back two full years, like their legacy process; the platform supported thirteen months — and the payroll team had used the ability twice in five years, both times for cleanup that shouldn't have happened. A process change eliminated the customization before it was ever debated. Challenge the requirement against the future-state maps first.",
+          "Gate 2: Can the standard capability deliver the outcome, even if the path looks different? — Teams compare mechanics instead of outcomes. The standard approval routes differently than the legacy one — but does it approve the same things, with the same controls, on the same timeline? If the outcome holds, the difference is training, not a gap.",
+          "Gate 3: Is it mandated by law, regulation, or a genuine differentiator? — Multi-jurisdiction payroll rules the standard engine can't compute. A statutory reporting format that must be produced exactly as specified. If the requirement is neither legally mandated nor differentiating, the burden of proof should be extremely high.",
+          "Gate 4: Is the full lifecycle priced, with a named owner? — The customization gets a cost model — build, testing, annual maintenance, upgrade regression, documentation — and a named owner who carries it after hypercare. This gate alone kills most casual customizations."
+        ]
+      },
+      {
+        "type": "p",
+        "text": "A requirement passing all four gates is a legitimate customization candidate. One failing any of them is a configuration item, a process change, or a dropped requirement."
+      },
+      {
+        "type": "img",
+        "src": "/images/blog/configuration-vs-customization-hcm-1.svg",
+        "alt": "Decision flowchart for evaluating an HCM requirement: fit in standard configuration, change the process, or customize — with evaluation gates at each step",
+        "caption": "The four-gate decision flowchart: every customization request walks this path before it is approved."
+      },
+      {
+        "type": "h2",
+        "text": "When Customization Is the Right Call"
+      },
+      {
+        "type": "p",
+        "text": "Refusing all customization is its own failure. The legitimate cases share recognizable shapes."
+      },
+      {
+        "type": "ul",
+        "items": [
+          "Compliance mandates — the clearest case. Cross-border payroll is full of them: jurisdictional calculation rules and statutory reporting formats the standard platform handles for common cases but not every combination a multi-entity company operates. When the law requires a specific calculation the platform can't produce, no process change satisfies an auditor.",
+          "Genuine business differentiators — rare, but real. The test is honesty: is this practice actually differentiating, or just familiar?",
+          "Integration-bound requirements — when a downstream system (a bank, a benefits carrier, a government portal) requires a data format the standard integration can't produce, an extension at the integration layer is usually correct. It touches the edges of the system, making it the most upgrade-resilient form of customization."
+        ]
+      },
+      {
+        "type": "p",
+        "text": "All three share the same profile: the requirement survives scrutiny, the cost is priced and owned, and the customization is the minimum viable departure from standard."
+      },
+      {
+        "type": "quiz",
+        "label": "Would you customize this? Test your judgment.",
+        "questions": [
+          {
+            "q": "The standard approval workflow routes differently than the legacy process, but approves the same items with the same controls. What is the right call?",
+            "why": "The gates test whether the gap is real or whether it is habit, training, or discomfort wearing a requirement's clothing.",
+            "options": [
+              {
+                "text": "Customize the workflow to match the legacy routing exactly.",
+                "correct": false,
+                "why": "The outcome is identical — same items, same controls. This is Gate 2: the difference is familiarity, which is a training item, not a customization."
+              },
+              {
+                "text": "Use the standard workflow and train users on the new routing.",
+                "correct": true,
+                "why": "Same outcome, same controls, different path. Configuration plus change management solves it with no maintenance tail."
+              },
+              {
+                "text": "Build a parallel custom approval as a backup option.",
+                "correct": false,
+                "why": "Parallel paths double the maintenance and create ambiguity about which approval actually counts. One path, decided deliberately."
+              }
+            ]
+          },
+          {
+            "q": "A statutory payroll calculation required by law cannot be produced by the standard engine. What justifies the customization?",
+            "why": "Compliance mandates are the clearest legitimate customization case — but they still need pricing, ownership, and documentation.",
+            "options": [
+              {
+                "text": "It is required by law, priced with a full lifecycle cost, and given a named owner.",
+                "correct": true,
+                "why": "Gate 3 (mandated) plus Gate 4 (priced and owned). This is a customization that earns its place."
+              },
+              {
+                "text": "It is urgent, so build it now and document it later.",
+                "correct": false,
+                "why": "Urgency is not justification, and 'document later' means undocumented. Compliance customizations need the heaviest documentation, not the lightest."
+              },
+              {
+                "text": "The workstream lead approved it verbally in the workshop.",
+                "correct": false,
+                "why": "Customization approval sits above the workstream level. A verbal workshop approval is exactly how the count drifts."
+              }
+            ]
+          },
+          {
+            "q": "A vendor release added a standard feature that replaces one of your customizations. What should the project do?",
+            "why": "Phase-end reviews exist to retire customizations the platform's evolution made redundant.",
+            "options": [
+              {
+                "text": "Keep the customization running as a backup in case the new feature has issues.",
+                "correct": false,
+                "why": "Backup customizations are permanent maintenance taxes. Test the new feature; if it works, retire the custom build."
+              },
+              {
+                "text": "Migrate to the standard feature, regression-test, and retire the customization.",
+                "correct": true,
+                "why": "This is the retirement review working as designed: the platform absorbed the requirement, so the custom tax should end."
+              },
+              {
+                "text": "Leave it — the customization already works, so there is no benefit to changing it.",
+                "correct": false,
+                "why": "It works today, but it still costs maintenance on every upgrade and it still sits outside vendor support. 'Works' is not free."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Governance: Keeping the Count Where You Left It"
+      },
+      {
+        "type": "p",
+        "text": "The four gates decide individual cases. Governance decides the trend. Without it, customization counts drift upward regardless of good intentions."
+      },
+      {
+        "type": "p",
+        "text": "Keep a customization register — the requirement, which gates it passed, the lifecycle cost, the named owner, the upgrade-review procedure — and review it at every design checkpoint."
+      },
+      {
+        "type": "p",
+        "text": "Approval must sit above the workstream level: a workstream lead optimizing for their own timeline will approve a customization the program would reject. Require program-level approval with the four-gate evidence presented."
+      },
+      {
+        "type": "p",
+        "text": "Finally, schedule customization reviews once per phase: is the requirement still valid, and has the vendor released a standard feature that replaces it?"
+      },
+      {
+        "type": "steps",
+        "label": "Run the four gates on a customization request",
+        "intro": "Before any customization is approved, walk the requirement through these four gates in order. The first gate that fails ends the discussion.",
+        "items": [
+          {
+            "title": "1 · Gate 1: Is the requirement real?",
+            "text": "Challenge it against the future-state process maps. If the to-be design does not need it, it is a legacy habit, not a requirement — and the conversation ends here."
+          },
+          {
+            "title": "2 · Gate 2: Can standard deliver the outcome?",
+            "text": "Compare outcomes, not mechanics. If the standard capability approves, calculates, or reports the same result with the same controls, the gap is training — not a reason to customize."
+          },
+          {
+            "title": "3 · Gate 3: Mandated or differentiating?",
+            "text": "Is the requirement legally or regulatorily mandated, or genuinely core to how the company competes? If neither, the burden of proof for customization is extremely high."
+          },
+          {
+            "title": "4 · Gate 4: Priced and owned?",
+            "text": "Build cost, testing, annual maintenance, upgrade regression, documentation — all priced, with a named owner who carries it after hypercare. If nobody will sign the maintenance budget, the requirement was a preference."
+          },
+          {
+            "title": "5 · Approve above the workstream",
+            "text": "Program-level approval with the four-gate evidence presented. The person feeling timeline pressure does not get to decide the six-year cost."
+          },
+          {
+            "title": "6 · Register and schedule retirement review",
+            "text": "Log it in the customization register and set the phase-end review where it gets challenged again — especially after vendor releases that may have made it redundant."
+          }
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Common Mistakes"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "Treating it as a binary. Labeling everything \"configuration\" or \"customization\" hides the gray middle where the worst debt forms. Define the spectrum explicitly.",
+          "Pricing the build, ignoring the tail. Five days of development is never the real price. The maintenance tail is where customization actually costs.",
+          "Approving customizations to avoid difficult conversations. It is faster to build than to tell a stakeholder their process is changing — and the project pays for that speed for years.",
+          "Letting workstreams self-approve. The person feeling timeline pressure should not decide the six-year cost.",
+          "Concentrating custom knowledge in one person. If only one developer understands the customization, that is a single point of failure. Documentation and cross-training are part of the cost."
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Key Takeaways"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "Configuration and customization are a spectrum — and the gray middle (workarounds, extensions) is where the most expensive debt forms.",
+          "The real cost is the maintenance tail: upgrades, regression testing, support handoff, and vendor releases that obsolete the build.",
+          "Run every gap through four gates: real requirement, standard can deliver, mandated or differentiating, lifecycle priced and owned.",
+          "Legitimate customizations exist — compliance mandates, genuine differentiators, integration requirements — as the minimum viable departure from standard, never the maximal one.",
+          "Governance holds the count: a customization register, program-level approval, and phase-end reviews that retire redundant builds."
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "FAQ"
+      },
+      {
+        "type": "h3",
+        "text": "How many customizations is too many?"
+      },
+      {
+        "type": "p",
+        "text": "A list growing after the design baseline is the warning sign. Review the trend, not just the total."
+      },
+      {
+        "type": "h3",
+        "text": "Should we ever customize core payroll calculations?"
+      },
+      {
+        "type": "p",
+        "text": "Only when a compliance mandate requires it and the standard engine provably can't produce the result. Exhaust every standard option first."
+      },
+      {
+        "type": "h3",
+        "text": "Do extensions built with the vendor's tools count as customizations?"
+      },
+      {
+        "type": "p",
+        "text": "They are departures from pure configuration and belong in the register. Typically safer than deep customizations, but they still carry maintenance and upgrade-review obligations."
+      },
+      {
+        "type": "h3",
+        "text": "What do we do with customizations the vendor's new release made redundant?"
+      },
+      {
+        "type": "p",
+        "text": "Retire them in the phase-end review: migrate to the new standard feature, regression-test, and remove the custom build."
+      },
+      {
+        "type": "h2",
+        "text": "Next Steps"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "Define your spectrum. Agree in writing what counts as configuration, workaround, extension, and customization.",
+          "Set up the register and the four-gate evaluation inside the solution design process.",
+          "Link every customization to a risk register entry — upgrade regression is a risk the risk framework should track.",
+          "Schedule the retirement reviews now, phase by phase, so they actually happen.",
+          "Budget the maintenance tail in your project plan."
+        ]
+      }
+    ]
+  },
+  {
     "slug": "solution-design-documents",
     "title": "Solution Design Documents: What Good Looks Like",
     "excerpt": "A practitioner's guide to solution design documents in HCM implementations: structure, testable statements, traceability, and sign-off that sticks.",
