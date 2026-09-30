@@ -115,6 +115,19 @@ const SocialShare = ({ title, slug, excerpt }) => {
     }
   };
 
+  const linkedInShare = async () => {
+    const linkedInUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${encodedUrl}`;
+    window.open(linkedInUrl, '_blank', 'noopener,noreferrer');
+    try {
+      await navigator.clipboard.writeText(postText);
+      setPostTextCopied(true);
+      setTimeout(() => setPostTextCopied(false), 2000);
+    } catch (err) {
+      // eslint-disable-next-line no-console
+      console.error('Copy post text failed', err);
+    }
+  };
+
   const shareLinks = [
     {
       label: 'X',
@@ -125,7 +138,7 @@ const SocialShare = ({ title, slug, excerpt }) => {
     },
     {
       label: 'LinkedIn',
-      href: `https://www.linkedin.com/sharing/share-offsite/?url=${encodedUrl}`,
+      onClick: linkedInShare,
       icon: <LinkedInIcon />,
       bg: 'bg-[#0A66C2]',
       hover: 'hover:bg-[#084298]',

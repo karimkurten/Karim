@@ -95,6 +95,12 @@ const BlogCard = ({ post }) => {
     }
   };
 
+  const linkedInShare = () => {
+    const linkedInUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${encodedUrl}`;
+    window.open(linkedInUrl, '_blank', 'noopener,noreferrer');
+    copyPostText();
+  };
+
   const shareNative = async () => {
     if (navigator.share) {
       try {
@@ -185,7 +191,14 @@ const BlogCard = ({ post }) => {
               </button>
             )}
             {shareLink(`https://twitter.com/intent/tweet?url=${encodedUrl}&text=${encodedTitle}`, 'X')}
-            {shareLink(`https://www.linkedin.com/sharing/share-offsite/?url=${encodedUrl}`, 'LinkedIn')}
+            <button
+              type="button"
+              onClick={linkedInShare}
+              aria-label={`Share ${post.title} on LinkedIn`}
+              className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-[#F0F4F8] text-[#475569] hover:bg-[#0A66C2] hover:text-white transition-colors"
+            >
+              <LinkedInIcon />
+            </button>
             {shareLink(`https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}`, 'Facebook')}
             <button
               type="button"
