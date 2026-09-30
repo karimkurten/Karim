@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import Header from '../components/Header';
 import SEO, { buildBreadcrumb } from '../components/SEO';
 import posts from '../data/blogPosts.json';
-import { Calendar, Clock, ExternalLink, Tag, Share2, Link2, Check } from 'lucide-react';
+import { Calendar, Clock, ExternalLink, Tag, Share2, Link2, Check, FileText } from 'lucide-react';
 
 const SITE_URL = 'https://karimchaouki.com';
 
@@ -66,9 +66,12 @@ const FacebookIcon = () => (
 
 const BlogCard = ({ post }) => {
   const [copied, setCopied] = React.useState(false);
+  const [postTextCopied, setPostTextCopied] = React.useState(false);
   const postUrl = `${SITE_URL}/blog/${post.slug}`;
   const encodedUrl = encodeURIComponent(postUrl);
   const encodedTitle = encodeURIComponent(post.title);
+
+  const postText = `${post.title}\n\n${post.excerpt || ''}\n\n${postUrl}`;
 
   const copyLink = async () => {
     try {
@@ -78,6 +81,17 @@ const BlogCard = ({ post }) => {
     } catch (err) {
       // eslint-disable-next-line no-console
       console.error('Copy failed', err);
+    }
+  };
+
+  const copyPostText = async () => {
+    try {
+      await navigator.clipboard.writeText(postText);
+      setPostTextCopied(true);
+      setTimeout(() => setPostTextCopied(false), 2000);
+    } catch (err) {
+      // eslint-disable-next-line no-console
+      console.error('Copy post text failed', err);
     }
   };
 
@@ -173,6 +187,14 @@ const BlogCard = ({ post }) => {
             {shareLink(`https://twitter.com/intent/tweet?url=${encodedUrl}&text=${encodedTitle}`, 'X')}
             {shareLink(`https://www.linkedin.com/sharing/share-offsite/?url=${encodedUrl}`, 'LinkedIn')}
             {shareLink(`https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}`, 'Facebook')}
+            <button
+              type="button"
+              onClick={copyPostText}
+              aria-label={postTextCopied ? 'Post text copied' : `Copy post text for ${post.title}`}
+              className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-[#F0F4F8] text-[#475569] hover:bg-[#059669] hover:text-white transition-colors"
+            >
+              {postTextCopied ? <Check size={14} /> : <FileText size={14} />}
+            </button>
             <button
               type="button"
               onClick={copyLink}

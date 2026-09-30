@@ -4,7 +4,7 @@ import Header from '../components/Header';
 import SEO, { buildBreadcrumb } from '../components/SEO';
 import { InteractiveBlock, INTERACTIVE_TYPES } from '../components/InteractiveWidgets';
 import posts from '../data/blogPosts.json';
-import { Calendar, Clock, ArrowLeft, ExternalLink, Tag, Share2, Link2, Check } from 'lucide-react';
+import { Calendar, Clock, ArrowLeft, ExternalLink, Tag, Share2, Link2, Check, FileText } from 'lucide-react';
 import PayhipPromoBanner from '../components/PayhipPromoBanner';
 
 const SITE_URL = 'https://karimchaouki.com';
@@ -68,10 +68,13 @@ const FacebookIcon = () => (
 
 const SocialShare = ({ title, slug, excerpt }) => {
   const [copied, setCopied] = React.useState(false);
+  const [postTextCopied, setPostTextCopied] = React.useState(false);
   const postUrl = `${SITE_URL}/blog/${slug}`;
   const encodedUrl = encodeURIComponent(postUrl);
   const encodedTitle = encodeURIComponent(title);
   const encodedSummary = encodeURIComponent(excerpt || title);
+
+  const postText = `${title}\n\n${excerpt || ''}\n\n${postUrl}`;
 
   const handleNativeShare = async () => {
     if (navigator.share) {
@@ -98,6 +101,17 @@ const SocialShare = ({ title, slug, excerpt }) => {
     } catch (err) {
       // eslint-disable-next-line no-console
       console.error('Copy failed', err);
+    }
+  };
+
+  const copyPostText = async () => {
+    try {
+      await navigator.clipboard.writeText(postText);
+      setPostTextCopied(true);
+      setTimeout(() => setPostTextCopied(false), 2000);
+    } catch (err) {
+      // eslint-disable-next-line no-console
+      console.error('Copy post text failed', err);
     }
   };
 
@@ -152,6 +166,20 @@ const SocialShare = ({ title, slug, excerpt }) => {
         {shareLinks.map((link) => (
           <ShareButton key={link.label} {...link} />
         ))}
+
+        <ShareButton
+          label={postTextCopied ? 'Post text copied!' : 'Copy post text'}
+          onClick={copyPostText}
+          icon={
+            postTextCopied ? (
+              <Check size={16} aria-hidden="true" />
+            ) : (
+              <FileText size={16} aria-hidden="true" />
+            )
+          }
+          bg="bg-[#059669]"
+          hover="hover:bg-[#047857]"
+        />
 
         <ShareButton
           label={copied ? 'Copied!' : 'Copy link'}
