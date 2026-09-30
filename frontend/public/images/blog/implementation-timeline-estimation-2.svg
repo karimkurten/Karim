@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="620" viewBox="0 0 1200 620" font-family="Arial, Helvetica, sans-serif">
+  <defs>
+    <linearGradient id="hero2" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#0f172a"/>
+      <stop offset="1" stop-color="#1e3a5f"/>
+    </linearGradient>
+    <linearGradient id="cone" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#2B6CB0" stop-opacity="0.34"/>
+      <stop offset="1" stop-color="#2B6CB0" stop-opacity="0.10"/>
+    </linearGradient>
+    <linearGradient id="midline" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#2B6CB0" stop-opacity="0.9"/>
+      <stop offset="1" stop-color="#2563EB" stop-opacity="0.9"/>
+    </linearGradient>
+  </defs>
+
+  <rect x="0" y="0" width="1200" height="620" rx="16" fill="#F0F4F8"/>
+
+  <rect x="0" y="0" width="1200" height="92" rx="16" fill="url(#hero2)"/>
+  <rect x="0" y="76" width="1200" height="16" fill="url(#hero2)"/>
+  <text x="48" y="44" font-family="Georgia, 'Times New Roman', serif" font-size="29" fill="#ffffff" font-weight="bold">The Cone of Uncertainty: Why the Range Narrows</text>
+  <text x="48" y="72" font-size="15" fill="#94A3B8">Re-estimate at every phase gate — the band should tighten as unknowns become knowns</text>
+
+  <!-- Cone region -->
+  <path d="M 200 300 C 500 282, 760 172, 1050 116 L 1050 484 C 760 428, 500 318, 200 300 Z" fill="url(#cone)" stroke="none"/>
+
+  <!-- Upper and lower bounds -->
+  <path d="M 200 300 C 500 282, 760 172, 1050 116" fill="none" stroke="#2B6CB0" stroke-width="3.5"/>
+  <path d="M 200 300 C 500 318, 760 428, 1050 484" fill="none" stroke="#2B6CB0" stroke-width="3.5"/>
+
+  <!-- Most-likely trajectory -->
+  <line x1="200" y1="300" x2="1050" y2="300" stroke="url(#midline)" stroke-width="3" stroke-dasharray="10 7"/>
+
+  <!-- Start point -->
+  <circle cx="200" cy="300" r="9" fill="#0f172a"/>
+  <text x="200" y="252" font-size="14" fill="#1A202C" text-anchor="middle" font-weight="bold">Estimate made</text>
+
+  <!-- End point -->
+  <circle cx="1050" cy="300" r="9" fill="#2B6CB0"/>
+  <text x="1050" y="252" font-size="14" fill="#1A202C" text-anchor="middle" font-weight="bold">Go-live</text>
+
+  <!-- Band labels (inside the cone, above the midline) -->
+  <text x="560" y="262" font-size="14.5" fill="#1A202C" text-anchor="middle" font-weight="bold">Widest band —</text>
+  <text x="560" y="282" font-size="14.5" fill="#1A202C" text-anchor="middle">little is known</text>
+  <text x="955" y="262" font-size="14.5" fill="#1A202C" text-anchor="middle" font-weight="bold">Narrowest band —</text>
+  <text x="955" y="282" font-size="14.5" fill="#1A202C" text-anchor="middle">scope and data proven</text>
+
+  <!-- Bound legend -->
+  <line x1="70" y1="150" x2="112" y2="150" stroke="#2B6CB0" stroke-width="3.5"/>
+  <text x="120" y="155" font-size="14" fill="#475569">Estimate range</text>
+  <line x1="70" y1="176" x2="112" y2="176" stroke="url(#midline)" stroke-width="3" stroke-dasharray="10 7"/>
+  <text x="120" y="181" font-size="14" fill="#475569">Most-likely trajectory</text>
+
+  <!-- Phase axis -->
+  <line x1="160" y1="530" x2="1090" y2="530" stroke="#64748B" stroke-width="2"/>
+
+  <!-- Phase ticks + connectors -->
+  <g font-size="15">
+    <line x1="200" y1="330" x2="200" y2="545" stroke="#94A3B8" stroke-width="1.5" stroke-dasharray="5 5"/>
+    <circle cx="200" cy="530" r="8" fill="#2B6CB0"/>
+    <text x="200" y="575" fill="#1A202C" text-anchor="middle" font-weight="bold">Discovery</text>
+
+    <line x1="405" y1="340" x2="405" y2="545" stroke="#94A3B8" stroke-width="1.5" stroke-dasharray="5 5"/>
+    <circle cx="405" cy="530" r="8" fill="#2B6CB0"/>
+    <text x="405" y="575" fill="#1A202C" text-anchor="middle" font-weight="bold">Design</text>
+
+    <line x1="620" y1="390" x2="620" y2="545" stroke="#94A3B8" stroke-width="1.5" stroke-dasharray="5 5"/>
+    <circle cx="620" cy="530" r="8" fill="#2B6CB0"/>
+    <text x="620" y="575" fill="#1A202C" text-anchor="middle" font-weight="bold">Build</text>
+
+    <line x1="835" y1="435" x2="835" y2="545" stroke="#94A3B8" stroke-width="1.5" stroke-dasharray="5 5"/>
+    <circle cx="835" cy="530" r="8" fill="#2B6CB0"/>
+    <text x="835" y="575" fill="#1A202C" text-anchor="middle" font-weight="bold">Test</text>
+
+    <line x1="1050" y1="470" x2="1050" y2="545" stroke="#94A3B8" stroke-width="1.5" stroke-dasharray="5 5"/>
+    <circle cx="1050" cy="530" r="8" fill="#2B6CB0"/>
+    <text x="1050" y="575" fill="#1A202C" text-anchor="middle" font-weight="bold">Deploy</text>
+  </g>
+
+  <!-- Caption -->
+  <text x="600" y="606" font-size="13" fill="#64748B" text-anchor="middle" font-style="italic">Conceptual illustration only — band widths are RELATIVE, not measured data.</text>
+</svg>
