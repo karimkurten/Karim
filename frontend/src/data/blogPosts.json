@@ -1,5 +1,361 @@
 [
   {
+    "slug": "implementation-resource-planning",
+    "title": "Resource Planning for Implementation Teams: How to Staff an HCM Implementation for Delivery",
+    "excerpt": "A practitioner's guide to staffing HCM implementations: the eight-role model, allocation math, ramp curves, client-team backfill, and hypercare staffing.",
+    "publishedAt": "2026-10-01",
+    "readingTime": "7 min read",
+    "cover": "/images/blog/implementation-resource-planning-cover.webp",
+    "tags": [
+      "HCM",
+      "Project Management",
+      "Implementation"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "HCM implementations rarely fail for lack of expertise. They fail for lack of capacity — the right people, at the right percentage, at the right week. I have watched well-architected programs wobble because a data migration specialist was split across two clients, because the payroll lead was also closing month-end, and because nobody staffed the three weeks after go-live as if they mattered."
+      },
+      {
+        "type": "p",
+        "text": "Resource planning is the unglamorous half of project planning: the timeline says what happens; the staffing model says who is there when it happens. This guide covers the role-by-role staffing model, the allocation math nobody does honestly, ramp curves across phases, and the client-team constraint that decides whether your plan survives contact with reality."
+      },
+      {
+        "type": "h2",
+        "text": "Why Staffing Breaks Implementations"
+      },
+      {
+        "type": "p",
+        "text": "The failure mode is almost never “we had the wrong consultant.” It is “we had the right consultant at fifteen percent.” Staffing models assume full-time roles that are shared across three clients, allocate client SMEs at optimistic percentages while they run payroll, and treat ramp-up as instant — as if a consultant walking in Monday is productive by Tuesday."
+      },
+      {
+        "type": "p",
+        "text": "The deepest of these is the client-team constraint: plans count consultant effort and forget that every decision, review, data-validation cycle, and test script needs the client's people — people with day jobs that do not pause. Forty hours of payroll SME review consumes however many calendar weeks those SMEs actually have between pay cycles."
+      },
+      {
+        "type": "h2",
+        "text": "The Role-by-Role Staffing Model"
+      },
+      {
+        "type": "p",
+        "text": "Eight role families carry a typical enterprise HCM implementation, each with a distinct demand curve. Mistaking one for another is how projects end up with three project managers and nobody owning data migration."
+      },
+      {
+        "type": "tabs",
+        "label": "The eight roles — demand profile and why it peaks when it does",
+        "items": [
+          {
+            "tab": "Project Manager",
+            "heading": "Orchestration, not administration",
+            "paragraphs": [
+              "Full-demand from kickoff through hypercare, then a tapering tail. The PM owns the plan, the RAID log, governance, and the honest conversations about dates. A PM split across two implementations administers two projects and leads neither.",
+              "Watch for the split-PM trap: a consultant partner who assigns a 'PM' at 25 percent across four clients has assigned you an administrator. Leadership requires presence where decisions stall."
+            ]
+          },
+          {
+            "tab": "Solution Architects",
+            "heading": "Design authority",
+            "paragraphs": [
+              "Peak during Design, carry through Build as design authority. Architects own the cross-module, cross-entity design and arbitrate the build-versus-configure decisions that accumulate quietly. Cross-border programs may need two — one per jurisdiction's payroll and compliance design.",
+              "Under-staffing this role shows up late as rework: design decisions made without architectural ownership get revisited in testing, at ten times the cost."
+            ]
+          },
+          {
+            "tab": "Functional Consultants",
+            "heading": "Module-by-module delivery",
+            "paragraphs": [
+              "The largest headcount group, ramping hard in Build. Each major module family typically needs its own consultant, and payroll in dual-jurisdiction programs is a specialist, not a stretch assignment. Consultants configure, prototype, document, and shepherd each process area through UAT.",
+              "Watch the seniority mix: a team of juniors needs constant architectural review, quietly re-allocating the architect's time. Senior consultants cost more per hour and less per outcome."
+            ]
+          },
+          {
+            "tab": "Data Migration Specialist",
+            "heading": "The role most often undersized",
+            "paragraphs": [
+              "Peak from late Discovery through Build, heaviest across mock conversions. This role owns extraction, mapping, cleansing, and reconciliation — and the uncomfortable truth that source data is always messier than discovery suggested. One specialist per major legacy system; more than two sources, staff for parallel streams.",
+              "Part-time data migration staffing is the most common resourcing failure I have seen. Conversions do not compress — each cycle needs full attention through reconciliation, and a shared specialist becomes the bottleneck every workstream waits on."
+            ]
+          },
+          {
+            "tab": "Integration Lead",
+            "heading": "Everything the platform does not do natively",
+            "paragraphs": [
+              "Ramps in Design as interfaces are specified, peaks through Build and integration testing. The integration lead owns the interface inventory, third-party coordination, file formats, API contracts, and error handling — part architect, part diplomat, since third-party systems answer on their own schedule.",
+              "Staff this role early: late integration discovery turns 'three simple interfaces' into a six-week development effort with no owner."
+            ]
+          },
+          {
+            "tab": "Test Manager",
+            "heading": "Governance of the truth",
+            "paragraphs": [
+              "Ramps from late Build, peaking across UAT. The test manager owns the test strategy, scripts, defect triage discipline, and entry/exit criteria — and keeps testing honest when schedule pressure tempts the team to soften the gates. In client-led UAT, this role coaches the client testers who execute.",
+              "A test manager arriving at test execution is arriving late — the strategy, environments, and scripts need this role from Build onward."
+            ]
+          },
+          {
+            "tab": "Change & Training Lead",
+            "heading": "Adoption is a staffing question",
+            "paragraphs": [
+              "Ramps through Build, peaks in Deploy and hypercare. This role owns stakeholder analysis, communications, role-based training, and the adoption metrics that tell you whether go-live landed. HCM changes how people get paid — resistance is rational, and managing it is work, not messaging.",
+              "Programs that staff this role at a few hours a week discover in hypercare that nobody trained the line managers — the 'system issues' are adoption issues wearing a technical costume."
+            ]
+          },
+          {
+            "tab": "Client SMEs & Payroll Leads",
+            "heading": "The constraint you do not control",
+            "paragraphs": [
+              "Process owners, payroll leads, HR operations, IT, finance. Demand peaks in Discovery, Design sign-off, UAT, and hypercare — exactly the weeks their day jobs are busiest. The payroll lead cannot close payroll and validate a parallel run in the same week without backfill.",
+              "Treat client capacity as a critical-path input, not a footnote: every staffing plan names the backfill arrangement for key SMEs, or the plan is fiction."
+            ]
+          }
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Utilization vs Dedication: The Allocation Math Nobody Does Honestly"
+      },
+      {
+        "type": "p",
+        "text": "Percentages on a staffing plan lie by convention. A consultant listed at 25 percent across four clients is not giving you two focused days a week — they are giving you the fragments between other projects' emergencies."
+      },
+      {
+        "type": "p",
+        "text": "The practical rule: below about 50 percent, effective contribution drops faster than the allocation. Critical-path roles — PM, data migration specialist, integration lead in their peak phases — should be staffed at 75 percent or above, or by someone dedicated. The honest math also prices the calendar, not just the hours. Forty hours of client SME review is not one week when the SME runs payroll — it is the two or three weeks those hours can actually be found. Convert effort to calendar time using real availability: month-end, quarter-end, payroll cycles, holidays."
+      },
+      {
+        "type": "h2",
+        "text": "Ramp-up and Ramp-down Curves Across Phases"
+      },
+      {
+        "type": "p",
+        "text": "Staffing demand is not flat; it rises and falls by phase, and by side. Consulting demand climbs from Discovery into Build, peaks across Build and Test, then tapers — while the client team's demand peaks in bursts: Discovery, design sign-off, UAT, and hypercare. The two curves do not mirror each other, and the collision points — where both peak at once — are where capacity breaks."
+      },
+      {
+        "type": "img",
+        "src": "/images/blog/implementation-resource-planning-1.svg",
+        "alt": "Resource ramp-up and ramp-down curves showing consultant and client staffing demand across Discovery, Design, Build, Test, Deploy, and Hypercare phases",
+        "caption": "Resource demand curves across phases — conceptual; relative demand only, not measured data."
+      },
+      {
+        "type": "p",
+        "text": "Three mistakes live inside these curves. The flat staffing plan — same headcount kickoff to go-live — over-staffs Discovery and starves Build, where the work actually is. The cliff ramp-down: consultants rolling off the week after go-live, leaving hypercare to a skeleton crew exactly when users meet the system. The invisible ramp-up: mid-project arrivals with no plan time, as if a consultant joining in week twelve of Build is productive on day one. None of these are resourcing decisions; they are resourcing hopes."
+      },
+      {
+        "type": "h2",
+        "text": "Client-Team Capacity: The Constraint That Decides Everything"
+      },
+      {
+        "type": "p",
+        "text": "Every experienced implementation PM has the same scar tissue: a plan perfect on the consulting side that collapsed on the client's. The client team is always the constraint, for three structural reasons. Their people have day jobs that do not pause — payroll runs, month-end closes, benefits enrollments continue. Their decisions carry organizational weight consultants cannot substitute — only the payroll lead can own the statutory risk. And their availability compresses exactly when demand peaks — UAT and hypercare land on top of the busiest operational weeks."
+      },
+      {
+        "type": "img",
+        "src": "/images/blog/implementation-resource-planning-2.svg",
+        "alt": "Staffing heatmap of core implementation roles against project phases, showing where each role's demand peaks",
+        "caption": "Role-by-phase staffing heatmap — conceptual; relative intensity only."
+      },
+      {
+        "type": "p",
+        "text": "The answer is a client resource plan: per workstream, per phase, with named people, real availability, and the operational collisions — built jointly with the client's operational leadership, not handed over finished. Reconcile it with the heatmap: when the plan asks the payroll lead for heavy validation during a filing week, something has to move — the date, the validation scope, or the backfill."
+      },
+      {
+        "type": "steps",
+        "label": "Backfill planning for client SMEs — run this before kickoff",
+        "intro": "Backfill is a named, funded part of the staffing plan — run this before kickoff, not after the first missed review.",
+        "items": [
+          {
+            "title": "Name the key client SMEs and their day jobs",
+            "text": "List the client people on the critical path — payroll leads, process owners, IT contacts — and document their operational load phase by phase. If you cannot name them, the plan has a blank where the constraint lives."
+          },
+          {
+            "title": "Map operational collisions",
+            "text": "Lay the phase schedule against the client's real calendar: payroll cycles, month-end and quarter-end, filing deadlines, enrollment windows, holidays. Every collision week is a risk week."
+          },
+          {
+            "title": "Define the backfill arrangement per person",
+            "text": "For each key SME and collision week, name the backfill: who covers the day job, full or partial, and who authorized it. A real backfill plan has a name, a date range, and a signature."
+          },
+          {
+            "title": "Fund it in the business case",
+            "text": "Backfill costs money — coverage, overtime, deferred work — and if it is not in the business case, it will not happen. Planned backfill is cheap; the delay from an SME with no hours is not."
+          },
+          {
+            "title": "Govern it like any other resource",
+            "text": "Track client SME availability with the same discipline as consultant allocation. Confirm coverage before each collision week — never discover the absence in the status meeting where the review was due."
+          }
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Staffing the Hypercare Window"
+      },
+      {
+        "type": "p",
+        "text": "Hypercare — the first weeks after go-live — is where staffing plans reveal their true values. The pattern is depressingly consistent: the full team rolls off at go-live, a thin crew remains, and week one is when users actually touch the system, payroll runs for real, and every untested edge case arrives at once."
+      },
+      {
+        "type": "p",
+        "text": "Staff hypercare as a phase, not an afterthought: named coverage for every module family, the data migration specialist available for reconciliation questions, the payroll lead fully dedicated through at least two full pay cycles — both jurisdictions' cycles in cross-border programs — and a defined escalation path with real response times. Define exit criteria in advance: defect thresholds, reconciliation results, ticket volumes trending down. Without them, hypercare ends too early at a sponsor's urging or drifts into a shadow team. One non-negotiable: the people who know the system best must still be present. Handing hypercare to a support team that never sat in the design rooms converts every issue into a rediscovery exercise. Taper gradually, driven by criteria — not the calendar."
+      },
+      {
+        "type": "h2",
+        "text": "Onboarding and Offboarding Team Members Mid-Project"
+      },
+      {
+        "type": "p",
+        "text": "Teams change mid-project — people roll off, new consultants arrive, client SMEs rotate. Treat this as expected, not exceptional. Every role needs a transition plan: documentation standards that make handover possible, a defined overlap period (never zero), and a named successor before the predecessor's last day."
+      },
+      {
+        "type": "p",
+        "text": "The cost of a mid-project arrival is routinely underestimated. A consultant joining in Build needs weeks to absorb the design decisions, data-model quirks, and client politics — while the existing team pays an onboarding tax. Reflect this: reduced effective capacity for the first two to three weeks, first assignments on bounded, well-documented packages — never the critical path. Offboarding deserves equal discipline: departing members complete handover artifacts — open decisions, undocumented configurations, relationship context — before their last day, not after. Knowledge that leaves in someone's head is a loss the plan never accounted for."
+      },
+      {
+        "type": "quiz",
+        "label": "Check your understanding",
+        "questions": [
+          {
+            "q": "A key consultant is allocated at 25% across four client projects. What should the staffing plan assume?",
+            "options": [
+              {
+                "text": "One full productive day per week, reliably",
+                "correct": false,
+                "why": "Fragmented allocations lose heavily to context-switching — the hours are interrupted, not block-scheduled."
+              },
+              {
+                "text": "Significantly less than 25% effective contribution, unsuitable for critical-path roles",
+                "correct": true,
+                "why": "Below ~50%, effective output drops faster than the percentage — critical-path roles need 75%+ or a dedicated person."
+              },
+              {
+                "text": "Exactly two focused days every week",
+                "correct": false,
+                "why": "No part-time allocation across competing clients behaves like a clean calendar block."
+              }
+            ]
+          },
+          {
+            "q": "Why is the client team consistently the binding constraint on staffing plans?",
+            "options": [
+              {
+                "text": "Client teams are less skilled than consultants",
+                "correct": false,
+                "why": "The constraint is structural: day jobs that do not pause, decisions only they can own, demand peaking in their busiest weeks."
+              },
+              {
+                "text": "Their day jobs continue, only they can own key decisions, and peak demand collides with operational peaks",
+                "correct": true,
+                "why": "Operational cycles do not stop for the implementation — and nobody else can own the decisions the plan depends on."
+              },
+              {
+                "text": "Clients refuse to participate in implementations",
+                "correct": false,
+                "why": "Most clients participate willingly; the failure is a plan that assumed their time without scheduling it against their real calendar."
+              }
+            ]
+          },
+          {
+            "q": "What defines the end of hypercare?",
+            "options": [
+              {
+                "text": "A fixed date two weeks after go-live",
+                "correct": false,
+                "why": "Calendar-driven hypercare ends too early or never. Duration follows evidence, not a date in the plan."
+              },
+              {
+                "text": "Predefined exit criteria: defect thresholds, reconciliation results, ticket trends",
+                "correct": true,
+                "why": "Criteria-driven exit demonstrates stability — two clean pay cycles, defects within tolerance — before tapering support."
+              },
+              {
+                "text": "When the implementation team rolls off to their next project",
+                "correct": false,
+                "why": "Letting resourcing convenience end hypercare turns unresolved issues into permanent support burden."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Common Mistakes"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "Staffing consultants without the client side: a plan modeling only consulting effort is half a plan. The client team's hours are the constraint — name them, schedule them, backfill them.",
+          "The flat staffing plan: same headcount kickoff to go-live over-staffs Discovery and starves Build, where the work actually is. Demand curves by phase; the plan must too.",
+          "Treating 25 percent as a real allocation: fragmented people produce fragmented output. Critical-path roles need dedication; part-time staffing belongs on non-critical work with explicit expectations.",
+          "The hypercare cliff: rolling the team off at go-live leaves the first real payroll cycles to a skeleton crew. Hypercare is a staffed phase with exit criteria — or a hope.",
+          "Adding people mid-project without onboarding time: a consultant arriving in week twelve of Build is not productive on day one. Plan the onboarding tax, start them on bounded packages, and never put a new arrival on the critical path."
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Key Takeaways"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "The client team is always the constraint — plan their capacity, map collisions, and fund backfill before kickoff.",
+          "Below about 50 percent allocation, effective contribution drops faster than the number; staff critical-path roles at 75 percent or above.",
+          "Demand curves by phase: build ramp-up and ramp-down into the plan, and never cliff-roll the team at go-live.",
+          "Hypercare is a staffed phase with named coverage through two pay cycles and criteria-driven exit.",
+          "Treat mid-project transitions as expected: planned overlap, handover artifacts, honest onboarding time."
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "FAQ"
+      },
+      {
+        "type": "h3",
+        "text": "How many consultants does a typical HCM implementation need?"
+      },
+      {
+        "type": "p",
+        "text": "There is no typical number — it depends on module scope, entity count, jurisdictions, integrations, and data complexity. Apply the role-by-role model to your scope: staff each role family to its demand curve, not to a rule of thumb."
+      },
+      {
+        "type": "h3",
+        "text": "Can one consultant cover multiple module areas?"
+      },
+      {
+        "type": "p",
+        "text": "In small, single-entity programs, a strong consultant can carry adjacent modules. In enterprise or cross-border programs, module depth matters — payroll is a specialist discipline, and spreading one person across payroll, time, and benefits usually slows all three."
+      },
+      {
+        "type": "h3",
+        "text": "Should the project manager be full-time?"
+      },
+      {
+        "type": "p",
+        "text": "On any program above trivial size, yes — dedicated, not split across clients. A part-time PM administers; a dedicated PM leads. The PM is the wrong place to save headcount: their absence costs every other role's productivity."
+      },
+      {
+        "type": "h3",
+        "text": "How do you handle a client SME who has no time?"
+      },
+      {
+        "type": "p",
+        "text": "Escalate early, with options: backfill the day job, narrow the SME's scope to decisions only, or move the schedule. Unavailable SMEs are a project risk to govern, not a personal failing to work around."
+      },
+      {
+        "type": "h2",
+        "text": "Next Steps"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "Build the role-by-role staffing model — name every role family, its peak phase, and its minimum allocation.",
+          "Draw the ramp curves for both sides and mark where the peaks collide.",
+          "Run the backfill planning steps with the client's operational leadership before kickoff.",
+          "Price the plan into the timeline with the timeline estimation guide, then lock it into the project plan.",
+          "Define hypercare staffing and exit criteria alongside your go-live checklist — before the project starts, not the week it ends."
+        ]
+      }
+    ]
+  },
+  {
     "slug": "implementation-timeline-estimation",
     "title": "Implementation Timeline Estimation Techniques: How to Estimate HCM Project Timelines Honestly",
     "excerpt": "A practitioner's guide to estimating HCM implementation timelines: five techniques, explicit contingency, sponsor-ready ranges, and phase-gate re-baselining.",
