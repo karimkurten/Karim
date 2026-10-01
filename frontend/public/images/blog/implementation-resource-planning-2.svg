@@ -1,0 +1,143 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" role="img" aria-label="Staffing demand heatmap by role and implementation phase">
+  <defs>
+    <linearGradient id="bgGrad2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#F0F4F8"/>
+      <stop offset="1" stop-color="#ffffff"/>
+    </linearGradient>
+    <linearGradient id="heroBand2" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#0f172a"/>
+      <stop offset="1" stop-color="#1e3a5f"/>
+    </linearGradient>
+    <filter id="softShadow2" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+  <rect x="0" y="0" width="1200" height="720" fill="url(#bgGrad2)" rx="16"/>
+  <rect x="0" y="0" width="1200" height="96" fill="url(#heroBand2)" rx="16"/>
+  <rect x="0" y="80" width="1200" height="16" fill="url(#heroBand2)"/>
+  <text x="40" y="44" font-family="system-ui,sans-serif" font-size="26" font-weight="700" fill="#ffffff">Staffing demand by role and phase</text>
+  <text x="40" y="74" font-family="system-ui,sans-serif" font-size="16" fill="#94A3B8">Where each role's demand concentrates across the implementation</text>
+  <rect x="20" y="112" width="1160" height="494" fill="#ffffff" stroke="#E2E8F0" stroke-width="1.5" rx="10" filter="url(#softShadow2)"/>
+  <text x="406.0" y="134" text-anchor="middle" font-family="system-ui,sans-serif" font-size="18" font-weight="700" fill="#1A202C">Discovery</text>
+<text x="538.0" y="134" text-anchor="middle" font-family="system-ui,sans-serif" font-size="18" font-weight="700" fill="#1A202C">Design</text>
+<text x="670.0" y="134" text-anchor="middle" font-family="system-ui,sans-serif" font-size="18" font-weight="700" fill="#1A202C">Build</text>
+<text x="802.0" y="134" text-anchor="middle" font-family="system-ui,sans-serif" font-size="18" font-weight="700" fill="#1A202C">Test</text>
+<text x="934.0" y="134" text-anchor="middle" font-family="system-ui,sans-serif" font-size="18" font-weight="700" fill="#1A202C">Deploy</text>
+<text x="1066.0" y="134" text-anchor="middle" font-family="system-ui,sans-serif" font-size="18" font-weight="700" fill="#1A202C">Hypercare</text>
+
+  <text x="48" y="183.0" font-family="system-ui,sans-serif" font-size="18" font-weight="600" fill="#1A202C">Project Manager</text>
+<rect x="342" y="152" width="128" height="48" rx="8" fill="#94A3B8"/>
+<text x="406.0" y="183.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="17" font-weight="600" fill="#1A202C">Medium</text>
+<rect x="474" y="152" width="128" height="48" rx="8" fill="#2B6CB0"/>
+<text x="538.0" y="183.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="17" font-weight="600" fill="#ffffff">High</text>
+<rect x="606" y="152" width="128" height="48" rx="8" fill="#2B6CB0"/>
+<text x="670.0" y="183.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="17" font-weight="600" fill="#ffffff">High</text>
+<rect x="738" y="152" width="128" height="48" rx="8" fill="#2B6CB0"/>
+<text x="802.0" y="183.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="17" font-weight="600" fill="#ffffff">High</text>
+<rect x="870" y="152" width="128" height="48" rx="8" fill="#2B6CB0"/>
+<text x="934.0" y="183.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="17" font-weight="600" fill="#ffffff">High</text>
+<rect x="1002" y="152" width="128" height="48" rx="8" fill="#94A3B8"/>
+<text x="1066.0" y="183.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="17" font-weight="600" fill="#1A202C">Medium</text>
+<text x="48" y="235.0" font-family="system-ui,sans-serif" font-size="18" font-weight="600" fill="#1A202C">Solution Architects</text>
+<rect x="342" y="204" width="128" height="48" rx="8" fill="#E2E8F0"/>
+<text x="406.0" y="235.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="17" font-weight="600" fill="#475569">Low</text>
+<rect x="474" y="204" width="128" height="48" rx="8" fill="#1e3a5f"/>
+<text x="538.0" y="235.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="17" font-weight="600" fill="#ffffff">Peak</text>
+<rect x="606" y="204" width="128" height="48" rx="8" fill="#2B6CB0"/>
+<text x="670.0" y="235.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="17" font-weight="600" fill="#ffffff">High</text>
+<rect x="738" y="204" width="128" height="48" rx="8" fill="#94A3B8"/>
+<text x="802.0" y="235.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="17" font-weight="600" fill="#1A202C">Medium</text>
+<rect x="870" y="204" width="128" height="48" rx="8" fill="#E2E8F0"/>
+<text x="934.0" y="235.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="17" font-weight="600" fill="#475569">Low</text>
+<rect x="1002" y="204" width="128" height="48" rx="8" fill="#E2E8F0"/>
+<text x="1066.0" y="235.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="17" font-weight="600" fill="#475569">Low</text>
+<text x="48" y="287.0" font-family="system-ui,sans-serif" font-size="18" font-weight="600" fill="#1A202C">Functional Consultants</text>
+<rect x="342" y="256" width="128" height="48" rx="8" fill="#E2E8F0"/>
+<text x="406.0" y="287.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="17" font-weight="600" fill="#475569">Low</text>
+<rect x="474" y="256" width="128" height="48" rx="8" fill="#94A3B8"/>
+<text x="538.0" y="287.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="17" font-weight="600" fill="#1A202C">Medium</text>
+<rect x="606" y="256" width="128" height="48" rx="8" fill="#1e3a5f"/>
+<text x="670.0" y="287.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="17" font-weight="600" fill="#ffffff">Peak</text>
+<rect x="738" y="256" width="128" height="48" rx="8" fill="#2B6CB0"/>
+<text x="802.0" y="287.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="17" font-weight="600" fill="#ffffff">High</text>
+<rect x="870" y="256" width="128" height="48" rx="8" fill="#94A3B8"/>
+<text x="934.0" y="287.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="17" font-weight="600" fill="#1A202C">Medium</text>
+<rect x="1002" y="256" width="128" height="48" rx="8" fill="#E2E8F0"/>
+<text x="1066.0" y="287.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="17" font-weight="600" fill="#475569">Low</text>
+<text x="48" y="339.0" font-family="system-ui,sans-serif" font-size="18" font-weight="600" fill="#1A202C">Data Migration Specialist</text>
+<rect x="342" y="308" width="128" height="48" rx="8" fill="#94A3B8"/>
+<text x="406.0" y="339.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="17" font-weight="600" fill="#1A202C">Medium</text>
+<rect x="474" y="308" width="128" height="48" rx="8" fill="#2B6CB0"/>
+<text x="538.0" y="339.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="17" font-weight="600" fill="#ffffff">High</text>
+<rect x="606" y="308" width="128" height="48" rx="8" fill="#1e3a5f"/>
+<text x="670.0" y="339.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="17" font-weight="600" fill="#ffffff">Peak</text>
+<rect x="738" y="308" width="128" height="48" rx="8" fill="#94A3B8"/>
+<text x="802.0" y="339.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="17" font-weight="600" fill="#1A202C">Medium</text>
+<rect x="870" y="308" width="128" height="48" rx="8" fill="#E2E8F0"/>
+<text x="934.0" y="339.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="17" font-weight="600" fill="#475569">Low</text>
+<rect x="1002" y="308" width="128" height="48" rx="8" fill="#E2E8F0"/>
+<text x="1066.0" y="339.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="17" font-weight="600" fill="#475569">Low</text>
+<text x="48" y="391.0" font-family="system-ui,sans-serif" font-size="18" font-weight="600" fill="#1A202C">Integration Lead</text>
+<rect x="342" y="360" width="128" height="48" rx="8" fill="#E2E8F0"/>
+<text x="406.0" y="391.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="17" font-weight="600" fill="#475569">Low</text>
+<rect x="474" y="360" width="128" height="48" rx="8" fill="#94A3B8"/>
+<text x="538.0" y="391.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="17" font-weight="600" fill="#1A202C">Medium</text>
+<rect x="606" y="360" width="128" height="48" rx="8" fill="#2B6CB0"/>
+<text x="670.0" y="391.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="17" font-weight="600" fill="#ffffff">High</text>
+<rect x="738" y="360" width="128" height="48" rx="8" fill="#1e3a5f"/>
+<text x="802.0" y="391.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="17" font-weight="600" fill="#ffffff">Peak</text>
+<rect x="870" y="360" width="128" height="48" rx="8" fill="#94A3B8"/>
+<text x="934.0" y="391.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="17" font-weight="600" fill="#1A202C">Medium</text>
+<rect x="1002" y="360" width="128" height="48" rx="8" fill="#E2E8F0"/>
+<text x="1066.0" y="391.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="17" font-weight="600" fill="#475569">Low</text>
+<text x="48" y="443.0" font-family="system-ui,sans-serif" font-size="18" font-weight="600" fill="#1A202C">Test Manager</text>
+<rect x="342" y="412" width="128" height="48" rx="8" fill="#E2E8F0"/>
+<text x="406.0" y="443.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="17" font-weight="600" fill="#475569">Low</text>
+<rect x="474" y="412" width="128" height="48" rx="8" fill="#E2E8F0"/>
+<text x="538.0" y="443.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="17" font-weight="600" fill="#475569">Low</text>
+<rect x="606" y="412" width="128" height="48" rx="8" fill="#94A3B8"/>
+<text x="670.0" y="443.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="17" font-weight="600" fill="#1A202C">Medium</text>
+<rect x="738" y="412" width="128" height="48" rx="8" fill="#1e3a5f"/>
+<text x="802.0" y="443.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="17" font-weight="600" fill="#ffffff">Peak</text>
+<rect x="870" y="412" width="128" height="48" rx="8" fill="#2B6CB0"/>
+<text x="934.0" y="443.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="17" font-weight="600" fill="#ffffff">High</text>
+<rect x="1002" y="412" width="128" height="48" rx="8" fill="#94A3B8"/>
+<text x="1066.0" y="443.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="17" font-weight="600" fill="#1A202C">Medium</text>
+<text x="48" y="495.0" font-family="system-ui,sans-serif" font-size="18" font-weight="600" fill="#1A202C">Change &amp; Training Lead</text>
+<rect x="342" y="464" width="128" height="48" rx="8" fill="#E2E8F0"/>
+<text x="406.0" y="495.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="17" font-weight="600" fill="#475569">Low</text>
+<rect x="474" y="464" width="128" height="48" rx="8" fill="#94A3B8"/>
+<text x="538.0" y="495.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="17" font-weight="600" fill="#1A202C">Medium</text>
+<rect x="606" y="464" width="128" height="48" rx="8" fill="#94A3B8"/>
+<text x="670.0" y="495.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="17" font-weight="600" fill="#1A202C">Medium</text>
+<rect x="738" y="464" width="128" height="48" rx="8" fill="#2B6CB0"/>
+<text x="802.0" y="495.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="17" font-weight="600" fill="#ffffff">High</text>
+<rect x="870" y="464" width="128" height="48" rx="8" fill="#1e3a5f"/>
+<text x="934.0" y="495.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="17" font-weight="600" fill="#ffffff">Peak</text>
+<rect x="1002" y="464" width="128" height="48" rx="8" fill="#2B6CB0"/>
+<text x="1066.0" y="495.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="17" font-weight="600" fill="#ffffff">High</text>
+<text x="48" y="547.0" font-family="system-ui,sans-serif" font-size="18" font-weight="600" fill="#1A202C">Client SMEs &amp; Payroll Leads</text>
+<rect x="342" y="516" width="128" height="48" rx="8" fill="#2B6CB0"/>
+<text x="406.0" y="547.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="17" font-weight="600" fill="#ffffff">High</text>
+<rect x="474" y="516" width="128" height="48" rx="8" fill="#1e3a5f"/>
+<text x="538.0" y="547.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="17" font-weight="600" fill="#ffffff">Peak</text>
+<rect x="606" y="516" width="128" height="48" rx="8" fill="#94A3B8"/>
+<text x="670.0" y="547.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="17" font-weight="600" fill="#1A202C">Medium</text>
+<rect x="738" y="516" width="128" height="48" rx="8" fill="#1e3a5f"/>
+<text x="802.0" y="547.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="17" font-weight="600" fill="#ffffff">Peak</text>
+<rect x="870" y="516" width="128" height="48" rx="8" fill="#2B6CB0"/>
+<text x="934.0" y="547.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="17" font-weight="600" fill="#ffffff">High</text>
+<rect x="1002" y="516" width="128" height="48" rx="8" fill="#2B6CB0"/>
+<text x="1066.0" y="547.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="17" font-weight="600" fill="#ffffff">High</text>
+
+  <rect x="40" y="620" width="26" height="26" rx="6" fill="#1e3a5f"/>
+<text x="76" y="640" font-family="system-ui,sans-serif" font-size="18" fill="#475569">Peak demand</text>
+<rect x="240" y="620" width="26" height="26" rx="6" fill="#2B6CB0"/>
+<text x="276" y="640" font-family="system-ui,sans-serif" font-size="18" fill="#475569">High demand</text>
+<rect x="440" y="620" width="26" height="26" rx="6" fill="#94A3B8"/>
+<text x="476" y="640" font-family="system-ui,sans-serif" font-size="18" fill="#475569">Medium demand</text>
+<rect x="640" y="620" width="26" height="26" rx="6" fill="#E2E8F0"/>
+<text x="676" y="640" font-family="system-ui,sans-serif" font-size="18" fill="#475569">Low demand</text>
+
+  <text x="600" y="692" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" font-style="italic" fill="#94A3B8">Conceptual illustration — relative demand only, not measured data</text>
+</svg>
