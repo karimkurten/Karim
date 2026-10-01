@@ -151,3 +151,5 @@ The blog renderer (`frontend/src/pages/BlogPost.jsx`) supports interactive widge
 Rules: never invent numbers or survey data to fill a widget; quiz explanations must be grounded in the article; keep each widget focused (3–5 tabs/steps/questions max).
 
 <!-- CI nudge: retrigger Vercel build after article-09 publish (2026-09-24) -->
+
+<!-- deploy nudge 2026-10-01: force Vercel rebuild for article-16 -->
