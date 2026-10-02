@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="520" viewBox="0 0 760 520" font-family="Inter, 'Segoe UI', Arial, sans-serif">
+  <defs>
+    <linearGradient id="hdr2" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#0f172a"/>
+      <stop offset="1" stop-color="#1e3a5f"/>
+    </linearGradient>
+    <pattern id="dual" width="10" height="10" patternTransform="rotate(45)" patternUnits="userSpaceOnUse">
+      <rect width="10" height="10" fill="#E2E8F0"/>
+      <line x1="0" y1="0" x2="0" y2="10" stroke="#94A3B8" stroke-width="2" opacity="0.35"/>
+    </pattern>
+  </defs>
+  <rect x="0" y="0" width="760" height="520" fill="#ffffff"/>
+  <rect x="0" y="0" width="760" height="76" fill="url(#hdr2)"/>
+  <text x="380" y="34" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="700">Big-Bang vs Phased: Timeline Comparison</text>
+  <text x="380" y="58" text-anchor="middle" fill="#94A3B8" font-size="12">Same total scope — different risk shapes. Conceptual; relative timing only, not measured data.</text>
+
+  <!-- lane labels -->
+  <text x="24" y="130" fill="#1A202C" font-size="15" font-weight="700">BIG-BANG</text>
+  <text x="24" y="300" fill="#1A202C" font-size="15" font-weight="700">PHASED</text>
+
+  <g font-size="12">
+    <!-- Big-bang lane -->
+    <rect x="130" y="112" width="330" height="40" rx="6" fill="#F0F4F8" stroke="#E2E8F0"/>
+    <text x="295" y="137" text-anchor="middle" fill="#475569">Discover → Design → Build → Test (one track)</text>
+    <polygon points="472,112 492,132 472,152 452,132" fill="#2B6CB0"/>
+    <text x="472" y="178" text-anchor="middle" fill="#2B6CB0" font-weight="700">Cutover</text>
+    <rect x="504" y="112" width="150" height="40" rx="6" fill="#0f172a"/>
+    <text x="579" y="137" text-anchor="middle" fill="#ffffff">Hypercare (single)</text>
+    <line x1="654" y1="112" x2="736" y2="112" stroke="#94A3B8" stroke-width="2" stroke-dasharray="5,4"/>
+    <rect x="654" y="120" width="82" height="32" rx="6" fill="#E2E8F0"/>
+    <text x="695" y="141" text-anchor="middle" fill="#475569">Steady state</text>
+    <text x="579" y="178" text-anchor="middle" fill="#64748B" font-size="11">One data freeze · one conversion · one support push</text>
+
+    <!-- Phased lane -->
+    <!-- interim dual-running zone -->
+    <rect x="130" y="240" width="606" height="100" fill="url(#dual)" opacity="0.5" rx="6"/>
+    <text x="660" y="256" text-anchor="end" fill="#64748B" font-size="11">Interim: dual-running systems</text>
+
+    <!-- Wave 1 -->
+    <rect x="130" y="266" width="150" height="40" rx="6" fill="#F0F4F8" stroke="#E2E8F0"/>
+    <text x="205" y="291" text-anchor="middle" fill="#475569">Wave 1 build/test</text>
+    <polygon points="292,266 312,286 292,306 272,286" fill="#2B6CB0"/>
+    <text x="292" y="332" text-anchor="middle" fill="#2B6CB0" font-weight="700" font-size="11">Cutover</text>
+
+    <!-- Wave 2 -->
+    <rect x="324" y="266" width="150" height="40" rx="6" fill="#F0F4F8" stroke="#E2E8F0"/>
+    <text x="399" y="291" text-anchor="middle" fill="#475569">Wave 2 build/test</text>
+    <polygon points="486,266 506,286 486,306 466,286" fill="#2B6CB0"/>
+    <text x="486" y="332" text-anchor="middle" fill="#2B6CB0" font-weight="700" font-size="11">Cutover</text>
+
+    <!-- Wave 3 -->
+    <rect x="518" y="266" width="150" height="40" rx="6" fill="#F0F4F8" stroke="#E2E8F0"/>
+    <text x="593" y="291" text-anchor="middle" fill="#475569">Wave 3 build/test</text>
+    <polygon points="680,266 700,286 680,306 660,286" fill="#2B6CB0"/>
+    <text x="680" y="332" text-anchor="middle" fill="#2B6CB0" font-weight="700" font-size="11">Cutover</text>
+
+    <!-- hypercare band under waves -->
+    <rect x="272" y="356" width="100" height="26" rx="5" fill="#0f172a"/>
+    <text x="322" y="373" text-anchor="middle" fill="#ffffff" font-size="11">Hypercare</text>
+    <rect x="466" y="356" width="100" height="26" rx="5" fill="#0f172a"/>
+    <text x="516" y="373" text-anchor="middle" fill="#ffffff" font-size="11">Hypercare</text>
+    <rect x="660" y="356" width="76" height="26" rx="5" fill="#0f172a"/>
+    <text x="698" y="373" text-anchor="middle" fill="#ffffff" font-size="11">Hypercare</text>
+
+    <text x="380" y="410" text-anchor="middle" fill="#64748B" font-size="11">Each wave = freeze + conversion + testing + gate + hypercare. Waves compound lessons.</text>
+  </g>
+
+  <!-- legend -->
+  <g font-size="12">
+    <rect x="40" y="448" width="16" height="16" fill="#2B6CB0"/>
+    <text x="62" y="461" fill="#475569">Cutover event</text>
+    <rect x="210" y="448" width="16" height="16" fill="#0f172a"/>
+    <text x="232" y="461" fill="#475569">Hypercare window</text>
+    <rect x="400" y="448" width="16" height="16" fill="#F0F4F8" stroke="#E2E8F0"/>
+    <text x="422" y="461" fill="#475569">Delivery work</text>
+    <rect x="570" y="448" width="16" height="16" fill="url(#dual)" opacity="0.7"/>
+    <text x="592" y="461" fill="#475569">Dual-running interim</text>
+  </g>
+</svg>
