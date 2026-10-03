@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700" role="img" aria-label="Comparison of cleansing data in the legacy system versus cleansing in a staging environment">
+  <defs>
+    <linearGradient id="bg2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0f172a"/>
+      <stop offset="1" stop-color="#1e3a5f"/>
+    </linearGradient>
+    <linearGradient id="card2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#F0F4F8"/>
+      <stop offset="1" stop-color="#E2E8F0"/>
+    </linearGradient>
+    <linearGradient id="hdr" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#2B6CB0"/>
+      <stop offset="1" stop-color="#2563EB"/>
+    </linearGradient>
+    <filter id="shadow2" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="6" stdDeviation="10" flood-color="#0f172a" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+
+  <rect x="0" y="0" width="1200" height="700" fill="url(#bg2)"/>
+  <text x="600" y="60" text-anchor="middle" font-family="'DM Serif Display', Georgia, serif" font-size="38" fill="#F0F4F8">Where to Cleanse: Legacy vs Staging</text>
+  <text x="600" y="94" text-anchor="middle" font-family="system-ui, sans-serif" font-size="16" fill="#94A3B8">The environment decision changes effort, risk, and who owns the work. Pick it deliberately, once.</text>
+
+  <!-- LEFT: cleanse in legacy -->
+  <g filter="url(#shadow2)">
+    <rect x="60" y="130" width="510" height="470" rx="14" fill="url(#card2)" stroke="#E2E8F0" stroke-width="2"/>
+    <rect x="60" y="130" width="510" height="86" rx="14" fill="url(#hdr)"/>
+    <rect x="60" y="170" width="510" height="46" fill="url(#hdr)"/>
+    <text x="315" y="168" text-anchor="middle" font-family="'DM Serif Display', Georgia, serif" font-size="24" fill="#F0F4F8">Cleanse in Legacy</text>
+    <text x="315" y="198" text-anchor="middle" font-family="system-ui, sans-serif" font-size="14" fill="#E2E8F0">Fix the data where it lives today</text>
+
+    <text x="95" y="252" font-family="system-ui, sans-serif" font-weight="bold" font-size="15" fill="#2B6CB0">When it wins</text>
+    <text x="95" y="278" font-family="system-ui, sans-serif" font-size="14.5" fill="#475569">
+      <tspan x="95" dy="0">&#8226; Legacy stays live and editable during the project</tspan>
+      <tspan x="95" dy="24">&#8226; Business users can fix their own data with familiar screens</tspan>
+      <tspan x="95" dy="24">&#8226; Improvements benefit day-to-day operations immediately</tspan>
+      <tspan x="95" dy="24">&#8226; One system of record throughout — no parallel universe</tspan>
+    </text>
+
+    <text x="95" y="414" font-family="system-ui, sans-serif" font-weight="bold" font-size="15" fill="#2B6CB0">Watch out</text>
+    <text x="95" y="440" font-family="system-ui, sans-serif" font-size="14.5" fill="#475569">
+      <tspan x="95" dy="0">&#8226; Fixes can be undone by ongoing legacy data entry</tspan>
+      <tspan x="95" dy="24">&#8226; Limited by legacy validation and available tooling</tspan>
+      <tspan x="95" dy="24">&#8226; Competes with operations for system and user time</tspan>
+    </text>
+
+    <text x="95" y="556" font-family="'DM Serif Display', Georgia, serif" font-size="15" fill="#1A202C">Best for: long coexistence windows,</text>
+    <text x="95" y="578" font-family="system-ui, sans-serif" font-size="14" fill="#64748B">engaged HR users, simple defect patterns.</text>
+  </g>
+
+  <!-- RIGHT: cleanse in staging -->
+  <g filter="url(#shadow2)">
+    <rect x="630" y="130" width="510" height="470" rx="14" fill="url(#card2)" stroke="#E2E8F0" stroke-width="2"/>
+    <rect x="630" y="130" width="510" height="86" rx="14" fill="url(#hdr)"/>
+    <rect x="630" y="170" width="510" height="46" fill="url(#hdr)"/>
+    <text x="885" y="168" text-anchor="middle" font-family="'DM Serif Display', Georgia, serif" font-size="24" fill="#F0F4F8">Cleanse in Staging</text>
+    <text x="885" y="198" text-anchor="middle" font-family="system-ui, sans-serif" font-size="14" fill="#E2E8F0">Extract, cleanse, and validate offline</text>
+
+    <text x="665" y="252" font-family="system-ui, sans-serif" font-weight="bold" font-size="15" fill="#2B6CB0">When it wins</text>
+    <text x="665" y="278" font-family="system-ui, sans-serif" font-size="14.5" fill="#475569">
+      <tspan x="665" dy="0">&#8226; Legacy is read-only, frozen, or being retired</tspan>
+      <tspan x="665" dy="24">&#8226; Multiple sources must be merged into one truth</tspan>
+      <tspan x="665" dy="24">&#8226; Heavy transformation or fuzzy matching needed</tspan>
+      <tspan x="665" dy="24">&#8226; Work can iterate without touching live operations</tspan>
+    </text>
+
+    <text x="665" y="414" font-family="system-ui, sans-serif" font-weight="bold" font-size="15" fill="#2B6CB0">Watch out</text>
+    <text x="665" y="440" font-family="system-ui, sans-serif" font-size="14.5" fill="#475569">
+      <tspan x="665" dy="0">&#8226; Extracted copy drifts from live data — re-extract on schedule</tspan>
+      <tspan x="665" dy="24">&#8226; Fixes invisible to users until migration — less trust</tspan>
+      <tspan x="665" dy="24">&#8226; Needs explicit ownership of the staging dataset</tspan>
+    </text>
+
+    <text x="665" y="556" font-family="'DM Serif Display', Georgia, serif" font-size="15" fill="#1A202C">Best for: retiring systems, multi-source</text>
+    <text x="665" y="578" font-family="system-ui, sans-serif" font-size="14" fill="#64748B">landscapes, complex matching and transformation.</text>
+  </g>
+
+  <!-- vs badge -->
+  <circle cx="600" cy="365" r="34" fill="#0f172a" stroke="#2B6CB0" stroke-width="3"/>
+  <text x="600" y="375" text-anchor="middle" font-family="'DM Serif Display', Georgia, serif" font-size="24" fill="#F0F4F8">vs</text>
+
+  <!-- footer -->
+  <text x="600" y="648" text-anchor="middle" font-family="system-ui, sans-serif" font-size="15" fill="#94A3B8">Hybrids are common: fix what you can in legacy, transform the rest in staging — but own the decision in the plan.</text>
+</svg>
