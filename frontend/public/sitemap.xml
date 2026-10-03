@@ -60,7 +60,13 @@
 <url><loc>https://www.karimchaouki.com/blog/implementation-resource-planning</loc><lastmod>2026-10-01</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>  <url>
     <loc>https://www.karimchaouki.com/blog/phased-vs-big-bang-rollouts</loc>
   </url>
+<url>
+  <loc>https://karimchaouki.com/blog/data-cleansing-playbook-hcm</loc>
+  <priority>0.8</priority>
+  <changefreq>monthly</changefreq>
+</url>
 </urlset>
+
 
 
 
