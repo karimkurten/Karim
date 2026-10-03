@@ -1,5 +1,367 @@
 [
   {
+    "slug": "data-cleansing-playbook-hcm",
+    "title": "Data Cleansing Playbook for HCM Migrations: From Dirty Legacy Data to Go-Live-Ready Records",
+    "excerpt": "A practitioner's data cleansing playbook for HCM migrations: profiling, defect taxonomy, cleansing rules, and the 5-phase process that decides go-live.",
+    "publishedAt": "2026-10-03",
+    "readingTime": "7 min read",
+    "cover": "/images/blog/data-cleansing-playbook-hcm-cover.webp",
+    "tags": [
+      "HCM",
+      "Data Migration",
+      "Implementation"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "Every HCM migration is two projects wearing one schedule: the system project and the data project. The system project gets the steering committee and the methodology; the data project gets a line item called \"data migration\" and a hope that the legacy extract will be fine. It is rarely fine — data quality is the quiet variable that decides whether go-live is a launch or an incident."
+      },
+      {
+        "type": "p",
+        "text": "Programs burn months re-running test cycles because the data in the test environment was dirty and nobody owned cleaning it. Configuration gets blamed, rebuilt, retested — against the same dirty data — until someone profiles the dataset and finds duplicates, phantom actives, inconsistent pay codes, and blank mandatory fields. None of that is a configuration problem. This playbook covers the defect taxonomy, the cleanse-in-legacy versus cleanse-in-staging decision, the five-phase process, and the ownership model that keeps the work honest."
+      },
+      {
+        "type": "h2",
+        "text": "Why Cleansing Decides Migration Success"
+      },
+      {
+        "type": "p",
+        "text": "A migration loads data; it does not improve it. Legacy defects — duplicates, stale records, inconsistent codes, missing fields — get carried into the new system, where they are harder to find and more expensive to fix. The new platform enforces validation the legacy system never had, and every failing record becomes a manual exception, often on a cutover weekend."
+      },
+      {
+        "type": "p",
+        "text": "The cost curve is the argument: a defect found during profiling is cheap and reversible; found during testing, a data-vs-configuration debate burning test days; found after go-live, an employee impact. Each stage multiplies the cost."
+      },
+      {
+        "type": "h2",
+        "text": "Know Your Enemy: The Defect Taxonomy"
+      },
+      {
+        "type": "p",
+        "text": "Legacy HR data decays through ordinary organizational life — system changes, acquisitions, process drift. The patterns are consistent:"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "Duplicates — the same person in two or three records. Highest severity: double-counted headcount, split pay, conflicting tax records. Define matching criteria first; merging is irreversible.",
+          "Stale and phantom records — terminated employees still active, long-gone contractors. Active-status flags are unreliable; validate terminations as their own pass.",
+          "Inconsistent codes and formats — three spellings of one department, job codes meaning different things per entity. Not cosmetic: they break mappings, reporting, and integrations.",
+          "Missing mandatory fields — tax identifiers, pay group assignments the new platform requires but legacy merely suggested. Blank fails visibly; invented fails silently in payroll.",
+          "Orphaned records — dependents pointing to parents that no longer exist. Catch them with referential integrity checks during profiling.",
+          "Conflicting sources of truth — HR, payroll, and the carrier each report a different headcount. The business declares which source wins per field, not the project team."
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Profile Before You Touch Anything"
+      },
+      {
+        "type": "p",
+        "text": "Profiling looks like delay; it is the only phase that makes everything after it efficient. Analyze the legacy dataset before any cleansing decision — counts, value distributions, null rates, duplicate candidates, code inventories, referential integrity."
+      },
+      {
+        "type": "p",
+        "text": "The output is a map, not a report: where defects cluster, what is clean, plus the baseline every later phase is measured against. Without it, cleansing is unbounded; with it, a scoped deliverable."
+      },
+      {
+        "type": "h2",
+        "text": "Cleanse in Legacy vs Cleanse in Staging"
+      },
+      {
+        "type": "p",
+        "text": "One decision shapes the playbook: fix the data in the legacy system, or in a staging environment working on extracted copies? The wrong choice costs months."
+      },
+      {
+        "type": "ul",
+        "items": [
+          "Cleanse in legacy: when the system stays live and editable, HR users are engaged, and defects suit form-based correction. Bonus: the business runs on cleaner data immediately. Risk: regression from ongoing entry, and legacy validation limits.",
+          "Cleanse in staging: when legacy is read-only or retiring, sources must merge into one truth, or transformation is heavy. You iterate freely off-operations. Risk: the extract drifts from live data, and fixes stay invisible until testing."
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Hybrids are the norm: fix what you can in legacy, transform the rest in staging. Decide once, deliberately, in the data migration plan."
+      },
+      {
+        "type": "compare",
+        "label": "Cleanse in legacy vs cleanse in staging — same defects, different economics",
+        "beforeTitle": "Cleanse in legacy",
+        "beforeItems": [
+          "Business users fix data in familiar screens — higher trust and engagement",
+          "Improvements benefit day-to-day operations immediately",
+          "One system of record throughout — no parallel dataset to govern",
+          "Competes with operations for system and user time",
+          "Fixes can be undone by ongoing legacy data entry",
+          "Limited by legacy validation and available tooling",
+          "Best for: long coexistence windows, engaged HR users, simple defects"
+        ],
+        "afterTitle": "Cleanse in staging",
+        "afterItems": [
+          "Iterate freely without touching live operations",
+          "Handles multi-source merges and heavy transformation cleanly",
+          "Fuzzy matching and bulk reformatting at scale",
+          "Extracted copy drifts from live data — needs scheduled re-extracts",
+          "Fixes invisible until testing — less user trust along the way",
+          "Needs explicit ownership of the staging dataset",
+          "Best for: retiring systems, multi-source landscapes, complex matching"
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "The Five-Phase Playbook"
+      },
+      {
+        "type": "p",
+        "text": "Each phase gates the next. Skipping one does not save time — it borrows it at interest."
+      },
+      {
+        "type": "steps",
+        "label": "The cleansing playbook — five phases, in order, no skipping",
+        "intro": "Each phase gates the next. Skipping one does not save time; it borrows time at interest.",
+        "items": [
+          {
+            "title": "Phase 1: Profile",
+            "text": "Extract the legacy dataset and analyze it before touching anything: record counts by entity and population, value distributions, null rates on mandatory fields, duplicate candidates, code-list inventories, referential integrity checks. The output is a map — where defects cluster, what is clean — plus a baseline every later phase is measured against."
+          },
+          {
+            "title": "Phase 2: Define rules",
+            "text": "With HR and payroll in the room, set the cleansing rules: formats, allowed code lists, duplicate matching criteria, and a field-level decision for every defect — keep, fix, archive, or drop. The business owns these decisions; the project team facilitates and documents them."
+          },
+          {
+            "title": "Phase 3: Cleanse",
+            "text": "Execute in the agreed environment: deduplicate, standardize, complete mandatory fields from authoritative sources, resolve orphans. Log every change with before-and-after values. Reversibility is non-negotiable — a cleansing pass that cannot be audited cannot be trusted."
+          },
+          {
+            "title": "Phase 4: Validate",
+            "text": "Re-profile the cleansed dataset and reconcile it against legacy sources: counts balance, cleansing rules pass, payroll-critical fields complete. Validation is signed off by the HR and payroll data owners, not by the project team alone."
+          },
+          {
+            "title": "Phase 5: Prevent recurrence",
+            "text": "Lock the gains for the remainder of the program: entry validation on the data sources still live, named data stewards, scheduled re-profiling before each migration load, and clear ownership so dirty data never quietly returns."
+          }
+        ]
+      },
+      {
+        "type": "img",
+        "src": "/images/blog/data-cleansing-playbook-hcm-1.svg",
+        "alt": "Flow diagram of the five-phase data cleansing playbook — profile, define rules, cleanse, validate, prevent recurrence",
+        "caption": "Flow diagram of the five-phase data cleansing playbook for HCM migrations."
+      },
+      {
+        "type": "p",
+        "text": "On deduplication and standardization. The two heaviest technical lifts, both needing rule-first discipline: match criteria before the first merge, a resolution hierarchy for conflicts, authoritative code lists. Treat the match log and code mapping as deliverables, not scripts."
+      },
+      {
+        "type": "h2",
+        "text": "Completeness Checks for Payroll-Critical Fields"
+      },
+      {
+        "type": "p",
+        "text": "Not all fields are equal: a missing preferred name is an annoyance; a missing tax jurisdiction is a filing failure. Before cleansing begins, payroll names the payroll-critical fields per jurisdiction — tax identifiers, pay groups, work locations, rates, deductions — and those get the strictest checks."
+      },
+      {
+        "type": "p",
+        "text": "Cross-border scope raises the bar: a field optional in one country can be mandatory in another. The check must be jurisdiction-aware, or it blesses records that pass a global rule and fail a local filing."
+      },
+      {
+        "type": "p",
+        "text": "The hard rule: mandatory fields get values from authoritative sources only — never invention, never defaults. A blank that fails validation visibly is a known problem with an owner; an invented value that passes is a silent defect."
+      },
+      {
+        "type": "h2",
+        "text": "Ownership: The Client Owns the Data"
+      },
+      {
+        "type": "p",
+        "text": "The principle that keeps cleansing honest: the client owns their data; consultants facilitate. Only the business can decide that two records are the same person or that this pay code maps to that one. The sign-offs carry client names."
+      },
+      {
+        "type": "p",
+        "text": "Made unilaterally by the project team, data decisions get re-litigated later — during testing, parallel runs, hypercare — by people with more authority and less patience. Client ownership front-loaded is schedule protection."
+      },
+      {
+        "type": "p",
+        "text": "Practically: named data stewards, one per domain, with decision authority and accountability to sign off. Without them, cleansing is everybody's concern and nobody's job."
+      },
+      {
+        "type": "h2",
+        "text": "Timing: Cleanse Before, Never During"
+      },
+      {
+        "type": "p",
+        "text": "The sequencing rule is absolute: cleansing happens before migration loads feed testing — never during testing, parallel runs, or cutover. Dirty data loaded early becomes \"test data\" by default, and the project spends weeks debating: data or configuration?"
+      },
+      {
+        "type": "p",
+        "text": "So the cleansing schedule works backward from the first test cycle that needs realistic data. Profile early — as soon as extracts exist, often during design. Finish the cleansing passes before the first load anyone tests against, then re-profile before every load: initial, UAT refresh, mock cutover, production."
+      },
+      {
+        "type": "p",
+        "text": "Reconciliation only passes when both sides are trustworthy; parallel-run differences are only diagnosable when inputs are clean. Every downstream quality activity assumes cleansed data; cleansing late starves all of them."
+      },
+      {
+        "type": "img",
+        "src": "/images/blog/data-cleansing-playbook-hcm-2.svg",
+        "alt": "Comparison of cleansing in the legacy system versus cleansing in a staging environment — when each approach wins and what to watch for",
+        "caption": "Comparison diagram of cleansing in legacy versus cleansing in staging for HCM migrations."
+      },
+      {
+        "type": "h2",
+        "text": "Common Mistakes"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "Cleansing without profiling — skipping the map to save time, then paying for it on the critical path.",
+          "Cleaning during testing — dirty test data turns every test cycle into a data-vs-configuration debate.",
+          "Deciding alone — unilateral project-team data decisions get re-litigated by people with more authority and less patience.",
+          "Inventing field values — blank fails visibly; invented fails silently in payroll.",
+          "One-and-done cleansing — data keeps moving; every load needs its own delta pass.",
+          "Ignoring jurisdictions — a global rule that blesses records failing local requirements.",
+          "No named stewards — everybody's concern, nobody's job.",
+          "Migrating distrusted sources — a reconciliation fight at every test cycle."
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Key Takeaways"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "Migration loads data; it does not improve it. Defects arrive in the new system harder to find and more expensive to fix.",
+          "Profile before touching anything — the map, the estimate, and the baseline.",
+          "The defect taxonomy is predictable; recognize the patterns and the rules write themselves.",
+          "Decide once where cleansing happens: legacy, staging, or a documented hybrid.",
+          "Run the five phases in order, each gating the next.",
+          "The client owns the data; consultants facilitate. Named stewards are schedule protection.",
+          "Cleanse before testing, never during.",
+          "Mandatory fields get values from authoritative sources only. Blank fails visibly; invented fails silently."
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "FAQ"
+      },
+      {
+        "type": "h3",
+        "text": "How early should data profiling start?"
+      },
+      {
+        "type": "p",
+        "text": "As soon as legacy extracts are available — often during design. Profiling has no dependency on the new system's design; start early so the defect inventory informs the schedule."
+      },
+      {
+        "type": "h3",
+        "text": "Who should be the data stewards?"
+      },
+      {
+        "type": "p",
+        "text": "People who know what the data means and can decide about it — senior HR operations, payroll leadership. Named individuals, not committees: one accountable owner per domain, with calendar time."
+      },
+      {
+        "type": "h3",
+        "text": "What do we do with historical data that is dirty beyond repair?"
+      },
+      {
+        "type": "p",
+        "text": "Not all history deserves cleansing effort. Regulatory retention, active payroll calculations, and benefits continuity define the must-clean set; beyond that, archive legacy data as-is and migrate only what the new system will actively use."
+      },
+      {
+        "type": "h3",
+        "text": "Can we cleanse after go-live instead?"
+      },
+      {
+        "type": "p",
+        "text": "Technically yes; practically it is the most expensive option — fixing data inside a live payroll system, under change control, often requiring retroactive adjustments. The playbook exists so the hard data decisions happen when they are cheap."
+      },
+      {
+        "type": "h2",
+        "text": "Next Steps"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "Request legacy extracts now and profile before any cleansing decision.",
+          "With HR and payroll, set the payroll-critical completeness bar per jurisdiction.",
+          "Decide the cleansing environment — legacy, staging, or hybrid — and write it into the plan.",
+          "Name data stewards per domain with real authority and calendar time.",
+          "Sequence cleansing backward from the first test cycle needing realistic data, re-profiling before every load."
+        ]
+      },
+      {
+        "type": "quiz",
+        "label": "Self-check: data cleansing judgment",
+        "questions": [
+          {
+            "q": "Your test team reports configuration defects, but the loaded test data was never cleansed. What is the most likely reality?",
+            "options": [
+              {
+                "text": "The configuration is probably wrong and needs rebuilding",
+                "correct": false,
+                "why": "Rebuilding configuration against dirty data tests nothing. Dirty data loaded early becomes 'test data' by default, and the team debates data vs configuration for weeks."
+              },
+              {
+                "text": "The failures may be data defects masquerading as configuration defects — profile and cleanse before retesting",
+                "correct": true,
+                "why": "Correct. This is the most expensive debate in implementation. Cleanse before testing, never during — every downstream quality activity assumes cleansed data."
+              },
+              {
+                "text": "Add more test cycles until the defects stop appearing",
+                "correct": false,
+                "why": "More cycles against the same dirty data produce the same ambiguous failures. The fix is cleansing the data, not repeating the test."
+              }
+            ]
+          },
+          {
+            "q": "Two legacy records appear to be the same person, but the project team is unsure. Who decides whether to merge them?",
+            "options": [
+              {
+                "text": "The consultant running the deduplication, to keep the schedule",
+                "correct": false,
+                "why": "Unilateral project-team decisions get re-litigated later by people with more authority and less patience. Data decisions are business decisions."
+              },
+              {
+                "text": "The named data steward for employee master data, with an audit trail of the match",
+                "correct": true,
+                "why": "Correct. The client owns the data; consultants facilitate. Merging is irreversible, so the decision needs authority and an audit trail."
+              },
+              {
+                "text": "Defer the decision and migrate both records",
+                "correct": false,
+                "why": "Migrating both preserves the duplicate into the new system, where it can double-count headcount and create conflicting tax records — the highest-severity defect class."
+              }
+            ]
+          },
+          {
+            "q": "A mandatory tax field is blank for 200 employees and the source system cannot provide the values before the next load. What should happen?",
+            "options": [
+              {
+                "text": "Fill the blanks with a reasonable default so validation passes",
+                "correct": false,
+                "why": "Invented data is worse than blank data. A blank fails validation visibly; an invented value passes and fails silently in payroll or compliance."
+              },
+              {
+                "text": "Leave them blank and let the load errors identify the records",
+                "correct": false,
+                "why": "Load errors are a blunt instrument and they arrive on the critical path. The records need authoritative values from HR or government documents, with an owner and a deadline — not a default."
+              },
+              {
+                "text": "Escalate to the data steward: source authoritative values, assign owners and a deadline, and hold the records from the load until resolved",
+                "correct": true,
+                "why": "Correct. Mandatory fields get values from authoritative sources only. Known gaps with owners and deadlines are manageable; invented values are silent defects."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "p",
+        "text": "---"
+      }
+    ]
+  },
+  {
     "slug": "phased-vs-big-bang-rollouts",
     "title": "Phased vs Big-Bang Rollouts: A Decision Framework for HCM Implementations",
     "excerpt": "Phased or big-bang rollout? A practitioner's decision framework: six trade-off dimensions, when each strategy wins, and how to structure waves that compound.",
