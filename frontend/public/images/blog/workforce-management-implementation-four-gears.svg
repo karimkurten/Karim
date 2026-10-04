@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 620" role="img" aria-label="The Four Gears of workforce management: Capture, Compute, Comply, Control">
+  <rect width="1200" height="620" fill="#F4F6F8"/>
+  <text x="600" y="52" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="30" font-weight="700" fill="#16294A">The Four Gears of Workforce Management</text>
+  <text x="600" y="84" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="16" fill="#5A6C7D">Each gear drives the next — a fault in any one degrades the whole machine</text>
+
+  <!-- Gear nodes -->
+  <g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+    <!-- Gear 1 -->
+    <rect x="40" y="150" width="240" height="300" rx="16" fill="#16294A"/>
+    <text x="160" y="205" text-anchor="middle" font-size="17" font-weight="700" fill="#FFFFFF" letter-spacing="2">GEAR 1</text>
+    <text x="160" y="245" text-anchor="middle" font-size="26" font-weight="700" fill="#FFFFFF">Capture</text>
+    <text x="160" y="280" text-anchor="middle" font-size="15" fill="#BCD0E8">Record the truth</text>
+    <text x="160" y="320" text-anchor="middle" font-size="13" fill="#D7E5F5">Clocks · mobile · web</text>
+    <text x="160" y="342" text-anchor="middle" font-size="13" fill="#D7E5F5">Missed-punch workflows</text>
+    <text x="160" y="364" text-anchor="middle" font-size="13" fill="#D7E5F5">Audit trails</text>
+    <text x="160" y="410" text-anchor="middle" font-size="13" font-style="italic" fill="#8FA8C8">Fails as: buddy punching,</text>
+    <text x="160" y="430" text-anchor="middle" font-size="13" font-style="italic" fill="#8FA8C8">unrecorded overtime</text>
+
+    <!-- Gear 2 -->
+    <rect x="330" y="150" width="240" height="300" rx="16" fill="#2B6CB0"/>
+    <text x="450" y="205" text-anchor="middle" font-size="17" font-weight="700" fill="#FFFFFF" letter-spacing="2">GEAR 2</text>
+    <text x="450" y="245" text-anchor="middle" font-size="26" font-weight="700" fill="#FFFFFF">Compute</text>
+    <text x="450" y="280" text-anchor="middle" font-size="15" fill="#D7E5F5">Apply the rules</text>
+    <text x="450" y="320" text-anchor="middle" font-size="13" fill="#FFFFFF">Overtime · premiums</text>
+    <text x="450" y="342" text-anchor="middle" font-size="13" fill="#FFFFFF">Differentials · accruals</text>
+    <text x="450" y="364" text-anchor="middle" font-size="13" fill="#FFFFFF">Rounding policies</text>
+    <text x="450" y="410" text-anchor="middle" font-size="13" font-style="italic" fill="#D7E5F5">Fails as: the rule nobody</text>
+    <text x="450" y="430" text-anchor="middle" font-size="13" font-style="italic" fill="#D7E5F5">mapped, applied at scale</text>
+
+    <!-- Gear 3 -->
+    <rect x="620" y="150" width="240" height="300" rx="16" fill="#16294A"/>
+    <text x="740" y="205" text-anchor="middle" font-size="17" font-weight="700" fill="#FFFFFF" letter-spacing="2">GEAR 3</text>
+    <text x="740" y="245" text-anchor="middle" font-size="26" font-weight="700" fill="#FFFFFF">Comply</text>
+    <text x="740" y="280" text-anchor="middle" font-size="15" fill="#BCD0E8">Prove it was right</text>
+    <text x="740" y="320" text-anchor="middle" font-size="13" fill="#D7E5F5">Jurisdiction rules</text>
+    <text x="740" y="342" text-anchor="middle" font-size="13" fill="#D7E5F5">Agreement provisions</text>
+    <text x="740" y="364" text-anchor="middle" font-size="13" fill="#D7E5F5">Attestation records</text>
+    <text x="740" y="410" text-anchor="middle" font-size="13" font-style="italic" fill="#8FA8C8">Fails as: no evidence when</text>
+    <text x="740" y="430" text-anchor="middle" font-size="13" font-style="italic" fill="#8FA8C8">the regulator asks</text>
+
+    <!-- Gear 4 -->
+    <rect x="910" y="150" width="240" height="300" rx="16" fill="#2B6CB0"/>
+    <text x="1030" y="205" text-anchor="middle" font-size="17" font-weight="700" fill="#FFFFFF" letter-spacing="2">GEAR 4</text>
+    <text x="1030" y="245" text-anchor="middle" font-size="26" font-weight="700" fill="#FFFFFF">Control</text>
+    <text x="1030" y="280" text-anchor="middle" font-size="15" fill="#D7E5F5">Govern the machine</text>
+    <text x="1030" y="320" text-anchor="middle" font-size="13" fill="#FFFFFF">Exception management</text>
+    <text x="1030" y="342" text-anchor="middle" font-size="13" fill="#FFFFFF">Labor-cost analytics</text>
+    <text x="1030" y="364" text-anchor="middle" font-size="13" fill="#FFFFFF">Rule-change process</text>
+    <text x="1030" y="410" text-anchor="middle" font-size="13" font-style="italic" fill="#D7E5F5">Fails as: the unmonitored</text>
+    <text x="1030" y="430" text-anchor="middle" font-size="13" font-style="italic" fill="#D7E5F5">system, decaying quietly</text>
+
+    <!-- Arrows between gears -->
+    <polygon points="292,290 312,290 312,278 330,300 312,322 312,310 292,310" fill="#2B6CB0"/>
+    <polygon points="582,290 602,290 602,278 620,300 602,322 602,310 582,310" fill="#16294A"/>
+    <polygon points="872,290 892,290 892,278 910,300 892,322 892,310 872,310" fill="#2B6CB0"/>
+  </g>
+
+  <text x="600" y="520" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="16" fill="#16294A" font-weight="600">Diagnose by gear: wrong input → Capture · wrong rule → Compute · missing rule → Comply · unwatched system → Control</text>
+  <text x="600" y="556" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="14" fill="#5A6C7D">The gears turn in order — analytics built on untrusted capture is a dashboard full of fiction</text>
+</svg>
