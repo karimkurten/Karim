@@ -1,5 +1,244 @@
 [
   {
+    "slug": "legacy-pay-code-mapping",
+    "title": "Mapping Legacy Pay Codes to a New System: The Practitioner's Guide to Payroll-Correct Conversions",
+    "excerpt": "A practitioner's guide to mapping legacy pay codes — earnings, deductions, accruals — into a new HCM platform without breaking payroll.",
+    "publishedAt": "2026-10-04",
+    "readingTime": "7 min read",
+    "cover": "/images/blog/legacy-pay-code-mapping-cover.webp",
+    "tags": [
+      "HCM",
+      "Payroll",
+      "Data Migration"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "Every payroll lives in its pay codes. Each short code carries a chain of meaning: tax rules, GL posting, pay-stub display, arrears and retro behavior. A conversion moves the payroll engine, but the codes are where the business logic lives. Map them wrong and payroll pays people wrong."
+      },
+      {
+        "type": "h2",
+        "text": "Why Mapping Is a Payroll-Correctness Risk"
+      },
+      {
+        "type": "p",
+        "text": "A legacy payroll accumulates codes over years, each created for a reason someone may no longer remember. Translating a rule into a new engine is risky because the two engines rarely think alike. The failure mode looks like success: payroll runs, stubs print. The wrongness hides in the details — small defects multiplied by every pay period."
+      },
+      {
+        "type": "h2",
+        "text": "The Mapping Workbook and Its Columns"
+      },
+      {
+        "type": "p",
+        "text": "One controlled workbook, trusted by payroll and the team. The columns that matter: legacy code and description; behavior notes — taxability, GL posting, frequency, arrears, reporting; target code — the counterpart, or \"no counterpart\"; mapping type; tax treatment — agreed in the new platform's terms, confirmed by payroll, never assumed; GL account — finance-signed; owner and sign-off. Unapproved mappings do not load into test."
+      },
+      {
+        "type": "h2",
+        "text": "Timing: Start Early, Finish With the Workbook"
+      },
+      {
+        "type": "p",
+        "text": "Mapping looks like it can start \"once configuration is done\" — too late. The inventory and behavior documentation take weeks of payroll time — the scarcest resource on the program — and depend on nothing in the new system's design. Start the moment the project is confirmed. The finish line is the workbook — populated, tax-confirmed, finance-signed — not the first parallel run that looks close."
+      },
+      {
+        "type": "h2",
+        "text": "The Four Mapping Patterns"
+      },
+      {
+        "type": "p",
+        "text": "One-to-one — legacy code X means the same as target code Y; verify rather than assume. Many-to-one — several legacy codes collapse into one target; confirm every variant behaves identically first. One-to-many — one legacy code splits where the new platform is more granular, usually a sign the legacy code carried a defect the new design fixes; document it. Retired — dead codes; retire deliberately."
+      },
+      {
+        "type": "h2",
+        "text": "Codes With No Counterpart"
+      },
+      {
+        "type": "p",
+        "text": "Accruals are the classic case: a legacy system may bank vacation as pay codes through payroll, while the new platform tracks accruals in an absence engine. Map the balances, not the codes. Retroactive pay rules deserve caution: the new platform's retro engine carries different assumptions. Test the retro scenarios payroll runs; gaps become design decisions before go-live. Custom add-ons — codes nobody outside payroll understands — each need a business sponsor to sign off on their fate. No sponsor, no code."
+      },
+      {
+        "type": "h2",
+        "text": "Tax and GL Reporting Implications"
+      },
+      {
+        "type": "p",
+        "text": "Each code's tax treatment must be reconfirmed in the new platform's language: a code that reduced taxable income in the legacy system but does not in the new one creates under-withholding that compounds every pay period. Cross-border scope multiplies this — Canadian and US withholding rules differ, and one country's granularity can be insufficient for the other. On the GL side, finance owns the sign-off: each target code must post to the correct account."
+      },
+      {
+        "type": "h2",
+        "text": "Validate With Parallel Payroll, Not Assumptions"
+      },
+      {
+        "type": "p",
+        "text": "Approved mappings load into test, a parallel cycle runs against the legacy payroll, totals reconcile code by code. Mapping errors correct the workbook before the next cycle."
+      },
+      {
+        "type": "img",
+        "src": "/images/blog/legacy-pay-code-mapping-1.svg",
+        "alt": "Flow diagram showing legacy pay codes classified into one-to-one, many-to-one, one-to-many, and retired mappings, each routed into the mapping workbook with owner sign-off",
+        "caption": "Flow diagram of legacy pay codes classified into the four mapping patterns and routed into the mapping workbook."
+      },
+      {
+        "type": "p",
+        "text": "Reconcile at the code level, not the total: offsetting errors can balance in aggregate. Run enough parallels to surface edge cases — quarterly, annual, termination."
+      },
+      {
+        "type": "h2",
+        "text": "Ownership: Payroll Leads, Not IT"
+      },
+      {
+        "type": "p",
+        "text": "Only payroll knows what each legacy code means and what a wrong mapping costs. A technical resource can build the workbook and load the codes, but cannot decide two codes are equivalent or a code is dead. Use a mapping review board — payroll lead, analyst, consultant, finance — with sign-off gates on a cadence."
+      },
+      {
+        "type": "img",
+        "src": "/images/blog/legacy-pay-code-mapping-2.svg",
+        "alt": "Validation loop diagram — approved mapping loads into the test environment, parallel payroll runs, totals reconciled, variances corrected, mapping re-approved",
+        "caption": "Validation loop diagram for pay-code mappings through parallel payroll and reconciliation."
+      },
+      {
+        "type": "h2",
+        "text": "Common Mistakes"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "Treating mapping as a technical task — business rules never translated.",
+          "Starting late — rushing payroll's scarcest time.",
+          "Copying the code list wholesale — dead codes carried forward.",
+          "Assuming legacy tax treatment was correct — wrong withholding carried forward.",
+          "Reconciling totals only — offsetting errors cancel out.",
+          "No approval trail — mappings re-debated each cycle.",
+          "Ignoring historical codes — retiring codes needed for retros.",
+          "Skipping finance sign-off — right by headcount, wrong by GL account."
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Key Takeaways"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "Pay codes carry behavior, not labels: mapping is payroll correctness.",
+          "One workbook, owner sign-off per row; unapproved mappings never load.",
+          "Classify every code: one-to-one, many-to-one, one-to-many, retired.",
+          "Reconfirm tax treatment in the new platform's terms; never assume.",
+          "Finance signs the GL column; include them from the start.",
+          "Prove mappings with parallel payroll, reconciled code by code.",
+          "Start the inventory on day one; finish with the workbook."
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "FAQ"
+      },
+      {
+        "type": "h3",
+        "text": "How many legacy codes typically need mapping?"
+      },
+      {
+        "type": "p",
+        "text": "A few dozen for a single-entity payroll; several hundred for multi-entity ones. Classify every code and retire dead ones."
+      },
+      {
+        "type": "h3",
+        "text": "What happens to retired codes — do we lose the history?"
+      },
+      {
+        "type": "p",
+        "text": "No, if deliberate. History stays in the legacy system or archive, with a workbook lookup. Document it — auditors ask."
+      },
+      {
+        "type": "h3",
+        "text": "Can we map codes after parallel runs start?"
+      },
+      {
+        "type": "p",
+        "text": "You can, but every late mapping invalidates earlier parallel results. Same sign-off and reconciliation, on a compressed cycle."
+      },
+      {
+        "type": "h3",
+        "text": "Who resolves disagreements between payroll and the implementation team?"
+      },
+      {
+        "type": "p",
+        "text": "Payroll. The implementation team advises on capability; the business meaning of each code is payroll's call. Owner names make that authority visible."
+      },
+      {
+        "type": "h2",
+        "text": "Next Steps"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "Inventory every legacy pay code now — code, description, activity — before configuration consumes payroll time.",
+          "Document each code's behavior: taxability, GL posting, frequency, arrears, retro rules.",
+          "Build the workbook; classify every code into the four patterns.",
+          "Name the mapping review board — payroll lead, analyst, consultant, finance — with a sign-off gate.",
+          "Schedule parallel cycles for edge-case codes, and reconcile code by code."
+        ]
+      },
+      {
+        "type": "accordion",
+        "label": "Pay-code mapping scenarios — how each pattern is handled",
+        "items": [
+          {
+            "q": "Legacy 'OT-150' per department becomes one new overtime code",
+            "a": "Many-to-one. If every variant behaves identically — same tax, same GL, same rate rule — they consolidate into one target code plus an attribute for department. Keep a legacy-to-target lookup for historical reporting. Verify the sameness first: one variant with different tax treatment breaks the consolidation."
+          },
+          {
+            "q": "Legacy 'BEN-DED' covers pre-tax and post-tax benefits",
+            "a": "One-to-many. The new platform needs separate pre-tax and post-tax deduction codes for correct tax treatment. Split it deliberately, document that the legacy code was carrying a tax defect the new design fixes, and reconcile both targets against the legacy total in parallel runs."
+          },
+          {
+            "q": "Legacy 'RETRO-X' with custom retro rules from an acquisition",
+            "a": "No automatic counterpart. Walk through the retro scenarios payroll actually runs and confirm the new platform's retro engine reproduces them. If behavior differs, the gap becomes a design decision — with payroll sign-off — before go-live, not a workaround after."
+          },
+          {
+            "q": "Twenty codes with zero activity in two years",
+            "a": "Retired, with sign-off and a documented lookup table for historical reporting. Zero activity is evidence, not proof — confirm no quarterly or annual triggers fire under them before retiring. Do not migrate dead codes 'to be safe.'"
+          }
+        ]
+      },
+      {
+        "type": "steps",
+        "label": "The pay-code mapping workflow — from inventory to validated mappings",
+        "intro": "Mapping runs in this order. The workbook is the contract; nothing loads into test without sign-off.",
+        "items": [
+          {
+            "title": "Inventory legacy codes",
+            "text": "Extract the complete code list — earnings, deductions, accruals, employer taxes — with descriptions and activity. No mapping decision happens before the full inventory exists; surprises are what blow up parallel runs."
+          },
+          {
+            "title": "Document behavior",
+            "text": "For each code, record taxability, GL posting, frequency, arrears handling, retro rules, and reporting treatment. This column carries the real knowledge and takes the most payroll time — start it on day one."
+          },
+          {
+            "title": "Design the target code list",
+            "text": "Draft the new system's code list as a design decision, not a copy of the old one. Consolidate where behavior is identical; split where the new platform's granularity fixes a legacy defect. Keep it lean."
+          },
+          {
+            "title": "Classify and map",
+            "text": "Assign every legacy code a pattern — one-to-one, many-to-one, one-to-many, retired — and record the target code, confirmed tax treatment, and GL account. Flag codes with no counterpart for a design decision."
+          },
+          {
+            "title": "Review and approve",
+            "text": "The mapping review board walks the workbook: payroll confirms behavior and tax, finance signs the GL column, owners sign each row. Unapproved mappings do not load. Disagreements resolve through payroll authority."
+          },
+          {
+            "title": "Validate in parallel",
+            "text": "Load approved mappings, run parallel cycles, reconcile code by code. Classify every variance, correct the workbook for mapping errors, re-approve, and repeat. Finish with the workbook — fully approved and reconciled — not with the first parallel run that 'looks close.'"
+          }
+        ]
+      },
+      {
+        "type": "p",
+        "text": "---"
+      }
+    ]
+  },
+  {
     "slug": "data-cleansing-playbook-hcm",
     "title": "Data Cleansing Playbook for HCM Migrations: From Dirty Legacy Data to Go-Live-Ready Records",
     "excerpt": "A practitioner's data cleansing playbook for HCM migrations: profiling, defect taxonomy, cleansing rules, and the 5-phase process that decides go-live.",
