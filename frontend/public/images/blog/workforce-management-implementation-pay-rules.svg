@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 760" role="img" aria-label="Pay-rule decision tree: how a worked hour flows through daily overtime, weekly overtime, premiums, and jurisdiction checks">
+  <rect width="1000" height="760" fill="#F4F6F8"/>
+  <text x="500" y="52" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="28" font-weight="700" fill="#16294A">How a Worked Hour Becomes a Paid Hour</text>
+  <text x="500" y="82" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="15" fill="#5A6C7D">The pay-rule decision tree — every branch is configuration the project must get right</text>
+
+  <g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+    <!-- Start -->
+    <rect x="380" y="120" width="240" height="64" rx="32" fill="#16294A"/>
+    <text x="500" y="159" text-anchor="middle" font-size="18" font-weight="700" fill="#FFFFFF">Captured time entry</text>
+
+    <line x1="500" y1="184" x2="500" y2="224" stroke="#2B6CB0" stroke-width="3"/>
+
+    <!-- Decision 1 -->
+    <polygon points="500,224 640,300 500,376 360,300" fill="#FFFFFF" stroke="#2B6CB0" stroke-width="3"/>
+    <text x="500" y="292" text-anchor="middle" font-size="15" font-weight="700" fill="#16294A">Daily overtime</text>
+    <text x="500" y="314" text-anchor="middle" font-size="15" font-weight="700" fill="#16294A">threshold met?</text>
+
+    <text x="672" y="262" font-size="13" fill="#5A6C7D">yes → 1.5× / 2×</text>
+    <text x="300" y="262" font-size="13" fill="#5A6C7D" text-anchor="end">no → straight time</text>
+
+    <line x1="500" y1="376" x2="500" y2="416" stroke="#2B6CB0" stroke-width="3"/>
+
+    <!-- Decision 2 -->
+    <polygon points="500,416 640,492 500,568 360,492" fill="#FFFFFF" stroke="#2B6CB0" stroke-width="3"/>
+    <text x="500" y="484" text-anchor="middle" font-size="15" font-weight="700" fill="#16294A">Weekly overtime</text>
+    <text x="500" y="506" text-anchor="middle" font-size="15" font-weight="700" fill="#16294A">threshold met?</text>
+
+    <line x1="500" y1="568" x2="500" y2="596" stroke="#2B6CB0" stroke-width="3"/>
+
+    <!-- Premiums box -->
+    <rect x="330" y="596" width="340" height="72" rx="12" fill="#EAF1F8" stroke="#2B6CB0" stroke-width="2"/>
+    <text x="500" y="624" text-anchor="middle" font-size="15" font-weight="700" fill="#16294A">Premiums &amp; differentials applied</text>
+    <text x="500" y="648" text-anchor="middle" font-size="13" fill="#5A6C7D">night · weekend · holiday · shift · call-back</text>
+
+    <!-- Side branches: jurisdiction + agreement checks -->
+    <line x1="640" y1="300" x2="800" y2="300" stroke="#2B6CB0" stroke-width="2" stroke-dasharray="6,4"/>
+    <rect x="800" y="262" width="170" height="76" rx="12" fill="#16294A"/>
+    <text x="885" y="292" text-anchor="middle" font-size="13" font-weight="700" fill="#FFFFFF">Jurisdiction</text>
+    <text x="885" y="312" text-anchor="middle" font-size="13" font-weight="700" fill="#FFFFFF">check</text>
+    <text x="885" y="330" text-anchor="middle" font-size="11" fill="#BCD0E8">OT varies by province/state</text>
+
+    <line x1="640" y1="492" x2="800" y2="492" stroke="#2B6CB0" stroke-width="2" stroke-dasharray="6,4"/>
+    <rect x="800" y="454" width="170" height="76" rx="12" fill="#16294A"/>
+    <text x="885" y="484" text-anchor="middle" font-size="13" font-weight="700" fill="#FFFFFF">Agreement</text>
+    <text x="885" y="504" text-anchor="middle" font-size="13" font-weight="700" fill="#FFFFFF">check</text>
+    <text x="885" y="522" text-anchor="middle" font-size="11" fill="#BCD0E8">union terms may exceed statute</text>
+
+    <line x1="180" y1="300" x2="60" y2="300" stroke="#2B6CB0" stroke-width="2" stroke-dasharray="6,4"/>
+    <g>
+      <rect x="30" y="262" width="150" height="76" rx="12" fill="#FFFFFF" stroke="#2B6CB0" stroke-width="2"/>
+      <text x="105" y="292" text-anchor="middle" font-size="13" font-weight="700" fill="#16294A">Rounding</text>
+      <text x="105" y="312" text-anchor="middle" font-size="13" font-weight="700" fill="#16294A">policy</text>
+      <text x="105" y="330" text-anchor="middle" font-size="11" fill="#5A6C7D">applied to punches</text>
+    </g>
+  </g>
+
+  <text x="500" y="716" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="15" fill="#16294A" font-weight="600">Every diamond is a configured rule · every dashed branch is a jurisdiction or agreement variation</text>
+  <text x="500" y="742" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" fill="#5A6C7D">Miss one branch and the error compounds across every employee, every shift, every pay period</text>
+</svg>
