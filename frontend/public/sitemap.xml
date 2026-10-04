@@ -1,8 +1,9 @@
+
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://karimchaouki.com/</loc><priority>1.0</priority><changefreq>monthly</changefreq></url>
   <url><loc>https://karimchaouki.com/about</loc><priority>0.9</priority><changefreq>monthly</changefreq></url>
-  <url><loc>https://karimchaouki.com/blog</loc><priority>0.9</priority><changefreq>weekly</changefreq></url>
+  <url><loc>https://karimchaouki.com/blog</loc><priority>0.9</priority><changefreq>weekly</changefreq></url><url><loc>https://karimchaouki.com/blog/workforce-management-implementation-guide</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
   <url><loc>https://karimchaouki.com/blog/how-project-managers-can-avoid-minimize-scope-creep</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
   <url><loc>https://karimchaouki.com/blog/current-vs-future-state-mapping</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
   <url><loc>https://karimchaouki.com/blog/mastering-art-project-management-tips-tricks-new-pms</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
@@ -71,6 +72,7 @@
   <changefreq>monthly</changefreq>
 </url>
 </urlset>
+
 
 
 
