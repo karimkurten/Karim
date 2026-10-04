@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="640" viewBox="0 0 1200 640" role="img" aria-label="Legacy pay codes classified into the four mapping patterns and routed into the mapping workbook">
+  <defs>
+    <linearGradient id="hero" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0f172a"/>
+      <stop offset="1" stop-color="#1e3a5f"/>
+    </linearGradient>
+    <linearGradient id="panel" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#F0F4F8"/>
+      <stop offset="1" stop-color="#E2E8F0"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#2B6CB0"/>
+      <stop offset="1" stop-color="#2563EB"/>
+    </linearGradient>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#2B6CB0"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="1200" height="640" fill="#0f172a"/>
+  <rect x="0" y="0" width="1200" height="120" fill="url(#hero)"/>
+  <text x="600" y="55" text-anchor="middle" font-family="Georgia, serif" font-size="30" fill="#ffffff">Legacy Pay-Code Mapping: Four Patterns</text>
+  <text x="600" y="88" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#94A3B8">Every legacy code is classified, confirmed, and signed off before loading into test</text>
+
+  <!-- Legacy side -->
+  <rect x="40" y="180" width="220" height="380" rx="12" fill="#1e293b" stroke="#2B6CB0" stroke-width="2"/>
+  <text x="150" y="215" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" font-weight="bold" fill="#ffffff">Legacy code list</text>
+  <g font-family="Arial, sans-serif" font-size="14" fill="#cbd5e1">
+    <rect x="60" y="235" width="180" height="34" rx="6" fill="#0f172a"/><text x="72" y="257">REG-001 Regular earnings</text>
+    <rect x="60" y="278" width="180" height="34" rx="6" fill="#0f172a"/><text x="72" y="300">OT-A / OT-B Overtime</text>
+    <rect x="60" y="321" width="180" height="34" rx="6" fill="#0f172a"/><text x="72" y="343">BEN-DED Benefits ded.</text>
+    <rect x="60" y="364" width="180" height="34" rx="6" fill="#0f172a"/><text x="72" y="386">ACC-VAC Vacation accrual</text>
+    <rect x="60" y="407" width="180" height="34" rx="6" fill="#0f172a"/><text x="72" y="429">RETRO-X Custom retro</text>
+    <rect x="60" y="450" width="180" height="34" rx="6" fill="#0f172a"/><text x="72" y="472">OLD-009 Zero activity</text>
+    <rect x="60" y="493" width="180" height="34" rx="6" fill="#0f172a"/><text x="72" y="515">SPC-117 One-time bonus</text>
+  </g>
+
+  <!-- Pattern columns -->
+  <g font-family="Arial, sans-serif">
+    <rect x="330" y="180" width="170" height="380" rx="12" fill="url(#panel)" stroke="#E2E8F0" stroke-width="1"/>
+    <text x="415" y="212" text-anchor="middle" font-size="15" font-weight="bold" fill="#1A202C">One-to-one</text>
+    <text x="415" y="235" text-anchor="middle" font-size="12" fill="#64748B">Verify, do not assume</text>
+    <text x="415" y="300" text-anchor="middle" font-size="14" fill="#475569">REG-001</text>
+    <text x="415" y="322" text-anchor="middle" font-size="14" fill="#475569">SPC-117</text>
+    <text x="415" y="380" text-anchor="middle" font-size="13" fill="#2B6CB0">Same meaning,</text>
+    <text x="415" y="400" text-anchor="middle" font-size="13" fill="#2B6CB0">reconfirm tax</text>
+
+    <rect x="520" y="180" width="170" height="380" rx="12" fill="url(#panel)" stroke="#E2E8F0" stroke-width="1"/>
+    <text x="605" y="212" text-anchor="middle" font-size="15" font-weight="bold" fill="#1A202C">Many-to-one</text>
+    <text x="605" y="235" text-anchor="middle" font-size="12" fill="#64748B">Consolidate + lookup</text>
+    <text x="605" y="300" text-anchor="middle" font-size="14" fill="#475569">OT-A + OT-B</text>
+    <text x="605" y="322" text-anchor="middle" font-size="14" fill="#475569">→ single code</text>
+    <text x="605" y="380" text-anchor="middle" font-size="13" fill="#2B6CB0">Keep history</text>
+    <text x="605" y="400" text-anchor="middle" font-size="13" fill="#2B6CB0">lookup table</text>
+
+    <rect x="710" y="180" width="170" height="380" rx="12" fill="url(#panel)" stroke="#E2E8F0" stroke-width="1"/>
+    <text x="795" y="212" text-anchor="middle" font-size="15" font-weight="bold" fill="#1A202C">One-to-many</text>
+    <text x="795" y="235" text-anchor="middle" font-size="12" fill="#64748B">Split for granularity</text>
+    <text x="795" y="300" text-anchor="middle" font-size="14" fill="#475569">BEN-DED</text>
+    <text x="795" y="322" text-anchor="middle" font-size="14" fill="#475569">→ pre-tax / post-tax</text>
+    <text x="795" y="380" text-anchor="middle" font-size="13" fill="#2B6CB0">Fixes legacy</text>
+    <text x="795" y="400" text-anchor="middle" font-size="13" fill="#2B6CB0">tax defect</text>
+
+    <rect x="900" y="180" width="170" height="380" rx="12" fill="url(#panel)" stroke="#E2E8F0" stroke-width="1"/>
+    <text x="985" y="212" text-anchor="middle" font-size="15" font-weight="bold" fill="#1A202C">Retired</text>
+    <text x="985" y="235" text-anchor="middle" font-size="12" fill="#64748B">Dead codes stay dead</text>
+    <text x="985" y="300" text-anchor="middle" font-size="14" fill="#475569">OLD-009</text>
+    <text x="985" y="322" text-anchor="middle" font-size="14" fill="#475569">ACC-VAC → balances</text>
+    <text x="985" y="380" text-anchor="middle" font-size="13" fill="#2B6CB0">Document the</text>
+    <text x="985" y="400" text-anchor="middle" font-size="13" fill="#2B6CB0">retirement</text>
+  </g>
+
+  <!-- Arrows legacy -> patterns -->
+  <line x1="260" y1="252" x2="325" y2="300" stroke="#2B6CB0" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="260" y1="295" x2="325" y2="340" stroke="#2B6CB0" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="260" y1="340" x2="325" y2="380" stroke="#2B6CB0" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="260" y1="385" x2="325" y2="420" stroke="#2B6CB0" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="260" y1="430" x2="325" y2="460" stroke="#2B6CB0" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="260" y1="472" x2="325" y2="500" stroke="#2B6CB0" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Bottom bar: workbook -->
+  <rect x="330" y="440" width="740" height="70" rx="10" fill="url(#accent)"/>
+  <text x="700" y="472" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#ffffff">Mapping workbook: target code · tax confirmation · GL account · owner sign-off</text>
+  <text x="700" y="496" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="#dbeafe">Unapproved mappings never load into the test environment</text>
+  <text x="150" y="590" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="#94A3B8">Legacy codes</text>
+  <text x="700" y="590" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="#94A3B8">Classification → workbook → sign-off → test load</text>
+</svg>
