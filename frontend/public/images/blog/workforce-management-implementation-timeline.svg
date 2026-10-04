@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 560" role="img" aria-label="Eight-phase workforce management implementation timeline with the key deliverable of each phase">
+  <rect width="1400" height="560" fill="#F4F6F8"/>
+  <text x="700" y="52" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="30" font-weight="700" fill="#16294A">The WFM Implementation Journey — Eight Phases</text>
+  <text x="700" y="84" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="16" fill="#5A6C7D">Each phase ends at a gate — the deliverable named is the proof the phase is done</text>
+
+  <!-- Timeline line -->
+  <line x1="70" y1="200" x2="1330" y2="200" stroke="#2B6CB0" stroke-width="4"/>
+
+  <g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+    <!-- Phase nodes: 8 phases across 1400 width, centers at 70 + i*180 -->
+    <g>
+      <circle cx="70" cy="200" r="26" fill="#16294A"/><text x="70" y="208" text-anchor="middle" font-size="18" font-weight="700" fill="#FFFFFF">1</text>
+      <text x="70" y="260" text-anchor="middle" font-size="16" font-weight="700" fill="#16294A">Initiate</text>
+      <text x="70" y="286" text-anchor="middle" font-size="12.5" fill="#5A6C7D">Charter with the labor</text>
+      <text x="70" y="304" text-anchor="middle" font-size="12.5" fill="#5A6C7D">footprint stated</text>
+      <text x="70" y="336" text-anchor="middle" font-size="12.5" font-weight="600" fill="#2B6CB0">Gate: scope boundary</text>
+      <text x="70" y="354" text-anchor="middle" font-size="12.5" font-weight="600" fill="#2B6CB0">on pay practices</text>
+    </g>
+    <g>
+      <circle cx="250" cy="200" r="26" fill="#2B6CB0"/><text x="250" y="208" text-anchor="middle" font-size="18" font-weight="700" fill="#FFFFFF">2</text>
+      <text x="250" y="260" text-anchor="middle" font-size="16" font-weight="700" fill="#16294A">Plan</text>
+      <text x="250" y="286" text-anchor="middle" font-size="12.5" fill="#5A6C7D">WBS built from the rules,</text>
+      <text x="250" y="304" text-anchor="middle" font-size="12.5" fill="#5A6C7D">not the modules</text>
+      <text x="250" y="336" text-anchor="middle" font-size="12.5" font-weight="600" fill="#2B6CB0">Gate: sequencing +</text>
+      <text x="250" y="354" text-anchor="middle" font-size="12.5" font-weight="600" fill="#2B6CB0">parallel-test strategy</text>
+    </g>
+    <g>
+      <circle cx="430" cy="200" r="26" fill="#16294A"/><text x="430" y="208" text-anchor="middle" font-size="18" font-weight="700" fill="#FFFFFF">3</text>
+      <text x="430" y="260" text-anchor="middle" font-size="16" font-weight="700" fill="#16294A">Discover</text>
+      <text x="430" y="286" text-anchor="middle" font-size="12.5" fill="#5A6C7D">Excavate every pay rule:</text>
+      <text x="430" y="304" text-anchor="middle" font-size="12.5" fill="#5A6C7D">artifacts, forensics, watch</text>
+      <text x="430" y="336" text-anchor="middle" font-size="12.5" font-weight="600" fill="#2B6CB0">Gate: rule inventory</text>
+      <text x="430" y="354" text-anchor="middle" font-size="12.5" font-weight="600" fill="#2B6CB0">complete + sourced</text>
+    </g>
+    <g>
+      <circle cx="610" cy="200" r="26" fill="#2B6CB0"/><text x="610" y="208" text-anchor="middle" font-size="18" font-weight="700" fill="#FFFFFF">4</text>
+      <text x="610" y="260" text-anchor="middle" font-size="16" font-weight="700" fill="#16294A">Design</text>
+      <text x="610" y="286" text-anchor="middle" font-size="12.5" fill="#5A6C7D">Harmonize, then configure;</text>
+      <text x="610" y="304" text-anchor="middle" font-size="12.5" fill="#5A6C7D">design the exceptions</text>
+      <text x="610" y="336" text-anchor="middle" font-size="12.5" font-weight="600" fill="#2B6CB0">Gate: design signed off</text>
+      <text x="610" y="354" text-anchor="middle" font-size="12.5" font-weight="600" fill="#2B6CB0">by rule owners</text>
+    </g>
+    <g>
+      <circle cx="790" cy="200" r="26" fill="#16294A"/><text x="790" y="208" text-anchor="middle" font-size="18" font-weight="700" fill="#FFFFFF">5</text>
+      <text x="790" y="260" text-anchor="middle" font-size="16" font-weight="700" fill="#16294A">Build</text>
+      <text x="790" y="286" text-anchor="middle" font-size="12.5" fill="#5A6C7D">Configure pay rules;</text>
+      <text x="790" y="304" text-anchor="middle" font-size="12.5" fill="#5A6C7D">install time clocks early</text>
+      <text x="790" y="336" text-anchor="middle" font-size="12.5" font-weight="600" fill="#2B6CB0">Gate: payroll interface</text>
+      <text x="790" y="354" text-anchor="middle" font-size="12.5" font-weight="600" fill="#2B6CB0">tested at volume</text>
+    </g>
+    <g>
+      <circle cx="970" cy="200" r="26" fill="#2B6CB0"/><text x="970" y="208" text-anchor="middle" font-size="18" font-weight="700" fill="#FFFFFF">6</text>
+      <text x="970" y="260" text-anchor="middle" font-size="16" font-weight="700" fill="#16294A">Validate</text>
+      <text x="970" y="286" text-anchor="middle" font-size="12.5" fill="#5A6C7D">3 parallel pay cycles;</text>
+      <text x="970" y="304" text-anchor="middle" font-size="12.5" fill="#5A6C7D">reconcile every difference</text>
+      <text x="970" y="336" text-anchor="middle" font-size="12.5" font-weight="600" fill="#2B6CB0">Gate: signed</text>
+      <text x="970" y="354" text-anchor="middle" font-size="12.5" font-weight="600" fill="#2B6CB0">reconciliation log</text>
+    </g>
+    <g>
+      <circle cx="1150" cy="200" r="26" fill="#16294A"/><text x="1150" y="208" text-anchor="middle" font-size="18" font-weight="700" fill="#FFFFFF">7</text>
+      <text x="1150" y="260" text-anchor="middle" font-size="16" font-weight="700" fill="#16294A">Deploy</text>
+      <text x="1150" y="286" text-anchor="middle" font-size="12.5" fill="#5A6C7D">Cut over wave by wave;</text>
+      <text x="1150" y="304" text-anchor="middle" font-size="12.5" fill="#5A6C7D">verify accrual balances</text>
+      <text x="1150" y="336" text-anchor="middle" font-size="12.5" font-weight="600" fill="#2B6CB0">Gate: wave go/no-go</text>
+      <text x="1150" y="354" text-anchor="middle" font-size="12.5" font-weight="600" fill="#2B6CB0">on readiness evidence</text>
+    </g>
+    <g>
+      <circle cx="1330" cy="200" r="26" fill="#2B6CB0"/><text x="1330" y="208" text-anchor="middle" font-size="18" font-weight="700" fill="#FFFFFF">8</text>
+      <text x="1310" y="260" text-anchor="middle" font-size="16" font-weight="700" fill="#16294A">Stabilize</text>
+      <text x="1310" y="286" text-anchor="middle" font-size="12.5" fill="#5A6C7D">Hypercare in pay cycles,</text>
+      <text x="1310" y="304" text-anchor="middle" font-size="12.5" fill="#5A6C7D">not calendar weeks</text>
+      <text x="1310" y="336" text-anchor="middle" font-size="12.5" font-weight="600" fill="#2B6CB0">Gate: operating model</text>
+      <text x="1310" y="354" text-anchor="middle" font-size="12.5" font-weight="600" fill="#2B6CB0">delivered + owned</text>
+    </g>
+  </g>
+
+  <text x="700" y="440" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="15" fill="#5A6C7D">Hardware (time clocks) runs on its own critical path from Phase 1 — procurement lead times are the most common "surprise"</text>
+  <text x="700" y="476" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="15" fill="#5A6C7D">Legislative monitoring is a standing activity across all phases in multi-jurisdiction rollouts</text>
+</svg>
