@@ -71,7 +71,14 @@
   <priority>0.8</priority>
   <changefreq>monthly</changefreq>
 </url>
+  <url>
+    <loc>https://www.karimchaouki.com/blog/how-much-history-to-migrate</loc>
+    <lastmod>2026-10-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
 </urlset>
+
 
 
 
