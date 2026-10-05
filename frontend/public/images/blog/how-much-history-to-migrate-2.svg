@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560" role="img" aria-label="Before and after: migrate everything versus the tiered approach">
+  <defs>
+    <linearGradient id="panel2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FFFFFF"/>
+      <stop offset="1" stop-color="#F0F4F8"/>
+    </linearGradient>
+    <linearGradient id="accentBar2" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#2B6CB0"/>
+      <stop offset="1" stop-color="#1e3a5f"/>
+    </linearGradient>
+    <filter id="soft2" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="3" stdDeviation="5" flood-color="#0f172a" flood-opacity="0.14"/>
+    </filter>
+  </defs>
+
+  <rect x="0" y="0" width="900" height="560" rx="14" fill="url(#panel2)" stroke="#E2E8F0" stroke-width="2"/>
+
+  <!-- LEFT: migrate everything -->
+  <g filter="url(#soft2)">
+    <rect x="24" y="24" width="412" height="512" rx="12" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="2"/>
+  </g>
+  <text x="230" y="66" text-anchor="middle" font-family="Georgia, 'DM Serif Display', serif" font-size="21" font-weight="bold" fill="#1A202C">Migrate everything</text>
+  <!-- Rising stack of record layers, growing effort -->
+  <g>
+    <rect x="80" y="352" width="300" height="26" rx="6" fill="#2B6CB0" opacity="0.88"/>
+    <rect x="80" y="320" width="282" height="26" rx="6" fill="#2B6CB0" opacity="0.78"/>
+    <rect x="80" y="288" width="264" height="26" rx="6" fill="#2B6CB0" opacity="0.68"/>
+    <rect x="80" y="256" width="246" height="26" rx="6" fill="#2B6CB0" opacity="0.58"/>
+    <rect x="80" y="224" width="228" height="26" rx="6" fill="#2B6CB0" opacity="0.48"/>
+    <rect x="80" y="192" width="210" height="26" rx="6" fill="#2B6CB0" opacity="0.38"/>
+    <rect x="80" y="160" width="192" height="26" rx="6" fill="#2B6CB0" opacity="0.28"/>
+    <rect x="80" y="128" width="174" height="26" rx="6" fill="#2B6CB0" opacity="0.18"/>
+  </g>
+  <g font-family="-apple-system, 'Segoe UI', sans-serif" font-size="14" fill="#475569">
+    <circle cx="64" cy="424" r="5" fill="#2B6CB0"/>
+    <text x="80" y="429">Full detail, every year</text>
+    <circle cx="64" cy="460" r="5" fill="#2B6CB0"/>
+    <text x="80" y="465">Every year cleansed, reconciled, tested</text>
+    <circle cx="64" cy="496" r="5" fill="#2B6CB0"/>
+    <text x="80" y="501">Dirty history loads into the new system</text>
+  </g>
+
+  <!-- RIGHT: tiered approach -->
+  <g filter="url(#soft2)">
+    <rect x="464" y="24" width="412" height="512" rx="12" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="2"/>
+  </g>
+  <text x="670" y="66" text-anchor="middle" font-family="Georgia, 'DM Serif Display', serif" font-size="21" font-weight="bold" fill="#1A202C">Tiered approach</text>
+  <!-- Bounded container -->
+  <rect x="506" y="104" width="328" height="340" rx="12" fill="#F0F4F8" stroke="#2B6CB0" stroke-width="2" stroke-dasharray="8 6"/>
+  <g>
+    <rect x="536" y="136" width="268" height="88" rx="8" fill="url(#accentBar2)"/>
+    <rect x="536" y="240" width="268" height="76" rx="8" fill="#2B6CB0" opacity="0.55"/>
+    <rect x="536" y="332" width="268" height="76" rx="8" fill="#2B6CB0" opacity="0.22"/>
+  </g>
+  <g font-family="-apple-system, 'Segoe UI', sans-serif" font-size="14.5" font-weight="600" text-anchor="middle">
+    <text x="670" y="178" fill="#FFFFFF">Full detail — last 2 years</text>
+    <text x="670" y="280" fill="#1A202C">Summarized balances — years 3–6</text>
+    <text x="670" y="372" fill="#1A202C">Read-only archive — everything older</text>
+  </g>
+</svg>
