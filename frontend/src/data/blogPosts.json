@@ -1,5 +1,375 @@
 [
   {
+    "slug": "data-reconciliation-techniques",
+    "title": "Data Reconciliation Techniques That Catch Errors Before Payroll Does",
+    "excerpt": "Reconciliation techniques that prove an HCM conversion loaded correctly: control totals, hash totals, tolerance bands, and sampling.",
+    "publishedAt": "2026-10-06",
+    "readingTime": "8 min read",
+    "cover": "/images/blog/data-reconciliation-techniques-cover.webp",
+    "tags": [
+      "HCM",
+      "Data Migration",
+      "Implementation"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "The load finished without errors. Three weeks later, payroll notices gross pay for one employee group is understated by a small amount on every check — and nobody can say when it started."
+      },
+      {
+        "type": "p",
+        "text": "That is the scenario reconciliation exists to prevent. A clean load only proves the data was structurally acceptable to the new system — not that it is right. Validation asks whether each record was acceptable; reconciliation asks whether the whole population matches the legacy source. Practitioners treat reconciliation as the load gate, not the checkbox after it. A load without signed reconciliation results has not finished — it has only stopped."
+      },
+      {
+        "type": "h2",
+        "text": "Why Reconciliation Is the Load Gate, Not the Checkbox"
+      },
+      {
+        "type": "p",
+        "text": "Most conversion plans list reconciliation as a sign-off line: \"payroll approves the load.\" Sign-off is the conclusion of a reconciliation process, not the process itself — and when the process is undefined, the sign-off becomes a rubber stamp."
+      },
+      {
+        "type": "p",
+        "text": "A real load gate is mechanical. Before anyone signs anything, the migration team runs a fixed battery of techniques against every load: control totals, record counts, hash totals, tolerance checks, and sampled detail verification. The techniques are fixed because reconciliation designed on the spot skips whatever is hard to check. The gate is binary: totals match or the load is not accepted. That is how a program catches a quiet error in a test load instead of in production payroll."
+      },
+      {
+        "type": "h2",
+        "text": "Control Totals: The Numbers Every Load Must Answer"
+      },
+      {
+        "type": "p",
+        "text": "A control total is a single number captured from the legacy source before extraction, then recomputed from the target system after the load, and compared. Three families cover nearly every HCM load."
+      },
+      {
+        "type": "h3",
+        "text": "Record counts and headcount"
+      },
+      {
+        "type": "p",
+        "text": "Count employees extracted, transformed, and loaded — all three stages. Count actives, terminated employees, and rehires separately: a single total hides miscategorization, and a terminated-then-rehired worker can arrive as two records."
+      },
+      {
+        "type": "h3",
+        "text": "Gross-to-net totals"
+      },
+      {
+        "type": "p",
+        "text": "The financial heart of reconciliation. Sum gross pay, deductions, taxes, and net pay from the source pay run and compare against the same figures in the new system. Gross-to-net catches the quietly dropped deduction — the record-level error that record counts cannot see. Run the comparison by payroll group, because a match at the company level can hide offsetting errors. In cross-border conversions, keep Canadian and US payroll groups separated; the tax treatment differs."
+      },
+      {
+        "type": "h3",
+        "text": "Deduction and accrual totals"
+      },
+      {
+        "type": "p",
+        "text": "Totals for each deduction code and accrual balance, summed by code. This is where pay code mapping errors show themselves: a mis-mapped code loads successfully into the wrong target code, and only per-code totals reveal where it landed. Accrual errors do not surface until an employee takes leave months later, so vacation and sick balances deserve the same treatment."
+      },
+      {
+        "type": "img",
+        "src": "/images/blog/data-reconciliation-techniques-1.svg",
+        "alt": "Layered diagram of reconciliation layers - record counts, headcount totals, gross-to-net totals, deduction totals, and sampled detail verification.",
+        "caption": "Layered diagram of the reconciliation stack: record counts at the base, then headcount totals, gross-to-net totals, deduction totals, and sampled detail verification at the top."
+      },
+      {
+        "type": "h2",
+        "text": "Hash Totals and Checksums"
+      },
+      {
+        "type": "p",
+        "text": "Hash totals answer the question control totals cannot: did the data change in transit, or did it only move? A hash total — a computed value from a set of records, such as the sum of employee IDs or a checksum across key fields — is captured in the source and recomputed in the target. Totals can match while data is corrupted if errors offset; identical hash totals across a large population are strong evidence the population is intact. Capture the hash at extraction, at staging, and after the target load so a mismatch localizes to a step, and hash by employee ID ranges or pay groups so it points at a segment. Hash IDs plus key amounts, not just record counts — a checksum on amounts catches the transformation that truncated cents."
+      },
+      {
+        "type": "h2",
+        "text": "Tolerance Bands: How Close Is Close Enough"
+      },
+      {
+        "type": "p",
+        "text": "Not every variance is an error. Rounding differences between systems and per-record truncation that accumulates across thousands of employees produce small, legitimate differences. Without defined bands, the team wastes hours investigating rounding — and real errors get waved away as rounding."
+      },
+      {
+        "type": "p",
+        "text": "Define bands before the first load, in writing, by data type: an absolute dollar threshold and a percentage threshold, whichever is hit first. Gross-to-net gets tight bands; headcount tolerance is zero. Variances inside the band are documented as expected; variances outside enter triage. Tolerance is defined jointly by the payroll lead and the migration lead, before the first load — never negotiated after a variance appears."
+      },
+      {
+        "type": "h2",
+        "text": "Sampled Detail Verification"
+      },
+      {
+        "type": "p",
+        "text": "Totals prove the population balances; sampling proves the records are right. Select a sample — stratified across pay groups, statuses, locations, and both sides of the border — and trace each employee record-by-record back to the legacy source. This is where the errors totals miss show up: the hire date that shifted by a month, the tax election that did not carry over, the garnishment that loaded against the wrong employee. Pull edge cases into every sample — rehires, cross-border transfers, garnishments, mid-cycle rate changes — and have someone other than the transformation author verify it."
+      },
+      {
+        "type": "h2",
+        "text": "Reconciliation by Data Type"
+      },
+      {
+        "type": "p",
+        "text": "Payroll data reconciles to financial precision: gross-to-net totals, per-code deduction totals, and tax balances are the core checks, with tight bands because these numbers hit paychecks and tax filings. In cross-border programs, separate reconciliation by country from the start — Canadian and US payroll run on different source systems and calendars, and blending them produces totals nobody can validate."
+      },
+      {
+        "type": "p",
+        "text": "HR data reconciles to record integrity: headcounts by status, employment dates, job and compensation histories, and organizational assignments. Hash totals on employee IDs catch the dropped or duplicated record; sampling catches the corrupted attribute. The risk here is not a wrong amount but a wrong relationship — an employee on the wrong cost center, a status history that lost a step."
+      },
+      {
+        "type": "p",
+        "text": "Time data reconciles to balance continuity: accrual balances brought forward and time-off balances by employee. The subtle failure is the accrual that recomputes correctly under the new system's rules but started from the wrong opening balance — a data migration fact only reconciliation against the legacy source catches. Reconcile balances at the point of conversion, not after the first accrual run."
+      },
+      {
+        "type": "h2",
+        "text": "Reconcile at Every Load, Not Just the Final One"
+      },
+      {
+        "type": "p",
+        "text": "A conversion runs multiple loads — mock loads, a dress rehearsal, the final production load. Teams that reconcile only the final load discover errors when the schedule has no room to fix them. Every load gets the full battery, because each load validates the current state of the transformation logic: a match on mock load one means the mapping is sound, while a variance on mock load two means a recent change broke something."
+      },
+      {
+        "type": "p",
+        "text": "Reconciliation also runs at three points in each load cycle: staging versus source, target versus staging, and post-cutover versus the last load — the delta of changes between the final load and go-live. The delta is the one teams skip and then regret: the records nobody reconciled are the ones payroll touches first."
+      },
+      {
+        "type": "img",
+        "src": "/images/blog/data-reconciliation-techniques-2.svg",
+        "alt": "Decision-flow diagram for variance triage - variance found, tolerance check, investigation, resolution, reload, and sign-off.",
+        "caption": "Variance triage decision flow: a found variance is checked against tolerance, investigated by root cause, resolved, and the load is re-reconciled before sign-off."
+      },
+      {
+        "type": "h2",
+        "text": "The Variance Triage Workflow"
+      },
+      {
+        "type": "p",
+        "text": "Variances are guaranteed; triage decides whether they are routine work or emergencies. Triage turns every variance into a classified, owned, tracked item: confirm it is real by re-running the totals, then classify it by root-cause category — source data issue, mapping error, transformation defect, timing difference, or expected difference within tolerance. Each category has a default owner and remedy."
+      },
+      {
+        "type": "p",
+        "text": "Three discipline points hold it together. No variance closes without a root cause — \"we reloaded and it matched\" is not one, and the defect will return in the next load. Variances live in the program's defect log, visible to the project manager. And the reload decision is explicit: a transformation fix triggers a full reload and full re-reconciliation, never a hand-patch to the target data — the most dangerous shortcut in a conversion, which makes the numbers agree while leaving the data wrong."
+      },
+      {
+        "type": "h2",
+        "text": "Owners and Sign-Off"
+      },
+      {
+        "type": "p",
+        "text": "Reconciliation fails when it is everyone's job and nobody's responsibility. The migration lead owns the technique battery — totals, hashes, samples, and the reconciliation report for every load. The payroll lead owns the verdict on payroll totals and tolerance bands. The HR data owner signs the HR-side totals. The project manager owns the gate: the load is not accepted until every technique has run and every variance is triaged or accepted within tolerance."
+      },
+      {
+        "type": "p",
+        "text": "Sign-off is per load, in writing, with the technique results attached — a signature on the final load without the earlier loads' reports proves nothing. The reports from the last clean load become the evidence pack for the go-live decision and the audit trail that justifies the cutover."
+      },
+      {
+        "type": "h2",
+        "text": "Common Mistakes"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "Reconciling totals only at the company level — offsetting errors between pay groups cancel out and hide.",
+          "Counting records without counting by category — one total hides miscategorization between actives, terminated, and rehires.",
+          "Skipping hash totals — totals match while data is quietly corrupted in transit.",
+          "Defining tolerance after the variance appears — bands negotiated post-hoc are just excuses.",
+          "Sampling only easy records — edge cases are where transformations break.",
+          "Reconciling only the final load — errors surface when the schedule has no room to fix them.",
+          "Ignoring the cutover delta — the records payroll touches first are the ones nobody reconciled.",
+          "Hand-editing target records to match totals — the numbers agree while the data stays wrong.",
+          "No root cause on closed variances — the same defect returns in the next load."
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Key Takeaways"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "Reconciliation is the load gate, not the checkbox: a load without signed technique results has not finished.",
+          "Control totals are the foundation — record counts by category, gross-to-net by pay group, deductions and accruals by code.",
+          "Hash totals prove the data did not change in transit; capture them at extraction, staging, and target.",
+          "Define tolerance bands in writing before the first load; never negotiate them after a variance appears.",
+          "Sampled detail verification proves individual records are right — stratify the sample and include the edge cases.",
+          "Reconcile payroll, HR, and time data to their own standards: financial precision, record integrity, balance continuity.",
+          "Run the full battery at every load and at staging, target, and post-cutover; never reconcile only the final load.",
+          "Triage every variance to a root cause, track it in the program defect log, and never hand-edit target data to match totals."
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "FAQ"
+      },
+      {
+        "type": "h3",
+        "text": "What is the difference between validation and reconciliation?"
+      },
+      {
+        "type": "p",
+        "text": "Validation checks whether each record is structurally acceptable to the new system — required fields, valid formats, referential integrity. Reconciliation checks whether the whole converted population matches the legacy source — counts, totals, and individual values. A load can pass validation completely and still be wrong."
+      },
+      {
+        "type": "h3",
+        "text": "How many reconciliation techniques should run against each load?"
+      },
+      {
+        "type": "p",
+        "text": "Five: record counts and headcount totals, gross-to-net and deduction control totals, hash totals, tolerance-band comparison, and sampled detail verification — run against every load, mock through final, so results are comparable."
+      },
+      {
+        "type": "h3",
+        "text": "What tolerance band is appropriate for payroll totals?"
+      },
+      {
+        "type": "p",
+        "text": "Bands are set by data type in writing before the first load — tight for gross-to-net, zero for headcount, tight absolute bands for accruals because drift compounds. They are defined jointly by the payroll lead and the migration lead, never negotiated after a variance appears."
+      },
+      {
+        "type": "h3",
+        "text": "Who signs off on reconciliation?"
+      },
+      {
+        "type": "p",
+        "text": "The migration lead produces the technique results, the payroll lead owns the verdict on payroll totals, the HR data owner signs the HR-side totals, and the project manager owns the gate. Sign-off is per load, in writing, with the results attached."
+      },
+      {
+        "type": "h2",
+        "text": "Next Steps"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "Define the reconciliation technique battery now, before the first load: the five techniques and who runs each.",
+          "Capture baseline control totals from the legacy source before extraction begins — you cannot reconcile against totals you never captured.",
+          "Set tolerance bands in writing with the payroll lead, by data type, before the first mock load.",
+          "Design the sampled detail verification: stratification, edge cases to include, and an independent checker.",
+          "Run the full battery at staging, target, and post-cutover for every load, and gate acceptance on the results."
+        ]
+      },
+      {
+        "type": "steps",
+        "label": "The per-load reconciliation run sequence",
+        "intro": "The same battery, in the same order, after every load. Skip a step and the gap is where the quiet error lives.",
+        "items": [
+          {
+            "title": "Capture and lock source totals",
+            "text": "Before extraction, record record counts by category, headcount totals, gross-to-net figures, deduction and accrual totals, and hash totals from the legacy source. These are the baseline — once the load runs, you cannot reconstruct what you did not capture."
+          },
+          {
+            "title": "Reconcile staging against source",
+            "text": "After extraction and staging, recompute counts, totals, and hashes from the staging tables and compare against the locked source figures. A mismatch here localizes the problem to extraction or staging, before the new system is involved."
+          },
+          {
+            "title": "Reconcile target against staging",
+            "text": "After the load into the new system, recompute the same battery from the target and compare against staging. This step isolates transformation and load errors from extraction errors."
+          },
+          {
+            "title": "Apply tolerance bands",
+            "text": "Compare every variance against the pre-defined bands by data type. Variances inside tolerance are documented as expected; variances outside tolerance enter triage. Bands are never negotiated at this point."
+          },
+          {
+            "title": "Run sampled detail verification",
+            "text": "Trace the stratified sample record-by-record from target back to source, including the edge cases — rehires, cross-border transfers, garnishments, mid-cycle rate changes — with an independent checker, not the transformation author."
+          },
+          {
+            "title": "Triage, resolve, and re-run",
+            "text": "Classify every open variance by root cause, fix at the source of the defect, reload, and re-run the full battery. Sign-off is per load, in writing, with the technique results attached."
+          }
+        ]
+      },
+      {
+        "type": "accordion",
+        "label": "Technique deep-dives — what each reconciliation method proves",
+        "items": [
+          {
+            "q": "Control totals — headcount, gross-to-net, deductions",
+            "a": "Control totals are the foundation. Capture a single number from the source — employees extracted, gross pay, total deductions, net pay — then recompute it in the target after the load. Count by category and by pay group, never only at the company level, because offsetting errors cancel out. Per-deduction-code totals catch the mis-mapped code that loaded successfully into the wrong place."
+          },
+          {
+            "q": "Hash totals and checksums",
+            "a": "Hash totals prove the data did not change in transit. Compute a checksum across key fields — employee IDs plus amounts — at extraction, at staging, and after the target load, so a mismatch localizes to a step. Hash by employee ID ranges or pay groups so a mismatch points at a segment. Totals can match while data is corrupted if errors offset; identical hash totals on a large population are strong evidence the population is intact."
+          },
+          {
+            "q": "Tolerance bands and variance thresholds",
+            "a": "Define bands in writing before the first load: an absolute dollar threshold per total and a percentage threshold, whichever is hit first. Gross-to-net gets tight bands, headcount tolerance is zero, accrual balances get tight absolute bands because drift compounds across employees. Variances inside the band are documented as expected and signed off; variances outside enter triage. Never negotiate a band after a variance appears."
+          },
+          {
+            "q": "Sampled detail verification",
+            "a": "Totals prove the population balances; sampling proves the records are right. Stratify the sample across pay groups, employment statuses, locations, and both sides of the border, and pull known edge cases into every sample — rehires, cross-border transfers, employees with garnishments, mid-cycle rate changes. The checker is independent of the transformation author. When the same record class shows errors in two consecutive loads, expand the sample for that class before accepting the load."
+          }
+        ]
+      },
+      {
+        "type": "quiz",
+        "label": "Self-check — is your reconciliation a gate or a checkbox?",
+        "questions": [
+          {
+            "q": "Your conversion runs three mock loads, a dress rehearsal, and a final load. When should the full reconciliation battery run?",
+            "why": "Frequency discipline is what separates a gate from a checkbox.",
+            "options": [
+              {
+                "text": "Only against the final load, to save effort on practice runs",
+                "correct": false,
+                "why": "Errors found only in the final load surface when the schedule has no room to fix them. Each mock load validates the current state of the transformation logic."
+              },
+              {
+                "text": "Against every load, with the same battery each time",
+                "correct": true,
+                "why": "Every load gets the full battery in the same order, so technique results are comparable across the program and transformation regressions are caught immediately."
+              },
+              {
+                "text": "Against the first and final loads only",
+                "correct": false,
+                "why": "The middle loads are where transformation changes happen — skipping them means a regression goes undetected until the final load."
+              }
+            ]
+          },
+          {
+            "q": "Gross pay totals match at the company level, but one pay group's totals are high and another's are equally low. What does this tell you?",
+            "why": "This tests understanding of why totals are never checked only at the top level.",
+            "options": [
+              {
+                "text": "The conversion is fine — the company total is what matters",
+                "correct": false,
+                "why": "Offsetting errors cancel out at the company level. A total that matches at the top can hide two real errors underneath."
+              },
+              {
+                "text": "The variance is within tolerance and can be signed off",
+                "correct": false,
+                "why": "Tolerance bands apply to defined per-group totals, not to a company-level figure that hides offsetting errors. This is a real variance, not rounding."
+              },
+              {
+                "text": "A mapping or transformation error moved amounts between groups",
+                "correct": true,
+                "why": "Equal and opposite variances across pay groups point to a classification or mapping error. This is exactly why totals are run by pay group."
+              }
+            ]
+          },
+          {
+            "q": "A variance sits just outside the tolerance band. The deadline is tight. What is the correct next step?",
+            "why": "This tests whether tolerance is a discipline or a suggestion.",
+            "options": [
+              {
+                "text": "Negotiate a slightly wider band with the team so the load can be accepted",
+                "correct": false,
+                "why": "Bands are defined in writing before the first load and never negotiated after a variance appears. Post-hoc widening is how real errors get waved through."
+              },
+              {
+                "text": "Enter the variance into triage, classify the root cause, and resolve it",
+                "correct": true,
+                "why": "Every variance outside tolerance gets a root cause, a tracked defect, and a fix at the defect's source — then a reload and full re-reconciliation. The gate holds."
+              },
+              {
+                "text": "Hand-correct the target records so the totals match",
+                "correct": false,
+                "why": "Hand-editing target data to match totals makes the numbers agree while leaving the data wrong. Fixes happen in the transformation, followed by a full reload."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "p",
+        "text": "---"
+      }
+    ]
+  },
+  {
     "slug": "how-much-history-to-migrate",
     "title": "Historical Data: How Much Should You Migrate? A Practitioner's Guide to Scoping HCM History Conversion",
     "excerpt": "How many years of payroll and HR history should an HCM conversion carry? A practitioner's guide to history tiering, archives, and the scoping workshop.",
