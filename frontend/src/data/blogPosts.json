@@ -1,5 +1,338 @@
 [
   {
+    "slug": "data-migration-checklist",
+    "title": "The HCM Data Migration Checklist: From Extraction to Cutover Sign-Off",
+    "excerpt": "A practitioner field-guide checklist for HCM data migration: scoping, extraction, cleansing, mapping, test loads, reconciliation, and cutover sign-off.",
+    "publishedAt": "2026-10-07",
+    "readingTime": "8 min read",
+    "cover": "/images/blog/data-migration-checklist-cover.webp",
+    "tags": [
+      "HCM",
+      "Data Migration",
+      "Implementation"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "Every HCM implementation is two projects on one timeline: the configuration everyone talks about, and the data migration that quietly decides whether go-live succeeds. Configuration errors get corrected in a week. Migration defects land in paychecks, tax filings, and benefits enrollment — surfacing months later, attached to employee trust that is expensive to rebuild."
+      },
+      {
+        "type": "p",
+        "text": "A migration checklist is not a task list. It is a lifecycle discipline: every phase has entry criteria, a named owner, and a gate signed before the next phase begins. This guide walks the full lifecycle with the gate discipline that keeps quiet errors out of production payroll."
+      },
+      {
+        "type": "h2",
+        "text": "Before Extraction: Scoping, Sources, and Ownership"
+      },
+      {
+        "type": "p",
+        "text": "Migrations rarely fail at the load. They fail in planning — in the scope nobody wrote down, the source system nobody inventoried, and the decision nobody owned. Scoping answers three questions in writing before anything is extracted: what migrates, what stays behind, and how much history comes along — decided with payroll and HR leadership."
+      },
+      {
+        "type": "p",
+        "text": "The sources inventory prevents the worst surprises: every source system gets a line with its name, owner, and extract format — plus the shadow sources, the spreadsheets a local office has maintained for years. Ownership is set before extraction: the migration lead owns the mechanics, the payroll lead owns payroll data, the HR data owner signs the HR-side totals, and the project manager owns the gates. In cross-border programs, document where employee personal data is extracted, staged, and loaded when it crosses the Canada–US border."
+      },
+      {
+        "type": "h2",
+        "text": "Extraction: Freeze Windows and Delta Capture"
+      },
+      {
+        "type": "p",
+        "text": "A freeze window locks source data while the migration extracts it — or defines the allowed changes logged for delta capture. It is negotiated with payroll operations around the processing calendar: extracting mid-cycle is how a conversion inherits timing differences nobody can explain."
+      },
+      {
+        "type": "p",
+        "text": "Delta capture is the discipline teams skip and then regret. Between the final extraction and cutover, the business keeps running — and every change is a delta record that must be captured, reconciled, and loaded after the main load. A migration without a delta strategy goes live on stale data. Extracts are built as repeatable scripts, not one-off exports."
+      },
+      {
+        "type": "h2",
+        "text": "Cleansing: Fix the Data Before It Travels"
+      },
+      {
+        "type": "p",
+        "text": "Every legacy system carries the sins of its history — duplicate employee records from rehires entered as new hires, inconsistent job codes, missing tax elections, free-text fields where a code list should have been. Cleansing fixes those records before they travel, not after they arrive."
+      },
+      {
+        "type": "p",
+        "text": "The sequence is fixed: de-duplicate, standardize, complete. De-duplication resolves the rehire who exists as two records. Standardization converts free-text entries into the target code lists — done with the payroll lead, where pay code mapping begins. Completion fills missing required fields at the source, with documented defaults used only where the business has approved them. Cleansing happens before transformation, never after."
+      },
+      {
+        "type": "h2",
+        "text": "Transformation and Mapping: Where Meaning Gets Lost"
+      },
+      {
+        "type": "p",
+        "text": "The transformation layer is where a correct record becomes a wrong employee. Extraction moves data; transformation interprets it — and interpretation is where quiet errors are born. Pay code mapping is the highest-risk interpretation: every legacy earning, deduction, and tax code must land on exactly one target code, signed by the payroll lead — not reviewed, signed. Unmapped codes default to an explicit exception queue, never to a silent drop."
+      },
+      {
+        "type": "p",
+        "text": "The ID strategy runs in parallel: rehires, multi-system records, and cross-border transfers each need a deterministic identity rule, decided once and applied everywhere. Every mapping rule is documented — source field, target field, logic, approving owner — and after the first mock load the mapping document is a controlled artifact."
+      },
+      {
+        "type": "img",
+        "src": "/images/blog/data-migration-checklist-1.svg",
+        "alt": "Horizontal phased pipeline diagram - six gated migration phases from Plan and Scope through Extract, Cleanse, Transform and Map, Load and Reconcile, to Cutover.",
+        "caption": "Six gated migration phases: Plan and Scope, Extract, Cleanse, Transform and Map, Load and Reconcile, and Cutover — no phase begins until the previous gate is signed."
+      },
+      {
+        "type": "h2",
+        "text": "Test Loads: Mock Loads and the Dress Rehearsal"
+      },
+      {
+        "type": "p",
+        "text": "Mock loads validate the transformation logic: they run early, against the current mapping, and their job is to break — surfacing mapping defects, identity collisions, and edge cases while the schedule has room to fix them. A mock load that runs clean on the first attempt usually means the reconciliation battery was not run."
+      },
+      {
+        "type": "p",
+        "text": "The dress rehearsal runs the full cutover sequence on the real timeline, with the same people, scripts, and gate discipline — proving the cutover fits the window. Two rules hold: every load gets the full reconciliation battery, and fixes happen in the transformation with a full reload — never as hand-edits to target data."
+      },
+      {
+        "type": "h2",
+        "text": "Reconciliation: The Gate Every Load Passes Through"
+      },
+      {
+        "type": "p",
+        "text": "Reconciliation is the load gate, not the checkbox after it. Every load runs the same battery: record counts by category, gross-to-net totals by pay group, deduction and accrual totals by code, hash totals at extraction, staging, and target, tolerance bands defined before the first load, and sampled detail verification across groups, statuses, locations, and both sides of the border."
+      },
+      {
+        "type": "p",
+        "text": "In cross-border programs, reconciliation runs country by country — Canadian and US payroll groups carry different tax treatment, and blended totals cannot be validated. The gate is binary: totals match within the bands, every variance is triaged to a root cause, or the load is not accepted. Sign-off is per load, in writing."
+      },
+      {
+        "type": "h2",
+        "text": "Cutover Sign-Off: The Decision in Writing"
+      },
+      {
+        "type": "p",
+        "text": "Cutover is a decision, not a moment. The sign-off pack is the evidence the decision is sound: reconciliation results for every load, the variance log with every item triaged to a root cause, defect closure, user acceptance results, the rollback plan, and the hypercare roster."
+      },
+      {
+        "type": "p",
+        "text": "The rollback plan is the document programs skip — and it is the condition that makes the go/no-go decision honest. If the program cannot describe what happens when the first production payroll fails, it is not ready to cut over. Sign-off is per-load and per-gate, in writing: the payroll lead signs the payroll verdict, the HR data owner signs the HR-side totals, and the project manager owns the gate."
+      },
+      {
+        "type": "img",
+        "src": "/images/blog/data-migration-checklist-2.svg",
+        "alt": "Checklist matrix organized by four owner swimlanes - migration lead, payroll lead, HR data owner, and project manager - with checklist items per lane.",
+        "caption": "The migration checklist organized by owner: each line has exactly one owner, from extraction specs to the cutover sign-off pack."
+      },
+      {
+        "type": "h2",
+        "text": "Common Mistakes"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "Extracting before scope is written — every stakeholder assumed their data was included.",
+          "Missing the shadow sources — the spreadsheets surface after the mapping is done.",
+          "No delta strategy — the business keeps running; stale data goes live.",
+          "Cleansing after transformation — dirty data fails reconciliation three loads later.",
+          "Unmapped codes dropping silently — every unmapped code belongs in an exception queue.",
+          "Reconciling only the final load — mock loads without reconciliation teach nothing.",
+          "Blending cross-border totals — figures nobody can validate.",
+          "Cutover without a rollback plan — if you cannot describe failure, you are not ready."
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Key Takeaways"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "A migration checklist is a lifecycle discipline: entry criteria, a named owner, and a signed gate per phase.",
+          "Scope, sources, and ownership are set before extraction; migrations fail in planning more than in loading.",
+          "Freeze windows are negotiated with payroll; delta capture covers everything that changes before cutover.",
+          "Cleanse before transformation — de-duplicate, standardize, complete.",
+          "Pay code mapping is signed by the payroll lead; unmapped codes go to an exception queue; the ID strategy is decided once.",
+          "Mock loads break the transformation logic; the dress rehearsal proves the cutover fits the window.",
+          "Every load runs the full reconciliation battery; fixes happen in the transformation, never as hand-edits to target data.",
+          "Cutover sign-off is a decision in writing: evidence pack, signatories, rollback plan, hypercare roster."
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "FAQ"
+      },
+      {
+        "type": "h3",
+        "text": "How many test loads should an HCM migration run?"
+      },
+      {
+        "type": "p",
+        "text": "As many as the program needs to prove the transformation is stable — typically several mock loads, one dress rehearsal, and the final load. Every load runs the full reconciliation battery, and no load is accepted without signed technique results."
+      },
+      {
+        "type": "h3",
+        "text": "Who owns data migration in an HCM implementation?"
+      },
+      {
+        "type": "p",
+        "text": "Four roles: the migration lead owns the mechanics, the payroll lead owns the verdict on payroll data and signs the pay code mapping, the HR data owner signs the HR-side totals, and the project manager owns the gates."
+      },
+      {
+        "type": "h3",
+        "text": "What is a freeze window, and when does it start?"
+      },
+      {
+        "type": "p",
+        "text": "The period source data is locked during extraction — or a documented list of allowed changes logged for delta capture. It starts at the final extraction, negotiated with payroll operations around the processing calendar."
+      },
+      {
+        "type": "h3",
+        "text": "How should cross-border payroll data be handled in migration?"
+      },
+      {
+        "type": "p",
+        "text": "Canadian and US payroll groups are separated through the entire lifecycle — the tax treatment and source calendars differ, and blended totals cannot be validated. Programs also document where employee personal data is extracted, staged, and loaded when it crosses the border."
+      },
+      {
+        "type": "h2",
+        "text": "Next Steps"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "Write the scope in three sentences: what migrates, what stays, how much history — and get payroll and HR leadership to sign it.",
+          "Inventory every source system and its shadow spreadsheets, with an owner and extract format per line.",
+          "Negotiate the freeze window with payroll operations around the processing calendar, and design the delta capture now.",
+          "Assign the four owners — migration, payroll, HR data, project management — before extraction begins.",
+          "Build the mapping document as a controlled artifact: every rule documented, every change controlled after the first mock load."
+        ]
+      },
+      {
+        "type": "steps",
+        "label": "The six gated migration phases, in order",
+        "intro": "Every phase has entry criteria, a named owner, and a gate. No phase begins until the previous gate is signed.",
+        "items": [
+          {
+            "title": "Plan and Scope",
+            "text": "Define in writing what migrates, what stays behind, and how much history comes along. Inventory every source system and shadow spreadsheet, assign the four owners, and document where cross-border employee data will be staged and processed."
+          },
+          {
+            "title": "Extract",
+            "text": "Lock the freeze window with payroll operations around the processing calendar. Build extraction as repeatable scripts, not one-off exports, and design delta capture for every change the business makes between extraction and cutover."
+          },
+          {
+            "title": "Cleanse",
+            "text": "Fix the data before it travels: de-duplicate rehire records, standardize free-text fields into the target code lists with the payroll lead, and complete missing required fields at the source. Cleansing happens before transformation, never after."
+          },
+          {
+            "title": "Transform and Map",
+            "text": "Interpret every record deliberately. The payroll lead signs the pay code mapping; unmapped codes go to an exception queue, never a silent drop. Decide the employee ID strategy once and apply it everywhere, and control every mapping change after the first mock load."
+          },
+          {
+            "title": "Load and Reconcile",
+            "text": "Run mock loads to break the transformation logic, then a dress rehearsal of the full cutover sequence on the real timeline. Every load runs the full reconciliation battery — counts, control totals, hash totals, tolerance bands, sampling — and fixes happen in the transformation with a full reload."
+          },
+          {
+            "title": "Cutover",
+            "text": "Assemble the sign-off pack: reconciliation results per load, the triaged variance log, defect closure, acceptance results, the rollback plan, and the hypercare roster. Named signatories sign per gate, in writing, with the evidence attached. Then go live."
+          }
+        ]
+      },
+      {
+        "type": "accordion",
+        "label": "Phase deep-dives — where migrations actually fail",
+        "items": [
+          {
+            "q": "Scoping — the three sentences that prevent the worst surprises",
+            "a": "Write what migrates, what stays behind, and how much history comes along — three sentences, signed by payroll and HR leadership. Open-ended scope is the default failure mode: every stakeholder assumes their favorite dataset is included, and the gap surfaces when someone asks where the prior-year balances are. The history decision shapes extraction, mapping, and reconciliation effort, so it is made with leadership, not by the migration team alone."
+          },
+          {
+            "q": "Extraction — freeze windows and delta capture",
+            "a": "The freeze window is negotiated with payroll operations around the processing calendar: source data locked during extraction, or a documented list of allowed changes logged for delta capture. Delta capture covers everything the business changes between extraction and cutover — hires, terminations, rate changes, benefit elections. A migration without a delta strategy goes live on stale data. Build extracts as repeatable scripts so a failed load can be re-run cleanly."
+          },
+          {
+            "q": "Mapping — pay codes, ID strategy, and change control",
+            "a": "Pay code mapping is the highest-risk interpretation in the program: every legacy earning, deduction, and tax code lands on exactly one target code, signed by the payroll lead, with unmapped codes routed to an explicit exception queue. The employee ID strategy — rehires, multi-system records, cross-border transfers — is decided once and applied everywhere. After the first mock load, the mapping document is a controlled artifact: every change goes through change control."
+          },
+          {
+            "q": "Test loads — mock loads that break, a rehearsal that proves",
+            "a": "Mock loads exist to break the transformation logic early, while the schedule has room to fix it. The dress rehearsal runs the full cutover sequence on the real timeline with the real team and real scripts, proving the cutover fits the available window. Every load gets the full reconciliation battery; technique results from the mock loads are what prove the transformation is stable."
+          },
+          {
+            "q": "Cutover — the sign-off pack and the rollback plan",
+            "a": "The sign-off pack holds reconciliation results for every load, the variance log with every item triaged to a root cause, defect closure, acceptance results, the rollback plan, and the hypercare roster. The rollback plan is the document programs skip — but it is the condition that makes the go/no-go decision honest. If the program cannot describe what happens when the first production payroll fails, it is not ready to cut over."
+          }
+        ]
+      },
+      {
+        "type": "quiz",
+        "label": "Self-check — is your migration gated or hopeful?",
+        "questions": [
+          {
+            "q": "Your migration team wants to start extraction while the scope document is still being drafted. What is the risk?",
+            "why": "This tests whether scoping is treated as a prerequisite or paperwork.",
+            "options": [
+              {
+                "text": "No risk — extraction is mechanical and scope can catch up",
+                "correct": false,
+                "why": "Open-ended scope means stakeholders assume different inclusions. The gap surfaces late, when someone asks where their dataset is."
+              },
+              {
+                "text": "The team extracts data that may be out of scope or misses data that is in scope",
+                "correct": true,
+                "why": "Scope defines what migrates, what stays, and how much history comes along. Extracting without it means rework at best and missing data at worst."
+              },
+              {
+                "text": "Extraction scripts will need minor re-runs later",
+                "correct": false,
+                "why": "This understates the failure mode. Without scope, the team does not know what a complete extraction looks like, so re-runs cannot fix what was never defined."
+              }
+            ]
+          },
+          {
+            "q": "A legacy deduction code has no equivalent in the new system. What should happen to it?",
+            "why": "This tests the unmapped-code discipline.",
+            "options": [
+              {
+                "text": "Drop it silently — the new system does not support it anyway",
+                "correct": false,
+                "why": "A silently dropped code loads successfully into nothing. The missing deduction surfaces on a pay stub months later."
+              },
+              {
+                "text": "Route it to an explicit exception queue for a payroll decision",
+                "correct": true,
+                "why": "Unmapped codes default to an exception queue, never a silent drop. The payroll lead decides how each one is handled, in writing."
+              },
+              {
+                "text": "Map it to the closest available code to keep the load moving",
+                "correct": false,
+                "why": "Closest-available mapping invents meaning. A deduction landing in the wrong code is a quiet error that totals may still balance through."
+              }
+            ]
+          },
+          {
+            "q": "The final load reconciled cleanly, but two mock loads were never reconciled. Is the migration ready for cutover?",
+            "why": "This tests whether reconciliation discipline applies to every load.",
+            "options": [
+              {
+                "text": "Yes — the final load is the one that matters",
+                "correct": false,
+                "why": "Mock-load technique results are what prove the transformation logic is stable. Skipping them means the program never validated the mapping under change."
+              },
+              {
+                "text": "Yes, as long as the final sign-off pack is complete",
+                "correct": false,
+                "why": "The pack is built from per-load evidence. Two loads with no technique results are two gaps in the evidence."
+              },
+              {
+                "text": "No — every load needs the full battery with signed results",
+                "correct": true,
+                "why": "Every load runs the same battery in the same order, and sign-off is per load. A load without signed technique results has not finished."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "p",
+        "text": "---"
+      }
+    ]
+  },
+  {
     "slug": "data-reconciliation-techniques",
     "title": "Data Reconciliation Techniques That Catch Errors Before Payroll Does",
     "excerpt": "Reconciliation techniques that prove an HCM conversion loaded correctly: control totals, hash totals, tolerance bands, and sampling.",
