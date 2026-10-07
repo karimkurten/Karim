@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 380" role="img" aria-label="Horizontal phased pipeline diagram: six gated migration phases from Plan and Scope to Cutover">
+  <defs>
+    <linearGradient id="cardGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FFFFFF"/>
+      <stop offset="1" stop-color="#F0F4F8"/>
+    </linearGradient>
+    <filter id="cardShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#1e3a5f" flood-opacity="0.12"/>
+    </filter>
+    <marker id="arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#94A3B8"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="1200" height="380" rx="8" fill="#FFFFFF"/>
+  <text x="40" y="46" font-family="Georgia, 'Times New Roman', serif" font-size="26" font-weight="700" fill="#1A202C">Migration phases with gates</text>
+  <text x="40" y="72" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#64748B">Each phase ends at a gate. Nothing passes a gate unsigned.</text>
+
+  <!-- connector arrows -->
+  <g stroke="#94A3B8" stroke-width="2">
+    <line x1="190" y1="165" x2="242" y2="165" marker-end="url(#arr)"/>
+    <line x1="392" y1="165" x2="444" y2="165" marker-end="url(#arr)"/>
+    <line x1="594" y1="165" x2="646" y2="165" marker-end="url(#arr)"/>
+    <line x1="796" y1="165" x2="848" y2="165" marker-end="url(#arr)"/>
+    <line x1="998" y1="165" x2="1050" y2="165" marker-end="url(#arr)"/>
+  </g>
+
+  <!-- phase boxes -->
+  <g font-family="Arial, Helvetica, sans-serif">
+    <g filter="url(#cardShadow)">
+      <rect x="40" y="100" width="150" height="130" rx="12" fill="url(#cardGrad)" stroke="#2B6CB0" stroke-width="2"/>
+      <circle cx="64" cy="122" r="13" fill="#2B6CB0"/>
+      <text x="64" y="127" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">1</text>
+      <text x="115" y="158" font-size="15" font-weight="700" fill="#1A202C" text-anchor="middle">Plan &amp;</text>
+      <text x="115" y="180" font-size="15" font-weight="700" fill="#1A202C" text-anchor="middle">Scope</text>
+      <text x="115" y="204" font-size="12" fill="#475569" text-anchor="middle">Scope, sources, owners</text>
+    </g>
+    <g filter="url(#cardShadow)">
+      <rect x="242" y="100" width="150" height="130" rx="12" fill="url(#cardGrad)" stroke="#2B6CB0" stroke-width="2"/>
+      <circle cx="266" cy="122" r="13" fill="#2B6CB0"/>
+      <text x="266" y="127" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">2</text>
+      <text x="317" y="170" font-size="15" font-weight="700" fill="#1A202C" text-anchor="middle">Extract</text>
+      <text x="317" y="204" font-size="12" fill="#475569" text-anchor="middle">Freeze window, deltas</text>
+    </g>
+    <g filter="url(#cardShadow)">
+      <rect x="444" y="100" width="150" height="130" rx="12" fill="url(#cardGrad)" stroke="#2B6CB0" stroke-width="2"/>
+      <circle cx="468" cy="122" r="13" fill="#2B6CB0"/>
+      <text x="468" y="127" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">3</text>
+      <text x="519" y="170" font-size="15" font-weight="700" fill="#1A202C" text-anchor="middle">Cleanse</text>
+      <text x="519" y="204" font-size="12" fill="#475569" text-anchor="middle">De-dupe, standardize</text>
+    </g>
+    <g filter="url(#cardShadow)">
+      <rect x="646" y="100" width="150" height="130" rx="12" fill="url(#cardGrad)" stroke="#2B6CB0" stroke-width="2"/>
+      <circle cx="670" cy="122" r="13" fill="#2B6CB0"/>
+      <text x="670" y="127" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">4</text>
+      <text x="721" y="158" font-size="15" font-weight="700" fill="#1A202C" text-anchor="middle">Transform</text>
+      <text x="721" y="180" font-size="15" font-weight="700" fill="#1A202C" text-anchor="middle">&amp; Map</text>
+      <text x="721" y="204" font-size="12" fill="#475569" text-anchor="middle">Pay codes, ID strategy</text>
+    </g>
+    <g filter="url(#cardShadow)">
+      <rect x="848" y="100" width="150" height="130" rx="12" fill="url(#cardGrad)" stroke="#2B6CB0" stroke-width="2"/>
+      <circle cx="872" cy="122" r="13" fill="#2B6CB0"/>
+      <text x="872" y="127" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">5</text>
+      <text x="923" y="158" font-size="15" font-weight="700" fill="#1A202C" text-anchor="middle">Load</text>
+      <text x="923" y="180" font-size="15" font-weight="700" fill="#1A202C" text-anchor="middle">&amp; Reconcile</text>
+      <text x="923" y="204" font-size="12" fill="#475569" text-anchor="middle">Mock loads, totals</text>
+    </g>
+    <g filter="url(#cardShadow)">
+      <rect x="1050" y="100" width="150" height="130" rx="12" fill="url(#cardGrad)" stroke="#2B6CB0" stroke-width="2"/>
+      <circle cx="1074" cy="122" r="13" fill="#2B6CB0"/>
+      <text x="1074" y="127" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">6</text>
+      <text x="1125" y="170" font-size="15" font-weight="700" fill="#1A202C" text-anchor="middle">Cutover</text>
+      <text x="1125" y="204" font-size="12" fill="#475569" text-anchor="middle">Sign-off, hypercare</text>
+    </g>
+  </g>
+
+  <!-- gate diamonds -->
+  <g>
+    <polygon points="216,150 231,165 216,180 201,165" fill="#2B6CB0" stroke="#FFFFFF" stroke-width="2"/>
+    <path d="M210,165 l4.5,4.5 l8,-9" stroke="#FFFFFF" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <polygon points="418,150 433,165 418,180 403,165" fill="#2B6CB0" stroke="#FFFFFF" stroke-width="2"/>
+    <path d="M412,165 l4.5,4.5 l8,-9" stroke="#FFFFFF" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <polygon points="620,150 635,165 620,180 605,165" fill="#2B6CB0" stroke="#FFFFFF" stroke-width="2"/>
+    <path d="M614,165 l4.5,4.5 l8,-9" stroke="#FFFFFF" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <polygon points="822,150 837,165 822,180 807,165" fill="#2B6CB0" stroke="#FFFFFF" stroke-width="2"/>
+    <path d="M816,165 l4.5,4.5 l8,-9" stroke="#FFFFFF" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <polygon points="1024,150 1039,165 1024,180 1009,165" fill="#2B6CB0" stroke="#FFFFFF" stroke-width="2"/>
+    <path d="M1018,165 l4.5,4.5 l8,-9" stroke="#FFFFFF" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <line x1="40" y1="268" x2="1160" y2="268" stroke="#E2E8F0" stroke-width="1"/>
+  <text x="40" y="300" font-family="Arial, Helvetica, sans-serif" font-size="15" font-style="italic" fill="#475569">No phase begins until the previous gate is signed.</text>
+</svg>
