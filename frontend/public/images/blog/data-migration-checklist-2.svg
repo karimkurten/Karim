@@ -1,0 +1,108 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 560" role="img" aria-label="Checklist matrix organized by four owner swimlanes: migration lead, payroll lead, HR data owner, and project manager">
+  <defs>
+    <filter id="chipShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#1e3a5f" flood-opacity="0.10"/>
+    </filter>
+  </defs>
+  <rect x="0" y="0" width="1200" height="560" rx="8" fill="#FFFFFF"/>
+  <text x="40" y="46" font-family="Georgia, 'Times New Roman', serif" font-size="26" font-weight="700" fill="#1A202C">Checklist by owner</text>
+  <text x="40" y="72" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#64748B">Every checklist line has exactly one owner. Shared ownership is no ownership.</text>
+
+  <g font-family="Arial, Helvetica, sans-serif">
+    <!-- Row 1: Migration lead -->
+    <rect x="40" y="100" width="1120" height="100" rx="10" fill="#F0F4F8" stroke="#E2E8F0"/>
+    <rect x="40" y="100" width="230" height="100" fill="#FFFFFF" stroke="#E2E8F0"/>
+    <rect x="40" y="100" width="8" height="100" fill="#2B6CB0"/>
+    <text x="64" y="156" font-size="17" font-weight="700" fill="#1A202C">Migration lead</text>
+    <g filter="url(#chipShadow)">
+      <rect x="292" y="118" width="204" height="64" rx="8" fill="#FFFFFF" stroke="#E2E8F0"/>
+      <rect x="292" y="118" width="5" height="64" fill="#2B6CB0"/>
+      <text x="310" y="142" font-size="12.5" fill="#475569">Own extraction spec</text>
+      <text x="310" y="160" font-size="12.5" fill="#475569">and staging model</text>
+      <rect x="506" y="118" width="204" height="64" rx="8" fill="#FFFFFF" stroke="#E2E8F0"/>
+      <rect x="506" y="118" width="5" height="64" fill="#2B6CB0"/>
+      <text x="524" y="142" font-size="12.5" fill="#475569">Lock source inventory</text>
+      <text x="524" y="160" font-size="12.5" fill="#475569">and freeze windows</text>
+      <rect x="720" y="118" width="204" height="64" rx="8" fill="#FFFFFF" stroke="#E2E8F0"/>
+      <rect x="720" y="118" width="5" height="64" fill="#2B6CB0"/>
+      <text x="738" y="142" font-size="12.5" fill="#475569">Run mock loads on</text>
+      <text x="738" y="160" font-size="12.5" fill="#475569">the program schedule</text>
+      <rect x="934" y="118" width="204" height="64" rx="8" fill="#FFFFFF" stroke="#E2E8F0"/>
+      <rect x="934" y="118" width="5" height="64" fill="#2B6CB0"/>
+      <text x="952" y="142" font-size="12.5" fill="#475569">Maintain mapping</text>
+      <text x="952" y="160" font-size="12.5" fill="#475569">and defect logs</text>
+    </g>
+
+    <!-- Row 2: Payroll lead -->
+    <rect x="40" y="212" width="1120" height="100" rx="10" fill="#F0F4F8" stroke="#E2E8F0"/>
+    <rect x="40" y="212" width="230" height="100" fill="#FFFFFF" stroke="#E2E8F0"/>
+    <rect x="40" y="212" width="8" height="100" fill="#2B6CB0"/>
+    <text x="64" y="268" font-size="17" font-weight="700" fill="#1A202C">Payroll lead</text>
+    <g filter="url(#chipShadow)">
+      <rect x="292" y="230" width="204" height="64" rx="8" fill="#FFFFFF" stroke="#E2E8F0"/>
+      <rect x="292" y="230" width="5" height="64" fill="#2B6CB0"/>
+      <text x="310" y="254" font-size="12.5" fill="#475569">Sign off pay code</text>
+      <text x="310" y="272" font-size="12.5" fill="#475569">mapping decisions</text>
+      <rect x="506" y="230" width="204" height="64" rx="8" fill="#FFFFFF" stroke="#E2E8F0"/>
+      <rect x="506" y="230" width="5" height="64" fill="#2B6CB0"/>
+      <text x="524" y="254" font-size="12.5" fill="#475569">Set tolerance bands</text>
+      <text x="524" y="272" font-size="12.5" fill="#475569">before the first load</text>
+      <rect x="720" y="230" width="204" height="64" rx="8" fill="#FFFFFF" stroke="#E2E8F0"/>
+      <rect x="720" y="230" width="5" height="64" fill="#2B6CB0"/>
+      <text x="738" y="254" font-size="12.5" fill="#475569">Own the reconciliation</text>
+      <text x="738" y="272" font-size="12.5" fill="#475569">verdict on payroll totals</text>
+      <rect x="934" y="230" width="204" height="64" rx="8" fill="#FFFFFF" stroke="#E2E8F0"/>
+      <rect x="934" y="230" width="5" height="64" fill="#2B6CB0"/>
+      <text x="952" y="254" font-size="12.5" fill="#475569">Keep cross-border payroll</text>
+      <text x="952" y="272" font-size="12.5" fill="#475569">groups reconciled separately</text>
+    </g>
+
+    <!-- Row 3: HR data owner -->
+    <rect x="40" y="324" width="1120" height="100" rx="10" fill="#F0F4F8" stroke="#E2E8F0"/>
+    <rect x="40" y="324" width="230" height="100" fill="#FFFFFF" stroke="#E2E8F0"/>
+    <rect x="40" y="324" width="8" height="100" fill="#2B6CB0"/>
+    <text x="64" y="380" font-size="17" font-weight="700" fill="#1A202C">HR data owner</text>
+    <g filter="url(#chipShadow)">
+      <rect x="292" y="342" width="204" height="64" rx="8" fill="#FFFFFF" stroke="#E2E8F0"/>
+      <rect x="292" y="342" width="5" height="64" fill="#2B6CB0"/>
+      <text x="310" y="366" font-size="12.5" fill="#475569">Sign off employee</text>
+      <text x="310" y="384" font-size="12.5" fill="#475569">master record totals</text>
+      <rect x="506" y="342" width="204" height="64" rx="8" fill="#FFFFFF" stroke="#E2E8F0"/>
+      <rect x="506" y="342" width="5" height="64" fill="#2B6CB0"/>
+      <text x="524" y="366" font-size="12.5" fill="#475569">Resolve duplicate records</text>
+      <text x="524" y="384" font-size="12.5" fill="#475569">with HR operations</text>
+      <rect x="720" y="342" width="204" height="64" rx="8" fill="#FFFFFF" stroke="#E2E8F0"/>
+      <rect x="720" y="342" width="5" height="64" fill="#2B6CB0"/>
+      <text x="738" y="366" font-size="12.5" fill="#475569">Approve benefits and</text>
+      <text x="738" y="384" font-size="12.5" fill="#475569">accrual mapping</text>
+      <rect x="934" y="342" width="204" height="64" rx="8" fill="#FFFFFF" stroke="#E2E8F0"/>
+      <rect x="934" y="342" width="5" height="64" fill="#2B6CB0"/>
+      <text x="952" y="366" font-size="12.5" fill="#475569">Confirm history scope</text>
+      <text x="952" y="384" font-size="12.5" fill="#475569">decisions in writing</text>
+    </g>
+
+    <!-- Row 4: Project manager -->
+    <rect x="40" y="436" width="1120" height="100" rx="10" fill="#F0F4F8" stroke="#E2E8F0"/>
+    <rect x="40" y="436" width="230" height="100" fill="#FFFFFF" stroke="#E2E8F0"/>
+    <rect x="40" y="436" width="8" height="100" fill="#2B6CB0"/>
+    <text x="64" y="492" font-size="17" font-weight="700" fill="#1A202C">Project manager</text>
+    <g filter="url(#chipShadow)">
+      <rect x="292" y="454" width="204" height="64" rx="8" fill="#FFFFFF" stroke="#E2E8F0"/>
+      <rect x="292" y="454" width="5" height="64" fill="#2B6CB0"/>
+      <text x="310" y="478" font-size="12.5" fill="#475569">Gate each phase before</text>
+      <text x="310" y="496" font-size="12.5" fill="#475569">the next begins</text>
+      <rect x="506" y="454" width="204" height="64" rx="8" fill="#FFFFFF" stroke="#E2E8F0"/>
+      <rect x="506" y="454" width="5" height="64" fill="#2B6CB0"/>
+      <text x="524" y="478" font-size="12.5" fill="#475569">Track migration defects</text>
+      <text x="524" y="496" font-size="12.5" fill="#475569">through to closure</text>
+      <rect x="720" y="454" width="204" height="64" rx="8" fill="#FFFFFF" stroke="#E2E8F0"/>
+      <rect x="720" y="454" width="5" height="64" fill="#2B6CB0"/>
+      <text x="738" y="478" font-size="12.5" fill="#475569">Own the cutover runbook</text>
+      <text x="738" y="496" font-size="12.5" fill="#475569">and rollback plan</text>
+      <rect x="934" y="454" width="204" height="64" rx="8" fill="#FFFFFF" stroke="#E2E8F0"/>
+      <rect x="934" y="454" width="5" height="64" fill="#2B6CB0"/>
+      <text x="952" y="478" font-size="12.5" fill="#475569">Confirm the sign-off</text>
+      <text x="952" y="496" font-size="12.5" fill="#475569">pack is complete</text>
+    </g>
+  </g>
+</svg>
