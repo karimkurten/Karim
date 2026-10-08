@@ -69,7 +69,7 @@ export default function ServicePayroll() {
   return (
     <>
       <SEO
-        title="Project Manager Payroll Systems Canada — HR Implementation Expert | Karim Chaouki"
+        title="Payroll Systems Project Manager, Canada | Karim Chaouki"
         description="Experienced payroll systems project manager for Canadian organizations. Specializing in multi-province payroll migrations, CPP/EI compliance, Workday Payroll, and Ceridian Dayforce implementations. PMP Certified."
         canonical="/services/project-manager-payroll-systems"
         schema={schema}
