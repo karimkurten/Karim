@@ -80,7 +80,7 @@ export default function ServiceBilingual() {
   return (
     <>
       <SEO
-        title="Bilingual Implementation Manager Canada — English & French PM | Karim Chaouki"
+        title="Bilingual (EN/FR) Implementation Manager | Karim Chaouki"
         description="Bilingual (English/French) implementation manager for Canadian organizations. AML compliance, ADP Workforce Now HCM, and payroll implementations delivered in both official languages. Serving Quebec, federal entities, and national organizations."
         canonical="/services/bilingual-implementation-manager"
         schema={schema}

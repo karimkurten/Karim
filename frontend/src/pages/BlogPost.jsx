@@ -7,7 +7,7 @@ import posts from '../data/blogPosts.json';
 import { Calendar, Clock, ArrowLeft, ExternalLink, Tag, Share2, Link2, Check, FileText } from 'lucide-react';
 import PayhipPromoBanner from '../components/PayhipPromoBanner';
 
-const SITE_URL = 'https://karimchaouki.com';
+const SITE_URL = 'https://www.karimchaouki.com';
 
 const formatDate = (iso) =>
   new Date(iso).toLocaleDateString('en-CA', {

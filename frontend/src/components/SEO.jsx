@@ -4,7 +4,7 @@
 
 import { useEffect, useMemo } from 'react';
 
-const SITE_URL = 'https://karimchaouki.com';
+const SITE_URL = 'https://www.karimchaouki.com';
 const DEFAULT_IMAGE = `${SITE_URL}/images/karim-chaouki.jpg`;
 
 const setMeta = (selector, attrName, attrValue, content) => {

@@ -65,7 +65,7 @@ Open **`frontend/public/sitemap.xml`** and add a new `<url>` entry:
 
 ```xml
 <url>
-  <loc>https://karimchaouki.com/blog/your-new-slug</loc>
+  <loc>https://www.karimchaouki.com/blog/your-new-slug</loc>
   <priority>0.8</priority>
   <changefreq>monthly</changefreq>
 </url>
@@ -80,7 +80,7 @@ git push origin main
 ```
 
 Vercel will auto-deploy. Your article goes live at
-`https://karimchaouki.com/blog/your-new-slug`.
+`https://www.karimchaouki.com/blog/your-new-slug`.
 
 ---
 

@@ -83,7 +83,7 @@ export default function ServiceADPWorkforceNow() {
   return (
     <>
       <SEO
-        title="ADP Workforce Now Implementation Consultant US/CAN — HCM & Payroll Expert | Karim Chaouki"
+        title="ADP Workforce Now Implementation Consultant | Karim Chaouki"
         description="Senior ADP Workforce Now implementation consultant for US and Canadian organizations. Specializing in Workforce Now Payroll, HCM, Benefits, Time & Attendance, and Talent. Cross-border US/Canada expert. PMP Certified. Bilingual EN/FR."
         canonical="/services/adp-workforce-now-implementation"
         schema={schema}

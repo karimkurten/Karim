@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /privacy-policy
 Disallow: /terms-and-conditions
-Sitemap: https://karimchaouki.com/sitemap.xml
+Sitemap: https://www.karimchaouki.com/sitemap.xml

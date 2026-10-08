@@ -88,7 +88,7 @@ export default function ServiceAML() {
   return (
     <>
       <SEO
-        title="AML Compliance Consultant Canada — FINTRAC & KYC Specialist | Karim Chaouki"
+        title="AML Compliance Consultant Canada | FINTRAC & KYC | Karim Chaouki"
         description="Experienced AML compliance consultant serving Canadian financial institutions. Specializing in FINTRAC compliance, KYC/CDD implementation, transaction monitoring, and AML program design. Bilingual EN/FR. Based in Toronto."
         canonical="/services/aml-consultant-canada"
         schema={schema}

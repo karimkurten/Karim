@@ -5,7 +5,7 @@ import SEO, { buildBreadcrumb } from '../components/SEO';
 import posts from '../data/blogPosts.json';
 import { Calendar, Clock, ExternalLink, Tag, Share2, Link2, Check, FileText } from 'lucide-react';
 
-const SITE_URL = 'https://karimchaouki.com';
+const SITE_URL = 'https://www.karimchaouki.com';
 
 const blogListSchema = {
   '@context': 'https://schema.org',

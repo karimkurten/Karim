@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { lazy, Suspense } from 'react';
 import '@/App.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
@@ -13,15 +13,15 @@ import Testimonials from './components/Testimonials';
 import FAQ from './components/FAQ';
 import Contact from './components/Contact';
 import CookieConsent from './components/CookieConsent';
-import PrivacyPolicy from './components/PrivacyPolicy';
-import TermsConditions from './components/TermsConditions';
-import ServiceAML from './pages/ServiceAML';
-import ServiceADPWorkforceNow from './pages/ServiceADPWorkforceNow';
-import ServicePayroll from './pages/ServicePayroll';
-import ServiceBilingual from './pages/ServiceBilingual';
-import AboutPage from './pages/AboutPage';
-import BlogIndex from './pages/BlogIndex';
-import BlogPost from './pages/BlogPost';
+const PrivacyPolicy = lazy(() => import('./components/PrivacyPolicy'));
+const TermsConditions = lazy(() => import('./components/TermsConditions'));
+const ServiceAML = lazy(() => import('./pages/ServiceAML'));
+const ServiceADPWorkforceNow = lazy(() => import('./pages/ServiceADPWorkforceNow'));
+const ServicePayroll = lazy(() => import('./pages/ServicePayroll'));
+const ServiceBilingual = lazy(() => import('./pages/ServiceBilingual'));
+const AboutPage = lazy(() => import('./pages/AboutPage'));
+const BlogIndex = lazy(() => import('./pages/BlogIndex'));
+const BlogPost = lazy(() => import('./pages/BlogPost'));
 
 const Portfolio = () => (
   <>
@@ -45,6 +45,7 @@ function App() {
     <HelmetProvider>
       <div className="App">
         <BrowserRouter>
+          <Suspense fallback={null}>
           <Routes>
             <Route path="/" element={<Portfolio />} />
             <Route path="/about" element={<AboutPage />} />
@@ -57,6 +58,7 @@ function App() {
             <Route path="/privacy-policy" element={<PrivacyPolicy />} />
             <Route path="/terms-and-conditions" element={<TermsConditions />} />
           </Routes>
+          </Suspense>
           <CookieConsent />
         </BrowserRouter>
       </div>
