@@ -1,5 +1,331 @@
 [
   {
+    "slug": "employee-id-migration-strategy",
+    "title": "Employee ID Strategy in System Migrations: The Decision You Make Once",
+    "excerpt": "A practitioner's guide to employee ID strategy in HCM migrations: keep vs generate, rehire collisions, cross-border series, mapping tables.",
+    "publishedAt": "2026-10-08",
+    "readingTime": "8 min read",
+    "cover": "/images/blog/employee-id-migration-strategy-cover.webp",
+    "tags": [
+      "HCM",
+      "Data Migration",
+      "Implementation"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "Every record in an HCM system hangs off one value: the employee ID. Payroll transactions, benefits enrollment, time records, accruals, tax filings, dependents — all joined, reconciled, and loaded against that single key. And yet most migration programs treat the ID strategy as a detail to settle during mapping, which is choosing the foundation after framing the house."
+      },
+      {
+        "type": "p",
+        "text": "The strategy answers one question for every record: what identifier does it carry in the target, and what deterministic rule gets it there from every source? Decide it once — before mapping, before the first mock load — because every mapping rule, reconciliation control, and integration is built on top of it."
+      },
+      {
+        "type": "h2",
+        "text": "Why Identity Deserves Its Own Strategy"
+      },
+      {
+        "type": "p",
+        "text": "A pay code mapping can be fixed after the fact: remap, reload, reconcile. An identity defect is structural. Two people sharing one ID, one person carrying two IDs, or a re-run that generates different IDs than the last load — these break reconciliation at record level and corrupt every downstream feed."
+      },
+      {
+        "type": "p",
+        "text": "The rehire entered as a new hire carries two IDs with split history. The badge number that worked as a legacy system ID collides with a benefits carrier's feed. Identity defects are the hardest migration errors to detect and the most expensive to repair, because production data is built around them before they surface."
+      },
+      {
+        "type": "h2",
+        "text": "Keep vs. Generate: The Central Decision"
+      },
+      {
+        "type": "p",
+        "text": "For every legacy source, the program decides one of two things: keep the legacy ID, or generate a new one. This is not a global toggle — but the decision is made once per source, before mapping, and never revisited mid-stream."
+      },
+      {
+        "type": "p",
+        "text": "Keeping preserves continuity: history reconciles naturally, downstream feeds on the legacy ID need no translation layer, and audit trails stay readable. But keeping only works when the series is clean — unique, stable, non-colliding across sources. Duplicates, recycled numbers, or overlapping ranges mean keeping migrates the defects with the data."
+      },
+      {
+        "type": "p",
+        "text": "Generating gives a clean, controlled series. The risk moves to the translation layer: every legacy ID is stored as a cross-reference on the target record, and every load, reconciliation run, and downstream feed resolves through it. Generation must be deterministic — the same input produces the same ID on every load, or reconciliation across test loads is impossible."
+      },
+      {
+        "type": "img",
+        "src": "/images/blog/employee-id-migration-strategy-1.svg",
+        "alt": "Flow diagram showing legacy ID sources converging through a central ID mapping table into the target system, with keep-or-generate decision diamonds per source.",
+        "caption": "Legacy ID sources converge through an ID mapping table into the target system; each source gets a keep-or-generate decision, and cross-references are stored on every target record."
+      },
+      {
+        "type": "h2",
+        "text": "The Hard Cases: Rehires, Overlapping Series, and Badges"
+      },
+      {
+        "type": "p",
+        "text": "Rehire collisions are the most common identity defect in legacy data. The person leaves, returns a year later, and is entered as a brand-new hire — one human, two records, two IDs, split tenure and accruals. The strategy defines what happens: one record or two, which ID survives, how the subordinate history is carried. A rule, decided once — never record-by-record during the load."
+      },
+      {
+        "type": "p",
+        "text": "Multiple legacy sources bring overlapping ID series: two systems that each started numbering at 1, an acquired company's HRIS never merged. Keeping both raw guarantees collisions in the target. The answer is a source prefix or generation with source-specific rules — decided once, tested in the first mock load."
+      },
+      {
+        "type": "p",
+        "text": "Then there is the badge-number trap. Badges get reissued, reprinted, and reassigned after termination. A badge number is an access credential, not a primary key: the employee ID and the badge number have different lifecycles, and conflating them produces defects whenever the two diverge."
+      },
+      {
+        "type": "h2",
+        "text": "Non-Employee Populations and Dependent Records"
+      },
+      {
+        "type": "p",
+        "text": "Contingent workers — contractors, temps, consultants — live in the legacy HRIS, the time system, or the payroll vendor's file, with IDs from the same series as employees, or their own, or none. The strategy defines whether they migrate, which series they land in, and how they are distinguished. A contractor ID colliding with an employee ID series is a classic quiet defect: everything reconciles by count while one person's records belong to another."
+      },
+      {
+        "type": "p",
+        "text": "Dependent and beneficiary records hang off the employee ID as the parent key. When the employee's ID changes, every dependent must follow deterministically — same rule, same load — or the dependents orphan. Define the parent-key change and the dependent matching rule together: orphaned dependents turn a technical defect into an employee-facing crisis at enrollment."
+      },
+      {
+        "type": "h2",
+        "text": "Cross-Border ID Collisions"
+      },
+      {
+        "type": "p",
+        "text": "Cross-border programs multiply the identity problem. The Canadian HRIS and the US HRIS assign IDs from overlapping ranges, and the migration consolidates them into one target where \"12345\" identifies two people. Decide before the load: a country prefix, a series partition, or generation with source distinction — tested in mock loads on both countries' data together."
+      },
+      {
+        "type": "p",
+        "text": "The privacy dimension is separate and non-negotiable. National identifiers — Social Security numbers, Social Insurance numbers — are never the primary key. Using them as the join key spreads sensitive data through mapping files, staging tables, and reconciliation spreadsheets that are far harder to secure than production. Canadian programs also operate under PIPEDA constraints when personal data crosses the border, so document where identity data is extracted, staged, and loaded — not just what it looks like."
+      },
+      {
+        "type": "h2",
+        "text": "Downstream Consumers: Everything That Keys on the ID"
+      },
+      {
+        "type": "p",
+        "text": "The ID strategy covers more than the target system — it covers everything that consumes the identifier: payroll bank files that direct deposit by employee ID, benefits carrier feeds keyed on it, time clocks that badge in against it, SSO and identity providers that provision access from it, and integration middleware mapping it to every connected application."
+      },
+      {
+        "type": "p",
+        "text": "Each consumer gets a line in the strategy: keep its feed on the legacy ID with the cross-reference, or migrate to the new ID. A changed ID without a translation layer breaks the feed on go-live; a legacy ID without the maintained cross-reference breaks reconciliation. Inventory every consumer before cutover — the carrier whose feed nobody owned is the one that rejects the first post-go-live file."
+      },
+      {
+        "type": "img",
+        "src": "/images/blog/employee-id-migration-strategy-2.svg",
+        "alt": "Decision flowchart for ID collision resolution covering duplicates, rehires, cross-border series overlap, and contingent workers.",
+        "caption": "The collision-resolution decision flow: duplicates, overlapping series, cross-border overlap, and contingent workers each resolve to an explicit rule, never a judgment call during the load."
+      },
+      {
+        "type": "h2",
+        "text": "The Mapping Table and Deterministic Behavior"
+      },
+      {
+        "type": "p",
+        "text": "The ID mapping table — source system, source ID, target ID, record type, decision applied — is the controlled artifact at the center of the strategy. It is generated, not hand-edited, and it must be deterministic: the same input produces the same ID on every run. An unseeded sequence or a random suffix means mock load two assigns different IDs than mock load one, and every reconciliation run starts over from zero."
+      },
+      {
+        "type": "p",
+        "text": "Determinism governs environments too: test, training, and production share identical generation rules with environment-specific assigned values. Versioned and change-controlled: after the first mock load, a changed ID is a changed record — logged, approved, re-reconciled."
+      },
+      {
+        "type": "h2",
+        "text": "Common Mistakes"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "Deciding ID strategy during mapping — the foundation chosen after the house is framed.",
+          "Keeping dirty legacy IDs — duplicates and recycled numbers migrate with the data.",
+          "Rehires entered as new hires — one human, two IDs, split history.",
+          "Overlapping source series loaded raw — two systems' ID 12345 become one collision.",
+          "Badge numbers as system IDs — reissued badges defect someone else's record.",
+          "Contingent workers in the employee series — contractor and employee records sharing identifier space.",
+          "Dependents orphaned on ID change — the parent key changed; the children did not follow.",
+          "National identifiers as the primary key — sensitive data spread through staging files nobody secured.",
+          "Non-deterministic ID generation — same input, different IDs every load.",
+          "Downstream consumers found at cutover — the unowned feed rejects the first live file."
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Key Takeaways"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "The ID strategy is decided once, before mapping: every record's target identifier and the deterministic rule that produces it.",
+          "Keep vs. generate is per-source: keeping preserves continuity but needs clean IDs; generating gives control but demands cross-references and determinism.",
+          "Rehires, overlapping series, badge numbers, contingent workers, dependents, and cross-border series each get an explicit rule — never judgment calls during the load.",
+          "National identifiers are never the primary key; cross-border programs document where identity data lives under applicable privacy constraints.",
+          "Every downstream consumer — bank files, carrier feeds, time clocks, SSO, integrations — is inventoried with a translation path before cutover.",
+          "The mapping table is generated, versioned, and change-controlled: same input, same ID, every load, every environment."
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "FAQ"
+      },
+      {
+        "type": "h3",
+        "text": "Should we keep legacy employee IDs or generate new ones?"
+      },
+      {
+        "type": "p",
+        "text": "Decide per source, based on the condition of the series. Keep when it is unique, stable, and non-colliding — continuity for history, feeds, and audit trails is worth preserving. Generate when it carries duplicates, recycled numbers, or overlapping ranges. Store the legacy ID as a cross-reference on the target record either way."
+      },
+      {
+        "type": "h3",
+        "text": "How do we handle rehires who exist as two records?"
+      },
+      {
+        "type": "p",
+        "text": "With a rule, not judgment calls during the load. Define whether records merge into one surviving ID or stay separate, which ID wins, and how the subordinate history is carried — applied identically to every rehire, reconciliation verifying the outcome."
+      },
+      {
+        "type": "h3",
+        "text": "Can we use the badge number as the employee ID?"
+      },
+      {
+        "type": "p",
+        "text": "No. Badge numbers are access credentials — reissued, reprinted, reassigned after termination. Store the badge number as an attribute on the record, not the primary key. Conflating the two produces identity defects whenever the badge lifecycle diverges from the employment lifecycle."
+      },
+      {
+        "type": "h3",
+        "text": "What belongs in the ID mapping table?"
+      },
+      {
+        "type": "p",
+        "text": "Source system, source ID, target ID, record type, and the decision applied — generated, not hand-edited. It must be deterministic (same input, same ID, every load), versioned, and change-controlled after the first mock load. It doubles as the translation layer for every downstream consumer."
+      },
+      {
+        "type": "h2",
+        "text": "Next Steps"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "Inventory every person-record source — HRIS, payroll, time, benefits, the acquired company's system — with its ID series and formats.",
+          "For each source, decide keep vs. generate before mapping, and document the rule and rationale in writing.",
+          "Write deterministic rules for rehires, overlapping series, badge numbers, contingent workers, and dependents — one rule each, no exceptions during the load.",
+          "Inventory every downstream ID consumer (bank files, carrier feeds, time clocks, SSO/identity providers, integrations) and define its translation path.",
+          "Generate the ID mapping table as a controlled artifact; prove determinism across two consecutive mock loads before cutover.",
+          "Confirm national identifiers are protected attributes, never primary keys, and document where cross-border identity data is staged and processed."
+        ]
+      },
+      {
+        "type": "compare",
+        "label": "Keep vs generate: the central ID decision, per source",
+        "beforeTitle": "Keep the legacy ID",
+        "before": "Preserve the existing identifier in the target system. History reconciles naturally, downstream feeds that already use the legacy ID need no translation layer, and audit trails stay readable across the cutover.",
+        "beforeItems": [
+          "Continuity: historical records, balances, and prior loads reconcile without translation",
+          "Downstream feeds keyed on the legacy ID keep working unchanged",
+          "Audit trail stays readable — the ID on old records matches the ID on new ones",
+          "Only viable when the series is clean: unique, stable, non-colliding across sources"
+        ],
+        "afterTitle": "Generate a new ID",
+        "after": "Assign a fresh target identifier and store the legacy ID as a cross-reference. Clean series, full control of the numbering — at the cost of a translation layer everything must resolve through.",
+        "afterItems": [
+          "Control: a clean, collision-free series regardless of legacy defects",
+          "Requires a deterministic generation rule — same input, same ID, every load",
+          "Every legacy ID stored as a cross-reference on the target record",
+          "Every downstream feed needs a translation path defined before cutover"
+        ]
+      },
+      {
+        "type": "quiz",
+        "label": "Self-check — is your ID strategy decided or deferred?",
+        "questions": [
+          {
+            "q": "Two source systems both assigned ID 00412 to different people. The migration keeps both series raw. What happens?",
+            "why": "This tests whether overlapping series are treated as a collision.",
+            "options": [
+              {
+                "text": "Reconciliation catches it — counts still balance by source",
+                "correct": false,
+                "why": "Counts balance while two different people share one target ID. Count-level reconciliation cannot detect identity collisions."
+              },
+              {
+                "text": "Two people collide on one target ID — a structural identity defect",
+                "correct": true,
+                "why": "Loading overlapping series raw guarantees collisions in the target. The fix is a source prefix or generation with source distinction, decided before mapping."
+              },
+              {
+                "text": "The load fails on the duplicate and the team fixes it then",
+                "correct": false,
+                "why": "The load only fails if the target enforces uniqueness on that key — and even then, the fix made mid-load is a judgment call, not a strategy."
+              }
+            ]
+          },
+          {
+            "q": "A rehire exists as two records with two IDs in the legacy system. What is the correct approach?",
+            "why": "This tests the rehire rule discipline.",
+            "options": [
+              {
+                "text": "Decide record by record during the load — some merge, some stay separate",
+                "correct": false,
+                "why": "Record-by-record decisions during the load are judgment calls, not rules. They cannot be reconciled or re-run deterministically."
+              },
+              {
+                "text": "Apply one written merge-or-separate rule deterministically to every rehire",
+                "correct": true,
+                "why": "The strategy defines which ID survives and how history is carried, applied to every rehire identically. Reconciliation then verifies the rule's outcome."
+              },
+              {
+                "text": "Load both records and merge them in the target system after go-live",
+                "correct": false,
+                "why": "Post-go-live merging means production data is built around two IDs. Downstream feeds, accruals, and history all carry the defect by then."
+              }
+            ]
+          },
+          {
+            "q": "The ID generation script assigns a random suffix to avoid collisions. Mock load one and mock load two produce different IDs for the same people. What is broken?",
+            "why": "This tests determinism in ID generation.",
+            "options": [
+              {
+                "text": "Nothing — the IDs are unique, which is what matters",
+                "correct": false,
+                "why": "Unique is not enough. Non-deterministic IDs make cross-load reconciliation impossible: every technique run starts over from zero."
+              },
+              {
+                "text": "Determinism — the same input must produce the same ID on every load",
+                "correct": true,
+                "why": "The generation rule must be reproducible across loads and environments. Same input, same ID, every time — or reconciliation cannot be trusted."
+              },
+              {
+                "text": "The suffix length — longer random suffixes would fix it",
+                "correct": false,
+                "why": "This preserves the randomness that causes the problem. The fix is a deterministic rule, not a longer random component."
+              }
+            ]
+          },
+          {
+            "q": "Where should the Social Insurance number live in the migration identity model?",
+            "why": "This tests the national-identifier privacy rule.",
+            "options": [
+              {
+                "text": "As the primary key — it is the most unique identifier available",
+                "correct": false,
+                "why": "Using SIN/SSN as the key spreads sensitive data through mapping files, staging tables, and reconciliation spreadsheets that cannot be secured like the production database."
+              },
+              {
+                "text": "As a protected attribute, never as the primary key or join key",
+                "correct": true,
+                "why": "National identifiers are sensitive personal data. They are stored as protected attributes with restricted access — the identity model joins on the employee ID, never on the SIN/SSN."
+              },
+              {
+                "text": "In the mapping table only, excluded from the target system",
+                "correct": false,
+                "why": "The mapping table is the widest-distributed artifact in the program. Placing the SIN there as a key still spreads it through every reconciliation file."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "p",
+        "text": "---"
+      }
+    ]
+  },
+  {
     "slug": "data-migration-checklist",
     "title": "The HCM Data Migration Checklist: From Extraction to Cutover Sign-Off",
     "excerpt": "A practitioner field-guide checklist for HCM data migration: scoping, extraction, cleansing, mapping, test loads, reconciliation, and cutover sign-off.",
