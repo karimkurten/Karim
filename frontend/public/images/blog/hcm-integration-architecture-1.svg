@@ -1,0 +1,107 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 780" role="img" aria-label="Hub-and-spoke integration topology: the HCM core at the center connected to payroll, time, benefits carriers, recruiting, finance, identity, and bank systems, each connector labeled with its interface pattern.">
+  <defs>
+    <filter id="hia1-ds" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="3" stdDeviation="5" flood-color="#0f172a" flood-opacity="0.18"/>
+    </filter>
+    <linearGradient id="hia1-hero" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0f172a"/>
+      <stop offset="1" stop-color="#1e3a5f"/>
+    </linearGradient>
+    <linearGradient id="hia1-panel" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#F0F4F8"/>
+    </linearGradient>
+  </defs>
+
+  <rect x="0" y="0" width="1200" height="780" fill="#ffffff"/>
+  <text x="40" y="52" font-family="Georgia, 'Times New Roman', serif" font-size="26" fill="#1A202C">Integration topology: the HCM core and its ecosystem</text>
+  <text x="40" y="80" font-family="Arial, sans-serif" font-size="15" fill="#64748B">Seven endpoints, three interface patterns — design the whole ecosystem before build.</text>
+
+  <!-- Connectors (drawn first, under boxes) -->
+  <g stroke="#94A3B8" stroke-width="2" fill="none">
+    <line x1="280" y1="190" x2="450" y2="360"/>
+    <line x1="600" y1="240" x2="600" y2="330"/>
+    <line x1="920" y1="190" x2="750" y2="360"/>
+    <line x1="260" y1="400" x2="450" y2="410"/>
+    <line x1="940" y1="400" x2="750" y2="410"/>
+    <line x1="280" y1="610" x2="450" y2="470"/>
+    <line x1="920" y1="610" x2="750" y2="470"/>
+  </g>
+  <!-- Double arrowheads -->
+  <g fill="#94A3B8">
+    <polygon points="280,190 292,184 292,196"/><polygon points="450,360 438,356 440,368"/>
+    <polygon points="600,240 594,252 606,252"/><polygon points="600,330 594,318 606,318"/>
+    <polygon points="920,190 908,184 908,196"/><polygon points="750,360 762,356 760,368"/>
+    <polygon points="260,400 272,394 272,406"/><polygon points="450,410 438,404 438,416"/>
+    <polygon points="940,400 928,394 928,406"/><polygon points="750,410 762,404 762,416"/>
+    <polygon points="280,610 292,604 292,616"/><polygon points="450,470 438,466 440,478"/>
+    <polygon points="920,610 908,604 908,616"/><polygon points="750,470 762,466 760,478"/>
+  </g>
+
+  <!-- Pattern chips on connectors -->
+  <g font-family="Arial, sans-serif" font-size="13" font-weight="bold" text-anchor="middle">
+    <g><rect x="327" y="262" width="76" height="26" rx="13" fill="#64748B"/><text x="365" y="280" fill="#ffffff">Flat file</text></g>
+    <g><rect x="562" y="272" width="76" height="26" rx="13" fill="#64748B"/><text x="600" y="290" fill="#ffffff">Flat file</text></g>
+    <g><rect x="804" y="262" width="62" height="26" rx="13" fill="#2B6CB0"/><text x="835" y="280" fill="#ffffff">Event</text></g>
+    <g><rect x="317" y="392" width="76" height="26" rx="13" fill="#64748B"/><text x="355" y="410" fill="#ffffff">Flat file</text></g>
+    <g><rect x="823" y="392" width="44" height="26" rx="13" fill="#2B6CB0"/><text x="845" y="410" fill="#ffffff">API</text></g>
+    <g><rect x="327" y="527" width="76" height="26" rx="13" fill="#64748B"/><text x="365" y="545" fill="#ffffff">Flat file</text></g>
+    <g><rect x="813" y="527" width="44" height="26" rx="13" fill="#2B6CB0"/><text x="835" y="545" fill="#ffffff">API</text></g>
+  </g>
+
+  <!-- Satellite boxes -->
+  <g filter="url(#hia1-ds)" font-family="Arial, sans-serif">
+    <g>
+      <rect x="60" y="140" width="220" height="100" rx="10" fill="url(#hia1-panel)" stroke="#E2E8F0" stroke-width="1.5"/>
+      <rect x="60" y="140" width="6" height="100" fill="#64748B"/>
+      <text x="84" y="178" font-size="17" font-weight="bold" fill="#1A202C">Payroll</text>
+      <text x="84" y="206" font-size="14" fill="#475569">employee data in · pay results out</text>
+    </g>
+    <g>
+      <rect x="490" y="140" width="220" height="100" rx="10" fill="url(#hia1-panel)" stroke="#E2E8F0" stroke-width="1.5"/>
+      <rect x="490" y="140" width="6" height="100" fill="#64748B"/>
+      <text x="514" y="178" font-size="17" font-weight="bold" fill="#1A202C">Bank</text>
+      <text x="514" y="206" font-size="14" fill="#475569">direct deposit out · positive pay</text>
+    </g>
+    <g>
+      <rect x="920" y="140" width="220" height="100" rx="10" fill="url(#hia1-panel)" stroke="#E2E8F0" stroke-width="1.5"/>
+      <rect x="920" y="140" width="6" height="100" fill="#2B6CB0"/>
+      <text x="944" y="178" font-size="17" font-weight="bold" fill="#1A202C">Time &amp; attendance</text>
+      <text x="944" y="206" font-size="14" fill="#475569">hours in · schedules out</text>
+    </g>
+    <g>
+      <rect x="40" y="350" width="220" height="100" rx="10" fill="url(#hia1-panel)" stroke="#E2E8F0" stroke-width="1.5"/>
+      <rect x="40" y="350" width="6" height="100" fill="#64748B"/>
+      <text x="64" y="388" font-size="17" font-weight="bold" fill="#1A202C">Benefits carriers</text>
+      <text x="64" y="416" font-size="14" fill="#475569">enrollment out · premiums in</text>
+    </g>
+    <g>
+      <rect x="940" y="350" width="220" height="100" rx="10" fill="url(#hia1-panel)" stroke="#E2E8F0" stroke-width="1.5"/>
+      <rect x="940" y="350" width="6" height="100" fill="#2B6CB0"/>
+      <text x="964" y="388" font-size="17" font-weight="bold" fill="#1A202C">Recruiting / ATS</text>
+      <text x="964" y="416" font-size="14" fill="#475569">candidate-to-hire in</text>
+    </g>
+    <g>
+      <rect x="60" y="560" width="220" height="100" rx="10" fill="url(#hia1-panel)" stroke="#E2E8F0" stroke-width="1.5"/>
+      <rect x="60" y="560" width="6" height="100" fill="#64748B"/>
+      <text x="84" y="598" font-size="17" font-weight="bold" fill="#1A202C">Finance / GL</text>
+      <text x="84" y="626" font-size="14" fill="#475569">journals out · cost centers in</text>
+    </g>
+    <g>
+      <rect x="920" y="560" width="220" height="100" rx="10" fill="url(#hia1-panel)" stroke="#E2E8F0" stroke-width="1.5"/>
+      <rect x="920" y="560" width="6" height="100" fill="#2B6CB0"/>
+      <text x="944" y="598" font-size="17" font-weight="bold" fill="#1A202C">Identity / SSO</text>
+      <text x="944" y="626" font-size="14" fill="#475569">provisioning events</text>
+    </g>
+  </g>
+
+  <!-- Hub -->
+  <g filter="url(#hia1-ds)">
+    <rect x="450" y="330" width="300" height="160" rx="16" fill="url(#hia1-hero)"/>
+    <rect x="450" y="330" width="300" height="10" rx="5" fill="#ffffff" opacity="0.12"/>
+    <text x="600" y="402" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="30" fill="#ffffff">HCM core</text>
+    <text x="600" y="434" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#94A3B8">system of record: employee master data</text>
+  </g>
+
+  <text x="600" y="748" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-style="italic" fill="#64748B">Every endpoint inventoried, every interface pattern named — the map is the architecture.</text>
+</svg>
