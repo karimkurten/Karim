@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="690" viewBox="0 0 900 690" role="img" aria-label="Side-by-side comparison of API and flat-file integration patterns across latency, volume, error visibility, and ownership dimensions">
+  <defs>
+    <linearGradient id="heroGrad2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0f172a"/>
+      <stop offset="1" stop-color="#1e3a5f"/>
+    </linearGradient>
+    <filter id="soft2" x="-8%" y="-20%" width="116%" height="140%">
+      <feDropShadow dx="0" dy="3" stdDeviation="5" flood-color="#0f172a" flood-opacity="0.14"/>
+    </filter>
+  </defs>
+  <rect x="0" y="0" width="900" height="690" fill="#FFFFFF"/>
+  <text x="450" y="36" text-anchor="middle" font-family="'DM Serif Display', Georgia, serif" font-size="24" font-weight="700" fill="#1A202C">API vs flat-file — pattern comparison</text>
+
+  <!-- column headers -->
+  <g filter="url(#soft2)">
+    <rect x="40" y="64" width="400" height="60" rx="10" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+    <rect x="460" y="64" width="400" height="60" rx="10" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+  </g>
+  <rect x="40" y="118" width="400" height="6" rx="3" fill="url(#heroGrad2)"/>
+  <rect x="460" y="118" width="400" height="6" rx="3" fill="url(#heroGrad2)"/>
+  <g text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="18" font-weight="700">
+    <text x="240" y="101" fill="#2B6CB0">API (real-time)</text>
+    <text x="660" y="101" fill="#64748B">Flat file (batch)</text>
+  </g>
+
+  <!-- dimension rows -->
+  <g filter="url(#soft2)">
+    <rect x="40" y="140" width="820" height="104" rx="10" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+    <rect x="40" y="258" width="820" height="104" rx="10" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+    <rect x="40" y="376" width="820" height="104" rx="10" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+    <rect x="40" y="494" width="820" height="104" rx="10" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+  </g>
+  <g stroke="#E2E8F0" stroke-width="2">
+    <line x1="450" y1="156" x2="450" y2="228"/>
+    <line x1="450" y1="274" x2="450" y2="346"/>
+    <line x1="450" y1="392" x2="450" y2="464"/>
+    <line x1="450" y1="510" x2="450" y2="582"/>
+  </g>
+
+  <g font-family="system-ui, -apple-system, sans-serif">
+    <text x="64" y="174" font-size="15" font-weight="700" fill="#1A202C">Latency</text>
+    <text x="64" y="202" font-size="13" fill="#475569">Minutes — data moves</text>
+    <text x="64" y="224" font-size="13" fill="#475569">when the event happens</text>
+    <text x="474" y="202" font-size="13" fill="#475569">Hours to next business day —</text>
+    <text x="474" y="224" font-size="13" fill="#475569">data moves on schedule</text>
+
+    <text x="64" y="292" font-size="15" font-weight="700" fill="#1A202C">Volume</text>
+    <text x="64" y="320" font-size="13" fill="#475569">Frequent small payloads,</text>
+    <text x="64" y="342" font-size="13" fill="#475569">transactional</text>
+    <text x="474" y="320" font-size="13" fill="#475569">Bulk periodic extracts,</text>
+    <text x="474" y="342" font-size="13" fill="#475569">reconcilable</text>
+
+    <text x="64" y="410" font-size="15" font-weight="700" fill="#1A202C">Error visibility</text>
+    <text x="64" y="438" font-size="13" fill="#475569">Immediate — the caller</text>
+    <text x="64" y="460" font-size="13" fill="#475569">knows at once</text>
+    <text x="474" y="438" font-size="13" fill="#475569">At reconciliation — absence</text>
+    <text x="474" y="460" font-size="13" fill="#475569">and rejection both monitored</text>
+
+    <text x="64" y="528" font-size="15" font-weight="700" fill="#1A202C">Ownership</text>
+    <text x="64" y="556" font-size="13" fill="#475569">Shared operations — credentials,</text>
+    <text x="64" y="578" font-size="13" fill="#475569">rate limits, idempotency discipline</text>
+    <text x="474" y="556" font-size="13" fill="#475569">Named pipeline owner — schedule,</text>
+    <text x="474" y="578" font-size="13" fill="#475569">SFTP, format, counterparty contact</text>
+  </g>
+
+  <text x="450" y="640" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-style="italic" fill="#475569">Neither pattern is owner-free — the question is which ownership your team can actually staff.</text>
+</svg>
