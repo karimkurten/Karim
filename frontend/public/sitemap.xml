@@ -101,5 +101,11 @@
   <priority>0.8</priority>
   <changefreq>monthly</changefreq>
 </url>
+  <url>
+    <loc>https://www.karimchaouki.com/blog/api-vs-flat-file-integrations</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
 </urlset>
+
 
