@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-label="AI use case scoring matrix: delivery value versus implementation risk">
+  <defs>
+    <linearGradient id="bg3" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0f172a"/>
+      <stop offset="1" stop-color="#1e3a5f"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="675" fill="url(#bg3)" rx="16"/>
+  <text x="60" y="72" font-family="Verdana, Arial, sans-serif" font-size="34" font-weight="bold" fill="#f0f4f8">AI Use-Case Scoring Matrix</text>
+  <text x="60" y="108" font-family="Verdana, Arial, sans-serif" font-size="19" fill="#93c5fd">Score every candidate use case on value and risk before you pilot it.</text>
+
+  <!-- grid -->
+  <rect x="180" y="150" width="380" height="200" fill="#2b6cb0" opacity="0.55" rx="6"/>
+  <rect x="560" y="150" width="380" height="200" fill="#2b6cb0" opacity="0.85" rx="6"/>
+  <rect x="180" y="350" width="380" height="200" fill="#0f172a" opacity="0.6" rx="6" stroke="#2b6cb0" stroke-width="2"/>
+  <rect x="560" y="350" width="380" height="200" fill="#2b6cb0" opacity="0.28" rx="6"/>
+
+  <!-- quadrant labels -->
+  <text x="370" y="200" font-family="Verdana, Arial, sans-serif" font-size="24" font-weight="bold" fill="#ffffff" text-anchor="middle">QUICK WINS</text>
+  <text x="370" y="228" font-family="Verdana, Arial, sans-serif" font-size="15" fill="#e2e8f0" text-anchor="middle">High value, low risk</text>
+  <text x="750" y="200" font-family="Verdana, Arial, sans-serif" font-size="24" font-weight="bold" fill="#ffffff" text-anchor="middle">STRATEGIC BETS</text>
+  <text x="750" y="228" font-family="Verdana, Arial, sans-serif" font-size="15" fill="#e2e8f0" text-anchor="middle">High value, high risk</text>
+  <text x="370" y="400" font-family="Verdana, Arial, sans-serif" font-size="24" font-weight="bold" fill="#93c5fd" text-anchor="middle">FILL-INS</text>
+  <text x="370" y="428" font-family="Verdana, Arial, sans-serif" font-size="15" fill="#e2e8f0" text-anchor="middle">Low value, low risk</text>
+  <text x="750" y="400" font-family="Verdana, Arial, sans-serif" font-size="24" font-weight="bold" fill="#93c5fd" text-anchor="middle">AVOID</text>
+  <text x="750" y="428" font-family="Verdana, Arial, sans-serif" font-size="15" fill="#e2e8f0" text-anchor="middle">Low value, high risk</text>
+
+  <!-- plotted use cases -->
+  <g font-family="Verdana, Arial, sans-serif" font-size="15" fill="#f0f4f8">
+    <circle cx="320" cy="270" r="9" fill="#ffffff"/>
+    <text x="338" y="275">Meeting summaries</text>
+    <circle cx="430" cy="300" r="9" fill="#ffffff"/>
+    <text x="448" y="305">Risk register drafting</text>
+    <circle cx="300" cy="480" r="9" fill="#93c5fd"/>
+    <text x="318" y="485">Status-report drafts</text>
+    <circle cx="700" cy="260" r="9" fill="#ffffff"/>
+    <text x="718" y="265">Schedule risk prediction</text>
+    <circle cx="810" cy="300" r="9" fill="#ffffff"/>
+    <text x="828" y="305">Resource optimization</text>
+    <circle cx="650" cy="490" r="9" fill="#cbd5e1"/>
+    <text x="668" y="495">AI candidate screening</text>
+  </g>
+
+  <!-- axes -->
+  <line x1="180" y1="565" x2="940" y2="565" stroke="#93c5fd" stroke-width="2"/>
+  <polygon points="940,565 926,558 926,572" fill="#93c5fd"/>
+  <text x="560" y="600" font-family="Verdana, Arial, sans-serif" font-size="18" fill="#93c5fd" text-anchor="middle">Delivery value to the project (low to high)</text>
+  <line x1="150" y1="550" x2="150" y2="150" stroke="#93c5fd" stroke-width="2"/>
+  <polygon points="150,150 143,164 157,164" fill="#93c5fd"/>
+  <text x="120" y="360" font-family="Verdana, Arial, sans-serif" font-size="18" fill="#93c5fd" text-anchor="middle" transform="rotate(-90 120 360)">Implementation risk (low to high)</text>
+
+  <text x="60" y="650" font-family="Verdana, Arial, sans-serif" font-size="16" fill="#93c5fd">Pilot from Quick Wins first. Only escalate Strategic Bets with full governance.</text>
+</svg>
