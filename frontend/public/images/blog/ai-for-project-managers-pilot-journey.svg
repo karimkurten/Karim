@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-label="Pilot Prove Produce AI rollout journey with decision gates">
+  <defs>
+    <linearGradient id="bg2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0f172a"/>
+      <stop offset="1" stop-color="#1e3a5f"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="675" fill="url(#bg2)" rx="16"/>
+  <text x="60" y="72" font-family="Verdana, Arial, sans-serif" font-size="34" font-weight="bold" fill="#f0f4f8">Pilot - Prove - Produce: The AI Rollout Journey</text>
+  <text x="60" y="108" font-family="Verdana, Arial, sans-serif" font-size="19" fill="#93c5fd">Move forward only when a gate is passed. No gate, no scale.</text>
+
+  <!-- PILOT chevron -->
+  <g>
+    <polygon points="60,180 350,180 400,330 350,480 60,480 110,330" fill="#2b6cb0"/>
+    <text x="215" y="255" font-family="Verdana, Arial, sans-serif" font-size="30" font-weight="bold" fill="#ffffff" text-anchor="middle">PILOT</text>
+    <text x="215" y="292" font-family="Verdana, Arial, sans-serif" font-size="16" fill="#e2e8f0" text-anchor="middle">One use case</text>
+    <text x="215" y="318" font-family="Verdana, Arial, sans-serif" font-size="16" fill="#e2e8f0" text-anchor="middle">One project team</text>
+    <text x="215" y="344" font-family="Verdana, Arial, sans-serif" font-size="16" fill="#e2e8f0" text-anchor="middle">30 to 90 days</text>
+    <text x="215" y="370" font-family="Verdana, Arial, sans-serif" font-size="16" fill="#e2e8f0" text-anchor="middle">Capture a baseline</text>
+  </g>
+
+  <!-- GATE 1 -->
+  <g>
+    <rect x="430" y="260" width="130" height="140" rx="10" fill="none" stroke="#93c5fd" stroke-width="3"/>
+    <text x="495" y="300" font-family="Verdana, Arial, sans-serif" font-size="18" font-weight="bold" fill="#93c5fd" text-anchor="middle">GATE 1</text>
+    <text x="495" y="328" font-family="Verdana, Arial, sans-serif" font-size="14" fill="#e2e8f0" text-anchor="middle">Measured value?</text>
+    <text x="495" y="350" font-family="Verdana, Arial, sans-serif" font-size="14" fill="#e2e8f0" text-anchor="middle">Controls hold?</text>
+    <text x="495" y="372" font-family="Verdana, Arial, sans-serif" font-size="14" fill="#e2e8f0" text-anchor="middle">Sponsor signs?</text>
+  </g>
+
+  <!-- PROVE chevron -->
+  <g>
+    <polygon points="590,180 880,180 930,330 880,480 590,480 640,330" fill="#1e3a5f" stroke="#2b6cb0" stroke-width="3"/>
+    <text x="745" y="255" font-family="Verdana, Arial, sans-serif" font-size="30" font-weight="bold" fill="#ffffff" text-anchor="middle">PROVE</text>
+    <text x="745" y="292" font-family="Verdana, Arial, sans-serif" font-size="16" fill="#e2e8f0" text-anchor="middle">Repeat the result</text>
+    <text x="745" y="318" font-family="Verdana, Arial, sans-serif" font-size="16" fill="#e2e8f0" text-anchor="middle">2 to 3 more teams</text>
+    <text x="745" y="344" font-family="Verdana, Arial, sans-serif" font-size="16" fill="#e2e8f0" text-anchor="middle">Run the risk register</text>
+    <text x="745" y="370" font-family="Verdana, Arial, sans-serif" font-size="16" fill="#e2e8f0" text-anchor="middle">Document the playbook</text>
+  </g>
+
+  <!-- GATE 2 -->
+  <g>
+    <rect x="960" y="260" width="130" height="140" rx="10" fill="none" stroke="#93c5fd" stroke-width="3"/>
+    <text x="1025" y="300" font-family="Verdana, Arial, sans-serif" font-size="18" font-weight="bold" fill="#93c5fd" text-anchor="middle">GATE 2</text>
+    <text x="1025" y="328" font-family="Verdana, Arial, sans-serif" font-size="14" fill="#e2e8f0" text-anchor="middle">Business case</text>
+    <text x="1025" y="350" font-family="Verdana, Arial, sans-serif" font-size="14" fill="#e2e8f0" text-anchor="middle">Repeatable?</text>
+    <text x="1025" y="372" font-family="Verdana, Arial, sans-serif" font-size="14" fill="#e2e8f0" text-anchor="middle">PMO approval</text>
+  </g>
+
+  <!-- PRODUCE bar -->
+  <g>
+    <rect x="60" y="520" width="1030" height="90" rx="10" fill="#2b6cb0"/>
+    <text x="575" y="560" font-family="Verdana, Arial, sans-serif" font-size="28" font-weight="bold" fill="#ffffff" text-anchor="middle">PRODUCE - scale across the PMO</text>
+    <text x="575" y="590" font-family="Verdana, Arial, sans-serif" font-size="16" fill="#e2e8f0" text-anchor="middle">Standard tooling, training, prompt libraries, measured KPIs, continuous monitoring</text>
+  </g>
+
+  <text x="60" y="650" font-family="Verdana, Arial, sans-serif" font-size="16" fill="#93c5fd">Killing a pilot that fails a gate is a success, not a failure.</text>
+</svg>
