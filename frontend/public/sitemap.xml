@@ -106,6 +106,7 @@
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
-</urlset>
+   <url>     <loc>https://www.karimchaouki.com/blog/end-to-end-integration-testing</loc>     <changefreq>weekly</changefreq>     <priority>0.8</priority>   </url> </urlset>
+
 
 
