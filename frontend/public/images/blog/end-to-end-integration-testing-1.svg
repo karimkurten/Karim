@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 540" role="img" aria-label="End-to-end test cycle: plan, scenario design, data preparation, execution, defect triage, and sign-off, with a feedback loop from triage back to execution">
+  <defs>
+    <linearGradient id="heroBg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0f172a"/>
+      <stop offset="1" stop-color="#1e3a5f"/>
+    </linearGradient>
+    <linearGradient id="cardTop" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#F0F4F8"/>
+    </linearGradient>
+    <linearGradient id="accentBar" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#2B6CB0"/>
+      <stop offset="1" stop-color="#2563EB"/>
+    </linearGradient>
+    <linearGradient id="loopArrow" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#2B6CB0"/>
+      <stop offset="1" stop-color="#1e3a5f"/>
+    </linearGradient>
+    <filter id="softShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="6" stdDeviation="10" flood-color="#0f172a" flood-opacity="0.35"/>
+    </filter>
+    <marker id="arrowHead" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#2B6CB0"/>
+    </marker>
+    <marker id="loopHead" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#2B6CB0"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="1200" height="540" rx="18" fill="url(#heroBg)"/>
+
+  <text x="60" y="64" font-family="Georgia, serif" font-size="30" fill="#ffffff">The end-to-end test cycle</text>
+  <text x="60" y="94" font-family="Arial, Helvetica, sans-serif" font-size="15" fill="#94A3B8">One complete cycle, from readiness to documented sign-off</text>
+
+  <g font-family="Arial, Helvetica, sans-serif" filter="url(#softShadow)">
+    <rect x="40" y="150" width="168" height="200" rx="12" fill="url(#cardTop)" stroke="#E2E8F0" stroke-width="1.5"/>
+    <rect x="40" y="150" width="168" height="10" rx="5" fill="url(#accentBar)"/>
+    <text x="124" y="196" text-anchor="middle" font-size="15" font-weight="bold" fill="#2B6CB0">1</text>
+    <text x="124" y="222" text-anchor="middle" font-size="16" font-weight="bold" fill="#1A202C">Plan</text>
+    <text x="124" y="250" text-anchor="middle" font-size="12.5" fill="#475569">Confirm entry criteria,</text>
+    <text x="124" y="270" text-anchor="middle" font-size="12.5" fill="#475569">scope, and schedule</text>
+    <text x="124" y="290" text-anchor="middle" font-size="12.5" fill="#475569">with stakeholders</text>
+
+    <rect x="224" y="150" width="168" height="200" rx="12" fill="url(#cardTop)" stroke="#E2E8F0" stroke-width="1.5"/>
+    <rect x="224" y="150" width="168" height="10" rx="5" fill="url(#accentBar)"/>
+    <text x="308" y="196" text-anchor="middle" font-size="15" font-weight="bold" fill="#2B6CB0">2</text>
+    <text x="308" y="222" text-anchor="middle" font-size="16" font-weight="bold" fill="#1A202C">Scenario design</text>
+    <text x="308" y="250" text-anchor="middle" font-size="12.5" fill="#475569">Lifecycle threads with</text>
+    <text x="308" y="270" text-anchor="middle" font-size="12.5" fill="#475569">expected outcomes at</text>
+    <text x="308" y="290" text-anchor="middle" font-size="12.5" fill="#475569">every system boundary</text>
+
+    <rect x="408" y="150" width="168" height="200" rx="12" fill="url(#cardTop)" stroke="#E2E8F0" stroke-width="1.5"/>
+    <rect x="408" y="150" width="168" height="10" rx="5" fill="url(#accentBar)"/>
+    <text x="492" y="196" text-anchor="middle" font-size="15" font-weight="bold" fill="#2B6CB0">3</text>
+    <text x="492" y="222" text-anchor="middle" font-size="16" font-weight="bold" fill="#1A202C">Data preparation</text>
+    <text x="492" y="250" text-anchor="middle" font-size="12.5" fill="#475569">Coherent personas,</text>
+    <text x="492" y="270" text-anchor="middle" font-size="12.5" fill="#475569">controlled calendar,</text>
+    <text x="492" y="290" text-anchor="middle" font-size="12.5" fill="#475569">boundary cases included</text>
+
+    <rect x="592" y="150" width="168" height="200" rx="12" fill="url(#cardTop)" stroke="#E2E8F0" stroke-width="1.5"/>
+    <rect x="592" y="150" width="168" height="10" rx="5" fill="url(#accentBar)"/>
+    <text x="676" y="196" text-anchor="middle" font-size="15" font-weight="bold" fill="#2B6CB0">4</text>
+    <text x="676" y="222" text-anchor="middle" font-size="16" font-weight="bold" fill="#1A202C">Execution</text>
+    <text x="676" y="250" text-anchor="middle" font-size="12.5" fill="#475569">Run threads in realistic</text>
+    <text x="676" y="270" text-anchor="middle" font-size="12.5" fill="#475569">sequence; reconcile</text>
+    <text x="676" y="290" text-anchor="middle" font-size="12.5" fill="#475569">cross-system balances</text>
+
+    <rect x="776" y="150" width="168" height="200" rx="12" fill="url(#cardTop)" stroke="#E2E8F0" stroke-width="1.5"/>
+    <rect x="776" y="150" width="168" height="10" rx="5" fill="url(#accentBar)"/>
+    <text x="860" y="196" text-anchor="middle" font-size="15" font-weight="bold" fill="#2B6CB0">5</text>
+    <text x="860" y="222" text-anchor="middle" font-size="16" font-weight="bold" fill="#1A202C">Defect triage</text>
+    <text x="860" y="250" text-anchor="middle" font-size="12.5" fill="#475569">Daily triage, named</text>
+    <text x="860" y="270" text-anchor="middle" font-size="12.5" fill="#475569">owners, severity rules,</text>
+    <text x="860" y="290" text-anchor="middle" font-size="12.5" fill="#475569">fix and retest</text>
+
+    <rect x="960" y="150" width="168" height="200" rx="12" fill="url(#cardTop)" stroke="#E2E8F0" stroke-width="1.5"/>
+    <rect x="960" y="150" width="168" height="10" rx="5" fill="url(#accentBar)"/>
+    <text x="1044" y="196" text-anchor="middle" font-size="15" font-weight="bold" fill="#2B6CB0">6</text>
+    <text x="1044" y="222" text-anchor="middle" font-size="16" font-weight="bold" fill="#1A202C">Sign-off</text>
+    <text x="1044" y="250" text-anchor="middle" font-size="12.5" fill="#475569">Exit criteria met,</text>
+    <text x="1044" y="270" text-anchor="middle" font-size="12.5" fill="#475569">evidence package,</text>
+    <text x="1044" y="290" text-anchor="middle" font-size="12.5" fill="#475569">business owners sign</text>
+  </g>
+
+  <g font-family="Arial, Helvetica, sans-serif">
+    <line x1="210" y1="250" x2="222" y2="250" stroke="#2B6CB0" stroke-width="2.5" marker-end="url(#arrowHead)"/>
+    <line x1="394" y1="250" x2="406" y2="250" stroke="#2B6CB0" stroke-width="2.5" marker-end="url(#arrowHead)"/>
+    <line x1="578" y1="250" x2="590" y2="250" stroke="#2B6CB0" stroke-width="2.5" marker-end="url(#arrowHead)"/>
+    <line x1="762" y1="250" x2="774" y2="250" stroke="#2B6CB0" stroke-width="2.5" marker-end="url(#arrowHead)"/>
+    <line x1="946" y1="250" x2="958" y2="250" stroke="#2B6CB0" stroke-width="2.5" marker-end="url(#arrowHead)"/>
+
+    <path d="M 860 362 C 860 452, 676 452, 676 364" fill="none" stroke="url(#loopArrow)" stroke-width="3" stroke-dasharray="9 6" marker-end="url(#loopHead)"/>
+    <text x="768" y="458" text-anchor="middle" font-size="14" font-style="italic" fill="#94A3B8">Re-execute thread</text>
+    <text x="768" y="478" text-anchor="middle" font-size="12" fill="#64748B">defects loop back until the full scenario runs clean</text>
+
+    <text x="60" y="518" font-size="13" fill="#64748B">Cycles repeat: cycle 1 finds structural defects, cycle 2 confirms the fixes, cycle 3 (if needed) proves stability.</text>
+  </g>
+</svg>
