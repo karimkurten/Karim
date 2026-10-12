@@ -153,3 +153,4 @@ Rules: never invent numbers or survey data to fill a widget; quiz explanations m
 <!-- CI nudge: retrigger Vercel build after article-09 publish (2026-09-24) -->
 
 <!-- deploy nudge 2026-10-01: force Vercel rebuild for article-16 -->
+<!-- deploy nudge 2026-10-12: force Vercel rebuild for article-27 (data-privacy-hr-migrations) -->
