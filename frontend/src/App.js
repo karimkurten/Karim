@@ -22,6 +22,7 @@ const ServiceBilingual = lazy(() => import('./pages/ServiceBilingual'));
 const AboutPage = lazy(() => import('./pages/AboutPage'));
 const BlogIndex = lazy(() => import('./pages/BlogIndex'));
 const BlogPost = lazy(() => import('./pages/BlogPost'));
+const ResumeRequest = lazy(() => import('./pages/ResumeRequest'));
 
 const Portfolio = () => (
   <>
@@ -51,6 +52,7 @@ function App() {
             <Route path="/about" element={<AboutPage />} />
             <Route path="/blog" element={<BlogIndex />} />
             <Route path="/blog/:slug" element={<BlogPost />} />
+            <Route path="/resume" element={<ResumeRequest />} />
             <Route path="/services/aml-consultant-canada" element={<ServiceAML />} />
             <Route path="/services/adp-workforce-now-implementation" element={<ServiceADPWorkforceNow />} />
             <Route path="/services/project-manager-payroll-systems" element={<ServicePayroll />} />
