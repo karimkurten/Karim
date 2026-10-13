@@ -131,14 +131,12 @@ export default function AboutPage() {
               </p>
 
               <div className="flex flex-wrap gap-3 mb-8">
-                <a
-                  href="/resume/KC_PM_Resume.pdf"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <Link
+                  to="/resume"
                   className="bg-blue-700 text-white font-semibold px-5 py-2.5 rounded-lg hover:bg-blue-800 transition-colors text-sm"
                 >
                   Download Full Resume (PDF) →
-                </a>
+                </Link>
                 <a
                   href="https://www.linkedin.com/in/karimchaouki"
                   target="_blank"
