@@ -27,10 +27,28 @@ const setLink = (rel, href) => {
   el.setAttribute('href', href);
 };
 
-const applyHead = ({ fullTitle, description, canonicalUrl, ogImage, ogType, schema }) => {
+// Robots meta is added only for noindex pages (e.g. /resume) and removed
+// again on route change so it never leaks onto indexable pages.
+const applyRobots = (noindex) => {
+  const selector = 'meta[name="robots"]';
+  let el = document.head.querySelector(selector);
+  if (noindex) {
+    if (!el) {
+      el = document.createElement('meta');
+      el.setAttribute('name', 'robots');
+      document.head.appendChild(el);
+    }
+    el.setAttribute('content', 'noindex, nofollow');
+  } else if (el) {
+    el.parentNode.removeChild(el);
+  }
+};
+
+const applyHead = ({ fullTitle, description, canonicalUrl, ogImage, ogType, schema, noindex }) => {
   document.title = fullTitle;
   setMeta('meta[name="description"]', 'name', 'description', description);
   setLink('canonical', canonicalUrl);
+  applyRobots(noindex);
 
   setMeta('meta[property="og:type"]', 'property', 'og:type', ogType);
   setMeta('meta[property="og:url"]', 'property', 'og:url', canonicalUrl);
@@ -73,6 +91,7 @@ export default function SEO({
   ogImage = DEFAULT_IMAGE,
   ogType = 'website',
   schema = null,
+  noindex = false,
 }) {
   const config = useMemo(
     () => ({
@@ -82,8 +101,9 @@ export default function SEO({
       ogImage,
       ogType,
       schema,
+      noindex,
     }),
-    [title, description, canonical, ogImage, ogType, schema],
+    [title, description, canonical, ogImage, ogType, schema, noindex],
   );
 
   useEffect(() => {
