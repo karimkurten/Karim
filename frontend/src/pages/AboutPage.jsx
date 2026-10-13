@@ -41,7 +41,7 @@ export default function AboutPage() {
     <>
       <SEO
         title="About Karim Chaouki | AML & HCM Implementation Consultant"
-        description="Learn about Karim Chaouki — Senior Implementation Consultant with 12+ years in AML compliance, ADP Workforce Now HCM, and payroll system implementations for Canadian financial institutions. PMP Certified. Bilingual EN/FR."
+        description="Learn about Karim Chaouki — Senior Implementation Consultant with 22+ years in AML compliance, ADP Workforce Now HCM, and payroll system implementations for Canadian financial institutions. PMP Certified. Bilingual EN/FR."
         canonical="/about"
         ogImage="https://www.karimchaouki.com/images/karim-chaouki.jpg"
         schema={schema}
@@ -66,7 +66,7 @@ export default function AboutPage() {
                 </h1>
                 <p className="text-xl text-blue-200 leading-relaxed mb-6">
                   Senior Implementation Consultant specializing in AML compliance, ADP Workforce Now HCM, and
-                  payroll systems for Canadian financial institutions. 12+ years delivering complex
+                  payroll systems for Canadian financial institutions. 22+ years delivering complex
                   projects that other teams couldn't finish.
                 </p>
                 <div className="flex flex-wrap gap-3">
@@ -152,7 +152,7 @@ export default function AboutPage() {
             <aside>
               <div className="space-y-4">
                 {[
-                  { number: '12+', label: 'Years of experience' },
+                  { number: '22+', label: 'Years of experience' },
                   { number: '20+', label: 'Implementations delivered' },
                   { number: '3', label: 'Languages: EN, FR, AR' },
                   { number: '100%', label: 'On-time delivery rate' },
