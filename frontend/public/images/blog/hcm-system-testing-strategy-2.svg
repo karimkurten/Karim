@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="640" viewBox="0 0 1000 640" role="img" aria-label="Recommended test coverage matrix: which testing phase covers which HCM process area">
+  <defs>
+    <linearGradient id="heroGrad2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0f172a"/>
+      <stop offset="1" stop-color="#1e3a5f"/>
+    </linearGradient>
+  </defs>
+
+  <rect x="0" y="0" width="1000" height="110" fill="url(#heroGrad2)"/>
+  <text x="40" y="48" font-family="Georgia, 'Times New Roman', serif" font-size="30" fill="#ffffff">Test Coverage Matrix</text>
+  <text x="40" y="80" font-family="Arial, Helvetica, sans-serif" font-size="15" fill="#94A3B8">Recommended coverage: which phase proves which process area. Partial means spot-check, not full scenario coverage.</text>
+
+  <g font-family="Arial, Helvetica, sans-serif" font-size="14">
+    <!-- Column headers -->
+    <text x="360" y="152" text-anchor="middle" font-size="14" fill="#1A202C" font-weight="bold">Unit</text>
+    <text x="492" y="152" text-anchor="middle" font-size="14" fill="#1A202C" font-weight="bold">System</text>
+    <text x="624" y="152" text-anchor="middle" font-size="14" fill="#1A202C" font-weight="bold">Integration</text>
+    <text x="756" y="152" text-anchor="middle" font-size="14" fill="#1A202C" font-weight="bold">UAT</text>
+    <text x="888" y="152" text-anchor="middle" font-size="14" fill="#1A202C" font-weight="bold">Parallel</text>
+
+    <!-- Row 1 -->
+    <text x="40" y="202" font-size="14" fill="#1A202C" font-weight="bold">Core HR lifecycle</text>
+    <text x="40" y="222" font-size="12.5" fill="#64748B">hire, job change, termination</text>
+    <rect x="304" y="178" width="112" height="60" rx="8" fill="#2B6CB0"/><text x="360" y="214" text-anchor="middle" font-size="14" fill="#ffffff" font-weight="bold">Full</text>
+    <rect x="436" y="178" width="112" height="60" rx="8" fill="#2B6CB0"/><text x="492" y="214" text-anchor="middle" font-size="14" fill="#ffffff" font-weight="bold">Full</text>
+    <rect x="568" y="178" width="112" height="60" rx="8" fill="#94A3B8"/><text x="624" y="214" text-anchor="middle" font-size="14" fill="#ffffff" font-weight="bold">Partial</text>
+    <rect x="700" y="178" width="112" height="60" rx="8" fill="#2B6CB0"/><text x="756" y="214" text-anchor="middle" font-size="14" fill="#ffffff" font-weight="bold">Full</text>
+    <rect x="832" y="178" width="112" height="60" rx="8" fill="#94A3B8"/><text x="888" y="214" text-anchor="middle" font-size="14" fill="#ffffff" font-weight="bold">Partial</text>
+
+    <!-- Row 2 -->
+    <text x="40" y="282" font-size="14" fill="#1A202C" font-weight="bold">Time capture and scheduling</text>
+    <rect x="304" y="258" width="112" height="60" rx="8" fill="#2B6CB0"/><text x="360" y="294" text-anchor="middle" font-size="14" fill="#ffffff" font-weight="bold">Full</text>
+    <rect x="436" y="258" width="112" height="60" rx="8" fill="#2B6CB0"/><text x="492" y="294" text-anchor="middle" font-size="14" fill="#ffffff" font-weight="bold">Full</text>
+    <rect x="568" y="258" width="112" height="60" rx="8" fill="#2B6CB0"/><text x="624" y="294" text-anchor="middle" font-size="14" fill="#ffffff" font-weight="bold">Full</text>
+    <rect x="700" y="258" width="112" height="60" rx="8" fill="#2B6CB0"/><text x="756" y="294" text-anchor="middle" font-size="14" fill="#ffffff" font-weight="bold">Full</text>
+    <rect x="832" y="258" width="112" height="60" rx="8" fill="#94A3B8"/><text x="888" y="294" text-anchor="middle" font-size="14" fill="#ffffff" font-weight="bold">Partial</text>
+
+    <!-- Row 3 -->
+    <text x="40" y="362" font-size="14" fill="#1A202C" font-weight="bold">Payroll calculation and pay rules</text>
+    <rect x="304" y="338" width="112" height="60" rx="8" fill="#2B6CB0"/><text x="360" y="374" text-anchor="middle" font-size="14" fill="#ffffff" font-weight="bold">Full</text>
+    <rect x="436" y="338" width="112" height="60" rx="8" fill="#2B6CB0"/><text x="492" y="374" text-anchor="middle" font-size="14" fill="#ffffff" font-weight="bold">Full</text>
+    <rect x="568" y="338" width="112" height="60" rx="8" fill="#2B6CB0"/><text x="624" y="374" text-anchor="middle" font-size="14" fill="#ffffff" font-weight="bold">Full</text>
+    <rect x="700" y="338" width="112" height="60" rx="8" fill="#2B6CB0"/><text x="756" y="374" text-anchor="middle" font-size="14" fill="#ffffff" font-weight="bold">Full</text>
+    <rect x="832" y="338" width="112" height="60" rx="8" fill="#2B6CB0"/><text x="888" y="374" text-anchor="middle" font-size="14" fill="#ffffff" font-weight="bold">Full</text>
+
+    <!-- Row 4 -->
+    <text x="40" y="442" font-size="14" fill="#1A202C" font-weight="bold">Benefits enrollment and deductions</text>
+    <rect x="304" y="418" width="112" height="60" rx="8" fill="#2B6CB0"/><text x="360" y="454" text-anchor="middle" font-size="14" fill="#ffffff" font-weight="bold">Full</text>
+    <rect x="436" y="418" width="112" height="60" rx="8" fill="#2B6CB0"/><text x="492" y="454" text-anchor="middle" font-size="14" fill="#ffffff" font-weight="bold">Full</text>
+    <rect x="568" y="418" width="112" height="60" rx="8" fill="#94A3B8"/><text x="624" y="454" text-anchor="middle" font-size="14" fill="#ffffff" font-weight="bold">Partial</text>
+    <rect x="700" y="418" width="112" height="60" rx="8" fill="#2B6CB0"/><text x="756" y="454" text-anchor="middle" font-size="14" fill="#ffffff" font-weight="bold">Full</text>
+    <rect x="832" y="418" width="112" height="60" rx="8" fill="#94A3B8"/><text x="888" y="454" text-anchor="middle" font-size="14" fill="#ffffff" font-weight="bold">Partial</text>
+
+    <!-- Row 5 -->
+    <text x="40" y="522" font-size="14" fill="#1A202C" font-weight="bold">Integrations</text>
+    <text x="40" y="542" font-size="12.5" fill="#64748B">banking, general ledger, vendors</text>
+    <rect x="304" y="498" width="112" height="60" rx="8" fill="#94A3B8"/><text x="360" y="534" text-anchor="middle" font-size="14" fill="#ffffff" font-weight="bold">Partial</text>
+    <rect x="436" y="498" width="112" height="60" rx="8" fill="#94A3B8"/><text x="492" y="534" text-anchor="middle" font-size="14" fill="#ffffff" font-weight="bold">Partial</text>
+    <rect x="568" y="498" width="112" height="60" rx="8" fill="#2B6CB0"/><text x="624" y="534" text-anchor="middle" font-size="14" fill="#ffffff" font-weight="bold">Full</text>
+    <rect x="700" y="498" width="112" height="60" rx="8" fill="#94A3B8"/><text x="756" y="534" text-anchor="middle" font-size="14" fill="#ffffff" font-weight="bold">Partial</text>
+    <rect x="832" y="498" width="112" height="60" rx="8" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/><text x="888" y="534" text-anchor="middle" font-size="14" fill="#64748B" font-weight="bold">N/A</text>
+
+    <!-- Legend -->
+    <rect x="40" y="586" width="18" height="18" rx="4" fill="#2B6CB0"/>
+    <text x="64" y="600" font-size="13" fill="#475569">Full scenario coverage</text>
+    <rect x="270" y="586" width="18" height="18" rx="4" fill="#94A3B8"/>
+    <text x="294" y="600" font-size="13" fill="#475569">Partial (spot-check)</text>
+    <rect x="490" y="586" width="18" height="18" rx="4" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+    <text x="514" y="600" font-size="13" fill="#475569">N/A for this phase</text>
+  </g>
+</svg>
