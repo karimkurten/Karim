@@ -55,8 +55,6 @@ const applyHead = ({ fullTitle, description, canonicalUrl, ogImage, ogType, sche
   setMeta('meta[property="og:title"]', 'property', 'og:title', fullTitle);
   setMeta('meta[property="og:description"]', 'property', 'og:description', description);
   setMeta('meta[property="og:image"]', 'property', 'og:image', ogImage);
-  setMeta('meta[property="og:image:width"]', 'property', 'og:image:width', '1200');
-  setMeta('meta[property="og:image:height"]', 'property', 'og:image:height', '630');
   setMeta('meta[property="og:site_name"]', 'property', 'og:site_name', 'Karim Chaouki');
   setMeta('meta[property="og:locale"]', 'property', 'og:locale', 'en_CA');
 
