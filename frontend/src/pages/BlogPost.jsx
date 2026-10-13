@@ -6,6 +6,7 @@ import { InteractiveBlock, INTERACTIVE_TYPES } from '../components/InteractiveWi
 import posts from '../data/blogPosts.json';
 import { Calendar, Clock, ArrowLeft, ExternalLink, Tag, Share2, Link2, Check, FileText } from 'lucide-react';
 import PayhipPromoBanner from '../components/PayhipPromoBanner';
+import NewsletterSignup from '../components/NewsletterSignup';
 
 const SITE_URL = 'https://www.karimchaouki.com';
 
@@ -424,6 +425,9 @@ export default function BlogPost() {
               </div>
             </div>
           </section>
+
+          {/* Newsletter signup — end of every article */}
+          <NewsletterSignup />
 
           {/* Related */}
           {related.length > 0 && (
