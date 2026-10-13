@@ -15,7 +15,7 @@ const blogListSchema = {
       name: 'Karim Chaouki — Blog',
       url: `${SITE_URL}/blog`,
       description:
-        'Insights on AML compliance, ADP Workforce Now implementation, cross-border payroll, and HCM project management from a senior consultant at ADP’s Center of Excellence.',
+        'Insights on AML compliance, enterprise HCM implementations, cross-border payroll, and HCM project management from a senior implementation consultant.',
       author: { '@type': 'Person', name: 'Karim Chaouki', url: SITE_URL },
       inLanguage: 'en-CA',
       blogPost: posts.map((p) => ({
@@ -227,8 +227,8 @@ export default function BlogIndex() {
   return (
     <>
       <SEO
-        title="Blog — AML, ADP Workforce Now & HCM Implementation Insights"
-        description="Articles on AML compliance, ADP Workforce Now implementation, cross-border US/Canada payroll, and HCM project management — by Karim Chaouki, senior implementation consultant at ADP’s Center of Excellence."
+        title="Blog — AML, Enterprise HCM & Implementation Insights"
+        description="Articles on AML compliance, enterprise HCM implementations, cross-border US/Canada payroll, and HCM project management — by Karim Chaouki, senior implementation consultant."
         canonical="/blog"
         schema={blogListSchema}
       />
@@ -248,7 +248,7 @@ export default function BlogIndex() {
               Insights &amp; Articles
             </h1>
             <p className="text-xl text-blue-200 max-w-2xl leading-relaxed">
-              Field notes on AML compliance, ADP Workforce Now implementations,
+              Field notes on AML compliance, enterprise HCM implementations,
               cross-border US/Canada payroll, and running HCM projects that
               actually hit go-live dates.
             </p>
