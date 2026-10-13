@@ -10,44 +10,48 @@ Set these in the Vercel dashboard: **Project → Settings → Environment Variab
 
 | Variable | Required | Purpose |
 |---|---|---|
-| `BEEHIIV_API_KEY` | Yes (for any Beehiiv call) | Server-side Beehiiv API key. **Never** put this in client-side code or a `NEXT_PUBLIC_`/`REACT_APP_` variable. |
-| `BEEHIIV_PUBLICATION_ID` | Yes (for any Beehiiv call) | Your Beehiiv publication ID (the `{publicationId}` in `POST /v2/publications/{publicationId}/subscriptions`). |
+| `BEEHIIV_API_KEY` | Yes (for any Beehiiv call) | Server-side Beehiiv API key. **Never** put this in client-side code or a `NEXT_PUBLIC_`/`REACT_APP_` variable. **Karim: add this in the Vercel dashboard** (Project → Settings → Environment Variables → Production). The key is never hardcoded anywhere. |
+| `BEEHIIV_PUBLICATION_ID` | Optional | Defaults in code to Karim's Newsletter (`pub_7f333e13-09fc-493d-8ca2-6eab456a3044`, verified live 2026-10-13). Set only to override. |
 | `RESUME_TOKEN_SECRET` | Recommended | Long random string used to sign resume download tokens. If unset, the server generates an ephemeral secret per instance (tokens break on redeploy) and logs a warning. Generate with `openssl rand -hex 32`. |
 
 After setting variables, redeploy (or they apply on the next deploy).
 
-### Behavior when Beehiiv is not configured
+### Behavior when the API key is not configured
 
 - **Resume form still works.** The request is validated, a download token is
   issued, and the PDF downloads. The lead is *not* stored anywhere — the server
-  logs a warning. Configure Beehiiv promptly so leads are captured.
+  logs a warning. Add the API key promptly so leads are captured.
 - **Newsletter signup returns 503** `newsletter_unavailable` with a friendly
   "temporarily unavailable" message and a retry option. No silent failures.
 
-## 2. Where to find the credentials in Beehiiv
+## 2. Credentials (verified live 2026-10-13)
 
-1. **API key:** Beehiiv dashboard → Settings → API (or Integrations → API).
-   Create a key with permission to manage subscribers. Keep it secret.
-2. **Publication ID:** Beehiiv dashboard → Settings → Publication. It appears in
-   API URLs and in the publication settings screen.
+- **Publication:** "Karim's Newsletter" — `pub_7f333e13-09fc-493d-8ca2-6eab456a3044`
+  (baked into the code as the default; no action needed).
+- **API key:** Beehiiv dashboard → Settings → API. Create a key with permission
+  to manage subscribers, then add it as `BEEHIIV_API_KEY` in the Vercel
+  dashboard (Production env). **This is the one manual step you must do.**
+- **Custom fields** already exist on the publication (exact display names used
+  by the code): `First Name` (string), `Last Name` (string), `Lead Source`
+  (string), `Newsletter Consent` (boolean). No manual field setup needed.
 
-> No live Beehiiv connection has been tested — credentials were not available
-> during implementation. After configuring, test with your own email first.
+> The subscribe payload was verified end-to-end against the real API
+> (201, no warnings): `{email, reactivate_existing:false,
+> send_welcome_email:false, double_opt_override:"off", custom_fields:[...],
+> utm_source:"website"}`, plus tags via the tags endpoint (`resume-request` /
+> `blog-newsletter`, 201). After adding your API key, test both forms with
+> your own email first.
 
-## 3. Custom fields (auto-created, best effort)
+## 3. How subscriber data is stored
 
-On first use, `/api/beehiiv-subscribe` attempts to create two custom fields via
-`POST /v2/publications/{id}/custom_fields`:
-
-- `lead_source` (string) — `"resume-download"` or `"blog-newsletter"`
-- `newsletter_consent` (boolean) — `true` / `false`
-
-If auto-creation fails (e.g. insufficient plan permissions), create them
-manually in **Beehiiv → Audience → Custom fields** with exactly these names;
-unknown field names are silently dropped by Beehiiv otherwise.
-
-Every subscriber created by the site also gets a tag (`resume-request` or
+The visitor's full name is split into the `First Name` / `Last Name` custom
+fields (first token → First Name, remainder → Last Name). `Lead Source` is
+`"resume-download"` or `"blog-newsletter"`; `Newsletter Consent` is `true` /
+`false`. Every subscriber also gets a tag (`resume-request` or
 `blog-newsletter`) via the tags endpoint.
+
+Existing subscribers are looked up by email first; if found, their custom
+fields are updated via PUT (idempotent — no duplicates, no 422s).
 
 ## 4. Keeping resume leads separate from the newsletter (important)
 
@@ -55,10 +59,10 @@ Beehiiv's subscription API has no separate "leads" table — every record create
 is a publication subscriber. The separation is enforced as follows:
 
 - Resume requests are created with `send_welcome_email: false` and
-  `newsletter_consent: false` (unless the visitor ticked the optional
+  `Newsletter Consent: false` (unless the visitor ticked the optional
   newsletter checkbox, which is **unchecked by default**).
 - **You must configure your newsletter automations/broadcasts to target only
-  subscribers where `newsletter_consent = true`** (Beehiiv → Automations →
+  subscribers where `Newsletter Consent` is true** (Beehiiv → Automations →
   audience filter/segment). Without this filter, resume leads could receive
   marketing emails they did not consent to.
 
@@ -79,7 +83,7 @@ generated from the live `blogPosts.json` (title, link, date, excerpt; latest
 1. In Beehiiv: **Settings → your publication → RSS → New External RSS Feed**,
    and add the URL above.
 2. Create an automation/broadcast that pulls the feed ("Refresh feed on send")
-   on your chosen schedule, filtered to the `newsletter_consent = true`
+   on your chosen schedule, filtered to the `Newsletter Consent` = true
    segment.
 
 Notes and honest limitations:
@@ -134,10 +138,10 @@ ended, leap years, invalid dates).
 3. Reusing a download URL twice → second attempt rejected (410).
 4. Old URL `/resume/KC_PM_Resume.pdf` → 404.
 5. Newsletter form at the end of any `/blog/<slug>` article: subscribe with
-   your own email → appears in Beehiiv with `lead_source=blog-newsletter`,
-   `newsletter_consent=true`; subscribing again → idempotent success.
+   your own email → appears in Beehiiv with `Lead Source`=blog-newsletter,
+   `Newsletter Consent`=true; subscribing again → idempotent success.
 6. Resume form **without** the newsletter checkbox → subscriber created with
-   `newsletter_consent=false`, no welcome email.
+   `Newsletter Consent`=false, no welcome email.
 7. `/api/rss` returns valid RSS XML with the latest posts.
 8. Confirm `/resume` carries `<meta name="robots" content="noindex, nofollow">`.
 
