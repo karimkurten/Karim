@@ -27,7 +27,15 @@
  *   then calls /api/resume-download?token=... (single-use, 15-minute expiry).
  *
  * Env vars (server-side only, never exposed to the browser):
- *   BEEHIIV_API_KEY, BEEHIIV_PUBLICATION_ID, RESUME_TOKEN_SECRET (optional)
+ *   BEEHIIV_API_KEY (required) — set by Karim in the Vercel dashboard.
+ *   BEEHIIV_PUBLICATION_ID (optional) — defaults to Karim's Newsletter
+ *     (pub_7f333e13-09fc-493d-8ca2-6eab456a3044); override via env if needed.
+ *   RESUME_TOKEN_SECRET (optional) — HMAC secret for download tokens.
+ *
+ * Verified live against the Beehiiv API (2026-10-13): the publication has
+ * custom fields "First Name" (string), "Last Name" (string), "Lead Source"
+ * (string), "Newsletter Consent" (boolean). The create payload below returns
+ * 201 with no warnings; tags are added via the separate tags endpoint (201).
  */
 
 const crypto = require("crypto");
@@ -40,7 +48,10 @@ const TOKEN_TTL_MS = 15 * 60 * 1000;
 // --- in-memory guards (per serverless instance) ------------------------------
 const rateHits = new Map(); // ip -> [timestamps]
 const idempotencyCache = new Map(); // key -> { status, body }
-let customFieldsEnsured = false;
+
+// Publication ID verified live: "Karim's Newsletter". The API key is NEVER
+// hardcoded — it must come from process.env.BEEHIIV_API_KEY at runtime.
+const DEFAULT_PUBLICATION_ID = "pub_7f333e13-09fc-493d-8ca2-6eab456a3044";
 
 function isRateLimited(ip) {
   const now = Date.now();
@@ -123,38 +134,30 @@ async function beehiiv(apiKey, path, { method = "GET", body } = {}) {
   return last;
 }
 
-async function ensureCustomFields(apiKey, publicationId) {
-  if (customFieldsEnsured) return;
-  for (const field of [
-    { kind: "string", display: "lead_source" },
-    { kind: "boolean", display: "newsletter_consent" },
-  ]) {
-    try {
-      // 400 (already exists) is fine — best effort.
-      await beehiiv(apiKey, `/publications/${publicationId}/custom_fields`, {
-        method: "POST",
-        body: field,
-      });
-    } catch (e) {
-      console.warn("[beehiiv-subscribe] custom field ensure failed:", field.display, e.message);
-    }
-  }
-  customFieldsEnsured = true;
+// Split "Jane Marie Doe" -> First Name "Jane", Last Name "Marie Doe".
+function splitName(fullName) {
+  const parts = fullName.trim().split(/\s+/);
+  const first = parts.shift() || "";
+  return { first, last: parts.join(" ") };
 }
 
-function customFieldPayload(source, consent) {
-  return [
-    { name: "lead_source", value: source === "resume" ? "resume-download" : "blog-newsletter" },
-    { name: "newsletter_consent", value: consent },
+function customFieldPayload(source, consent, fullName) {
+  const { first, last } = splitName(fullName);
+  const fields = [
+    { name: "First Name", value: first },
+    { name: "Lead Source", value: source === "resume" ? "resume-download" : "blog-newsletter" },
+    { name: "Newsletter Consent", value: consent },
   ];
+  if (last) fields.push({ name: "Last Name", value: last });
+  return fields;
 }
 
 /**
  * Check-then-create/update: the docs are ambiguous about duplicate creates
  * (possible 422), so look the subscriber up by email first.
  */
-async function upsertSubscriber(apiKey, publicationId, { email, consent, source }) {
-  const fields = customFieldPayload(source, consent);
+async function upsertSubscriber(apiKey, publicationId, { email, consent, source, fullName }) {
+  const fields = customFieldPayload(source, consent, fullName);
   const lookup = await beehiiv(apiKey, `/publications/${publicationId}/subscriptions/by_email/${encodeURIComponent(email)}`);
 
   if (lookup.status === 200 && lookup.data && lookup.data.data && lookup.data.data.id) {
@@ -166,13 +169,16 @@ async function upsertSubscriber(apiKey, publicationId, { email, consent, source 
     return { ok: upd.status >= 200 && upd.status < 300, subscriptionId: subId, created: false };
   }
 
+  // Payload shape verified live against the real API (201, no warnings).
   const create = await beehiiv(apiKey, `/publications/${publicationId}/subscriptions`, {
     method: "POST",
     body: {
       email,
-      reactivate_existing: source === "newsletter" && consent,
+      reactivate_existing: false,
       send_welcome_email: false, // never auto-enroll in marketing email; consent is explicit
+      double_opt_override: "off",
       custom_fields: fields,
+      utm_source: "website",
       referring_site: "https://www.karimchaouki.com",
     },
   });
@@ -228,8 +234,8 @@ module.exports = async function handler(req, res) {
   }
 
   const apiKey = process.env.BEEHIIV_API_KEY;
-  const publicationId = process.env.BEEHIIV_PUBLICATION_ID;
-  const beehiivConfigured = Boolean(apiKey && publicationId);
+  const publicationId = process.env.BEEHIIV_PUBLICATION_ID || DEFAULT_PUBLICATION_ID;
+  const beehiivConfigured = Boolean(apiKey); // key is never hardcoded; Karim sets it in Vercel
 
   const respond = (status, payload) => {
     if (typeof body.idempotencyKey === "string" && body.idempotencyKey.length >= 8 && status < 500) {
@@ -250,11 +256,11 @@ module.exports = async function handler(req, res) {
   }
 
   try {
-    await ensureCustomFields(apiKey, publicationId);
     const result = await upsertSubscriber(apiKey, publicationId, {
       email: clean.email,
       consent: clean.consent,
       source: clean.source,
+      fullName: clean.name,
     });
 
     if (!result.ok) {
