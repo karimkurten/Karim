@@ -9847,7 +9847,7 @@
   },
   {
     "slug": "current-vs-future-state-mapping",
-    "title": "Current-State vs Future-State Process Mapping: How to Design the Processes Your HCM Implementation Will Actually Run",
+    "title": "Current vs Future State Process Mapping for HCM Implementations",
     "excerpt": "A practitioner's guide to current-state and future-state process mapping in HCM implementations: workshops, pitfalls, and design that survives go-live.",
     "publishedAt": "2026-09-24",
     "readingTime": "12 min read",
@@ -13015,8 +13015,9 @@
   },
   {
     "slug": "how-project-managers-can-avoid-minimize-scope-creep",
-    "title": "How Project Managers Can Avoid and Minimize Scope Creep: Strategies, Real-Life Lessons, and Data-Driven Insights",
-    "excerpt": "Scope creep affects 52% of projects and is a leading cause of failure. Four proven strategies — backed by the Sydney Opera House cautionary tale and PMI data — to keep your projects on the rails.",
+    "noindex": true,
+    "title": "Avoiding Scope Creep: Strategies for Project Managers",
+    "excerpt": "Scope creep affects 52% of projects. Four proven strategies — with real-life lessons and PMI data — to keep your projects on track.",
     "publishedAt": "2025-06-03",
     "readingTime": "9 min read",
     "cover": "/images/blog/scope-creep-cover.jpg",
@@ -13186,6 +13187,7 @@
   },
   {
     "slug": "mastering-art-project-management-tips-tricks-new-pms",
+    "noindex": true,
     "title": "Mastering the Art of Project Management: Tips and Tricks for New Project Managers",
     "excerpt": "Organizations with effective project management complete 88% of projects on time. Seven practical strategies — clarity, communication, risk, team morale, data, adaptability — for new PMs to lead with confidence.",
     "publishedAt": "2025-05-23",
@@ -13287,6 +13289,7 @@
   },
   {
     "slug": "leveraging-ai-revolutionize-human-capital-management",
+    "noindex": true,
     "title": "Leveraging AI to Revolutionize Human Capital Management: A Comprehensive Guide",
     "excerpt": "The AI-in-HR market is on track to hit $14B by 2029. A phased implementation guide for HR leaders — with Netchex and PepsiCo case studies, 6-step rollout plan, and governance frameworks for time tracking, payroll, and workforce management.",
     "publishedAt": "2025-05-14",
@@ -13440,6 +13443,7 @@
   },
   {
     "slug": "how-to-avoid-global-it-outages",
+    "noindex": true,
     "title": "How to Avoid Global IT Outages",
     "excerpt": "The recent global IT outages disrupted flights, banks, and critical sectors worldwide. Seven strategies — from redundant infrastructure to multi-cloud and disaster recovery testing — to safeguard your organization.",
     "publishedAt": "2024-07-19",
@@ -13541,6 +13545,7 @@
   },
   {
     "slug": "6-steps-to-avoid-scams-and-frauds",
+    "noindex": true,
     "title": "6 Steps to Avoid Scams and Frauds",
     "excerpt": "Identity theft, phishing, smishing, investment scams — fraud evolves fast. Six practical steps to stay ahead, from verifying websites to monitoring your accounts.",
     "publishedAt": "2023-03-01",
@@ -13622,6 +13627,7 @@
   },
   {
     "slug": "aml-cryptocurrency-challenge",
+    "noindex": true,
     "title": "The AML and Cryptocurrency Challenge: What You Need to Know",
     "excerpt": "Cryptos pose unique AML risks. Four critical challenges: KYC/AML framework maturity, digital footprint tracking, transaction monitoring, and identity verification — with the roadmap for compliance teams.",
     "publishedAt": "2022-05-15",
@@ -13687,6 +13693,7 @@
   },
   {
     "slug": "5-tips-handle-customer-complaints",
+    "noindex": true,
     "title": "5 Tips to Handle Customer Complaints Properly and Maximize Your Online Presence",
     "excerpt": "Customer complaints are inevitable. Five tactics — from transparent processes to honest responses — that turn feedback into loyalty and protect your brand online.",
     "publishedAt": "2022-04-27",
@@ -13756,6 +13763,7 @@
   },
   {
     "slug": "4-essential-skills-land-first-project-management-job",
+    "noindex": true,
     "title": "4 Essential Skills to Land Your First Project Management Job",
     "excerpt": "Project management is one of the hottest job categories. The essential skills — communication, problem-solving, networking, and understanding company culture — to land your first PM role.",
     "publishedAt": "2022-04-25",
@@ -13825,6 +13833,7 @@
   },
   {
     "slug": "7-tips-for-new-project-managers",
+    "noindex": true,
     "title": "7 Tips for New Project Managers",
     "excerpt": "You've just been promoted. Now what? Seven practical tips — from setting realistic expectations to avoiding micromanagement — that make the difference in your first year as a PM.",
     "publishedAt": "2022-04-16",
