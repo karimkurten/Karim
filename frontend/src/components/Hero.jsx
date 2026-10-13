@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { personalInfo, stats } from '../data/mockData';
 import { useScrollReveal, useCounter } from '../hooks/useScrollReveal';
 import { ArrowDown, ExternalLink, Download } from 'lucide-react';
@@ -131,9 +132,8 @@ const Hero = () => {
                   className="group-hover:translate-y-0.5 transition-transform"
                 />
               </a>
-              <a
-                href={personalInfo.resumeUrl}
-                download="Karim_Chaouki_Resume.pdf"
+              <Link
+                to="/resume"
                 className="group inline-flex items-center gap-2 px-8 py-4 border-2 border-[#CBD5E1] text-[#64748B] font-semibold rounded-lg hover:bg-white hover:text-[#1A202C] hover:border-[#94A3B8] transition-all duration-300 hover:-translate-y-0.5"
               >
                 Download Resume
@@ -141,7 +141,7 @@ const Hero = () => {
                   size={18}
                   className="group-hover:translate-y-0.5 transition-transform"
                 />
-              </a>
+              </Link>
             </div>
           </div>
 
