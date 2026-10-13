@@ -1,9 +1,9 @@
 import React from 'react';
-import { useParams, Link, Navigate } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 import Header from '../components/Header';
 import SEO, { buildBreadcrumb } from '../components/SEO';
 import { InteractiveBlock, INTERACTIVE_TYPES } from '../components/InteractiveWidgets';
-import posts from '../data/blogPosts.json';
+import NotFound from './NotFound';
 import { Calendar, Clock, ArrowLeft, ExternalLink, Tag, Share2, Link2, Check, FileText } from 'lucide-react';
 import PayhipPromoBanner from '../components/PayhipPromoBanner';
 import NewsletterSignup from '../components/NewsletterSignup';
@@ -269,15 +269,88 @@ const ContentBlock = ({ block }) => {
   return null;
 };
 
+// Loading skeleton shown while the article JSON is being fetched.
+// Mirrors the article page structure in site colors; no article content.
+const ArticleSkeleton = () => (
+  <>
+    <Header />
+    <main aria-busy="true" aria-label="Loading article">
+      <div className="bg-gradient-to-br from-slate-900 to-blue-900 py-20 px-6">
+        <div className="max-w-3xl mx-auto">
+          <div className="h-4 w-44 rounded bg-white/10 animate-pulse mb-6" />
+          <div className="h-10 w-3/4 rounded bg-white/10 animate-pulse mb-4" />
+          <div className="h-10 w-1/2 rounded bg-white/10 animate-pulse mb-6" />
+          <div className="h-4 w-64 rounded bg-white/10 animate-pulse" />
+        </div>
+      </div>
+      <div className="py-16 px-6">
+        <div className="max-w-3xl mx-auto">
+          <div className="h-64 rounded-2xl bg-[#E2E8F0] animate-pulse mb-10" />
+          <div className="space-y-4">
+            <div className="h-4 rounded bg-[#E2E8F0] animate-pulse w-full" />
+            <div className="h-4 rounded bg-[#E2E8F0] animate-pulse w-11/12" />
+            <div className="h-4 rounded bg-[#E2E8F0] animate-pulse w-full" />
+            <div className="h-4 rounded bg-[#E2E8F0] animate-pulse w-4/5" />
+            <div className="h-4 rounded bg-[#E2E8F0] animate-pulse w-full" />
+            <div className="h-4 rounded bg-[#E2E8F0] animate-pulse w-3/5" />
+          </div>
+        </div>
+      </div>
+    </main>
+  </>
+);
+
 export default function BlogPost() {
   const { slug } = useParams();
-  const post = posts.find((p) => p.slug === slug);
+  const [post, setPost] = React.useState(null);
+  const [status, setStatus] = React.useState('loading');
 
-  if (!post) {
-    return <Navigate to="/blog" replace />;
+  // M3: article data is fetched on demand from a per-slug static JSON file
+  // (generated at build time into frontend/public/article-data/) instead of
+  // being bundled into the BlogPost JS chunk.
+  React.useEffect(() => {
+    let cancelled = false;
+    setStatus('loading');
+    setPost(null);
+    fetch(`/article-data/${encodeURIComponent(slug)}.json`)
+      .then((res) => {
+        if (!res.ok) {
+          throw new Error(`Article data request failed with status ${res.status}`);
+        }
+        return res.json();
+      })
+      .then((data) => {
+        if (cancelled) return;
+        if (data && data.slug && data.title) {
+          setPost(data);
+          setStatus('ready');
+        } else {
+          setStatus('notfound');
+        }
+      })
+      .catch((err) => {
+        if (cancelled) return;
+        // eslint-disable-next-line no-console
+        console.error(`[BlogPost] failed to load article data for slug "${slug}":`, err);
+        setStatus('notfound');
+      });
+    return () => {
+      cancelled = true;
+    };
+  }, [slug]);
+
+  if (status === 'loading') {
+    return <ArticleSkeleton />;
   }
 
-  const related = posts.filter((p) => p.slug !== slug).slice(0, 3);
+  if (status === 'notfound' || !post) {
+    return <NotFound />;
+  }
+
+  // Related posts are supplied in each per-slug JSON as a `related` array
+  // (see Track B). The "More Articles" section is hidden when the payload
+  // carries no related posts rather than rendering a broken strip.
+  const related = post.related || [];
 
   const postSchema = {
     '@context': 'https://schema.org',
@@ -323,6 +396,7 @@ export default function BlogPost() {
         ogImage={`${SITE_URL}${post.cover}`}
         ogType="article"
         schema={postSchema}
+        noindex={!!post.noindex}
       />
       <Header />
 
