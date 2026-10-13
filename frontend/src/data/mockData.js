@@ -1,3 +1,6 @@
+import { getCompletedYears } from '../lib/experience';
+import employmentHistory from './employmentHistory.json';
+
 export const personalInfo = {
   name: "Karim Chaouki",
   headline: "Your Strategic Partner for HCM & ERP Transformation",
@@ -32,7 +35,9 @@ const getClientsServed = () => {
 
 export const stats = [
   { value: getClientsServed, suffix: "+", label: "Clients Served" },
-  { value: 7, suffix: "+", label: "Years Experience" },
+  // Cumulative professional experience, computed from verified employment
+  // dates in employmentHistory.json (updates automatically over time).
+  { value: getCompletedYears(employmentHistory), suffix: "+", label: "Years Experience" },
   { value: 100, suffix: "%", label: "On-Time Delivery" },
   { value: 95, suffix: "%", label: "Client Retention" },
 ];
