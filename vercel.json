@@ -22,5 +22,13 @@
   ],
   "buildCommand": "cd frontend && yarn build",
   "outputDirectory": "frontend/build",
-  "installCommand": "cd frontend && yarn install"
+  "installCommand": "cd frontend && yarn install",
+  "functions": {
+    "api/resume-download.js": {
+      "includeFiles": "private/resume/KC_PM_Resume.pdf"
+    },
+    "api/rss.js": {
+      "includeFiles": "frontend/src/data/blogPosts.json"
+    }
+  }
 }
