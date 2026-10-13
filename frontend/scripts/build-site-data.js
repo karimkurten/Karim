@@ -230,3 +230,5 @@ function main() {
 }
 
 main();
+
+// 2026-10-13: nudge commit to trigger a fresh Vercel build of the full SEO batch.
