@@ -1,0 +1,150 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-label="System testing phase flow: unit, system, integration, user acceptance, parallel run, cutover, each with entry and exit criteria">
+  <defs>
+    <linearGradient id="heroGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0f172a"/>
+      <stop offset="1" stop-color="#1e3a5f"/>
+    </linearGradient>
+    <marker id="arrowBlue" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#2B6CB0"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="1200" height="110" fill="url(#heroGrad)"/>
+  <text x="40" y="48" font-family="Georgia, 'Times New Roman', serif" font-size="30" fill="#ffffff">HCM System Testing Phase Flow</text>
+  <text x="40" y="80" font-family="Arial, Helvetica, sans-serif" font-size="15" fill="#94A3B8">Each phase proves something different. A phase ends only when its exit criteria are met.</text>
+
+  <g font-family="Arial, Helvetica, sans-serif">
+    <!-- Phase 1 -->
+    <g>
+      <rect x="20" y="150" width="172" height="570" rx="10" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+      <text x="106" y="192" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="19" fill="#1A202C" font-weight="bold">1. Unit</text>
+      <text x="106" y="214" text-anchor="middle" font-size="13" fill="#2B6CB0" font-weight="bold">Configuration validation</text>
+      <text x="36" y="250" font-size="13" fill="#1A202C" font-weight="bold">Entry criteria</text>
+      <text x="36" y="272" font-size="12.5" fill="#475569">- Configuration documented</text>
+      <text x="36" y="294" font-size="12.5" fill="#475569">  and peer-reviewed</text>
+      <text x="36" y="316" font-size="12.5" fill="#475569">- Test data loaded in</text>
+      <text x="36" y="338" font-size="12.5" fill="#475569">  sandbox environment</text>
+      <text x="36" y="384" font-size="13" fill="#1A202C" font-weight="bold">Exit criteria</text>
+      <text x="36" y="406" font-size="12.5" fill="#475569">- Every config item tested</text>
+      <text x="36" y="428" font-size="12.5" fill="#475569">- Defects closed or formally</text>
+      <text x="36" y="450" font-size="12.5" fill="#475569">  deferred with a reason</text>
+      <text x="36" y="496" font-size="13" fill="#1A202C" font-weight="bold">Proves</text>
+      <text x="36" y="518" font-size="12.5" fill="#475569">Individual setup works</text>
+      <text x="36" y="540" font-size="12.5" fill="#475569">as designed.</text>
+      <text x="36" y="592" font-size="13" fill="#1A202C" font-weight="bold">Owner</text>
+      <text x="36" y="614" font-size="12.5" fill="#475569">Functional consultants</text>
+    </g>
+    <line x1="192" y1="435" x2="206" y2="435" stroke="#2B6CB0" stroke-width="3" marker-end="url(#arrowBlue)"/>
+
+    <!-- Phase 2 -->
+    <g>
+      <rect x="210" y="150" width="172" height="570" rx="10" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+      <text x="296" y="192" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="19" fill="#1A202C" font-weight="bold">2. System</text>
+      <text x="296" y="214" text-anchor="middle" font-size="13" fill="#2B6CB0" font-weight="bold">In-scope processes verified</text>
+      <text x="226" y="250" font-size="13" fill="#1A202C" font-weight="bold">Entry criteria</text>
+      <text x="226" y="272" font-size="12.5" fill="#475569">- Unit exit criteria met</text>
+      <text x="226" y="294" font-size="12.5" fill="#475569">- End-to-end scenarios</text>
+      <text x="226" y="316" font-size="12.5" fill="#475569">  scripted and reviewed</text>
+      <text x="226" y="362" font-size="13" fill="#1A202C" font-weight="bold">Exit criteria</text>
+      <text x="226" y="384" font-size="12.5" fill="#475569">- All in-scope processes</text>
+      <text x="226" y="406" font-size="12.5" fill="#475569">  pass against requirements</text>
+      <text x="226" y="428" font-size="12.5" fill="#475569">- No open critical defects</text>
+      <text x="226" y="474" font-size="13" fill="#1A202C" font-weight="bold">Proves</text>
+      <text x="226" y="496" font-size="12.5" fill="#475569">Processes work within</text>
+      <text x="226" y="518" font-size="12.5" fill="#475569">the new system.</text>
+      <text x="226" y="570" font-size="13" fill="#1A202C" font-weight="bold">Owner</text>
+      <text x="226" y="592" font-size="12.5" fill="#475569">Test team + consultants</text>
+    </g>
+    <line x1="382" y1="435" x2="396" y2="435" stroke="#2B6CB0" stroke-width="3" marker-end="url(#arrowBlue)"/>
+
+    <!-- Phase 3 -->
+    <g>
+      <rect x="400" y="150" width="172" height="570" rx="10" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+      <text x="486" y="192" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="19" fill="#1A202C" font-weight="bold">3. Integration</text>
+      <text x="486" y="214" text-anchor="middle" font-size="13" fill="#2B6CB0" font-weight="bold">End-to-end across systems</text>
+      <text x="416" y="250" font-size="13" fill="#1A202C" font-weight="bold">Entry criteria</text>
+      <text x="416" y="272" font-size="12.5" fill="#475569">- Interface specs finalized</text>
+      <text x="416" y="294" font-size="12.5" fill="#475569">- Vendor endpoints</text>
+      <text x="416" y="316" font-size="12.5" fill="#475569">  available for testing</text>
+      <text x="416" y="362" font-size="13" fill="#1A202C" font-weight="bold">Exit criteria</text>
+      <text x="416" y="384" font-size="12.5" fill="#475569">- Inbound / outbound files</text>
+      <text x="416" y="406" font-size="12.5" fill="#475569">  and APIs reconcile</text>
+      <text x="416" y="428" font-size="12.5" fill="#475569">- Error handling proven</text>
+      <text x="416" y="474" font-size="13" fill="#1A202C" font-weight="bold">Proves</text>
+      <text x="416" y="496" font-size="12.5" fill="#475569">The new system works</text>
+      <text x="416" y="518" font-size="12.5" fill="#475569">with the ecosystem.</text>
+      <text x="416" y="570" font-size="13" fill="#1A202C" font-weight="bold">Owner</text>
+      <text x="416" y="592" font-size="12.5" fill="#475569">Integration lead</text>
+    </g>
+    <line x1="572" y1="435" x2="586" y2="435" stroke="#2B6CB0" stroke-width="3" marker-end="url(#arrowBlue)"/>
+
+    <!-- Phase 4 -->
+    <g>
+      <rect x="590" y="150" width="172" height="570" rx="10" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+      <text x="676" y="192" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="19" fill="#1A202C" font-weight="bold">4. UAT</text>
+      <text x="676" y="214" text-anchor="middle" font-size="13" fill="#2B6CB0" font-weight="bold">Business acceptance</text>
+      <text x="606" y="250" font-size="13" fill="#1A202C" font-weight="bold">Entry criteria</text>
+      <text x="606" y="272" font-size="12.5" fill="#475569">- Business testers trained</text>
+      <text x="606" y="294" font-size="12.5" fill="#475569">- UAT scripts signed off</text>
+      <text x="606" y="316" font-size="12.5" fill="#475569">- Environment stable</text>
+      <text x="606" y="362" font-size="13" fill="#1A202C" font-weight="bold">Exit criteria</text>
+      <text x="606" y="384" font-size="12.5" fill="#475569">- Business sign-off on</text>
+      <text x="606" y="406" font-size="12.5" fill="#475569">  all key scenarios</text>
+      <text x="606" y="428" font-size="12.5" fill="#475569">- Remaining defects are</text>
+      <text x="606" y="450" font-size="12.5" fill="#475569">  severity 3 or lower</text>
+      <text x="606" y="496" font-size="13" fill="#1A202C" font-weight="bold">Proves</text>
+      <text x="606" y="518" font-size="12.5" fill="#475569">The business can do</text>
+      <text x="606" y="540" font-size="12.5" fill="#475569">its work day one.</text>
+      <text x="606" y="592" font-size="13" fill="#1A202C" font-weight="bold">Owner</text>
+      <text x="606" y="614" font-size="12.5" fill="#475569">Business process owners</text>
+    </g>
+    <line x1="762" y1="435" x2="776" y2="435" stroke="#2B6CB0" stroke-width="3" marker-end="url(#arrowBlue)"/>
+
+    <!-- Phase 5 -->
+    <g>
+      <rect x="780" y="150" width="172" height="570" rx="10" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+      <text x="866" y="192" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="19" fill="#1A202C" font-weight="bold">5. Parallel</text>
+      <text x="866" y="214" text-anchor="middle" font-size="13" fill="#2B6CB0" font-weight="bold">Side-by-side payroll runs</text>
+      <text x="796" y="250" font-size="13" fill="#1A202C" font-weight="bold">Entry criteria</text>
+      <text x="796" y="272" font-size="12.5" fill="#475569">- Legacy and new data</text>
+      <text x="796" y="294" font-size="12.5" fill="#475569">  aligned at freeze point</text>
+      <text x="796" y="316" font-size="12.5" fill="#475569">- Pay calendars mapped</text>
+      <text x="796" y="362" font-size="13" fill="#1A202C" font-weight="bold">Exit criteria</text>
+      <text x="796" y="384" font-size="12.5" fill="#475569">- Variance threshold met</text>
+      <text x="796" y="406" font-size="12.5" fill="#475569">  for consecutive cycles</text>
+      <text x="796" y="428" font-size="12.5" fill="#475569">- Reconciliation evidence</text>
+      <text x="796" y="450" font-size="12.5" fill="#475569">  filed and signed off</text>
+      <text x="796" y="496" font-size="13" fill="#1A202C" font-weight="bold">Proves</text>
+      <text x="796" y="518" font-size="12.5" fill="#475569">Pay is right, check</text>
+      <text x="796" y="540" font-size="12.5" fill="#475569">after check.</text>
+      <text x="796" y="592" font-size="13" fill="#1A202C" font-weight="bold">Owner</text>
+      <text x="796" y="614" font-size="12.5" fill="#475569">Payroll + test team</text>
+    </g>
+    <line x1="952" y1="435" x2="966" y2="435" stroke="#2B6CB0" stroke-width="3" marker-end="url(#arrowBlue)"/>
+
+    <!-- Phase 6 -->
+    <g>
+      <rect x="970" y="150" width="172" height="570" rx="10" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+      <text x="1056" y="192" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="19" fill="#1A202C" font-weight="bold">6. Cutover</text>
+      <text x="1056" y="214" text-anchor="middle" font-size="13" fill="#2B6CB0" font-weight="bold">Go-live readiness</text>
+      <text x="986" y="250" font-size="13" fill="#1A202C" font-weight="bold">Entry criteria</text>
+      <text x="986" y="272" font-size="12.5" fill="#475569">- All prior exit criteria</text>
+      <text x="986" y="294" font-size="12.5" fill="#475569">  signed off</text>
+      <text x="986" y="316" font-size="12.5" fill="#475569">- Hypercare team staffed</text>
+      <text x="986" y="362" font-size="13" fill="#1A202C" font-weight="bold">Exit criteria</text>
+      <text x="986" y="384" font-size="12.5" fill="#475569">- Go-live decision recorded</text>
+      <text x="986" y="406" font-size="12.5" fill="#475569">  with risk assessment</text>
+      <text x="986" y="428" font-size="12.5" fill="#475569">- Rollback plan archived</text>
+      <text x="986" y="474" font-size="13" fill="#1A202C" font-weight="bold">Proves</text>
+      <text x="986" y="496" font-size="12.5" fill="#475569">The organization is</text>
+      <text x="986" y="518" font-size="12.5" fill="#475569">ready to switch over.</text>
+      <text x="986" y="570" font-size="13" fill="#1A202C" font-weight="bold">Owner</text>
+      <text x="986" y="592" font-size="12.5" fill="#475569">Project manager</text>
+    </g>
+  </g>
+
+  <g font-family="Arial, Helvetica, sans-serif">
+    <rect x="20" y="650" width="1160" height="60" rx="8" fill="#E2E8F0"/>
+    <text x="40" y="686" font-size="14" fill="#1A202C" font-weight="bold">Regression runs underneath every phase: re-test affected processes after every configuration change, fix, or data reload.</text>
+  </g>
+</svg>
