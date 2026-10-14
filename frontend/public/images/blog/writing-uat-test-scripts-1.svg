@@ -1,0 +1,121 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1040" viewBox="0 0 1200 1040" role="img" aria-label="Anatomy of a UAT test script: six parts, each preventing a specific execution failure">
+  <defs>
+    <linearGradient id="heroGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0f172a"/>
+      <stop offset="1" stop-color="#1e3a5f"/>
+    </linearGradient>
+    <marker id="arrowBlue" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#2B6CB0"/>
+    </marker>
+    <filter id="cardShadow" x="-5%" y="-5%" width="110%" height="115%">
+      <feDropShadow dx="0" dy="3" stdDeviation="6" flood-color="#0f172a" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+
+  <rect x="0" y="0" width="1200" height="110" fill="url(#heroGrad)"/>
+  <text x="40" y="48" font-family="Georgia, 'Times New Roman', serif" font-size="30" fill="#ffffff">Anatomy of a UAT Test Script</text>
+  <text x="40" y="80" font-family="Arial, Helvetica, sans-serif" font-size="15" fill="#94A3B8">Six parts. Miss one, and the tester absorbs the gap at execution time.</text>
+
+  <g font-family="Arial, Helvetica, sans-serif">
+    <!-- Card 1 -->
+    <g filter="url(#cardShadow)">
+      <rect x="60" y="150" width="1080" height="120" rx="12" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+      <circle cx="125" cy="210" r="26" fill="#2B6CB0"/>
+      <text x="125" y="218" text-anchor="middle" font-size="20" font-weight="bold" fill="#ffffff">1</text>
+      <text x="170" y="198" font-family="Georgia, 'Times New Roman', serif" font-size="20" font-weight="bold" fill="#1A202C">Identifier and Traceability</text>
+      <circle cx="176" cy="222" r="4" fill="#2B6CB0"/>
+      <text x="190" y="227" font-size="15" fill="#475569">Script ID and version</text>
+      <circle cx="176" cy="246" r="4" fill="#2B6CB0"/>
+      <text x="190" y="251" font-size="15" fill="#475569">Requirement reference, process area</text>
+      <rect x="760" y="172" width="350" height="76" rx="8" fill="#E2E8F0"/>
+      <rect x="760" y="172" width="8" height="76" rx="4" fill="#2B6CB0"/>
+      <text x="786" y="200" font-size="11" font-weight="bold" letter-spacing="2" fill="#64748B">GUARDS AGAINST</text>
+      <text x="786" y="226" font-size="16" font-weight="bold" fill="#1A202C">Untraceable results</text>
+    </g>
+    <line x1="600" y1="274" x2="600" y2="288" stroke="#2B6CB0" stroke-width="3" marker-end="url(#arrowBlue)"/>
+
+    <!-- Card 2 -->
+    <g filter="url(#cardShadow)">
+      <rect x="60" y="294" width="1080" height="120" rx="12" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+      <circle cx="125" cy="354" r="26" fill="#2B6CB0"/>
+      <text x="125" y="362" text-anchor="middle" font-size="20" font-weight="bold" fill="#ffffff">2</text>
+      <text x="170" y="342" font-family="Georgia, 'Times New Roman', serif" font-size="20" font-weight="bold" fill="#1A202C">Objective</text>
+      <circle cx="176" cy="366" r="4" fill="#2B6CB0"/>
+      <text x="190" y="371" font-size="15" fill="#475569">One-sentence purpose</text>
+      <circle cx="176" cy="390" r="4" fill="#2B6CB0"/>
+      <text x="190" y="395" font-size="15" fill="#475569">The acceptance it proves</text>
+      <rect x="760" y="316" width="350" height="76" rx="8" fill="#E2E8F0"/>
+      <rect x="760" y="316" width="8" height="76" rx="4" fill="#2B6CB0"/>
+      <text x="786" y="344" font-size="11" font-weight="bold" letter-spacing="2" fill="#64748B">GUARDS AGAINST</text>
+      <text x="786" y="370" font-size="16" font-weight="bold" fill="#1A202C">Vague acceptance</text>
+    </g>
+    <line x1="600" y1="418" x2="600" y2="432" stroke="#2B6CB0" stroke-width="3" marker-end="url(#arrowBlue)"/>
+
+    <!-- Card 3 -->
+    <g filter="url(#cardShadow)">
+      <rect x="60" y="438" width="1080" height="120" rx="12" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+      <circle cx="125" cy="498" r="26" fill="#2B6CB0"/>
+      <text x="125" y="506" text-anchor="middle" font-size="20" font-weight="bold" fill="#ffffff">3</text>
+      <text x="170" y="486" font-family="Georgia, 'Times New Roman', serif" font-size="20" font-weight="bold" fill="#1A202C">Preconditions</text>
+      <circle cx="176" cy="510" r="4" fill="#2B6CB0"/>
+      <text x="190" y="515" font-size="15" fill="#475569">Required system state</text>
+      <circle cx="176" cy="534" r="4" fill="#2B6CB0"/>
+      <text x="190" y="539" font-size="15" fill="#475569">Prerequisite steps complete</text>
+      <rect x="760" y="460" width="350" height="76" rx="8" fill="#E2E8F0"/>
+      <rect x="760" y="460" width="8" height="76" rx="4" fill="#2B6CB0"/>
+      <text x="786" y="488" font-size="11" font-weight="bold" letter-spacing="2" fill="#64748B">GUARDS AGAINST</text>
+      <text x="786" y="514" font-size="16" font-weight="bold" fill="#1A202C">Blocked execution</text>
+    </g>
+    <line x1="600" y1="562" x2="600" y2="576" stroke="#2B6CB0" stroke-width="3" marker-end="url(#arrowBlue)"/>
+
+    <!-- Card 4 -->
+    <g filter="url(#cardShadow)">
+      <rect x="60" y="582" width="1080" height="120" rx="12" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+      <circle cx="125" cy="642" r="26" fill="#2B6CB0"/>
+      <text x="125" y="650" text-anchor="middle" font-size="20" font-weight="bold" fill="#ffffff">4</text>
+      <text x="170" y="630" font-family="Georgia, 'Times New Roman', serif" font-size="20" font-weight="bold" fill="#1A202C">Steps with Expected Results</text>
+      <circle cx="176" cy="654" r="4" fill="#2B6CB0"/>
+      <text x="190" y="659" font-size="15" fill="#475569">One action per step</text>
+      <circle cx="176" cy="678" r="4" fill="#2B6CB0"/>
+      <text x="190" y="683" font-size="15" fill="#475569">Observable result per step</text>
+      <rect x="760" y="604" width="350" height="76" rx="8" fill="#E2E8F0"/>
+      <rect x="760" y="604" width="8" height="76" rx="4" fill="#2B6CB0"/>
+      <text x="786" y="632" font-size="11" font-weight="bold" letter-spacing="2" fill="#64748B">GUARDS AGAINST</text>
+      <text x="786" y="658" font-size="16" font-weight="bold" fill="#1A202C">Skipped verification</text>
+    </g>
+    <line x1="600" y1="706" x2="600" y2="720" stroke="#2B6CB0" stroke-width="3" marker-end="url(#arrowBlue)"/>
+
+    <!-- Card 5 -->
+    <g filter="url(#cardShadow)">
+      <rect x="60" y="726" width="1080" height="120" rx="12" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+      <circle cx="125" cy="786" r="26" fill="#2B6CB0"/>
+      <text x="125" y="794" text-anchor="middle" font-size="20" font-weight="bold" fill="#ffffff">5</text>
+      <text x="170" y="774" font-family="Georgia, 'Times New Roman', serif" font-size="20" font-weight="bold" fill="#1A202C">Test Data</text>
+      <circle cx="176" cy="798" r="4" fill="#2B6CB0"/>
+      <text x="190" y="803" font-size="15" fill="#475569">Named records and values</text>
+      <circle cx="176" cy="822" r="4" fill="#2B6CB0"/>
+      <text x="190" y="827" font-size="15" fill="#475569">Dates and identifiers</text>
+      <rect x="760" y="748" width="350" height="76" rx="8" fill="#E2E8F0"/>
+      <rect x="760" y="748" width="8" height="76" rx="4" fill="#2B6CB0"/>
+      <text x="786" y="776" font-size="11" font-weight="bold" letter-spacing="2" fill="#64748B">GUARDS AGAINST</text>
+      <text x="786" y="802" font-size="16" font-weight="bold" fill="#1A202C">Invented data</text>
+    </g>
+    <line x1="600" y1="850" x2="600" y2="864" stroke="#2B6CB0" stroke-width="3" marker-end="url(#arrowBlue)"/>
+
+    <!-- Card 6 -->
+    <g filter="url(#cardShadow)">
+      <rect x="60" y="870" width="1080" height="120" rx="12" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+      <circle cx="125" cy="930" r="26" fill="#2B6CB0"/>
+      <text x="125" y="938" text-anchor="middle" font-size="20" font-weight="bold" fill="#ffffff">6</text>
+      <text x="170" y="918" font-family="Georgia, 'Times New Roman', serif" font-size="20" font-weight="bold" fill="#1A202C">Pass-Fail Criteria and Sign-Off</text>
+      <circle cx="176" cy="942" r="4" fill="#2B6CB0"/>
+      <text x="190" y="947" font-size="15" fill="#475569">Pass/fail definition</text>
+      <circle cx="176" cy="966" r="4" fill="#2B6CB0"/>
+      <text x="190" y="971" font-size="15" fill="#475569">Tester sign-off and date</text>
+      <rect x="760" y="892" width="350" height="76" rx="8" fill="#E2E8F0"/>
+      <rect x="760" y="892" width="8" height="76" rx="4" fill="#2B6CB0"/>
+      <text x="786" y="920" font-size="11" font-weight="bold" letter-spacing="2" fill="#64748B">GUARDS AGAINST</text>
+      <text x="786" y="946" font-size="16" font-weight="bold" fill="#1A202C">Unsigned evidence</text>
+    </g>
+  </g>
+</svg>
