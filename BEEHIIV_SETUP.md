@@ -46,9 +46,12 @@ After setting variables, redeploy (or they apply on the next deploy).
 
 The visitor's full name is split into the `First Name` / `Last Name` custom
 fields (first token → First Name, remainder → Last Name). `Lead Source` is
-`"resume-download"` or `"blog-newsletter"`; `Newsletter Consent` is `true` /
-`false`. Every subscriber also gets a tag (`resume-request` or
-`blog-newsletter`) via the tags endpoint.
+`"resume-download"`, `"blog-newsletter"`, or `"lead-magnet:<asset>"`
+(`lead-magnet:go-live-checklist`, `lead-magnet:data-migration-checklist`,
+`lead-magnet:risk-register`); `Newsletter Consent` is `true` / `false`.
+Every subscriber also gets a tag (`resume-request`, `blog-newsletter`,
+`checklist-go-live`, `checklist-data-migration`, or `risk-register`) via the
+tags endpoint.
 
 Existing subscribers are looked up by email first; if found, their custom
 fields are updated via PUT (idempotent — no duplicates, no 422s).
@@ -58,9 +61,10 @@ fields are updated via PUT (idempotent — no duplicates, no 422s).
 Beehiiv's subscription API has no separate "leads" table — every record created
 is a publication subscriber. The separation is enforced as follows:
 
-- Resume requests are created with `send_welcome_email: false` and
-  `Newsletter Consent: false` (unless the visitor ticked the optional
-  newsletter checkbox, which is **unchecked by default**).
+- Resume requests and lead-magnet downloads are created with
+  `send_welcome_email: false` and `Newsletter Consent: false` (unless the
+  visitor ticked the optional newsletter checkbox, which is **unchecked by
+  default**).
 - **You must configure your newsletter automations/broadcasts to target only
   subscribers where `Newsletter Consent` is true** (Beehiiv → Automations →
   audience filter/segment). Without this filter, resume leads could receive
@@ -104,6 +108,11 @@ Notes and honest limitations:
 - The resume PDF was moved from `frontend/public/resume/` (public URL) to
   `private/resume/` and is served **only** by `/api/resume-download` after a
   valid single-use token check. The old `/resume/KC_PM_Resume.pdf` URL now 404s.
+- The three lead-magnet files live in `private/lead-magnets/` (bundled via
+  `vercel.json` `includeFiles`) and are served **only** by
+  `/api/asset-download` after a valid single-use token check. Tokens are
+  bound to the specific asset — a token issued for one lead magnet cannot
+  download another.
 - Download tokens: HMAC-SHA256, bound to the requester's email, 15-minute
   expiry, single-use (tracked in-memory per serverless instance — a token
   could theoretically be replayed against a *different* warm instance inside

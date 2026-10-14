@@ -7,6 +7,7 @@ import NotFound from './NotFound';
 import { Calendar, Clock, ArrowLeft, ExternalLink, Tag, Share2, Link2, Check, FileText } from 'lucide-react';
 import PayhipPromoBanner from '../components/PayhipPromoBanner';
 import NewsletterSignup from '../components/NewsletterSignup';
+import LeadMagnetDownload from '../components/LeadMagnetDownload';
 
 const SITE_URL = 'https://www.karimchaouki.com';
 
@@ -499,6 +500,9 @@ export default function BlogPost() {
               </div>
             </div>
           </section>
+
+          {/* Lead magnet download — only renders on articles with a gated asset */}
+          <LeadMagnetDownload slug={post.slug} />
 
           {/* Newsletter signup — end of every article */}
           <NewsletterSignup />
