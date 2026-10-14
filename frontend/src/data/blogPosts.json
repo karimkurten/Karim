@@ -1,5 +1,313 @@
 [
   {
+    "slug": "writing-uat-test-scripts",
+    "title": "Writing Effective UAT Test Scripts: A Practitioner's Guide",
+    "excerpt": "Write effective UAT test scripts for HCM implementations: script anatomy, atomic steps, traceability, negative cases, test data, review, and sign-off.",
+    "publishedAt": "2026-10-14",
+    "readingTime": "8 min read",
+    "cover": "/images/blog/writing-uat-test-scripts-cover.webp",
+    "tags": [
+      "HCM",
+      "Testing",
+      "UAT",
+      "Implementation"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "A test script is the difference between acceptance and accident. In an HCM implementation, acceptance testing is executed by business people — payroll analysts, HR partners, benefits administrators — who know the work cold but not the test method. Hand them a vague scenario and they test what is familiar, skip what is new, and sign off on a process they never truly exercised."
+      },
+      {
+        "type": "p",
+        "text": "In HCM, a payroll error is discovered by an employee, not a dashboard. This article is about writing scripts that hold up under that pressure — precise enough for consistent execution, traced to real requirements, and structured to produce sign-off evidence."
+      },
+      {
+        "type": "h2",
+        "text": "The script versus the scenario"
+      },
+      {
+        "type": "p",
+        "text": "A scenario is a business story: \"a new hire joins, enrolls in benefits, and is paid correctly in the first payroll cycle.\" A script is the executable version of that story: the preconditions before the first step, each action in order, the expected result after each action, the test data, and the pass/fail criterion. Confusing the two is the most common authoring failure — a document that says \"test the new-hire process\" is executed differently by every tester. Scripts make execution repeatable: same script, same data, same expected results, no matter who runs it."
+      },
+      {
+        "type": "h2",
+        "text": "Script anatomy: the six parts that make a script complete"
+      },
+      {
+        "type": "p",
+        "text": "A complete script has six parts, and any missing part pushes the work onto the tester at execution time: the traceability block (script ID, requirement reference, process area, author); the objective in one sentence; preconditions; the steps, each pairing one action with its expected result; the test data (specific records, values, dates); and the pass/fail criteria with sign-off."
+      },
+      {
+        "type": "p",
+        "text": "The expected result is where weak scripts die: it must be observable and specific. \"The employee appears on the payroll register with net pay of $1,842.60\" is verifiable; \"the employee is paid correctly\" is a judgment call that invites wishful thinking."
+      },
+      {
+        "type": "img",
+        "src": "/images/blog/writing-uat-test-scripts-1.svg",
+        "alt": "Anatomy of a UAT test script: identifier and traceability, objective, preconditions, steps with expected results, test data, and pass-fail criteria with sign-off — with the execution failure each part prevents.",
+        "caption": "Anatomy of a UAT test script: identifier and traceability block, objective, preconditions, steps with expected results, test data, and pass-fail criteria with sign-off."
+      },
+      {
+        "type": "h2",
+        "text": "Write for business testers, not for yourself"
+      },
+      {
+        "type": "p",
+        "text": "The executor did not write the script and has a day job. Write in plain process language: \"open the employee record and change the pay frequency to biweekly\" is readable; \"modify the frequency attribute on the assignment record\" is not — and the tester who cannot parse the step will guess or skip it."
+      },
+      {
+        "type": "p",
+        "text": "Keep steps atomic: one action per step, paired with its expected result. \"Create the hire, enroll in benefits, and assign the cost center, then verify all three\" is three steps pretending to be one — if step two fails, the tester cannot mark step one cleanly, and the defect record becomes a knot nobody can untie. Atomic steps make partial reruns possible: retest the failed step, not the entire script. Size scripts at fifteen to thirty minutes; a two-hour process is five or six chained scripts, each with its own pass/fail boundary."
+      },
+      {
+        "type": "steps",
+        "label": "The script-writing flow",
+        "intro": "Follow this sequence for every script. The order matters: traceability first, data before steps, review before execution.",
+        "items": [
+          {
+            "title": "Anchor to the requirement",
+            "text": "Start from one acceptance requirement or design decision and state the objective it proves. A script that traces to nothing is a guess; a requirement without a script is untested. Check the requirements and design documents for the exact acceptance criterion before writing a word."
+          },
+          {
+            "title": "Define the data and preconditions",
+            "text": "Decide which test records, values, and dates the script needs, and what must be true before step one. If the data does not exist yet, the script is blocked — flag it early rather than writing steps that assume data nobody built."
+          },
+          {
+            "title": "Write atomic steps with expected results",
+            "text": "One action per step, plain business language, each paired with an observable expected result. Specific screens, specific fields, specific values. If a result cannot be verified by looking at something, rewrite it until it can."
+          },
+          {
+            "title": "Add negative and edge cases",
+            "text": "For every happy path, add the scripts that prove the system refuses what it should refuse: invalid dates, duplicate records, approvals out of sequence, terminated employees in pay runs. Most production surprises arrive through paths nobody scripted."
+          },
+          {
+            "title": "Review and sign off before execution",
+            "text": "A peer reviews the script for clarity and coverage, and the business process owner approves it as a fair test of their work. Only reviewed and signed scripts enter the execution cycle — scripts written and executed without review are a quality blind spot."
+          }
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Traceability: every script hangs from a requirement"
+      },
+      {
+        "type": "p",
+        "text": "A test program proves something only if it can show what it proved, and scripts are the leaves of that evidence tree. Each script must point upward to the requirement it verifies, with the coverage matrix showing every requirement attached to at least one script. Traceability also keeps scope disguised as testing in change control: behavior nobody required does not get a script."
+      },
+      {
+        "type": "h2",
+        "text": "Negative and edge-case scripts: where the real defects hide"
+      },
+      {
+        "type": "p",
+        "text": "Happy-path scripts verify the system does what it should; negative scripts verify it refuses what it should not — the scripts teams skip first. Production defects rarely arrive through the standard hire and the standard pay run. They arrive through the mid-cycle start date, the off-cycle adjustment, the time-off request exceeding the available balance, the termination processed mid-cycle, the approval attempted without the right security role. Cross-border employers need these in both jurisdictions — a rule firing for one tax regime may be silent in the other. Give edge cases their own scripts — distinct data, distinct expected results, their own pass/fail judgment."
+      },
+      {
+        "type": "h2",
+        "text": "Test data setup: the script is only as good as its data"
+      },
+      {
+        "type": "p",
+        "text": "Data setup is part of authoring: name the records, values, and dates; confirm they exist before execution starts. Two rules. First, never let testers invent data at execution time — two testers with different salaries get different expected results. Second, keep test data de-identified: production identifiers, bank details, and compensation figures have no place in a test environment. Masked or synthetic datasets take planning — data setup belongs in authoring, not the week UAT starts."
+      },
+      {
+        "type": "h2",
+        "text": "Defect evidence: what a failed script must produce"
+      },
+      {
+        "type": "p",
+        "text": "A vague defect report sends the fix team on a hunt, and every hunt delays the cycle. Set the evidence standard before execution: every failed step is logged with the script ID and step number, actual versus expected result, the test data used, and a screenshot at the point of failure. Retesting needs the same data and steps, so both must be exact. This standard protects testers from pressure to soften results — with evidence on the record, \"it mostly worked\" is not a defect report anyone can file."
+      },
+      {
+        "type": "h2",
+        "text": "Script review and sign-off: the gate before execution"
+      },
+      {
+        "type": "p",
+        "text": "Scripts are written once and executed many times, making review the highest-leverage quality activity in UAT. Every script passes two reviews before execution: a peer review for clarity, atomic steps, observable results, complete data, and coverage; and a business review where the process owner confirms the script fairly tests their work — the business as it operates, not as the implementation team imagines it."
+      },
+      {
+        "type": "p",
+        "text": "The business review catches the subtle failure: scripts that test the system as built rather than the process as lived. When the script approves time off in one step but the real process needs a supervisor and then a department head, review is the moment to fix it — a rewrite during authoring, a crisis during execution. Record the approval: reviewer, date, decision."
+      },
+      {
+        "type": "h2",
+        "text": "Execution logistics"
+      },
+      {
+        "type": "p",
+        "text": "Assign scripts by process knowledge — the payroll analyst runs payroll scripts — and sequence them so data created by one script is available to the next. Track status per script: passed, failed with defect, blocked, deferred. Lock shared test data during cycles; keep blocked scripts visible — a script never executed is a requirement never verified."
+      },
+      {
+        "type": "img",
+        "src": "/images/blog/writing-uat-test-scripts-2.svg",
+        "alt": "UAT script review and approval flow: draft, peer review, business owner approval, and sign-off gates, with revise-and-resubmit loops between stages.",
+        "caption": "UAT script review and approval flow: draft, peer review, business owner approval, and sign-off gates with quality checks at each stage."
+      },
+      {
+        "type": "h2",
+        "text": "Two scripts, worked briefly"
+      },
+      {
+        "type": "p",
+        "text": "New-hire end-to-end payroll. Preconditions: test hire record with start date, salary, tax documentation; an open payroll calendar. Steps: create the hire record; enroll in benefits; assign the cost center; process the payroll preview. Expected: correct data, deductions, cost center; gross and net matching the expected calculation. Pass: all expected results match, net pay the hard gate."
+      },
+      {
+        "type": "p",
+        "text": "Time-off request and approval. Preconditions: known accrual balance, an assigned manager. Steps: the employee submits a request; the manager approves; payroll previews the affected cycle. Expected: pending, then approved with the balance reduced correctly, then the absence reflected correctly in pay. Negative companion: requesting more days than the balance holds — expected: the system rejects the request, balance unchanged."
+      },
+      {
+        "type": "h2",
+        "text": "Common mistakes"
+      },
+      {
+        "type": "p",
+        "text": "Most script failures are authoring failures — doomed before any tester touched them."
+      },
+      {
+        "type": "accordion",
+        "label": "Six script-writing mistakes to avoid",
+        "items": [
+          {
+            "q": "Writing steps for yourself instead of the tester",
+            "a": "Configuration jargon, assumed knowledge, and implied clicks. The executor did not build the system. If a competent business user cannot follow the script cold, it is not ready for execution — rewrite it in the language of the process."
+          },
+          {
+            "q": "Expected results that cannot be observed",
+            "a": "Results like processed correctly are judgments, not verifications. Every expected result must name something observable: a screen, a field value, a report line, a calculated figure. If the tester has to decide what correct means, the script failed at authoring time."
+          },
+          {
+            "q": "Burying multiple actions in one step",
+            "a": "Create, enroll, and assign in a single step means one failure poisons three verifications and makes retesting a reconstruction exercise. One action per step, one expected result per step — atomicity is what makes failed scripts diagnosable."
+          },
+          {
+            "q": "Leaving test data to the tester's imagination",
+            "a": "Use a test employee without naming one produces as many data variants as there are testers, and the expected results stop being expected. Name the records, values, and dates in the script, and confirm the data exists before execution starts."
+          },
+          {
+            "q": "Testing only the happy path",
+            "a": "The standard hire and the standard pay run are the paths the configuration team already validated. Production defects arrive through invalid dates, duplicate records, out-of-sequence approvals, and boundary conditions. A script set without negative cases is a rehearsal, not a test."
+          },
+          {
+            "q": "Skipping the business review",
+            "a": "Scripts reviewed only by the implementation team test the system as built, not the process as lived. The process owner must confirm each script is a fair test of their work — before execution, when the fix is a rewrite, not during execution, when it is a schedule crisis."
+          }
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Key Takeaways"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "A script makes the scenario executable and repeatable: preconditions, atomic steps, expected results, named data, pass/fail criteria.",
+          "Six parts: traceability block, objective, preconditions, steps with expected results, test data, sign-off.",
+          "Write for business testers: plain language, one action per step, observable results, fifteen to thirty minutes.",
+          "Every script traces to a requirement; traceability keeps scope in change control.",
+          "Negative and edge-case scripts are where production defects live.",
+          "Test data is an authoring job: named, de-identified, confirmed before execution.",
+          "Failed steps demand evidence: script ID, step, actual versus expected, exact data, a screenshot.",
+          "Two reviews before execution — peer for clarity, business for fidelity — approval recorded."
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Frequently Asked Questions"
+      },
+      {
+        "type": "p",
+        "text": "How detailed should UAT test steps be? Enough that a competent business user who did not write the script can execute it without guessing."
+      },
+      {
+        "type": "p",
+        "text": "Who should write UAT test scripts — the implementation team or the business? The implementation team drafts them; the business reviews and approves each as a fair test of their real work."
+      },
+      {
+        "type": "p",
+        "text": "How many scripts does a typical HCM UAT need? No fixed number — it follows from the coverage model: at least one script per requirement, with happy-path, negative, and edge-case variants for complex processes."
+      },
+      {
+        "type": "p",
+        "text": "What do we do with a script that keeps failing for data reasons? Fix the data, not the script — unless the script named data that cannot exist. Keep it blocked, not skipped, until the gap is resolved."
+      },
+      {
+        "type": "h2",
+        "text": "Next Steps"
+      },
+      {
+        "type": "p",
+        "text": "Start with the requirements, not the scripts. Confirm the acceptance criteria are written and traced, then draft each script through the five-step flow — anchor, data, atomic steps, negative cases, review — with peer and business approval before execution. Define the defect-evidence standard and the test-data rules now, while they are cheap decisions, not mid-cycle emergencies. For the surrounding program: what UAT is, the HCM system testing strategy, and the HCM go-live checklist."
+      },
+      {
+        "type": "quiz",
+        "label": "Check your understanding",
+        "questions": [
+          {
+            "q": "A script step reads: Create the hire, enroll in benefits, and assign the cost center, then verify all three. What is wrong with it?",
+            "options": [
+              {
+                "text": "Nothing — it keeps the script compact and efficient",
+                "correct": false,
+                "why": "Compact is not the goal; diagnosable is. One failure in a bundled step poisons three verifications and makes retesting a reconstruction exercise."
+              },
+              {
+                "text": "It combines three actions in one step, violating atomicity",
+                "correct": true,
+                "why": "One action per step, one expected result per step. Atomic steps are what make a failed script diagnosable and a fixed defect retestable in isolation."
+              },
+              {
+                "text": "It should use configuration terminology instead of business language",
+                "correct": false,
+                "why": "The opposite: scripts are written for business testers, so plain process language is the standard. Jargon is one of the six mistakes."
+              }
+            ]
+          },
+          {
+            "q": "A tester executes a script with test data they made up on the spot and all steps pass. Is the script verified?",
+            "options": [
+              {
+                "text": "Yes — the steps passed, so the process works",
+                "correct": false,
+                "why": "Invented data means the expected results were never really expected. Two testers with different data get different results, and the pass proves nothing reproducible."
+              },
+              {
+                "text": "Only if the data was de-identified",
+                "correct": false,
+                "why": "De-identification is a privacy requirement, not a data-discipline requirement. The problem here is that the data was not the named, expected data the script should have specified."
+              },
+              {
+                "text": "No — the script should have named its data, and the pass must be re-executed with the specified records",
+                "correct": true,
+                "why": "Test data is an authoring responsibility. A pass against invented data is not evidence; rerun with the script's named data to produce a result that counts."
+              }
+            ]
+          },
+          {
+            "q": "The business process owner has not reviewed the scripts, but the UAT calendar is tight. What is the risk of skipping the business review?",
+            "options": [
+              {
+                "text": "Scripts may test the system as built rather than the process as lived, missing real-world gaps",
+                "correct": true,
+                "why": "The implementation team writes from the configuration; the owner reads from reality. That review is what catches scripts that verify the wrong workflow."
+              },
+              {
+                "text": "Peer review already covers everything the business review would catch",
+                "correct": false,
+                "why": "Peer review checks clarity, coverage, and traceability. Only the process owner can confirm a script is a fair test of how the business actually works."
+              },
+              {
+                "text": "Execution will take longer because testers are slower without it",
+                "correct": false,
+                "why": "The cost is not speed — it is validity. Skipping the review risks passing UAT on scripts that never tested the real process."
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
     "slug": "hcm-system-testing-strategy",
     "title": "HCM System Testing Strategy: Unit to Go-Live Guide",
     "excerpt": "Build a system testing strategy for HCM implementations: test phases, entry and exit criteria, defect triage, coverage matrix, and parallel payroll testing.",
