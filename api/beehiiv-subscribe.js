@@ -2,29 +2,34 @@
  * POST /api/beehiiv-subscribe
  *
  * Centralized Beehiiv integration for the site (Vercel serverless, Node runtime).
- * Used by the resume lead-capture form (source: "resume") and the blog
- * newsletter signup (source: "newsletter").
+ * Used by the resume lead-capture form (source: "resume"), the blog
+ * newsletter signup (source: "newsletter"), and the article lead-magnet
+ * downloads (source: "lead-magnet" + asset id).
  *
  * Request body:
- *   { name, email, newsletterConsent, source: "resume" | "newsletter",
+ *   { name, email, newsletterConsent, source: "resume" | "newsletter" | "lead-magnet",
+ *     asset?: "go-live-checklist" | "data-migration-checklist" | "risk-register",
  *     idempotencyKey? }
  *
  * Behavior:
  * - Validates input server-side (never trusts the client).
  * - Rate-limits: 10 requests/minute per IP (in-memory; per serverless instance).
  * - Creates or updates the Beehiiv subscriber with custom fields:
- *     lead_source ("resume-download" | "blog-newsletter"),
+ *     lead_source ("resume-download" | "blog-newsletter" | "lead-magnet:<asset>"),
  *     newsletter_consent (boolean).
- *   Newsletter consent is NEVER implied: a resume request without the checkbox
+ *   Newsletter consent is NEVER implied: a request without the checkbox
  *   is stored with newsletter_consent=false and send_welcome_email=false, and
  *   marketing automations must segment on newsletter_consent=true (see
  *   BEEHIIV_SETUP.md).
+ * - Lead-magnet requests are tagged per asset (checklist-go-live,
+ *   checklist-data-migration, risk-register) so downloads can be segmented.
  * - If Beehiiv is not configured (missing env vars):
- *     source=resume     -> still returns a download token (lead capture must
- *                          never block the resume CTA); Beehiiv is skipped.
+ *     source=resume / lead-magnet -> still returns a download token (lead
+ *                          capture must never block the download CTA); Beehiiv is skipped.
  *     source=newsletter -> 503 { error: "newsletter_unavailable" }.
- * - source=resume returns { ok: true, downloadToken } on success; the client
- *   then calls /api/resume-download?token=... (single-use, 15-minute expiry).
+ * - source=resume / lead-magnet returns { ok: true, downloadToken } on
+ *   success; the client then calls /api/resume-download?token=... or
+ *   /api/asset-download?token=... (single-use, 15-minute expiry).
  *
  * Env vars (server-side only, never exposed to the browser):
  *   BEEHIIV_API_KEY (required) — set by Karim in the Vercel dashboard.
@@ -44,6 +49,23 @@ const BEEHIIV_API_BASE = "https://api.beehiiv.com/v2";
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
 const MAX_NAME = 120;
 const TOKEN_TTL_MS = 15 * 60 * 1000;
+
+// Lead-magnet assets gated behind email capture. Keys are the `asset` values
+// accepted from the client; tags are applied to the Beehiiv subscriber.
+const LEAD_MAGNET_ASSETS = {
+  "go-live-checklist": {
+    tag: "checklist-go-live",
+    leadSource: "lead-magnet:go-live-checklist",
+  },
+  "data-migration-checklist": {
+    tag: "checklist-data-migration",
+    leadSource: "lead-magnet:data-migration-checklist",
+  },
+  "risk-register": {
+    tag: "risk-register",
+    leadSource: "lead-magnet:risk-register",
+  },
+};
 
 // --- in-memory guards (per serverless instance) ------------------------------
 const rateHits = new Map(); // ip -> [timestamps]
@@ -82,12 +104,23 @@ function validate(body) {
   else if (name.length > MAX_NAME) errors.name = "Name is too long.";
   if (!email) errors.email = "Email address is required.";
   else if (email.length > 254 || !EMAIL_RE.test(email)) errors.email = "Enter a valid email address.";
-  if (source !== "resume" && source !== "newsletter") errors.source = "Invalid request source.";
+  if (source !== "resume" && source !== "newsletter" && source !== "lead-magnet") {
+    errors.source = "Invalid request source.";
+  }
 
-  return { errors, clean: { name, email, consent, source } };
+  let asset = null;
+  if (source === "lead-magnet") {
+    asset = typeof body.asset === "string" ? body.asset.trim() : "";
+    if (!LEAD_MAGNET_ASSETS[asset]) errors.asset = "Invalid download asset.";
+  }
+
+  return { errors, clean: { name, email, consent, source, asset } };
 }
 
 // --- download token (HMAC-SHA256, single-use, 15-minute expiry) -----------------
+// Resume tokens are base64url(`${email}|${expiry}|${sig}`).
+// Lead-magnet tokens bind the asset: base64url(`${email}|${expiry}|${asset}|${sig}`).
+// /api/resume-download verifies the 3-part form; /api/asset-download the 4-part form.
 function tokenSecret() {
   if (process.env.RESUME_TOKEN_SECRET) return process.env.RESUME_TOKEN_SECRET;
   if (!tokenSecret.warned) {
@@ -98,9 +131,9 @@ function tokenSecret() {
   return tokenSecret.ephemeral;
 }
 
-function issueDownloadToken(email) {
+function issueDownloadToken(email, asset) {
   const expiry = Date.now() + TOKEN_TTL_MS;
-  const payload = `${email}|${expiry}`;
+  const payload = asset ? `${email}|${expiry}|${asset}` : `${email}|${expiry}`;
   const sig = crypto.createHmac("sha256", tokenSecret()).update(payload).digest("hex");
   return Buffer.from(`${payload}|${sig}`).toString("base64url");
 }
@@ -141,11 +174,23 @@ function splitName(fullName) {
   return { first, last: parts.join(" ") };
 }
 
-function customFieldPayload(source, consent, fullName) {
+function leadSourceValue(source, asset) {
+  if (source === "resume") return "resume-download";
+  if (source === "newsletter") return "blog-newsletter";
+  return LEAD_MAGNET_ASSETS[asset].leadSource;
+}
+
+function tagFor(source, asset) {
+  if (source === "resume") return "resume-request";
+  if (source === "newsletter") return "blog-newsletter";
+  return LEAD_MAGNET_ASSETS[asset].tag;
+}
+
+function customFieldPayload(source, consent, fullName, asset) {
   const { first, last } = splitName(fullName);
   const fields = [
     { name: "First Name", value: first },
-    { name: "Lead Source", value: source === "resume" ? "resume-download" : "blog-newsletter" },
+    { name: "Lead Source", value: leadSourceValue(source, asset) },
     { name: "Newsletter Consent", value: consent },
   ];
   if (last) fields.push({ name: "Last Name", value: last });
@@ -156,8 +201,8 @@ function customFieldPayload(source, consent, fullName) {
  * Check-then-create/update: the docs are ambiguous about duplicate creates
  * (possible 422), so look the subscriber up by email first.
  */
-async function upsertSubscriber(apiKey, publicationId, { email, consent, source, fullName }) {
-  const fields = customFieldPayload(source, consent, fullName);
+async function upsertSubscriber(apiKey, publicationId, { email, consent, source, asset, fullName }) {
+  const fields = customFieldPayload(source, consent, fullName, asset);
   const lookup = await beehiiv(apiKey, `/publications/${publicationId}/subscriptions/by_email/${encodeURIComponent(email)}`);
 
   if (lookup.status === 200 && lookup.data && lookup.data.data && lookup.data.data.id) {
@@ -237,6 +282,10 @@ module.exports = async function handler(req, res) {
   const publicationId = process.env.BEEHIIV_PUBLICATION_ID || DEFAULT_PUBLICATION_ID;
   const beehiivConfigured = Boolean(apiKey); // key is never hardcoded; Karim sets it in Vercel
 
+  // Sources that end in a file download (token-gated).
+  const wantsDownload = clean.source === "resume" || clean.source === "lead-magnet";
+  const tokenAsset = clean.source === "lead-magnet" ? clean.asset : null;
+
   const respond = (status, payload) => {
     if (typeof body.idempotencyKey === "string" && body.idempotencyKey.length >= 8 && status < 500) {
       idempotencyCache.set(body.idempotencyKey, { status, body: payload });
@@ -245,11 +294,11 @@ module.exports = async function handler(req, res) {
     return res.status(status).json(payload);
   };
 
-  // Resume flow must never be blocked by a missing/unreachable Beehiiv config.
+  // Download flows must never be blocked by a missing/unreachable Beehiiv config.
   if (!beehiivConfigured) {
     console.warn(`[beehiiv-subscribe] Beehiiv not configured; source=${clean.source}`);
-    if (clean.source === "resume") {
-      const downloadToken = issueDownloadToken(clean.email);
+    if (wantsDownload) {
+      const downloadToken = issueDownloadToken(clean.email, tokenAsset);
       return respond(200, { ok: true, downloadToken, beehiiv: "not_configured" });
     }
     return respond(503, { error: "newsletter_unavailable", message: "Newsletter signup is temporarily unavailable. Please try again later." });
@@ -260,30 +309,31 @@ module.exports = async function handler(req, res) {
       email: clean.email,
       consent: clean.consent,
       source: clean.source,
+      asset: clean.asset,
       fullName: clean.name,
     });
 
     if (!result.ok) {
       console.error("[beehiiv-subscribe] Beehiiv upsert failed:", result.status);
-      if (clean.source === "resume") {
-        // Degrade gracefully: the resume CTA still works.
-        const downloadToken = issueDownloadToken(clean.email);
+      if (wantsDownload) {
+        // Degrade gracefully: the download CTA still works.
+        const downloadToken = issueDownloadToken(clean.email, tokenAsset);
         return respond(200, { ok: true, downloadToken, beehiiv: "degraded" });
       }
       return respond(502, { error: "subscription_failed", message: "Could not complete the subscription. Please try again." });
     }
 
-    await addTag(apiKey, publicationId, result.subscriptionId, clean.source === "resume" ? "resume-request" : "blog-newsletter");
+    await addTag(apiKey, publicationId, result.subscriptionId, tagFor(clean.source, clean.asset));
 
-    if (clean.source === "resume") {
-      const downloadToken = issueDownloadToken(clean.email);
+    if (wantsDownload) {
+      const downloadToken = issueDownloadToken(clean.email, tokenAsset);
       return respond(200, { ok: true, downloadToken });
     }
     return respond(200, { ok: true, created: result.created });
   } catch (e) {
     console.error("[beehiiv-subscribe] unexpected error:", e.message);
-    if (clean.source === "resume") {
-      const downloadToken = issueDownloadToken(clean.email);
+    if (wantsDownload) {
+      const downloadToken = issueDownloadToken(clean.email, tokenAsset);
       return respond(200, { ok: true, downloadToken, beehiiv: "degraded" });
     }
     return respond(502, { error: "subscription_failed", message: "Could not complete the subscription. Please try again." });
