@@ -1,5 +1,316 @@
 [
   {
+    "slug": "uat-defect-triage",
+    "title": "UAT Defect Triage and Severity Levels: A Practitioner's Guide",
+    "excerpt": "Run UAT defect triage for HCM implementations: severity vs priority, a four-level severity model, triage cadence, deferral rules, and go-live gates.",
+    "publishedAt": "2026-10-15",
+    "readingTime": "8 min read",
+    "cover": "/images/blog/uat-defect-triage-cover.webp",
+    "tags": [
+      "HCM",
+      "Testing",
+      "UAT",
+      "Implementation"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "User acceptance testing does not stall because defects exist. It stalls because nobody agrees on what a defect means, how serious it is, or what happens next. One tester calls a payroll calculation error an inconvenience. Another calls a misaligned label a showstopper. Without triage, the loudest voice sets the fix order, the fix team chases noise, and the go-live decision rests on opinion instead of evidence."
+      },
+      {
+        "type": "p",
+        "text": "Triage is the discipline that prevents that drift: a short, structured review that confirms each defect is real, assigns severity from business impact, sets priority from urgency and timing, and records a decision — fix now, defer with a workaround, or reject with reasons. Done poorly, triage becomes a negotiation where every defect is critical until nothing is."
+      },
+      {
+        "type": "h2",
+        "text": "Why triage exists"
+      },
+      {
+        "type": "p",
+        "text": "A defect list is not a work plan. Raw reports arrive uneven: some are genuine configuration errors, some are test-data problems, some are misunderstandings of an approved design, and some describe behaviour never in scope. Triage separates those categories before scarce fix effort is spent, and creates a visible record of what was decided and why — so a deferred defect cannot quietly become a forgotten one."
+      },
+      {
+        "type": "p",
+        "text": "Triage also protects testers. When severity is assigned against agreed definitions, a tester does not have to defend a finding alone against schedule pressure. The definition decides, not seniority. That matters in HCM work, where the reporter is often the payroll or HR specialist who will live with the workaround after go-live."
+      },
+      {
+        "type": "h2",
+        "text": "Severity is not priority"
+      },
+      {
+        "type": "p",
+        "text": "The most important distinction in triage is also the one most often blurred. Severity describes business impact if the defect reaches production: what breaks, who is affected, and whether a workable alternative exists. It is a property of the defect and changes only when new facts about impact emerge. Priority describes when the defect should be fixed, given severity, timing, dependencies, and the remaining calendar. Priority can change as go-live approaches even when severity does not."
+      },
+      {
+        "type": "p",
+        "text": "Keeping the two separate prevents two distortions. A low-severity defect on a heavily used self-service screen may earn high priority because it affects confidence on day one. A high-severity defect in a rare year-end process may be scheduled deliberately, with a documented manual procedure, because its next live use is months away. Neither is a contradiction once the two judgments are recorded separately."
+      },
+      {
+        "type": "h2",
+        "text": "A severity model defined by business impact"
+      },
+      {
+        "type": "p",
+        "text": "Use four levels, defined by impact and workaround — never by who reported the defect or how it feels in the room."
+      },
+      {
+        "type": "p",
+        "text": "Critical. A core business process cannot be completed, or pay, benefits, or statutory output would be materially wrong, with no workable workaround. Examples include a payroll that cannot be calculated for a population, or an approval flow that blocks all hiring. Critical defects stop the affected process, not necessarily the whole test cycle."
+      },
+      {
+        "type": "p",
+        "text": "Major. A process completes but produces a wrong result, requires a cumbersome workaround, or fails for a significant group of employees. Other areas can continue testing, but the affected process cannot be signed off as it stands."
+      },
+      {
+        "type": "p",
+        "text": "Minor. A process completes correctly with a small workaround, an extra manual step, or a limited inconvenience affecting few users. The result is right; the path is imperfect."
+      },
+      {
+        "type": "p",
+        "text": "Cosmetic. Presentation only: alignment, wording, or formatting that does not change meaning, calculation, or usability materially. Cosmetic defects are recorded and batched, not debated at length."
+      },
+      {
+        "type": "img",
+        "src": "/images/blog/uat-defect-triage-1.svg",
+        "alt": "Four-level UAT defect severity model: critical, major, minor, and cosmetic, each defined by business impact and the workaround test, with a typical HCM example for each level.",
+        "caption": "Four severity levels defined by business impact: critical, major, minor, and cosmetic, each with the workaround test and a typical example."
+      },
+      {
+        "type": "h2",
+        "text": "The triage meeting: who attends and how often"
+      },
+      {
+        "type": "p",
+        "text": "Triage needs the people who can judge impact, explain cause, and commit a fix. The core group is small: the test lead chairs, the business process owner judges impact, the implementation consultant explains root cause and fix effort, and the project manager records decisions and schedule consequences. Payroll or HR specialists attend for their areas. A large audience turns decisions into presentations, so observers receive the log instead of a seat."
+      },
+      {
+        "type": "p",
+        "text": "During active cycles, meet daily for a short session; in slower periods, two or three times a week is enough if new defects are reviewed promptly. Review new defects first, then aged open defects, then defects awaiting retest. End every session with the log updated — severity, priority, owner, decision, and next date — so the meeting produces a record, not just a conversation."
+      },
+      {
+        "type": "h2",
+        "text": "The decision flow"
+      },
+      {
+        "type": "p",
+        "text": "Every defect follows the same path, in the same order. Skipping steps is how duplicates and phantom defects take over the cycle."
+      },
+      {
+        "type": "steps",
+        "label": "The triage decision flow",
+        "intro": "Work each defect through these five steps in order. A defect that cannot pass a step does not advance until that step is resolved.",
+        "items": [
+          {
+            "title": "Reproduce the defect",
+            "text": "Repeat the failed steps with the same test data and confirm the result occurs consistently. A defect that cannot be reproduced is returned for more evidence — script, step, data, and screenshot — not debated on description alone."
+          },
+          {
+            "title": "Confirm it is a defect",
+            "text": "Check the behaviour against the approved requirement and design. If the system matches the design, the item is a design question or change request, not a defect. If the data caused the failure, fix the data and retest."
+          },
+          {
+            "title": "Assign severity from impact",
+            "text": "Apply the four-level model: what breaks in production, who is affected, and whether a workable workaround exists. Record the reasoning in one sentence so later reviewers can see why the level was chosen."
+          },
+          {
+            "title": "Assign priority from timing",
+            "text": "Decide when the fix is needed given severity, dependencies, retest time, and the remaining calendar. Priority can differ from severity, and the reason for any difference is recorded."
+          },
+          {
+            "title": "Decide: fix, defer, or reject",
+            "text": "Fix now with a named owner and date, defer with a workaround and a risk entry, or reject with reasons when the item is not a defect. Every defect leaves triage with a decision, an owner, and a next step."
+          }
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Deferral rules and go-live gates"
+      },
+      {
+        "type": "p",
+        "text": "Deferral is a legitimate decision; silent deferral is not. A defect may be deferred only when its severity and workaround are understood, the business owner accepts the residual risk in writing, and the item enters the risk register with a fix plan and date. Deferred critical defects should not exist at go-live: by definition they block a core process or corrupt pay, so deferring one means moving go-live, narrowing scope, or accepting an explicitly approved temporary manual process."
+      },
+      {
+        "type": "p",
+        "text": "Set the gates before UAT starts, not when pressure peaks: no critical defects open at sign-off, major defects fixed or carrying an approved workaround and owner, minor and cosmetic defects logged with a post-go-live plan. An early gate turns sign-off into a check against a standard, not a fresh negotiation in the shadow of a deadline."
+      },
+      {
+        "type": "img",
+        "src": "/images/blog/uat-defect-triage-2.svg",
+        "alt": "UAT defect triage decision flow: reproduce, confirm, assign severity, assign priority, then fix now, defer with a workaround, or reject with reasons, with a return loop for more evidence.",
+        "caption": "Triage decision flow: reproduce, confirm, assign severity, assign priority, then fix now, defer with a workaround, or reject with reasons."
+      },
+      {
+        "type": "h2",
+        "text": "Defect aging and retest discipline"
+      },
+      {
+        "type": "p",
+        "text": "A fixed defect is not a closed defect. It closes only after the original tester — or a peer using the same script and data — retests the failed step, confirms the expected result, and checks that nearby behaviour did not break. Retest promptly: a fix waiting days for retest consumes the calendar as surely as a fix never made, and a backlog of unverified fixes is a hidden second test cycle."
+      },
+      {
+        "type": "p",
+        "text": "Watch aging openly. Review open defects by age and severity, escalate any that miss their fix date, and treat rising average age as a warning that fix capacity, not tester effort, is the bottleneck. Reopened defects deserve attention, not blame: a reopen usually means the root cause ran deeper than the first fix — exactly the information triage exists to surface."
+      },
+      {
+        "type": "h2",
+        "text": "Cross-border payroll examples"
+      },
+      {
+        "type": "p",
+        "text": "Typical examples show how the model holds under pressure. A tax calculation correct for one jurisdiction and wrong for employees working across a border is major or critical depending on whether a manual correction can produce correct pay before the deadline — the workaround test, not the error size, decides. A statutory report rejected because a required field is empty for a small group is major: pay can run, but filing cannot wait indefinitely. A deduction shown in an unexpected order on the pay statement, with correct amounts, is cosmetic. Testing examples against the definitions keeps severity a judgment about impact, not embarrassment."
+      },
+      {
+        "type": "h2",
+        "text": "Common mistakes"
+      },
+      {
+        "type": "p",
+        "text": "Most triage failures are habit failures — patterns a disciplined chair can correct in the first week."
+      },
+      {
+        "type": "accordion",
+        "label": "Six triage mistakes to avoid",
+        "items": [
+          {
+            "q": "Letting severity be set by whoever speaks loudest",
+            "a": "Severity comes from the impact definition, not from seniority, frustration, or deadline pressure. When a level is challenged, walk the definition: what breaks, who is affected, and does a workaround exist. The answers set the level."
+          },
+          {
+            "q": "Merging severity and priority into one label",
+            "a": "One label forces bad trade-offs: teams either inflate severity to get a fix scheduled or understate impact to protect the date. Record severity and priority separately so both judgments stay honest and visible."
+          },
+          {
+            "q": "Triaging from the defect title alone",
+            "a": "Titles are summaries, not evidence. A defect without reproduction steps, data, and expected versus actual results cannot be judged fairly. Return it for evidence instead of guessing in the meeting."
+          },
+          {
+            "q": "Deferring defects without a workaround or owner",
+            "a": "A deferred defect with no tested workaround, no named owner, and no fix date is not deferred — it is abandoned. Every deferral needs all three, plus written business acceptance of the risk."
+          },
+          {
+            "q": "Closing defects when the fix is deployed",
+            "a": "Deployment is not verification. A defect closes only after retest with the original script and data confirms the expected result. Skipping retest trades a short meeting saving for a production surprise."
+          },
+          {
+            "q": "Holding triage only when the list gets long",
+            "a": "Irregular triage lets small defects age into schedule risks and leaves testers unsure whether reporting is worthwhile. A short, regular cadence keeps the list current and the decisions trusted."
+          }
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Key Takeaways"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "Triage turns a raw defect list into decisions: reproduce, confirm, severity, priority, then fix, defer, or reject.",
+          "Severity is business impact; priority is timing. Record them separately.",
+          "Four levels — critical, major, minor, cosmetic — defined by impact and whether a workable workaround exists.",
+          "Keep triage small, regular, and chaired by the test lead, with the business owner judging impact.",
+          "Deferral requires a tested workaround, a named owner, a fix date, and written risk acceptance.",
+          "Go-live gates are agreed before UAT starts: no open critical defects at sign-off.",
+          "A defect closes only after retest with the original script and data — deployment alone is not closure."
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Frequently Asked Questions"
+      },
+      {
+        "type": "p",
+        "text": "Who should chair defect triage? The test lead. They own the defect log, know the scripts and evidence behind each item, and can keep the meeting focused on decisions rather than status reporting."
+      },
+      {
+        "type": "p",
+        "text": "Can a defect be high priority but low severity? Yes. A minor defect on a heavily used self-service screen may be fixed urgently because it affects employee confidence at launch, while its business impact stays minor."
+      },
+      {
+        "type": "p",
+        "text": "What happens to defects still open at go-live? Only defects the gate allows: major defects with an approved workaround and owner, and minor or cosmetic defects with a post-go-live fix plan. Critical defects block sign-off."
+      },
+      {
+        "type": "p",
+        "text": "How do we handle a defect the business and implementation team judge differently? Return to the definitions. Test the claimed impact, check for a real workaround, and record the reasoning. If the disagreement is about the design itself, route it as a change, not a defect."
+      },
+      {
+        "type": "h2",
+        "text": "Next Steps"
+      },
+      {
+        "type": "p",
+        "text": "Agree the severity definitions and go-live gates before the first cycle, publish the triage cadence, and brief testers on the evidence a defect report must carry. Start from solid scripts — see writing UAT test scripts — and place triage inside the wider HCM system testing strategy. Log deferred items against the implementation risk register template and carry final counts into the HCM go-live checklist."
+      },
+      {
+        "type": "quiz",
+        "label": "Check your understanding",
+        "questions": [
+          {
+            "q": "A payroll calculation is wrong for one employee group, but a manual correction produces correct pay before the deadline. How should triage treat it?",
+            "options": [
+              {
+                "text": "Cosmetic, because pay ends up correct",
+                "correct": false,
+                "why": "Correct pay achieved through extra manual work is a workaround, not an absence of impact. The result was wrong without intervention, which is more than cosmetic."
+              },
+              {
+                "text": "Major, because the process produces a wrong result and needs a workaround to complete correctly",
+                "correct": true,
+                "why": "The severity model turns on impact and workaround. A wrong result corrected by a cumbersome manual step fits the major definition; the workaround keeps it below critical."
+              },
+              {
+                "text": "It cannot be assigned severity until go-live is near",
+                "correct": false,
+                "why": "Severity is a property of the defect and is assigned at triage from impact. Timing affects priority, not whether severity can be judged."
+              }
+            ]
+          },
+          {
+            "q": "A fix has been deployed to the test environment. When does the defect close?",
+            "options": [
+              {
+                "text": "Immediately — deployment means the defect is resolved",
+                "correct": false,
+                "why": "Deployment is not verification. Untested fixes can fail or break nearby behaviour, and closing early hides that risk inside a clean-looking log."
+              },
+              {
+                "text": "After retest using the original script and data confirms the expected result",
+                "correct": true,
+                "why": "Retest with the same steps and data proves the fix addresses the reported failure, and a quick check of nearby behaviour guards against regressions."
+              },
+              {
+                "text": "At the end of UAT, when all fixes are reviewed together",
+                "correct": false,
+                "why": "Batching retest to the end creates a hidden second test cycle. Prompt retest keeps the defect list honest throughout the cycle."
+              }
+            ]
+          },
+          {
+            "q": "The business wants to defer a defect to after go-live. What must triage require?",
+            "options": [
+              {
+                "text": "Nothing beyond agreement in the meeting",
+                "correct": false,
+                "why": "A verbal agreement leaves no record when the workaround fails in production. Deferral is a risk decision and needs documented acceptance."
+              },
+              {
+                "text": "A tested workaround, a named owner, a fix date, and written acceptance of the residual risk",
+                "correct": true,
+                "why": "Those four elements turn deferral into a managed decision: the business can operate, someone owns the fix, and the risk is visible on the register."
+              },
+              {
+                "text": "A higher severity rating, to make sure it is remembered",
+                "correct": false,
+                "why": "Inflating severity corrupts the model. Memory comes from the log, the owner, and the fix date — not from mislabelling impact."
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
     "slug": "writing-uat-test-scripts",
     "title": "Writing Effective UAT Test Scripts: A Practitioner's Guide",
     "excerpt": "Write effective UAT test scripts for HCM implementations: script anatomy, atomic steps, traceability, negative cases, test data, review, and sign-off.",
