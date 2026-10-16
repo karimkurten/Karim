@@ -1,5 +1,316 @@
 [
   {
+    "slug": "uat-sign-off-criteria",
+    "title": "UAT Sign-Off: Defining \"Done\" in an HCM Implementation",
+    "excerpt": "Define UAT sign-off criteria for HCM implementations: coverage, defect gates, evidence, conditional sign-off, and who signs what — before testing ends.",
+    "publishedAt": "2026-10-16",
+    "readingTime": "8 min read",
+    "cover": "/images/blog/uat-sign-off-criteria-cover.webp",
+    "tags": [
+      "HCM",
+      "Testing",
+      "UAT",
+      "Implementation"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "Every UAT cycle eventually reaches the same meeting. The calendar says testing ends this week, the go-live date is fixed, and someone asks the question the whole phase has been building toward: are we done? If \"done\" was never defined, that meeting becomes a negotiation — and sign-off becomes a feeling, granted because time ran out, not because the system earned it."
+      },
+      {
+        "type": "p",
+        "text": "Sign-off is not a ceremony at the end of testing. It is a decision against criteria agreed before testing began: which scripts must have run, what defect position is acceptable, and who is authorised to accept what remains. Define those criteria early and the final meeting is short, because it only checks the record."
+      },
+      {
+        "type": "h2",
+        "text": "Why \"done\" has to be defined before testing ends"
+      },
+      {
+        "type": "p",
+        "text": "Criteria written at the start of UAT have a neutrality that criteria written at the end can never have. Early on, nobody knows which scripts will fail or which defects will linger, so the standard is set against the risk, not against a result someone now needs to defend. A threshold agreed in week one is a planning tool; the same threshold proposed in the final week is a concession — and everyone can tell the difference."
+      },
+      {
+        "type": "p",
+        "text": "Early definition also shapes behaviour during the cycle. Testers who know sign-off requires recorded results record as they go, instead of reconstructing evidence at the end. Process owners who know defects will be judged against triage gates engage with deferral decisions while options still exist."
+      },
+      {
+        "type": "h2",
+        "text": "What sign-off actually certifies"
+      },
+      {
+        "type": "p",
+        "text": "A signature on a UAT sign-off form certifies something specific: the business has tested the system against its agreed requirements and accepts the result — including any documented exceptions — as fit to proceed toward go-live. It does not certify that the system is perfect, that every possible case was tried, or that no defect will ever appear in production."
+      },
+      {
+        "type": "p",
+        "text": "That distinction protects everyone. The business is not signing away its right to raise genuine production issues later; hypercare exists because real use surfaces what testing could not. The implementation team is not claiming flawlessness; it is confirming that what was tested passed, what failed was fixed or formally deferred, and what remains open is visible."
+      },
+      {
+        "type": "h2",
+        "text": "The sign-off criteria"
+      },
+      {
+        "type": "p",
+        "text": "Five criteria cover most HCM implementations. Write each into the test plan before the first cycle opens, with its threshold stated in advance."
+      },
+      {
+        "type": "p",
+        "text": "Coverage. The planned scripts for in-scope processes have been executed, and the record shows pass, fail, or a documented reason a script could not run. Blocked scripts are not silently dropped: each carries a cause, an owner, and either a retest date or a recorded decision that the scenario will be validated another way."
+      },
+      {
+        "type": "p",
+        "text": "Defect position. The open defect list meets the gates agreed with triage: no critical defects open, major defects fixed or carrying a tested workaround, a named owner, and written risk acceptance, and minor and cosmetic defects logged with a post-go-live plan. The count matters less than the position — one unowned major defect weakens a sign-off more than a longer list where every item is understood."
+      },
+      {
+        "type": "p",
+        "text": "Evidence. Results are recorded in the test tool or log, not held in memory. Every executed script shows who ran it, with what data, and what happened; every failed script traces to a defect; every defect traces to a fix, a deferral, or a rejection with reasons."
+      },
+      {
+        "type": "p",
+        "text": "Scenario completeness. Beyond individual scripts, the end-to-end scenarios that cross modules and systems — hire to pay, time capture to payroll, benefits enrolment to deduction — have run as connected journeys. Script-level passes can hide a broken handoff, so name the critical journeys and confirm each completed with reconciled results."
+      },
+      {
+        "type": "p",
+        "text": "Readiness of what surrounds the system. Testing proves the system; sign-off should also confirm the business can operate it. Training is delivered or scheduled with dates, support routes for the first live cycles are named, and workarounds for deferred defects have been shown to the people who will use them. A workaround nobody has practised is a hope, not a control."
+      },
+      {
+        "type": "img",
+        "src": "/images/blog/uat-sign-off-criteria-1.svg",
+        "alt": "Five UAT sign-off criteria: coverage, defect position, evidence, scenario completeness, and operational readiness, each with the pass test it must meet before sign-off.",
+        "caption": "Five sign-off criteria: coverage, defect position, evidence, scenario completeness, and operational readiness, each with its pass test."
+      },
+      {
+        "type": "h2",
+        "text": "The readiness sequence"
+      },
+      {
+        "type": "p",
+        "text": "Sign-off should follow the same order every time, so nothing is certified before its inputs exist. Treat a failed step as a pause."
+      },
+      {
+        "type": "steps",
+        "label": "The sign-off readiness sequence",
+        "intro": "Work these five steps in order in the final days of the cycle. A step that fails pauses the sequence until it is resolved or formally excepted.",
+        "items": [
+          {
+            "title": "Freeze and reconcile the execution record",
+            "text": "Close script execution for the cycle, reconcile the log against the plan, and account for every script: passed, failed, blocked with a reason, or formally removed from scope with approval. No script is left in an unknown state."
+          },
+          {
+            "title": "Confirm the defect position against the gates",
+            "text": "Run the final triage, apply the agreed gates, and list every open defect with its severity, workaround, owner, and acceptance. Anything that fails a gate becomes an explicit exception or blocks sign-off."
+          },
+          {
+            "title": "Assemble the evidence pack",
+            "text": "Gather the execution summary, the defect position, the scenario results, and the reconciliation outcomes into one pack the signatories review before the meeting — not during it. Questions are answered from the pack."
+          },
+          {
+            "title": "Record exceptions and conditions",
+            "text": "Write down anything sign-off will carry: deferred defects, unrun scenarios with their alternative validation, and conditions with owners and dates. If it is not written here, it is not part of the agreement."
+          },
+          {
+            "title": "Sign, date, and file",
+            "text": "Each signatory signs for their own scope, the record is dated and filed with the project documents, and the conditions list passes to the go-live checklist and risk register so nothing signed here is lost downstream."
+          }
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Clean, conditional, and refused sign-off"
+      },
+      {
+        "type": "p",
+        "text": "Not every cycle ends clean, and the framework should say so. A clean sign-off means every criterion is met and the exceptions list is empty or trivial. Treat it as an achievement, not the only respectable result — that expectation is exactly what pushes teams to hide conditions instead of declaring them."
+      },
+      {
+        "type": "p",
+        "text": "A conditional sign-off means the criteria are met in substance, with named exceptions the business accepts in writing: a deferred major defect with a practised workaround, a scenario to be validated during parallel runs, a report fix scheduled before its first live use. Conditions carry owners and dates, enter the risk register, and are reviewed at the go-live gate. Conditional sign-off is not a weaker signature; it is a more honest one, provided the conditions are specific — a condition that reads \"some defects remain\" is an unexamined risk wearing a signature."
+      },
+      {
+        "type": "p",
+        "text": "Refused sign-off is the third outcome, and it must be a real option or the other two mean nothing. Refusal is right when a criterion fails materially: a core journey has never run end to end, a critical defect is open, or the evidence cannot show what was tested. Refusal is not an accusation; it is information for the go-live decision."
+      },
+      {
+        "type": "img",
+        "src": "/images/blog/uat-sign-off-criteria-2.svg",
+        "alt": "UAT sign-off decision flow: checking the criteria leads to clean sign-off, conditional sign-off with recorded exceptions, or refused sign-off escalated to the go-live decision.",
+        "caption": "Sign-off decision flow: criteria met in full, met with recorded conditions, or not met — and what each outcome requires next."
+      },
+      {
+        "type": "h2",
+        "text": "Who signs, and what the signature means"
+      },
+      {
+        "type": "p",
+        "text": "Sign-off is plural. The business process owner signs for functional fitness in their area — payroll signs for payroll, HR operations for core HR, time and benefits for theirs. The project manager signs that the process was followed: criteria applied, evidence assembled, exceptions recorded. The sponsor signs acceptance of the residual position, including the conditions. One signature asked to cover all three judgments covers none of them well."
+      },
+      {
+        "type": "p",
+        "text": "Scope each signature on the form itself. A payroll lead can certify payroll scenarios without certifying recruiting; a phased implementation may sign off one wave while another is still testing. Scoped signatures keep accountability honest, and stop signatories hesitating because the form seems to make them responsible for everything."
+      },
+      {
+        "type": "h2",
+        "text": "Cross-border payroll: signing off across jurisdictions"
+      },
+      {
+        "type": "p",
+        "text": "In cross-border implementations, the same process must be accepted separately for each jurisdiction it serves. A payroll cycle that passes for one country's tax and statutory output proves nothing about the other's, and a single global signature can hide the fact that one jurisdiction's scenarios were thin, late, or run with the wrong data. Structure the criteria per jurisdiction — coverage, defect position, and reconciliation evidence for each — and let each payroll owner sign for their own scope."
+      },
+      {
+        "type": "p",
+        "text": "Where jurisdictions share configuration, a defect deferred in one may alter behaviour in the other, so review the conditions list jointly before each side signs — typically in one meeting, with jurisdiction-specific evidence packs and separate signatures on a common record."
+      },
+      {
+        "type": "h2",
+        "text": "Common mistakes"
+      },
+      {
+        "type": "p",
+        "text": "Most sign-off failures are definition and record failures that a disciplined test lead can prevent."
+      },
+      {
+        "type": "accordion",
+        "label": "Six sign-off mistakes to avoid",
+        "items": [
+          {
+            "q": "Defining the criteria in the final week",
+            "a": "Criteria written at the end are written around the results, which turns sign-off into ratification instead of judgment. Agree coverage, defect gates, and evidence standards before the first cycle opens, and change them only through a recorded decision."
+          },
+          {
+            "q": "Treating sign-off as a single signature",
+            "a": "One signature cannot honestly cover functional fitness, process compliance, and organisational risk acceptance. Use scoped signatures: process owners for their areas, the project manager for the process, and the sponsor for the residual position."
+          },
+          {
+            "q": "Counting scripts instead of weighing position",
+            "a": "A high execution percentage can hide one unrun critical journey or one unowned major defect. Sign-off reviews the position against the criteria — coverage, defects, evidence, journeys, readiness — not a single percentage."
+          },
+          {
+            "q": "Accepting verbal conditions",
+            "a": "A condition agreed in conversation and written nowhere will be forgotten by go-live. Every condition needs text, an owner, and a date, filed with the sign-off record and carried into the risk register and go-live checklist."
+          },
+          {
+            "q": "Signing because the calendar says so",
+            "a": "When the end date arrives, the criteria — not the date — decide. If a criterion fails materially, the honest outcomes are conditional sign-off with declared exceptions or refusal escalated to the go-live decision."
+          },
+          {
+            "q": "Letting sign-off certify more than testing proved",
+            "a": "Sign-off covers what was tested, with its exceptions. It does not guarantee production perfection. Overclaiming in the form creates false confidence and unfair blame when hypercare surfaces something new."
+          }
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Key Takeaways"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "Sign-off is a decision against criteria agreed before testing began — coverage, defect position, evidence, scenario completeness, and operational readiness.",
+          "A signature certifies fitness with documented exceptions, not perfection.",
+          "Defect gates come from triage: no open critical defects; every major defect fixed or formally accepted.",
+          "Three honest outcomes exist: clean, conditional with written exceptions, and refused — escalated to the go-live decision.",
+          "Signatures are scoped and plural: process owners, the project manager, and the sponsor each sign for a different judgment.",
+          "In cross-border work, sign off per jurisdiction, with a joint review of shared conditions.",
+          "Conditions survive only if written, owned, dated, and carried into the risk register."
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Frequently Asked Questions"
+      },
+      {
+        "type": "p",
+        "text": "Who should refuse sign-off if the criteria are not met? The signatory whose scope fails — usually the process owner for that area. Refusal states which criterion failed and what would resolve it, and escalates to the go-live gate."
+      },
+      {
+        "type": "p",
+        "text": "Can UAT be signed off with defects still open? Yes, within the agreed gates: major defects with a tested workaround, owner, and written acceptance, and minor or cosmetic defects with a post-go-live plan. Open critical defects block sign-off."
+      },
+      {
+        "type": "p",
+        "text": "What is the difference between conditional sign-off and just signing anyway? The record. Conditional sign-off names each exception with an owner and date, filed with the project documents. Signing anyway leaves the same risks undocumented."
+      },
+      {
+        "type": "p",
+        "text": "Should sign-off wait until every script has been executed? It should wait until every in-scope script is accounted for: executed, or blocked or removed through a recorded decision with an alternative validation route."
+      },
+      {
+        "type": "h2",
+        "text": "Next Steps"
+      },
+      {
+        "type": "p",
+        "text": "Write the sign-off criteria into the test plan before the first cycle opens, and agree the defect gates with UAT defect triage. Place sign-off inside the wider HCM system testing strategy, carry conditions into the implementation risk register template, and hand the signed position to the HCM go-live checklist."
+      },
+      {
+        "type": "quiz",
+        "label": "Check your understanding",
+        "questions": [
+          {
+            "q": "Execution is nearly complete and no critical defects are open, but one major payroll defect remains, with a tested workaround, a named owner, and a fix date the business accepts in writing. What is the right sign-off outcome?",
+            "options": [
+              {
+                "text": "Refuse sign-off — any open major defect blocks it",
+                "correct": false,
+                "why": "The agreed gates allow major defects that are formally accepted with a workaround and owner. Refusing despite the gates being met ignores the criteria the team agreed to judge by."
+              },
+              {
+                "text": "Conditional sign-off, with the defect recorded as a named condition",
+                "correct": true,
+                "why": "The criteria are met in substance and the exception is specific, owned, dated, and accepted in writing — exactly what conditional sign-off exists to record."
+              },
+              {
+                "text": "Clean sign-off, since the workaround makes it a non-issue",
+                "correct": false,
+                "why": "A workaround does not erase the defect. Calling the sign-off clean hides a live condition that the go-live gate and risk register need to see."
+              }
+            ]
+          },
+          {
+            "q": "Why should sign-off criteria be agreed before UAT begins rather than at the end?",
+            "options": [
+              {
+                "text": "Because criteria written early cannot be changed",
+                "correct": false,
+                "why": "Criteria can change through a recorded decision. The point of agreeing them early is neutrality, not rigidity."
+              },
+              {
+                "text": "Because early criteria are set against risk, before anyone knows which results they will need to defend",
+                "correct": true,
+                "why": "Written in advance, the standard is impartial. Written at the end, it tends to be shaped around the results already achieved, and sign-off becomes ratification."
+              },
+              {
+                "text": "Because signatories are easier to reach at the start",
+                "correct": false,
+                "why": "Availability is a logistics detail. The substantive reason is that early criteria also shape behaviour during the cycle — execution, recording, and deferral decisions."
+              }
+            ]
+          },
+          {
+            "q": "In a cross-border implementation, payroll scenarios pass for one jurisdiction but were barely run for the other. What should sign-off do?",
+            "options": [
+              {
+                "text": "Sign globally — the shared configuration means one result covers both",
+                "correct": false,
+                "why": "Shared configuration does not make tax and statutory output identical. One jurisdiction's pass proves nothing about the other's untested scenarios."
+              },
+              {
+                "text": "Sign per jurisdiction, so the tested jurisdiction can sign while the other remains unsigned until its evidence exists",
+                "correct": true,
+                "why": "Scoped, per-jurisdiction signatures keep accountability accurate: each payroll owner certifies only what their evidence supports, with shared conditions reviewed jointly."
+              },
+              {
+                "text": "Delay all sign-off everywhere until both are perfect",
+                "correct": false,
+                "why": "Perfection is not the standard, and blocking a ready jurisdiction helps no one. The untested jurisdiction needs its criteria met or formally excepted — not a blanket delay."
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
     "slug": "uat-defect-triage",
     "title": "UAT Defect Triage and Severity Levels: A Practitioner's Guide",
     "excerpt": "Run UAT defect triage for HCM implementations: severity vs priority, a four-level severity model, triage cadence, deferral rules, and go-live gates.",
