@@ -1,5 +1,316 @@
 [
   {
+    "slug": "uat-readiness-checklist",
+    "title": "UAT Readiness Checklist: Are You Actually Ready to Start Testing?",
+    "excerpt": "Use this UAT readiness checklist before HCM testing starts: scope, data, environment, people, and process gates that must pass first.",
+    "publishedAt": "2026-10-17",
+    "readingTime": "8 min read",
+    "cover": "/images/blog/uat-readiness-checklist-cover.webp",
+    "tags": [
+      "HCM",
+      "Testing",
+      "UAT",
+      "Implementation"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "Every UAT cycle has an opening day, and opening day exposes what preparation skipped. Testers arrive to an environment still being configured, test data matching nobody they recognise, unfinished script drafts, and a defect process existing only as a meeting invitation. The cycle starts anyway — the calendar says so — and week one is spent fixing the start instead of testing."
+      },
+      {
+        "type": "p",
+        "text": "Readiness prevents that week: a check, before the first script runs, that scope, data, environment, people, and process are fit for testing — and a recorded decision when one is not. This checklist sets out what to check, what \"ready\" means per domain, and how to handle the honest middle answer: ready, with conditions."
+      },
+      {
+        "type": "h2",
+        "text": "Why starting unready is so expensive"
+      },
+      {
+        "type": "p",
+        "text": "An unready start does not fail loudly; it fails by erosion. Blocked by a missing permission or unstable environment, testers work around gaps, testing what they can reach instead of what matters. Scripts are marked blocked for unrelated reasons, filling the record with noise later untangled from genuine results. When the environment stabilises, the slack is gone."
+      },
+      {
+        "type": "p",
+        "text": "The deeper cost is credibility. Business testers are borrowed from operational roles, at real cost. A week spent waiting teaches them testing is disorganised, and engagement drops all cycle: fewer careful observations, less patience for retesting, thinner triage attendance. Readiness protects their time as much as the schedule — why it belongs in the HCM system testing strategy."
+      },
+      {
+        "type": "h2",
+        "text": "What readiness actually means"
+      },
+      {
+        "type": "p",
+        "text": "Readiness is an entry decision, the mirror image of the UAT sign-off criteria that close the phase. Sign-off asks whether testing proved enough for go-live; readiness asks whether testing can prove anything at all. Without them, no later sign-off is trustworthy — its results carry an asterisk: we tested what we could."
+      },
+      {
+        "type": "p",
+        "text": "Readiness also differs from a status update, which reports progress toward ready. A readiness check renders judgment against criteria agreed in advance, in the test plan, before results are known. Agreed early, criteria are neutral; invented at the gate, they bend toward what the project wants to hear. The check can be short — one review, evidence over assurance — but never skipped: skipped checks reappear as defect arguments or sign-off disputes."
+      },
+      {
+        "type": "h2",
+        "text": "The five readiness domains"
+      },
+      {
+        "type": "p",
+        "text": "Five domains cover almost every failed start in enterprise HCM work:"
+      },
+      {
+        "type": "p",
+        "text": "Scope is frozen and testable. In-scope processes are agreed, and changes move through a recorded decision, not a conversation. Every process maps to scripts — see writing UAT test scripts — reviewed, not drafted: followable steps, stated expected results, no placeholders. Ready test: trace any in-scope process at random to scripts executable today."
+      },
+      {
+        "type": "p",
+        "text": "Data is realistic, sufficient, and controlled. Testers need records behaving like real life — joiners, leavers, transfers, varied pay elements, edge cases — in volume enough to exercise queues and approvals. Data has an owner, a refresh route, and a rule for what testers may change; payroll data must support full, reconcilable cycles. Ready test: a tester finds a script's named data without asking anyone to build it."
+      },
+      {
+        "type": "p",
+        "text": "The environment is stable and genuinely usable. Configuration for the scope under test is complete and frozen, integrations connected or stubbed with the limitation recorded, and access works: every tester signs in with their real role's view. An environment rebuilt nightly teaches testers to distrust results. Ready test: each named tester has signed in and completed a smoke scenario before day one."
+      },
+      {
+        "type": "p",
+        "text": "People are named, trained, and released. Every tester is a named person, not a role on a slide, with manager-agreed time and peak-day cover. Testers have been shown the system basics, the scripts, the tool, and how to raise defects; process owners know they own triage and sign-off for their area. Ready test: roster, training record, and agreed time exist on paper; gaps have names and dates."
+      },
+      {
+        "type": "p",
+        "text": "Process is agreed before the first defect arrives. Execution recording, defect logging, severities, and the UAT defect triage rhythm are defined now, while abstract and easy to agree. Entry and exit criteria are written, checkpoints scheduled, escalation clear. Ready test: walk one imaginary defect to a triage decision; every handoff has an owner."
+      },
+      {
+        "type": "img",
+        "src": "/images/blog/uat-readiness-checklist-1.svg",
+        "alt": "Five UAT readiness domains: scope, data, environment, people, and process, each with the ready test it must pass before testing starts.",
+        "caption": "Five readiness domains: scope, data, environment, people, and process, each with its ready test."
+      },
+      {
+        "type": "h2",
+        "text": "Walking the readiness gate in order"
+      },
+      {
+        "type": "p",
+        "text": "Hold the check days before the planned start — early enough to act on findings, late enough that evidence is real — working domains in a fixed order."
+      },
+      {
+        "type": "steps",
+        "label": "The readiness gate sequence",
+        "intro": "Work these five steps in order at the readiness review. A step that fails produces a condition with an owner and a date — or a decision to move the start.",
+        "items": [
+          {
+            "title": "Confirm scope and scripts are frozen",
+            "text": "Walk the in-scope process list, confirm each maps to reviewed scripts, and record how late scope changes will be decided. Anything still being designed is named as out of this cycle or as a dated condition."
+          },
+          {
+            "title": "Prove the data, do not describe it",
+            "text": "Open the test environment and find, live, the records the first scripts need — including the edge cases. Confirm the data owner, the refresh route, and what testers may change."
+          },
+          {
+            "title": "Prove access and stability with the testers themselves",
+            "text": "Each named tester signs in under their own role and runs one smoke scenario. Log every access or configuration failure found here as a pre-cycle defect, not a day-one surprise."
+          },
+          {
+            "title": "Confirm people, time, and training",
+            "text": "Review the roster against agreed release time, confirm training is delivered, and name cover for operational duties. A tester who is named but not released is recorded as not ready."
+          },
+          {
+            "title": "Rehearse the process and record the decision",
+            "text": "Walk one imaginary defect through logging, severity, and triage, confirm the checkpoint rhythm, then record the outcome: ready, ready with conditions, or not ready — with owners and dates for everything outstanding."
+          }
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Ready, ready with conditions, or not ready"
+      },
+      {
+        "type": "p",
+        "text": "Like sign-off, readiness has three honest outcomes, named in advance. Ready means every domain passes and the cycle starts as planned. The review should still record what was checked — the sign-off meeting later relies on that record."
+      },
+      {
+        "type": "p",
+        "text": "Ready with conditions is the outcome most real cycles earn, respectable when conditions are specific: the gap, its owner, its fix date, and what testing may not do until it closes. Starting core HR scenarios while one integration is stubbed can be sound, if dependent payroll scenarios wait — and everyone knows it. \"Data to follow\" is not a condition; it is a hope. Conditions live in the project record — the implementation risk register template — reviewed until they close."
+      },
+      {
+        "type": "p",
+        "text": "Not ready must be a genuine option or the other two mean nothing. It is right when a failing domain would corrupt the results: testers cannot access the system, data cannot support the cycle's payroll scenarios, or scope still moves daily. Delaying by days to protect the evidence is cheaper than a full cycle nobody can trust — that is not a head start, it is a debt. State each option's cost plainly; the sponsor decides."
+      },
+      {
+        "type": "img",
+        "src": "/images/blog/uat-readiness-checklist-2.svg",
+        "alt": "UAT readiness decision flow: checking the five domains leads to ready, ready with recorded conditions, or not ready with a moved start.",
+        "caption": "Readiness decision flow: all domains pass, pass with recorded conditions, or fail in a way that would corrupt results — and what each outcome requires next."
+      },
+      {
+        "type": "h2",
+        "text": "Who owns readiness"
+      },
+      {
+        "type": "p",
+        "text": "Readiness is produced by many hands but owned by one. The test lead assembles evidence and runs the gate, stopping five domains becoming five opinions. Process owners confirm their own domains, because they later sign off what testing produced, and what UAT is in an HCM implementation makes business ownership the point of the phase. The project manager owns the decision record; the sponsor, a not-ready call."
+      },
+      {
+        "type": "p",
+        "text": "That split matters because readiness pressure is rarely technical: domains are usually closable; the hard part is saying so when the start date is public. A named owner, agreed criteria, and evidence over assurance give that person solid ground — small governance the complete guide to HCM implementation depends on heavily."
+      },
+      {
+        "type": "h2",
+        "text": "Cross-border payroll: readiness in two jurisdictions"
+      },
+      {
+        "type": "p",
+        "text": "In cross-border work, readiness is per jurisdiction, as sign-off later will be. Data supporting one country's payroll — tax logic, statutory outputs, pay calendar — proves nothing about the other's, and an environment proven for one population may lack the second entirely. Run checks separately: jurisdiction-specific scripts, data for each country's edge cases, local testers who run that payroll in real life."
+      },
+      {
+        "type": "p",
+        "text": "Where jurisdictions share configuration, review conditions jointly: a fix for one side can change behaviour for the other. Starting one jurisdiction ready while the other waits on a dated condition is often correct. Never average the two into one reassuring judgment hiding the weaker side."
+      },
+      {
+        "type": "h2",
+        "text": "Common mistakes"
+      },
+      {
+        "type": "p",
+        "text": "Most failed starts were visible at the readiness check; these patterns let them through anyway."
+      },
+      {
+        "type": "accordion",
+        "label": "Six readiness mistakes to avoid",
+        "items": [
+          {
+            "q": "Treating the start date as the readiness decision",
+            "a": "A date is a plan, not evidence. When the calendar decides, domains that would corrupt results get waved through and the cycle pays for them at full price. Let the criteria decide, and let the sponsor own any move of the date."
+          },
+          {
+            "q": "Accepting assurance instead of evidence",
+            "a": "\"Data is loaded\" and \"access is sorted\" are claims, not checks. Prove each domain live at the review: open the records, sign in as the tester, trace the script. Ten minutes of proof prevents a week of discovery."
+          },
+          {
+            "q": "Counting drafted scripts as ready scripts",
+            "a": "A draft with placeholder steps cannot be executed or evidenced. Readiness requires reviewed scripts with followable steps and stated expected results — sample them at the gate rather than trusting a percentage."
+          },
+          {
+            "q": "Naming roles instead of people",
+            "a": "\"Payroll team\" cannot attend training or be released from duties. Every tester is a named person with agreed time, or that part of the scope is honestly not ready."
+          },
+          {
+            "q": "Writing vague conditions",
+            "a": "A condition without an owner, a date, and a statement of what testing waits for it will not close and will not protect the cycle. Specific conditions are manageable; vague ones are deferred surprises."
+          },
+          {
+            "q": "Skipping the defect-process rehearsal",
+            "a": "The first real defect is the worst moment to invent severity definitions and triage ownership. Rehearse one imaginary defect end to end at the gate so the first real one meets a process, not a debate."
+          }
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Key Takeaways"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "Readiness is an entry decision against criteria agreed in advance — sign-off's mirror at the start.",
+          "Check five domains — scope, data, environment, people, process — each against a concrete ready test.",
+          "Three honest outcomes exist: ready, ready with specific owned and dated conditions, and not ready.",
+          "Conditions state what testing may not do until they close, and live in the risk register.",
+          "One owner runs the gate and records the decision; owners confirm their own domains.",
+          "In cross-border work, judge readiness per jurisdiction — never averaged.",
+          "A short delay protecting the evidence beats a full cycle whose results nobody can trust."
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Frequently Asked Questions"
+      },
+      {
+        "type": "p",
+        "text": "How long before the start should the readiness check happen? Days before — late enough that evidence reflects the real environment and data, early enough to fix a failed domain, make it a condition, or move the start."
+      },
+      {
+        "type": "p",
+        "text": "Can UAT start if one domain is not ready? Yes, when the gap is contained: record a condition with owner and date, stating which testing waits. Start only where the failing domain cannot corrupt results."
+      },
+      {
+        "type": "p",
+        "text": "Who can declare a cycle not ready? The project manager records it on the test lead's evidence and process owners' confirmations; a not-ready call with schedule impact is the sponsor's."
+      },
+      {
+        "type": "p",
+        "text": "What is the difference between readiness criteria and sign-off criteria? Readiness criteria judge conditions at entry; sign-off criteria judge results at exit. The HCM go-live checklist later asks the same question of the whole implementation."
+      },
+      {
+        "type": "h2",
+        "text": "Next Steps"
+      },
+      {
+        "type": "p",
+        "text": "Write readiness criteria into the test plan when the cycle is scheduled, not the week before it opens. Confirm scripts against writing UAT test scripts, agree the defect rhythm with UAT defect triage, and carry conditions into the implementation risk register template until they close."
+      },
+      {
+        "type": "quiz",
+        "label": "Check your understanding",
+        "questions": [
+          {
+            "q": "At the readiness review, every domain passes except one integration feed, which is stubbed for the first week with the limitation recorded. Payroll scenarios depending on that feed are rescheduled inside the cycle. What is the right outcome?",
+            "options": [
+              {
+                "text": "Not ready — any gap means the whole cycle must wait",
+                "correct": false,
+                "why": "The gap is contained and recorded, and the dependent testing is explicitly rescheduled. Blocking unaffected testing would waste released testers and time without protecting any result."
+              },
+              {
+                "text": "Ready with conditions — the stub, its owner, its fix date, and the waiting scenarios are recorded",
+                "correct": true,
+                "why": "The condition is specific, owned, and dated, and it states what testing may not do until it closes — exactly what a conditional start exists to govern."
+              },
+              {
+                "text": "Ready — note it verbally and proceed as planned",
+                "correct": false,
+                "why": "An unrecorded limitation will be forgotten, and payroll testers will run scenarios against a stub believing the results are real. The record is what makes the start honest."
+              }
+            ]
+          },
+          {
+            "q": "Why should readiness be proven with live evidence rather than status assurances?",
+            "options": [
+              {
+                "text": "Because status reports are usually dishonest",
+                "correct": false,
+                "why": "Most assurances are sincerely given but untested — nobody has yet signed in as the tester or opened the named record. Proof tests the claim, not the person's honesty."
+              },
+              {
+                "text": "Because gaps like access failures and missing data only surface when someone actually performs the check",
+                "correct": true,
+                "why": "Signing in under a tester's role, finding the named data record, and tracing a script expose exactly the failures that otherwise consume the first week of the cycle."
+              },
+              {
+                "text": "Because the readiness record needs attachments for audit",
+                "correct": false,
+                "why": "Documentation matters, but it is secondary. The primary reason is discovery: live proof finds real gaps while they are still cheap to fix."
+              }
+            ]
+          },
+          {
+            "q": "In a cross-border cycle, one jurisdiction passes every domain and the other has no test data loaded yet. What should readiness do?",
+            "options": [
+              {
+                "text": "Declare the cycle ready — the stronger jurisdiction carries the average",
+                "correct": false,
+                "why": "Readiness is never an average. The jurisdiction without data cannot test, and a single ready judgment would hide that until its testers sit idle."
+              },
+              {
+                "text": "Start the ready jurisdiction and record the other as a dated condition with its data load owned and scheduled",
+                "correct": true,
+                "why": "Per-jurisdiction judgments keep the record honest: one side starts on real evidence, the other waits on a specific, owned condition reviewed jointly because configuration is shared."
+              },
+              {
+                "text": "Delay both jurisdictions until both are perfect",
+                "correct": false,
+                "why": "Perfection is not the standard, and idling a ready jurisdiction's released testers helps no one. The unready side needs its condition closed, not a blanket delay."
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
     "slug": "uat-sign-off-criteria",
     "title": "UAT Sign-Off: Defining \"Done\" in an HCM Implementation",
     "excerpt": "Define UAT sign-off criteria for HCM implementations: coverage, defect gates, evidence, conditional sign-off, and who signs what — before testing ends.",
