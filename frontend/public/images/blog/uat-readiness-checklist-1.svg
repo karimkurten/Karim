@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="880" viewBox="0 0 1200 880" font-family="Georgia, 'DM Serif Display', serif">
+  <defs>
+    <linearGradient id="hdr" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#0f172a"/>
+      <stop offset="1" stop-color="#1e3a5f"/>
+    </linearGradient>
+    <filter id="sh" x="-5%" y="-5%" width="110%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="5" flood-color="#0f172a" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="880" fill="#ffffff"/>
+  <rect x="0" y="0" width="1200" height="104" fill="url(#hdr)"/>
+  <text x="60" y="48" font-size="30" fill="#ffffff">The Five UAT Readiness Domains</text>
+  <text x="60" y="80" font-size="17" fill="#94A3B8" font-family="Arial, sans-serif">Checked before the first script runs — each domain must pass its ready test, or become a recorded condition</text>
+
+  <rect x="60" y="140" width="52" height="640" rx="10" fill="#F0F4F8" stroke="#E2E8F0"/>
+  <text x="86" y="200" font-size="16" fill="#2B6CB0" font-family="Arial, sans-serif" text-anchor="middle" transform="rotate(-90 86 460)">ALL FIVE — PROVEN WITH EVIDENCE, NOT ASSURANCE</text>
+  <path d="M86 716 L74 692 L98 692 Z" fill="#2B6CB0"/>
+
+  <g filter="url(#sh)">
+    <rect x="140" y="132" width="1000" height="112" rx="12" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+  </g>
+  <rect x="140" y="132" width="14" height="112" fill="#0f172a"/>
+  <text x="178" y="170" font-size="24" fill="#1A202C">1. Scope</text>
+  <text x="178" y="198" font-size="17" fill="#475569" font-family="Arial, sans-serif">In-scope processes agreed; changes move through a recorded decision.</text>
+  <text x="178" y="224" font-size="16" fill="#2B6CB0" font-family="Arial, sans-serif">Ready test: trace any process at random to scripts executable today.</text>
+  <text x="820" y="198" font-size="16" fill="#64748B" font-family="Arial, sans-serif">Scripts reviewed, not drafted:</text>
+  <text x="820" y="222" font-size="16" fill="#64748B" font-family="Arial, sans-serif">followable steps, expected results.</text>
+
+  <g filter="url(#sh)">
+    <rect x="140" y="268" width="1000" height="112" rx="12" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+  </g>
+  <rect x="140" y="268" width="14" height="112" fill="#1e3a5f"/>
+  <text x="178" y="306" font-size="24" fill="#1A202C">2. Data</text>
+  <text x="178" y="334" font-size="17" fill="#475569" font-family="Arial, sans-serif">Realistic, sufficient, controlled records that behave like real life.</text>
+  <text x="178" y="360" font-size="16" fill="#2B6CB0" font-family="Arial, sans-serif">Ready test: a tester finds a script's named data without help.</text>
+  <text x="820" y="334" font-size="16" fill="#64748B" font-family="Arial, sans-serif">Owner named; refresh route and</text>
+  <text x="820" y="358" font-size="16" fill="#64748B" font-family="Arial, sans-serif">change rules agreed in advance.</text>
+
+  <g filter="url(#sh)">
+    <rect x="140" y="404" width="1000" height="112" rx="12" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+  </g>
+  <rect x="140" y="404" width="14" height="112" fill="#2B6CB0"/>
+  <text x="178" y="442" font-size="24" fill="#1A202C">3. Environment</text>
+  <text x="178" y="470" font-size="17" fill="#475569" font-family="Arial, sans-serif">Configuration frozen for the cycle; integrations connected or stubbed.</text>
+  <text x="178" y="496" font-size="16" fill="#2B6CB0" font-family="Arial, sans-serif">Ready test: every tester signed in and ran a smoke scenario.</text>
+  <text x="820" y="470" font-size="16" fill="#64748B" font-family="Arial, sans-serif">Stability matters: a nightly rebuild</text>
+  <text x="820" y="494" font-size="16" fill="#64748B" font-family="Arial, sans-serif">teaches testers to distrust results.</text>
+
+  <g filter="url(#sh)">
+    <rect x="140" y="540" width="1000" height="112" rx="12" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+  </g>
+  <rect x="140" y="540" width="14" height="112" fill="#2563EB"/>
+  <text x="178" y="578" font-size="24" fill="#1A202C">4. People</text>
+  <text x="178" y="606" font-size="17" fill="#475569" font-family="Arial, sans-serif">Named testers, trained, and released with manager-agreed time.</text>
+  <text x="178" y="632" font-size="16" fill="#2B6CB0" font-family="Arial, sans-serif">Ready test: roster, training, agreed time — all on paper.</text>
+  <text x="820" y="606" font-size="16" fill="#64748B" font-family="Arial, sans-serif">A named tester who is not</text>
+  <text x="820" y="630" font-size="16" fill="#64748B" font-family="Arial, sans-serif">released is recorded as not ready.</text>
+
+  <g filter="url(#sh)">
+    <rect x="140" y="676" width="1000" height="112" rx="12" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+  </g>
+  <rect x="140" y="676" width="14" height="112" fill="#94A3B8"/>
+  <text x="178" y="714" font-size="24" fill="#1A202C">5. Process</text>
+  <text x="178" y="742" font-size="17" fill="#475569" font-family="Arial, sans-serif">Recording, severities, triage, and escalation agreed in advance.</text>
+  <text x="178" y="768" font-size="16" fill="#2B6CB0" font-family="Arial, sans-serif">Ready test: one imaginary defect walked to a triage decision.</text>
+  <text x="820" y="742" font-size="16" fill="#64748B" font-family="Arial, sans-serif">Entry and exit criteria written;</text>
+  <text x="820" y="766" font-size="16" fill="#64748B" font-family="Arial, sans-serif">checkpoints already scheduled.</text>
+
+  <text x="60" y="852" font-size="15" fill="#64748B" font-family="Arial, sans-serif">Readiness is proven live at the gate — signing in, opening the data, tracing the script.</text>
+</svg>
