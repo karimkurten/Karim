@@ -6,6 +6,7 @@ import { InteractiveBlock, INTERACTIVE_TYPES } from '../components/InteractiveWi
 import NotFound from './NotFound';
 import { Calendar, Clock, ArrowLeft, ExternalLink, Tag, Share2, Link2, Check, FileText } from 'lucide-react';
 import PayhipPromoBanner from '../components/PayhipPromoBanner';
+import AffiliateTools from '../components/AffiliateTools';
 import NewsletterSignup from '../components/NewsletterSignup';
 import LeadMagnetDownload from '../components/LeadMagnetDownload';
 
@@ -503,6 +504,10 @@ export default function BlogPost() {
 
           {/* Lead magnet download — only renders on articles with a gated asset */}
           <LeadMagnetDownload slug={post.slug} />
+
+          {/* Recommended tool (affiliate) — renders only when a program
+              matching this post has a live referral link; otherwise null */}
+          <AffiliateTools post={post} />
 
           {/* Newsletter signup — end of every article */}
           <NewsletterSignup />
