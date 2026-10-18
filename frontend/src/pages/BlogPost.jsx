@@ -208,9 +208,56 @@ const SocialShare = ({ title, slug, excerpt }) => {
   );
 };
 
+// Inline markdown links ([label](/blog/slug) or [label](https://...)) inside
+// paragraph and list text render as real anchors. All other text is unchanged.
+const INLINE_LINK_PATTERN = /\[([^\]]+)\]\(([^)\s]+)\)/g;
+
+const renderInline = (text) => {
+  if (typeof text !== 'string' || text.indexOf('](') === -1) {
+    return text;
+  }
+  const parts = [];
+  let lastIndex = 0;
+  let match;
+  let key = 0;
+  INLINE_LINK_PATTERN.lastIndex = 0;
+  while ((match = INLINE_LINK_PATTERN.exec(text)) !== null) {
+    const [raw, label, url] = match;
+    const isInternal = url.startsWith('/');
+    const isHttp = /^https?:\/\//.test(url);
+    if (!isInternal && !isHttp) {
+      continue;
+    }
+    if (match.index > lastIndex) {
+      parts.push(text.slice(lastIndex, match.index));
+    }
+    if (isInternal) {
+      parts.push(
+        <Link key={key++} to={url} className="text-[#2B6CB0] hover:text-[#2563EB] underline">
+          {label}
+        </Link>
+      );
+    } else {
+      parts.push(
+        <a key={key++} href={url} className="text-[#2B6CB0] hover:text-[#2563EB] underline">
+          {label}
+        </a>
+      );
+    }
+    lastIndex = match.index + raw.length;
+  }
+  if (parts.length === 0) {
+    return text;
+  }
+  if (lastIndex < text.length) {
+    parts.push(text.slice(lastIndex));
+  }
+  return parts;
+};
+
 const ContentBlock = ({ block }) => {
   if (block.type === 'p') {
-    return <p className="text-[#475569] leading-relaxed mb-5">{block.text}</p>;
+    return <p className="text-[#475569] leading-relaxed mb-5">{renderInline(block.text)}</p>;
   }
   if (block.type === 'h2') {
     return (
@@ -230,7 +277,7 @@ const ContentBlock = ({ block }) => {
     return (
       <ul className="list-disc pl-6 mb-5 space-y-2 text-[#475569] leading-relaxed">
         {(block.items || []).map((item) => (
-          <li key={item}>{item}</li>
+          <li key={item}>{renderInline(item)}</li>
         ))}
       </ul>
     );
