@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="880" viewBox="0 0 1200 880" font-family="Georgia, 'DM Serif Display', serif">
+  <defs>
+    <linearGradient id="hdr" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#0f172a"/>
+      <stop offset="1" stop-color="#1e3a5f"/>
+    </linearGradient>
+    <filter id="sh" x="-5%" y="-5%" width="110%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="5" flood-color="#0f172a" flood-opacity="0.18"/>
+    </filter>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#2B6CB0"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="880" fill="#ffffff"/>
+  <rect x="0" y="0" width="1200" height="104" fill="url(#hdr)"/>
+  <text x="60" y="48" font-size="30" fill="#ffffff">Regression Scope: Three Tiers Around Every Change</text>
+  <text x="60" y="80" font-size="17" fill="#94A3B8" font-family="Arial, sans-serif">Scope by impact and dependency — not by the size of the change request</text>
+
+  <g filter="url(#sh)">
+    <rect x="300" y="132" width="600" height="108" rx="12" fill="#1e3a5f"/>
+  </g>
+  <text x="600" y="176" font-size="24" fill="#ffffff" text-anchor="middle">Configuration Change</text>
+  <text x="600" y="206" font-size="16" fill="#E2E8F0" font-family="Arial, sans-serif" text-anchor="middle">A fix, a new rule, or a corrected calculation — promoted as a named batch</text>
+
+  <path d="M600 242 L600 278" fill="none" stroke="#2B6CB0" stroke-width="3" marker-end="url(#arr)"/>
+
+  <g filter="url(#sh)">
+    <rect x="140" y="286" width="920" height="128" rx="12" fill="#F0F4F8" stroke="#2B6CB0" stroke-width="2"/>
+  </g>
+  <rect x="140" y="286" width="14" height="128" fill="#0f172a"/>
+  <text x="178" y="324" font-size="24" fill="#1A202C">Tier 1 — Directly Affected</text>
+  <text x="178" y="352" font-size="17" fill="#475569" font-family="Arial, sans-serif">Retest the changed behaviour in depth, for every affected population.</text>
+  <text x="178" y="378" font-size="16" fill="#2B6CB0" font-family="Arial, sans-serif">Includes the original defect or requirement the change was meant to satisfy.</text>
+  <text x="820" y="352" font-size="16" fill="#64748B" font-family="Arial, sans-serif">Deepest coverage:</text>
+  <text x="820" y="376" font-size="16" fill="#64748B" font-family="Arial, sans-serif">variants and edge cases.</text>
+
+  <g filter="url(#sh)">
+    <rect x="110" y="438" width="980" height="128" rx="12" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+  </g>
+  <rect x="110" y="438" width="14" height="128" fill="#2B6CB0"/>
+  <text x="148" y="476" font-size="24" fill="#1A202C">Tier 2 — Adjacent Behaviour</text>
+  <text x="148" y="504" font-size="17" fill="#475569" font-family="Arial, sans-serif">Focused scenarios that share the same rules, calculations, or outputs.</text>
+  <text x="148" y="530" font-size="16" fill="#2B6CB0" font-family="Arial, sans-serif">Same eligibility group, same calculation, same interface or file.</text>
+  <text x="820" y="504" font-size="16" fill="#64748B" font-family="Arial, sans-serif">Chosen by dependency,</text>
+  <text x="820" y="528" font-size="16" fill="#64748B" font-family="Arial, sans-serif">not by habit or memory.</text>
+
+  <g filter="url(#sh)">
+    <rect x="80" y="590" width="1040" height="144" rx="12" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+  </g>
+  <rect x="80" y="590" width="14" height="144" fill="#2563EB"/>
+  <text x="118" y="628" font-size="24" fill="#1A202C">Tier 3 — Core Golden Scenarios</text>
+  <text x="118" y="656" font-size="17" fill="#475569" font-family="Arial, sans-serif">The standing core that runs for every significant change batch, without exception.</text>
+  <text x="118" y="682" font-size="16" fill="#2B6CB0" font-family="Arial, sans-serif">Joiner, leaver, transfer, standard pay cycle, correction, statutory outputs.</text>
+  <text x="118" y="708" font-size="16" fill="#64748B" font-family="Arial, sans-serif">Purpose: catch the impact nobody predicted, while the change is still the obvious suspect.</text>
+
+  <text x="60" y="790" font-size="16" fill="#1A202C">Scope follows dependency</text>
+  <text x="60" y="818" font-size="15" fill="#475569" font-family="Arial, sans-serif">A small rule inside a shared calculation can affect every payslip. Record excluded coverage as a governed risk.</text>
+  <text x="60" y="844" font-size="15" fill="#64748B" font-family="Arial, sans-serif">In cross-border work, the golden core runs for both jurisdictions, each against its own expected results.</text>
+</svg>
