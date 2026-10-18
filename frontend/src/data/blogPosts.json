@@ -1,5 +1,316 @@
 [
   {
+    "slug": "regression-testing-hcm",
+    "title": "Regression Testing After Configuration Changes: Prove the Fix Did Not Break the Rest",
+    "excerpt": "After any HCM configuration change, regression testing re-proves payroll, eligibility, and integrations still work. How to scope and run the pack.",
+    "publishedAt": "2026-10-18",
+    "readingTime": "8 min read",
+    "cover": "/images/blog/regression-testing-hcm-cover.webp",
+    "tags": [
+      "HCM",
+      "Testing",
+      "Regression Testing",
+      "Implementation"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "A configuration change is rarely as small as it looks. A corrected earning code, a revised eligibility rule, or a new approval step can pass its own test perfectly and still change a payslip three modules away. Pay, time, benefits, absence, and integrations share the same underlying rules, so proving the fix worked proves only half of what matters. The other half is proving it did not break something already proven."
+      },
+      {
+        "type": "p",
+        "text": "Regression testing is that second proof: a risk-based re-proof of the behaviour a change could plausibly have touched, plus the core behaviour the business can never afford to lose."
+      },
+      {
+        "type": "h2",
+        "text": "Why every fix risks breaking something already proven"
+      },
+      {
+        "type": "p",
+        "text": "Configuration does not sit in sealed compartments. An eligibility rule governs who receives a benefit, which absence plan they accrue against, and which pay elements appear on their record. A calculation change can alter gross pay, deductions, employer costs, and downstream files."
+      },
+      {
+        "type": "p",
+        "text": "That is why isolated testing misleads. A tester confirms the new rule works for the employee in front of them, while a different population — another pay group, employment type, or location — now calculates incorrectly and nobody looks again until parallel payroll or go-live. Regression finds the break while its cause is still obvious — why it belongs in any serious HCM system testing strategy."
+      },
+      {
+        "type": "h2",
+        "text": "What regression actually means in HCM"
+      },
+      {
+        "type": "p",
+        "text": "Regression testing means re-running previously passed tests to confirm that behaviour which worked before still works after a change. In HCM work that needs sharpening in two ways. First, the priority is not screens; it is outcomes — above all pay outcomes, because a screen can look unchanged while its number has moved. Regression therefore centres on calculated results: gross-to-net pay, statutory deductions, employer contributions, and accrual balances."
+      },
+      {
+        "type": "p",
+        "text": "Second, regression covers adjacent behaviour, not only identical behaviour. If a change touches absence configuration, re-prove time entry that feeds it, pay elements driven by it, and the approval flow around it, not just the corrected case. The configuration vs. customization distinction matters: a small adjustment inside a delivered rule can reach further than a larger but isolated custom object, so scope follows dependency, not request size — the same logic that drives end-to-end integration testing, where regressions surface in downstream files and totals."
+      },
+      {
+        "type": "h2",
+        "text": "Scoping the pack by risk, not by habit"
+      },
+      {
+        "type": "p",
+        "text": "A defensible scope starts with change-impact analysis, not with opening the old test library. For each change, the implementer and a business tester ask: what does it directly alter? What shares those rules or consumes those outputs? And what must never regress, because failure there stops payroll or breaches a statutory obligation?"
+      },
+      {
+        "type": "p",
+        "text": "The answers produce three tiers. Tier one retests the directly affected behaviour in depth, including the original defect or requirement. Tier two retests adjacent behaviour — scenarios sharing the same calculation, eligibility group, or interface. Tier three is the standing core: golden scenarios for a joiner, a leaver, a transfer, a standard pay cycle, a correction, and key statutory outputs, run for every significant batch to catch the impact nobody predicted."
+      },
+      {
+        "type": "p",
+        "text": "Depth follows risk, and deferred coverage is recorded in the implementation risk register template so the gap is governed, not forgotten."
+      },
+      {
+        "type": "img",
+        "src": "/images/blog/regression-testing-hcm-1.svg",
+        "alt": "Regression scope diagram: a configuration change at the centre, with directly affected behaviour, adjacent behaviour, and core golden scenarios as the three tiers to re-prove.",
+        "caption": "Three-tier regression scope: directly affected, adjacent, and core golden scenarios around every configuration change."
+      },
+      {
+        "type": "h2",
+        "text": "Building a reusable pack instead of retesting ad hoc"
+      },
+      {
+        "type": "p",
+        "text": "Ad hoc retesting depends on who is available and what they remember: the original tester has moved on, the steps live in an email, and the expected result was never written down, so the retest becomes a quick look rather than a proof. A reusable pack removes that fragility: each scenario states its purpose, data conditions, steps in business language, and — critically for payroll — the expected calculated result, not simply \"check pay is correct.\""
+      },
+      {
+        "type": "p",
+        "text": "Building the pack is incremental, not a separate project. When a defect is fixed, the scenario that found it and the scenario that proves the fix join the pack; when acceptance testing proves a critical process, its best scenarios are promoted in reusable form. Keep it lean: retire scenarios for retired processes and protect the golden core from bloat, because a pack nobody can finish will quietly stop being run — and a cycle starting after recent changes needs a pack ready on day one, as the UAT readiness checklist expects."
+      },
+      {
+        "type": "steps",
+        "label": "Running regression after a change batch",
+        "intro": "Use these five steps for every change batch, from a single fix to a grouped release. Each step produces evidence, not just activity.",
+        "items": [
+          {
+            "title": "Analyse the impact before selecting any tests",
+            "text": "With the implementer and a business tester, map what the change directly alters, what shares its rules or outputs, and which populations are affected. Record the reasoning so the scope can be defended and reviewed."
+          },
+          {
+            "title": "Select the three tiers for this batch",
+            "text": "Choose in-depth scenarios for the directly affected behaviour, focused scenarios for adjacent behaviour, and the full golden core. Name anything deliberately excluded and record it as a risk if it matters."
+          },
+          {
+            "title": "Run the golden core first",
+            "text": "Execute the standing payroll and lifecycle scenarios before the detailed tier. A core failure signals a wide impact and changes the conversation before hours are spent on narrower checks."
+          },
+          {
+            "title": "Compare results, do not just observe them",
+            "text": "For pay scenarios, compare calculated results against the stated expected result or the pre-change baseline, and investigate every unexplained variance, however small. Small variances are how large regressions first appear."
+          },
+          {
+            "title": "Record the outcome and keep the evidence",
+            "text": "Log passes, failures, and variances against the change batch, link any new defects, and file the comparison evidence. The record is what later sign-off and audit questions will rely on."
+          }
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Timing and cadence through the delivery cycle"
+      },
+      {
+        "type": "p",
+        "text": "Regression is not a single event near go-live; it is a cadence tied to change. The most workable rhythm is per change batch: group changes into small, named batches, promote them together, and run the scoped pack before the batch is accepted. When the pack fails, the suspect set stays small."
+      },
+      {
+        "type": "p",
+        "text": "Two further runs are non-negotiable: a full pack run before user acceptance sign-off — sign-off should rest on a system proven stable after its last changes, as the UAT sign-off criteria make explicit — and another after cutover configuration is final, before the system in the complete guide to HCM implementation is called ready for first live payroll. A late change after a clean run requires a scoped re-run."
+      },
+      {
+        "type": "img",
+        "src": "/images/blog/regression-testing-hcm-2.svg",
+        "alt": "Regression cycle flow: change, impact analysis, pack selection, execution, then pass and proceed or fail, fix, and full re-run.",
+        "caption": "Regression cycle flow: change, impact analysis, select pack, execute, then proceed on pass or fix and re-run on fail."
+      },
+      {
+        "type": "h2",
+        "text": "What to automate, and what to leave to human judgment"
+      },
+      {
+        "type": "p",
+        "text": "Automation earns its place because the same pack runs repeatedly and consistency is the point. Stable, high-volume checks with precise expected results are strong candidates: core calculations with fixed input data, interface structures and totals, and eligibility outcomes for defined populations."
+      },
+      {
+        "type": "p",
+        "text": "The boundary is judgment about pay. A person still needs to judge whether a result makes business sense, assess exceptions involving manager discretion, and interpret variances inside tolerance that follow a suspicious pattern. Automation also carries maintenance cost, and an unmaintained suite produces false failures teams learn to ignore. Automate the stable golden core first, keep exception testing manual, and expand only where a scenario has proven stable and valuable."
+      },
+      {
+        "type": "h2",
+        "text": "Cross-border payroll: a fix for one side can regress the other"
+      },
+      {
+        "type": "p",
+        "text": "In cross-border US and Canada work, regression scope must always cross the border, even when the change request does not. The two jurisdictions share employee records, company structures, earning and deduction frameworks, and often the same promotion path, so a correction for one country's statutory rule can alter a shared calculation, eligibility group, or interface for the other — a break testers on one side will never see."
+      },
+      {
+        "type": "p",
+        "text": "The response is symmetrical evidence. For any change touching shared configuration, run the golden core for both jurisdictions, each against its own expected results — not against each other, because correct results legitimately differ — and record both outcomes separately. A pass on one side never substitutes for a pass on the other."
+      },
+      {
+        "type": "h2",
+        "text": "When regression fails"
+      },
+      {
+        "type": "p",
+        "text": "A regression failure is useful information at the cheapest possible moment, and should be handled like any other significant defect. Log it against the change batch, state the before-and-after behaviour with evidence, and route it through UAT defect triage for severity and ownership: a broken statutory calculation or stopped pay population outranks a cosmetic variance."
+      },
+      {
+        "type": "p",
+        "text": "Two rules protect the cycle. First, a fix for a regression failure restarts regression for the affected scope — the new fix is itself a change with its own blast radius, so the relevant tiers plus the golden core run again; a spot-check recreates the original mistake. Second, never let schedule pressure convert a failure into a verbal assurance: if the business accepts a known impact for go-live, record it with owner, workaround, and fix date."
+      },
+      {
+        "type": "h2",
+        "text": "Common mistakes"
+      },
+      {
+        "type": "p",
+        "text": "Most regression gaps come from habits that make retesting look done when it was only attempted."
+      },
+      {
+        "type": "accordion",
+        "label": "Six regression mistakes to avoid",
+        "items": [
+          {
+            "q": "Testing only the fix itself",
+            "a": "Confirming the corrected scenario passes proves the intention, not the impact. Always pair fix verification with the adjacent tier and the golden core, because the cost of a change is usually paid by a scenario nobody re-ran."
+          },
+          {
+            "q": "Retesting from memory instead of from a pack",
+            "a": "Memory-based retesting changes every time it runs and leaves no evidence. A maintained pack with stated data, steps, and expected results makes the proof repeatable whoever executes it."
+          },
+          {
+            "q": "Scoping by the size of the change",
+            "a": "A one-line rule change inside a shared calculation can affect every payslip, while a large isolated change affects almost nothing else. Scope by dependency and population, never by how big the request looked."
+          },
+          {
+            "q": "Checking that screens work instead of that pay is right",
+            "a": "In HCM the damaging regression is a wrong number behind a working screen. Pay scenarios must compare calculated results to expected results or a baseline, and every unexplained variance needs an answer."
+          },
+          {
+            "q": "Testing one jurisdiction and assuming the other",
+            "a": "Shared configuration means a fix for one country can regress the other. Run and record the golden core for both jurisdictions whenever shared logic is touched."
+          },
+          {
+            "q": "Spot-checking after a regression fix",
+            "a": "The fix for a regression failure is a new change with its own impact. Re-run the relevant tiers and the golden core in full; a spot-check repeats the exact error that allowed the regression through."
+          }
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Key Takeaways"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "Proving the fix worked is half the job; regression proves nothing else broke.",
+          "Scope by impact in three tiers: directly affected, adjacent, and the golden core.",
+          "Golden scenarios run for every significant change batch.",
+          "Build the pack incrementally from defect fixes and proven scenarios.",
+          "Automate the stable core; keep pay judgment with experienced people.",
+          "Cross-border: run and record regression for both jurisdictions separately.",
+          "A regression fix restarts regression — never close it with a spot-check."
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Frequently Asked Questions"
+      },
+      {
+        "type": "p",
+        "text": "How much regression is enough after a small change? Enough to cover its dependencies: the affected behaviour in depth, adjacent behaviour sharing its rules, and the golden core. Small describes the edit, not the impact."
+      },
+      {
+        "type": "p",
+        "text": "Should regression run before or during user acceptance testing? Both. A scoped run follows each change batch, and a full pack run precedes sign-off so acceptance rests on a system proven stable after its last changes."
+      },
+      {
+        "type": "p",
+        "text": "What belongs in the golden core? A joiner, a leaver, a transfer, a pay cycle, a correction, and key statutory and interface outputs — compact enough to run every time."
+      },
+      {
+        "type": "p",
+        "text": "Who should execute regression scenarios? A mix: implementers for technical checks, business testers who run payroll in real life for pay-result judgment — in cross-border work, named testers per jurisdiction."
+      },
+      {
+        "type": "h2",
+        "text": "Next Steps"
+      },
+      {
+        "type": "p",
+        "text": "Start with what you have: gather the scenarios that proved your critical payroll processes, write down their expected results, and name them your golden core. Agree the per-batch cadence and three-tier scoping with your test lead, and let every defect fix add scenarios to the pack."
+      },
+      {
+        "type": "quiz",
+        "label": "Check your understanding",
+        "questions": [
+          {
+            "q": "A team corrects an absence accrual rule. The corrected employee now accrues correctly, but no other scenarios were re-run. A week later, a different absence plan shows wrong balances. What was the core failure?",
+            "options": [
+              {
+                "text": "The original fix was coded incorrectly",
+                "correct": false,
+                "why": "The corrected case passed, so the fix itself worked as intended. The failure was the missing proof that shared accrual logic had not changed behaviour for the adjacent plan."
+              },
+              {
+                "text": "Only the fix was tested — adjacent behaviour and the golden core were never re-proved",
+                "correct": true,
+                "why": "Regression exists for exactly this pattern: a change passing in isolation while breaking behaviour that shares its rules. The adjacent tier and the core would have caught the wrong balances within the same batch."
+              },
+              {
+                "text": "The second absence plan needed its own separate project",
+                "correct": false,
+                "why": "No separate project was needed. The plans share configuration, so a scoped regression run at the time of the change was the proportionate response."
+              }
+            ]
+          },
+          {
+            "q": "A change is described as tiny — a single eligibility rule — but it sits inside a calculation used by every pay group. How should regression be scoped?",
+            "options": [
+              {
+                "text": "Lightly, because the change itself is small",
+                "correct": false,
+                "why": "Scope follows dependency and population, not the size of the edit. A small rule inside a shared calculation has one of the widest possible blast radii."
+              },
+              {
+                "text": "By impact: the affected behaviour in depth, adjacent scenarios sharing the calculation, and the full golden core",
+                "correct": true,
+                "why": "Change-impact analysis, not request size, produces a defensible scope. The shared calculation puts adjacent behaviour and the core squarely in scope."
+              },
+              {
+                "text": "By retesting the whole system, because anything less is unsafe",
+                "correct": false,
+                "why": "Retesting everything for every change is unsustainable and quickly stops happening. The three-tier, risk-based scope is the disciplined middle path that still protects the core."
+              }
+            ]
+          },
+          {
+            "q": "In a cross-border programme, a statutory fix for one jurisdiction passes all its regression scenarios. What remains before the batch can be called clean?",
+            "options": [
+              {
+                "text": "Nothing — a pass on the changed side covers the shared configuration",
+                "correct": false,
+                "why": "Shared configuration is precisely the risk. A pass in one jurisdiction says nothing about calculated results in the other, where the break would be invisible to the first team."
+              },
+              {
+                "text": "A courtesy review of the other jurisdiction's release notes",
+                "correct": false,
+                "why": "Reviewing notes is not testing. The other side needs executed scenarios with compared results, recorded separately from the first jurisdiction's pass."
+              },
+              {
+                "text": "The golden core run and recorded separately for the other jurisdiction, with its own expected results",
+                "correct": true,
+                "why": "Symmetrical evidence is the standard: both jurisdictions run the core against their own expected results, and both outcomes are stated plainly before the batch is called clean."
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
     "slug": "uat-readiness-checklist",
     "title": "UAT Readiness Checklist: Are You Actually Ready to Start Testing?",
     "excerpt": "Use this UAT readiness checklist before HCM testing starts: scope, data, environment, people, and process gates that must pass first.",
