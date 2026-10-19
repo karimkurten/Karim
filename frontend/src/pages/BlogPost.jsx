@@ -4,7 +4,7 @@ import Header from '../components/Header';
 import SEO, { buildBreadcrumb } from '../components/SEO';
 import { InteractiveBlock, INTERACTIVE_TYPES } from '../components/InteractiveWidgets';
 import NotFound from './NotFound';
-import { Calendar, Clock, ArrowLeft, ExternalLink, Tag, Share2, Link2, Check, FileText } from 'lucide-react';
+import { Calendar, Clock, ArrowLeft, ArrowRight, ExternalLink, Tag, Share2, Link2, Check, FileText } from 'lucide-react';
 import PayhipPromoBanner from '../components/PayhipPromoBanner';
 import NewsletterSignup from '../components/NewsletterSignup';
 import LeadMagnetDownload from '../components/LeadMagnetDownload';
@@ -255,7 +255,85 @@ const renderInline = (text) => {
   return parts;
 };
 
+// End-of-article call to action. Some posts close with an h2 reading "CTA"
+// and/or a paragraph carrying a markdown (or bare) link to the contact
+// section. mergeCtaBlocks folds those raw blocks into a single 'cta' block,
+// rendered by CtaCard as a styled card with a real button instead of a plain
+// heading and a raw-link paragraph.
+const CTA_HEADING_PATTERN = /^\s*cta\s*$/i;
+const CONTACT_LINK_PATTERN = /karimchaouki\.com\/#contact/;
+
+const parseCtaText = (text) => {
+  const str = (typeof text === 'string' ? text : '').replace(/^\s*>\s*/, '');
+  const md = str.match(/\[([^\]]+)\]\(([^)\s]+)\)/);
+  const bare = str.match(/(Contact Karim)\s*\((https?:[^)\s]+)\)/);
+  const match = md || bare;
+  if (!match) {
+    return { copy: str, label: 'Contact Karim', url: '/#contact' };
+  }
+  const label = match[1];
+  const url = match[2];
+  const copy = (str.slice(0, match.index) + label + str.slice(match.index + match[0].length))
+    .replace(/\s+/g, ' ')
+    .trim();
+  const href = url.startsWith(SITE_URL) ? url.slice(SITE_URL.length) || '/' : url;
+  return { copy, label, url: href };
+};
+
+const CtaCard = ({ text }) => {
+  const { copy, label, url } = parseCtaText(text);
+  const labelIndex = copy.indexOf(label);
+  const before = labelIndex >= 0 ? copy.slice(0, labelIndex) : copy;
+  const after = labelIndex >= 0 ? copy.slice(labelIndex + label.length) : '';
+  return (
+    <aside className="mt-12 mb-4 rounded-2xl bg-gradient-to-br from-slate-900 to-blue-900 px-8 py-10 text-white shadow-xl">
+      <p className="text-xs font-semibold uppercase tracking-[0.2em] text-blue-300 mb-3">
+        Work With Karim
+      </p>
+      <p className="text-lg leading-relaxed text-slate-100">
+        {before}
+        <strong className="font-semibold text-white">{label}</strong>
+        {after}
+      </p>
+      <a
+        href={url}
+        className="mt-6 inline-flex items-center gap-2 rounded-lg bg-white px-6 py-3 font-semibold text-slate-900 transition-colors hover:bg-blue-100"
+      >
+        {label}
+        <ArrowRight size={18} aria-hidden="true" />
+      </a>
+    </aside>
+  );
+};
+
+const mergeCtaBlocks = (blocks) => {
+  const out = [];
+  for (let i = 0; i < blocks.length; i++) {
+    const block = blocks[i];
+    const next = blocks[i + 1];
+    if (
+      block.type === 'h2' &&
+      CTA_HEADING_PATTERN.test(block.text || '') &&
+      next &&
+      next.type === 'p'
+    ) {
+      out.push({ type: 'cta', text: next.text });
+      i++;
+      continue;
+    }
+    if (block.type === 'p' && CONTACT_LINK_PATTERN.test(block.text || '')) {
+      out.push({ type: 'cta', text: block.text });
+      continue;
+    }
+    out.push(block);
+  }
+  return out;
+};
+
 const ContentBlock = ({ block }) => {
+  if (block.type === 'cta') {
+    return <CtaCard text={block.text} />;
+  }
   if (block.type === 'p') {
     return <p className="text-[#475569] leading-relaxed mb-5">{renderInline(block.text)}</p>;
   }
@@ -399,6 +477,7 @@ export default function BlogPost() {
   // (see Track B). The "More Articles" section is hidden when the payload
   // carries no related posts rather than rendering a broken strip.
   const related = post.related || [];
+  const contentBlocks = mergeCtaBlocks(post.content || []);
 
   const postSchema = {
     '@context': 'https://schema.org',
@@ -507,7 +586,7 @@ export default function BlogPost() {
               )}
 
               <div className="prose max-w-none">
-                {(post.content || []).map((block, idx) => (
+                {contentBlocks.map((block, idx) => (
                   <React.Fragment key={`${post.slug}-block-${idx}`}>
                     <ContentBlock block={block} />
                     {idx === 1 && <PayhipPromoBanner post={post} placement="inline" />}
@@ -588,3 +667,4 @@ export default function BlogPost() {
     </>
   );
 }
+
