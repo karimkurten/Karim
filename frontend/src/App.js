@@ -42,7 +42,8 @@ const Portfolio = () => (
   </>
 );
 
-// Site-wide call to action. Blog articles render their own in-article CTA
+// Site-wide call to action ("Work With Karim" band). Blog articles render
+// their own in-article CTA
 // card and the homepage closes with the full Contact section, so the band
 // is shown on every other page.
 const SiteCta = () => {
