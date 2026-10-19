@@ -306,6 +306,9 @@ const CtaCard = ({ text }) => {
   );
 };
 
+const DEFAULT_CTA_TEXT =
+  'Planning an implementation \u2014 or steadying one that is already in flight? [Contact Karim](https://www.karimchaouki.com/#contact) to discuss your project, your risks, or your timeline.';
+
 const mergeCtaBlocks = (blocks) => {
   const out = [];
   for (let i = 0; i < blocks.length; i++) {
@@ -478,6 +481,9 @@ export default function BlogPost() {
   // carries no related posts rather than rendering a broken strip.
   const related = post.related || [];
   const contentBlocks = mergeCtaBlocks(post.content || []);
+  const displayBlocks = contentBlocks.some((b) => b.type === 'cta')
+    ? contentBlocks
+    : [...contentBlocks, { type: 'cta', text: DEFAULT_CTA_TEXT }];
 
   const postSchema = {
     '@context': 'https://schema.org',
@@ -586,7 +592,7 @@ export default function BlogPost() {
               )}
 
               <div className="prose max-w-none">
-                {contentBlocks.map((block, idx) => (
+                {displayBlocks.map((block, idx) => (
                   <React.Fragment key={`${post.slug}-block-${idx}`}>
                     <ContentBlock block={block} />
                     {idx === 1 && <PayhipPromoBanner post={post} placement="inline" />}
