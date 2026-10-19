@@ -1,6 +1,7 @@
 import React, { lazy, Suspense } from 'react';
 import '@/App.css';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
+import { ArrowRight } from 'lucide-react';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import ValueProposition from './components/ValueProposition';
@@ -41,6 +42,37 @@ const Portfolio = () => (
   </>
 );
 
+// Site-wide call to action. Blog articles render their own in-article CTA
+// card and the homepage closes with the full Contact section, so the band
+// is shown on every other page.
+const SiteCta = () => {
+  const { pathname } = useLocation();
+  if (pathname === '/' || /^\/blog\/.+/.test(pathname)) {
+    return null;
+  }
+  return (
+    <section className="px-6 py-12">
+      <div className="max-w-6xl mx-auto rounded-2xl bg-gradient-to-br from-slate-900 to-blue-900 px-8 py-10 text-white shadow-xl">
+        <p className="text-xs font-semibold uppercase tracking-[0.2em] text-blue-300 mb-3">
+          Work With Karim
+        </p>
+        <p className="text-lg leading-relaxed text-slate-100">
+          Planning an implementation — or steadying one that is already in flight?{' '}
+          <strong className="font-semibold text-white">Contact Karim</strong> to discuss your
+          project, your risks, or your timeline.
+        </p>
+        <a
+          href="/#contact"
+          className="mt-6 inline-flex items-center gap-2 rounded-lg bg-white px-6 py-3 font-semibold text-slate-900 transition-colors hover:bg-blue-100"
+        >
+          Contact Karim
+          <ArrowRight size={18} aria-hidden="true" />
+        </a>
+      </div>
+    </section>
+  );
+};
+
 function App() {
   return (
     <div className="App">
@@ -61,6 +93,7 @@ function App() {
           <Route path="*" element={<NotFound />} />
         </Routes>
         </Suspense>
+        <SiteCta />
         <CookieConsent />
       </BrowserRouter>
     </div>
@@ -68,3 +101,4 @@ function App() {
 }
 
 export default App;
+
