@@ -1,5 +1,310 @@
 [
   {
+    "slug": "what-happens-during-hcm-implementation",
+    "title": "What Happens During an HCM Implementation?",
+    "excerpt": "What happens during an HCM implementation? A phase-by-phase walk through discovery, design, build, testing, go-live and hypercare, and your role in each.",
+    "publishedAt": "2026-10-21",
+    "readingTime": "8 min read",
+    "cover": "/images/blog/what-happens-during-hcm-implementation-cover.webp",
+    "tags": [
+      "HCM",
+      "Implementation",
+      "Project Management",
+      "Go-Live"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "Many teams sign a contract expecting software delivery and discover, weeks in, that they have joined a business transformation. An HCM implementation replaces the system that pays people, records time, administers benefits, and reports headcount — so almost every HR and payroll process is examined and rebuilt along the way."
+      },
+      {
+        "type": "p",
+        "text": "This article walks through what actually happens, phase by phase: the work, the decisions it demands, and what your team experiences at each stage. It follows the arc described in the complete guide to HCM implementation, in plain sequence."
+      },
+      {
+        "type": "h2",
+        "text": "The journey at a glance"
+      },
+      {
+        "type": "p",
+        "text": "An implementation moves through eight recognisable phases: discovery, design, build and configuration, data migration, testing, training and change, cutover and go-live, and hypercare. The phases overlap — migration preparation starts during design, training planning during build — but the logic is sequential: you cannot configure well what you have not designed, or test credibly what you have not built."
+      },
+      {
+        "type": "p",
+        "text": "Two rhythms run underneath. The project rhythm is governance: plans, milestones, status reporting, risk management, and sign-offs at phase gates. The human rhythm is attention: the same small group of HR, payroll, and operations experts is needed at every stage, alongside their normal jobs."
+      },
+      {
+        "type": "img",
+        "src": "/images/blog/what-happens-during-hcm-implementation-1.svg",
+        "alt": "Implementation journey timeline: eight phase cards from discovery to hypercare, each showing what happens and who is most involved, connected in sequence with gate sign-offs between phases.",
+        "caption": "Implementation journey: what happens in each phase, and who is involved."
+      },
+      {
+        "type": "steps",
+        "label": "The implementation in eight phases",
+        "intro": "Use these eight phases as a map for what your programme will ask of you, and when.",
+        "items": [
+          {
+            "title": "Discovery: map how work works today",
+            "text": "Workshops and interviews document current processes, policies, pain points, and reporting needs, so the programme starts from how work actually happens, not how manuals say it should."
+          },
+          {
+            "title": "Design: decide how work will work tomorrow",
+            "text": "Future-state processes, pay and time rules, approval flows, and security roles are designed and signed off. Every decision made here becomes a configuration instruction later."
+          },
+          {
+            "title": "Build and configuration: construct the future state",
+            "text": "Consultants configure the designed rules, structures, and workflows, then demonstrate them in playback sessions so the client team can correct misunderstandings while change is still cheap."
+          },
+          {
+            "title": "Data migration: move the people record",
+            "text": "Employee, pay, time, and history data is extracted, cleansed, mapped, loaded in trial cycles, and reconciled until totals and samples agree between the old system and the new one."
+          },
+          {
+            "title": "Testing and UAT: prove it before you trust it",
+            "text": "System and integration testing verify the build technically, then business users run realistic scenarios in user acceptance testing and formally sign off that the system handles their real work."
+          },
+          {
+            "title": "Training and change: prepare people, not just systems",
+            "text": "Role-based training, communications, and manager preparation help every affected employee understand what changes, when, and where to get help."
+          },
+          {
+            "title": "Cutover and go-live: switch with discipline",
+            "text": "A timed cutover plan freezes changes, completes final data loads and checks, and switches the organisation to the new system, usually aligned to a pay cycle boundary."
+          },
+          {
+            "title": "Hypercare and transition: stabilise, then hand over",
+            "text": "Intensive support resolves early issues quickly, knowledge transfers to the support team, and the programme closes once the system is stable in normal operation."
+          }
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Discovery and design: learning before building"
+      },
+      {
+        "type": "p",
+        "text": "Discovery is an investigation, not a sales exercise. Through structured workshops — following the approach in the discovery workshops guide — the team interviews HR, payroll, time, benefits, finance, and operations stakeholders. They collect policies, collective agreements where they apply, pay calendars, report samples, and the workarounds every mature process accumulates. Expect probing questions about exceptions: the location with a different overtime rule, the pay code nobody can explain, the spreadsheet that quietly feeds finance each month. Surfacing them now is the cheapest risk reduction available."
+      },
+      {
+        "type": "p",
+        "text": "Design converts that understanding into decisions. Working process by process — hire to retire — the team agrees how each will operate: which approvals are required, which rules are automated, which reports replace which spreadsheets, and who may see which data. Cross-border programmes carry extra weight here, because US and Canada payroll differ in tax treatment, statutory reporting, and year-end forms. The phase ends with signed design documents: configuration follows them, and changing them later costs time."
+      },
+      {
+        "type": "h2",
+        "text": "Build, configuration, and data migration"
+      },
+      {
+        "type": "p",
+        "text": "Build is where design becomes a working system. Consultants configure organisation structures, jobs, pay elements, time rules, absence plans, workflows, and security roles, working in cycles. After each cycle, playback sessions demonstrate the configured processes, and the client team confirms or corrects them. Integrations take shape here too — connections to finance, time devices, benefits carriers, and identity systems — each with a design, build, and test path."
+      },
+      {
+        "type": "p",
+        "text": "Data migration runs in parallel and is more craft than clerical work, as the HCM data migration guide sets out. The team extracts legacy data, maps each field to its new home, and confronts quality problems the old system tolerated: missing values, duplicates, codes meaning different things in different locations. Trial loads are reconciled field by field and in totals, each cycle cleaner than the last. The client role is decisive — only they can judge a cleansed value."
+      },
+      {
+        "type": "h2",
+        "text": "Testing, training, and readiness"
+      },
+      {
+        "type": "p",
+        "text": "Testing proceeds in layers. Consultants first test configuration against the design, then integrations end to end, then payroll in parallel runs comparing new-system results with the legacy system for the same period. Differences are investigated to the cent and to the rule: a variance is either a legacy error finally exposed, a configuration defect, or a data problem — each demanding a different fix."
+      },
+      {
+        "type": "p",
+        "text": "User acceptance testing, explained fully in what is UAT in an HCM implementation, hands the system to the business. HR and payroll users execute realistic scenarios — a hire, a transfer, a retroactive correction, a termination with final pay — and log defects by severity. In parallel, training and change prepares the wider organisation: managers learn approvals, employees learn self-service, and communications explain what changes and why, in both languages where the workforce is bilingual."
+      },
+      {
+        "type": "h2",
+        "text": "Cutover, go-live, and hypercare"
+      },
+      {
+        "type": "p",
+        "text": "Cutover is the controlled switch. A detailed plan sequences the final steps: freeze legacy changes, extract and load final data, run reconciliations, configure production settings, and verify access — each step timed and owned, as the HCM go-live checklist describes. Go-live is usually aligned to a pay period boundary so the first pay run is clean. A formal go or no-go decision, taken against agreed readiness criteria, authorises the switch; postponement is legitimate, not failure."
+      },
+      {
+        "type": "p",
+        "text": "Hypercare follows: intensive support through the first pay cycles, with daily triage and rapid fixes. Issues are logged, categorised, and burned down visibly. As volume falls and stability is proved, support transitions to the normal service model, open items are handed over with context, and the programme closes with lessons learned."
+      },
+      {
+        "type": "h2",
+        "text": "Who does what: roles on both sides"
+      },
+      {
+        "type": "p",
+        "text": "No implementation succeeds as a vendor-only effort. The partner brings a project manager, functional consultants per module, a migration specialist, integration developers, and a change and training lead. Their craft is the system and the method, exercised through the discipline in project management for enterprise implementations."
+      },
+      {
+        "type": "p",
+        "text": "The client brings what no partner can supply: authority and knowledge. An executive sponsor removes obstacles and owns the business case. A client project manager coordinates internal people and decisions. Subject-matter experts from HR, payroll, time, and benefits answer design questions, cleanse data, and test — their judgement is the programme's ground truth. IT provides environments and security reviews, finance confirms costing outcomes. When any seat sits empty, its phase slows."
+      },
+      {
+        "type": "img",
+        "src": "/images/blog/what-happens-during-hcm-implementation-2.svg",
+        "alt": "Week-in-the-life swimlane diagram: three lanes for the project team, client team, and employees across five weekdays, showing design playback, data cleansing, UAT, training previews, and status reviews in a mid-programme week.",
+        "caption": "A week in the life: project team, client team, and employee experience side by side."
+      },
+      {
+        "type": "h2",
+        "text": "What it feels like for the client team"
+      },
+      {
+        "type": "p",
+        "text": "For the client team, the honest summary is: your day job, plus a second job that peaks at predictable moments. Discovery and design feel like meetings and decisions. Build feels quieter, then testing reverses the load — UAT and parallel runs are the most demanding weeks, arriving while normal payroll deadlines continue. Plan backfill for those peaks."
+      },
+      {
+        "type": "p",
+        "text": "Emotionally, most programmes follow a recognisable curve: early optimism, a difficult middle when defects and data problems surface together, then growing confidence as reconciliations pass and training lands. Naming that curve helps teams read the middle correctly — as the process working, not failing. Programmes that struggle are rarely defeated by software; they are defeated by unmade decisions, unavailable experts, and surprises visible months earlier."
+      },
+      {
+        "type": "h2",
+        "text": "Common mistakes"
+      },
+      {
+        "type": "p",
+        "text": "Most implementation pain is predictable — and preventable."
+      },
+      {
+        "type": "accordion",
+        "label": "Six implementation mistakes to avoid",
+        "items": [
+          {
+            "q": "Treating discovery as a formality",
+            "a": "Skipping or rushing discovery leaves exceptions, workarounds, and local rules undiscovered until configuration or testing exposes them at far higher cost. Interview widely, ask about exceptions deliberately, and document how work actually happens."
+          },
+          {
+            "q": "Leaving design decisions unsigned or ambiguous",
+            "a": "Configuration follows design documents literally. A vague or unsigned decision returns as a defect, a change request, or an argument at go-live. Decide explicitly, record the decision and its owner, and sign it off."
+          },
+          {
+            "q": "Under-resourcing the client team",
+            "a": "The same HR and payroll experts are needed for design, data cleansing, and testing while their operational work continues. Without backfill and protected time, every phase queue forms behind the same few people."
+          },
+          {
+            "q": "Starting data cleansing too late",
+            "a": "Legacy data always contains duplicates, gaps, and inconsistent codes. Beginning cleansing during migration loads compresses the hardest work into the least forgiving phase. Start during design, and reconcile every trial load."
+          },
+          {
+            "q": "Treating UAT as a rubber stamp",
+            "a": "UAT that only runs happy-path scenarios signs off a system the real population will break in its first week. Test exceptions, retroactive changes, and cross-border cases, and log defects honestly by severity."
+          },
+          {
+            "q": "Skipping the go or no-go discipline",
+            "a": "Going live because the date arrived, rather than because readiness criteria were met, converts manageable defects into payroll incidents. Use agreed criteria, take the decision formally, and treat postponement as a legitimate outcome."
+          }
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Key Takeaways"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "Eight phases: discovery, design, build, data migration, testing, training and change, cutover and go-live, and hypercare.",
+          "Discovery surfaces exceptions early; signed design decisions become configuration instructions.",
+          "Migration and testing prove the programme — reconcile every load, test exceptions.",
+          "Client experts, decisions, and availability matter as much as the partner's consultants.",
+          "Go-live follows readiness criteria, not the calendar; hypercare stabilises before handover."
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Frequently Asked Questions"
+      },
+      {
+        "type": "p",
+        "text": "How long does an HCM implementation usually take? It depends on scope, populations, countries, and integration count, so any single figure would mislead. The sequence is predictable, though: phases and testing cycles cannot be compressed beyond a point, and data quality usually decides the pace."
+      },
+      {
+        "type": "p",
+        "text": "What will be asked of our HR and payroll team? Expect workshops and design decisions early, data cleansing in the middle, and intensive testing later — alongside normal duties. UAT and parallel runs are the busiest periods, so plan them with backfill."
+      },
+      {
+        "type": "p",
+        "text": "What is the difference between system testing and UAT? System testing verifies the build against the design, usually led by the implementation team. UAT hands realistic scenarios to HR, payroll, and operations users, who confirm the system handles real work and sign off formally."
+      },
+      {
+        "type": "p",
+        "text": "What happens if we are not ready at go-live? The go or no-go decision exists for this moment. If criteria are unmet — unreconciled data, critical defects, untested payroll — postponing is the professional choice. A delayed go-live is recoverable; a failed first pay run is not."
+      },
+      {
+        "type": "h2",
+        "text": "Next Steps"
+      },
+      {
+        "type": "p",
+        "text": "If an implementation is on your horizon, start before the signatures dry: name your sponsor and client project manager, identify the experts each phase will need, and inventory your data quality and undocumented workarounds honestly. Those moves cost little now and save disproportionately later. If you are mid-programme, locate yourself on the phase map above and ask what your current phase really asks of your team. Join the discussion"
+      },
+      {
+        "type": "quiz",
+        "label": "Check your understanding",
+        "questions": [
+          {
+            "q": "During discovery, the team uncovers an undocumented local overtime rule and a spreadsheet that feeds finance monthly. What should happen?",
+            "options": [
+              {
+                "text": "Note them as interesting background and continue with the standard design",
+                "correct": false,
+                "why": "Undocumented rules and shadow processes are exactly what discovery exists to surface. Designing around the standard process alone guarantees they reappear as defects or manual workarounds after go-live."
+              },
+              {
+                "text": "Document both, and bring them into design so the rule is configured and the report is replaced deliberately",
+                "correct": true,
+                "why": "Discovery findings become design inputs. The overtime rule needs a configuration decision, and the finance feed needs a designed report or integration — decided while change is still cheap."
+              },
+              {
+                "text": "Ask the location to drop the rule so the programme stays simple",
+                "correct": false,
+                "why": "Programmes do not get to abolish business or statutory rules for convenience. The rule may be reviewed on its merits, but silently dropping it creates payroll and compliance risk."
+              }
+            ]
+          },
+          {
+            "q": "A parallel payroll run shows a small net-pay difference for a group of employees. Configuration looks correct. What is the right response?",
+            "options": [
+              {
+                "text": "Accept the difference if the total payroll variance looks small overall",
+                "correct": false,
+                "why": "Parallel testing compares results employee by employee. A small net difference can hide a systematic rule error that grows, and totals can net off opposing mistakes."
+              },
+              {
+                "text": "Investigate to the rule: the cause is a legacy error, a configuration defect, or a data problem, and each needs a different fix",
+                "correct": true,
+                "why": "Every variance has a cause in one of those three places, and the fix differs for each. Parallel runs earn their value only when differences are explained, not averaged away."
+              },
+              {
+                "text": "Adjust the test data until the two systems agree",
+                "correct": false,
+                "why": "Changing data to force agreement destroys the evidence the test was run to produce. Data problems are fixed at the source and reloaded, never edited quietly to make a run pass."
+              }
+            ]
+          },
+          {
+            "q": "At the go or no-go review, data reconciliation is incomplete and two critical defects remain open, but the planned date is next week. What is the professional recommendation?",
+            "options": [
+              {
+                "text": "Go live on schedule, because the date was communicated widely",
+                "correct": false,
+                "why": "A communicated date is not a readiness criterion. Going live with unreconciled data and critical defects converts manageable problems into payroll incidents affecting every employee."
+              },
+              {
+                "text": "Fix everything overnight and proceed without re-testing",
+                "correct": false,
+                "why": "Unretested fixes in payroll configuration are a classic source of new defects. Changes need verification, especially this close to a pay run."
+              },
+              {
+                "text": "Recommend postponement against the agreed criteria, with a revised plan to close reconciliation and defects",
+                "correct": true,
+                "why": "The go or no-go decision exists to protect the first live pay run. Postponement against explicit criteria is a legitimate, recoverable outcome; a failed first payroll is far harder to repair."
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
     "slug": "test-data-management-hcm",
     "title": "Test Data Management for HCM Projects: Realistic, Private, and Under Control",
     "excerpt": "Test data management for HCM projects: build realistic, private, version-controlled data for every test phase, without copying production blindly.",
