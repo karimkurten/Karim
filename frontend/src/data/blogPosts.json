@@ -1,5 +1,306 @@
 [
   {
+    "slug": "hcm-implementation-phases",
+    "title": "What Are the Phases of an HCM Implementation?",
+    "excerpt": "The eight phases of an HCM implementation defined: purpose, entry and exit criteria, key activities, deliverables, phase gates, and who owns each phase.",
+    "publishedAt": "2026-10-22",
+    "readingTime": "8 min read",
+    "cover": "/images/blog/hcm-implementation-phases-cover.webp",
+    "tags": [
+      "HCM",
+      "Implementation",
+      "Project Management",
+      "Phase Gates"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "Every credible HCM implementation, whatever the platform or partner, moves through the same eight phases. Vendors rename them; the logic does not change: each phase answers a specific question, produces specific deliverables, and earns the right to proceed at a formal gate. This reference defines each phase on those terms — purpose, entry criteria, key activities, deliverables, exit criteria, and owner."
+      },
+      {
+        "type": "p",
+        "text": "Use it alongside the complete guide to HCM implementation and the narrative companion, what happens during an HCM implementation. Where that article tells the story, this one draws the control lines: a phase ends on evidenced exit criteria and a recorded gate decision — not on its calendar slot."
+      },
+      {
+        "type": "h2",
+        "text": "How to read a phase: purpose, criteria, gate"
+      },
+      {
+        "type": "p",
+        "text": "Three ideas govern every phase below. Entry criteria state what must be true before work starts; skipping them borrows trouble from later phases. Exit criteria state what must be true before the phase can close — evidence filed and reviewed, not progress reported. Between phases sits the gate: a short formal review where sponsor and phase leads test the evidence and record one decision — proceed, proceed with conditions, or hold. Each phase has one accountable owner, so a stalled deliverable always has a name attached."
+      },
+      {
+        "type": "img",
+        "src": "/images/blog/hcm-implementation-phases-1.svg",
+        "alt": "Phase map diagram: eight HCM implementation phases in sequence from initiation and mobilization to hypercare and closure, each card showing the phase purpose and key deliverable, connected by arrows with phase-gate markers between phases.",
+        "caption": "Phase map: purpose and key deliverable for each of the eight phases, with gates between them."
+      },
+      {
+        "type": "steps",
+        "label": "The eight phases at a glance",
+        "intro": "Each phase answers one question. Its gate decides whether the answer is good enough to build on.",
+        "items": [
+          {
+            "title": "Initiation and Mobilization: are we set up to succeed?",
+            "text": "Scope, governance, team, and plan are established and the charter is signed, so the programme starts with authority and a baseline rather than enthusiasm alone."
+          },
+          {
+            "title": "Discovery: how does work work today?",
+            "text": "Current processes, policies, exceptions, and data realities are documented and agreed, giving design a factual starting point instead of assumptions."
+          },
+          {
+            "title": "Design: how will work work tomorrow?",
+            "text": "Future-state processes and rules are decided process by process and signed off, converting understanding into instructions the build can follow literally."
+          },
+          {
+            "title": "Build and Configuration: does the system match the design?",
+            "text": "The signed design is configured in cycles and demonstrated in playbacks, so misunderstandings surface while correction is still inexpensive."
+          },
+          {
+            "title": "Data Migration and Integration: can the record and the connections be trusted?",
+            "text": "People data is cleansed, mapped, loaded in reconciled trial cycles, and integrations are built and proven, so the new system starts from a trustworthy record."
+          },
+          {
+            "title": "Testing and UAT: does it handle real work?",
+            "text": "Layered testing verifies the build technically, and business users then prove realistic scenarios in UAT and sign off formally against agreed criteria."
+          },
+          {
+            "title": "Training and Cutover: are people ready, and is the switch controlled?",
+            "text": "Role-based training and communications prepare the organisation, and a timed cutover plan with a formal go or no-go decision governs the switch itself."
+          },
+          {
+            "title": "Hypercare and Closure: is it stable, and is the handover complete?",
+            "text": "Intensive support carries the first live cycles, issues are burned down visibly, and the programme closes only when support handover and lessons learned are done."
+          }
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Phase 1: Initiation and Mobilization"
+      },
+      {
+        "type": "p",
+        "text": "Purpose. Convert a signed contract into a governed programme, with scope, decision rights, team, and plan set first. Entry criteria: contract signed, sponsor named, funding and internal availability confirmed. Key activities: charter and scope statement; governance and escalation agreement; integrated plan and milestones; logs opened; environments and access confirmed. Deliverables: signed charter, project plan, governance model, RAID log. Exit criteria / gate: sponsor signs the charter, both project managers in post, plan baseline agreed. Owner: sponsor (the decision); project managers (the artefacts)."
+      },
+      {
+        "type": "h2",
+        "text": "Phase 2: Discovery"
+      },
+      {
+        "type": "p",
+        "text": "Purpose. Establish a factual record of how HR, payroll, time, and benefits work operates today. Entry criteria: charter signed, participants named and scheduled, policies and pay calendars available. Key activities: structured workshops and interviews, run as set out in the discovery workshops guide; deliberate exception hunting; a first honest data-quality assessment. Deliverables: current-state record, findings and exceptions log, requirements inventory. Exit criteria / gate: stakeholders confirm the record accurate and complete; open questions carry owners and dates. Owner: lead consultant (the method); client experts (the truth of the record)."
+      },
+      {
+        "type": "h2",
+        "text": "Phase 3: Design"
+      },
+      {
+        "type": "p",
+        "text": "Purpose. Decide, process by process, how work will operate in the new system, in terms configuration can follow literally. Entry criteria: discovery gate passed, participants holding decision authority, requirements baselined. Key activities: future-state design of processes, pay and time rules, and security; fit-gap analysis, each gap given a recorded disposition — configure, adapt the process, or accept a workaround. Cross-border designs add weight where US and Canadian payroll rules diverge. Deliverables: signed design documents, decision log, updated scope baseline. Exit criteria / gate: accountable owners sign; anything unsigned is listed as an explicit risk. Owner: business process owners (decisions); consultants (documents)."
+      },
+      {
+        "type": "h2",
+        "text": "Phase 4: Build and Configuration"
+      },
+      {
+        "type": "p",
+        "text": "Purpose. Construct the designed future state in the system, in cycles. Entry criteria: signed design for the cycle, environments available, standards agreed. Key activities: configuring structures, pay elements, time rules, absence plans, workflows, and security roles; playback sessions after each cycle, where the client team validates the build against the design while correction is cheap. Deliverables: configured build per cycle, playback records, configuration workbook. Exit criteria / gate: client confirms through playback that the build matches the signed design; deviations logged as defects or change requests. Owner: functional consultants (build); client project manager (playback confirmation)."
+      },
+      {
+        "type": "h2",
+        "text": "Phase 5: Data Migration and Integration"
+      },
+      {
+        "type": "p",
+        "text": "Purpose. Move the people record accurately, and connect the new system reliably to finance, time capture, benefits, and identity services. Entry criteria: data sources inventoried, field mapping begun, cleansing assigned to named data owners. Key activities: extraction, cleansing, mapping, trial loads; reconciliation of totals and samples per load; build and end-to-end testing of each interface. Client experts alone can judge cleansed values — their availability is a real entry condition. Deliverables: mapping specifications, reconciled load reports, proven interfaces. Exit criteria / gate: final trial load reconciles within agreed tolerances; integrations pass end-to-end testing. Owner: migration lead (the cycles); client data owners (the values)."
+      },
+      {
+        "type": "h2",
+        "text": "Phase 6: Testing and UAT"
+      },
+      {
+        "type": "p",
+        "text": "Purpose. Prove, in layers, that the configured system and its data handle real work correctly. Entry criteria: build gate passed, test data and scenarios prepared, testers named with protected time — the full entry set is in the UAT readiness checklist. Key activities: system and integration testing against the design; parallel payroll runs compared employee by employee against legacy; user acceptance testing on realistic scenarios — hires, transfers, retroactive corrections, terminations — with defects logged by severity. Deliverables: test evidence, defect log, parallel-run reconciliation, UAT sign-off. Exit criteria / gate: exit thresholds met, no critical defects open, business owners sign UAT formally. Owner: test lead (the process); business owners (the sign-off)."
+      },
+      {
+        "type": "h2",
+        "text": "Phase 7: Training and Cutover"
+      },
+      {
+        "type": "p",
+        "text": "Purpose. Prepare people for the change, then execute the switch. Entry criteria: UAT sign-off in place, training audiences and materials defined, cutover plan drafted, fully owned and timed. Key activities: role-based training; targeted communications; a rehearsed cutover sequence — data freeze, final loads, reconciliations, access verification; and the formal go or no-go review against the readiness criteria in the HCM go-live checklist, aligned to a pay period boundary. Deliverables: training records, signed cutover plan, recorded go or no-go decision. Exit criteria / gate: readiness criteria met and the decision is go; a no-go is a legitimate outcome, not a failure. Owner: change lead (readiness); sponsor (the decision)."
+      },
+      {
+        "type": "h2",
+        "text": "Phase 8: Hypercare and Closure"
+      },
+      {
+        "type": "p",
+        "text": "Purpose. Stabilise the new system live, transfer knowledge to the standing support team, and close the programme cleanly. Entry criteria: go-live has occurred; hypercare triage and severity definitions are active from day one. Key activities: daily issue triage through the first pay cycles; monitoring of first live payrolls and interfaces; knowledge-transfer sessions; a lessons-learned review. Deliverables: issue burn-down record, support handover pack, closure report. Exit criteria / gate: issue volume and severity meet the agreed exit thresholds, support accepts handover in writing, sponsor signs closure. Owner: support lead (live stability); project managers (closure)."
+      },
+      {
+        "type": "img",
+        "src": "/images/blog/hcm-implementation-phases-2.svg",
+        "alt": "Phase gate criteria diagram: entry criteria and exit criteria panels feeding a gate review, with three decision outcomes — proceed, proceed with conditions, and hold — each with its meaning.",
+        "caption": "Phase gate criteria: entry, exit, and the three decision outcomes."
+      },
+      {
+        "type": "h2",
+        "text": "How the phases overlap"
+      },
+      {
+        "type": "p",
+        "text": "Phases are gates, not walls. Cleansing begins during design; integration build and training planning overlap configuration and testing. What the gate model forbids is not overlap but dependency violation: configuration built on unsigned design, or UAT run against an unreconciled load, converts parallel working into rework. Work may start early only where its own entry criteria are met; the gate review tests that claim."
+      },
+      {
+        "type": "h2",
+        "text": "Common mistakes"
+      },
+      {
+        "type": "p",
+        "text": "Programmes repeat familiar mistakes at predictable gates."
+      },
+      {
+        "type": "accordion",
+        "label": "Six phase and gate mistakes to avoid",
+        "items": [
+          {
+            "q": "Treating the gate as a calendar event",
+            "a": "A gate held because the date arrived, with exit criteria waived verbally, removes the only mechanism that stops weak work becoming the next phase foundation. Review evidence, record the decision, and let Hold be a real option."
+          },
+          {
+            "q": "Starting design before discovery closes",
+            "a": "Designing from assumptions and sales material means the exceptions discovery would have found are instead found in configuration or UAT, where each correction costs more and disrupts signed work."
+          },
+          {
+            "q": "Signing design documents without decision authority in the room",
+            "a": "A signature from someone who cannot bind the business is revisited the first time it bites. Design sign-off must come from the accountable process owner, with dissent recorded rather than postponed."
+          },
+          {
+            "q": "Letting data migration start at the build gate",
+            "a": "Migration treated as a late technical task compresses cleansing and reconciliation into the least forgiving weeks of the programme. Its entry criteria belong in design, and its trial cycles should run alongside the build."
+          },
+          {
+            "q": "Accepting UAT sign-off with critical defects reclassified, not fixed",
+            "a": "Re-labelling a critical defect as minor to pass a gate moves the failure into the first live pay run, where the audience is every employee. Exit thresholds should be agreed before testing starts and applied as written."
+          },
+          {
+            "q": "Ending hypercare by elapsed time instead of exit criteria",
+            "a": "Support that withdraws because four weeks passed, while severity-one issues still arrive, abandons users at the moment of maximum visibility. Hypercare ends when its thresholds are met and handover is accepted in writing."
+          }
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Key Takeaways"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "Eight phases: initiation, discovery, design, build, data migration and integration, testing and UAT, training and cutover, hypercare and closure.",
+          "Every phase is defined by purpose, entry criteria, activities, deliverables, exit criteria, and one accountable owner.",
+          "A phase closes on evidenced exit criteria at a gate, never on the calendar alone.",
+          "Dependencies do not bend: no build on unsigned design, no UAT on unreconciled data.",
+          "Read the full guide"
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Frequently Asked Questions"
+      },
+      {
+        "type": "p",
+        "text": "How many phases does an HCM implementation have? Eight, from initiation to closure. Methodologies package it differently — some merge migration into build, some split training from cutover — but the sequence and gates hold."
+      },
+      {
+        "type": "p",
+        "text": "What is a phase gate, and who runs it? A formal review at a phase's end, where exit-criteria evidence is tested and one decision recorded: proceed, proceed with conditions, or hold. The sponsor chairs it."
+      },
+      {
+        "type": "p",
+        "text": "Can phases run in parallel? Yes, by workstream, provided its entry criteria are met — cleansing during design, integration build during configuration. Dependencies cannot be parallelised away: no credible testing on an ungated build."
+      },
+      {
+        "type": "p",
+        "text": "What happens if a phase fails its gate? Hold, or proceed with conditions naming gaps, owners, and dates; the plan is revised and the gate re-run. Passing a weak phase silently is how defects accumulate."
+      },
+      {
+        "type": "h2",
+        "text": "Next Steps"
+      },
+      {
+        "type": "p",
+        "text": "Before starting, test the phase list with your sponsor and leads: owners named for all eight phases, entry criteria written for the first two gates, expert time protected for discovery, cleansing, and UAT? Mid-programme, read your current phase's exit criteria aloud in the next status meeting and ask what evidence exists for each. For the complete programme picture, Read the full guide"
+      },
+      {
+        "type": "quiz",
+        "label": "Check your understanding",
+        "questions": [
+          {
+            "q": "The design phase ends next week, but two pay-rule decisions remain unsigned because the payroll owner has been unavailable. The build team wants to start configuring those rules from the workshop notes. What does the phase model require?",
+            "options": [
+              {
+                "text": "Start the build: workshop notes are close enough, and the signature can catch up later",
+                "correct": false,
+                "why": "Configuration follows signed design literally. Building from unsigned notes makes an unmade decision into system behaviour, and the correction arrives later as a defect or a change request."
+              },
+              {
+                "text": "Record a hold or proceed-with-conditions decision at the gate, naming the unsigned decisions, their owner, and the date they will be closed",
+                "correct": true,
+                "why": "The gate exists to make exactly this gap visible and owned. The programme may proceed on signed scope, but the unsigned items are tracked as explicit conditions, not absorbed silently."
+              },
+              {
+                "text": "Have the consultants choose the most common rule and document it as decided",
+                "correct": false,
+                "why": "Pay rules are business and compliance decisions. Consultants can recommend, but the accountable business owner must decide and sign; a default chosen for convenience creates payroll risk."
+              }
+            ]
+          },
+          {
+            "q": "UAT is due to start, but the latest trial data load has not been reconciled and several totals disagree with the legacy system. What is the right gate outcome?",
+            "options": [
+              {
+                "text": "Proceed: UAT testers will find any real problems anyway",
+                "correct": false,
+                "why": "UAT on unreconciled data produces noise, not evidence. Testers cannot tell a data error from a configuration defect, so results cannot support a trustworthy sign-off."
+              },
+              {
+                "text": "Proceed with conditions, as long as the conditions are minuted",
+                "correct": false,
+                "why": "Conditions suit minor, bounded gaps with owners and dates. Unreconciled core data is a failed entry criterion for UAT itself, not a footnote to it."
+              },
+              {
+                "text": "Hold UAT entry until reconciliation meets the agreed tolerance, and use the time to finish test scenarios and tester preparation",
+                "correct": true,
+                "why": "Entry criteria protect the value of the phase. Holding UAT until the data is trustworthy keeps its results meaningful, and the preparation work means no time is truly lost."
+              }
+            ]
+          },
+          {
+            "q": "Four weeks after go-live, hypercare is scheduled to end, but severity-one issues are still being logged most days. What should govern the decision?",
+            "options": [
+              {
+                "text": "End hypercare on schedule: the support team can absorb the remaining issues",
+                "correct": false,
+                "why": "Closing on elapsed time while critical issues continue abandons users at maximum visibility and hands support a workload it has not agreed it can carry."
+              },
+              {
+                "text": "Extend hypercare until its exit criteria are met — issue thresholds reached and handover accepted in writing by the support team",
+                "correct": true,
+                "why": "Hypercare exit is criteria-based, like every other gate. The phase ends when stability is evidenced and the receiving team formally accepts the handover."
+              },
+              {
+                "text": "Declare closure anyway, but keep the project team informally on call",
+                "correct": false,
+                "why": "Informal cover has no ownership, no triage discipline, and no end point. If support is still needed, it should remain a governed phase with criteria, not a favour."
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
     "slug": "what-happens-during-hcm-implementation",
     "title": "What Happens During an HCM Implementation?",
     "excerpt": "What happens during an HCM implementation? A phase-by-phase walk through discovery, design, build, testing, go-live and hypercare, and your role in each.",
