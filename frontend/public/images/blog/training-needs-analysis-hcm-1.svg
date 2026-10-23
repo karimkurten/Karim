@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="620" viewBox="0 0 1200 620" font-family="Arial, Helvetica, sans-serif">
+  <defs>
+    <linearGradient id="hdr" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#0f172a"/><stop offset="1" stop-color="#1e3a5f"/>
+    </linearGradient>
+  </defs>
+  <rect x="0" y="0" width="1200" height="620" fill="#ffffff"/>
+  <rect x="0" y="0" width="1200" height="72" fill="url(#hdr)"/>
+  <text x="40" y="45" font-size="26" font-weight="bold" fill="#ffffff">Audience by task: who needs to learn what</text>
+  <text x="330" y="112" font-size="17" font-weight="bold" fill="#1A202C">Awareness</text>
+  <text x="545" y="112" font-size="17" font-weight="bold" fill="#1A202C">Core tasks</text>
+  <text x="745" y="112" font-size="17" font-weight="bold" fill="#1A202C">Exceptions</text>
+  <text x="935" y="112" font-size="17" font-weight="bold" fill="#1A202C">Administration</text>
+  <g font-size="16" fill="#475569">
+    <rect x="40" y="130" width="1120" height="76" rx="8" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+    <text x="56" y="176" font-weight="bold" fill="#1A202C">All employees</text>
+    <text x="330" y="176">What is changing and when</text>
+    <text x="545" y="176">Self-service basics</text>
+    <text x="745" y="176">Where to get help</text>
+    <text x="935" y="176">—</text>
+    <rect x="40" y="218" width="1120" height="76" rx="8" fill="#ffffff" stroke="#E2E8F0" stroke-width="2"/>
+    <text x="56" y="264" font-weight="bold" fill="#1A202C">People managers</text>
+    <text x="330" y="264">Team impact briefing</text>
+    <text x="545" y="264">Approvals and team views</text>
+    <text x="745" y="264">Corrections and escalations</text>
+    <text x="935" y="264">—</text>
+    <rect x="40" y="306" width="1120" height="76" rx="8" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+    <text x="56" y="352" font-weight="bold" fill="#1A202C">HR operations</text>
+    <text x="330" y="352">Process change summary</text>
+    <text x="545" y="352">Full transaction set</text>
+    <text x="745" y="352">Retro and edge cases</text>
+    <text x="935" y="352">Reference data upkeep</text>
+    <rect x="40" y="394" width="1120" height="76" rx="8" fill="#ffffff" stroke="#E2E8F0" stroke-width="2"/>
+    <text x="56" y="440" font-weight="bold" fill="#1A202C">Payroll team</text>
+    <text x="330" y="440">Pay calendar changes</text>
+    <text x="545" y="440">Pay cycle processing</text>
+    <text x="745" y="440">Off-cycle and reversals</text>
+    <text x="935" y="440">Pay element maintenance</text>
+    <rect x="40" y="482" width="1120" height="76" rx="8" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+    <text x="56" y="528" font-weight="bold" fill="#1A202C">Admins and super users</text>
+    <text x="330" y="528">Support model briefing</text>
+    <text x="545" y="528">All of the above</text>
+    <text x="745" y="528">Triage and diagnosis</text>
+    <text x="935" y="528">Security and configuration</text>
+  </g>
+  <text x="40" y="592" font-size="15" fill="#64748B">Depth increases to the right: train each audience only to the depth its real tasks require — no deeper, no shallower.</text>
+</svg>
