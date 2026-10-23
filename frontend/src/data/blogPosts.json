@@ -1,5 +1,267 @@
 [
   {
+    "slug": "training-needs-analysis-hcm",
+    "title": "Training Needs Analysis for HCM Rollouts",
+    "excerpt": "How to run a training needs analysis for an HCM rollout: segment audiences by real tasks, define gaps as behaviour, and time training to first use.",
+    "publishedAt": "2026-10-23",
+    "readingTime": "8 min read",
+    "cover": "/images/blog/training-needs-analysis-hcm-cover.webp",
+    "tags": [
+      "HCM",
+      "Implementation",
+      "Training",
+      "Change Management"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "Most HCM training plans fail before a single session is delivered, because they are built from the organisation chart instead of from the work. The plan lists departments, assigns everyone the same generic course, and measures success in attendance — then go-live arrives and the support queue fills with people who sat through training but cannot perform the tasks their jobs now require. A training needs analysis (TNA) prevents that failure by answering a harder, more useful question first: who must be able to do what, unaided, on the first day the new system is live — and what stands between them and that standard today?"
+      },
+      {
+        "type": "p",
+        "text": "This article sets out a five-step method for running that analysis on an enterprise HCM rollout, the audience model it produces, and the mistakes that most often undermine it. It sits inside the wider phase discipline described in the phases of an HCM implementation: training has entry criteria, and a TNA is how you prove they can be met."
+      },
+      {
+        "type": "h2",
+        "text": "What a training needs analysis is — and is not"
+      },
+      {
+        "type": "p",
+        "text": "A TNA is a structured comparison between the tasks the new system demands and the capability people currently have. Its output is not a course catalogue; it is a costed, owned plan — audiences, gaps, methods, dates — that the cutover plan and the UAT readiness checklist can rely on. It is also not a survey of what training people would like. Preferences matter for scheduling and format, but the analysis is anchored in required behaviour: the transactions, approvals, corrections, and enquiries each role must execute correctly when there is no legacy system to fall back on. Where preference and requirement conflict, requirement wins — politely, and with the reasoning explained."
+      },
+      {
+        "type": "h2",
+        "text": "Step 1: Start from the signed design, not the module list"
+      },
+      {
+        "type": "p",
+        "text": "The raw material of a TNA is the signed solution design. Every designed process implies tasks: someone initiates a hire, someone approves a transfer, someone corrects a time record, someone runs and checks a pay cycle, someone answers the employee who cannot see a payslip. Work through the design process by process and build a task inventory — the task, who performs it, how often, how time-critical it is, and what an error costs. A task performed twice a year by one specialist needs a different treatment from a task performed daily by every manager in the organisation. Frequency and error cost, recorded now, are what later justify spending heavily on some audiences and lightly on others."
+      },
+      {
+        "type": "h2",
+        "text": "Step 2: Segment audiences by real work"
+      },
+      {
+        "type": "p",
+        "text": "With the task inventory in hand, group people by the tasks they actually perform rather than by department or seniority. Five audiences cover most rollouts: all employees, who need self-service basics; people managers, who add approvals, team views, and corrections; HR operations, who carry the full transaction set including retroactive and edge cases; the payroll team, whose tasks are the most time-critical and least forgiving; and administrators and super users, who add security, reference data, triage, and diagnosis. One person can sit in two audiences — a payroll lead who is also a super user takes both curricula — and that overlap should be explicit in the plan, not discovered in the training schedule."
+      },
+      {
+        "type": "img",
+        "src": "/images/blog/training-needs-analysis-hcm-1.svg",
+        "alt": "Audience by task matrix diagram: five HCM rollout audiences — all employees, people managers, HR operations, payroll team, and administrators and super users — against four depths of learning from awareness through core tasks and exceptions to administration.",
+        "caption": "Audience by task: who needs to learn what, and to what depth."
+      },
+      {
+        "type": "h2",
+        "text": "Step 3: Assess the starting point honestly"
+      },
+      {
+        "type": "p",
+        "text": "A gap can only be sized if the starting point is known. Assess, per audience, three things: current process knowledge, because the new system usually changes the process as well as the screens; system familiarity, including basic digital confidence, device access, and — in frontline and deskless populations — whether people even have a routine way to reach the system; and practical constraints such as shift patterns, locations, and language needs in a bilingual workforce. Use short structured conversations with audience representatives, UAT tester feedback, and help-desk history from the legacy system where it exists. Label what you learn as evidence or as assumption, because assumptions about a large audience's capability are exactly where training plans quietly break."
+      },
+      {
+        "type": "h2",
+        "text": "Step 4: Define the gap as observable behaviour"
+      },
+      {
+        "type": "p",
+        "text": "Write each gap as behaviour an observer could verify: \"a people manager can approve or return a time-off request, with a reason the employee can see, without assistance\" — not \"managers understand absence management.\" Behavioural definitions do three jobs. They tell the training designer precisely what to build practice around. They tell the audience what standard they are being prepared for, which lowers anxiety rather than raising it. And they give hypercare a diagnostic tool: when a support ticket arrives, the team can tell whether it is a training gap against a defined behaviour, a design problem, or a defect — three causes with three very different fixes."
+      },
+      {
+        "type": "steps",
+        "label": "The five-step training needs analysis",
+        "intro": "Five moves, in order — each one produces the evidence the next one needs.",
+        "items": [
+          {
+            "title": "Start from the signed design",
+            "text": "Build a task inventory from designed processes: every task, its performer, its frequency, and the cost of getting it wrong."
+          },
+          {
+            "title": "Segment by real work",
+            "text": "Group people into audiences by tasks performed — employees, managers, HR operations, payroll, administrators — and record overlaps explicitly."
+          },
+          {
+            "title": "Assess the starting point",
+            "text": "Per audience, assess process knowledge, system familiarity, access and language constraints, and mark each finding as evidence or assumption."
+          },
+          {
+            "title": "Define the gap as behaviour",
+            "text": "State what each audience must do unaided at go-live in observable terms, so training, sign-off, and hypercare diagnosis share one standard."
+          },
+          {
+            "title": "Match method and timing",
+            "text": "Choose a format proportionate to each gap and schedule hands-on practice close to first real use, aligned to the pay calendar."
+          }
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Step 5: Match method and timing to the gap"
+      },
+      {
+        "type": "p",
+        "text": "Not every gap needs a classroom. Awareness gaps — what is changing, why, and when — are served by briefings and short reference material. Core-task gaps need guided practice in a training environment with realistic data, because people learn systems by doing the task, not by watching it. Exception-handling gaps, concentrated in HR operations and payroll, need scenario work: the retroactive correction, the off-cycle payment, the terminated employee with a final-pay deadline. Timing matters as much as method. Concepts can be introduced early, but hands-on training delivered months before go-live is largely forgotten by the day it is needed; schedule practice in the final weeks, keep sandbox access open through hypercare, and land payroll and manager training just before the first live cycle those audiences must actually run — a discipline the HCM go-live checklist reinforces at the gate."
+      },
+      {
+        "type": "img",
+        "src": "/images/blog/training-needs-analysis-hcm-2.svg",
+        "alt": "Five-step training needs analysis flow diagram: start from signed design, segment by real work, assess the starting point, define the gap as behaviour, and match method and timing, with a timing rule panel on training close to first real use.",
+        "caption": "The five-step training needs analysis, and the timing rule that governs delivery."
+      },
+      {
+        "type": "h2",
+        "text": "Deciding depth, ownership, and cost"
+      },
+      {
+        "type": "p",
+        "text": "The audience-by-task matrix is also the budgeting tool. Depth is expensive: scenario-based payroll training with a protected practice environment costs far more per person than an employee self-service briefing, and the matrix shows why that spend is justified — error cost and time criticality sit in those audiences. Assign one owner per audience, responsible for attendance, completion of practice exercises, and readiness reporting into the go-live gate. Finally, plan the sustaining route at the same time: who trains new hires and internal movers after hypercare ends, and where the practice environment and materials live once the project team disbands. Training that exists only for go-live week decays into folklore within a year; what happens during an HCM implementation shows how often that decay surfaces later as data-quality problems."
+      },
+      {
+        "type": "h2",
+        "text": "Common mistakes"
+      },
+      {
+        "type": "p",
+        "text": "The same five mistakes recur across rollouts, and all of them are visible in the analysis phase if you look."
+      },
+      {
+        "type": "accordion",
+        "label": "Five training needs analysis mistakes to avoid",
+        "items": [
+          {
+            "q": "Building the plan from the org chart",
+            "a": "Departments do not perform tasks; roles do. An org-chart plan trains whole departments identically, over-training most people and under-training the few whose tasks carry real risk."
+          },
+          {
+            "q": "Training everyone on everything, just in case",
+            "a": "Comprehensive training feels safe and achieves the opposite: attention is finite, and hours spent on tasks a person will never perform displace practice on the tasks they perform daily."
+          },
+          {
+            "q": "Measuring attendance instead of capability",
+            "a": "A full room proves scheduling worked, nothing more. Measure against the behavioural definitions — sampled practice exercises and observed task completion — so readiness reporting to the go-live gate means something."
+          },
+          {
+            "q": "Delivering hands-on training too early",
+            "a": "Practice delivered during the build phase is forgotten before first use and teaches screens that may still change. Brief concepts early; practise late, close to the first live cycle."
+          },
+          {
+            "q": "Forgetting the after-go-live audiences",
+            "a": "New hires, internal movers, and returning leave-takers arrive after hypercare ends. If the analysis names no sustaining owner or materials home, every later cohort is trained by improvisation."
+          }
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Key Takeaways"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "A training needs analysis compares the tasks the new system demands with current capability; its output is a costed, owned plan, not a course list.",
+          "Start from the signed design: task inventory first, then audiences segmented by real work, not by department.",
+          "Assess the starting point per audience and label findings as evidence or assumption.",
+          "Define every gap as observable behaviour, so training design, readiness sign-off, and hypercare diagnosis share one standard.",
+          "Match method and timing to the gap: brief awareness early, practise core tasks late, and use scenarios for exceptions.",
+          "Get the checklist"
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Frequently Asked Questions"
+      },
+      {
+        "type": "p",
+        "text": "When should the training needs analysis happen? As soon as the solution design is signed. The task inventory depends on designed processes, and the findings must land early enough to shape materials, environments, and the training schedule before cutover planning hardens."
+      },
+      {
+        "type": "p",
+        "text": "Who should own the TNA? The change or training lead owns the method and the plan; business process owners own the truth of the task inventory for their areas, and audience owners own readiness for their groups. The project manager integrates its dates and risks into the master plan."
+      },
+      {
+        "type": "p",
+        "text": "How is a TNA different from a training plan? The analysis is the evidence: tasks, audiences, starting points, and behavioural gaps. The plan is the response: methods, materials, owners, and dates. Skipping the analysis produces a plan built on assumption."
+      },
+      {
+        "type": "p",
+        "text": "What about employees with no regular system access? They are an audience with a constraint, not an afterthought. The assessment step should surface device, location, and language realities for frontline populations, and the plan should answer them — kiosks, mobile access, supervisor-assisted routes — before go-live, not during it."
+      },
+      {
+        "type": "h2",
+        "text": "Next Steps"
+      },
+      {
+        "type": "p",
+        "text": "Open your signed design and draft the task inventory for one process end to end: every task, performer, frequency, and error cost. Segment the performers into audiences and write one behavioural gap statement per audience. If you cannot write the behaviour, the analysis has found its first real finding. Then check the dates: does hands-on practice land close to each audience's first live use? For the wider readiness picture, Get the checklist"
+      },
+      {
+        "type": "quiz",
+        "label": "Check your understanding",
+        "questions": [
+          {
+            "q": "Your plan trains every people manager in the organisation on the full absence module, including configuration-adjacent exception handling that only HR operations performs. What does the TNA method say?",
+            "options": [
+              {
+                "text": "Keep it: broader training can only help",
+                "correct": false,
+                "why": "Attention is finite. Hours spent on tasks managers never perform displace practice on approvals and corrections they perform weekly, and dilute the readiness signal."
+              },
+              {
+                "text": "Train managers to the depth of their real tasks — approvals, team views, routine corrections — and reserve exception handling for HR operations",
+                "correct": true,
+                "why": "Depth follows the audience-by-task matrix: each audience is trained to the depth its actual work requires, which concentrates effort where error cost lives."
+              },
+              {
+                "text": "Move the exception content into the employee self-service course instead",
+                "correct": false,
+                "why": "Reassigning content to an even less relevant audience repeats the same error. The fix is matching depth to tasks, not relocating the mismatch."
+              }
+            ]
+          },
+          {
+            "q": "Hands-on payroll training was delivered ten weeks before go-live because the training room was free. UAT has since changed two pay-cycle screens. What is the risk?",
+            "options": [
+              {
+                "text": "Little risk: trained staff can adapt on the day",
+                "correct": false,
+                "why": "Skill decays without use, and the material now teaches an outdated build. The first live pay cycle is the worst place to discover either problem."
+              },
+              {
+                "text": "Schedule a short refresher close to the first live cycle, in the final build, focused on the changed steps and the behavioural standard",
+                "correct": true,
+                "why": "Concepts can be taught early, but hands-on practice belongs near first real use and against the system people will actually operate."
+              },
+              {
+                "text": "Cancel payroll training and rely on hypercare support",
+                "correct": false,
+                "why": "Hypercare is a safety net, not a training strategy. Payroll tasks are time-critical; relying on support converts a preparation gap into live pay risk."
+              }
+            ]
+          },
+          {
+            "q": "A manager completes all assigned training but still cannot process a return-to-work absence correction unaided. Attendance reporting shows green. What should readiness reporting say?",
+            "options": [
+              {
+                "text": "Ready: attendance is complete, and confidence will come with practice",
+                "correct": false,
+                "why": "Attendance measures scheduling, not capability. Reporting green against a failed behavioural standard misinforms the go-live gate."
+              },
+              {
+                "text": "Report the gap against the behavioural definition, with targeted practice or a named support route before go-live",
+                "correct": true,
+                "why": "The behavioural gap statement exists precisely for this: it makes the shortfall specific, trainable, and visible to the gate decision."
+              },
+              {
+                "text": "Remove the correction task from managers entirely",
+                "correct": false,
+                "why": "Redesigning process ownership mid-flight is a design change with its own consequences. The first response is closing a defined, narrow training gap."
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
     "slug": "hcm-implementation-phases",
     "title": "What Are the Phases of an HCM Implementation?",
     "excerpt": "The eight phases of an HCM implementation defined: purpose, entry and exit criteria, key activities, deliverables, phase gates, and who owns each phase.",
