@@ -35,7 +35,7 @@
       },
       {
         "type": "p",
-        "text": "Selection is the decision everything else depends on, and it is usually made badly. The default criteria — availability and seniority — produce trainers who are free, not trainers who are believed. Select instead on two qualities together. The first is operational credibility: the person is known for doing the real work well, whether running a pay cycle or holding HR operations together at month end; learners can tell within minutes whether a trainer's answers come from practice. The second is teaching aptitude: patience, clarity, and the ability to watch someone struggle with a task without seizing the keyboard. A brilliant operator without those qualities produces confused audiences and improvised workarounds."
+        "text": "Selection is the decision everything else depends on, and it is usually made badly. The default criteria — availability and seniority — produce trainers who are free, not trainers who are believed. Select instead on two qualities together. The first is operational credibility: the person is known for doing the real work well, whether running a pay cycle or holding HR operations together at month end; learners can tell within minutes whether a trainer's answers come from practice. The second is teaching aptitude: patience, clarity, and the ability to watch someone struggle with a task without seizing the keyboard."
       },
       {
         "type": "p",
@@ -51,7 +51,7 @@
       },
       {
         "type": "p",
-        "text": "That depth also protects the message: trainers who understand intent explain a control as protection, while trainers who only memorised steps describe it as bureaucracy. In bilingual rollouts, trainers should learn and teach in their own language, from localised materials rather than interpreting slides live — improvised interpretation is where terminology drifts."
+        "text": "In bilingual rollouts, trainers should learn and teach in their own language, from localised materials rather than interpreting slides live — improvised interpretation is where terminology drifts."
       },
       {
         "type": "h2",
@@ -122,7 +122,7 @@
       },
       {
         "type": "p",
-        "text": "Trainers teach what they can reach. If the deck lives in a departing consultant's files, exercises use data nobody refreshes, or the practice environment is reclaimed at go-live, capability evaporates. Before hypercare ends, transfer ownership formally: a version-controlled materials library with a named owner, resettable exercise data for new-hire cohorts, environment access that survives the project, and a route by which each release triggers a materials review and trainer briefing. Test the transfer while help is available: trainers run a complete new-hire cycle unaided before the project team demobilises, and anything they cannot run is an open cutover item under the HCM go-live checklist."
+        "text": "If the deck lives in a departing consultant's files, exercises use data nobody refreshes, or the practice environment is reclaimed at go-live, capability evaporates. Before hypercare ends, transfer ownership formally: a version-controlled materials library with a named owner, resettable exercise data for new-hire cohorts, environment access that survives the project, and a route by which each release triggers a materials review and trainer briefing. Test the transfer while help is available: trainers run a complete new-hire cycle unaided before the project team demobilises, and anything they cannot run is an open cutover item under the HCM go-live checklist."
       },
       {
         "type": "h2",
@@ -130,7 +130,7 @@
       },
       {
         "type": "p",
-        "text": "The programme's real test starts after go-live. Systems change with every release; trainers move roles, burn out, or leave. Sustaining the network is a small permanent operating model, not a project artefact: a named owner, a refresh and recertification rhythm tied to releases, community sessions where trainers share difficult questions and agreed answers, and a maintained bench. Watch the health signals — sessions cancelled under operational pressure, one trainer carrying a whole region, answers diverging between sites. Each warns that training is reverting to folklore, and each is cheaper to correct early than after a cohort is trained by improvisation."
+        "text": "The programme's real test starts after go-live. Systems change with every release; trainers move roles, burn out, or leave. Sustaining the network is a small permanent operating model, not a project artefact: a named owner, a refresh and recertification rhythm tied to releases, community sessions where trainers share difficult questions and agreed answers, and a maintained bench. Watch the health signals — sessions cancelled under operational pressure, one trainer carrying a whole region, answers diverging between sites. Each warns that training is reverting to folklore."
       },
       {
         "type": "h2",
