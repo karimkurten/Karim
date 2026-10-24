@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="620" viewBox="0 0 1200 620" font-family="Arial, Helvetica, sans-serif">
+  <defs>
+    <linearGradient id="hdr" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#0f172a"/><stop offset="1" stop-color="#1e3a5f"/>
+    </linearGradient>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#2B6CB0"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="1200" height="620" fill="#ffffff"/>
+  <rect x="0" y="0" width="1200" height="72" fill="url(#hdr)"/>
+  <text x="40" y="45" font-size="26" font-weight="bold" fill="#ffffff">The co-delivery ladder: from certified to trusted</text>
+  <g font-size="15" fill="#475569">
+    <rect x="30" y="290" width="255" height="170" rx="10" fill="#F0F4F8" stroke="#2B6CB0" stroke-width="2"/>
+    <text x="48" y="322" font-size="17" font-weight="bold" fill="#1A202C">Rung 1: Observe</text>
+    <text x="48" y="352">Watch an experienced</text>
+    <text x="48" y="374">delivery: questions,</text>
+    <text x="48" y="396">timing, and how the</text>
+    <text x="48" y="418">room is handled</text>
+    <rect x="315" y="230" width="255" height="170" rx="10" fill="#F0F4F8" stroke="#2B6CB0" stroke-width="2"/>
+    <text x="333" y="262" font-size="17" font-weight="bold" fill="#1A202C">Rung 2: Co-deliver</text>
+    <text x="333" y="292">Own defined segments</text>
+    <text x="333" y="314">while the experienced</text>
+    <text x="333" y="336">trainer holds the room</text>
+    <text x="333" y="358">and rescues if needed</text>
+    <rect x="600" y="170" width="255" height="170" rx="10" fill="#F0F4F8" stroke="#2B6CB0" stroke-width="2"/>
+    <text x="618" y="202" font-size="17" font-weight="bold" fill="#1A202C">Rung 3: Lead with backup</text>
+    <text x="618" y="232">Lead the full session</text>
+    <text x="618" y="254">with the experienced</text>
+    <text x="618" y="276">trainer present but</text>
+    <text x="618" y="298">silent in the room</text>
+    <rect x="885" y="110" width="255" height="170" rx="10" fill="#F0F4F8" stroke="#2B6CB0" stroke-width="2"/>
+    <text x="903" y="142" font-size="17" font-weight="bold" fill="#1A202C">Rung 4: Deliver alone</text>
+    <text x="903" y="172">Run the session solo</text>
+    <text x="903" y="194">for certified audiences</text>
+    <text x="903" y="216">and topics, with the</text>
+    <text x="903" y="238">support route behind you</text>
+  </g>
+  <line x1="285" y1="330" x2="313" y2="315" stroke="#2B6CB0" stroke-width="3" marker-end="url(#arr)"/>
+  <line x1="570" y1="270" x2="598" y2="255" stroke="#2B6CB0" stroke-width="3" marker-end="url(#arr)"/>
+  <line x1="855" y1="210" x2="883" y2="195" stroke="#2B6CB0" stroke-width="3" marker-end="url(#arr)"/>
+  <rect x="30" y="490" width="1110" height="90" rx="10" fill="#ffffff" stroke="#E2E8F0" stroke-width="2"/>
+  <text x="48" y="524" font-size="17" font-weight="bold" fill="#1A202C">After every rung: a structured debrief</text>
+  <text x="48" y="552" font-size="15" fill="#475569">Accuracy, clarity, guided practice, questions handled, time discipline — specific feedback before the next rung is attempted.</text>
+  <text x="40" y="105" font-size="15" fill="#64748B">Certification earns the first rung. Solo delivery is earned one rung at a time, never granted by a date in the plan.</text>
+</svg>
