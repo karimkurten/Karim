@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" font-family="Arial, sans-serif">
+<rect width="1200" height="675" fill="#0f172a"/>
+<text x="600" y="60" fill="#ffffff" font-size="34" text-anchor="middle" font-weight="bold">The Five Selection Gates</text>
+<text x="600" y="95" fill="#93c5fd" font-size="18" text-anchor="middle">Do not advance a platform past a gate it has not passed</text>
+<g fill="#1e3a5f" stroke="#3b82f6" stroke-width="2">
+<rect x="40" y="220" width="200" height="180" rx="12"/><rect x="270" y="220" width="200" height="180" rx="12"/><rect x="500" y="220" width="200" height="180" rx="12"/><rect x="730" y="220" width="200" height="180" rx="12"/><rect x="960" y="220" width="200" height="180" rx="12"/>
+</g>
+<g fill="#ffffff" font-size="20" font-weight="bold" text-anchor="middle">
+<text x="140" y="285">Gate 1</text><text x="370" y="285">Gate 2</text><text x="600" y="285">Gate 3</text><text x="830" y="285">Gate 4</text><text x="1060" y="285">Gate 5</text>
+</g>
+<g fill="#bfdbfe" font-size="16" text-anchor="middle">
+<text x="140" y="325">Requirements</text><text x="140" y="350">before demos</text>
+<text x="370" y="325">Scripted</text><text x="370" y="350">scenarios</text>
+<text x="600" y="325">Payroll proof</text><text x="600" y="350">in your jurisdictions</text>
+<text x="830" y="325">Reference calls</text><text x="830" y="350">you choose</text>
+<text x="1060" y="325">Costed</text><text x="1060" y="350">implementation</text>
+</g>
+<g fill="#3b82f6" font-size="28" text-anchor="middle"><text x="255" y="320">›</text><text x="485" y="320">›</text><text x="715" y="320">›</text><text x="945" y="320">›</text></g>
+<text x="600" y="500" fill="#93c5fd" font-size="18" text-anchor="middle">A demo is marketing. A gate is evidence.</text>
+</svg>
