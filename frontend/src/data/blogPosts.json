@@ -1,5 +1,287 @@
 [
   {
+    "slug": "quick-reference-guides-hcm",
+    "title": "Quick Reference Guides People Actually Use",
+    "excerpt": "What makes a quick reference guide people actually use in an HCM rollout: one task per guide, tested with real users, and placed at the point of need.",
+    "publishedAt": "2026-10-25",
+    "readingTime": "8 min read",
+    "cover": "/images/blog/quick-reference-guides-hcm-cover.webp",
+    "tags": [
+      "HCM",
+      "Implementation",
+      "Training",
+      "Enablement"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "Every HCM rollout produces quick reference guides, and most of them are ignored. They are written late, filed in a shared folder nobody opens, and discovered — if at all — months after go-live. The failure is rarely effort: teams often produce dozens of polished pages. The failure is design. A quick reference guide is not a small manual. It is a tool for one moment — the moment a person is mid-task, unsure of the next step, and unwilling to stop working to go and learn something."
+      },
+      {
+        "type": "p",
+        "text": "Built well, guides become the quiet infrastructure of adoption: the card a payroll clerk trusts during a pay run, the one-pager a manager opens when approving an exception. Built as an afterthought, they are shelfware. The difference is deliberate choices about scope, title, layout, testing, placement, and ownership."
+      },
+      {
+        "type": "h2",
+        "text": "What a quick reference guide is — and is not"
+      },
+      {
+        "type": "p",
+        "text": "A quick reference guide supports performance; it does not teach. Training builds understanding over hours, with explanation, practice, and feedback, as set out in a training needs analysis for HCM rollouts. A full manual documents a process completely — rationale, policy, every variant — as the record people consult when they need depth. A guide does something narrower and harder: it answers one task, in the order the task is performed, in the time it takes to glance down and back up. If the reader must study it, it has failed at its only job."
+      },
+      {
+        "type": "p",
+        "text": "That distinction governs every design decision that follows. Content that explains why belongs in training or the manual; linking to it beats compressing it onto the card. What helps someone finish the task in front of them — the steps, the one decision, the likely error — belongs on the guide, and almost nothing else does."
+      },
+      {
+        "type": "h2",
+        "text": "One task per guide, titled by the task"
+      },
+      {
+        "type": "p",
+        "text": "The single most reliable rule is one task per guide. Not one module, not one process area — one task, defined the way the user defines it: submit a timesheet correction, approve a leave request, process a retroactive pay adjustment. The moment a guide covers three tasks, the reader must first work out which third applies to them — and that search cost is what makes people close the document and ask a colleague instead. A library of single-task guides looks like more work to produce; in use it is far cheaper, because each guide can be found, scanned, and trusted in seconds."
+      },
+      {
+        "type": "p",
+        "text": "The title carries the same discipline. Title the guide by the task in the user's words — the words they would type into a search box — not by the system's name for the screen or transaction. System titles describe the software; task titles describe the work. A manager looking for help does not think in menu paths; they think: I need to fix this person's hours before payroll closes."
+      },
+      {
+        "type": "h2",
+        "text": "Designed to be scanned, not read"
+      },
+      {
+        "type": "p",
+        "text": "A guide is used under time pressure, often mid-transaction, so it must work at a glance. That means a strict visual grammar applied consistently across the set: the task title at the top, steps in numbered order, decisions as short if-then lines, and warnings placed before the step they protect rather than after it. Screenshots earn their place only when they answer where do I click, cropped tightly and refreshed when the interface changes."
+      },
+      {
+        "type": "p",
+        "text": "Length discipline follows. Most single-task guides fit on one or two pages, or one screen. A longer draft is usually covering two tasks, carrying background that belongs in the manual, or hiding an exception that deserves its own guide. Resist smaller type: a guide that cannot be read at arm's length will not be read at all."
+      },
+      {
+        "type": "steps",
+        "label": "The quick reference guide build sequence",
+        "intro": "Five moves, in order — each one removes a reason the finished guide would be ignored.",
+        "items": [
+          {
+            "title": "Pick one task",
+            "text": "Choose a single task defined in the user's words, drawn from the tasks the training needs analysis says each audience must perform unaided."
+          },
+          {
+            "title": "Draft for scanning",
+            "text": "Write the steps in performance order, decisions as short if-then lines, warnings before the step they protect, and nothing that belongs in the manual."
+          },
+          {
+            "title": "Test with real users",
+            "text": "Watch representative users complete the real task using only the guide, note every hesitation, and revise until the guide carries them without help."
+          },
+          {
+            "title": "Place at the point of need",
+            "text": "Publish the guide where the task happens — linked from the workflow, the intranet task page, and the support route — not in a project folder."
+          },
+          {
+            "title": "Sync with every release",
+            "text": "Review each guide against every system release and process change, re-test what changed, and retire guides for tasks that no longer exist."
+          }
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Tested with real users doing real tasks"
+      },
+      {
+        "type": "p",
+        "text": "No guide should be published untested, and the only meaningful test is observational: give a representative user the real task, in a realistic environment with realistic data, hand them the guide, and watch in silence. Every hesitation marks a place where the guide failed — a step written in system language, a decision the guide assumes but never states, a warning placed one step too late. Accuracy review is necessary but says nothing about usability; authors cannot see their own assumptions. Users who do not know the task are the instrument that finds the gaps."
+      },
+      {
+        "type": "p",
+        "text": "Keep the test small and early, while revision is still inexpensive. In bilingual rollouts, test each language version with users who work in that language — a guide tested only in its source language carries drift into the moments where clarity matters most. Trainers are natural test partners here: the train-the-trainer programme gathers exactly those observers."
+      },
+      {
+        "type": "img",
+        "src": "/images/blog/quick-reference-guides-hcm-1.svg",
+        "alt": "Anatomy of a usable quick reference guide diagram: a task-worded title band, numbered steps in performance order, a decision panel, a common-error panel with its warning placed before the step it protects, side panels on what stays off the card and screenshot use, and a footer carrying version, owner, and review date.",
+        "caption": "The anatomy of a usable guide: every element earns its place at a glance."
+      },
+      {
+        "type": "h2",
+        "text": "Placed at the point of need"
+      },
+      {
+        "type": "p",
+        "text": "A perfect guide in the wrong place is indistinguishable from no guide. Placement means the guide is reachable from inside the moment of need: linked from the task or workflow itself where the platform allows, surfaced on the intranet or support portal under its task title, printed where the work happens for frontline populations, and named so a search for the task finds it first."
+      },
+      {
+        "type": "p",
+        "text": "Placement is also a launch activity, not a filing activity. Trainers demonstrate the guides in training, working a task from the guide itself so learners see it used, not merely mentioned. The support model routes people to guides before tickets: hypercare staff answer with the guide open and treat every repeated question as evidence of a guide that is absent, wrong, or unfindable — part of the readiness confirmed in the UAT readiness checklist."
+      },
+      {
+        "type": "img",
+        "src": "/images/blog/quick-reference-guides-hcm-2.svg",
+        "alt": "Quick reference guide lifecycle diagram: five stages from drafting from the real task, testing with real users doing the real task, and placing the guide at the point of need, to measuring use at the moment of need and revising with every release, with a feedback loop and a named-owner banner.",
+        "caption": "The lifecycle of a guide that stays used: draft, test, place, measure, revise."
+      },
+      {
+        "type": "h2",
+        "text": "Versioned, owned, and accessible after go-live"
+      },
+      {
+        "type": "p",
+        "text": "Guides decay. Without version control synced to releases, the library fills with near-duplicates of uncertain vintage, and one bad experience with an outdated guide teaches users to distrust all of them. Each guide therefore carries a visible version, a review date, and a named owner who survives the project — an operations or HR services owner, not the team that disbands at closure. Every release includes a standing step: which guides does this change touch, and have they been revised and re-tested first? Superseded versions are withdrawn, not merely outnumbered."
+      },
+      {
+        "type": "p",
+        "text": "Accessibility and format close the loop. Guides must work printed and on screen: clean contrast, readable type, structure a screen reader can follow, and language versions maintained as first-class editions, not late translations. Ownership also means measurement — not downloads, which measure curiosity, but use at the moment of need: which tasks still generate tickets a guide should have prevented, and which guides nobody can find. Those signals, reviewed against the HCM go-live checklist during hypercare, tell the owner where revision effort belongs."
+      },
+      {
+        "type": "h2",
+        "text": "Common mistakes"
+      },
+      {
+        "type": "p",
+        "text": "The failures below recur across rollouts, and each is a production choice made early, not bad luck discovered late."
+      },
+      {
+        "type": "accordion",
+        "label": "Six quick reference guide mistakes to avoid",
+        "items": [
+          {
+            "q": "Writing a miniature manual instead of a task guide",
+            "a": "Background, rationale, and every variant compressed onto one card makes it unreadable under pressure. Keep the guide to the steps, the one decision, and the likely error; link to the manual for depth."
+          },
+          {
+            "q": "Covering a whole module in one guide",
+            "a": "Multi-task guides force the reader to work out which section applies before they can start. Split to one task per guide, titled in the user's words, and let the library carry the breadth."
+          },
+          {
+            "q": "Titling guides by system screens and transactions",
+            "a": "Users search and ask in task language, not menu paths. A title that matches the software's vocabulary will be scrolled past by the person it was written for."
+          },
+          {
+            "q": "Publishing without watching a user try it",
+            "a": "Accuracy review cannot reveal assumed knowledge or a warning placed one step too late. Test with representative users doing the real task, and revise where they hesitate."
+          },
+          {
+            "q": "Filing guides in the project folder",
+            "a": "A guide separated from the moment of need by folders and searches will lose to asking a colleague. Link it from the workflow, the task page, and the support route, and print it where the work happens."
+          },
+          {
+            "q": "Letting versions drift after go-live",
+            "a": "Unowned guides quietly go stale with every release until one wrong instruction destroys trust in the whole set. Assign an owner, sync reviews to releases, and withdraw superseded versions."
+          }
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Key Takeaways"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "A quick reference guide supports one moment of work; it is a performance tool, not a small manual and not training.",
+          "One task per guide, titled in the user's task words rather than the system's screen names.",
+          "Design for scanning: numbered steps in performance order, decisions as if-then lines, warnings before the step they protect.",
+          "Test every guide by watching real users do the real task with it; revise where they hesitate.",
+          "Place guides at the point of need and measure use at that moment, not downloads.",
+          "Get the checklist"
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Frequently Asked Questions"
+      },
+      {
+        "type": "p",
+        "text": "How long should a quick reference guide be? As short as the task allows — typically one or two pages, or one screen. A longer draft is usually covering two tasks, carrying background that belongs in the manual, or hiding an exception that deserves its own guide."
+      },
+      {
+        "type": "p",
+        "text": "Who should write the guides? Whoever understands the task best, working with someone who performs it daily, then tested with representative users — authors cannot see their own assumptions."
+      },
+      {
+        "type": "p",
+        "text": "How do guides relate to training and the full manual? Training builds understanding, the manual documents the process completely, and the guide supports one task at the moment of performance. Each links to the others; none substitutes for the others."
+      },
+      {
+        "type": "p",
+        "text": "When should guides be written? During build and testing, while realistic environments and data exist to test against — not in the final week before go-live. Guides tested during user acceptance are ready when training starts."
+      },
+      {
+        "type": "h2",
+        "text": "Next Steps"
+      },
+      {
+        "type": "p",
+        "text": "Start from the task list, not the module list: take the tasks each audience must perform unaided, prioritise the frequent, error-prone, and time-critical, and draft one guide per task in the user's own words. Test each draft with real users, place it where the task happens, and assign an owner and a release-sync review before go-live Get the checklist"
+      },
+      {
+        "type": "quiz",
+        "label": "Check your understanding",
+        "questions": [
+          {
+            "q": "A draft guide titled by its system screen covers timesheet entry, corrections, and approvals in nine dense pages. Managers ignore it and keep asking payroll. What is the first fix?",
+            "options": [
+              {
+                "text": "Keep the scope but redesign the layout with smaller sections and more screenshots",
+                "correct": false,
+                "why": "Layout cannot rescue a multi-task scope. The reader still has to find their task inside the document before the guide can help them."
+              },
+              {
+                "text": "Split it into one guide per task, each titled in the user's task words, and test each with a manager doing the real task",
+                "correct": true,
+                "why": "One task per guide, a task-worded title, and observational testing are the three moves that make a guide findable, scannable, and trustworthy."
+              },
+              {
+                "text": "Move the guide from the shared folder to the intranet homepage so more people see it",
+                "correct": false,
+                "why": "Visibility is not placement. The guide must sit at the point of need for each task, and a nine-page multi-task document fails on scope before placement matters."
+              }
+            ]
+          },
+          {
+            "q": "A guide has been reviewed twice for accuracy by the project team, but nobody has watched an end user work from it. Go-live is near. What does the method say?",
+            "options": [
+              {
+                "text": "Publish it: two accuracy reviews are stronger evidence than a small user test",
+                "correct": false,
+                "why": "Accuracy review confirms the content is right; it cannot reveal assumed knowledge, system-worded steps, or a warning placed too late. Only observation finds those."
+              },
+              {
+                "text": "Run a short observational test with a few representative users on the real task, fix where they hesitate, then publish",
+                "correct": true,
+                "why": "A small, early test is inexpensive and catches the usability failures that make accurate guides go unused."
+              },
+              {
+                "text": "Add a feedback email address to the footer so users can report problems after go-live",
+                "correct": false,
+                "why": "Post-publication feedback arrives only from users who tried and failed; most simply stop using the guide. Testing before publication prevents that silent abandonment."
+              }
+            ]
+          },
+          {
+            "q": "Eight months after go-live, three versions of the pay correction guide circulate, one predating a release that changed two steps. New errors trace back to the stale copy. What failed?",
+            "options": [
+              {
+                "text": "The original writing: the guide should have been written to survive any release",
+                "correct": false,
+                "why": "No guide can anticipate release changes. The design answer is version control, release-synced review, and withdrawal of superseded copies."
+              },
+              {
+                "text": "Ownership and versioning: no named owner synced the guide to the release, and the superseded version was never withdrawn",
+                "correct": true,
+                "why": "Guides decay by default. A surviving owner, a visible version, and a release-review step are what keep a library trustworthy after the project team leaves."
+              },
+              {
+                "text": "The users, who should have checked which version was current",
+                "correct": false,
+                "why": "Users under time pressure use what they find. If stale copies remain findable, that is a library governance failure, not a reader failure."
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
     "slug": "train-the-trainer-hcm",
     "title": "Train-the-Trainer Programs That Scale",
     "excerpt": "How to build a train-the-trainer programme for an HCM rollout: select trainers for credibility and teaching, certify by teach-back, and sustain them.",
