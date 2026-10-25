@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" font-family="Arial, sans-serif">
+<rect width="1200" height="675" fill="#0f172a"/>
+<text x="600" y="60" fill="#ffffff" font-size="34" text-anchor="middle" font-weight="bold">Platform Fit Map — Context, Not a Ranking</text>
+<text x="600" y="95" fill="#93c5fd" font-size="18" text-anchor="middle">Where each platform family is most often evaluated — verify against your own requirements</text>
+<g fill="#1e3a5f" stroke="#3b82f6" stroke-width="2">
+<rect x="60" y="140" width="520" height="110" rx="12"/><rect x="620" y="140" width="520" height="110" rx="12"/>
+<rect x="60" y="280" width="520" height="110" rx="12"/><rect x="620" y="280" width="520" height="110" rx="12"/>
+<rect x="330" y="420" width="540" height="110" rx="12"/>
+</g>
+<g fill="#ffffff" font-size="21" font-weight="bold">
+<text x="85" y="180">Unified HCM + Finance</text><text x="645" y="180">ERP-Connected HCM</text>
+<text x="85" y="320">Global Core HR Strength</text><text x="645" y="320">Single-Record Pay + Time</text>
+<text x="355" y="460">Workforce Management Depth</text>
+</g>
+<g fill="#bfdbfe" font-size="16">
+<text x="85" y="215">Evaluate when finance and HR share one roadmap</text><text x="645" y="215">Evaluate when HCM sits inside a wider ERP estate</text>
+<text x="85" y="355">Evaluate for complex multi-country core HR</text><text x="645" y="355">Evaluate when pay and time must calculate together</text>
+<text x="355" y="495">Evaluate for frontline, hourly, and unionised workforces</text>
+</g>
+<text x="600" y="590" fill="#93c5fd" font-size="16" text-anchor="middle">Fit is a property of the match — never of the platform alone.</text>
+</svg>
