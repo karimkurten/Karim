@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" font-family="Arial, sans-serif">
+<rect width="1200" height="675" fill="#0f172a"/>
+<text x="600" y="60" fill="#ffffff" font-size="34" text-anchor="middle" font-weight="bold">The Six Lenses of Platform Evaluation</text>
+<text x="600" y="95" fill="#93c5fd" font-size="18" text-anchor="middle">Score every platform through the same six lenses — in this order</text>
+<g fill="#1e3a5f" stroke="#3b82f6" stroke-width="2">
+<rect x="60" y="140" width="340" height="140" rx="12"/><rect x="430" y="140" width="340" height="140" rx="12"/><rect x="800" y="140" width="340" height="140" rx="12"/>
+<rect x="60" y="320" width="340" height="140" rx="12"/><rect x="430" y="320" width="340" height="140" rx="12"/><rect x="800" y="320" width="340" height="140" rx="12"/>
+</g>
+<g fill="#ffffff" font-size="22" font-weight="bold" text-anchor="middle">
+<text x="230" y="195">1. Architecture</text><text x="600" y="195">2. Payroll Depth</text><text x="970" y="195">3. Workforce Mgmt</text>
+<text x="230" y="375">4. Ecosystem</text><text x="600" y="375">5. Release Reality</text><text x="970" y="375">6. Total Cost</text>
+</g>
+<g fill="#bfdbfe" font-size="16" text-anchor="middle">
+<text x="230" y="230">One data model or many?</text><text x="600" y="230">Native, partner, or absent?</text><text x="970" y="230">Time, scheduling, labour rules</text>
+<text x="230" y="410">Integrations and partners</text><text x="600" y="410">Cadence you must absorb</text><text x="970" y="410">Licence + implementation + run</text>
+</g>
+<text x="600" y="540" fill="#93c5fd" font-size="18" text-anchor="middle">A platform that wins Lens 1 and fails Lens 2 will fail your go-live.</text>
+<text x="600" y="575" fill="#ffffff" font-size="16" text-anchor="middle">Weight the lenses by your riskiest process — not by the demo.</text>
+</svg>
