@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="620" viewBox="0 0 1200 620" font-family="Arial, Helvetica, sans-serif">
+  <defs>
+    <linearGradient id="hdr" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#0f172a"/><stop offset="1" stop-color="#1e3a5f"/>
+    </linearGradient>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#2B6CB0"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="1200" height="620" fill="#ffffff"/>
+  <rect x="0" y="0" width="1200" height="72" fill="url(#hdr)"/>
+  <text x="40" y="45" font-size="26" font-weight="bold" fill="#ffffff">The lifecycle of a guide that stays used</text>
+  <text x="40" y="105" font-size="15" fill="#64748B">A guide is a maintained product, not a project deliverable — the loop below runs for as long as the task exists.</text>
+  <g font-size="15" fill="#475569">
+    <rect x="30" y="150" width="204" height="180" rx="10" fill="#F0F4F8" stroke="#2B6CB0" stroke-width="2"/>
+    <text x="48" y="182" font-size="17" font-weight="bold" fill="#1A202C">1. Draft</text>
+    <text x="48" y="212">From the real task,</text>
+    <text x="48" y="236">in the user's words,</text>
+    <text x="48" y="260">one task per guide</text>
+    <rect x="262" y="150" width="204" height="180" rx="10" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+    <text x="280" y="182" font-size="17" font-weight="bold" fill="#1A202C">2. Test</text>
+    <text x="280" y="212">Watch real users do</text>
+    <text x="280" y="236">the real task with</text>
+    <text x="280" y="260">only the guide</text>
+    <text x="280" y="284">Revise where</text>
+    <text x="280" y="308">they hesitate</text>
+    <rect x="494" y="150" width="204" height="180" rx="10" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+    <text x="512" y="182" font-size="17" font-weight="bold" fill="#1A202C">3. Place</text>
+    <text x="512" y="212">At the point of need:</text>
+    <text x="512" y="236">in the workflow, on</text>
+    <text x="512" y="260">the task page, printed</text>
+    <text x="512" y="284">where work happens</text>
+    <rect x="726" y="150" width="204" height="180" rx="10" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+    <text x="744" y="182" font-size="17" font-weight="bold" fill="#1A202C">4. Measure</text>
+    <text x="744" y="212">Use at the moment</text>
+    <text x="744" y="236">of need — not</text>
+    <text x="744" y="260">downloads. Which</text>
+    <text x="744" y="284">tasks still raise</text>
+    <text x="744" y="308">tickets?</text>
+    <rect x="958" y="150" width="204" height="180" rx="10" fill="#F0F4F8" stroke="#2B6CB0" stroke-width="2"/>
+    <text x="976" y="182" font-size="17" font-weight="bold" fill="#1A202C">5. Revise</text>
+    <text x="976" y="212">With every release</text>
+    <text x="976" y="236">and process change;</text>
+    <text x="976" y="260">re-test what changed</text>
+    <text x="976" y="284">and withdraw the</text>
+    <text x="976" y="308">superseded version</text>
+  </g>
+  <line x1="234" y1="240" x2="260" y2="240" stroke="#2B6CB0" stroke-width="3" marker-end="url(#arr)"/>
+  <line x1="466" y1="240" x2="492" y2="240" stroke="#2B6CB0" stroke-width="3" marker-end="url(#arr)"/>
+  <line x1="698" y1="240" x2="724" y2="240" stroke="#2B6CB0" stroke-width="3" marker-end="url(#arr)"/>
+  <line x1="930" y1="240" x2="956" y2="240" stroke="#2B6CB0" stroke-width="3" marker-end="url(#arr)"/>
+  <path d="M 1060 330 L 1060 392 L 132 392 L 132 336" fill="none" stroke="#2B6CB0" stroke-width="3" marker-end="url(#arr)"/>
+  <text x="420" y="382" font-size="14" fill="#64748B">Each release and each repeated support question feeds the next revision</text>
+  <rect x="30" y="430" width="1132" height="100" rx="10" fill="#ffffff" stroke="#E2E8F0" stroke-width="2"/>
+  <text x="48" y="464" font-size="17" font-weight="bold" fill="#1A202C">Under a named owner who survives the project</text>
+  <text x="48" y="494" font-size="15" fill="#475569">Version and review date on every guide; language editions maintained as first-class versions; print and screen formats both supported.</text>
+  <text x="40" y="572" font-size="14" fill="#94A3B8">When the loop stops, the library decays — one stale guide teaches users to distrust all of them.</text>
+</svg>
