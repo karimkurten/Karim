@@ -1,5 +1,283 @@
 [
   {
+    "slug": "stakeholder-analysis-implementations",
+    "title": "Stakeholder Analysis for Implementations",
+    "excerpt": "How to run stakeholder analysis for an HCM implementation: map influence and impact, find hidden stakeholders, and turn the register into engagement.",
+    "publishedAt": "2026-10-26",
+    "readingTime": "8 min read",
+    "cover": "/images/blog/stakeholder-analysis-implementations-cover.webp",
+    "tags": [
+      "HCM",
+      "Implementation",
+      "Stakeholders",
+      "Project Management"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "Most HCM implementations do not struggle because a stakeholder was difficult. They struggle because a stakeholder was discovered too late: the payroll calendar owner surfaces in testing, a team that consumes a critical report first sees it after build, or a frontline group whose work changes completely was never in the design room. Stakeholder analysis prevents those discoveries. Done early and kept current, it shows who can affect the work, who will be affected by it, what each party needs, and how the project will engage them before concerns become delays or failed adoption, as in the complete guide to HCM implementation."
+      },
+      {
+        "type": "h2",
+        "text": "Start with the work, not the org chart"
+      },
+      {
+        "type": "p",
+        "text": "Useful analysis begins with the work the implementation will change, not the organisation chart. An org chart shows reporting lines; it does not show who approves a pay policy, who reconciles an interface, who answers employees when a payslip looks different, or who can stop a cutover because a control was missed. Start from the processes, decisions, and outputs in scope — hiring, time capture, absence, payroll, ledger posting, reporting, self-service — and for each, ask who performs it today, who owns its rules, who depends on its output, and who will judge the new version."
+      },
+      {
+        "type": "h2",
+        "text": "Identify every group that can affect or be affected"
+      },
+      {
+        "type": "p",
+        "text": "Name groups before individuals, because groups reveal gaps a list of familiar contacts hides. The executive sponsor carries the business case and authority to resolve conflicts. The steering committee governs scope, funding, and major decisions. HR owns policy and employee experience; payroll owns accuracy, calendars, and the pay cycle; finance depends on labour costs, accruals, and ledger postings. Technology and security own identity, access, integrations, and data protection. Managers carry change to their teams, employees and frontline workers are the largest affected group, and, where relevant, union or works council representatives are formal stakeholders with consultation timelines to respect. Vendors and partners control expertise the project depends on. In cross-border Canada–United States programmes, repeat the sweep by jurisdiction: a peripheral group in one province or state may be central in another."
+      },
+      {
+        "type": "h2",
+        "text": "Map influence with interest — and with impact"
+      },
+      {
+        "type": "p",
+        "text": "The classic grid plots influence over the project against interest in its outcome. High-influence, high-interest stakeholders are managed closely and involved in decisions. High-influence, lower-interest stakeholders are kept satisfied with concise, decision-focused contact. Lower-influence, high-interest groups are kept informed and genuinely heard, because they often carry adoption. Lower-influence, lower-interest groups are monitored lightly."
+      },
+      {
+        "type": "p",
+        "text": "For implementations, add impact: how much the change alters a stakeholder's work. Interest and impact diverge where projects get hurt. A frontline population may ignore project updates for months while facing very high impact on day one, when time capture, schedules, and pay visibility change at once. Checking impact separately prevents under-engaging the people who will live in the system daily because they were quiet during design — a discipline central to project management for enterprise implementations."
+      },
+      {
+        "type": "img",
+        "src": "/images/blog/stakeholder-analysis-implementations-1.svg",
+        "alt": "Stakeholder mapping diagram: a two-by-two influence and interest grid with four quadrants — keep satisfied for finance executives and security owners, manage closely for the executive sponsor, steering committee, and payroll and HR leadership, monitor lightly for peripheral report consumers, and keep informed and heard for managers, payroll specialists, and frontline employees — plus an impact-check banner.",
+        "caption": "Map influence and interest first, then check impact: quiet groups can still face the deepest change."
+      },
+      {
+        "type": "steps",
+        "label": "The stakeholder analysis sequence",
+        "intro": "Five moves, in order — each one turns a name on a list into an engagement decision the project can act on.",
+        "items": [
+          {
+            "title": "Sweep by work, then by group",
+            "text": "Start from the processes, decisions, and outputs in scope, name every group that can affect or be affected, then attach named individuals and deputies to each group."
+          },
+          {
+            "title": "Map influence, interest, and impact",
+            "text": "Place each stakeholder on the influence and interest grid, then check impact separately so quiet, heavily affected populations are not under-engaged."
+          },
+          {
+            "title": "Hunt for hidden stakeholders",
+            "text": "Trace calendars, reports, integrations, approvals, and audits to the people who own them, and add anyone who would discover the change late if they were missed."
+          },
+          {
+            "title": "Assess attitude and why",
+            "text": "Record current support, neutrality, or resistance for each stakeholder, the reason behind it in their terms, and what evidence or involvement could legitimately shift it."
+          },
+          {
+            "title": "Assign an engagement strategy and owner",
+            "text": "Give every significant stakeholder a strategy, a named project owner, a cadence, and a review date, and refresh the whole register at each phase gate."
+          }
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Find the hidden stakeholders"
+      },
+      {
+        "type": "p",
+        "text": "Hidden stakeholders connect to the system through an artefact, not a meeting. Payroll calendar owners control dates the plan silently assumes. Report consumers in finance, operations, compliance, and leadership judge the project by whether their numbers still reconcile after format, timing, or definitions change. Integration owners hold both ends of every interface, including local tools absent from architecture diagrams. Auditors and control owners shape evidence and retention choices that are painful to retrofit. Informal authorities matter too: the payroll specialist everyone calls, the site administrator maintaining local rosters. Trace each calendar, report, interface, approval, and audit trail to a named owner, then ask who else would be surprised or blocked if it changed. That trace also strengthens building the implementation project plan, because a plan built on an incomplete stakeholder picture inherits every gap in it as an unplanned dependency, a missing approver, or a task assigned to a team that never agreed to own it."
+      },
+      {
+        "type": "h2",
+        "text": "Assess attitude, support, and resistance — and why"
+      },
+      {
+        "type": "p",
+        "text": "For each significant stakeholder, record current position — supportive, neutral, uncertain, or resistant — the position the project needs, and the reason for any gap, in their terms. Resistance is information. A payroll lead resisting a timeline may be protecting accuracy she will be blamed for losing. A manager resisting self-service may be forecasting questions his team will bring him without answers. A finance partner resisting a report change may be defending a close process the project has not understood."
+      },
+      {
+        "type": "p",
+        "text": "Some gaps close with evidence, such as testing access. Some close with involvement in a real design decision. Some do not close and must be carried as a risk through governance. Recording attitude without its reason invites the project to push harder in the wrong direction."
+      },
+      {
+        "type": "img",
+        "src": "/images/blog/stakeholder-analysis-implementations-2.svg",
+        "alt": "Stakeholder register and lifecycle diagram: four register field cards for identity, position, attitude and why, and strategy and owner, above a five-step cycle from identify and map to find hidden stakeholders, assess attitude, and engage and review at every phase gate.",
+        "caption": "A register is a living control: fields that drive engagement, reviewed at every phase."
+      },
+      {
+        "type": "h2",
+        "text": "Turn analysis into an engagement strategy per group"
+      },
+      {
+        "type": "p",
+        "text": "Analysis earns its cost only when it changes behaviour. Each significant group needs a strategy: engagement objective, messages that matter to them, channel and cadence they will respond to, moments where their input or decision is required, and a named owner. Sponsors need decision-ready material and early sight of trade-offs. Specialists need working involvement in design and testing. Managers need preparation before their teams hear anything. Employees need task-level communication linked to a training needs analysis for HCM rollouts and point-of-need support such as quick reference guides people actually use."
+      },
+      {
+        "type": "p",
+        "text": "That strategy feeds the communication plan, informs the RACI — consulted and informed should match who is affected; the accountable approver should be whose authority was verified — and shapes decisions: a decision taken without a high-impact stakeholder present is often only a draft, reopened later at higher cost."
+      },
+      {
+        "type": "h2",
+        "text": "Keep the register living through every phase"
+      },
+      {
+        "type": "p",
+        "text": "A register written at kickoff describes a project that no longer exists. Influence shifts when a sponsor changes role, a design decision raises one group's impact, testing reveals whose work truly changes, or go-live brings support teams, auditors, and the whole employee population to the centre. Review the register at each phase gate and whenever scope, leadership, or timelines change: re-map positions, re-check attitudes, add newly relevant stakeholders, retire stale engagement."
+      },
+      {
+        "type": "p",
+        "text": "Its condition is a readiness signal. If the project cannot say who owns each critical relationship, which groups have confirmed readiness, and where unresolved resistance sits and why, the picture behind the HCM go-live checklist is incomplete, whatever testing shows."
+      },
+      {
+        "type": "h2",
+        "text": "Common mistakes"
+      },
+      {
+        "type": "p",
+        "text": "The failures below recur across implementations, and each one is an analytical shortcut taken early that the project pays for later."
+      },
+      {
+        "type": "accordion",
+        "label": "Six stakeholder analysis mistakes to avoid",
+        "items": [
+          {
+            "q": "Listing only the people already in project meetings",
+            "a": "Meeting attendance reflects who was invited, not who is affected. Sweep by process, decision, and output first, then trace calendars, reports, integrations, and audits to their owners so hidden stakeholders surface early."
+          },
+          {
+            "q": "Mapping influence and interest but never impact",
+            "a": "Quiet groups can face the deepest change. A frontline population with low project interest and very high day-one impact needs deliberate engagement, not light monitoring, or adoption fails where the work happens."
+          },
+          {
+            "q": "Recording resistance without recording why",
+            "a": "A label without a reason invites louder messaging instead of a real response. Capture the concern in the stakeholder's own terms; it may point to a design gap, a workload reality, or a risk the project should carry openly."
+          },
+          {
+            "q": "Treating the register as a kickoff artefact",
+            "a": "Influence, impact, and attitude all shift as phases, scope, and leadership change. Review the register at every phase gate, re-map what moved, and add the stakeholders the next phase makes central."
+          },
+          {
+            "q": "Engaging everyone the same way",
+            "a": "A sponsor, a payroll specialist, a manager, and a frontline employee need different objectives, material, cadence, and owners. One broadcast rhythm for all of them serves none of them well."
+          },
+          {
+            "q": "Assuming approvers instead of verifying authority",
+            "a": "Design and readiness decisions stall when the named approver lacks the authority the project assumed. Verify who can actually decide, who must be consulted, and reflect that in the RACI before the decision is needed."
+          }
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Key Takeaways"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "Start stakeholder analysis from the work in scope — processes, decisions, and outputs — not from the org chart or the meeting list.",
+          "Map influence and interest, then check impact separately, so quiet but heavily affected groups are never under-engaged.",
+          "Trace calendars, reports, integrations, approvals, and audits to named owners to find the hidden stakeholders.",
+          "Record attitude with its reason in the stakeholder's own terms; resistance is information about the project, not an obstacle to message over.",
+          "Give every significant stakeholder an engagement strategy, a named owner, and a review date, and refresh the register at each phase gate.",
+          "Get the checklist"
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Frequently Asked Questions"
+      },
+      {
+        "type": "p",
+        "text": "When should stakeholder analysis happen in an implementation? At the start, before requirements and design decisions harden, and then repeatedly at each phase gate. Early analysis shapes who is consulted and what is gathered; later reviews catch the stakeholders each new phase makes relevant."
+      },
+      {
+        "type": "p",
+        "text": "What belongs in a stakeholder register? At minimum: the stakeholder or group, a named individual and deputy, their role in relation to the project, influence, interest, impact, current and needed attitude with the reason, engagement strategy, owner, cadence, and review date."
+      },
+      {
+        "type": "p",
+        "text": "How is impact different from interest? Interest is how much a stakeholder follows or cares about the project; impact is how much the change alters their work, pay, data, or obligations. High-impact, low-interest groups are the classic blind spot and need deliberate engagement."
+      },
+      {
+        "type": "p",
+        "text": "What should a project do with a resistant stakeholder? Understand the reason first, in their terms. Respond with evidence, involvement in real decisions, or workload support as the reason requires — and where the concern is valid and unresolved, carry it as a risk through governance rather than disguising it."
+      },
+      {
+        "type": "h2",
+        "text": "Next Steps"
+      },
+      {
+        "type": "p",
+        "text": "Open a blank register and run the work-first sweep: list the processes, decisions, and outputs in scope, name every group that can affect or be affected by each, and trace calendars, reports, integrations, and audits to named owners. Map influence, interest, and impact, assess attitude with its reasons, and assign each significant stakeholder a strategy, an owner, and a review date before design begins. Get the checklist"
+      },
+      {
+        "type": "quiz",
+        "label": "Check your understanding",
+        "questions": [
+          {
+            "q": "A register lists the sponsor, steering committee, HR, and payroll. In testing, the project learns a finance team reconciles a weekly labour report the new system changes, and nobody consulted them. What failed?",
+            "options": [
+              {
+                "text": "The communication plan: finance should have been on the general project newsletter from kickoff",
+                "correct": false,
+                "why": "A newsletter would not have surfaced their design needs. The failure happened earlier, in identification: report consumers were never traced to their owners."
+              },
+              {
+                "text": "The identification sweep: it listed meeting attendees instead of tracing processes, reports, and outputs to every group that affects or is affected by them",
+                "correct": true,
+                "why": "A work-first sweep, tracing each report and output to a named owner, finds hidden stakeholders like report consumers before build hardens around them."
+              },
+              {
+                "text": "Testing coverage: the report should simply have been added to the test scope once discovered",
+                "correct": false,
+                "why": "Adding the test fixes the symptom. The underlying failure is an incomplete stakeholder picture, which will produce further late discoveries until the sweep is redone properly."
+              }
+            ]
+          },
+          {
+            "q": "Frontline employees show little interest in project updates, so the plan places them in the monitor-lightly quadrant. Their time capture, schedules, and pay view all change at go-live. What is wrong with that placement?",
+            "options": [
+              {
+                "text": "Nothing: low interest correctly means low engagement until go-live communications begin",
+                "correct": false,
+                "why": "Interest is only one lens. This group faces very high impact, and under-engaging high-impact populations is how adoption fails on day one."
+              },
+              {
+                "text": "The analysis mapped interest but not impact: a high-impact, low-interest group needs deliberate, task-level engagement well before go-live",
+                "correct": true,
+                "why": "Impact describes how much the change alters their work. Checking impact separately from interest is what prevents quiet, heavily affected groups from being missed."
+              },
+              {
+                "text": "The quadrant is fine, but the project should send the same steering-committee updates to frontline staff to raise their interest",
+                "correct": false,
+                "why": "Decision-level material does not prepare people for changed tasks. The fix is an impact-based engagement strategy — preparation, training, and point-of-need support — not more broadcast."
+              }
+            ]
+          },
+          {
+            "q": "A payroll lead is recorded in the register as resistant, with no reason noted. The project responds with more frequent, more positive project updates, and her position hardens. What does the method say?",
+            "options": [
+              {
+                "text": "Escalate immediately: sustained resistance after increased communication is a governance issue, not an analysis issue",
+                "correct": false,
+                "why": "Escalation may eventually be right, but the project skipped the diagnostic step. Without the reason, it cannot know whether escalation, evidence, or involvement is the correct response."
+              },
+              {
+                "text": "Find and record the reason in her terms first — she may be protecting accuracy, workload, or a control — then respond with evidence, involvement, or an honestly carried risk",
+                "correct": true,
+                "why": "Attitude without its reason invites the wrong remedy. Resistance is information about the project, and the response should match the actual concern."
+              },
+              {
+                "text": "Reduce contact until testing, when results will speak for themselves",
+                "correct": false,
+                "why": "Silence does not address an unrecorded concern either, and it forfeits the chance that her knowledge improves the design before testing makes change expensive."
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
     "slug": "hcm-platforms-compared-project-managers-guide",
     "title": "HCM Platforms Compared: A Project Manager's Guide",
     "excerpt": "Compare Workday, Oracle, SAP SuccessFactors, Dayforce and UKG as a project manager: architecture, payroll, releases, cost, and a gated selection method.",
