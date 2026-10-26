@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="620" viewBox="0 0 1200 620" font-family="Arial, Helvetica, sans-serif">
+  <defs>
+    <linearGradient id="hdr" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#0f172a"/><stop offset="1" stop-color="#1e3a5f"/>
+    </linearGradient>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#2B6CB0"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="1200" height="620" fill="#ffffff"/>
+  <rect x="0" y="0" width="1200" height="72" fill="url(#hdr)"/>
+  <text x="40" y="45" font-size="26" font-weight="bold" fill="#ffffff">The stakeholder register: fields and lifecycle</text>
+  <text x="40" y="105" font-size="15" fill="#64748B">A useful register drives engagement — every field below answers a question the project will actually ask.</text>
+  <g font-size="15" fill="#475569">
+    <rect x="30" y="130" width="270" height="150" rx="10" fill="#F0F4F8" stroke="#2B6CB0" stroke-width="2"/>
+    <text x="48" y="162" font-size="17" font-weight="bold" fill="#1A202C">Identity</text>
+    <text x="48" y="192">Stakeholder or group</text>
+    <text x="48" y="216">Named individual</text>
+    <text x="48" y="240">Deputy and role</text>
+    <text x="48" y="264">Relation to the project</text>
+    <rect x="320" y="130" width="270" height="150" rx="10" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+    <text x="338" y="162" font-size="17" font-weight="bold" fill="#1A202C">Position</text>
+    <text x="338" y="192">Influence rating</text>
+    <text x="338" y="216">Interest rating</text>
+    <text x="338" y="240">Impact rating</text>
+    <text x="338" y="264">Quadrant placement</text>
+    <rect x="610" y="130" width="270" height="150" rx="10" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+    <text x="628" y="162" font-size="17" font-weight="bold" fill="#1A202C">Attitude and why</text>
+    <text x="628" y="192">Current position</text>
+    <text x="628" y="216">Position needed</text>
+    <text x="628" y="240">Reason for any gap,</text>
+    <text x="628" y="264">in their own terms</text>
+    <rect x="900" y="130" width="270" height="150" rx="10" fill="#F0F4F8" stroke="#2B6CB0" stroke-width="2"/>
+    <text x="918" y="162" font-size="17" font-weight="bold" fill="#1A202C">Strategy and owner</text>
+    <text x="918" y="192">Engagement objective</text>
+    <text x="918" y="216">Channel and cadence</text>
+    <text x="918" y="240">Named project owner</text>
+    <text x="918" y="264">Review date</text>
+  </g>
+  <g font-size="15" fill="#475569">
+    <rect x="30" y="330" width="204" height="150" rx="10" fill="#F0F4F8" stroke="#2B6CB0" stroke-width="2"/>
+    <text x="48" y="362" font-size="17" font-weight="bold" fill="#1A202C">1. Identify</text>
+    <text x="48" y="392">Sweep by work,</text>
+    <text x="48" y="416">group by group,</text>
+    <text x="48" y="440">by jurisdiction</text>
+    <rect x="262" y="330" width="204" height="150" rx="10" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+    <text x="280" y="362" font-size="17" font-weight="bold" fill="#1A202C">2. Map</text>
+    <text x="280" y="392">Influence, interest,</text>
+    <text x="280" y="416">and impact on</text>
+    <text x="280" y="440">separate lenses</text>
+    <rect x="494" y="330" width="204" height="150" rx="10" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+    <text x="512" y="362" font-size="17" font-weight="bold" fill="#1A202C">3. Find hidden</text>
+    <text x="512" y="392">Trace calendars,</text>
+    <text x="512" y="416">reports, interfaces,</text>
+    <text x="512" y="440">approvals, audits</text>
+    <rect x="726" y="330" width="204" height="150" rx="10" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+    <text x="744" y="362" font-size="17" font-weight="bold" fill="#1A202C">4. Assess</text>
+    <text x="744" y="392">Attitude, support,</text>
+    <text x="744" y="416">resistance — and</text>
+    <text x="744" y="440">the reason why</text>
+    <rect x="958" y="330" width="204" height="150" rx="10" fill="#F0F4F8" stroke="#2B6CB0" stroke-width="2"/>
+    <text x="976" y="362" font-size="17" font-weight="bold" fill="#1A202C">5. Engage, review</text>
+    <text x="976" y="392">Strategy per group,</text>
+    <text x="976" y="416">reviewed at every</text>
+    <text x="976" y="440">phase gate</text>
+  </g>
+  <line x1="234" y1="405" x2="260" y2="405" stroke="#2B6CB0" stroke-width="3" marker-end="url(#arr)"/>
+  <line x1="466" y1="405" x2="492" y2="405" stroke="#2B6CB0" stroke-width="3" marker-end="url(#arr)"/>
+  <line x1="698" y1="405" x2="724" y2="405" stroke="#2B6CB0" stroke-width="3" marker-end="url(#arr)"/>
+  <line x1="930" y1="405" x2="956" y2="405" stroke="#2B6CB0" stroke-width="3" marker-end="url(#arr)"/>
+  <text x="40" y="540" font-size="14" fill="#94A3B8">When the register stops changing, it has stopped describing the project — refresh it whenever scope, leadership, or phase changes.</text>
+  <text x="40" y="572" font-size="14" fill="#64748B">Links onward: communication plan, RACI, and the decisions each stakeholder must shape or approve.</text>
+</svg>
