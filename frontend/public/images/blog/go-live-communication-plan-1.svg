@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700" font-family="Arial, Helvetica, sans-serif">
+<defs><linearGradient id="hdr" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#0f172a"/><stop offset="1" stop-color="#1e3a5f"/></linearGradient>
+<marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#2B6CB0"/></marker></defs>
+<rect x="0" y="0" width="1200" height="700" fill="#ffffff"/>
+<rect x="0" y="0" width="1200" height="72" fill="url(#hdr)"/>
+<text x="40" y="45" font-size="26" font-weight="bold" fill="#ffffff">Go-live communication: timeline and audience tracks</text>
+<text x="40" y="105" font-size="15" fill="#64748B">Five phases across the top — each audience track below shows what that group receives, and when.</text>
+<rect x="30" y="130" width="150" height="64" rx="10" fill="#ffffff" stroke="#E2E8F0" stroke-width="2"/>
+<text x="44" y="168" font-size="15" font-weight="bold" fill="#1A202C">Audience</text>
+<rect x="190" y="130" width="186" height="64" rx="10" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+<text x="202" y="158" font-size="15" font-weight="bold" fill="#1A202C">Readiness</text>
+<text x="202" y="186" font-size="12" fill="#64748B">T-4 to T-2 weeks</text>
+<line x1="378" y1="162" x2="384" y2="162" stroke="#2B6CB0" stroke-width="2" marker-end="url(#arr)"/>
+<rect x="386" y="130" width="186" height="64" rx="10" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+<text x="398" y="158" font-size="15" font-weight="bold" fill="#1A202C">Preparation</text>
+<text x="398" y="186" font-size="12" fill="#64748B">T-2 to T-1 weeks</text>
+<line x1="574" y1="162" x2="580" y2="162" stroke="#2B6CB0" stroke-width="2" marker-end="url(#arr)"/>
+<rect x="582" y="130" width="186" height="64" rx="10" fill="#F0F4F8" stroke="#2B6CB0" stroke-width="2"/>
+<text x="594" y="158" font-size="15" font-weight="bold" fill="#1A202C">Cutover weekend</text>
+<text x="594" y="186" font-size="12" fill="#64748B">Fri to Sun</text>
+<line x1="770" y1="162" x2="776" y2="162" stroke="#2B6CB0" stroke-width="2" marker-end="url(#arr)"/>
+<rect x="778" y="130" width="186" height="64" rx="10" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+<text x="790" y="158" font-size="15" font-weight="bold" fill="#1A202C">Go-live day</text>
+<text x="790" y="186" font-size="12" fill="#64748B">Day one</text>
+<line x1="966" y1="162" x2="972" y2="162" stroke="#2B6CB0" stroke-width="2" marker-end="url(#arr)"/>
+<rect x="974" y="130" width="186" height="64" rx="10" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+<text x="986" y="158" font-size="15" font-weight="bold" fill="#1A202C">Hypercare</text>
+<text x="986" y="186" font-size="12" fill="#64748B">Weeks 1 to 4</text>
+<rect x="30" y="210" width="150" height="78" rx="10" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+<text x="42" y="256" font-size="14" font-weight="bold" fill="#1A202C">Executives</text>
+<rect x="190" y="210" width="186" height="78" rx="10" fill="#ffffff" stroke="#E2E8F0" stroke-width="2"/>
+<text x="202" y="256" font-size="13" fill="#475569">Readiness status</text>
+<rect x="386" y="210" width="186" height="78" rx="10" fill="#ffffff" stroke="#E2E8F0" stroke-width="2"/>
+<text x="398" y="256" font-size="13" fill="#475569">Decision brief</text>
+<rect x="582" y="210" width="186" height="78" rx="10" fill="#ffffff" stroke="#E2E8F0" stroke-width="2"/>
+<text x="594" y="256" font-size="13" fill="#475569">Go / no-go result</text>
+<rect x="778" y="210" width="186" height="78" rx="10" fill="#ffffff" stroke="#E2E8F0" stroke-width="2"/>
+<text x="790" y="256" font-size="13" fill="#475569">Confirmation</text>
+<rect x="974" y="210" width="186" height="78" rx="10" fill="#ffffff" stroke="#E2E8F0" stroke-width="2"/>
+<text x="986" y="246" font-size="13" fill="#475569">First pay cycle</text>
+<text x="986" y="263" font-size="13" fill="#475569">outcome</text>
+<rect x="30" y="298" width="150" height="78" rx="10" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+<text x="42" y="344" font-size="14" font-weight="bold" fill="#1A202C">Managers</text>
+<rect x="190" y="298" width="186" height="78" rx="10" fill="#ffffff" stroke="#E2E8F0" stroke-width="2"/>
+<text x="202" y="344" font-size="13" fill="#475569">What changes</text>
+<rect x="386" y="298" width="186" height="78" rx="10" fill="#ffffff" stroke="#E2E8F0" stroke-width="2"/>
+<text x="398" y="334" font-size="13" fill="#475569">Briefing and talking</text>
+<text x="398" y="351" font-size="13" fill="#475569">points</text>
+<rect x="582" y="298" width="186" height="78" rx="10" fill="#ffffff" stroke="#E2E8F0" stroke-width="2"/>
+<text x="594" y="344" font-size="13" fill="#475569">Team status route</text>
+<rect x="778" y="298" width="186" height="78" rx="10" fill="#ffffff" stroke="#E2E8F0" stroke-width="2"/>
+<text x="790" y="344" font-size="13" fill="#475569">Day-one guidance</text>
+<rect x="974" y="298" width="186" height="78" rx="10" fill="#ffffff" stroke="#E2E8F0" stroke-width="2"/>
+<text x="986" y="344" font-size="13" fill="#475569">Questions and feedback</text>
+<rect x="30" y="386" width="150" height="78" rx="10" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+<text x="42" y="432" font-size="14" font-weight="bold" fill="#1A202C">Employees</text>
+<rect x="190" y="386" width="186" height="78" rx="10" fill="#ffffff" stroke="#E2E8F0" stroke-width="2"/>
+<text x="202" y="432" font-size="13" fill="#475569">Why the change</text>
+<rect x="386" y="386" width="186" height="78" rx="10" fill="#ffffff" stroke="#E2E8F0" stroke-width="2"/>
+<text x="398" y="432" font-size="13" fill="#475569">Training and checks</text>
+<rect x="582" y="386" width="186" height="78" rx="10" fill="#ffffff" stroke="#E2E8F0" stroke-width="2"/>
+<text x="594" y="432" font-size="13" fill="#475569">Downtime notice</text>
+<rect x="778" y="386" width="186" height="78" rx="10" fill="#ffffff" stroke="#E2E8F0" stroke-width="2"/>
+<text x="790" y="432" font-size="13" fill="#475569">What to do first</text>
+<rect x="974" y="386" width="186" height="78" rx="10" fill="#ffffff" stroke="#E2E8F0" stroke-width="2"/>
+<text x="986" y="432" font-size="13" fill="#475569">Help and taper updates</text>
+<rect x="30" y="474" width="150" height="78" rx="10" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+<text x="42" y="520" font-size="14" font-weight="bold" fill="#1A202C">Payroll / HR ops</text>
+<rect x="190" y="474" width="186" height="78" rx="10" fill="#ffffff" stroke="#E2E8F0" stroke-width="2"/>
+<text x="202" y="520" font-size="13" fill="#475569">Freeze and calendar</text>
+<rect x="386" y="474" width="186" height="78" rx="10" fill="#ffffff" stroke="#E2E8F0" stroke-width="2"/>
+<text x="398" y="520" font-size="13" fill="#475569">Cutover steps ready</text>
+<rect x="582" y="474" width="186" height="78" rx="10" fill="#ffffff" stroke="#E2E8F0" stroke-width="2"/>
+<text x="594" y="520" font-size="13" fill="#475569">Validation checks</text>
+<rect x="778" y="474" width="186" height="78" rx="10" fill="#ffffff" stroke="#E2E8F0" stroke-width="2"/>
+<text x="790" y="520" font-size="13" fill="#475569">Pay cycle watch</text>
+<rect x="974" y="474" width="186" height="78" rx="10" fill="#ffffff" stroke="#E2E8F0" stroke-width="2"/>
+<text x="986" y="520" font-size="13" fill="#475569">Issue resolution</text>
+<rect x="30" y="562" width="150" height="78" rx="10" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+<text x="42" y="608" font-size="14" font-weight="bold" fill="#1A202C">Support desk</text>
+<rect x="190" y="562" width="186" height="78" rx="10" fill="#ffffff" stroke="#E2E8F0" stroke-width="2"/>
+<text x="202" y="608" font-size="13" fill="#475569">Expected themes</text>
+<rect x="386" y="562" width="186" height="78" rx="10" fill="#ffffff" stroke="#E2E8F0" stroke-width="2"/>
+<text x="398" y="608" font-size="13" fill="#475569">Scripts and triage</text>
+<rect x="582" y="562" width="186" height="78" rx="10" fill="#ffffff" stroke="#E2E8F0" stroke-width="2"/>
+<text x="594" y="608" font-size="13" fill="#475569">Escalation path</text>
+<rect x="778" y="562" width="186" height="78" rx="10" fill="#ffffff" stroke="#E2E8F0" stroke-width="2"/>
+<text x="790" y="608" font-size="13" fill="#475569">Live support</text>
+<rect x="974" y="562" width="186" height="78" rx="10" fill="#ffffff" stroke="#E2E8F0" stroke-width="2"/>
+<text x="986" y="608" font-size="13" fill="#475569">Themes and trends</text>
+<rect x="30" y="654" width="1140" height="52" rx="8" fill="#ffffff" stroke="#2B6CB0" stroke-width="2"/>
+<text x="54" y="686" font-size="15" font-weight="bold" fill="#1A202C">Managers are always briefed before employees — in every phase, on every track.</text>
+</svg>
