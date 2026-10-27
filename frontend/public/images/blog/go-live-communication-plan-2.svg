@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" font-family="Arial, Helvetica, sans-serif">
+<defs><linearGradient id="hdr" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#0f172a"/><stop offset="1" stop-color="#1e3a5f"/></linearGradient>
+<marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#2B6CB0"/></marker></defs>
+<rect x="0" y="0" width="1200" height="720" fill="#ffffff"/>
+<rect x="0" y="0" width="1200" height="72" fill="url(#hdr)"/>
+<text x="40" y="45" font-size="26" font-weight="bold" fill="#ffffff">Go-live communication: audience and message matrix</text>
+<text x="40" y="105" font-size="15" fill="#64748B">Match the message to the audience — need, channel, and timing differ for every group.</text>
+<rect x="30" y="130" width="200" height="44" rx="8" fill="#F0F4F8" stroke="#2B6CB0" stroke-width="2"/>
+<text x="44" y="158" font-size="15" font-weight="bold" fill="#1A202C">Audience</text>
+<rect x="240" y="130" width="420" height="44" rx="8" fill="#F0F4F8" stroke="#2B6CB0" stroke-width="2"/>
+<text x="254" y="158" font-size="15" font-weight="bold" fill="#1A202C">Core message</text>
+<rect x="670" y="130" width="220" height="44" rx="8" fill="#F0F4F8" stroke="#2B6CB0" stroke-width="2"/>
+<text x="684" y="158" font-size="15" font-weight="bold" fill="#1A202C">Best channel</text>
+<rect x="900" y="130" width="270" height="44" rx="8" fill="#F0F4F8" stroke="#2B6CB0" stroke-width="2"/>
+<text x="914" y="158" font-size="15" font-weight="bold" fill="#1A202C">When it lands</text>
+<rect x="30" y="190" width="200" height="64" rx="8" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+<text x="44" y="218" font-size="13" font-weight="bold" fill="#1A202C">Executives and</text>
+<text x="44" y="235" font-size="13" font-weight="bold" fill="#1A202C">sponsors</text>
+<rect x="240" y="190" width="420" height="64" rx="8" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+<text x="254" y="218" font-size="13" font-weight="normal" fill="#475569">Readiness, risk, and the go / no-go</text>
+<text x="254" y="235" font-size="13" font-weight="normal" fill="#475569">decision</text>
+<rect x="670" y="190" width="220" height="64" rx="8" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+<text x="684" y="230" font-size="13" font-weight="normal" fill="#475569">Decision brief</text>
+<rect x="900" y="190" width="270" height="64" rx="8" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+<text x="914" y="218" font-size="13" font-weight="normal" fill="#475569">At each gate and at the</text>
+<text x="914" y="235" font-size="13" font-weight="normal" fill="#475569">decision</text>
+<rect x="30" y="266" width="200" height="64" rx="8" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+<text x="44" y="306" font-size="13" font-weight="bold" fill="#1A202C">Managers</text>
+<rect x="240" y="266" width="420" height="64" rx="8" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+<text x="254" y="294" font-size="13" font-weight="normal" fill="#475569">What changes for their team, talking</text>
+<text x="254" y="311" font-size="13" font-weight="normal" fill="#475569">points</text>
+<rect x="670" y="266" width="220" height="64" rx="8" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+<text x="684" y="294" font-size="13" font-weight="normal" fill="#475569">Briefing note and</text>
+<text x="684" y="311" font-size="13" font-weight="normal" fill="#475569">session</text>
+<rect x="900" y="266" width="270" height="64" rx="8" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+<text x="914" y="294" font-size="13" font-weight="normal" fill="#475569">Before every employee</text>
+<text x="914" y="311" font-size="13" font-weight="normal" fill="#475569">message</text>
+<rect x="30" y="342" width="200" height="64" rx="8" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+<text x="44" y="370" font-size="13" font-weight="bold" fill="#1A202C">Employees and</text>
+<text x="44" y="387" font-size="13" font-weight="bold" fill="#1A202C">frontline</text>
+<rect x="240" y="342" width="420" height="64" rx="8" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+<text x="254" y="382" font-size="13" font-weight="normal" fill="#475569">What changes for me and what to do first</text>
+<rect x="670" y="342" width="220" height="64" rx="8" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+<text x="684" y="370" font-size="13" font-weight="normal" fill="#475569">Email, intranet,</text>
+<text x="684" y="387" font-size="13" font-weight="normal" fill="#475569">source of truth</text>
+<rect x="900" y="342" width="270" height="64" rx="8" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+<text x="914" y="370" font-size="13" font-weight="normal" fill="#475569">Preparation, day one,</text>
+<text x="914" y="387" font-size="13" font-weight="normal" fill="#475569">hypercare</text>
+<rect x="30" y="418" width="200" height="64" rx="8" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+<text x="44" y="446" font-size="13" font-weight="bold" fill="#1A202C">Payroll and HR</text>
+<text x="44" y="463" font-size="13" font-weight="bold" fill="#1A202C">operations</text>
+<rect x="240" y="418" width="420" height="64" rx="8" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+<text x="254" y="458" font-size="13" font-weight="normal" fill="#475569">Cutover steps, freezes, validation checks</text>
+<rect x="670" y="418" width="220" height="64" rx="8" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+<text x="684" y="458" font-size="13" font-weight="normal" fill="#475569">Operations channel</text>
+<rect x="900" y="418" width="270" height="64" rx="8" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+<text x="914" y="446" font-size="13" font-weight="normal" fill="#475569">Readiness through first pay</text>
+<text x="914" y="463" font-size="13" font-weight="normal" fill="#475569">cycle</text>
+<rect x="30" y="494" width="200" height="64" rx="8" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+<text x="44" y="534" font-size="13" font-weight="bold" fill="#1A202C">Support desk</text>
+<rect x="240" y="494" width="420" height="64" rx="8" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+<text x="254" y="534" font-size="13" font-weight="normal" fill="#475569">Expected themes, answers, triage rules</text>
+<rect x="670" y="494" width="220" height="64" rx="8" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+<text x="684" y="534" font-size="13" font-weight="normal" fill="#475569">Desk scripts and hub</text>
+<rect x="900" y="494" width="270" height="64" rx="8" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+<text x="914" y="534" font-size="13" font-weight="normal" fill="#475569">Before cutover, then daily</text>
+<rect x="30" y="570" width="200" height="64" rx="8" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+<text x="44" y="610" font-size="13" font-weight="bold" fill="#1A202C">Partners</text>
+<rect x="240" y="570" width="420" height="64" rx="8" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+<text x="254" y="610" font-size="13" font-weight="normal" fill="#475569">Interface timings and contact points</text>
+<rect x="670" y="570" width="220" height="64" rx="8" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+<text x="684" y="610" font-size="13" font-weight="normal" fill="#475569">Partner notice</text>
+<rect x="900" y="570" width="270" height="64" rx="8" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+<text x="914" y="610" font-size="13" font-weight="normal" fill="#475569">Before and during cutover</text>
+<rect x="30" y="648" width="1140" height="86" rx="10" fill="#ffffff" stroke="#2B6CB0" stroke-width="2"/>
+<text x="54" y="678" font-size="16" font-weight="bold" fill="#1A202C">Cutover-weekend rhythm</text>
+<text x="54" y="704" font-size="14" fill="#475569">Scheduled status updates at agreed times  •  Separate incident notices with the next update time stated  •  Formal go / no-go announcement</text>
+</svg>
