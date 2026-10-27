@@ -1,5 +1,283 @@
 [
   {
+    "slug": "go-live-communication-plan",
+    "title": "Communication Planning for Go-Live",
+    "excerpt": "Build a go-live communication plan for an HCM rollout: audiences, message sequencing, cutover-weekend cadence, manager enablement, and hypercare.",
+    "publishedAt": "2026-10-27",
+    "readingTime": "8 min read",
+    "cover": "/images/blog/go-live-communication-plan-cover.webp",
+    "tags": [
+      "HCM",
+      "Implementation",
+      "Communications",
+      "Go-Live"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "Go-live rarely fails because nobody sent an email. It fails because the wrong audience heard the wrong thing at the wrong moment: employees learn a new time-capture process from a rumour, managers face questions they were never briefed to answer, or executives discover a cutover delay from outside the project. A go-live communication plan prevents that disorder. Built early and run as an operating rhythm rather than a burst of announcements, it gives every audience what it needs, when it needs it, from a source it trusts — the practical companion to stakeholder analysis for implementations."
+      },
+      {
+        "type": "h2",
+        "text": "Start with audiences, not announcements"
+      },
+      {
+        "type": "p",
+        "text": "Useful planning begins with audiences, not messages. A message-first plan produces a calendar of broadcasts and discovers too late that some groups needed preparation weeks earlier while others needed nothing until go-live morning. An audience-first plan starts from the groups identified in the stakeholder analysis and asks, for each one, what changes for them, what they must do differently, what they are likely to worry about, and who they will turn to when something is unclear. Those answers decide the message, channel, sender, and timing, in that order."
+      },
+      {
+        "type": "p",
+        "text": "That discipline also keeps volume honest. Over-communicating to people whose work barely changes teaches them to ignore the channel the project will need when a message matters. Relevance earns attention at cutover."
+      },
+      {
+        "type": "h2",
+        "text": "Know what each audience needs to hear"
+      },
+      {
+        "type": "p",
+        "text": "Executives and sponsors need decision-grade communication: readiness status, material risks, the go or no-go recommendation, and the business impact of any delay. Managers need operational translation — what changes for their teams, what to say and what not to promise, where to direct questions, and how to tell a real problem from first-day unfamiliarity. Employees and frontline workers need task-level clarity: what changes for them personally, what stays the same, what to do on day one, and where help lives when they are stuck."
+      },
+      {
+        "type": "p",
+        "text": "Payroll and HR operations teams need the deepest technical layer: cutover steps, freeze periods, validation checks, and escalation routes, because their work carries the first pay cycle. The support desk needs expected themes, approved answers, and triage rules agreed before the phones start. Partners need interface timings and contact points. In cross-border Canada–United States programmes, repeat this by jurisdiction and language where needed: pay dates, statutory messages, and working patterns do not land identically on both sides of the border, and one undifferentiated broadcast will be wrong somewhere."
+      },
+      {
+        "type": "img",
+        "src": "/images/blog/go-live-communication-plan-1.svg",
+        "alt": "Go-live communication timeline diagram: five phases from readiness through preparation, cutover weekend, and go-live day to hypercare, crossed with five audience tracks for executives, managers, employees, payroll and HR operations, and the support desk, plus a manager-first banner.",
+        "caption": "Sequence by phase and audience: each group hears what it needs when it can act on it."
+      },
+      {
+        "type": "steps",
+        "label": "The go-live communication planning sequence",
+        "intro": "Five moves, in order — each one turns an audience list into a sequenced plan the project can run through cutover and hypercare.",
+        "items": [
+          {
+            "title": "Define audiences and what each one needs",
+            "text": "Start from the stakeholder analysis, name every audience, and record what changes for them, what they must do, what they will worry about, and who they trust as a sender."
+          },
+          {
+            "title": "Sequence messages by phase",
+            "text": "Map every message to readiness, preparation, cutover, go-live day, or hypercare, and set its date from when the audience can act on it, not from when the project happens to know it."
+          },
+          {
+            "title": "Enable managers before any employee broadcast",
+            "text": "Brief managers first with talking points, likely questions, and escalation routes, and leave a gap before the employee message so no manager first hears the news from their own team."
+          },
+          {
+            "title": "Prepare templates and the single source of truth",
+            "text": "Draft the go and no-go announcements, status updates, incident notices, and delay messages in advance, and publish all current guidance in one maintained location every message points back to."
+          },
+          {
+            "title": "Run the rhythm and listen back",
+            "text": "Hold the planned cadence through cutover weekend and hypercare, track whether messages landed through managers, the support desk, and direct feedback, and adjust content and frequency on that evidence."
+          }
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Sequence messages from readiness to hypercare"
+      },
+      {
+        "type": "p",
+        "text": "Sequencing is where the plan becomes a plan. During readiness, communication builds informed confidence: what is changing and why, what has been tested, what remains open, and when the go or no-go decision will be announced. During preparation, messages turn practical — training invitations, freeze dates, what employees must complete before cutover, and what will be unavailable, and for how long. Each message should arrive when its audience can act on it: too early and it is forgotten, too late and it reads as a surprise."
+      },
+      {
+        "type": "p",
+        "text": "Cutover weekend and go-live day need short, factual, timestamped updates rather than narrative. Hypercare then tapers deliberately: frequent confirmation early, when anxiety and contact volumes are highest, stepping down as the first pay cycle completes. Announce that taper, so silence is understood as stability rather than absence. The sequence supports the decision recorded in the HCM go-live checklist, because a readiness decision nobody hears about, in a form they trust, has not really been communicated at all."
+      },
+      {
+        "type": "h2",
+        "text": "Enable managers before employees hear anything"
+      },
+      {
+        "type": "p",
+        "text": "Managers are the channel employees actually trust, so they must never learn project news at the same time as their teams. Brief managers before every significant employee broadcast: what is changing, why, what it means for their teams, the questions they are most likely to face, honest answers where answers exist, and a clear line for what they do not yet know. Give them the material in usable form — a short briefing note, talking points, and answers to predictable questions — linked to the training needs analysis for HCM rollouts, so team preparation is defined rather than improvised."
+      },
+      {
+        "type": "p",
+        "text": "That gap is not courtesy; it is control. A prepared manager reinforces the message and surfaces genuine problems early. An unprepared one becomes a source of speculation, and speculation fills every gap a plan leaves open."
+      },
+      {
+        "type": "img",
+        "src": "/images/blog/go-live-communication-plan-2.svg",
+        "alt": "Audience and message matrix diagram: six audiences with the core message each needs, the best channel to reach them, and when the message lands, plus a cutover-weekend rhythm banner covering status cadence, incident notices, and the go or no-go announcement.",
+        "caption": "Match message to audience: need, channel, and timing differ for every group."
+      },
+      {
+        "type": "h2",
+        "text": "Run cutover weekend on a rhythm"
+      },
+      {
+        "type": "p",
+        "text": "Cutover weekend is not the moment to improvise. Set the rhythm in advance and hold it: scheduled status updates at agreed times, a single named sender, and a consistent format covering what has completed, what is next, and any issue that changes timing. A short on-time update beats a detailed late one."
+      },
+      {
+        "type": "p",
+        "text": "Incident communication follows its own pre-agreed path. The first notice acknowledges the issue, states what is affected and what is not, gives the time of the next update, and avoids speculation about cause or fix time. Updates follow at the promised interval until resolution, whether or not the picture has changed. The go or no-go decision gets a formal announcement of its own — decision, timing, what happens next, and what each audience should do — issued promptly once governance has decided. These mechanics sit inside the complete guide to HCM implementation, where cutover communication is part of delivery control, not an afterthought."
+      },
+      {
+        "type": "h2",
+        "text": "Keep one source of truth, prepare templates, and listen back"
+      },
+      {
+        "type": "p",
+        "text": "Every message should point back to one maintained source of truth: a single page or hub carrying current dates, instructions, support routes, and the latest status. Channels multiply during go-live — email, intranet, manager cascades, support-desk scripts — and without a single reference point they drift into contradiction within days. Point-of-need material belongs there too, including quick reference guides people actually use, so every route reaches the same current answer."
+      },
+      {
+        "type": "p",
+        "text": "Templates do the quiet work. Draft the readiness summary, manager briefing, employee announcement, status update, incident notice, delay message, and go-live confirmation before cutover begins, with placeholders for dates, times, and decisions. Writing under pressure produces ambiguity exactly when clarity matters most. Finally, listen back: ask managers what their teams are asking, watch support-desk themes, and run short pulse questions during hypercare. Confusion about one process is a signal to re-communicate that process specifically — not to resend everything louder."
+      },
+      {
+        "type": "h2",
+        "text": "Common mistakes"
+      },
+      {
+        "type": "p",
+        "text": "The failures below recur across go-lives — each is a planning shortcut the project pays for during cutover."
+      },
+      {
+        "type": "accordion",
+        "label": "Six go-live communication mistakes to avoid",
+        "items": [
+          {
+            "q": "Sending one broadcast to every audience",
+            "a": "Executives, managers, employees, operations teams, and the support desk need different content, depth, senders, and timing. One undifferentiated message gives each of them part of what they need and buries it in material meant for someone else."
+          },
+          {
+            "q": "Briefing employees before their managers",
+            "a": "When managers first hear project news from their own teams, they cannot reinforce it and may speculate instead. Brief managers first, with talking points and escalation routes, and leave a real gap before the employee message lands."
+          },
+          {
+            "q": "Communicating only when there is news",
+            "a": "Silence during cutover is read as trouble. Hold the scheduled status rhythm even when the update is simply that work is proceeding to plan, and always state when the next update will arrive."
+          },
+          {
+            "q": "Writing critical messages during the incident",
+            "a": "Messages drafted under pressure turn ambiguous when clarity matters most. Prepare status, incident, delay, and go or no-go templates in advance, with placeholders, so the weekend work is filling in facts, not inventing wording."
+          },
+          {
+            "q": "Letting channels contradict each other",
+            "a": "Email, intranet posts, manager cascades, and support scripts drift apart within days unless every one points back to a single maintained source of truth that one named owner keeps current."
+          },
+          {
+            "q": "Never checking whether messages landed",
+            "a": "Sending is not communicating. Use manager feedback, support-desk themes, and short pulse checks during hypercare to find what was misunderstood, then re-communicate that topic specifically instead of repeating everything."
+          }
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Key Takeaways"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "Start from audiences and what each one needs, not from a calendar of announcements.",
+          "Sequence messages by phase — readiness, preparation, cutover, go-live day, hypercare — timed to when each audience can act.",
+          "Brief managers before every significant employee broadcast, with talking points and escalation routes.",
+          "Run cutover weekend on a published rhythm: scheduled status updates, a separate incident path, and a formal go or no-go announcement.",
+          "Point every channel back to one source of truth, prepare templates in advance, and measure whether messages landed.",
+          "Join the discussion"
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Frequently Asked Questions"
+      },
+      {
+        "type": "p",
+        "text": "When should go-live communication planning start? Weeks before cutover, as soon as readiness work begins. Audience definition, manager enablement, template drafting, and the cutover-weekend rhythm all take lead time, and none can be built credibly in the final days."
+      },
+      {
+        "type": "p",
+        "text": "Who should send go-live messages? The sender each audience trusts for that content: sponsors for the decision and its business meaning, the project for status and instructions, and managers for what changes mean for their teams. One named sender owns cutover-weekend updates so rhythm and format stay consistent."
+      },
+      {
+        "type": "p",
+        "text": "How often should the project communicate during cutover weekend? On a pre-agreed schedule, published in advance, with an update at every promised time even when the message is simply that work is proceeding to plan. Incident communication runs on its own path, with the next update time stated in every notice."
+      },
+      {
+        "type": "p",
+        "text": "How do you know whether go-live communication worked? By listening, not by counting sends. Manager feedback, support-desk themes, completion of pre-go-live employee actions, and short pulse checks during hypercare show what landed and what needs a specific follow-up."
+      },
+      {
+        "type": "h2",
+        "text": "Next Steps"
+      },
+      {
+        "type": "p",
+        "text": "Build the plan audience by audience: list each group, what changes for them, what they must do, and who they trust, then sequence every message from readiness through hypercare, dated by when that audience can act. Brief managers ahead of employees, draft the templates, name the source of truth and its owner, and publish the cutover-weekend cadence before the weekend begins. Join the discussion"
+      },
+      {
+        "type": "quiz",
+        "label": "Check your understanding",
+        "questions": [
+          {
+            "q": "An employee broadcast announces the new time-capture process at 9 a.m. Managers receive their briefing pack at the same time, and by midday team chats are full of conflicting explanations. What failed?",
+            "options": [
+              {
+                "text": "The employee message was too short: a longer broadcast with more detail would have prevented the speculation",
+                "correct": false,
+                "why": "Length was not the problem. Employees turned to their managers, who had no preparation, so the gap was filled locally and inconsistently."
+              },
+              {
+                "text": "Manager enablement: managers were not briefed before their teams, so they could not reinforce the message, answer predictable questions, or route real problems upward",
+                "correct": true,
+                "why": "Managers are the trusted channel. Briefing them first, with talking points and escalation routes and a real time gap, is what makes an employee broadcast land consistently."
+              },
+              {
+                "text": "Channel choice: the announcement should have come only from the executive sponsor to carry more authority",
+                "correct": false,
+                "why": "A more senior sender does not prepare managers to answer team-level questions. The failure is sequencing and enablement, not seniority."
+              }
+            ]
+          },
+          {
+            "q": "During cutover weekend, a validation step slips by several hours. The project lead decides to wait and send one update once the new timing is certain, rather than communicate an incomplete picture. What does the method say?",
+            "options": [
+              {
+                "text": "Waiting is right: communicating before the facts are settled creates more confusion than a short silence",
+                "correct": false,
+                "why": "Silence during cutover is read as trouble, and audiences fill it themselves. The rhythm exists precisely for moments when the picture is incomplete."
+              },
+              {
+                "text": "Send the scheduled update on time: state what is known, what is affected, what is not yet known, and the time of the next update, then keep that promise",
+                "correct": true,
+                "why": "A factual, timestamped update that honours the published cadence protects trust. Certainty is not required; honesty about what is known and when the next update lands is."
+              },
+              {
+                "text": "Escalate to the sponsor and let executive communication handle all further cutover updates",
+                "correct": false,
+                "why": "Executive communication has its own role for decisions and business impact. Routine cutover status belongs to the named project sender running the agreed rhythm."
+              }
+            ]
+          },
+          {
+            "q": "In the first hypercare week, support-desk contacts cluster heavily around one absence process, although the go-live pack explained it clearly. What is the right response?",
+            "options": [
+              {
+                "text": "Resend the full go-live pack to all employees so the explanation reaches anyone who missed it",
+                "correct": false,
+                "why": "Repeating everything louder buries the specific gap and trains audiences to ignore the channel. The evidence points to one topic, not a general failure."
+              },
+              {
+                "text": "Treat the contact theme as feedback: re-communicate that one process specifically, in plain language, through managers and the source of truth, and watch whether contacts fall",
+                "correct": true,
+                "why": "Listening back converts support data into a targeted fix. A specific, clearer message on the confusing process, measured against contact volume, is how the plan learns."
+              },
+              {
+                "text": "Log it as a training gap for the next phase and leave hypercare communication unchanged",
+                "correct": false,
+                "why": "Deferring leaves employees struggling with a live process now. Hypercare communication exists to respond to exactly this kind of signal while it matters."
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
     "slug": "stakeholder-analysis-implementations",
     "title": "Stakeholder Analysis for Implementations",
     "excerpt": "How to run stakeholder analysis for an HCM implementation: map influence and impact, find hidden stakeholders, and turn the register into engagement.",
