@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" font-family="Arial, Helvetica, sans-serif">
+<defs><linearGradient id="hdr" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#0f172a"/><stop offset="1" stop-color="#1e3a5f"/></linearGradient></defs>
+<rect x="0" y="0" width="1200" height="720" fill="#ffffff"/>
+<rect x="0" y="0" width="1200" height="72" fill="url(#hdr)"/>
+<text x="40" y="45" font-size="26" font-weight="bold" fill="#ffffff">Adoption metrics: metric by population</text>
+<text x="40" y="105" font-size="15" fill="#64748B">The right metric, signal, and intervention differ for every population — segment before you conclude.</text>
+<rect x="30" y="130" width="190" height="44" rx="8" fill="#F0F4F8" stroke="#2B6CB0" stroke-width="2"/>
+<text x="44" y="158" font-size="15" font-weight="bold" fill="#1A202C">Population</text>
+<rect x="230" y="130" width="300" height="44" rx="8" fill="#F0F4F8" stroke="#2B6CB0" stroke-width="2"/>
+<text x="244" y="158" font-size="15" font-weight="bold" fill="#1A202C">Primary metric</text>
+<rect x="540" y="130" width="300" height="44" rx="8" fill="#F0F4F8" stroke="#2B6CB0" stroke-width="2"/>
+<text x="554" y="158" font-size="15" font-weight="bold" fill="#1A202C">Signal it gives</text>
+<rect x="850" y="130" width="320" height="44" rx="8" fill="#F0F4F8" stroke="#2B6CB0" stroke-width="2"/>
+<text x="864" y="158" font-size="15" font-weight="bold" fill="#1A202C">Intervention when it stalls</text>
+<rect x="30" y="190" width="190" height="86" rx="8" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+<text x="44" y="226" font-size="13" font-weight="bold" fill="#1A202C">Employees and</text>
+<text x="44" y="243" font-size="13" font-weight="bold" fill="#1A202C">frontline</text>
+<rect x="230" y="190" width="300" height="86" rx="8" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+<text x="244" y="226" font-size="13" fill="#475569">Self-service task completion:</text>
+<text x="244" y="243" font-size="13" fill="#475569">time, absence, profile updates</text>
+<rect x="540" y="190" width="300" height="86" rx="8" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+<text x="554" y="226" font-size="13" fill="#475569">Whether access and clarity work</text>
+<text x="554" y="243" font-size="13" fill="#475569">on real shifts and devices</text>
+<rect x="850" y="190" width="320" height="86" rx="8" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+<text x="864" y="226" font-size="13" fill="#475569">Fix access route, simplify the</text>
+<text x="864" y="243" font-size="13" fill="#475569">failing step, point-of-need guide</text>
+<rect x="30" y="288" width="190" height="86" rx="8" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+<text x="44" y="338" font-size="13" font-weight="bold" fill="#1A202C">Managers</text>
+<rect x="230" y="288" width="300" height="86" rx="8" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+<text x="244" y="324" font-size="13" fill="#475569">Approval completion and</text>
+<text x="244" y="341" font-size="13" fill="#475569">timeliness in the queue</text>
+<rect x="540" y="288" width="300" height="86" rx="8" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+<text x="554" y="324" font-size="13" fill="#475569">Whether team processes move</text>
+<text x="554" y="341" font-size="13" fill="#475569">or wait on one person</text>
+<rect x="850" y="288" width="320" height="86" rx="8" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+<text x="864" y="324" font-size="13" fill="#475569">Brief the specific managers,</text>
+<text x="864" y="341" font-size="13" fill="#475569">coach the approval task</text>
+<rect x="30" y="386" width="190" height="86" rx="8" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+<text x="44" y="422" font-size="13" font-weight="bold" fill="#1A202C">HR and payroll</text>
+<text x="44" y="439" font-size="13" font-weight="bold" fill="#1A202C">operations</text>
+<rect x="230" y="386" width="300" height="86" rx="8" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+<text x="244" y="422" font-size="13" fill="#475569">In-system processing without</text>
+<text x="244" y="439" font-size="13" fill="#475569">offline rebuilds or rework</text>
+<rect x="540" y="386" width="300" height="86" rx="8" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+<text x="554" y="422" font-size="13" fill="#475569">Whether experts trust the</text>
+<text x="554" y="439" font-size="13" fill="#475569">system output for the pay run</text>
+<rect x="850" y="386" width="320" height="86" rx="8" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+<text x="864" y="422" font-size="13" fill="#475569">Correct the distrusted data or</text>
+<text x="864" y="439" font-size="13" fill="#475569">configuration behind the rebuild</text>
+<rect x="30" y="484" width="190" height="86" rx="8" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+<text x="44" y="534" font-size="13" font-weight="bold" fill="#1A202C">Support desk</text>
+<rect x="230" y="484" width="300" height="86" rx="8" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+<text x="244" y="520" font-size="13" fill="#475569">Contact themes by process</text>
+<text x="244" y="537" font-size="13" fill="#475569">and population</text>
+<rect x="540" y="484" width="300" height="86" rx="8" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+<text x="554" y="520" font-size="13" fill="#475569">Where users are confused,</text>
+<text x="554" y="537" font-size="13" fill="#475569">blocked, or working around</text>
+<rect x="850" y="484" width="320" height="86" rx="8" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+<text x="864" y="520" font-size="13" fill="#475569">Re-communicate that one topic</text>
+<text x="864" y="537" font-size="13" fill="#475569">specifically, then watch themes</text>
+<rect x="30" y="586" width="1140" height="86" rx="10" fill="#ffffff" stroke="#2B6CB0" stroke-width="2"/>
+<text x="54" y="616" font-size="16" font-weight="bold" fill="#1A202C">Measurement cadence</text>
+<text x="54" y="642" font-size="14" fill="#475569">Hypercare: daily or weekly review  •  Stabilisation: monthly review  •  Steady state: quarterly review — thresholds set before go-live</text>
+<text x="54" y="662" font-size="13" fill="#64748B">Sustained adoption across segments is the evidence for hypercare exit.</text>
+</svg>
