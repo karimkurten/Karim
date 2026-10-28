@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="680" viewBox="0 0 1200 680" font-family="Arial, Helvetica, sans-serif">
+<defs><linearGradient id="hdr" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#0f172a"/><stop offset="1" stop-color="#1e3a5f"/></linearGradient>
+<marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#2B6CB0"/></marker></defs>
+<rect x="0" y="0" width="1200" height="680" fill="#ffffff"/>
+<rect x="0" y="0" width="1200" height="72" fill="url(#hdr)"/>
+<text x="40" y="45" font-size="26" font-weight="bold" fill="#ffffff">Adoption metrics: the measurement stack</text>
+<text x="40" y="105" font-size="15" fill="#64748B">Four layers, bottom to top — each layer proves more than the one below it, and none substitutes for the next.</text>
+<rect x="30" y="130" width="240" height="44" rx="8" fill="#F0F4F8" stroke="#2B6CB0" stroke-width="2"/>
+<text x="44" y="158" font-size="15" font-weight="bold" fill="#1A202C">Layer</text>
+<rect x="280" y="130" width="440" height="44" rx="8" fill="#F0F4F8" stroke="#2B6CB0" stroke-width="2"/>
+<text x="294" y="158" font-size="15" font-weight="bold" fill="#1A202C">What it proves</text>
+<rect x="730" y="130" width="440" height="44" rx="8" fill="#F0F4F8" stroke="#2B6CB0" stroke-width="2"/>
+<text x="744" y="158" font-size="15" font-weight="bold" fill="#1A202C">What it cannot prove alone</text>
+<rect x="38" y="196" width="240" height="88" rx="10" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+<rect x="30" y="188" width="240" height="88" rx="10" fill="#ffffff" stroke="#2B6CB0" stroke-width="2"/>
+<text x="44" y="222" font-size="16" font-weight="bold" fill="#1A202C">4 — Outcome</text>
+<text x="44" y="246" font-size="12" fill="#64748B">Business result achieved</text>
+<rect x="280" y="188" width="440" height="88" rx="10" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+<text x="294" y="222" font-size="13" fill="#475569">Accurate time, correct absence records,</text>
+<text x="294" y="241" font-size="13" fill="#475569">approvals on time, pay right first time</text>
+<rect x="730" y="188" width="440" height="88" rx="10" fill="#ffffff" stroke="#E2E8F0" stroke-width="2"/>
+<text x="744" y="222" font-size="13" fill="#475569">Which layer below caused a miss —</text>
+<text x="744" y="241" font-size="13" fill="#475569">diagnosis still needs the lower layers</text>
+<line x1="150" y1="284" x2="150" y2="296" stroke="#2B6CB0" stroke-width="2" marker-end="url(#arr)"/>
+<rect x="46" y="306" width="224" height="88" rx="10" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+<rect x="38" y="298" width="224" height="88" rx="10" fill="#ffffff" stroke="#E2E8F0" stroke-width="2"/>
+<text x="52" y="332" font-size="16" font-weight="bold" fill="#1A202C">3 — Proficiency</text>
+<text x="52" y="356" font-size="12" fill="#64748B">Done correctly, unaided</text>
+<rect x="280" y="298" width="440" height="88" rx="10" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+<text x="294" y="332" font-size="13" fill="#475569">First-attempt success, low corrections,</text>
+<text x="294" y="351" font-size="13" fill="#475569">tasks completed without rescue</text>
+<rect x="730" y="298" width="440" height="88" rx="10" fill="#ffffff" stroke="#E2E8F0" stroke-width="2"/>
+<text x="744" y="332" font-size="13" fill="#475569">That the business outcome followed —</text>
+<text x="744" y="351" font-size="13" fill="#475569">correct tasks can still miss deadlines</text>
+<line x1="150" y1="394" x2="150" y2="406" stroke="#2B6CB0" stroke-width="2" marker-end="url(#arr)"/>
+<rect x="54" y="416" width="208" height="88" rx="10" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+<rect x="46" y="408" width="208" height="88" rx="10" fill="#ffffff" stroke="#E2E8F0" stroke-width="2"/>
+<text x="60" y="442" font-size="16" font-weight="bold" fill="#1A202C">2 — Use</text>
+<text x="60" y="466" font-size="12" fill="#64748B">Real work in the system</text>
+<rect x="280" y="408" width="440" height="88" rx="10" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+<text x="294" y="442" font-size="13" fill="#475569">Transactions started and completed in</text>
+<text x="294" y="461" font-size="13" fill="#475569">the system, old workaround shrinking</text>
+<rect x="730" y="408" width="440" height="88" rx="10" fill="#ffffff" stroke="#E2E8F0" stroke-width="2"/>
+<text x="744" y="442" font-size="13" fill="#475569">That work was correct or timely —</text>
+<text x="744" y="461" font-size="13" fill="#475569">completion can still carry rework</text>
+<line x1="150" y1="504" x2="150" y2="516" stroke="#2B6CB0" stroke-width="2" marker-end="url(#arr)"/>
+<rect x="62" y="526" width="192" height="88" rx="10" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+<rect x="54" y="518" width="192" height="88" rx="10" fill="#ffffff" stroke="#E2E8F0" stroke-width="2"/>
+<text x="68" y="552" font-size="16" font-weight="bold" fill="#1A202C">1 — Access</text>
+<text x="68" y="576" font-size="12" fill="#64748B">Accounts live, entry works</text>
+<rect x="280" y="518" width="440" height="88" rx="10" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+<text x="294" y="552" font-size="13" fill="#475569">Activation and logins: people can get in</text>
+<text x="294" y="571" font-size="13" fill="#475569">when and where their work happens</text>
+<rect x="730" y="518" width="440" height="88" rx="10" fill="#ffffff" stroke="#E2E8F0" stroke-width="2"/>
+<text x="744" y="552" font-size="13" fill="#475569">Adoption itself — entry is not finished</text>
+<text x="744" y="571" font-size="13" fill="#475569">work, and says nothing about quality</text>
+<rect x="30" y="630" width="1140" height="40" rx="8" fill="#ffffff" stroke="#2B6CB0" stroke-width="2"/>
+<text x="54" y="656" font-size="15" font-weight="bold" fill="#1A202C">Report all four layers together — a strong lower layer never upgrades the one above it.</text>
+</svg>
