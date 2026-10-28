@@ -1,5 +1,287 @@
 [
   {
+    "slug": "hcm-adoption-metrics",
+    "title": "Adoption Metrics That Matter",
+    "excerpt": "Measure HCM adoption after go-live: usage, task completion, proficiency, and outcome metrics by process and population, with targets set before launch.",
+    "publishedAt": "2026-10-28",
+    "readingTime": "8 min read",
+    "cover": "/images/blog/hcm-adoption-metrics-cover.webp",
+    "tags": [
+      "HCM",
+      "Implementation",
+      "Adoption",
+      "Go-Live"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "A system can be live, stable, and technically correct while the organisation quietly works around it. Managers approve time on paper, employees ask a colleague instead of using self-service, and payroll operations rebuild in a spreadsheet what the system was bought to do. None of that appears in a technical status report. Adoption metrics exist to make it visible: whether people are doing real work in the new way, where they are stuck, and what intervention will help — the evidence behind the decision recorded in the HCM go-live checklist."
+      },
+      {
+        "type": "h2",
+        "text": "Separate usage, adoption, proficiency, and outcomes"
+      },
+      {
+        "type": "p",
+        "text": "These four words are often used as if they meant the same thing, and the confusion produces weak measurement. Usage asks only whether someone entered the system and did something. Adoption asks whether the intended work now happens there by default, rather than through the old workaround. Proficiency asks whether people complete it correctly, promptly, and without rescue. Outcomes ask whether the business result — accurate time, a correct absence record, an on-time approval — is being achieved."
+      },
+      {
+        "type": "p",
+        "text": "Each layer proves less than the next one claims. A population can show strong usage and weak adoption if people log in, look, and then complete the real task elsewhere. It can show adoption without proficiency if work arrives late, incomplete, or full of corrections. Keeping the layers separate stops one encouraging number from standing in for a conclusion it cannot support, and tells the project where to intervene: an access problem, a habit problem, a skill problem, and a process-design problem each need a different response."
+      },
+      {
+        "type": "h2",
+        "text": "Treat logins as a starting signal, not a result"
+      },
+      {
+        "type": "p",
+        "text": "Login and activation rates are the easiest metrics to produce, so they are often the first reported and the most over-read. They matter at the very start: an account never activated is a concrete access or availability problem the project can fix quickly. Beyond that opening check, a login proves almost nothing — not which task was attempted, whether it finished, or whether the person gave up and used another route."
+      },
+      {
+        "type": "p",
+        "text": "Task completion is the stronger measure. For each core process, track how many started transactions finish, how many are abandoned, and how many end in error, correction, or a support contact. Self-service success — a profile update saved, an absence request submitted correctly, a time entry approved without rework — connects measurement to real work. Report completion alongside volume: a high rate on a tiny share of expected transactions means the rest of the work is still happening elsewhere."
+      },
+      {
+        "type": "img",
+        "src": "/images/blog/hcm-adoption-metrics-1.svg",
+        "alt": "Adoption measurement stack diagram: four layers from access through use and proficiency to outcome, with what each layer proves and what it cannot prove alone, plus a banner stating that all four layers must be reported together.",
+        "caption": "Measure in layers: each layer proves more than the one below it."
+      },
+      {
+        "type": "steps",
+        "label": "The adoption measurement sequence",
+        "intro": "Five moves, in order — each one turns raw system activity into evidence the project can act on and defend at hypercare exit.",
+        "items": [
+          {
+            "title": "Define adoption process by process",
+            "text": "For each core process, write down what adopted behaviour looks like in observable terms: which transaction, completed by whom, in the system, within what timeframe."
+          },
+          {
+            "title": "Set baselines and targets before go-live",
+            "text": "Record how the work is done today, agree the target and the review threshold for each metric with the process owner, and date both — before any go-live numbers exist to argue about."
+          },
+          {
+            "title": "Measure completion, not just entry",
+            "text": "Track started, completed, abandoned, and corrected transactions for each process, alongside activation, so entry never stands in for finished work."
+          },
+          {
+            "title": "Segment every metric by population",
+            "text": "Report frontline and deskless staff, managers, and HR and payroll operations separately, because an organisation-wide average hides the group that is actually stuck."
+          },
+          {
+            "title": "Review on a cadence and intervene specifically",
+            "text": "Review daily or weekly in hypercare, then monthly and quarterly, and match each stalled metric to a targeted intervention for that process and population — then measure whether it moved."
+          }
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Measure adoption process by process"
+      },
+      {
+        "type": "p",
+        "text": "Adoption is not one behaviour; it is a set of process-specific behaviours, each needing its own observable definition. Time entry adoption means time entered in the system, on time, by the people whose time it is — not reconstructed later by a supervisor. Absence adoption means requests submitted and approved in the system before the absence, with balances people trust enough to check. Self-service adoption means profile and personal-detail updates happen in the portal rather than by form or email. Manager adoption means approvals and team requests actioned in the queue, promptly, instead of by side conversation."
+      },
+      {
+        "type": "p",
+        "text": "Defining each process this way also exposes the workaround to watch for. Every process has an old route still available after go-live, and adoption measurement is largely checking whether it is shrinking. Where it stays busy, ask why before blaming users: the new route may be slower on a shared device, or unclear in one step."
+      },
+      {
+        "type": "h2",
+        "text": "Segment every metric by population"
+      },
+      {
+        "type": "p",
+        "text": "An organisation-wide average is where adoption problems go to hide. Frontline and deskless staff face access realities office staff do not: shared devices, shift patterns that leave little slack for learning a new task. Managers carry a different burden — mostly approvals and team transactions — and a few non-adopting managers can stall everyone who reports to them. HR and payroll operations work deepest in the system; their question is less whether they use it than whether they still rebuild its outputs elsewhere."
+      },
+      {
+        "type": "p",
+        "text": "Segmenting turns a vague concern into a located problem with an owner, and protects groups adopting well from blanket interventions. In cross-border Canada–United States programmes, segment by jurisdiction too: a process can be adopted on one side of the border and stalled on the other for reasons no combined figure will reveal. Segment definitions should come from the training needs analysis for HCM rollouts."
+      },
+      {
+        "type": "img",
+        "src": "/images/blog/hcm-adoption-metrics-2.svg",
+        "alt": "Metric-by-population matrix diagram: employees and frontline staff, managers, HR and payroll operations, and the support desk, each with its primary adoption metric, the signal it gives, and the intervention to use when it stalls, plus a measurement cadence banner from hypercare to quarterly review.",
+        "caption": "Segment the evidence: metric, signal, and intervention differ for every population."
+      },
+      {
+        "type": "h2",
+        "text": "Read support contacts and training evidence honestly"
+      },
+      {
+        "type": "p",
+        "text": "Support contacts are adoption data, provided the project reads themes rather than totals. A falling total can mean growing confidence — or a population that has stopped asking and built a workaround. A cluster about one process, step, or population is a precise signal: something there is unclear, misconfigured, or badly explained. That reading depends on the rhythm in the communication plan for go-live, which teaches people where help lives."
+      },
+      {
+        "type": "p",
+        "text": "Training evidence needs the same honesty. Completion shows who attended or clicked through, not who can perform the task unaided on a busy shift. Demonstrated competence is the better standard: observed completion, first-attempt success, and correction rates after training. Where completion is high and competence low, the answer is rarely more of the same training — it is point-of-need help such as quick reference guides people actually use, a manager who can coach the task, or a step simplified."
+      },
+      {
+        "type": "h2",
+        "text": "Set targets before go-live, review on a cadence, and intervene specifically"
+      },
+      {
+        "type": "p",
+        "text": "Targets only discipline behaviour if set before go-live, against a baseline, with the process owner who will act on them. Record how work is done today, agree what good looks like — framed as the project's own illustrative threshold, never as an industry benchmark — and agree in advance what happens below it. Without that agreement, every disappointing number becomes a negotiation."
+      },
+      {
+        "type": "p",
+        "text": "Cadence follows risk. In hypercare, review core metrics daily or weekly, while habits are forming. After the first pay cycles stabilise, move to monthly, then quarterly, watching for regression as staff turn over. These reviews are also the hypercare-exit evidence in the complete guide to HCM implementation: exit is defensible when thresholds hold across segments, not when the calendar says hypercare should end."
+      },
+      {
+        "type": "p",
+        "text": "When a metric stalls, intervene on the stall, not the whole population. Diagnose first — access, understanding, process design, manager reinforcement, or trust in the data — then apply the smallest matching intervention. Blanket re-communication tells people who are adopting well that the project cannot see them, and rarely moves the group that is stuck."
+      },
+      {
+        "type": "h2",
+        "text": "Common mistakes"
+      },
+      {
+        "type": "p",
+        "text": "The failures below recur after go-lives — each leaves the project confident and uninformed at the same time."
+      },
+      {
+        "type": "accordion",
+        "label": "Six adoption measurement mistakes to avoid",
+        "items": [
+          {
+            "q": "Reporting logins as adoption",
+            "a": "A login proves entry, not finished work. Report started, completed, abandoned, and corrected transactions for each core process, and treat activation only as an early access check."
+          },
+          {
+            "q": "Averaging the whole organisation into one number",
+            "a": "A combined figure hides the population that is stuck behind the groups who are adopting well. Segment by population, location, process, and jurisdiction, and give each segment an owner."
+          },
+          {
+            "q": "Setting targets after seeing the first results",
+            "a": "Targets agreed after go-live bend toward whatever the numbers already show. Set baselines, targets, and review thresholds with the process owner before launch, and date the agreement."
+          },
+          {
+            "q": "Counting training completion as competence",
+            "a": "Attendance shows exposure, not ability. Check demonstrated competence through first-attempt success, observed task completion, and correction rates in the live system."
+          },
+          {
+            "q": "Reading falling support contacts as automatic success",
+            "a": "Contacts can fall because confidence grew — or because people stopped asking and built a workaround. Read contact themes alongside transaction volumes before concluding anything."
+          },
+          {
+            "q": "Answering a stalled metric with blanket re-communication",
+            "a": "Resending everything to everyone rarely moves the group that is stuck and irritates the groups that are not. Diagnose the cause for that process and population, intervene specifically, and measure the effect."
+          }
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Key Takeaways"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "Separate usage, adoption, proficiency, and outcomes — each layer proves something different, and none substitutes for the next.",
+          "Treat logins as an early access check; measure task completion and transaction success for the real signal.",
+          "Define adoption process by process — time entry, absence, self-service updates, manager approvals — and watch whether the old workaround is shrinking.",
+          "Segment every metric by population and jurisdiction, read support themes as evidence, and judge training by demonstrated competence, not completion.",
+          "Set baselines and targets before go-live, review daily or weekly in hypercare then monthly and quarterly, and use sustained adoption as hypercare-exit evidence.",
+          "Join the discussion"
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Frequently Asked Questions"
+      },
+      {
+        "type": "p",
+        "text": "Which adoption metric should a project report first? Task completion for the core processes, segmented by population. Activation matters in the first days as an access check, but completed, uncorrected transactions are the first evidence real work has moved into the system."
+      },
+      {
+        "type": "p",
+        "text": "How is adoption different from usage? Usage shows someone entered the system. Adoption shows the intended work now happens there by default, instead of through the old form, spreadsheet, or side conversation it was meant to replace."
+      },
+      {
+        "type": "p",
+        "text": "What should happen when an adoption metric stalls? Diagnose before intervening: check access, understanding, process design, manager reinforcement, and trust in the data for that process and population. Apply the smallest targeted fix matching the cause, then re-measure."
+      },
+      {
+        "type": "p",
+        "text": "Can adoption metrics decide hypercare exit? Yes, as primary evidence. Exit is defensible when agreed thresholds hold across populations and processes over successive reviews — not because a planned end date has arrived."
+      },
+      {
+        "type": "h2",
+        "text": "Next Steps"
+      },
+      {
+        "type": "p",
+        "text": "Before your next go-live, write the adoption definition for each core process, record the baseline, and agree targets and thresholds with each process owner. Build the segmented view — population, process, jurisdiction — set the hypercare cadence, and decide in advance which intervention follows a stall in each segment. Join the discussion"
+      },
+      {
+        "type": "quiz",
+        "label": "Check your understanding",
+        "questions": [
+          {
+            "q": "Two weeks after go-live, activation is nearly complete across the organisation, yet payroll operations is still rebuilding time data in a spreadsheet before every pay run. What does the evidence say?",
+            "options": [
+              {
+                "text": "Adoption is strong: with activation nearly complete, the spreadsheet is a temporary habit that will fade without intervention",
+                "correct": false,
+                "why": "Activation proves entry only. Core work rebuilt outside the system before every pay run is the definition of adoption failing at the outcome layer, whatever the login figures show."
+              },
+              {
+                "text": "Usage is high but adoption and proficiency are not proven: the intended work is not yet happening in the system by default, so diagnose why the operations team does not trust or cannot complete the process there",
+                "correct": true,
+                "why": "The layers must be read separately. Finished, trusted work in the system is the adoption test, and a persistent workaround names the population and process to investigate."
+              },
+              {
+                "text": "The metric set is wrong: replace transaction measures with a satisfaction survey so the team can explain its preference",
+                "correct": false,
+                "why": "Understanding the reason matters, but it comes from diagnosing the workaround, not from replacing behavioural evidence with opinion. Completion and correction data still lead."
+              }
+            ]
+          },
+          {
+            "q": "Self-service absence requests are fully adopted at head office but barely used at frontline sites, while the combined organisation figure looks acceptable. What is the right response?",
+            "options": [
+              {
+                "text": "Accept the combined figure: overall adoption is on track and the frontline gap will close as familiarity spreads",
+                "correct": false,
+                "why": "The average is hiding the problem. A segment that has not adopted a core process needs a located cause and a specific intervention, not patience."
+              },
+              {
+                "text": "Resend the absence-process announcement to all employees so frontline staff who missed it can catch up",
+                "correct": false,
+                "why": "A blanket message assumes a communication cause and reaches mostly people already adopting. Frontline stalls are often about access, devices, or shift patterns, which an announcement cannot fix."
+              },
+              {
+                "text": "Investigate the frontline segment specifically — device access, shift patterns, manager practice, and process clarity — then apply the intervention that matches the cause and re-measure that segment",
+                "correct": true,
+                "why": "Segmentation exists to locate the stall. The right fix follows the diagnosis for that population, and success is judged on that segment moving, not on the average."
+              }
+            ]
+          },
+          {
+            "q": "Training completion for a new time-entry process is complete for every employee, but first-attempt errors and correction requests stay high in the first pay cycles. What follows?",
+            "options": [
+              {
+                "text": "Schedule the same training again for everyone until the error rate falls",
+                "correct": false,
+                "why": "Completion already showed exposure, not competence. Repeating identical training treats the wrong variable and leaves the confusing step or missing point-of-need help untouched."
+              },
+              {
+                "text": "Judge training by demonstrated competence instead: find the step where attempts fail, add point-of-need guidance and manager coaching for that step, and track first-attempt success until it recovers",
+                "correct": true,
+                "why": "Competence is shown in the live task. Locating the failing step and supporting it directly, measured by first-attempt success and corrections, is how proficiency is actually built."
+              },
+              {
+                "text": "Record the errors as user resistance and escalate to site leadership for enforcement",
+                "correct": false,
+                "why": "High error rates after full training usually signal a process, guidance, or design problem first. Enforcement before diagnosis punishes people for a gap the project has not yet understood."
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
     "slug": "go-live-communication-plan",
     "title": "Communication Planning for Go-Live",
     "excerpt": "Build a go-live communication plan for an HCM rollout: audiences, message sequencing, cutover-weekend cadence, manager enablement, and hypercare.",
