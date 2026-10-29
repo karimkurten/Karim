@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" font-family="Arial, Helvetica, sans-serif">
+<defs><linearGradient id="hdr" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#0f172a"/><stop offset="1" stop-color="#1e3a5f"/></linearGradient>
+<marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#2B6CB0"/></marker></defs>
+<rect x="0" y="0" width="1200" height="720" fill="#ffffff"/>
+<rect x="0" y="0" width="1200" height="72" fill="url(#hdr)"/>
+<text x="40" y="45" font-size="26" font-weight="bold" fill="#ffffff">The manager conversation: a five-step response sequence</text>
+<text x="40" y="105" font-size="15" fill="#64748B">Managers translate change for their teams — this sequence turns a difficult conversation into a concrete agreement.</text>
+<rect x="38" y="138" width="520" height="84" rx="10" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+<rect x="30" y="130" width="520" height="84" rx="10" fill="#ffffff" stroke="#2B6CB0" stroke-width="2"/>
+<text x="54" y="164" font-size="16" font-weight="bold" fill="#1A202C">1 — Listen without labelling</text>
+<text x="54" y="188" font-size="13" fill="#475569">Ask what feels at risk. Do not call anyone a resistor.</text>
+<rect x="598" y="138" width="572" height="84" rx="10" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+<rect x="590" y="130" width="572" height="84" rx="10" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+<text x="614" y="164" font-size="13" font-weight="bold" fill="#1A202C">You hear</text>
+<text x="614" y="188" font-size="13" fill="#475569">The real concern, in the person&apos;s own words, before any rebuttal.</text>
+<line x1="290" y1="222" x2="290" y2="238" stroke="#2B6CB0" stroke-width="2" marker-end="url(#arr)"/>
+<rect x="38" y="254" width="520" height="84" rx="10" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+<rect x="30" y="246" width="520" height="84" rx="10" fill="#ffffff" stroke="#E2E8F0" stroke-width="2"/>
+<text x="54" y="280" font-size="16" font-weight="bold" fill="#1A202C">2 — Name the loss underneath</text>
+<text x="54" y="304" font-size="13" fill="#475569">Competence, control, status, workload, or trust.</text>
+<rect x="598" y="254" width="572" height="84" rx="10" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+<rect x="590" y="246" width="572" height="84" rx="10" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+<text x="614" y="280" font-size="13" font-weight="bold" fill="#1A202C">You gain</text>
+<text x="614" y="304" font-size="13" fill="#475569">A diagnosis you can act on, instead of an attitude to correct.</text>
+<line x1="290" y1="338" x2="290" y2="354" stroke="#2B6CB0" stroke-width="2" marker-end="url(#arr)"/>
+<rect x="38" y="370" width="520" height="84" rx="10" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+<rect x="30" y="362" width="520" height="84" rx="10" fill="#ffffff" stroke="#E2E8F0" stroke-width="2"/>
+<text x="54" y="396" font-size="16" font-weight="bold" fill="#1A202C">3 — Separate fact from fear</text>
+<text x="54" y="420" font-size="13" fill="#475569">What is known, what is undecided, what can be influenced.</text>
+<rect x="598" y="370" width="572" height="84" rx="10" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+<rect x="590" y="362" width="572" height="84" rx="10" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+<text x="614" y="396" font-size="13" font-weight="bold" fill="#1A202C">You clarify</text>
+<text x="614" y="420" font-size="13" fill="#475569">Which worries need information, and which need a design change.</text>
+<line x1="290" y1="454" x2="290" y2="470" stroke="#2B6CB0" stroke-width="2" marker-end="url(#arr)"/>
+<rect x="38" y="486" width="520" height="84" rx="10" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+<rect x="30" y="478" width="520" height="84" rx="10" fill="#ffffff" stroke="#E2E8F0" stroke-width="2"/>
+<text x="54" y="512" font-size="16" font-weight="bold" fill="#1A202C">4 — Agree a concrete support</text>
+<text x="54" y="536" font-size="13" fill="#475569">Training, a pilot role, workload cover, a follow-up date.</text>
+<rect x="598" y="486" width="572" height="84" rx="10" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+<rect x="590" y="478" width="572" height="84" rx="10" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+<text x="614" y="512" font-size="13" font-weight="bold" fill="#1A202C">You commit</text>
+<text x="614" y="536" font-size="13" fill="#475569">One specific help, owned by a named person, with a date attached.</text>
+<line x1="290" y1="570" x2="290" y2="586" stroke="#2B6CB0" stroke-width="2" marker-end="url(#arr)"/>
+<rect x="38" y="602" width="520" height="84" rx="10" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+<rect x="30" y="594" width="520" height="84" rx="10" fill="#ffffff" stroke="#2B6CB0" stroke-width="2"/>
+<text x="54" y="628" font-size="16" font-weight="bold" fill="#1A202C">5 — Close the loop</text>
+<text x="54" y="652" font-size="13" fill="#475569">Return with the answer. Watch the adoption signal. Adjust.</text>
+<rect x="598" y="602" width="572" height="84" rx="10" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+<rect x="590" y="594" width="572" height="84" rx="10" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+<text x="614" y="628" font-size="13" font-weight="bold" fill="#1A202C">You prove</text>
+<text x="614" y="652" font-size="13" fill="#475569">That speaking up changed something — the basis for trust next time.</text>
+</svg>
