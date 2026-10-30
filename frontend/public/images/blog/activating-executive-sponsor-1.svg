@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" font-family="Arial, Helvetica, sans-serif">
+<defs><linearGradient id="hdr" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#0f172a"/><stop offset="1" stop-color="#1e3a5f"/></linearGradient></defs>
+<rect x="0" y="0" width="1200" height="760" fill="#ffffff"/>
+<rect x="0" y="0" width="1200" height="72" fill="url(#hdr)"/>
+<text x="40" y="45" font-size="26" font-weight="bold" fill="#ffffff">Sponsor activation map: five jobs, five signals</text>
+<text x="40" y="105" font-size="15" fill="#64748B">Sponsorship is a set of jobs, not a title — each job has a passive signal and a move that activates it.</text>
+<rect x="30" y="130" width="230" height="44" rx="8" fill="#F0F4F8" stroke="#2B6CB0" stroke-width="2"/>
+<text x="44" y="158" font-size="15" font-weight="bold" fill="#1A202C">Sponsor job</text>
+<rect x="270" y="130" width="430" height="44" rx="8" fill="#F0F4F8" stroke="#2B6CB0" stroke-width="2"/>
+<text x="284" y="158" font-size="15" font-weight="bold" fill="#1A202C">Signal when passive</text>
+<rect x="710" y="130" width="460" height="44" rx="8" fill="#F0F4F8" stroke="#2B6CB0" stroke-width="2"/>
+<text x="724" y="158" font-size="15" font-weight="bold" fill="#1A202C">Activation move</text>
+<rect x="38" y="196" width="230" height="88" rx="10" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+<rect x="30" y="188" width="230" height="88" rx="10" fill="#ffffff" stroke="#2B6CB0" stroke-width="2"/>
+<text x="44" y="222" font-size="15" font-weight="bold" fill="#1A202C">Decide</text>
+<text x="44" y="246" font-size="12" fill="#64748B">Own the calls only they can make</text>
+<rect x="278" y="196" width="430" height="88" rx="10" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+<rect x="270" y="188" width="430" height="88" rx="10" fill="#ffffff" stroke="#E2E8F0" stroke-width="2"/>
+<text x="284" y="222" font-size="13" fill="#475569">Decisions wait weeks for the next meeting;</text>
+<text x="284" y="241" font-size="13" fill="#475569">settled questions reopen in the room</text>
+<rect x="718" y="196" width="460" height="88" rx="10" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+<rect x="710" y="188" width="460" height="88" rx="10" fill="#ffffff" stroke="#E2E8F0" stroke-width="2"/>
+<text x="724" y="222" font-size="13" fill="#475569">Agree a decision cadence and response times;</text>
+<text x="724" y="241" font-size="13" fill="#475569">pre-brief the options before the meeting</text>
+<rect x="38" y="292" width="230" height="88" rx="10" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+<rect x="30" y="284" width="230" height="88" rx="10" fill="#ffffff" stroke="#E2E8F0" stroke-width="2"/>
+<text x="44" y="318" font-size="15" font-weight="bold" fill="#1A202C">Unblock</text>
+<text x="44" y="342" font-size="12" fill="#64748B">Remove barriers beyond the team</text>
+<rect x="278" y="292" width="430" height="88" rx="10" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+<rect x="270" y="284" width="430" height="88" rx="10" fill="#ffffff" stroke="#E2E8F0" stroke-width="2"/>
+<text x="284" y="318" font-size="13" fill="#475569">A shared service cannot release testers;</text>
+<text x="284" y="337" font-size="13" fill="#475569">departments wait for permission to help</text>
+<rect x="718" y="292" width="460" height="88" rx="10" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+<rect x="710" y="284" width="460" height="88" rx="10" fill="#ffffff" stroke="#E2E8F0" stroke-width="2"/>
+<text x="724" y="318" font-size="13" fill="#475569">Name the blocker and the exact ask in</text>
+<text x="724" y="337" font-size="13" fill="#475569">one line — sponsor acts or delegates fast</text>
+<rect x="38" y="388" width="230" height="88" rx="10" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+<rect x="30" y="380" width="230" height="88" rx="10" fill="#ffffff" stroke="#E2E8F0" stroke-width="2"/>
+<text x="44" y="414" font-size="15" font-weight="bold" fill="#1A202C">Lend legitimacy</text>
+<text x="44" y="438" font-size="12" fill="#64748B">Make the change officially real</text>
+<rect x="278" y="388" width="430" height="88" rx="10" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+<rect x="270" y="380" width="430" height="88" rx="10" fill="#ffffff" stroke="#E2E8F0" stroke-width="2"/>
+<text x="284" y="414" font-size="13" fill="#475569">Leaders treat the project as optional;</text>
+<text x="284" y="433" font-size="13" fill="#475569">local priorities quietly outrank it</text>
+<rect x="718" y="388" width="460" height="88" rx="10" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+<rect x="710" y="380" width="460" height="88" rx="10" fill="#ffffff" stroke="#E2E8F0" stroke-width="2"/>
+<text x="724" y="414" font-size="13" fill="#475569">Sponsor states the mandate in their own</text>
+<text x="724" y="433" font-size="13" fill="#475569">words, in forums leaders already attend</text>
+<rect x="38" y="484" width="230" height="88" rx="10" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+<rect x="30" y="476" width="230" height="88" rx="10" fill="#ffffff" stroke="#E2E8F0" stroke-width="2"/>
+<text x="44" y="510" font-size="15" font-weight="bold" fill="#1A202C">Arbitrate escalations</text>
+<text x="44" y="534" font-size="12" fill="#64748B">Settle cross-functional conflicts</text>
+<rect x="278" y="484" width="430" height="88" rx="10" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+<rect x="270" y="476" width="430" height="88" rx="10" fill="#ffffff" stroke="#E2E8F0" stroke-width="2"/>
+<text x="284" y="510" font-size="13" fill="#475569">Teams re-argue the same trade-off in</text>
+<text x="284" y="529" font-size="13" fill="#475569">every workshop, with no resolution</text>
+<rect x="718" y="484" width="460" height="88" rx="10" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+<rect x="710" y="476" width="460" height="88" rx="10" fill="#ffffff" stroke="#E2E8F0" stroke-width="2"/>
+<text x="724" y="510" font-size="13" fill="#475569">Route one clear question upward, with</text>
+<text x="724" y="529" font-size="13" fill="#475569">both positions stated fairly and briefly</text>
+<rect x="38" y="580" width="230" height="88" rx="10" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+<rect x="30" y="572" width="230" height="88" rx="10" fill="#ffffff" stroke="#2B6CB0" stroke-width="2"/>
+<text x="44" y="606" font-size="15" font-weight="bold" fill="#1A202C">Show visible commitment</text>
+<text x="44" y="630" font-size="12" fill="#64748B">Be seen backing the change</text>
+<rect x="278" y="580" width="430" height="88" rx="10" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+<rect x="270" y="572" width="430" height="88" rx="10" fill="#ffffff" stroke="#E2E8F0" stroke-width="2"/>
+<text x="284" y="606" font-size="13" fill="#475569">The sponsor appears only on the org chart;</text>
+<text x="284" y="625" font-size="13" fill="#475569">staff never hear them mention the project</text>
+<rect x="718" y="580" width="460" height="88" rx="10" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+<rect x="710" y="572" width="460" height="88" rx="10" fill="#ffffff" stroke="#E2E8F0" stroke-width="2"/>
+<text x="724" y="606" font-size="13" fill="#475569">Schedule sponsor moments at kickoff, design</text>
+<text x="724" y="625" font-size="13" fill="#475569">sign-off, go/no-go, and hypercare</text>
+<rect x="30" y="684" width="1140" height="52" rx="8" fill="#F0F4F8" stroke="#2B6CB0" stroke-width="2"/>
+<text x="54" y="716" font-size="15" font-weight="bold" fill="#1A202C">Activate with agreement, not appointment: charter the role, set the cadence, pre-brief every decision.</text>
+</svg>
