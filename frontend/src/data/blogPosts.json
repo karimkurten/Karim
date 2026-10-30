@@ -1,5 +1,287 @@
 [
   {
+    "slug": "activating-executive-sponsor",
+    "title": "Activating Your Executive Sponsor",
+    "excerpt": "Activate an executive sponsor in an HCM implementation: the five real sponsor jobs, signs of passive sponsorship, a one-page charter, and decision cadence.",
+    "publishedAt": "2026-10-30",
+    "readingTime": "8 min read",
+    "cover": "/images/blog/activating-executive-sponsor-cover.webp",
+    "tags": [
+      "HCM",
+      "Implementation",
+      "Governance",
+      "Leadership"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "Most HCM implementations have an executive sponsor. Fewer have an active one. The name sits on the charter and the kickoff slide, steering meets on schedule, yet decisions wait, blockers age, and departments treat the project as one priority among many, until a deadline exposes the absence. The gap is rarely the person. Sponsorship fails when the role was never converted from a title into an agreed set of jobs, moments, and response times. Activation is that conversion, and it belongs in the lead's plan, alongside the stakeholder analysis for implementations that maps who holds authority."
+      },
+      {
+        "type": "h2",
+        "text": "What an executive sponsor is actually for"
+      },
+      {
+        "type": "p",
+        "text": "An executive sponsor does the work the project team cannot do itself. The first job is deciding: scope trade-offs, policy exceptions, sequencing between countries or units, and the go or no-go call — belong where consequences are owned, not recommended. The second is unblocking — removing barriers outside the team's authority — a shared service unable to release testing staff, departments defending incompatible processes. The third is legitimacy: when the sponsor owns the change, other leaders align; when silent, local priorities outrank the project."
+      },
+      {
+        "type": "p",
+        "text": "The fourth is escalation: arbitrating conflicts the working level failed to settle, both positions stated fairly. The fifth is visible commitment at the moments the organisation decides the change is real: kickoff, design sign-off, go-live readiness, hypercare. None of it asks the sponsor to run the project — only to be reachable, briefed, and willing to decide in public. A ceremonial sponsor lends a name; an active sponsor lends authority, on a plannable schedule. That is why the phases of an HCM implementation hand the sponsor a different decision in each phase."
+      },
+      {
+        "type": "h2",
+        "text": "The signs of a passive sponsor"
+      },
+      {
+        "type": "p",
+        "text": "Passive sponsorship has recognisable signals. Steering meetings end with items carried forward: the one person who could decide was absent or unprepared. Escalations return unanswered, so the team stops raising them and works around the blocker instead. Managers describe the project as something happening elsewhere. Decisions reopen afterwards, because the sponsor never personally committed to them. None of this requires bad intent: an undefined role loses to every defined one on a full calendar."
+      },
+      {
+        "type": "p",
+        "text": "Each undecided week pushes design questions into build, where answers cost more. Each unanswered escalation teaches the team raising problems is pointless — how issues resurface as resistance, the pattern explored in handling resistance to new HR systems. The fix is structural, not motivational: no speech about engagement, but a smaller, clearer, better-supported role."
+      },
+      {
+        "type": "img",
+        "src": "/images/blog/activating-executive-sponsor-1.svg",
+        "alt": "Sponsor activation map diagram: five sponsor jobs - decide, unblock, lend legitimacy, arbitrate escalations, and show visible commitment - each with the signal shown when the sponsor is passive and the activation move that fixes it.",
+        "caption": "Five sponsor jobs: the passive signal tells you which activation move will help."
+      },
+      {
+        "type": "h2",
+        "text": "Activate with a charter, a cadence, and pre-briefs"
+      },
+      {
+        "type": "p",
+        "text": "Start with a one-page sponsor charter, agreed in a short working conversation. It names the decisions reserved for the sponsor, the forums they chair, the moments they will cover, and the response expected on escalation. One page is deliberate: a longer role will not survive an executive calendar. Agreeing it together surfaces mismatches early: quarterly updates expected, fortnightly decisions needed — best found in week one."
+      },
+      {
+        "type": "p",
+        "text": "Then set the operating rhythm. A fixed decision cadence — a short recurring check-in, plus steering papers sent in advance and decisions recorded, not discussed — turns sponsorship from an event into a service. Attach response expectations by level: routine decisions inside the cadence, urgent blockers within days, go-live risks immediately. Finally, pre-brief: a sponsor should never meet a hard question for the first time in front of the committee. A short note — decision needed, options, recommendation, consequence of waiting — respects their time and protects the call's quality: the same discipline the go-live communication plan applies to every audience."
+      },
+      {
+        "type": "steps",
+        "label": "The sponsor activation sequence",
+        "intro": "Five moves that convert a named sponsor into a working one — each produces something the project can point to.",
+        "items": [
+          {
+            "title": "Agree the one-page charter",
+            "text": "Sit with the sponsor and define the decisions they own, the forums they chair, the moments they will personally cover, and the response times the project can expect when it escalates."
+          },
+          {
+            "title": "Set the decision cadence",
+            "text": "Fix a short recurring check-in and a steering rhythm, with papers sent in advance, escalation response times agreed by level, and decisions recorded with owners and dates."
+          },
+          {
+            "title": "Pre-brief every forum",
+            "text": "Before each meeting, send the decision needed, the options, the recommendation, and the cost of waiting — never let a hard question reach the sponsor cold in front of the committee."
+          },
+          {
+            "title": "Schedule the visibility moments",
+            "text": "Put kickoff, design sign-off, go/no-go, and hypercare appearances on the sponsor's calendar at project start, not when each moment is already near."
+          },
+          {
+            "title": "Review and re-charter",
+            "text": "Check the arrangement regularly against decisions made and escalations answered, and re-agree the charter immediately whenever the sponsor changes."
+          }
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Make the steering committee a decision forum"
+      },
+      {
+        "type": "p",
+        "text": "Steering committees drift into status theatre when nothing in the room requires a decision. Discipline reverses that: every agenda item is framed as a decision, an escalation, or a risk the committee owns, while status travels in the pre-read. Decisions are recorded with owner and date, reopened only through change control, not corridor conversation. The sponsor chairs actively: inviting dissent, testing whether the working level exhausted its options, then deciding. In cross-border Canada–United States programmes this matters doubly: a trade-off settled for one jurisdiction has payroll or compliance consequences in the other, and only the sponsor level can weigh both. Leaders who watch decisions honoured bring their next problem to the forum, not around it."
+      },
+      {
+        "type": "h2",
+        "text": "Put the sponsor visibly in the moments that matter"
+      },
+      {
+        "type": "img",
+        "src": "/images/blog/activating-executive-sponsor-2.svg",
+        "alt": "Sponsor calendar diagram: the sponsor action and its effect at five implementation moments - kickoff, design sign-off, build and testing, the go or no-go decision, and hypercare.",
+        "caption": "Sponsorship becomes real at specific moments: plan them on the calendar like any other deliverable."
+      },
+      {
+        "type": "p",
+        "text": "Visibility is not publicity; it is evidence. At kickoff, the sponsor states why the change matters and what success protects, in their own words — a message no project manager can deliver with the same authority. At design sign-off, the sponsor confirms the direction and the trade-offs it locks in, which is what stops settled questions from reopening. At go/no-go, the sponsor chairs the readiness decision and owns its outcome, including the courage to delay. In hypercare, the sponsor stays present: thanking teams, hearing early problems openly, keeping escalation paths fast while confidence is fragile."
+      },
+      {
+        "type": "h2",
+        "text": "When the sponsor changes mid-project"
+      },
+      {
+        "type": "p",
+        "text": "Sponsors change — reorganisations, departures, shifting portfolios — and the handover is a project risk, not an administrative update. Brief the incoming sponsor personally and early: business case, decisions already made and why, open trade-offs, moments ahead. Re-agree the charter; do not assume the old one transferred. A successor brings different availability and a different reading of the mandate — far cheaper surfaced in week one than at go/no-go."
+      },
+      {
+        "type": "p",
+        "text": "Protect continuity: decisions logged with their rationale let a successor honour commitments instead of relitigating or reversing them. Introduce the new sponsor visibly at the next natural moment, with the outgoing sponsor's endorsement where possible: continuity, not abandonment. Governance is a lifecycle discipline, as the complete guide to HCM implementation treats it: authority, like data, needs a managed handover."
+      },
+      {
+        "type": "h2",
+        "text": "Respect the boundaries of the role"
+      },
+      {
+        "type": "p",
+        "text": "Activation does not mean escalating everything: a sponsor who approves routine configuration choices becomes the bottleneck and quietly disempowers the team. Decisions belong at the lowest level competent to make them; the sponsor's reserve list stays short — scope, money, policy, cross-functional conflict, and go-live readiness. Nor is the sponsor the project manager: planning, risk discipline, vendor coordination, and delivery detail stay with the delivery lead, who makes the sponsor's few decisions well prepared, not frequent."
+      },
+      {
+        "type": "p",
+        "text": "Boundaries protect the sponsor as much as the project. A role of a few real decisions, a predictable cadence, and a few visible moments is one a busy executive can perform. Sponsorship depending on heroic availability fails in the first busy quarter."
+      },
+      {
+        "type": "h2",
+        "text": "Common mistakes"
+      },
+      {
+        "type": "p",
+        "text": "The failures below share a pattern: the sponsor's name stays on the project while their authority stays out of it."
+      },
+      {
+        "type": "accordion",
+        "label": "Six sponsor activation mistakes to avoid",
+        "items": [
+          {
+            "q": "Appointing a sponsor in name only",
+            "a": "A name on the charter without an agreed role produces ceremonial sponsorship: the title is present, the authority never arrives. Convert the appointment into a one-page charter, agreed with the sponsor, in the project's first weeks."
+          },
+          {
+            "q": "Escalating everything to the sponsor",
+            "a": "Routing routine choices upward makes the sponsor a bottleneck and teaches the team to stop deciding. Keep the reserve list short — scope, money, policy, cross-functional conflict, go-live readiness — and decide the rest at working level."
+          },
+          {
+            "q": "Letting the sponsor meet decisions cold",
+            "a": "A hard question first heard in front of the committee gets deferred, and deferral becomes the pattern. Pre-brief with the options, a recommendation, and the consequence of waiting, so the forum itself can actually decide."
+          },
+          {
+            "q": "Running steering as a status meeting",
+            "a": "Status read aloud consumes the forum and leaves decisions unmade. Send status in the pre-read, frame every agenda item as a decision, an escalation, or an owned risk, and record outcomes with owners and dates."
+          },
+          {
+            "q": "Keeping the sponsor invisible between milestones",
+            "a": "If staff only ever see the sponsor's name, they conclude the change is optional. Small, regular signals — the project named in other forums, a short message at a testing milestone — sustain the mandate between the big moments."
+          },
+          {
+            "q": "Assuming sponsorship transfers automatically",
+            "a": "A new sponsor inherits the title, not the agreement. Without a personal briefing and a re-agreed charter, settled decisions get relitigated and visibility moments pass uncovered. Treat every sponsor change as a managed project risk."
+          }
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Key Takeaways"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "A sponsor's real jobs: deciding, unblocking, lending legitimacy, arbitrating escalations, showing visible commitment — not lending a name.",
+          "Passive sponsorship shows in carried-forward decisions, unanswered escalations, reopened calls — usually an undefined role, not bad intent.",
+          "Activate with a one-page sponsor charter, a fixed decision cadence with escalation response times, and a pre-brief before every forum.",
+          "Run steering as a decision forum: pre-reads carry status, decisions are recorded with owners and dates, reopening only through change control.",
+          "Plan the sponsor's visible moments — kickoff, design sign-off, go/no-go, hypercare — and re-charter the role whenever the sponsor changes.",
+          "Share your experience"
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Frequently Asked Questions"
+      },
+      {
+        "type": "p",
+        "text": "How much time should an executive sponsor actually give an HCM implementation? Less than most sponsors fear, if it is predictable: a short check-in, chaired steering, brief pre-reads, planned visibility moments. The scarce resource is decision latency, not hours: a sponsor answering inside the agreed window beats one who attends everything and decides nothing."
+      },
+      {
+        "type": "p",
+        "text": "What if the sponsor agrees to the charter but still does not engage? Shrink the ask first: one decision at a time, fully prepared, cost of waiting stated plainly. If engagement still does not come, log it as a project risk — decisions aged, milestones affected — and raise it through governance."
+      },
+      {
+        "type": "p",
+        "text": "Should the sponsor attend project team meetings? Rarely: a milestone celebration, a serious escalation, a listening visit in hypercare. Routine attendance blurs accountability, changes how candidly the team speaks, and spends authority where it adds least."
+      },
+      {
+        "type": "p",
+        "text": "Who should own sponsor activation — the sponsor or the project lead? The project lead maintains the machinery — charter, cadence, pre-briefs, decision log. The sponsor owns the commitment itself. It works when the lead makes engagement easy and the sponsor makes it real."
+      },
+      {
+        "type": "h2",
+        "text": "Next Steps"
+      },
+      {
+        "type": "p",
+        "text": "Before your next steering forum, draft the one-page sponsor charter, agree the decision cadence and escalation response times, and put the four visibility moments on the sponsor's calendar. Pre-brief the next decision, record what is decided with owners and dates, and re-agree the charter the moment sponsorship changes hands. Share your experience"
+      },
+      {
+        "type": "quiz",
+        "label": "Check your understanding",
+        "questions": [
+          {
+            "q": "Steering meetings keep ending with key scope decisions carried forward. The sponsor attends, but papers arrive late and questions are first debated in the room. What is the strongest response?",
+            "options": [
+              {
+                "text": "Add more status detail to the steering pack so the sponsor feels better informed before deciding",
+                "correct": false,
+                "why": "Status is not the gap. The sponsor is meeting decisions cold, without a pre-brief or an agreed expectation that the forum decides — more reporting deepens the status theatre."
+              },
+              {
+                "text": "Treat it as an activation problem: agree the one-page charter, pre-brief each decision with options and a recommendation, set response expectations, and record decisions with owners and dates",
+                "correct": true,
+                "why": "Carried-forward decisions are the classic passive-sponsor signal. The fix is structural — a defined role, prepared decisions, and a cadence the sponsor has agreed to work to."
+              },
+              {
+                "text": "Escalate all project decisions to the sponsor so nothing can stall at working level again",
+                "correct": false,
+                "why": "Routing everything upward makes the sponsor the bottleneck and disempowers the team. Only sponsor-level decisions belong on the reserve list."
+              }
+            ]
+          },
+          {
+            "q": "A shared service cannot release staff for testing, and the project team has tried for weeks to resolve it directly. What should happen next?",
+            "options": [
+              {
+                "text": "Reduce the testing scope quietly so the plan absorbs the delay without involving senior leaders",
+                "correct": false,
+                "why": "Absorbing the problem silently hides a real risk and spends testing quality — the one currency go-live readiness depends on — without anyone with authority choosing that trade-off."
+              },
+              {
+                "text": "Wait for the next steering cycle and raise it as a general risk in the status report",
+                "correct": false,
+                "why": "A known blocker with an agreed escalation path should not wait for a reporting cycle. Urgent blockers carry a response expectation measured in days, not meetings."
+              },
+              {
+                "text": "Escalate to the sponsor with one clear ask: the blocker, what the team has already tried, the staff needed, and the consequence of waiting — so the sponsor can act or delegate within the agreed window",
+                "correct": true,
+                "why": "Unblocking is a core sponsor job. A well-formed escalation — specific ask, attempts already made, consequence stated — lets the sponsor use authority the team does not have."
+              }
+            ]
+          },
+          {
+            "q": "The executive sponsor changes two months before go-live. What is the best first move?",
+            "options": [
+              {
+                "text": "Brief the incoming sponsor personally: the business case, decisions already made and why, open trade-offs, and the moments ahead — then re-agree the sponsor charter and introduce them visibly at the next natural moment",
+                "correct": true,
+                "why": "A successor inherits the title, not the agreement. A personal briefing, a decision record with rationale, and a re-agreed charter protect continuity before the go/no-go decision arrives."
+              },
+              {
+                "text": "Send the new sponsor the full project archive and the existing charter, and let them raise questions at the next steering meeting",
+                "correct": false,
+                "why": "An archive is not a briefing, and the old charter was agreed with someone else. Unbriefed, the new sponsor meets the project's hardest decisions cold, close to go-live."
+              },
+              {
+                "text": "Ask the outgoing sponsor to keep covering go/no-go informally, since they know the history",
+                "correct": false,
+                "why": "Informal cover splits authority at the moment it matters most. The decision must sit with the person who currently owns the consequences, properly briefed and visibly in role."
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
     "slug": "handling-resistance-hr-systems",
     "title": "Handling Resistance to New HR Systems",
     "excerpt": "Handle resistance to new HR systems by diagnosing the loss underneath: type, signal, manager response, pilot champions, and honest workload fixes.",
