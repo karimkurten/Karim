@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" font-family="Arial, Helvetica, sans-serif">
+<defs><linearGradient id="hdr" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#0f172a"/><stop offset="1" stop-color="#1e3a5f"/></linearGradient>
+<marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#2B6CB0"/></marker></defs>
+<rect x="0" y="0" width="1200" height="720" fill="#ffffff"/>
+<rect x="0" y="0" width="1200" height="72" fill="url(#hdr)"/>
+<text x="40" y="45" font-size="26" font-weight="bold" fill="#ffffff">The priority arbitration sequence: five steps</text>
+<text x="40" y="105" font-size="15" fill="#64748B">Arbitration is a sequence — each step produces what the next step needs to turn a collision into a decision.</text>
+<rect x="38" y="138" width="520" height="84" rx="10" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+<rect x="30" y="130" width="520" height="84" rx="10" fill="#ffffff" stroke="#2B6CB0" stroke-width="2"/>
+<text x="54" y="164" font-size="16" font-weight="bold" fill="#1A202C">1 — Surface the conflict</text>
+<text x="54" y="188" font-size="13" fill="#475569">State each position, the constraint behind it, and what each</text>
+<text x="54" y="207" font-size="13" fill="#475569">side fears losing.</text>
+<rect x="598" y="138" width="572" height="84" rx="10" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+<rect x="590" y="130" width="572" height="84" rx="10" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+<text x="614" y="164" font-size="13" font-weight="bold" fill="#1A202C">A shared statement</text>
+<text x="614" y="188" font-size="13" fill="#475569">Both sides argue from the same neutral description of the problem.</text>
+<line x1="290" y1="222" x2="290" y2="238" stroke="#2B6CB0" stroke-width="2" marker-end="url(#arr)"/>
+<rect x="38" y="254" width="520" height="84" rx="10" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+<rect x="30" y="246" width="520" height="84" rx="10" fill="#ffffff" stroke="#E2E8F0" stroke-width="2"/>
+<text x="54" y="280" font-size="16" font-weight="bold" fill="#1A202C">2 — Build the evidence</text>
+<text x="54" y="304" font-size="13" fill="#475569">Price each option against the date, payroll accuracy,</text>
+<text x="54" y="323" font-size="13" fill="#475569">compliance, and testing effort.</text>
+<rect x="598" y="254" width="572" height="84" rx="10" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+<rect x="590" y="246" width="572" height="84" rx="10" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+<text x="614" y="280" font-size="13" font-weight="bold" fill="#1A202C">Comparable options</text>
+<text x="614" y="304" font-size="13" fill="#475569">Consequences can be weighed instead of opinions competing.</text>
+<line x1="290" y1="338" x2="290" y2="354" stroke="#2B6CB0" stroke-width="2" marker-end="url(#arr)"/>
+<rect x="38" y="370" width="520" height="84" rx="10" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+<rect x="30" y="362" width="520" height="84" rx="10" fill="#ffffff" stroke="#E2E8F0" stroke-width="2"/>
+<text x="54" y="396" font-size="16" font-weight="bold" fill="#1A202C">3 — Frame trade-off options</text>
+<text x="54" y="420" font-size="13" fill="#475569">Present genuine alternatives, including the cost of deciding</text>
+<text x="54" y="439" font-size="13" fill="#475569">late.</text>
+<rect x="598" y="370" width="572" height="84" rx="10" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+<rect x="590" y="362" width="572" height="84" rx="10" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+<text x="614" y="396" font-size="13" font-weight="bold" fill="#1A202C">A real choice</text>
+<text x="614" y="420" font-size="13" fill="#475569">The decision-maker sees what each option gives up.</text>
+<line x1="290" y1="454" x2="290" y2="470" stroke="#2B6CB0" stroke-width="2" marker-end="url(#arr)"/>
+<rect x="38" y="486" width="520" height="84" rx="10" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+<rect x="30" y="478" width="520" height="84" rx="10" fill="#ffffff" stroke="#E2E8F0" stroke-width="2"/>
+<text x="54" y="512" font-size="16" font-weight="bold" fill="#1A202C">4 — Decide at the right level</text>
+<text x="54" y="536" font-size="13" fill="#475569">Take the call where consequences are owned: working level,</text>
+<text x="54" y="555" font-size="13" fill="#475569">design authority, or sponsor.</text>
+<rect x="598" y="486" width="572" height="84" rx="10" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+<rect x="590" y="478" width="572" height="84" rx="10" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+<text x="614" y="512" font-size="13" font-weight="bold" fill="#1A202C">An owned decision</text>
+<text x="614" y="536" font-size="13" fill="#475569">Authority sits behind the call, so it is not re-argued below.</text>
+<line x1="290" y1="570" x2="290" y2="586" stroke="#2B6CB0" stroke-width="2" marker-end="url(#arr)"/>
+<rect x="38" y="602" width="520" height="84" rx="10" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+<rect x="30" y="594" width="520" height="84" rx="10" fill="#ffffff" stroke="#2B6CB0" stroke-width="2"/>
+<text x="54" y="628" font-size="16" font-weight="bold" fill="#1A202C">5 — Record and communicate</text>
+<text x="54" y="652" font-size="13" fill="#475569">Log the decision and rationale; carry outcome and reasoning to</text>
+<text x="54" y="671" font-size="13" fill="#475569">every affected audience.</text>
+<rect x="598" y="602" width="572" height="84" rx="10" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+<rect x="590" y="594" width="572" height="84" rx="10" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+<text x="614" y="628" font-size="13" font-weight="bold" fill="#1A202C">A settlement that holds</text>
+<text x="614" y="652" font-size="13" fill="#475569">Settled questions stay settled; new facts use change control.</text>
+</svg>
