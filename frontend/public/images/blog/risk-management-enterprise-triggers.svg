@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-label="Risk trigger board: leading indicators watched weekly during an implementation">
+  <defs>
+    <linearGradient id="bg3" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0f172a"/><stop offset="1" stop-color="#1e3a5f"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="675" fill="url(#bg3)"/>
+  <text x="600" y="62" text-anchor="middle" fill="#ffffff" font-family="Georgia, serif" font-size="32">The Trigger Board: What "Attend" Actually Watches</text>
+  <text x="600" y="94" text-anchor="middle" fill="#bfdbfe" font-family="Arial, sans-serif" font-size="16">Every top risk carries a leading indicator with a threshold agreed before it is needed.</text>
+  <g font-family="Arial, sans-serif">
+    <g><rect x="60" y="150" width="340" height="180" rx="12" fill="#1e3a5f" stroke="#60a5fa" stroke-width="2"/>
+      <text x="85" y="195" fill="#ffffff" font-size="19" font-weight="bold">Decision latency</text>
+      <text x="85" y="228" fill="#bfdbfe" font-size="15"><tspan x="85" dy="0">Indicator: open design decisions</tspan><tspan x="85" dy="22">older than 10 business days</tspan><tspan x="85" dy="22">Trigger: count rises 2 weeks</tspan><tspan x="85" dy="22">in a row → sponsor escalation</tspan></text></g>
+    <g><rect x="430" y="150" width="340" height="180" rx="12" fill="#1e3a5f" stroke="#60a5fa" stroke-width="2"/>
+      <text x="455" y="195" fill="#ffffff" font-size="19" font-weight="bold">Data quality trend</text>
+      <text x="455" y="228" fill="#bfdbfe" font-size="15"><tspan x="455" dy="0">Indicator: reconciliation error</tspan><tspan x="455" dy="22">rate per migration pass</tspan><tspan x="455" dy="22">Trigger: pass 2 not better than</tspan><tspan x="455" dy="22">pass 1 → add a cleansing cycle</tspan></text></g>
+    <g><rect x="800" y="150" width="340" height="180" rx="12" fill="#1e3a5f" stroke="#60a5fa" stroke-width="2"/>
+      <text x="825" y="195" fill="#ffffff" font-size="19" font-weight="bold">Reserve burn rate</text>
+      <text x="825" y="228" fill="#bfdbfe" font-size="15"><tspan x="825" dy="0">Indicator: contingency consumed</tspan><tspan x="825" dy="22">vs. risk exposure retired</tspan><tspan x="825" dy="22">Trigger: burn ahead of retire-</tspan><tspan x="825" dy="22">ment → re-plan, do not hope</tspan></text></g>
+    <g><rect x="60" y="360" width="340" height="180" rx="12" fill="#1e3a5f" stroke="#60a5fa" stroke-width="2"/>
+      <text x="85" y="405" fill="#ffffff" font-size="19" font-weight="bold">SME availability</text>
+      <text x="85" y="438" fill="#bfdbfe" font-size="15"><tspan x="85" dy="0">Indicator: planned vs. actual</tspan><tspan x="85" dy="22">subject-matter-expert hours</tspan><tspan x="85" dy="22">Trigger: below 80% for 2 weeks</tspan><tspan x="85" dy="22">→ re-sequence design work</tspan></text></g>
+    <g><rect x="430" y="360" width="340" height="180" rx="12" fill="#1e3a5f" stroke="#60a5fa" stroke-width="2"/>
+      <text x="455" y="405" fill="#ffffff" font-size="19" font-weight="bold">Defect arrival curve</text>
+      <text x="455" y="438" fill="#bfdbfe" font-size="15"><tspan x="455" dy="0">Indicator: new critical defects</tspan><tspan x="455" dy="22">per test cycle vs. closures</tspan><tspan x="455" dy="22">Trigger: arrivals exceed closures</tspan><tspan x="455" dy="22">at cycle 3 → entry-criteria review</tspan></text></g>
+    <g><rect x="800" y="360" width="340" height="180" rx="12" fill="#1e3a5f" stroke="#60a5fa" stroke-width="2"/>
+      <text x="825" y="405" fill="#ffffff" font-size="19" font-weight="bold">Scope pressure index</text>
+      <text x="825" y="438" fill="#bfdbfe" font-size="15"><tspan x="825" dy="0">Indicator: change requests</tspan><tspan x="825" dy="22">submitted per week, by source</tspan><tspan x="825" dy="22">Trigger: sustained rise after</tspan><tspan x="825" dy="22">design freeze → scope board</tspan></text></g>
+  </g>
+  <text x="600" y="600" text-anchor="middle" fill="#64748b" font-family="Arial, sans-serif" font-size="13">Thresholds shown are worked examples from the guide's templates — set yours from your own baseline, never copied as benchmarks.</text>
+</svg>
