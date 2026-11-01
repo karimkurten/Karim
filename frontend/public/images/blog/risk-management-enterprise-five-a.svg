@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-label="The 5A Risk Discipline: Anticipate, Assess, Assign, Act, Attend">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0f172a"/><stop offset="1" stop-color="#1e3a5f"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="675" fill="url(#bg)"/>
+  <text x="600" y="70" text-anchor="middle" fill="#ffffff" font-family="Georgia, serif" font-size="34">The 5A Risk Discipline</text>
+  <text x="600" y="105" text-anchor="middle" fill="#bfdbfe" font-family="Arial, sans-serif" font-size="17">One cycle, run at every phase gate — not once at kickoff</text>
+  <g font-family="Arial, sans-serif">
+    <g><rect x="60" y="200" width="192" height="220" rx="14" fill="#1e3a5f" stroke="#60a5fa" stroke-width="2"/>
+      <text x="156" y="255" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="bold">1 · ANTICIPATE</text>
+      <text x="156" y="295" text-anchor="middle" fill="#bfdbfe" font-size="14"><tspan x="156" dy="0">Surface risks while</tspan><tspan x="156" dy="20">they are still cheap:</tspan><tspan x="156" dy="20">structured elicitation,</tspan><tspan x="156" dy="20">assumption testing,</tspan><tspan x="156" dy="20">reference-class check</tspan></text></g>
+    <g><rect x="282" y="200" width="192" height="220" rx="14" fill="#1e3a5f" stroke="#60a5fa" stroke-width="2"/>
+      <text x="378" y="255" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="bold">2 · ASSESS</text>
+      <text x="378" y="295" text-anchor="middle" fill="#bfdbfe" font-size="14"><tspan x="378" dy="0">Score probability,</tspan><tspan x="378" dy="20">impact, velocity and</tspan><tspan x="378" dy="20">detectability on</tspan><tspan x="378" dy="20">anchored scales the</tspan><tspan x="378" dy="20">whole program shares</tspan></text></g>
+    <g><rect x="504" y="200" width="192" height="220" rx="14" fill="#1e3a5f" stroke="#60a5fa" stroke-width="2"/>
+      <text x="600" y="255" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="bold">3 · ASSIGN</text>
+      <text x="600" y="295" text-anchor="middle" fill="#bfdbfe" font-size="14"><tspan x="600" dy="0">One named owner per</tspan><tspan x="600" dy="20">risk, with authority,</tspan><tspan x="600" dy="20">a trigger, and a review</tspan><tspan x="600" dy="20">date — never a team,</tspan><tspan x="600" dy="20">never a committee</tspan></text></g>
+    <g><rect x="726" y="200" width="192" height="220" rx="14" fill="#1e3a5f" stroke="#60a5fa" stroke-width="2"/>
+      <text x="822" y="255" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="bold">4 · ACT</text>
+      <text x="822" y="295" text-anchor="middle" fill="#bfdbfe" font-size="14"><tspan x="822" dy="0">Funded responses in</tspan><tspan x="822" dy="20">the plan, not wishes in</tspan><tspan x="822" dy="20">a register: avoid,</tspan><tspan x="822" dy="20">reduce, transfer, accept</tspan><tspan x="822" dy="20">— or exploit upside</tspan></text></g>
+    <g><rect x="948" y="200" width="192" height="220" rx="14" fill="#1e3a5f" stroke="#60a5fa" stroke-width="2"/>
+      <text x="1044" y="255" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="bold">5 · ATTEND</text>
+      <text x="1044" y="295" text-anchor="middle" fill="#bfdbfe" font-size="14"><tspan x="1044" dy="0">Watch triggers and</tspan><tspan x="1044" dy="20">reserve burn weekly;</tspan><tspan x="1044" dy="20">retire dead risks,</tspan><tspan x="1044" dy="20">escalate breached</tspan><tspan x="1044" dy="20">ones, learn at close</tspan></text></g>
+    <g fill="#60a5fa" font-size="30"><text x="258" y="322">›</text><text x="480" y="322">›</text><text x="702" y="322">›</text><text x="924" y="322">›</text></g>
+  </g>
+  <text x="600" y="500" text-anchor="middle" fill="#93c5fd" font-family="Arial, sans-serif" font-size="16">Output of the cycle: a living register, a reserve tied to quantified exposure, and decisions made before the risk makes them for you.</text>
+  <text x="600" y="545" text-anchor="middle" fill="#64748b" font-family="Arial, sans-serif" font-size="13">Original framework in: The Complete Guide to Risk Management for Enterprise Implementations — karimchaouki.com</text>
+</svg>
