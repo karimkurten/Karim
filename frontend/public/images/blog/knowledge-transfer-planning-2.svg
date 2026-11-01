@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="640" viewBox="0 0 1200 640" role="img" aria-label="Handover readiness and transfer methods matrix">
+  <defs>
+    <linearGradient id="hdr" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#0f172a"/><stop offset="1" stop-color="#1e3a5f"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="640" fill="#ffffff"/>
+  <rect x="0" y="0" width="1200" height="110" fill="url(#hdr)"/>
+  <text x="48" y="48" font-family="Georgia, serif" font-size="30" fill="#ffffff">Handover Readiness: Match Method to Knowledge</text>
+  <text x="48" y="82" font-family="Arial, sans-serif" font-size="16" fill="#94A3B8">Ready means the receiving team can perform, explain, and recover — not just attend</text>
+  <g font-family="Arial, sans-serif">
+    <rect x="40" y="140" width="360" height="56" fill="#1e3a5f"/>
+    <text x="60" y="175" font-size="16" fill="#ffffff" font-weight="bold">Knowledge type</text>
+    <rect x="400" y="140" width="380" height="56" fill="#1e3a5f"/>
+    <text x="420" y="175" font-size="16" fill="#ffffff" font-weight="bold">Best transfer method</text>
+    <rect x="780" y="140" width="380" height="56" fill="#1e3a5f"/>
+    <text x="800" y="175" font-size="16" fill="#ffffff" font-weight="bold">Readiness evidence</text>
+
+    <rect x="40" y="196" width="360" height="84" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="1"/>
+    <text x="60" y="230" font-size="16" fill="#1A202C" font-weight="bold">Procedures and steps</text>
+    <text x="60" y="255" font-size="14" fill="#475569">Payroll cycle, approvals, cut-off dates</text>
+    <rect x="400" y="196" width="380" height="84" fill="#ffffff" stroke="#E2E8F0" stroke-width="1"/>
+    <text x="420" y="230" font-size="14" fill="#475569">Guides, walkthroughs, supervised practice</text>
+    <text x="420" y="255" font-size="14" fill="#64748B">See quick-reference guides and checklists</text>
+    <rect x="780" y="196" width="380" height="84" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="1"/>
+    <text x="800" y="230" font-size="14" fill="#475569">Receiver completes cycle unaided</text>
+    <text x="800" y="255" font-size="14" fill="#64748B">Checklist signed, errors reviewed</text>
+
+    <rect x="40" y="280" width="360" height="84" fill="#ffffff" stroke="#E2E8F0" stroke-width="1"/>
+    <text x="60" y="314" font-size="16" fill="#1A202C" font-weight="bold">Judgement and exceptions</text>
+    <text x="60" y="339" font-size="14" fill="#475569">Retro pay, overrides, edge cases</text>
+    <rect x="400" y="280" width="380" height="84" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="1"/>
+    <text x="420" y="314" font-size="14" fill="#475569">Shadowing, paired work, case discussion</text>
+    <text x="420" y="339" font-size="14" fill="#64748B">Work real examples together</text>
+    <rect x="780" y="280" width="380" height="84" fill="#ffffff" stroke="#E2E8F0" stroke-width="1"/>
+    <text x="800" y="314" font-size="14" fill="#475569">Receiver explains reasoning aloud</text>
+    <text x="800" y="339" font-size="14" fill="#64748B">Teach-back matches expert intent</text>
+
+    <rect x="40" y="364" width="360" height="84" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="1"/>
+    <text x="60" y="398" font-size="16" fill="#1A202C" font-weight="bold">System configuration</text>
+    <text x="60" y="423" font-size="14" fill="#475569">Rules, integrations, reports, security</text>
+    <rect x="400" y="364" width="380" height="84" fill="#ffffff" stroke="#E2E8F0" stroke-width="1"/>
+    <text x="420" y="398" font-size="14" fill="#475569">Configuration log, demos, sandbox practice</text>
+    <text x="420" y="423" font-size="14" fill="#64748B">Document rationale, not just settings</text>
+    <rect x="780" y="364" width="380" height="84" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="1"/>
+    <text x="800" y="398" font-size="14" fill="#475569">Receiver makes a safe change in test</text>
+    <text x="800" y="423" font-size="14" fill="#64748B">Change reviewed and reversed cleanly</text>
+
+    <rect x="40" y="448" width="360" height="84" fill="#ffffff" stroke="#E2E8F0" stroke-width="1"/>
+    <text x="60" y="482" font-size="16" fill="#1A202C" font-weight="bold">Relationships and context</text>
+    <text x="60" y="507" font-size="14" fill="#475569">Vendors, approvers, escalation paths</text>
+    <rect x="400" y="448" width="380" height="84" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="1"/>
+    <text x="420" y="482" font-size="14" fill="#475569">Introductions, joint meetings, contact map</text>
+    <text x="420" y="507" font-size="14" fill="#64748B">Hand over trust, not just names</text>
+    <rect x="780" y="448" width="380" height="84" fill="#ffffff" stroke="#E2E8F0" stroke-width="1"/>
+    <text x="800" y="482" font-size="14" fill="#475569">Receiver leads the next meeting</text>
+    <text x="800" y="507" font-size="14" fill="#64748B">Escalation path tested and works</text>
+  </g>
+  <text x="40" y="575" font-family="Arial, sans-serif" font-size="15" fill="#64748B">If readiness evidence is missing for a critical row, the handover is not complete — extend support, do not just extend the meeting.</text>
+  <text x="40" y="602" font-family="Arial, sans-serif" font-size="15" fill="#2B6CB0">Readiness is demonstrated performance, not attendance.</text>
+</svg>
