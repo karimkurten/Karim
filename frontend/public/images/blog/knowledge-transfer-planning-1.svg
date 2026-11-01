@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="620" viewBox="0 0 1200 620" role="img" aria-label="Knowledge transfer model phases">
+  <defs>
+    <linearGradient id="hdr" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#0f172a"/><stop offset="1" stop-color="#1e3a5f"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="620" fill="#ffffff"/>
+  <rect x="0" y="0" width="1200" height="110" fill="url(#hdr)"/>
+  <text x="48" y="48" font-family="Georgia, serif" font-size="30" fill="#ffffff">The Knowledge Transfer Model</text>
+  <text x="48" y="82" font-family="Arial, sans-serif" font-size="16" fill="#94A3B8">Expertise survives the handover when transfer is planned, practised, and verified</text>
+  <g font-family="Arial, sans-serif">
+    <g>
+      <rect x="40" y="150" width="200" height="320" rx="12" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+      <circle cx="140" cy="195" r="26" fill="#2B6CB0"/><text x="140" y="203" text-anchor="middle" font-size="20" fill="#ffffff" font-weight="bold">1</text>
+      <text x="140" y="245" text-anchor="middle" font-size="18" fill="#1A202C" font-weight="bold">Identify</text>
+      <text x="140" y="275" text-anchor="middle" font-size="14" fill="#475569"><tspan x="140" dy="0">What must the</tspan><tspan x="140" dy="20">receiver know,</tspan><tspan x="140" dy="20">do, and decide?</tspan><tspan x="140" dy="20">Map critical</tspan><tspan x="140" dy="20">knowledge first.</tspan></text>
+    </g>
+    <text x="248" y="305" font-size="28" fill="#2B6CB0">&#8594;</text>
+    <g>
+      <rect x="275" y="150" width="200" height="320" rx="12" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+      <circle cx="375" cy="195" r="26" fill="#2B6CB0"/><text x="375" y="203" text-anchor="middle" font-size="20" fill="#ffffff" font-weight="bold">2</text>
+      <text x="375" y="245" text-anchor="middle" font-size="18" fill="#1A202C" font-weight="bold">Capture</text>
+      <text x="375" y="275" text-anchor="middle" font-size="14" fill="#475569"><tspan x="375" dy="0">Record the why</tspan><tspan x="375" dy="20">behind the how:</tspan><tspan x="375" dy="20">decisions, rules,</tspan><tspan x="375" dy="20">exceptions, and</tspan><tspan x="375" dy="20">workarounds.</tspan></text>
+    </g>
+    <text x="483" y="305" font-size="28" fill="#2B6CB0">&#8594;</text>
+    <g>
+      <rect x="510" y="150" width="200" height="320" rx="12" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+      <circle cx="610" cy="195" r="26" fill="#2B6CB0"/><text x="610" y="203" text-anchor="middle" font-size="20" fill="#ffffff" font-weight="bold">3</text>
+      <text x="610" y="245" text-anchor="middle" font-size="18" fill="#1A202C" font-weight="bold">Transfer</text>
+      <text x="610" y="275" text-anchor="middle" font-size="14" fill="#475569"><tspan x="610" dy="0">Teach, shadow,</tspan><tspan x="610" dy="20">and pair. Use the</tspan><tspan x="610" dy="20">right method for</tspan><tspan x="610" dy="20">each knowledge</tspan><tspan x="610" dy="20">type.</tspan></text>
+    </g>
+    <text x="718" y="305" font-size="28" fill="#2B6CB0">&#8594;</text>
+    <g>
+      <rect x="745" y="150" width="200" height="320" rx="12" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+      <circle cx="845" cy="195" r="26" fill="#2B6CB0"/><text x="845" y="203" text-anchor="middle" font-size="20" fill="#ffffff" font-weight="bold">4</text>
+      <text x="845" y="245" text-anchor="middle" font-size="18" fill="#1A202C" font-weight="bold">Verify</text>
+      <text x="845" y="275" text-anchor="middle" font-size="14" fill="#475569"><tspan x="845" dy="0">Receivers perform</tspan><tspan x="845" dy="20">the work unaided</tspan><tspan x="845" dy="20">while experts</tspan><tspan x="845" dy="20">observe and</tspan><tspan x="845" dy="20">correct.</tspan></text>
+    </g>
+    <text x="953" y="305" font-size="28" fill="#2B6CB0">&#8594;</text>
+    <g>
+      <rect x="980" y="150" width="180" height="320" rx="12" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+      <circle cx="1070" cy="195" r="26" fill="#2B6CB0"/><text x="1070" y="203" text-anchor="middle" font-size="20" fill="#ffffff" font-weight="bold">5</text>
+      <text x="1070" y="245" text-anchor="middle" font-size="18" fill="#1A202C" font-weight="bold">Sustain</text>
+      <text x="1070" y="275" text-anchor="middle" font-size="14" fill="#475569"><tspan x="1070" dy="0">Own, update,</tspan><tspan x="1070" dy="20">and improve</tspan><tspan x="1070" dy="20">the knowledge</tspan><tspan x="1070" dy="20">after go-live.</tspan></text>
+    </g>
+  </g>
+  <rect x="40" y="500" width="1120" height="70" rx="10" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+  <text x="60" y="542" font-family="Arial, sans-serif" font-size="15" fill="#64748B">No phase is optional: skipping Verify turns a handover meeting into an assumption, not a transfer.</text>
+</svg>
