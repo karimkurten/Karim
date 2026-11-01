@@ -1,5 +1,295 @@
 [
   {
+    "slug": "knowledge-transfer-planning",
+    "title": "Knowledge Transfer Planning for Implementations",
+    "excerpt": "Plan knowledge transfer for an HCM implementation so expertise survives the handover: identify, capture, practise, verify, and sustain what teams need.",
+    "publishedAt": "2026-11-01",
+    "readingTime": "8 min read",
+    "cover": "/images/blog/knowledge-transfer-planning-cover.webp",
+    "tags": [
+      "HCM",
+      "Implementation",
+      "Knowledge Transfer",
+      "Handover"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "An implementation can go live on time and still lose its most valuable asset in the weeks that follow: the knowledge of why the system was built the way it was. The project team disperses, and the people who remain inherit screens, reports, and procedures without the reasoning behind them. The first unusual payroll or configuration question then becomes a small crisis, not because the receiving team lacks ability, but because transfer was treated as a final meeting rather than a planned discipline. Good knowledge transfer planning prevents that loss: it identifies what must survive the handover, captures it in usable forms, gives receivers real practice, verifies they can perform unaided, and assigns ownership for keeping it alive. That lifecycle view sits inside the complete guide to HCM implementation, where handover is a phase outcome, not an afterthought."
+      },
+      {
+        "type": "h2",
+        "text": "Start with what the receiver must be able to do"
+      },
+      {
+        "type": "p",
+        "text": "Effective transfer begins with the receiver, not the expert. Ask what each receiving role must know, do, and decide without help on a normal day, on a difficult day, and in an emergency. A payroll administrator needs the cycle procedure, but also the judgement to handle retroactive pay, a missed approval, and a file that fails near a cut-off. A system administrator needs configuration settings, but also the rationale for those settings, the risks of changing them, and the test to run afterwards. An HR operations lead needs escalation paths and the context behind policy exceptions that were agreed during design."
+      },
+      {
+        "type": "p",
+        "text": "That receiver-first view produces a knowledge inventory: a practical map of domains, topics, holders, receivers, and criticality. Build it with the same care as the stakeholder analysis for implementations, because the holder of critical knowledge is not always the most senior person. Sometimes it is the tester who discovered an edge case, the payroll specialist who reconciled a difficult parallel run, or the integrator who knows why a field is mapped in a counterintuitive way. If that knowledge is not named early, it leaves quietly when that person moves on."
+      },
+      {
+        "type": "h2",
+        "text": "Separate the kinds of knowledge before choosing methods"
+      },
+      {
+        "type": "p",
+        "text": "Not all knowledge transfers the same way, and using one method for everything is why handovers feel thorough yet fail in practice. Explicit knowledge — steps, dates, rules, and definitions — transfers well through documents, guides, and structured walkthroughs. Tacit knowledge — judgement, pattern recognition, and the sense that a result looks wrong — transfers through observation, paired work, and discussion of real examples. Contextual knowledge — why a decision was made, what was rejected, and which exception was temporary — transfers through decision records and honest explanation from the people who were in the room."
+      },
+      {
+        "type": "p",
+        "text": "Consider a composite, hypothetical example. A team documents how to process a cross-border payroll correction, and receivers follow it successfully in training. Two months later a correction involves two tax jurisdictions and a prior-period adjustment, and the procedure alone does not say which order to apply the steps in. The missing piece was never the steps; it was the reasoning the expert used to sequence them. A short paired session on that harder example, with the expert thinking aloud, would have transferred what the document could not."
+      },
+      {
+        "type": "img",
+        "src": "/images/blog/knowledge-transfer-planning-1.svg",
+        "alt": "Knowledge transfer model diagram: five phases - identify critical knowledge, capture the why, transfer with matched methods, verify by performance, and sustain ownership after go-live.",
+        "caption": "Knowledge transfer is a sequence: identify, capture, transfer, verify, and sustain — skipping verification turns handover into an assumption."
+      },
+      {
+        "type": "h2",
+        "text": "Build the plan into the implementation phases"
+      },
+      {
+        "type": "p",
+        "text": "Knowledge transfer that starts in the final week is already late. By then experts are closing defects and preparing cutover, and receivers are absorbing training while doing their day jobs. The plan should instead grow alongside delivery, following the rhythm in HCM implementation phases: identify critical knowledge during design, capture decisions as they are made, involve future owners in testing, and use hypercare as supervised practice rather than a support queue the project team works through alone."
+      },
+      {
+        "type": "p",
+        "text": "In practice, receivers are present before they are accountable. They attend design discussions as future owners asking what they will need to explain to others, join test execution so they see failures and fixes, and help write the guides they will later maintain — authoring is itself a powerful form of transfer. By go-live, the handover should feel like a change in accountability, not a first introduction."
+      },
+      {
+        "type": "steps",
+        "label": "The knowledge transfer planning sequence",
+        "intro": "Five moves that make expertise survive the handover, built into the implementation rather than bolted on at the end.",
+        "items": [
+          {
+            "title": "Identify critical knowledge",
+            "text": "For each receiving role, list what they must know, do, and decide on a normal day, a difficult day, and in an emergency — and name who currently holds that knowledge."
+          },
+          {
+            "title": "Capture the why, not just the how",
+            "text": "Record decisions, rationale, exceptions, and workarounds as they happen, in guides, configuration logs, and decision records the receiving team can actually find and use."
+          },
+          {
+            "title": "Match method to knowledge type",
+            "text": "Use documents and walkthroughs for procedures, shadowing and paired work for judgement, and sandbox practice for configuration — never one presentation for everything."
+          },
+          {
+            "title": "Verify by performance",
+            "text": "Have receivers perform the real work unaided while experts observe: run the cycle, explain the exception, make the safe change in test. Attendance is not evidence."
+          },
+          {
+            "title": "Assign ownership and sustain it",
+            "text": "Name an owner for every knowledge area after handover, with an update rhythm, a support route, and a review point in hypercare and beyond."
+          }
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Capture knowledge in forms people will actually use"
+      },
+      {
+        "type": "p",
+        "text": "Capture fails in two opposite ways: too little, where key reasoning lives only in email threads and memory, and too much, where hundreds of unsearchable documents bury the few pages people need under pressure. The standard is usability at the moment of work. A concise procedure that a payroll administrator can follow during a live cycle is worth more than a comprehensive manual nobody opens. That is the discipline behind quick reference guides for HCM: short, task-focused, and written in the language of the person doing the task."
+      },
+      {
+        "type": "p",
+        "text": "A balanced capture set usually includes four layers: task guides and checklists for recurring procedures; a configuration and decision record explaining what was set and why; an exceptions and troubleshooting library built from real testing and hypercare cases, organised by symptom; and a contact and escalation map showing who owns what now. Keep these in one known location, with named owners and review dates, so the set stays trustworthy instead of decaying into folklore."
+      },
+      {
+        "type": "h2",
+        "text": "Teach for capability, not for coverage"
+      },
+      {
+        "type": "p",
+        "text": "Training delivered to complete a schedule is different from transfer designed to build capability. Coverage asks whether a session happened; capability asks whether the receiver can now perform. The strongest programmes therefore spend less time presenting and more time practising: receivers run a mock payroll cycle, resolve a seeded error, explain a report to a manager, or talk through an exception while an expert listens for gaps. Each exercise reveals what presentation hides — the step everyone assumed was obvious, the term two teams interpret differently, the approval that exists on paper but not in practice."
+      },
+      {
+        "type": "p",
+        "text": "This is where the train-the-trainer approach for HCM earns its place. Instead of the project team teaching every end user once, it builds a smaller group of internal trainers and super users who can teach, answer questions in local language, and notice where the process meets real operational pressure. Those trainers become the durable memory of the implementation in each location. Support them properly: give them early access, involve them in testing, protect time for their teaching role, and keep them in the loop when configuration or guidance changes after go-live."
+      },
+      {
+        "type": "img",
+        "src": "/images/blog/knowledge-transfer-planning-2.svg",
+        "alt": "Handover readiness matrix diagram: four knowledge types - procedures, judgement and exceptions, system configuration, and relationships and context - each with its best transfer method and the readiness evidence required.",
+        "caption": "Readiness is demonstrated performance: match the method to the knowledge type, then require evidence for each row."
+      },
+      {
+        "type": "h2",
+        "text": "Verify readiness and hand over ownership explicitly"
+      },
+      {
+        "type": "p",
+        "text": "The most important moment in transfer is verification, because it replaces hope with evidence. Before accountability moves, each receiver should demonstrate the critical tasks for their role while the expert observes without intervening, except to prevent harm. In payroll, that might be completing a cycle in a test environment, including the checks and reconciliations. In system administration, it might be making a small configuration change safely, documenting it, and reversing it. In support, it might be triaging sample incidents, gathering the right diagnostics, and choosing the correct escalation route."
+      },
+      {
+        "type": "p",
+        "text": "Where verification reveals a gap, the honest response is to extend supervised practice, not to lower the standard or sign the handover anyway. Record what was verified, what remains in supervised practice, and when it will be checked again. Then make ownership explicit and public: who owns each domain from a stated date, how support requests reach them, and what the project team will still cover during hypercare. Announce that change through the same disciplined channels as the go-live communication plan, so the wider organisation stops routing questions to people who have already handed over and starts building the new owners' authority."
+      },
+      {
+        "type": "h2",
+        "text": "Sustain the knowledge after the project ends"
+      },
+      {
+        "type": "p",
+        "text": "Transfer does not end at handover; it changes mode. Systems are patched, policies evolve, and staff rotate. Without an update rhythm, guides drift from the configured reality and confidence in them collapses. Assign each knowledge area a living owner, review critical guides after major changes, and feed significant hypercare lessons back into the troubleshooting library while the detail is fresh."
+      },
+      {
+        "type": "p",
+        "text": "New joiners are the long-term test. If a capable newcomer can become productive using the guides, the recorded rationale, and the internal trainers — without hunting for a departed expert — the knowledge truly survived. If every newcomer must reconstruct the reasoning from scattered files, the handover transferred tasks but not expertise."
+      },
+      {
+        "type": "h2",
+        "text": "Common mistakes"
+      },
+      {
+        "type": "p",
+        "text": "The failures below share a pattern: transfer is treated as an event — a meeting, a folder, a final presentation — instead of a verified change in who can do the work."
+      },
+      {
+        "type": "accordion",
+        "label": "Six knowledge transfer mistakes to avoid",
+        "items": [
+          {
+            "q": "Starting transfer in the final week",
+            "a": "By then experts are consumed by cutover and receivers have no time to practise. Identify critical knowledge during design, capture decisions as they are made, and involve future owners in testing."
+          },
+          {
+            "q": "Handing over documents and calling it transfer",
+            "a": "A folder proves capture, not capability. Documents carry procedures well, but judgement needs shadowing, paired work, and discussion of real examples — plus verification that receivers can perform unaided."
+          },
+          {
+            "q": "Documenting the how without the why",
+            "a": "Steps without rationale break at the first exception. Record why settings and processes were chosen, what was rejected, and which workarounds are temporary, so receivers can reason about new cases."
+          },
+          {
+            "q": "Using one method for every knowledge type",
+            "a": "Presentations do not transfer pattern recognition, and shadowing is an inefficient way to teach cut-off dates. Match the method to the knowledge: guides for procedures, practice for skill, conversation for judgement."
+          },
+          {
+            "q": "Signing off handover without verification",
+            "a": "Attendance is not evidence. Require demonstrated performance — the cycle run unaided, the exception explained aloud, the safe change made in test — and extend supervised practice where gaps appear."
+          },
+          {
+            "q": "Leaving ownership vague after go-live",
+            "a": "If nobody owns a knowledge area, guides decay and questions keep flowing to the departed project team. Name owners, publish support routes, and review critical material after every major change."
+          }
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Key Takeaways"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "Knowledge transfer is a planned discipline — identify, capture, transfer, verify, sustain — not a final handover meeting.",
+          "Start from the receiver: what each role must know, do, and decide on a normal day, a difficult day, and in an emergency.",
+          "Match the method to the knowledge type: documents for procedures, paired practice for judgement, sandbox work for configuration.",
+          "Capture the why behind the how — decisions, rationale, exceptions, and workarounds — in forms people can use at the moment of work.",
+          "Verify readiness by demonstrated performance, assign ownership explicitly, and keep the knowledge alive after go-live.",
+          "Share your experience"
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Frequently Asked Questions"
+      },
+      {
+        "type": "p",
+        "text": "When should knowledge transfer planning start in an implementation? During design, not at go-live. Identify critical knowledge and its holders early, capture decisions as they are made, and involve future owners in testing so handover becomes a change in accountability rather than a first introduction."
+      },
+      {
+        "type": "p",
+        "text": "What belongs in a knowledge transfer plan? A knowledge inventory by role and domain, named holders and receivers, the method matched to each knowledge type, a capture set with owners and locations, scheduled practice, verification tasks with evidence, and explicit ownership and support routes after handover."
+      },
+      {
+        "type": "p",
+        "text": "How do you know a handover is actually complete? When receivers demonstrate the critical work unaided: they run the process, explain the reasoning behind exceptions, make safe changes in a test environment, and triage problems to the right route. Attendance and document delivery alone do not prove readiness."
+      },
+      {
+        "type": "p",
+        "text": "How is tacit knowledge — judgement and experience — transferred? Through people, not pages: shadowing, paired work on real examples, experts thinking aloud, and teach-back where the receiver explains their reasoning. Documents support that process but cannot replace it."
+      },
+      {
+        "type": "h2",
+        "text": "Next Steps"
+      },
+      {
+        "type": "p",
+        "text": "Build your knowledge inventory this week: for each receiving role, list the critical tasks, name the current holder, and mark which items have no verified backup. Add one verification exercise to your handover plan, and assign an owner to every knowledge area before the project team disperses. Share your experience"
+      },
+      {
+        "type": "quiz",
+        "label": "Check your understanding",
+        "questions": [
+          {
+            "q": "A project team hands over a complete, well-organised document folder in the final week and receivers attended every session. Two months later the team cannot handle an unusual payroll exception. What most likely went wrong?",
+            "options": [
+              {
+                "text": "The documents were too short, so the folder should simply have been larger",
+                "correct": false,
+                "why": "Volume was not the gap. The exception needed judgement and rationale, which documents alone rarely transfer, and there was no practice or verification to reveal the gap before handover."
+              },
+              {
+                "text": "Transfer started late, used one method for every knowledge type, and was never verified by demonstrated performance",
+                "correct": true,
+                "why": "Procedures were captured, but tacit judgement was not transferred through paired work on harder examples, and attendance was accepted instead of evidence that receivers could perform unaided."
+              },
+              {
+                "text": "The receiving team was not capable enough to own the system",
+                "correct": false,
+                "why": "Capability is built by the transfer process itself. Blaming receivers ignores the late start, the missing reasoning, and the absent verification that the plan should have provided."
+              }
+            ]
+          },
+          {
+            "q": "Which evidence best proves handover readiness for a system administrator?",
+            "options": [
+              {
+                "text": "They attended the configuration walkthrough and received the settings spreadsheet",
+                "correct": false,
+                "why": "Attendance and a spreadsheet show exposure, not capability — and a settings list without rationale does not explain what is safe to change."
+              },
+              {
+                "text": "They can name every member of the project team and where the project files are stored",
+                "correct": false,
+                "why": "Knowing people and file locations helps, but readiness is about performing the role: making changes safely, testing them, and knowing when to escalate."
+              },
+              {
+                "text": "They make a small configuration change safely in a test environment, document the rationale, test the effect, and reverse it cleanly while an expert observes",
+                "correct": true,
+                "why": "Demonstrated performance is the standard: it proves skill, judgement, and safe practice together, and surfaces gaps while expert help is still available."
+              }
+            ]
+          },
+          {
+            "q": "Six months after go-live, guides no longer match the configured system and staff have stopped trusting them. What should have been in place?",
+            "options": [
+              {
+                "text": "A named owner for each knowledge area, an update rhythm tied to system and policy changes, and hypercare lessons fed back into the troubleshooting library",
+                "correct": true,
+                "why": "Knowledge decays without ownership. Sustaining transfer means reviewing critical material after changes and capturing new lessons while they are fresh, so guides stay trustworthy."
+              },
+              {
+                "text": "A rule that the system must never be changed after go-live, so the guides stay accurate",
+                "correct": false,
+                "why": "Systems must evolve with policy, law, and operations. The answer is maintained knowledge, not a frozen system."
+              },
+              {
+                "text": "A larger handover meeting at go-live, so more detail was covered at the start",
+                "correct": false,
+                "why": "No single meeting, however long, survives six months of change. Decay is an ownership and maintenance failure, not a coverage failure."
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
     "slug": "managing-conflicting-stakeholder-priorities",
     "title": "How to Manage Conflicting Stakeholder Priorities",
     "excerpt": "Manage conflicting stakeholder priorities in an HCM implementation: surface the trade-off early, decide with evidence, and record the call so it holds.",
