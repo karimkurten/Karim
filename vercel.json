@@ -134,6 +134,11 @@
       "source": "/blog/ai-in-hr",
       "destination": "/blog/leveraging-ai-revolutionize-human-capital-management",
       "permanent": true
+    },
+    {
+      "source": "/blog/7-tips-for-new-project-managers",
+      "destination": "/blog/mastering-art-project-management-tips-tricks-new-pms",
+      "permanent": true
     }
   ],
   "rewrites": [
