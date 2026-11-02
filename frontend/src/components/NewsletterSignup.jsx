@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { z } from 'zod';
@@ -63,6 +64,9 @@ export default function NewsletterSignup() {
               'Something went wrong. Please try again.';
         setServerState({ status: 'error', message });
         return;
+      }
+      if (typeof window !== 'undefined' && typeof window.gtag === 'function') {
+        window.gtag('event', 'newsletter_signup', { method: 'beehiiv' });
       }
       setServerState({
         status: 'success',
@@ -220,3 +224,4 @@ export default function NewsletterSignup() {
     </section>
   );
 }
+
