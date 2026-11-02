@@ -4,6 +4,91 @@
       "source": "/services/workday-implementation-specialist",
       "destination": "/services/adp-workforce-now-implementation",
       "permanent": true
+    },
+    {
+      "source": "/blog/hcm-platforms-compared",
+      "destination": "/blog/hcm-platforms-compared-project-managers-guide",
+      "permanent": true
+    },
+    {
+      "source": "/blog/choosing-an-hcm-platform",
+      "destination": "/blog/hcm-platforms-compared-project-managers-guide",
+      "permanent": true
+    },
+    {
+      "source": "/blog/hr-cloud-implementation",
+      "destination": "/blog/complete-guide-hcm-implementation",
+      "permanent": true
+    },
+    {
+      "source": "/blog/what-is-an-hcm-consultant",
+      "destination": "/blog/building-a-career-in-hcm-implementation-consulting",
+      "permanent": true
+    },
+    {
+      "source": "/blog/what-is-hcm",
+      "destination": "/blog/complete-guide-hcm-implementation",
+      "permanent": true
+    },
+    {
+      "source": "/blog/hcm-implementation-strategy",
+      "destination": "/blog/hcm-implementation-methodology",
+      "permanent": true
+    },
+    {
+      "source": "/blog/hcm-platform-selection",
+      "destination": "/blog/hcm-platforms-compared-project-managers-guide",
+      "permanent": true
+    },
+    {
+      "source": "/blog/hcm-readiness-assessment",
+      "destination": "/blog/complete-guide-hcm-implementation",
+      "permanent": true
+    },
+    {
+      "source": "/blog/hcm-implementation-timeline",
+      "destination": "/blog/implementation-timeline-estimation",
+      "permanent": true
+    },
+    {
+      "source": "/blog/what-is-an-hcm-platform",
+      "destination": "/blog/hcm-platforms-compared-project-managers-guide",
+      "permanent": true
+    },
+    {
+      "source": "/blog/hr-systems-implementation",
+      "destination": "/blog/complete-guide-hcm-implementation",
+      "permanent": true
+    },
+    {
+      "source": "/blog/oracle-hcm-implementation",
+      "destination": "/blog/hcm-platforms-compared-project-managers-guide",
+      "permanent": true
+    },
+    {
+      "source": "/blog/hcm-implementation-readiness",
+      "destination": "/blog/complete-guide-hcm-implementation",
+      "permanent": true
+    },
+    {
+      "source": "/blog/payroll-system-implementation",
+      "destination": "/blog/complete-guide-hcm-implementation",
+      "permanent": true
+    },
+    {
+      "source": "/blog/hcm-readiness-checklist",
+      "destination": "/blog/complete-guide-hcm-implementation",
+      "permanent": true
+    },
+    {
+      "source": "/blog/workday-hcm-implementation",
+      "destination": "/blog/hcm-platforms-compared-project-managers-guide",
+      "permanent": true
+    },
+    {
+      "source": "/blog/data-migration-strategy",
+      "destination": "/blog/hcm-data-migration-guide",
+      "permanent": true
     }
   ],
   "rewrites": [
