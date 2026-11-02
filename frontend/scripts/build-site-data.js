@@ -40,6 +40,7 @@ const STATIC_PAGES = [
   { loc: '/about', priority: '0.9', changefreq: 'monthly' },
   { loc: '/blog', priority: '0.9', changefreq: 'weekly' },
   { loc: '/services', priority: '0.9', changefreq: 'monthly' },
+  { loc: '/services/hcm-implementation-consultant-canada', priority: '0.9', changefreq: 'monthly' },
   { loc: '/services/aml-consultant-canada', priority: '0.9', changefreq: 'monthly' },
   { loc: '/services/adp-workforce-now-implementation', priority: '0.9', changefreq: 'monthly' },
   { loc: '/services/project-manager-payroll-systems', priority: '0.9', changefreq: 'monthly' },
