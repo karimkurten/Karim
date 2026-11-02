@@ -41,6 +41,7 @@ const escapeHtml = (str) =>
 const staticPages = [
   { path: '/about', h1: 'About Karim Chaouki', title: 'About Karim Chaouki | AML & HCM Implementation Consultant', description: 'Learn about Karim Chaouki — Senior Implementation Consultant specializing in AML compliance, ADP Workforce Now HCM, and payroll system implementations for Canadian financial institutions. PMP Certified. Bilingual EN/FR.' },
   { path: '/blog', h1: 'Blog — Implementation Insights', title: 'Blog — AML, Enterprise HCM & Implementation Insights | Karim Chaouki', description: 'Articles on AML compliance, enterprise HCM implementations, cross-border US/Canada payroll, and HCM project management — by Karim Chaouki, senior implementation consultant.', articleList: true },
+  { path: '/services', h1: 'HCM Implementation Consulting Services', title: 'HCM Implementation Consulting Services | Karim Chaouki', description: 'HCM implementation consulting for Canadian organizations: platform delivery, payroll systems, and go-live leadership from a Toronto-based, bilingual consultant.' },
   { path: '/services/aml-consultant-canada', h1: 'AML Compliance Consultant Canada', title: 'AML Compliance Consultant Canada | FINTRAC & KYC | Karim Chaouki', description: 'AML compliance consultant serving Canadian financial institutions. FINTRAC compliance, KYC/CDD implementation, transaction monitoring, and AML program design. Bilingual EN/FR. Based in Toronto.' },
   { path: '/services/adp-workforce-now-implementation', h1: 'HCM & Payroll Implementation Consultant', title: 'ADP Workforce Now Implementation Consultant | Karim Chaouki', description: 'Senior ADP Workforce Now implementation consultant for US and Canadian organizations. Payroll, HCM, Benefits, Time & Attendance, and Talent. PMP Certified. Bilingual EN/FR.' },
   { path: '/services/project-manager-payroll-systems', h1: 'Payroll Systems Project Manager, Canada', title: 'Payroll Systems Project Manager, Canada | Karim Chaouki', description: 'Payroll systems project manager for Canadian organizations. Multi-province payroll migrations and CPP/EI compliance. PMP Certified.' },
@@ -450,4 +451,5 @@ for (const post of posts) {
 }
 
 console.log(`Prerendered ${generated} blog article(s).`);
+
 
