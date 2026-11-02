@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" font-family="Arial, Helvetica, sans-serif">
+<defs><linearGradient id="hdr" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#0f172a"/><stop offset="1" stop-color="#1e3a5f"/></linearGradient></defs>
+<rect x="0" y="0" width="1200" height="760" fill="#ffffff"/>
+<rect x="0" y="0" width="1200" height="72" fill="url(#hdr)"/>
+<text x="40" y="45" font-size="26" font-weight="bold" fill="#ffffff">Readiness decision: from evidence per domain to one honest outcome</text>
+<text x="40" y="105" font-size="15" fill="#64748B">Gather evidence per domain first. The pattern of ratings — not an average — determines the decision.</text>
+<rect x="230" y="130" width="740" height="86" rx="10" fill="#F0F4F8" stroke="#2B6CB0" stroke-width="2"/>
+<text x="600" y="165" font-size="16" font-weight="bold" fill="#1A202C" text-anchor="middle">Evidence per domain</text>
+<text x="600" y="192" font-size="13" fill="#475569" text-anchor="middle">Artefacts, named owners, and demonstrated facts for each of the six domains</text>
+<line x1="365" y1="216" x2="215" y2="268" stroke="#2B6CB0" stroke-width="2"/>
+<line x1="600" y1="216" x2="600" y2="268" stroke="#2B6CB0" stroke-width="2"/>
+<line x1="835" y1="216" x2="985" y2="268" stroke="#2B6CB0" stroke-width="2"/>
+<rect x="30" y="270" width="365" height="72" rx="10" fill="#0f172a"/>
+<text x="212" y="313" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">Proceed</text>
+<rect x="415" y="270" width="365" height="72" rx="10" fill="#1e3a5f"/>
+<text x="597" y="313" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">Proceed with fixes</text>
+<rect x="800" y="270" width="370" height="72" rx="10" fill="#ffffff" stroke="#2B6CB0" stroke-width="2"/>
+<text x="985" y="313" font-size="18" font-weight="bold" fill="#1A202C" text-anchor="middle">Delay the start</text>
+<rect x="30" y="362" width="365" height="190" rx="10" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+<text x="54" y="398" font-size="13" font-weight="bold" fill="#1A202C">When this applies</text>
+<text x="54" y="424" font-size="13" fill="#475569">Evidence supports a start across</text>
+<text x="54" y="445" font-size="13" fill="#475569">all domains; remaining gaps are</text>
+<text x="54" y="466" font-size="13" fill="#475569">minor and understood.</text>
+<text x="54" y="500" font-size="13" font-weight="bold" fill="#1A202C">What it requires</text>
+<text x="54" y="526" font-size="13" fill="#475569">Record minor gaps as early actions</text>
+<text x="54" y="547" font-size="13" fill="#475569">and re-assess at the first gate.</text>
+<rect x="415" y="362" width="365" height="190" rx="10" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+<text x="439" y="398" font-size="13" font-weight="bold" fill="#1A202C">When this applies</text>
+<text x="439" y="424" font-size="13" fill="#475569">The start is viable, but specific</text>
+<text x="439" y="445" font-size="13" fill="#475569">gaps must close for the project</text>
+<text x="439" y="466" font-size="13" fill="#475569">to begin on solid ground.</text>
+<text x="439" y="500" font-size="13" font-weight="bold" fill="#1A202C">What it requires</text>
+<text x="439" y="526" font-size="13" fill="#475569">Named fixes, each with an owner</text>
+<text x="439" y="547" font-size="13" fill="#475569">and a date, tracked as real work.</text>
+<rect x="800" y="362" width="370" height="190" rx="10" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+<text x="824" y="398" font-size="13" font-weight="bold" fill="#1A202C">When this applies</text>
+<text x="824" y="424" font-size="13" fill="#475569">A foundational domain — sponsor-</text>
+<text x="824" y="445" font-size="13" fill="#475569">ship, data ownership, or capacity</text>
+<text x="824" y="466" font-size="13" fill="#475569">— is not ready.</text>
+<text x="824" y="500" font-size="13" font-weight="bold" fill="#1A202C">What it requires</text>
+<text x="824" y="526" font-size="13" fill="#475569">Close the gap, evidence it, and set</text>
+<text x="824" y="547" font-size="13" fill="#475569">a new start date on that basis.</text>
+<rect x="30" y="582" width="1140" height="52" rx="8" fill="#F0F4F8" stroke="#2B6CB0" stroke-width="2"/>
+<text x="54" y="614" font-size="15" font-weight="bold" fill="#1A202C">Delaying a start is cheaper than discovering unreadiness mid-design.</text>
+<text x="40" y="672" font-size="13" fill="#64748B">Re-assess at every phase gate: readiness decays as sponsors change, peaks arrive, and scope drifts.</text>
+</svg>
