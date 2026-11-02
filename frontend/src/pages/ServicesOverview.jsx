@@ -139,6 +139,13 @@ export default function ServicesOverview() {
               Engagements run across Canada — including Quebec and federal organizations — and on
               cross-border US/Canada programs, in English and French.
             </p>
+            <p className="text-slate-600 leading-relaxed max-w-3xl mt-4">
+              Hiring specifically for a Canadian implementation? See{' '}
+              <Link to="/services/hcm-implementation-consultant-canada" className="text-blue-700 font-semibold hover:text-blue-900">
+                HCM implementation consulting in Canada
+              </Link>
+              .
+            </p>
           </div>
         </section>
 
