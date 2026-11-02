@@ -19,6 +19,7 @@ const ServiceAML = lazy(() => import('./pages/ServiceAML'));
 const ServiceADPWorkforceNow = lazy(() => import('./pages/ServiceADPWorkforceNow'));
 const ServicePayroll = lazy(() => import('./pages/ServicePayroll'));
 const ServiceBilingual = lazy(() => import('./pages/ServiceBilingual'));
+const ServicesOverview = lazy(() => import('./pages/ServicesOverview'));
 const AboutPage = lazy(() => import('./pages/AboutPage'));
 const BlogIndex = lazy(() => import('./pages/BlogIndex'));
 const BlogPost = lazy(() => import('./pages/BlogPost'));
@@ -85,6 +86,7 @@ function App() {
           <Route path="/blog" element={<BlogIndex />} />
           <Route path="/blog/:slug" element={<BlogPost />} />
           <Route path="/resume" element={<ResumeRequest />} />
+          <Route path="/services" element={<ServicesOverview />} />
           <Route path="/services/aml-consultant-canada" element={<ServiceAML />} />
           <Route path="/services/adp-workforce-now-implementation" element={<ServiceADPWorkforceNow />} />
           <Route path="/services/project-manager-payroll-systems" element={<ServicePayroll />} />
@@ -102,4 +104,5 @@ function App() {
 }
 
 export default App;
+
 
