@@ -227,8 +227,8 @@ export default function BlogIndex() {
   return (
     <>
       <SEO
-        title="Blog — AML, Enterprise HCM & Implementation Insights"
-        description="Articles on AML compliance, enterprise HCM implementations, cross-border US/Canada payroll, and HCM project management — by Karim Chaouki, senior implementation consultant."
+        title="HCM Implementation Blog: Guides & Templates"
+        description="Practical guides for HCM and enterprise implementations — testing, data migration, risk, go-live, and careers — from a practising implementation consultant."
         canonical="/blog"
         schema={blogListSchema}
       />
@@ -285,3 +285,4 @@ export default function BlogIndex() {
     </>
   );
 }
+
