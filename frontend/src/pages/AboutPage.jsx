@@ -40,8 +40,8 @@ export default function AboutPage() {
   return (
     <>
       <SEO
-        title="About Karim Chaouki | AML & HCM Implementation Consultant"
-        description="Learn about Karim Chaouki — Senior Implementation Consultant with 22+ years in AML compliance, ADP Workforce Now HCM, and payroll system implementations for Canadian financial institutions. PMP Certified. Bilingual EN/FR."
+        title="About Karim Chaouki — HCM Implementation Consultant"
+        description="Karim Chaouki is a Toronto-based senior implementation consultant for HCM and payroll systems — PMP certified, bilingual EN/FR, 22+ years in delivery."
         canonical="/about"
         ogImage="https://www.karimchaouki.com/images/karim-chaouki.jpg"
         schema={schema}
@@ -252,3 +252,4 @@ export default function AboutPage() {
     </>
   );
 }
+
