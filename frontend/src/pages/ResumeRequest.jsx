@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { z } from 'zod';
@@ -62,6 +63,9 @@ export default function ResumeRequest() {
           'Something went wrong. Please try again.';
         setServerState({ status: 'error', message });
         return;
+      }
+      if (typeof window !== 'undefined' && typeof window.gtag === 'function') {
+        window.gtag('event', 'resume_download', { method: 'lead_form' });
       }
       setServerState({ status: 'success', message: 'Your resume download has started.' });
       // Trigger the file download via the single-use token URL.
@@ -240,3 +244,4 @@ export default function ResumeRequest() {
     </>
   );
 }
+
