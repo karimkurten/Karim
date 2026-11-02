@@ -1,3 +1,4 @@
+
 const fs = require('fs');
 const path = require('path');
 
@@ -233,7 +234,50 @@ const buildArticleSchema = (post, postUrl, image) => {
       { '@type': 'ListItem', position: 3, name: post.title, item: postUrl },
     ],
   };
-  return { '@context': 'https://schema.org', '@graph': [blogPosting, breadcrumb] };
+  const graph = [blogPosting, breadcrumb];
+  const faq = buildFaqPage(post);
+  if (faq) graph.push(faq);
+  return { '@context': 'https://schema.org', '@graph': graph };
+};
+
+// FAQPage schema: FAQ sections are an h2 ("FAQ" / "Frequently Asked Questions")
+// followed by paragraph blocks, each holding one "Question? Answer" pair.
+// Emits a FAQPage node only when at least two clean pairs can be extracted.
+const stripMd = (s) =>
+  String(s || '')
+    .replace(/\[([^\]]+)\]\([^)]*\)/g, '$1')
+    .replace(/[*_`#>]/g, '')
+    .replace(/\s+/g, ' ')
+    .trim();
+
+const buildFaqPage = (post) => {
+  const blocks = Array.isArray(post.content) ? post.content : [];
+  const start = blocks.findIndex(
+    (b) => b && b.type === 'h2' && /frequently asked|^\s*faq\b/i.test(b.text || '')
+  );
+  if (start < 0) return null;
+  const pairs = [];
+  for (const b of blocks.slice(start + 1)) {
+    if (!b) continue;
+    if (b.type === 'h2') break;
+    if (b.type !== 'p') continue;
+    const text = stripMd(b.text).replace(/^\d+\.\s*/, '');
+    const qEnd = text.indexOf('?');
+    if (qEnd < 10 || qEnd > 220) continue;
+    const question = text.slice(0, qEnd + 1).trim();
+    const answer = text.slice(qEnd + 1).trim();
+    if (answer.length < 25) continue;
+    pairs.push({ question, answer });
+  }
+  if (pairs.length < 2) return null;
+  return {
+    '@type': 'FAQPage',
+    mainEntity: pairs.map(({ question, answer }) => ({
+      '@type': 'Question',
+      name: question,
+      acceptedAnswer: { '@type': 'Answer', text: answer },
+    })),
+  };
 };
 
 const injectJsonLd = (html, schemaObj) => {
@@ -406,3 +450,4 @@ for (const post of posts) {
 }
 
 console.log(`Prerendered ${generated} blog article(s).`);
+
