@@ -33,6 +33,12 @@ const ASSETS = {
     downloadName: "KarimChaouki-HCM-Data-Migration-Checklist.pdf",
     contentType: "application/pdf",
   },
+  "readiness-scorecard": {
+    file: "hcm-readiness-scorecard.xlsx",
+    downloadName: "KarimChaouki-HCM-Readiness-Scorecard.xlsx",
+    contentType:
+      "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+  },
   "risk-register": {
     file: "implementation-risk-register.xlsx",
     downloadName: "KarimChaouki-Implementation-Risk-Register.xlsx",
@@ -135,3 +141,4 @@ module.exports = async function handler(req, res) {
   res.setHeader("Cache-Control", "no-store");
   fs.createReadStream(filePath).pipe(res);
 };
+
