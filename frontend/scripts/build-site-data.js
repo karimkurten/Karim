@@ -39,6 +39,7 @@ const STATIC_PAGES = [
   { loc: '/', priority: '1.0', changefreq: 'monthly' },
   { loc: '/about', priority: '0.9', changefreq: 'monthly' },
   { loc: '/blog', priority: '0.9', changefreq: 'weekly' },
+  { loc: '/services', priority: '0.9', changefreq: 'monthly' },
   { loc: '/services/aml-consultant-canada', priority: '0.9', changefreq: 'monthly' },
   { loc: '/services/adp-workforce-now-implementation', priority: '0.9', changefreq: 'monthly' },
   { loc: '/services/project-manager-payroll-systems', priority: '0.9', changefreq: 'monthly' },
@@ -232,3 +233,4 @@ function main() {
 main();
 
 // 2026-10-13: nudge commit to trigger a fresh Vercel build of the full SEO batch.
+
