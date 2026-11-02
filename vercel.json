@@ -89,6 +89,51 @@
       "source": "/blog/data-migration-strategy",
       "destination": "/blog/hcm-data-migration-guide",
       "permanent": true
+    },
+    {
+      "source": "/blog/top-hcm-consultants",
+      "destination": "/services",
+      "permanent": true
+    },
+    {
+      "source": "/blog/top-hr-systems-consultants",
+      "destination": "/services",
+      "permanent": true
+    },
+    {
+      "source": "/blog/hcm-implementation-consultant",
+      "destination": "/services",
+      "permanent": true
+    },
+    {
+      "source": "/blog/hcm-implementation-consultant-toronto",
+      "destination": "/services",
+      "permanent": true
+    },
+    {
+      "source": "/blog/hcm-consultant-toronto",
+      "destination": "/services",
+      "permanent": true
+    },
+    {
+      "source": "/blog/hcm-implementation-consultant-canada",
+      "destination": "/services",
+      "permanent": true
+    },
+    {
+      "source": "/blog/hr-systems-consultant-canada",
+      "destination": "/services",
+      "permanent": true
+    },
+    {
+      "source": "/blog/hr-systems-consultant-toronto",
+      "destination": "/services",
+      "permanent": true
+    },
+    {
+      "source": "/blog/ai-in-hr",
+      "destination": "/blog/leveraging-ai-revolutionize-human-capital-management",
+      "permanent": true
     }
   ],
   "rewrites": [
