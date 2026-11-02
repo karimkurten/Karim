@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" font-family="Arial, Helvetica, sans-serif">
+<defs><linearGradient id="hdr" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#0f172a"/><stop offset="1" stop-color="#1e3a5f"/></linearGradient></defs>
+<rect x="0" y="0" width="1200" height="760" fill="#ffffff"/>
+<rect x="0" y="0" width="1200" height="72" fill="url(#hdr)"/>
+<text x="40" y="45" font-size="26" font-weight="bold" fill="#ffffff">Readiness assessment model: six domains, assessed by evidence</text>
+<text x="40" y="105" font-size="15" fill="#64748B">Rate each domain on its own evidence before implementation starts — never as a single average.</text>
+<rect x="30" y="130" width="365" height="175" rx="10" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+<text x="54" y="168" font-size="16" font-weight="bold" fill="#1A202C">Sponsorship &amp; decisions</text>
+<text x="54" y="198" font-size="13" fill="#475569">Inspect: named sponsor, documented</text>
+<text x="54" y="219" font-size="13" fill="#475569">decision rights, escalation route,</text>
+<text x="54" y="240" font-size="13" fill="#475569">decision response times in practice</text>
+<text x="54" y="272" font-size="12" fill="#64748B">Evidence, not a name on a charter</text>
+<rect x="415" y="130" width="365" height="175" rx="10" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+<text x="439" y="168" font-size="16" font-weight="bold" fill="#1A202C">Scope &amp; objectives</text>
+<text x="439" y="198" font-size="13" fill="#475569">Inspect: signed objectives, in and out</text>
+<text x="439" y="219" font-size="13" fill="#475569">of scope stated consistently by</text>
+<text x="439" y="240" font-size="13" fill="#475569">leaders, how success is recognised</text>
+<text x="439" y="272" font-size="12" fill="#64748B">Evidence, not a launch announcement</text>
+<rect x="800" y="130" width="370" height="175" rx="10" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+<text x="824" y="168" font-size="16" font-weight="bold" fill="#1A202C">Process knowledge</text>
+<text x="824" y="198" font-size="13" fill="#475569">Inspect: current-state records as work</text>
+<text x="824" y="219" font-size="13" fill="#475569">actually happens, exceptions and</text>
+<text x="824" y="240" font-size="13" fill="#475569">workarounds, named process owners</text>
+<text x="824" y="272" font-size="12" fill="#64748B">Evidence, not policy alone</text>
+<rect x="30" y="325" width="365" height="175" rx="10" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+<text x="54" y="363" font-size="16" font-weight="bold" fill="#1A202C">Data readiness</text>
+<text x="54" y="393" font-size="13" fill="#475569">Inspect: named owner per source</text>
+<text x="54" y="414" font-size="13" fill="#475569">system, profiling results, documented</text>
+<text x="54" y="435" font-size="13" fill="#475569">defects and cleansing effort</text>
+<text x="54" y="467" font-size="12" fill="#64748B">Evidence, not clean-looking reports</text>
+<rect x="415" y="325" width="365" height="175" rx="10" fill="#F0F4F8" stroke="#2B6CB0" stroke-width="2"/>
+<text x="439" y="363" font-size="16" font-weight="bold" fill="#1A202C">People &amp; capacity</text>
+<text x="439" y="393" font-size="13" fill="#475569">Inspect: backfill arranged for named</text>
+<text x="439" y="414" font-size="13" fill="#475569">experts, protected project time,</text>
+<text x="439" y="435" font-size="13" fill="#475569">plan tested against peak periods</text>
+<text x="439" y="467" font-size="12" fill="#64748B">Evidence, not goodwill</text>
+<rect x="800" y="325" width="370" height="175" rx="10" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+<text x="824" y="363" font-size="16" font-weight="bold" fill="#1A202C">Governance &amp; change</text>
+<text x="824" y="393" font-size="13" fill="#475569">Inspect: decision cadence, integration</text>
+<text x="824" y="414" font-size="13" fill="#475569">inventory with owners, change load</text>
+<text x="824" y="435" font-size="13" fill="#475569">on affected populations</text>
+<text x="824" y="467" font-size="12" fill="#64748B">Evidence, not a meeting schedule</text>
+<rect x="30" y="530" width="1140" height="90" rx="10" fill="#ffffff" stroke="#2B6CB0" stroke-width="2"/>
+<text x="54" y="565" font-size="15" font-weight="bold" fill="#1A202C">How to read this model</text>
+<text x="54" y="592" font-size="13" fill="#475569">A missing artefact is a finding. A weak rating in sponsorship, data, or capacity is a gating finding — it is not offset by strength elsewhere.</text>
+<rect x="30" y="640" width="1140" height="52" rx="8" fill="#F0F4F8" stroke="#2B6CB0" stroke-width="2"/>
+<text x="54" y="672" font-size="15" font-weight="bold" fill="#1A202C">Assess by evidence, not by assurance — then decide: proceed, fix first, or delay.</text>
+</svg>
