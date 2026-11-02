@@ -33,6 +33,16 @@ const MAGNETS = {
     buttonLabel: 'Download the checklist',
     successFile: 'hcm-data-migration-checklist.pdf',
   },
+  'hcm-readiness-assessment': {
+    asset: 'readiness-scorecard',
+    eyebrow: 'Free download',
+    title: 'HCM Implementation Readiness Scorecard',
+    description:
+      'The working tool behind this article: score all 25 statements across governance, data, process, people, and technology, and get your readiness band with the remediation path for your score. Takes about 15 minutes with your sponsor and workstream leads.',
+    fileLabel: 'Excel',
+    buttonLabel: 'Download the scorecard',
+    successFile: 'hcm-readiness-scorecard.xlsx',
+  },
   'complete-guide-hcm-implementation': {
     asset: 'readiness-scorecard',
     eyebrow: 'Free download',
@@ -286,4 +296,5 @@ export default function LeadMagnetDownload({ slug }) {
     </section>
   );
 }
+
 
