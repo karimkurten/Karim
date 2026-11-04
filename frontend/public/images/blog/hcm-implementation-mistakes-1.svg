@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="780" viewBox="0 0 1200 780" role="img" aria-label="The repeating cycle of HCM implementation failure patterns">
+  <defs>
+    <linearGradient id="hdr" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#0f172a"/>
+      <stop offset="1" stop-color="#1e3a5f"/>
+    </linearGradient>
+    <marker id="arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#2B6CB0"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="1200" height="780" fill="#ffffff"/>
+  <rect x="0" y="0" width="1200" height="92" fill="url(#hdr)"/>
+  <text x="48" y="46" font-family="Georgia, serif" font-size="30" fill="#ffffff">The Repeating Cycle</text>
+  <text x="48" y="74" font-family="Arial, sans-serif" font-size="16" fill="#94A3B8">Six failure patterns that feed each other — until one is broken early</text>
+
+  <!-- loop path -->
+  <circle cx="600" cy="420" r="215" fill="none" stroke="#E2E8F0" stroke-width="26"/>
+  <circle cx="600" cy="420" r="215" fill="none" stroke="#2B6CB0" stroke-width="3" stroke-dasharray="10 12" opacity="0.65"/>
+
+  <!-- centre -->
+  <circle cx="600" cy="420" r="118" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+  <text x="600" y="398" text-anchor="middle" font-family="Georgia, serif" font-size="22" fill="#1A202C">Same programme,</text>
+  <text x="600" y="428" text-anchor="middle" font-family="Georgia, serif" font-size="22" fill="#1A202C">same outcome</text>
+  <text x="600" y="458" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#64748B">Each pass around the loop</text>
+  <text x="600" y="478" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#64748B">makes the next one likelier</text>
+
+  <!-- arrows on loop -->
+  <path d="M 742 258 A 215 215 0 0 1 806 330" fill="none" stroke="#2B6CB0" stroke-width="3" marker-end="url(#arr)"/>
+  <path d="M 806 510 A 215 215 0 0 1 742 582" fill="none" stroke="#2B6CB0" stroke-width="3" marker-end="url(#arr)"/>
+  <path d="M 600 635 A 215 215 0 0 1 470 622" fill="none" stroke="#2B6CB0" stroke-width="3" marker-end="url(#arr)"/>
+  <path d="M 394 510 A 215 215 0 0 1 394 330" fill="none" stroke="#2B6CB0" stroke-width="3" marker-end="url(#arr)"/>
+  <path d="M 458 258 A 215 215 0 0 1 470 218" fill="none" stroke="#2B6CB0" stroke-width="3" marker-end="url(#arr)"/>
+
+  <!-- node 1 top -->
+  <g>
+    <rect x="440" y="118" width="320" height="86" rx="12" fill="#F0F4F8" stroke="#2B6CB0" stroke-width="2"/>
+    <text x="600" y="152" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#1A202C">1 · Undefined scope</text>
+    <text x="600" y="180" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#475569">Decision rights stay vague</text>
+  </g>
+  <!-- node 2 right-top -->
+  <g>
+    <rect x="852" y="272" width="320" height="86" rx="12" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+    <text x="1012" y="306" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#1A202C">2 · Data surprises</text>
+    <text x="1012" y="334" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#475569">Data treated as a technical task</text>
+  </g>
+  <!-- node 3 right-bottom -->
+  <g>
+    <rect x="852" y="482" width="320" height="86" rx="12" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+    <text x="1012" y="516" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#1A202C">3 · Compressed testing</text>
+    <text x="1012" y="544" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#475569">Cycles merged to protect the date</text>
+  </g>
+  <!-- node 4 bottom -->
+  <g>
+    <rect x="440" y="636" width="320" height="86" rx="12" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+    <text x="600" y="670" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#1A202C">4 · Thin change and training</text>
+    <text x="600" y="698" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#475569">Funded last, cut first</text>
+  </g>
+  <!-- node 5 left-bottom -->
+  <g>
+    <rect x="28" y="482" width="320" height="86" rx="12" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+    <text x="188" y="516" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#1A202C">5 · Date over readiness</text>
+    <text x="188" y="544" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#475569">The date wins over the evidence</text>
+  </g>
+  <!-- node 6 left-top -->
+  <g>
+    <rect x="28" y="272" width="320" height="86" rx="12" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+    <text x="188" y="306" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#1A202C">6 · Painful hypercare</text>
+    <text x="188" y="334" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#475569">No exit criteria, no step-down</text>
+  </g>
+
+  <!-- break note -->
+  <g>
+    <rect x="796" y="636" width="376" height="86" rx="12" fill="#1e3a5f"/>
+    <text x="984" y="668" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#ffffff">Break the cycle anywhere:</text>
+    <text x="984" y="694" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#94A3B8">name the pattern, assign one owner, verify with evidence</text>
+  </g>
+  <text x="48" y="694" font-family="Arial, sans-serif" font-size="14" fill="#64748B">Then back to the start —</text>
+  <text x="48" y="716" font-family="Arial, sans-serif" font-size="14" fill="#64748B">the next programme inherits the habits</text>
+</svg>
