@@ -1,5 +1,282 @@
 [
   {
+    "slug": "hcm-implementation-mistakes",
+    "title": "HCM Implementation Mistakes",
+    "excerpt": "The failure patterns that repeat in HCM implementations — undefined scope, compressed testing, thin change — and how to break each one before design hardens it.",
+    "publishedAt": "2026-11-04",
+    "readingTime": "8 min read",
+    "cover": "/images/blog/hcm-implementation-mistakes-cover.webp",
+    "tags": [
+      "HCM",
+      "Implementation",
+      "Mistakes",
+      "Go-Live"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "HCM implementations rarely fail in original ways. The same patterns repeat: scope never truly settled, data treated as a conversion exercise, testing squeezed to protect a date, training funded as an afterthought, and a go-live defended by confidence instead of evidence. Each pattern is a reasonable-looking decision made under pressure. This article names the patterns, shows the early signal that gives each away, and sets out the counter-move that breaks it while breaking it is still cheap. The lifecycle those moves belong to is set out in [the complete guide to HCM implementation](/blog/complete-guide-hcm-implementation)."
+      },
+      {
+        "type": "h2",
+        "text": "Why competent teams repeat the same failures"
+      },
+      {
+        "type": "p",
+        "text": "These patterns are structural, not personal. An implementation runs on fixed dates, finite business experts, and a design that must be settled before its consequences can be tested. Each locally rational choice — deferring a hard decision, shortening a test cycle — defers its cost. The failure arrives later, when the deferred decision, the untested rule, and the unconverted record all surface at the same moment, usually near go-live, when change is most expensive."
+      },
+      {
+        "type": "p",
+        "text": "That is also why lessons-learned sessions so often change nothing. A lesson recorded as an event invites agreement and then fades; recorded as a pattern — when the date is defended, testing is where the defence is paid for — it can be watched for, named in a steering meeting, and interrupted. Running [an HCM readiness assessment](/blog/hcm-readiness-assessment) before design begins does that watching early: it tests decision rights, data ownership, and expert capacity while the answers can still reshape the plan."
+      },
+      {
+        "type": "img",
+        "src": "/images/blog/hcm-implementation-mistakes-1.svg",
+        "alt": "Repeating-cycle diagram: six HCM implementation failure patterns in a loop - undefined scope, data surprises, compressed testing, thin change and training, a date-over-readiness go-live, and painful hypercare - with the point where the cycle can be broken.",
+        "caption": "The repeating cycle: undefined scope, data surprises, compressed testing, thin change and training, date-over-readiness go-live, and painful hypercare — then back to the start unless the pattern is broken early."
+      },
+      {
+        "type": "h2",
+        "text": "Pattern one: scope expands while decision rights stay vague"
+      },
+      {
+        "type": "p",
+        "text": "The most common opening pattern is a scope that sounds settled and is not. Modules are listed and populations named, but nobody has agreed who can approve a change to a pay rule, a job structure, or an approval chain. Design workshops then produce options instead of decisions, and each open option quietly becomes configuration that may need rebuilding, testing that may need repeating, and training material that may need rewriting. The project looks busy while its foundations stay liquid."
+      },
+      {
+        "type": "p",
+        "text": "The counter-move is unglamorous: settle scope in writing, name a decision owner for each design area, and set a decision clock that matches the pace of design. That discipline is the real subject of [requirements gathering for HCM implementation](/blog/requirements-gathering-hcm-implementation): a requirement is not gathered until someone with authority has agreed it, and a change is not small until its effect on configuration, data, testing, and training has been priced. Cross-border programmes feel this first: Canadian and US payroll rules, tax calendars, and language needs each require their own decisions."
+      },
+      {
+        "type": "h2",
+        "text": "Pattern two: data is treated as a technical task"
+      },
+      {
+        "type": "p",
+        "text": "Data migration fails as a business pattern long before it fails as a technical one. The conversion code usually works. What fails is the assumption that moving records is the job, when the real job is agreeing what the records mean: which job codes are current, which pay elements are still in use, which historical values are authoritative, and who owns correcting what profiling reveals. Without that agreement, every conversion cycle reopens questions the previous one was supposed to close."
+      },
+      {
+        "type": "p",
+        "text": "Breaking this pattern means staffing data as a business workstream with named owners, profiling early enough for the findings to change the plan, and reconciling converted values against source records as a formal acceptance step, not a spot check. [The HCM data migration guide](/blog/hcm-data-migration-guide) sets out that treatment in full. The signal is easy to spot: strong technical resource and no accountable business owner means the pattern is already running."
+      },
+      {
+        "type": "steps",
+        "label": "Breaking a pattern before it hardens",
+        "intro": "Five moves that interrupt any of these patterns while interruption is still cheap.",
+        "items": [
+          {
+            "title": "Name the pattern, not the person",
+            "text": "Describe what is repeating — decisions deferring, testing shrinking, data questions reopening — so the steering conversation is about the mechanism, not about blame."
+          },
+          {
+            "title": "Find the early signal",
+            "text": "Every pattern announces itself: options instead of decisions in workshops, cleansing questions with no owner, a test plan that assumes zero defects. Log the signal when it first appears."
+          },
+          {
+            "title": "Price the deferral honestly",
+            "text": "Show what the postponed decision or shortened cycle will cost later in rework, defects, or hypercare load, so the trade-off is chosen with its price attached."
+          },
+          {
+            "title": "Assign one owner and one date",
+            "text": "A pattern breaks when a named owner carries a specific counter-move to a specific date. Shared ownership of a fix is the pattern protecting itself."
+          },
+          {
+            "title": "Verify with evidence at the next gate",
+            "text": "Close the item only when evidence shows the behaviour changed — decisions recorded, data reconciled, test results complete — not when a meeting agreed it should."
+          }
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Pattern three: testing is compressed to protect an early date"
+      },
+      {
+        "type": "p",
+        "text": "When a programme slips, testing is where the time is recovered, because it sits at the end and its cost is invisible until defects escape into live operation. Cycles are merged, parallel payroll runs shortened, and entry criteria waived, on the assumption that hypercare will catch up. The arithmetic is wrong: a defect found in testing costs a fix and a retest, while the same defect in a live pay run costs correction, communication, and trust, all at once and in public."
+      },
+      {
+        "type": "p",
+        "text": "The pattern is recognisable by its language. Test plans assume scenarios will pass first time, and user acceptance becomes a sign-off performed by people given neither the time nor the scenarios to test properly. The counter-move is to protect testing the way the date is protected: agree in advance which cycles are non-negotiable, what evidence ends each cycle, and which scope items will be deferred if time runs short. Deferring a feature is a visible choice; deferring the discovery of defects is an invisible one, and always more expensive."
+      },
+      {
+        "type": "h2",
+        "text": "Pattern four: change and training are funded last and cut first"
+      },
+      {
+        "type": "p",
+        "text": "A technically sound system still fails if the people who run payroll, approve time, and answer employee questions meet it unprepared. Yet change and training are routinely planned as a short burst near go-live: a communication, a training session, a set of guides. Managers approve differently, HR cases route differently, employees find pay and leave information in new places — and every shift lands in the same week the system itself is new. Under-prepared populations do not complain in proportion to design quality; they complain in proportion to their surprise."
+      },
+      {
+        "type": "p",
+        "text": "The counter-move is to plan change as a workstream with its own owner, timeline, and measures, starting when design starts. Super-users need to see the system early enough to teach from experience rather than slides, managers need practice with the approvals they will actually perform, and support routes need publishing before the first question arrives. This is also the workstream most often trimmed under budget pressure — precisely why its scope should be defended at the same table as testing and data."
+      },
+      {
+        "type": "img",
+        "src": "/images/blog/hcm-implementation-mistakes-2.svg",
+        "alt": "Pattern table diagram: four repeating HCM implementation failure patterns, each with its early signal and the counter-move that breaks it - undefined scope, data treated as a technical task, compressed testing, and thin change.",
+        "caption": "Pattern, early signal, counter-move: undefined scope, data as a technical task, compressed testing, and thin change — each pattern shows a signal early, and each has a specific counter-move."
+      },
+      {
+        "type": "h2",
+        "text": "Pattern five: readiness evidence loses to the go-live date"
+      },
+      {
+        "type": "p",
+        "text": "The final pattern gathers the others. By the go-live decision, the date has usually been communicated widely, and moving it feels like the largest failure available. So the meeting weighs the embarrassment of delay more heavily than the evidence in front of it: open defects, incomplete training, unreconciled data, support teams that have never rehearsed an incident. Together those gaps describe a go-live that will be survived rather than executed, with hypercare absorbing the difference."
+      },
+      {
+        "type": "p",
+        "text": "The counter-move is to agree the readiness criteria before the decision is emotional: which defect severities must be closed, which reconciliations must be signed, which populations must be trained, and who holds the authority to say the evidence is not there. [The HCM go-live checklist](/blog/hcm-go-live-checklist) exists to make that conversation concrete. A short, planned delay taken on evidence is a governance success. A date kept against the evidence is remembered by every employee whose first pay on the new system was wrong."
+      },
+      {
+        "type": "h2",
+        "text": "Common mistakes"
+      },
+      {
+        "type": "p",
+        "text": "Alongside the five patterns above, one more deserves naming: hypercare planned without an exit. Support intensity after go-live should step down against criteria — ticket volumes falling, defect rates stable, business teams handling routine questions themselves. Hypercare with no exit criteria never ends; it just fades, leaving ownership unclear long after the project team has moved on. The accordion below gathers all six patterns as a diagnostic."
+      },
+      {
+        "type": "accordion",
+        "label": "Six repeating patterns, as a diagnostic",
+        "items": [
+          {
+            "q": "Undefined scope and decision rights",
+            "a": "Workshops produce options instead of decisions, and configuration is rebuilt as late answers arrive. Fix scope in writing, name a decision owner per design area, and run decisions on a clock that matches design pace."
+          },
+          {
+            "q": "Data treated as a technical task",
+            "a": "Conversion runs while cleansing questions have no business owner, so every cycle reopens the last one. Staff data as a business workstream, profile early, and reconcile converted values as a formal acceptance step."
+          },
+          {
+            "q": "Testing compressed to protect the date",
+            "a": "Cycles merge and parallel runs shorten, converting test effort into live defects. Protect non-negotiable cycles in advance and defer scope, visibly, when time runs short instead."
+          },
+          {
+            "q": "Training and change under-resourced",
+            "a": "A communication and a single session are asked to carry new approvals, new case routes, and new employee self-service at once. Run change as a workstream from design, with super-users who have used the system before they teach it."
+          },
+          {
+            "q": "Go-live date defended over readiness evidence",
+            "a": "The meeting weighs the embarrassment of delay above open defects and unreconciled data. Agree readiness criteria and decision authority early, while the conversation is still analytical."
+          },
+          {
+            "q": "Hypercare without exit criteria",
+            "a": "Support never formally steps down, so ownership blurs and routine questions keep arriving as project issues. Set exit criteria at go-live — volumes, defect stability, business ownership — and review them on a cadence."
+          }
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Key Takeaways"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "Implementation failures repeat as patterns, not accidents: each is a locally rational decision whose cost arrives later.",
+          "Scope is not settled until decision rights are named and decisions run at design pace.",
+          "Data migration is business work with technical execution; profiling and reconciliation need accountable owners.",
+          "Testing is where date pressure is paid for; defer scope visibly rather than defect discovery invisibly.",
+          "Go-live decisions should rest on readiness criteria agreed in advance, and hypercare needs exit criteria from day one."
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Frequently Asked Questions"
+      },
+      {
+        "type": "p",
+        "text": "Why do the same mistakes repeat when lessons-learned sessions are held? Because lessons are usually recorded as events rather than patterns. An event invites agreement and fades; a pattern can be named in a steering meeting, watched for through its early signal, and interrupted while interruption is still cheap."
+      },
+      {
+        "type": "p",
+        "text": "Which pattern should a programme in trouble address first? The decision-rights pattern, because it feeds the others. Data questions, testing trade-offs, and readiness calls all stall or drift when nobody holds clear authority to decide them."
+      },
+      {
+        "type": "p",
+        "text": "How can a team tell a pattern is running before it does damage? By its early signal: workshops ending with options, cleansing questions without owners, test plans that assume first-time passes, or training planned as a single event. Each signal is visible weeks before its cost arrives."
+      },
+      {
+        "type": "p",
+        "text": "Is delaying a go-live ever the right call? Yes, when the readiness evidence says so and the criteria were agreed in advance. A short planned delay is a governance decision; a date kept against the evidence transfers the cost to employees, support teams, and trust in the system."
+      },
+      {
+        "type": "h2",
+        "text": "Next Steps"
+      },
+      {
+        "type": "p",
+        "text": "Take the six patterns above and score your own programme against each one honestly. Where a signal is already visible, assign the counter-move to one named owner with one date, and verify the change with evidence at the next gate rather than with reassurance. [The complete guide to HCM implementation](/blog/complete-guide-hcm-implementation) shows where each decision sits across the lifecycle, so the check can be repeated at every phase."
+      },
+      {
+        "type": "quiz",
+        "label": "Check your understanding",
+        "questions": [
+          {
+            "q": "A design workshop ends, for the third week running, with well-discussed options but no agreed decision on a pay rule, and configuration work is starting anyway. What is happening?",
+            "options": [
+              {
+                "text": "Healthy consultation — decisions will settle naturally once configuration shows what works",
+                "correct": false,
+                "why": "Configuration built on unsettled decisions is rework waiting for a date. The pattern is decision rights failing to run at design pace."
+              },
+              {
+                "text": "The undefined-scope pattern: scope sounds settled but decision rights are vague, so the cost will arrive as rebuild, retest, and rewritten training",
+                "correct": true,
+                "why": "Options instead of decisions is the pattern's early signal. Naming a decision owner and a decision clock now is far cheaper than unwinding built configuration later."
+              },
+              {
+                "text": "A documentation problem — the workshop simply needs better minutes",
+                "correct": false,
+                "why": "Minutes record the absence of a decision; they do not create one. The gap is authority and pace, not record-keeping."
+              }
+            ]
+          },
+          {
+            "q": "The programme is three weeks behind, and the proposal is to merge two test cycles and shorten the parallel payroll run. What is the soundest response?",
+            "options": [
+              {
+                "text": "Accept it — hypercare exists precisely to catch what shortened testing misses",
+                "correct": false,
+                "why": "Hypercare catches defects in live operation, at correction, communication, and trust cost. That is the most expensive place to discover them."
+              },
+              {
+                "text": "Protect the non-negotiable cycles and parallel evidence, and defer scope items visibly if time must be recovered",
+                "correct": true,
+                "why": "Deferring a feature is a visible, choosable trade-off. Deferring defect discovery is invisible and always costs more when it surfaces in a live pay run."
+              },
+              {
+                "text": "Accept it, provided the test team works weekends to compensate",
+                "correct": false,
+                "why": "Extra hours do not restore merged cycles or a shortened parallel comparison. The evidence the cycles exist to produce is still missing."
+              }
+            ]
+          },
+          {
+            "q": "At the go-live decision meeting, training is incomplete, data reconciliation is unsigned, and several serious defects remain open — but the date has been widely communicated. What should govern the decision?",
+            "options": [
+              {
+                "text": "The communicated date, because moving it would undermine confidence in the programme",
+                "correct": false,
+                "why": "Confidence built on a date kept against the evidence collapses at the first wrong pay. The date is a communication, not a readiness criterion."
+              },
+              {
+                "text": "A compromise: go live, but describe each gap as manageable and review weekly",
+                "correct": false,
+                "why": "Gaps that are each manageable alone combine at go-live. Describing them away is the date-over-readiness pattern completing itself."
+              },
+              {
+                "text": "The readiness criteria agreed before the meeting — defect status, signed reconciliation, training completion — and the authority named to act on them",
+                "correct": true,
+                "why": "Criteria agreed early keep the decision analytical. A short planned delay taken on evidence is a governance success; a date kept against it is remembered by everyone it touches."
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
     "slug": "hcm-implementation-cost",
     "title": "HCM Implementation Cost",
     "excerpt": "What drives HCM implementation cost: scope, subscription, integrations, data, testing and change, and how to build a budget that survives delivery.",
