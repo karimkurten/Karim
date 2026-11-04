@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="660" viewBox="0 0 1200 660" role="img" aria-label="Pattern, early signal and counter-move table for four repeating HCM implementation failure patterns">
+  <defs>
+    <linearGradient id="hdr" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#0f172a"/>
+      <stop offset="1" stop-color="#1e3a5f"/>
+    </linearGradient>
+  </defs>
+  <rect x="0" y="0" width="1200" height="660" fill="#ffffff"/>
+  <rect x="0" y="0" width="1200" height="92" fill="url(#hdr)"/>
+  <text x="48" y="46" font-family="Georgia, serif" font-size="30" fill="#ffffff">Pattern → Early Signal → Counter-Move</text>
+  <text x="48" y="74" font-family="Arial, sans-serif" font-size="16" fill="#94A3B8">Every pattern announces itself early — the counter-move is cheapest at the signal</text>
+
+  <!-- column headers -->
+  <g font-family="Arial, sans-serif" font-size="15" font-weight="bold">
+    <rect x="40" y="116" width="300" height="44" fill="#1e3a5f"/>
+    <text x="60" y="144" fill="#ffffff">PATTERN</text>
+    <rect x="348" y="116" width="400" height="44" fill="#1e3a5f"/>
+    <text x="368" y="144" fill="#ffffff">EARLY SIGNAL</text>
+    <rect x="756" y="116" width="404" height="44" fill="#2B6CB0"/>
+    <text x="776" y="144" fill="#ffffff">COUNTER-MOVE</text>
+  </g>
+
+  <!-- row 1 -->
+  <g>
+    <rect x="40" y="168" width="300" height="104" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="1.5"/>
+    <rect x="348" y="168" width="400" height="104" fill="#ffffff" stroke="#E2E8F0" stroke-width="1.5"/>
+    <rect x="756" y="168" width="404" height="104" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="1.5"/>
+    <text x="60" y="206" font-family="Arial, sans-serif" font-size="17" font-weight="bold" fill="#1A202C">Undefined scope</text>
+    <text x="60" y="232" font-family="Arial, sans-serif" font-size="14" fill="#475569">Decision rights stay vague</text>
+    <text x="368" y="206" font-family="Arial, sans-serif" font-size="15" fill="#475569">Workshops end with options,</text>
+    <text x="368" y="230" font-family="Arial, sans-serif" font-size="15" fill="#475569">not decisions</text>
+    <text x="776" y="206" font-family="Arial, sans-serif" font-size="15" fill="#475569">Settle scope in writing; name a</text>
+    <text x="776" y="230" font-family="Arial, sans-serif" font-size="15" fill="#475569">decision owner and a decision clock</text>
+  </g>
+
+  <!-- row 2 -->
+  <g>
+    <rect x="40" y="280" width="300" height="104" fill="#ffffff" stroke="#E2E8F0" stroke-width="1.5"/>
+    <rect x="348" y="280" width="400" height="104" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="1.5"/>
+    <rect x="756" y="280" width="404" height="104" fill="#ffffff" stroke="#E2E8F0" stroke-width="1.5"/>
+    <text x="60" y="318" font-family="Arial, sans-serif" font-size="17" font-weight="bold" fill="#1A202C">Data as a technical task</text>
+    <text x="60" y="344" font-family="Arial, sans-serif" font-size="14" fill="#475569">Conversion without ownership</text>
+    <text x="368" y="318" font-family="Arial, sans-serif" font-size="15" fill="#475569">Cleansing questions have no</text>
+    <text x="368" y="342" font-family="Arial, sans-serif" font-size="15" fill="#475569">accountable business owner</text>
+    <text x="776" y="318" font-family="Arial, sans-serif" font-size="15" fill="#475569">Profile early; reconcile converted</text>
+    <text x="776" y="342" font-family="Arial, sans-serif" font-size="15" fill="#475569">values as a formal acceptance step</text>
+  </g>
+
+  <!-- row 3 -->
+  <g>
+    <rect x="40" y="392" width="300" height="104" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="1.5"/>
+    <rect x="348" y="392" width="400" height="104" fill="#ffffff" stroke="#E2E8F0" stroke-width="1.5"/>
+    <rect x="756" y="392" width="404" height="104" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="1.5"/>
+    <text x="60" y="430" font-family="Arial, sans-serif" font-size="17" font-weight="bold" fill="#1A202C">Compressed testing</text>
+    <text x="60" y="456" font-family="Arial, sans-serif" font-size="14" fill="#475569">Time recovered at the end</text>
+    <text x="368" y="430" font-family="Arial, sans-serif" font-size="15" fill="#475569">Test plans assume scenarios</text>
+    <text x="368" y="454" font-family="Arial, sans-serif" font-size="15" fill="#475569">pass first time</text>
+    <text x="776" y="430" font-family="Arial, sans-serif" font-size="15" fill="#475569">Protect non-negotiable cycles;</text>
+    <text x="776" y="454" font-family="Arial, sans-serif" font-size="15" fill="#475569">defer scope visibly instead</text>
+  </g>
+
+  <!-- row 4 -->
+  <g>
+    <rect x="40" y="504" width="300" height="104" fill="#ffffff" stroke="#E2E8F0" stroke-width="1.5"/>
+    <rect x="348" y="504" width="400" height="104" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="1.5"/>
+    <rect x="756" y="504" width="404" height="104" fill="#ffffff" stroke="#E2E8F0" stroke-width="1.5"/>
+    <text x="60" y="542" font-family="Arial, sans-serif" font-size="17" font-weight="bold" fill="#1A202C">Thin change and training</text>
+    <text x="60" y="568" font-family="Arial, sans-serif" font-size="14" fill="#475569">Funded last, cut first</text>
+    <text x="368" y="542" font-family="Arial, sans-serif" font-size="15" fill="#475569">Training planned as a single</text>
+    <text x="368" y="566" font-family="Arial, sans-serif" font-size="15" fill="#475569">event just before go-live</text>
+    <text x="776" y="542" font-family="Arial, sans-serif" font-size="15" fill="#475569">Run change as a workstream from</text>
+    <text x="776" y="566" font-family="Arial, sans-serif" font-size="15" fill="#475569">design, with practised super-users</text>
+  </g>
+
+  <text x="48" y="640" font-family="Arial, sans-serif" font-size="14" fill="#64748B">Read the signal while the counter-move is still cheap — by go-live, every row costs more.</text>
+</svg>
