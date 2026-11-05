@@ -1,5 +1,286 @@
 [
   {
+    "slug": "cutover-planning-runbook",
+    "title": "Cutover Planning: The Go-Live Weekend Runbook",
+    "excerpt": "How to build an HCM cutover runbook for the go-live weekend — freeze, conversion, testing, go/no-go and rollback, with an owner and evidence for every task.",
+    "publishedAt": "2026-11-05",
+    "readingTime": "8 min read",
+    "cover": "/images/blog/cutover-planning-runbook-cover.webp",
+    "tags": [
+      "HCM",
+      "Implementation",
+      "Cutover",
+      "Go-Live"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "Every HCM implementation eventually compresses into a single weekend. Months of design, configuration, migration, and testing land in a few dozen hours: the old system freezes, the final data moves, the new system is verified, and on Monday morning people log in and expect to work — and, soon after, to be paid correctly. A cutover runbook makes that weekend executable rather than hopeful. This article sets out what a runbook contains, how the sequence runs, and where the go, no-go, and rollback decisions sit — a sequence whose place in the wider lifecycle is covered in [the complete guide to HCM implementation](/blog/complete-guide-hcm-implementation)."
+      },
+      {
+        "type": "h2",
+        "text": "What a cutover runbook is, and why minute-level ownership matters"
+      },
+      {
+        "type": "p",
+        "text": "A cutover runbook is a timed, owned, sequenced list of every task between the moment the legacy system stops changing and the moment the new system opens to its users. It is not a project plan in miniature. A plan works in days and milestones; a runbook works in start times, durations, and hand-offs, because the weekend has no slack for vague tasks. When a conversion step runs two hours long at 02:00 on Sunday, the runbook tells everyone what moves, what waits, and who decides."
+      },
+      {
+        "type": "p",
+        "text": "Minute-level ownership matters because cutover failures are rarely technical surprises. They are coordination failures: a task nobody owned, a predecessor nobody confirmed, a verification step everyone assumed someone else had done. Naming one owner and one deputy per task, with the evidence that proves it complete, converts an anxious weekend into a series of small, checkable facts — and protects against the patterns in [HCM implementation mistakes](/blog/hcm-implementation-mistakes), where readiness is defended by confidence instead of evidence."
+      },
+      {
+        "type": "img",
+        "src": "/images/blog/cutover-planning-runbook-1.svg",
+        "alt": "Cutover weekend timeline diagram: seven stages from Friday freeze to Monday opening - Freeze, Extract, Convert, Verify, Test, Decide, Open - each stage timed, owned, and evidenced, with a protected buffer and rollback deadline.",
+        "caption": "Freeze, Extract, Convert, Verify, Test, Decide, Open — each stage timed, owned, and evidenced."
+      },
+      {
+        "type": "h2",
+        "text": "Building the runbook: every task carries the same fields"
+      },
+      {
+        "type": "p",
+        "text": "A runbook is only as strong as its weakest row, so every task is written to the same standard. Each row names the task in plain operational language, a single owner who performs or directs it, and a deputy who can act if that owner is unreachable — weekends involve illness, fatigue, and phones that die. Each row carries a planned start time and duration, the predecessor that must be complete first, and the evidence of completion: a reconciliation total, a verified setting, a signed count. \"Done\" is not evidence; a number that matches is."
+      },
+      {
+        "type": "p",
+        "text": "Finally, each row carries its escalation path. If the task overruns by an agreed margin, or its evidence does not match, the owner does not improvise silently — the row says who is called, at what threshold, and who can authorise a sequence change. Build from rehearsed evidence, not optimism, and freeze the document ahead of the weekend: a runbook still being edited on Friday night is a risk, not a plan."
+      },
+      {
+        "type": "h2",
+        "text": "The weekend sequence"
+      },
+      {
+        "type": "p",
+        "text": "The sequence below is the typical shape for an enterprise HCM cutover; exact times flex with data volumes, time zones, and whether more than one country is involved. Cross-border programmes add a layer: Canadian and US populations may freeze on different payroll calendars, and the runbook must show which population each task touches. The order, however, is stable: nothing verified before it is converted, nothing opened before it is tested, and the decision point sits after the evidence."
+      },
+      {
+        "type": "steps",
+        "label": "The cutover weekend sequence",
+        "intro": "Seven stages from the Friday freeze to the Monday opening, in the only order that works.",
+        "items": [
+          {
+            "title": "Freeze",
+            "text": "At the agreed time, the legacy system stops changing: no new hires keyed, no pay elements edited, no organisational changes. The freeze is communicated in advance and enforced, because data converted from a moving source cannot be reconciled."
+          },
+          {
+            "title": "Final extracts",
+            "text": "The last full extracts are taken from the frozen source, with record counts and control totals captured at the moment of extraction. Those totals are the baseline every later reconciliation is measured against."
+          },
+          {
+            "title": "Conversion",
+            "text": "The rehearsed conversion runs against the final extracts, in the practised order, with timings logged against plan. Any step that behaves differently from rehearsal is treated as a signal, not a nuisance, and escalated per the runbook."
+          },
+          {
+            "title": "Configuration verification",
+            "text": "Owners verify that production configuration matches the signed-off build: pay rules, approval chains, leave plans, and security roles are checked against the documented design, item by item, with evidence recorded."
+          },
+          {
+            "title": "Integration and access checks",
+            "text": "Interfaces to time capture, finance, benefits carriers, and identity providers are confirmed in production, and access is provisioned and tested for each user group, including managers and the support team."
+          },
+          {
+            "title": "Smoke testing and payroll validation",
+            "text": "A short, scripted set of critical journeys is executed end to end: hire, approve time, view pay information, submit leave. Where a pay run falls inside the window, payroll validation compares calculated results against the legacy baseline for a defined sample."
+          },
+          {
+            "title": "Decide and open",
+            "text": "The go/no-go decision is taken on the assembled evidence at the scheduled point. If the decision is go, access opens in the communicated order, hypercare begins, and the runbook hands over to the support plan."
+          }
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Two rules protect the weekend. First, verification belongs to the business owners of the data, not only to the team that ran the conversion — the people who answer for the numbers on Monday sign them on Sunday. Second, buffer is placed deliberately, usually before the decision point; one protected buffer can absorb an overrun, while ten optimistic estimates cannot."
+      },
+      {
+        "type": "h2",
+        "text": "Communications cadence through the weekend"
+      },
+      {
+        "type": "p",
+        "text": "Silence is what turns a managed delay into a rumour. The runbook therefore schedules communication as tasks in their own right: a confirmation when the freeze is in place, a short status at fixed intervals through conversion and verification, a clear message at the decision point, and opening instructions before users arrive on Monday. The weekend bridge, where the cutover team works, stays separate from wider stakeholder updates."
+      },
+      {
+        "type": "p",
+        "text": "The cadence also covers people not on the project: managers fielding employee questions, the service desk receiving the first calls, and payroll teams whose statutory deadlines continue regardless. A short, honest \"we are two hours behind plan; the decision point moves to 14:00\" preserves more trust than optimistic silence followed by a surprise."
+      },
+      {
+        "type": "img",
+        "src": "/images/blog/cutover-planning-runbook-2.svg",
+        "alt": "Runbook anatomy diagram: every cutover task carries a task description, an owner and deputy, a planned time, evidence of completion, and an escalation path, shown across four typical cutover tasks.",
+        "caption": "Runbook anatomy: every task carries an owner and deputy, a planned time, evidence of completion, and an escalation path."
+      },
+      {
+        "type": "h2",
+        "text": "Go, no-go, and rollback: decide before the weekend"
+      },
+      {
+        "type": "p",
+        "text": "The go/no-go decision should be the least dramatic moment of the weekend, because its criteria were agreed weeks earlier. Those criteria live alongside [the HCM go-live checklist](/blog/hcm-go-live-checklist): critical defects closed or formally accepted, reconciliations signed, smoke tests passed, support staffed. The runbook adds the timing: decision scheduled, decision-maker named, evidence pack defined in advance."
+      },
+      {
+        "type": "p",
+        "text": "Rollback deserves the same rigour, and it is where inexperienced teams are vaguest. Triggers are agreed in writing beforehand: converted balances that cannot be reconciled, a critical journey that cannot be completed, an overrun that consumes the protected buffer. Just as important is the rollback deadline — the point after which returning to the legacy system is no longer safe, because new transactions, approvals, or a pay calculation exist in the new system and cannot be cleanly unwound. Naming it in advance protects the team from the worst decision of all: a late rollback stranding data in both systems. After the deadline, the honest options are fix-forward or, in the extreme, a delayed opening."
+      },
+      {
+        "type": "h2",
+        "text": "Rehearsal: the mock go-live"
+      },
+      {
+        "type": "p",
+        "text": "No runbook should meet its first real weekend untested. A mock go-live — a full rehearsal against a copy of production data, timed against the clock — is where unrealistic durations, missing access, and unowned tasks surface while discovery is still free. Findings feed straight back in: timings corrected, deputies added, evidence steps clarified. Teams that ran [an HCM readiness assessment](/blog/hcm-readiness-assessment) earlier will recognise the principle: surface the weakness while it can still change the plan. One honest rehearsal beats three document reviews."
+      },
+      {
+        "type": "h2",
+        "text": "Common mistakes"
+      },
+      {
+        "type": "p",
+        "text": "Most cutover problems are visible in the runbook before the weekend begins. No deputies, evidence described as \"check system\", decision points with no deadline, a rollback section that says \"restore legacy if needed\" — all are signatures of a weekend improvised under pressure. The diagnostic below gathers them."
+      },
+      {
+        "type": "accordion",
+        "label": "Cutover mistakes, as a diagnostic",
+        "items": [
+          {
+            "q": "Tasks with an owner but no deputy",
+            "a": "At 03:00 the plan depends on one exhausted or unreachable person. Every critical task names a deputy who has seen the task performed, ideally in rehearsal, and can complete it without a briefing from scratch."
+          },
+          {
+            "q": "Evidence of completion left vague",
+            "a": "Rows marked done on trust cannot support a go decision. Define the evidence per task in advance: a reconciliation total that matches, a verified setting, a passed scripted journey, recorded where the decision-maker can see it."
+          },
+          {
+            "q": "The runbook still being edited on Friday",
+            "a": "Late edits mean untested sequence changes and owners working from different versions. Freeze the runbook ahead of the weekend, version it, and route any change through the cutover lead with a note to every affected owner."
+          },
+          {
+            "q": "Rollback described but never bounded",
+            "a": "A rollback with no triggers and no deadline invites the worst decision at the worst moment. Agree the triggers in writing and name the point after which rollback is no longer safe and fix-forward becomes the plan."
+          },
+          {
+            "q": "No rehearsal, optimistic timings",
+            "a": "Durations invented at a desk collapse on contact with real data volumes. Run one timed mock go-live, correct the timings from what actually happened, and place the protected buffer before the decision point."
+          },
+          {
+            "q": "Communication left to chance",
+            "a": "Without a scheduled cadence, stakeholders fill the silence themselves. Put status messages in the runbook as owned tasks, at fixed times, to defined audiences, including the service desk and managers."
+          }
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Key Takeaways"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "A cutover runbook works in start times, durations, and hand-offs — not milestones — because the weekend has no slack.",
+          "Every task carries the same fields: owner, deputy, predecessor, planned time, evidence of completion, escalation path.",
+          "Verification belongs to the business owners of the data; the go/no-go decision sits after the evidence.",
+          "Rollback needs written triggers and a deadline after which it is no longer safe; past it, fix-forward is the plan.",
+          "One timed rehearsal corrects more runbook errors than any number of document reviews."
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Frequently Asked Questions"
+      },
+      {
+        "type": "p",
+        "text": "How detailed should a cutover runbook be? Detailed enough that a deputy who did not write it can execute any task from the row alone: what to do, in what order, how long it takes, what proves it worked, and who to call when it does not. If a row needs a conversation to interpret, it is not finished."
+      },
+      {
+        "type": "p",
+        "text": "When should the runbook be written? A first version should exist before the final conversion rehearsal, so the rehearsal tests the document as well as the data. It is then corrected from rehearsal timings and frozen ahead of the weekend."
+      },
+      {
+        "type": "p",
+        "text": "Who should own the go/no-go decision? A named decision-maker agreed in advance — typically the programme sponsor with the business owner of the service going live — acting on criteria agreed before the weekend. The cutover lead presents the evidence; the authority is never improvised in the room."
+      },
+      {
+        "type": "p",
+        "text": "What happens on Monday morning if the decision was go? Hypercare begins as the runbook hands over: support routes staffed, known-issue guidance written, ownership passing in an orderly way to the business teams who will run the system. That handover is planned, not assumed — the discipline in [knowledge transfer planning](/blog/knowledge-transfer-planning)."
+      },
+      {
+        "type": "h2",
+        "text": "Next Steps"
+      },
+      {
+        "type": "p",
+        "text": "Test every row of your current cutover draft against the fields in this article: owner, deputy, predecessor, time, evidence, escalation. Where a row fails, fix it now, while the fix is a sentence rather than a weekend. Then schedule the mock go-live, agree the rollback triggers and deadline with the decision-maker, and confirm the readiness evidence using [the HCM go-live checklist](/blog/hcm-go-live-checklist). A calm weekend is not luck; it is a document finished early and rehearsed honestly."
+      },
+      {
+        "type": "quiz",
+        "label": "Check your understanding",
+        "questions": [
+          {
+            "q": "It is 02:00 on Sunday. The conversion has finished, but the converted leave balances do not match the extract control totals, and the task owner wants to mark the step done and investigate on Monday. What does a sound runbook require?",
+            "options": [
+              {
+                "text": "Mark it done — small balance differences are normal and hypercare exists to correct them",
+                "correct": false,
+                "why": "The evidence of completion for conversion is a reconciliation that matches. Opening with unreconciled balances transfers a known defect into live employee records."
+              },
+              {
+                "text": "Treat the mismatch as the escalation the row defines: notify the named contact, work the agreed investigation window, and carry the status into the go/no-go decision as open evidence",
+                "correct": true,
+                "why": "The runbook specified both the evidence and the escalation path in advance, precisely so a tired owner at 02:00 does not have to invent the response."
+              },
+              {
+                "text": "Restart the full conversion from the beginning to be safe",
+                "correct": false,
+                "why": "Restarting without diagnosis consumes the protected buffer and may reproduce the same mismatch. The escalation path exists to diagnose first, then decide."
+              }
+            ]
+          },
+          {
+            "q": "The team is debating rollback at a point two hours after new approvals and a pay calculation have already been created in the new system. What should govern the conversation?",
+            "options": [
+              {
+                "text": "Enthusiasm — if the team is willing to work through the night, rollback is always available",
+                "correct": false,
+                "why": "Willingness does not unwind transactions. Once new data exists only in the new system, a rollback can strand records in both systems."
+              },
+              {
+                "text": "The rollback deadline agreed before the weekend: if it has passed, rollback is no longer the safe option and the plan becomes fix-forward or a managed delayed opening",
+                "correct": true,
+                "why": "The deadline was named in advance for exactly this moment, when pressure makes an unsafe option look attractive. Pre-agreed boundaries protect the decision."
+              },
+              {
+                "text": "A vote of everyone on the bridge call",
+                "correct": false,
+                "why": "Cutover decisions rest on named authority and pre-agreed criteria, not on whoever happens to be on the call at the hardest moment of the weekend."
+              }
+            ]
+          },
+          {
+            "q": "Which runbook is most likely to survive its first real go-live weekend?",
+            "options": [
+              {
+                "text": "A detailed one written the week before go-live by the project manager, reviewed twice in meetings",
+                "correct": false,
+                "why": "Document reviews do not test durations, access, or hand-offs. Unrehearsed timings are estimates, and the weekend will correct them at the worst possible time."
+              },
+              {
+                "text": "A short one — experienced teams improvise well, and too much detail slows them down",
+                "correct": false,
+                "why": "Improvisation is what the runbook exists to replace. Fatigue and hand-offs, not inexperience, are what break coordination across a long weekend."
+              },
+              {
+                "text": "One rehearsed in a timed mock go-live, with timings corrected from the rehearsal, deputies named for critical tasks, and a protected buffer before the decision point",
+                "correct": true,
+                "why": "Rehearsal converts the runbook from a document into a practised sequence, and surfaces unowned tasks and missing access while fixing them is still free."
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
     "slug": "hcm-implementation-mistakes",
     "title": "HCM Implementation Mistakes",
     "excerpt": "The failure patterns that repeat in HCM implementations — undefined scope, compressed testing, thin change — and how to break each one before design hardens it.",
