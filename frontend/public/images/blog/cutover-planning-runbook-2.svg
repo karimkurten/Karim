@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="660" viewBox="0 0 1200 660" role="img" aria-label="Anatomy of a cutover runbook row showing task, owner and deputy, planned time, evidence of completion and escalation path">
+  <defs>
+    <linearGradient id="hdr" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#0f172a"/>
+      <stop offset="1" stop-color="#1e3a5f"/>
+    </linearGradient>
+  </defs>
+  <rect x="0" y="0" width="1200" height="660" fill="#ffffff"/>
+  <rect x="0" y="0" width="1200" height="92" fill="url(#hdr)"/>
+  <text x="48" y="46" font-family="Georgia, serif" font-size="30" fill="#ffffff">Anatomy of a Runbook Row</text>
+  <text x="48" y="74" font-family="Arial, sans-serif" font-size="16" fill="#94A3B8">Every task carries the same fields — task, owner and deputy, time, evidence, escalation</text>
+
+  <!-- column headers -->
+  <g font-family="Arial, sans-serif" font-size="14" font-weight="bold">
+    <rect x="40" y="116" width="200" height="44" fill="#1e3a5f"/>
+    <text x="56" y="144" fill="#ffffff">TASK</text>
+    <rect x="248" y="116" width="220" height="44" fill="#1e3a5f"/>
+    <text x="264" y="144" fill="#ffffff">OWNER + DEPUTY</text>
+    <rect x="476" y="116" width="160" height="44" fill="#1e3a5f"/>
+    <text x="492" y="144" fill="#ffffff">TIME</text>
+    <rect x="644" y="116" width="272" height="44" fill="#2B6CB0"/>
+    <text x="660" y="144" fill="#ffffff">EVIDENCE OF COMPLETION</text>
+    <rect x="924" y="116" width="236" height="44" fill="#1e3a5f"/>
+    <text x="940" y="144" fill="#ffffff">ESCALATION</text>
+  </g>
+
+  <!-- row 1 -->
+  <g>
+    <rect x="40" y="168" width="200" height="104" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="1.5"/>
+    <rect x="248" y="168" width="220" height="104" fill="#ffffff" stroke="#E2E8F0" stroke-width="1.5"/>
+    <rect x="476" y="168" width="160" height="104" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="1.5"/>
+    <rect x="644" y="168" width="272" height="104" fill="#ffffff" stroke="#E2E8F0" stroke-width="1.5"/>
+    <rect x="924" y="168" width="236" height="104" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="1.5"/>
+    <text x="56" y="206" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#1A202C">Final extracts</text>
+    <text x="56" y="232" font-family="Arial, sans-serif" font-size="13" fill="#64748B">From the frozen source</text>
+    <text x="264" y="206" font-family="Arial, sans-serif" font-size="14" fill="#475569">Data lead</text>
+    <text x="264" y="230" font-family="Arial, sans-serif" font-size="14" fill="#475569">Deputy: data analyst</text>
+    <text x="492" y="206" font-family="Arial, sans-serif" font-size="14" fill="#475569">Fri 19:00</text>
+    <text x="492" y="230" font-family="Arial, sans-serif" font-size="14" fill="#475569">About 2 hours</text>
+    <text x="660" y="206" font-family="Arial, sans-serif" font-size="14" fill="#475569">Record counts match the</text>
+    <text x="660" y="230" font-family="Arial, sans-serif" font-size="14" fill="#475569">control totals captured</text>
+    <text x="940" y="206" font-family="Arial, sans-serif" font-size="14" fill="#475569">Cutover lead if</text>
+    <text x="940" y="230" font-family="Arial, sans-serif" font-size="14" fill="#475569">any count differs</text>
+  </g>
+
+  <!-- row 2 -->
+  <g>
+    <rect x="40" y="280" width="200" height="104" fill="#ffffff" stroke="#E2E8F0" stroke-width="1.5"/>
+    <rect x="248" y="280" width="220" height="104" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="1.5"/>
+    <rect x="476" y="280" width="160" height="104" fill="#ffffff" stroke="#E2E8F0" stroke-width="1.5"/>
+    <rect x="644" y="280" width="272" height="104" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="1.5"/>
+    <rect x="924" y="280" width="236" height="104" fill="#ffffff" stroke="#E2E8F0" stroke-width="1.5"/>
+    <text x="56" y="318" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#1A202C">Conversion run</text>
+    <text x="56" y="344" font-family="Arial, sans-serif" font-size="13" fill="#64748B">In the rehearsed order</text>
+    <text x="264" y="318" font-family="Arial, sans-serif" font-size="14" fill="#475569">Conversion lead</text>
+    <text x="264" y="342" font-family="Arial, sans-serif" font-size="14" fill="#475569">Deputy: technical lead</text>
+    <text x="492" y="318" font-family="Arial, sans-serif" font-size="14" fill="#475569">Saturday</text>
+    <text x="492" y="342" font-family="Arial, sans-serif" font-size="14" fill="#475569">Rehearsed duration</text>
+    <text x="660" y="318" font-family="Arial, sans-serif" font-size="14" fill="#475569">Reconciliation signed by</text>
+    <text x="660" y="342" font-family="Arial, sans-serif" font-size="14" fill="#475569">the business data owner</text>
+    <text x="940" y="318" font-family="Arial, sans-serif" font-size="14" fill="#475569">Programme lead if the</text>
+    <text x="940" y="342" font-family="Arial, sans-serif" font-size="14" fill="#475569">protected buffer is used</text>
+  </g>
+
+  <!-- row 3 -->
+  <g>
+    <rect x="40" y="392" width="200" height="104" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="1.5"/>
+    <rect x="248" y="392" width="220" height="104" fill="#ffffff" stroke="#E2E8F0" stroke-width="1.5"/>
+    <rect x="476" y="392" width="160" height="104" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="1.5"/>
+    <rect x="644" y="392" width="272" height="104" fill="#ffffff" stroke="#E2E8F0" stroke-width="1.5"/>
+    <rect x="924" y="392" width="236" height="104" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="1.5"/>
+    <text x="56" y="430" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#1A202C">Access provisioning</text>
+    <text x="56" y="456" font-family="Arial, sans-serif" font-size="13" fill="#64748B">For every user group</text>
+    <text x="264" y="430" font-family="Arial, sans-serif" font-size="14" fill="#475569">Security lead</text>
+    <text x="264" y="454" font-family="Arial, sans-serif" font-size="14" fill="#475569">Deputy: HR operations</text>
+    <text x="492" y="430" font-family="Arial, sans-serif" font-size="14" fill="#475569">Sunday</text>
+    <text x="492" y="454" font-family="Arial, sans-serif" font-size="14" fill="#475569">About 1 hour</text>
+    <text x="660" y="430" font-family="Arial, sans-serif" font-size="14" fill="#475569">Test logins pass for each</text>
+    <text x="660" y="454" font-family="Arial, sans-serif" font-size="14" fill="#475569">user group, logged</text>
+    <text x="940" y="430" font-family="Arial, sans-serif" font-size="14" fill="#475569">Cutover lead if any</text>
+    <text x="940" y="454" font-family="Arial, sans-serif" font-size="14" fill="#475569">group cannot sign in</text>
+  </g>
+
+  <!-- row 4 -->
+  <g>
+    <rect x="40" y="504" width="200" height="104" fill="#ffffff" stroke="#E2E8F0" stroke-width="1.5"/>
+    <rect x="248" y="504" width="220" height="104" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="1.5"/>
+    <rect x="476" y="504" width="160" height="104" fill="#ffffff" stroke="#E2E8F0" stroke-width="1.5"/>
+    <rect x="644" y="504" width="272" height="104" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="1.5"/>
+    <rect x="924" y="504" width="236" height="104" fill="#ffffff" stroke="#E2E8F0" stroke-width="1.5"/>
+    <text x="56" y="542" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#1A202C">Smoke testing</text>
+    <text x="56" y="568" font-family="Arial, sans-serif" font-size="13" fill="#64748B">Critical journeys only</text>
+    <text x="264" y="542" font-family="Arial, sans-serif" font-size="14" fill="#475569">Test lead</text>
+    <text x="264" y="566" font-family="Arial, sans-serif" font-size="14" fill="#475569">Deputy: payroll lead</text>
+    <text x="492" y="542" font-family="Arial, sans-serif" font-size="14" fill="#475569">Sunday</text>
+    <text x="492" y="566" font-family="Arial, sans-serif" font-size="14" fill="#475569">About 2 hours</text>
+    <text x="660" y="542" font-family="Arial, sans-serif" font-size="14" fill="#475569">Scripted journeys pass</text>
+    <text x="660" y="566" font-family="Arial, sans-serif" font-size="14" fill="#475569">end to end, results filed</text>
+    <text x="940" y="542" font-family="Arial, sans-serif" font-size="14" fill="#475569">Decision-maker, at the</text>
+    <text x="940" y="566" font-family="Arial, sans-serif" font-size="14" fill="#475569">go / no-go point</text>
+  </g>
+
+  <text x="48" y="640" font-family="Arial, sans-serif" font-size="14" fill="#64748B">A row that cannot name its evidence cannot support a go decision — fix the row before the weekend, not during it.</text>
+</svg>
