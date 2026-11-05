@@ -134,6 +134,16 @@
       "source": "/blog/7-tips-for-new-project-managers",
       "destination": "/blog/mastering-art-project-management-tips-tricks-new-pms",
       "permanent": true
+    },
+    {
+      "source": "/blog/hr-cloud-implementation-mistakes",
+      "destination": "/blog/hcm-implementation-mistakes",
+      "permanent": true
+    },
+    {
+      "source": "/blog/hr-systems-implementation-mistakes",
+      "destination": "/blog/hcm-implementation-mistakes",
+      "permanent": true
     }
   ],
   "rewrites": [
