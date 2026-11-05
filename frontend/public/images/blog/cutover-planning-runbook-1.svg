@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700" role="img" aria-label="The cutover weekend timeline in seven stages from freeze to open">
+  <defs>
+    <linearGradient id="hdr" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#0f172a"/>
+      <stop offset="1" stop-color="#1e3a5f"/>
+    </linearGradient>
+    <marker id="arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#2B6CB0"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="1200" height="700" fill="#ffffff"/>
+  <rect x="0" y="0" width="1200" height="92" fill="url(#hdr)"/>
+  <text x="48" y="46" font-family="Georgia, serif" font-size="30" fill="#ffffff">The Go-Live Weekend Timeline</text>
+  <text x="48" y="74" font-family="Arial, sans-serif" font-size="16" fill="#94A3B8">Seven stages, in order — each one timed, owned, and evidenced before the next begins</text>
+
+  <!-- row 1 -->
+  <g>
+    <rect x="40" y="140" width="262" height="150" rx="12" fill="#F0F4F8" stroke="#2B6CB0" stroke-width="2"/>
+    <text x="60" y="176" font-family="Arial, sans-serif" font-size="19" font-weight="bold" fill="#1A202C">1 · Freeze</text>
+    <text x="60" y="206" font-family="Arial, sans-serif" font-size="14" fill="#64748B">Fri 18:00 · about 1 hour</text>
+    <text x="60" y="230" font-family="Arial, sans-serif" font-size="14" fill="#475569">Owner: cutover lead</text>
+    <text x="60" y="254" font-family="Arial, sans-serif" font-size="14" fill="#475569">Legacy changes stop</text>
+  </g>
+  <path d="M 306 215 L 322 215" stroke="#2B6CB0" stroke-width="3" marker-end="url(#arr)"/>
+  <g>
+    <rect x="326" y="140" width="262" height="150" rx="12" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+    <text x="346" y="176" font-family="Arial, sans-serif" font-size="19" font-weight="bold" fill="#1A202C">2 · Extract</text>
+    <text x="346" y="206" font-family="Arial, sans-serif" font-size="14" fill="#64748B">Fri 19:00 · about 2 hours</text>
+    <text x="346" y="230" font-family="Arial, sans-serif" font-size="14" fill="#475569">Owner: data lead</text>
+    <text x="346" y="254" font-family="Arial, sans-serif" font-size="14" fill="#475569">Control totals captured</text>
+  </g>
+  <path d="M 592 215 L 608 215" stroke="#2B6CB0" stroke-width="3" marker-end="url(#arr)"/>
+  <g>
+    <rect x="612" y="140" width="262" height="150" rx="12" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+    <text x="632" y="176" font-family="Arial, sans-serif" font-size="19" font-weight="bold" fill="#1A202C">3 · Convert</text>
+    <text x="632" y="206" font-family="Arial, sans-serif" font-size="14" fill="#64748B">Saturday · rehearsed duration</text>
+    <text x="632" y="230" font-family="Arial, sans-serif" font-size="14" fill="#475569">Owner: conversion lead</text>
+    <text x="632" y="254" font-family="Arial, sans-serif" font-size="14" fill="#475569">Timings logged against plan</text>
+  </g>
+  <path d="M 878 215 L 894 215" stroke="#2B6CB0" stroke-width="3" marker-end="url(#arr)"/>
+  <g>
+    <rect x="898" y="140" width="262" height="150" rx="12" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+    <text x="918" y="176" font-family="Arial, sans-serif" font-size="19" font-weight="bold" fill="#1A202C">4 · Verify</text>
+    <text x="918" y="206" font-family="Arial, sans-serif" font-size="14" fill="#64748B">Sat–Sun · item by item</text>
+    <text x="918" y="230" font-family="Arial, sans-serif" font-size="14" fill="#475569">Owner: business owners</text>
+    <text x="918" y="254" font-family="Arial, sans-serif" font-size="14" fill="#475569">Config matched to design</text>
+  </g>
+
+  <!-- wrap connector -->
+  <path d="M 1029 294 L 1029 330 L 180 330 L 180 356" fill="none" stroke="#2B6CB0" stroke-width="3" marker-end="url(#arr)"/>
+
+  <!-- row 2 -->
+  <g>
+    <rect x="40" y="360" width="262" height="150" rx="12" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+    <text x="60" y="396" font-family="Arial, sans-serif" font-size="19" font-weight="bold" fill="#1A202C">5 · Test</text>
+    <text x="60" y="426" font-family="Arial, sans-serif" font-size="14" fill="#64748B">Sunday · scripted journeys</text>
+    <text x="60" y="450" font-family="Arial, sans-serif" font-size="14" fill="#475569">Owner: test lead</text>
+    <text x="60" y="474" font-family="Arial, sans-serif" font-size="14" fill="#475569">Smoke and payroll validation</text>
+  </g>
+  <path d="M 306 435 L 322 435" stroke="#2B6CB0" stroke-width="3" marker-end="url(#arr)"/>
+  <g>
+    <rect x="326" y="360" width="262" height="150" rx="12" fill="#1e3a5f" stroke="#1e3a5f" stroke-width="2"/>
+    <text x="346" y="396" font-family="Arial, sans-serif" font-size="19" font-weight="bold" fill="#ffffff">6 · Decide</text>
+    <text x="346" y="426" font-family="Arial, sans-serif" font-size="14" fill="#94A3B8">Sunday · scheduled point</text>
+    <text x="346" y="450" font-family="Arial, sans-serif" font-size="14" fill="#ffffff">Owner: named decision-maker</text>
+    <text x="346" y="474" font-family="Arial, sans-serif" font-size="14" fill="#ffffff">Go / no-go on the evidence</text>
+  </g>
+  <path d="M 592 435 L 608 435" stroke="#2B6CB0" stroke-width="3" marker-end="url(#arr)"/>
+  <g>
+    <rect x="612" y="360" width="262" height="150" rx="12" fill="#F0F4F8" stroke="#2B6CB0" stroke-width="2"/>
+    <text x="632" y="396" font-family="Arial, sans-serif" font-size="19" font-weight="bold" fill="#1A202C">7 · Open</text>
+    <text x="632" y="426" font-family="Arial, sans-serif" font-size="14" fill="#64748B">Mon 07:00 · staged access</text>
+    <text x="632" y="450" font-family="Arial, sans-serif" font-size="14" fill="#475569">Owner: support lead</text>
+    <text x="632" y="474" font-family="Arial, sans-serif" font-size="14" fill="#475569">Hypercare begins</text>
+  </g>
+
+  <!-- decision note -->
+  <g>
+    <rect x="898" y="360" width="262" height="150" rx="12" fill="#ffffff" stroke="#E2E8F0" stroke-width="2"/>
+    <text x="918" y="396" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#1A202C">Before Decide:</text>
+    <text x="918" y="424" font-family="Arial, sans-serif" font-size="14" fill="#475569">Protected buffer sits here,</text>
+    <text x="918" y="448" font-family="Arial, sans-serif" font-size="14" fill="#475569">rollback deadline is named,</text>
+    <text x="918" y="472" font-family="Arial, sans-serif" font-size="14" fill="#475569">triggers agreed in writing</text>
+  </g>
+
+  <rect x="40" y="556" width="1120" height="92" rx="12" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+  <text x="64" y="592" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#1A202C">Nothing is verified before it is converted, nothing is opened before it is tested,</text>
+  <text x="64" y="620" font-family="Arial, sans-serif" font-size="15" fill="#475569">and the decision point sits after the evidence — never before it. Status updates run on a fixed cadence at every stage.</text>
+</svg>
