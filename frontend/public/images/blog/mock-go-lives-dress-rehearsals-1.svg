@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700" role="img" aria-label="The six elements a full mock go-live rehearses together">
+  <defs>
+    <linearGradient id="hdr" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#0f172a"/>
+      <stop offset="1" stop-color="#1e3a5f"/>
+    </linearGradient>
+    <marker id="arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#2B6CB0"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="1200" height="700" fill="#ffffff"/>
+  <rect x="0" y="0" width="1200" height="92" fill="url(#hdr)"/>
+  <text x="48" y="46" font-family="Georgia, serif" font-size="30" fill="#ffffff">What a Full Rehearsal Exercises</text>
+  <text x="48" y="74" font-family="Arial, sans-serif" font-size="16" fill="#94A3B8">Six elements run as one continuous operation — failures concentrate at the handoffs between them</text>
+
+  <!-- row 1 -->
+  <g>
+    <rect x="40" y="140" width="360" height="170" rx="12" fill="#F0F4F8" stroke="#2B6CB0" stroke-width="2"/>
+    <text x="64" y="178" font-family="Arial, sans-serif" font-size="19" font-weight="bold" fill="#1A202C">1 · Freeze and Extract</text>
+    <text x="64" y="208" font-family="Arial, sans-serif" font-size="14" fill="#475569">Freeze message sent and enforced</text>
+    <text x="64" y="232" font-family="Arial, sans-serif" font-size="14" fill="#475569">on the rehearsal copy</text>
+    <text x="64" y="262" font-family="Arial, sans-serif" font-size="14" fill="#64748B">Tests: communications and control totals</text>
+    <text x="64" y="286" font-family="Arial, sans-serif" font-size="14" fill="#64748B">Owner: cutover lead with data lead</text>
+  </g>
+  <path d="M 404 225 L 416 225" stroke="#2B6CB0" stroke-width="3" marker-end="url(#arr)"/>
+  <g>
+    <rect x="420" y="140" width="360" height="170" rx="12" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+    <text x="444" y="178" font-family="Arial, sans-serif" font-size="19" font-weight="bold" fill="#1A202C">2 · Conversion</text>
+    <text x="444" y="208" font-family="Arial, sans-serif" font-size="14" fill="#475569">The rehearsed conversion runs in</text>
+    <text x="444" y="232" font-family="Arial, sans-serif" font-size="14" fill="#475569">practised order, against the clock</text>
+    <text x="444" y="262" font-family="Arial, sans-serif" font-size="14" fill="#64748B">Tests: real durations vs runbook estimates</text>
+    <text x="444" y="286" font-family="Arial, sans-serif" font-size="14" fill="#64748B">Owner: conversion lead</text>
+  </g>
+  <path d="M 784 225 L 796 225" stroke="#2B6CB0" stroke-width="3" marker-end="url(#arr)"/>
+  <g>
+    <rect x="800" y="140" width="360" height="170" rx="12" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+    <text x="824" y="178" font-family="Arial, sans-serif" font-size="19" font-weight="bold" fill="#1A202C">3 · Verification</text>
+    <text x="824" y="208" font-family="Arial, sans-serif" font-size="14" fill="#475569">Business owners verify the converted</text>
+    <text x="824" y="232" font-family="Arial, sans-serif" font-size="14" fill="#475569">result and the production configuration</text>
+    <text x="824" y="262" font-family="Arial, sans-serif" font-size="14" fill="#64748B">Tests: access, evidence, recognising correct</text>
+    <text x="824" y="286" font-family="Arial, sans-serif" font-size="14" fill="#64748B">Owner: business owners of the data</text>
+  </g>
+
+  <!-- wrap connector -->
+  <path d="M 980 314 L 980 332 L 220 332 L 220 346" fill="none" stroke="#2B6CB0" stroke-width="3" marker-end="url(#arr)"/>
+
+  <!-- row 2 -->
+  <g>
+    <rect x="40" y="350" width="360" height="170" rx="12" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+    <text x="64" y="388" font-family="Arial, sans-serif" font-size="19" font-weight="bold" fill="#1A202C">4 · Critical Journeys</text>
+    <text x="64" y="418" font-family="Arial, sans-serif" font-size="14" fill="#475569">Scripted journeys run end to end:</text>
+    <text x="64" y="442" font-family="Arial, sans-serif" font-size="14" fill="#475569">hire, approve time, view pay, submit leave</text>
+    <text x="64" y="472" font-family="Arial, sans-serif" font-size="14" fill="#64748B">Tests: smoke scripts and payroll sample</text>
+    <text x="64" y="496" font-family="Arial, sans-serif" font-size="14" fill="#64748B">Owner: test lead</text>
+  </g>
+  <path d="M 404 435 L 416 435" stroke="#2B6CB0" stroke-width="3" marker-end="url(#arr)"/>
+  <g>
+    <rect x="420" y="350" width="360" height="170" rx="12" fill="#1e3a5f" stroke="#1e3a5f" stroke-width="2"/>
+    <text x="444" y="388" font-family="Arial, sans-serif" font-size="19" font-weight="bold" fill="#ffffff">5 · The Decision</text>
+    <text x="444" y="418" font-family="Arial, sans-serif" font-size="14" fill="#ffffff">Evidence pack presented at the</text>
+    <text x="444" y="442" font-family="Arial, sans-serif" font-size="14" fill="#ffffff">scheduled point, in weekend format</text>
+    <text x="444" y="472" font-family="Arial, sans-serif" font-size="14" fill="#94A3B8">Tests: decision format and questions</text>
+    <text x="444" y="496" font-family="Arial, sans-serif" font-size="14" fill="#94A3B8">Owner: named decision-maker</text>
+  </g>
+  <path d="M 784 435 L 796 435" stroke="#2B6CB0" stroke-width="3" marker-end="url(#arr)"/>
+  <g>
+    <rect x="800" y="350" width="360" height="170" rx="12" fill="#ffffff" stroke="#2B6CB0" stroke-width="2"/>
+    <text x="824" y="388" font-family="Arial, sans-serif" font-size="19" font-weight="bold" fill="#1A202C">6 · Rollback Path</text>
+    <text x="824" y="418" font-family="Arial, sans-serif" font-size="14" fill="#475569">Walked through step by step: declare,</text>
+    <text x="824" y="442" font-family="Arial, sans-serif" font-size="14" fill="#475569">restore, communicate, and time it</text>
+    <text x="824" y="472" font-family="Arial, sans-serif" font-size="14" fill="#64748B">Tests: triggers, deadline, restore sequence</text>
+    <text x="824" y="496" font-family="Arial, sans-serif" font-size="14" fill="#64748B">Owner: cutover lead</text>
+  </g>
+
+  <rect x="40" y="556" width="1120" height="92" rx="12" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+  <text x="64" y="592" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#1A202C">Rehearse the handoffs, not just the tasks — one honest complication is injected</text>
+  <text x="64" y="620" font-family="Arial, sans-serif" font-size="15" fill="#475569">so the escalation path is practised under observation, and every improvisation is logged as a finding.</text>
+</svg>
