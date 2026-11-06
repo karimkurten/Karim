@@ -1,5 +1,286 @@
 [
   {
+    "slug": "mock-go-lives-dress-rehearsals",
+    "title": "Mock Go-Lives and Dress Rehearsals",
+    "excerpt": "How to run mock go-lives and dress rehearsals for an HCM go-live — what to rehearse, how to time it, and how findings must change the real runbook.",
+    "publishedAt": "2026-11-06",
+    "readingTime": "8 min read",
+    "cover": "/images/blog/mock-go-lives-dress-rehearsals-cover.webp",
+    "tags": [
+      "HCM",
+      "Implementation",
+      "Go-Live",
+      "Rehearsal"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "A go-live weekend is the one part of an HCM implementation that cannot be paused, extended, or quietly redone next week. The freeze is announced, payroll calendars keep moving, and on Monday morning the whole organisation arrives expecting the new system to work. A mock go-live — a dress rehearsal of that weekend, run in full against a copy of production data — is how a team discovers what its plan gets wrong while discovery is still free. It is the companion to [the cutover planning runbook](/blog/cutover-planning-runbook): the runbook is the script; the rehearsal is where the cast performs it."
+      },
+      {
+        "type": "h2",
+        "text": "What a mock go-live is, and is not"
+      },
+      {
+        "type": "p",
+        "text": "A mock go-live is a timed execution of the real cutover sequence, in the real order, by the people who will own each task on the weekend itself. The team freezes a copy of the legacy data, runs the conversion, verifies the configuration, executes the smoke journeys, and assembles the evidence for a go, no-go decision — all against the clock, with durations logged against the runbook's estimates. The output is not a pass. It is a corrected runbook and a short list of findings no read-through could have produced."
+      },
+      {
+        "type": "p",
+        "text": "It is worth being precise about what a rehearsal is not. It is not a system test cycle — the layered testing that proves configuration and integrations belongs to [the HCM system testing strategy](/blog/hcm-system-testing-strategy), and the rehearsal assumes that work is substantially done. It is not a training session, and it is not a demonstration for stakeholders. A rehearsal staged to reassure an audience is steered away from the awkward steps; a rehearsal run to expose weakness deliberately walks into them, because every weakness found in rehearsal is one that will not be found at 02:00 on the real weekend."
+      },
+      {
+        "type": "h2",
+        "text": "Deciding the scope: rehearse the handoffs"
+      },
+      {
+        "type": "p",
+        "text": "The most common scoping error is to rehearse only the technical conversion. Conversions are usually the best-understood part of a cutover, having typically been run several times during data migration cycles. What has never been run before is the whole sequence as one continuous operation: the freeze communication, the handoff from the data team to the verification owners, the moment the decision-maker is presented with evidence, the opening of access in the communicated order. Failures concentrate at those joins, so the scope must include them."
+      },
+      {
+        "type": "p",
+        "text": "A full rehearsal therefore exercises six things together: the freeze and final extract, the conversion itself, business verification of the converted result, the scripted critical journeys, the go, no-go decision taken on rehearsed evidence, and — at least as a walked-through exercise — the rollback path. Teams sometimes resist rehearsing the decision and the rollback because no real decision is at stake. That is exactly why they should be: the decision format and the rollback conversation are far easier to practise when the outcome does not matter."
+      },
+      {
+        "type": "img",
+        "src": "/images/blog/mock-go-lives-dress-rehearsals-1.svg",
+        "alt": "Rehearsal scope diagram: six elements a full mock go-live exercises together - Freeze and Extract, Conversion, Verification, Critical Journeys, the Decision, and the Rollback Path - run as one continuous operation.",
+        "caption": "Rehearsal scope: six elements exercised as one continuous operation, because cutover failures concentrate at the handoffs between them."
+      },
+      {
+        "type": "h2",
+        "text": "Running the rehearsal against the clock"
+      },
+      {
+        "type": "p",
+        "text": "The discipline that separates a rehearsal from a walkthrough is the clock. Planned durations are treated as commitments; when a task overruns, the team does not quietly absorb it — the overrun is logged, its sequence consequences worked through aloud, and the cutover lead practises the escalation the runbook prescribes."
+      },
+      {
+        "type": "steps",
+        "label": "Running the rehearsal, in order",
+        "intro": "Six moves that turn a plan review into a genuine dress rehearsal of the go-live weekend.",
+        "items": [
+          {
+            "title": "Freeze the rehearsal data and the runbook version",
+            "text": "Start from a defined copy of production-like data and the exact runbook version that will be tested. Everyone works from the same version, so a timing or instruction problem can be traced to the document, not to people reading different drafts."
+          },
+          {
+            "title": "Brief roles, then start the clock",
+            "text": "Each owner confirms their tasks, their deputy, and their evidence standard before the start. Once the clock starts, the rehearsal runs in real sequence — no skipping ahead to the interesting parts."
+          },
+          {
+            "title": "Execute in sequence, logging actual against planned",
+            "text": "Every task records its actual start, duration, and evidence result beside the plan. Variances are data, not embarrassments: they are the corrections the real runbook will be rebuilt from."
+          },
+          {
+            "title": "Inject one honest complication",
+            "text": "The cutover lead introduces one realistic disruption the team has not been told about in advance — a conversion step that behaves differently, a verification total that does not match — and observes whether the escalation path in the runbook is actually followed."
+          },
+          {
+            "title": "Hold the decision meeting on the rehearsal evidence",
+            "text": "At the scheduled decision point, the evidence pack is presented exactly as it will be on the weekend, and the decision-maker practises the go, no-go conversation, including what a conditional go would require."
+          },
+          {
+            "title": "Walk the rollback path before closing",
+            "text": "The team traces, step by step, what a rollback at the latest rehearsed point would involve: who declares it, what is restored, what is communicated, and how long it takes. Gaps found here are runbook findings like any other."
+          }
+        ]
+      },
+      {
+        "type": "p",
+        "text": "One facilitation rule protects the value of the day above all: nobody fixes a problem silently. An unlogged workaround teaches the team a step that exists nowhere in the runbook — and observers should record behaviour, not just timings: where owners waited for information, and where a handoff needed a phone call the plan never mentioned."
+      },
+      {
+        "type": "h2",
+        "text": "Who must play their real role"
+      },
+      {
+        "type": "p",
+        "text": "A rehearsal only tests the plan if the cast matches the weekend. The cutover lead runs it, because running the sequence — holding the clock, calling the escalations, chairing the decision point — is itself a skill the weekend will demand. Task owners perform their own tasks rather than describing them, and deputies attend: a deputy who has watched a task performed once can perform it under pressure; one who has only read about it cannot. Business owners verify the converted data just as they will in reality — which also confirms they can recognise a correct result before that ability is load-bearing."
+      },
+      {
+        "type": "p",
+        "text": "The decision-maker's presence matters more than any other invitation. Sponsors often excuse themselves because the real decision is weeks away. But the rehearsal is where the decision-maker learns what the evidence will look like — and where the team learns what will actually be asked. Aligning those expectations is what makes the real meeting a decision rather than a first introduction. Programmes that ran [an HCM readiness assessment](/blog/hcm-readiness-assessment) earlier will recognise the pattern: each gate exists to surface a mismatch while correcting it is still cheap."
+      },
+      {
+        "type": "h2",
+        "text": "Findings: the only output that matters"
+      },
+      {
+        "type": "p",
+        "text": "A rehearsal that produces a warm feeling and no changes has failed, however smoothly it ran. The findings review, held within days while memories are specific, sorts every observation into one of three dispositions. Some are runbook corrections: timings rebuilt from actuals, a missing predecessor, an evidence step nobody could perform as written. Some are system or data findings — a conversion behaviour, an access gap, a configuration item verification caught — which re-enter the defect process, with retesting. And some are accepted risks, recorded openly with their mitigation, rather than left as private worries."
+      },
+      {
+        "type": "img",
+        "src": "/images/blog/mock-go-lives-dress-rehearsals-2.svg",
+        "alt": "Findings triage diagram: three dispositions for rehearsal findings - Correct the Runbook, Fix the System or Data, Accept the Risk Openly - each with examples, the evidence required, and an owner.",
+        "caption": "Findings triage: every rehearsal observation leaves with one of three dispositions, an owner, and a date."
+      },
+      {
+        "type": "p",
+        "text": "The corrected runbook is then re-frozen as a new version and the change communicated to every owner — not filed. Reconcile the evidence, too, with [the HCM go-live checklist](/blog/hcm-go-live-checklist): items asserted as ready should now be backed by something the team has watched happen; any item the rehearsal contradicted goes back to unproven. In the lifecycle of [the complete guide to HCM implementation](/blog/complete-guide-hcm-implementation), readiness here stops being a status and becomes a demonstrated capability."
+      },
+      {
+        "type": "h2",
+        "text": "How many rehearsals, and when"
+      },
+      {
+        "type": "p",
+        "text": "For most enterprise HCM go-lives, one full rehearsal is the minimum credible standard, scheduled late enough that configuration and conversion are representative, and early enough that findings can still change the plan — typically a few weeks before the go-live weekend, after the final full conversion cycle and before the runbook freeze. Held too early, it tests a system that will change underneath it; held too late, it becomes an audit the team can only apologise to."
+      },
+      {
+        "type": "p",
+        "text": "A second rehearsal is warranted when the first produced structural findings — a sequence needing reordering, a conversion whose duration threatens the decision point, a rollback path that proved impractical — or when the scope is unusually unforgiving. It need not repeat everything; it must re-run the corrected sequence end to end, because a fix verified in isolation is not verified in the flow where it failed."
+      },
+      {
+        "type": "h2",
+        "text": "Common mistakes"
+      },
+      {
+        "type": "p",
+        "text": "Most failed rehearsals fail in predictable ways: scheduled as demonstrations, scoped down to the conversion alone, run without the clock, or celebrated without producing a single runbook change."
+      },
+      {
+        "type": "accordion",
+        "label": "Rehearsal mistakes, as a diagnostic",
+        "items": [
+          {
+            "q": "Rehearsing the conversion only",
+            "a": "The conversion is usually the best-practised element already. The unpractised elements — freeze communications, verification handoffs, the decision meeting, the opening sequence — are where weekends actually break. Scope the rehearsal to the whole operation."
+          },
+          {
+            "q": "Running without the clock",
+            "a": "An untimed run-through proves tasks can be done, not that they fit inside the weekend. Without actual-versus-planned timings, the runbook's durations remain guesses, and the decision point's position remains untested."
+          },
+          {
+            "q": "Casting substitutes for the weekend team",
+            "a": "If deputies, business verifiers, and the decision-maker are absent, the rehearsal tests a team that will not be there. The people who will own the weekend must play their own roles, including the sponsor at the decision point."
+          },
+          {
+            "q": "Fixing problems silently as they appear",
+            "a": "A quiet workaround leaves no trace in the runbook, so the real weekend depends on the same person improvising the same fix in the same place. Log every improvisation as a finding and write the correction into the document."
+          },
+          {
+            "q": "Treating a smooth rehearsal as proof of readiness",
+            "a": "A rehearsal with no findings usually means the scope was too kind or the complications too gentle. Readiness is demonstrated by findings found, fixed, and re-verified — not by an untroubled day."
+          },
+          {
+            "q": "Letting the findings review drift",
+            "a": "Held weeks later, the review trades in general impressions. Hold it within days, disposition every finding as a runbook correction, a system fix, or an accepted risk, and re-freeze the corrected runbook as a new version."
+          }
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Key Takeaways"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "A mock go-live tests the runbook, the handoffs, and the decision — not just the conversion.",
+          "The clock is the discipline: actual timings against plan are the corrections the runbook is rebuilt from.",
+          "The weekend cast must play themselves, deputies, verifiers, and decision-maker included.",
+          "Every finding leaves with one disposition: correct the runbook, fix the system or data, or accept the risk openly.",
+          "One full rehearsal is the minimum; structural findings earn a second."
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Frequently Asked Questions"
+      },
+      {
+        "type": "p",
+        "text": "How long should a mock go-live take? Long enough to run the full sequence in real order — for many enterprise HCM cutovers, a full day; complex multi-country weekends may need a weekend-shaped window of their own. Skipping the slow steps defeats its purpose: the slow steps are the point."
+      },
+      {
+        "type": "p",
+        "text": "What data should the rehearsal use? A recent copy of production-like data at realistic volume, under the same privacy controls as any test environment. A small sample hides what the rehearsal exists to expose: conversion durations, reconciliation effort, and the long tail of exceptional records."
+      },
+      {
+        "type": "p",
+        "text": "Should the rehearsal include a payroll validation? Where a pay run falls inside or just after the go-live window, yes — a defined sample of calculated results compared against the legacy baseline belongs in the sequence, in the same position it will occupy on the real weekend, so its duration and evidence are practised too."
+      },
+      {
+        "type": "p",
+        "text": "What if the rehearsal goes badly? Then it has done its job. A bad rehearsal weeks before go-live is information the programme can act on: correct the runbook, fix the system findings, re-rehearse the corrected sequence, and — if the findings are structural — take the honest evidence into the readiness conversation while a date decision is still possible."
+      },
+      {
+        "type": "h2",
+        "text": "Next Steps"
+      },
+      {
+        "type": "p",
+        "text": "Take your current cutover runbook and mark the steps the team has never performed in sequence — that untested residue is your rehearsal scope. Schedule the mock go-live after the final full conversion cycle and before the runbook freeze, invite the real weekend cast, and brief the findings review when you brief the rehearsal itself, so every observation leaves with an owner, a disposition, and a date."
+      },
+      {
+        "type": "quiz",
+        "label": "Check your understanding",
+        "questions": [
+          {
+            "q": "A team's mock go-live runs smoothly: every task completes, nobody raises a problem, and the day ends early. What is the most likely interpretation?",
+            "options": [
+              {
+                "text": "The team is ready — a smooth rehearsal is the goal",
+                "correct": false,
+                "why": "A rehearsal exists to expose weakness. An untroubled day usually means the scope was narrowed to the well-practised parts or no realistic complication was introduced."
+              },
+              {
+                "text": "The rehearsal was probably too kind: scope likely excluded the handoffs, the decision, or a disruption, so the findings review should ask what was not tested",
+                "correct": true,
+                "why": "Readiness is demonstrated by findings found, fixed, and re-verified. Zero findings is a signal about the rehearsal's honesty, not about the weekend's safety."
+              },
+              {
+                "text": "The real weekend can be shortened, since the team finished early",
+                "correct": false,
+                "why": "Finishing early in rehearsal usually reflects missing scope or unrepresentative data volume — not spare capacity in a weekend that also carries the real freeze, real users, and real consequences."
+              }
+            ]
+          },
+          {
+            "q": "Mid-rehearsal, a verification owner spots that a converted total does not match and quietly works out a manual correction with the data lead, without telling the cutover lead. What should happen?",
+            "options": [
+              {
+                "text": "Nothing — initiative like this is exactly what a good team does",
+                "correct": false,
+                "why": "The correction may be sound, but performed silently it exists nowhere in the runbook. On the real weekend, the same mismatch would need the same people improvising the same fix in the same place."
+              },
+              {
+                "text": "The mismatch and the correction are logged as a finding, the escalation path is followed as the runbook prescribes, and the correction is written into the runbook afterwards",
+                "correct": true,
+                "why": "The rehearsal tests the documented sequence, including its escalations. Logging converts an improvisation into a correction every owner can rely on."
+              },
+              {
+                "text": "The rehearsal should be restarted from the beginning",
+                "correct": false,
+                "why": "Restarting destroys the timing evidence the day exists to produce. The runbook's escalation exists precisely so a mismatch can be handled inside the sequence."
+              }
+            ]
+          },
+          {
+            "q": "Which finding from a first rehearsal most clearly justifies scheduling a second one?",
+            "options": [
+              {
+                "text": "Several task durations were modestly longer than estimated, and the corrected runbook absorbs them",
+                "correct": false,
+                "why": "Timing corrections absorbed by the existing buffer are the normal, healthy output of a first rehearsal — they are fixed by editing the document, not by re-running the day."
+              },
+              {
+                "text": "One owner's briefing notes were out of date and have been reissued",
+                "correct": false,
+                "why": "A document fix verified by reissue does not need a full second rehearsal; save the second run for changes whose safety depends on the sequence as a whole."
+              },
+              {
+                "text": "The conversion's real duration threatens the decision point, so the sequence itself must be reordered",
+                "correct": true,
+                "why": "A reordered sequence has never been run in its new order. Structural changes — sequence, rollback path, decision timing — must be re-rehearsed end to end, because a fix verified in isolation is not verified in the flow where it failed."
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
     "slug": "cutover-planning-runbook",
     "title": "Cutover Planning: The Go-Live Weekend Runbook",
     "excerpt": "How to build an HCM cutover runbook for the go-live weekend — freeze, conversion, testing, go/no-go and rollback, with an owner and evidence for every task.",
