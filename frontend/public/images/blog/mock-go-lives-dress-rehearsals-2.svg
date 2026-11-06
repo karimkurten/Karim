@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700" role="img" aria-label="The three dispositions for rehearsal findings">
+  <defs>
+    <linearGradient id="hdr" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#0f172a"/>
+      <stop offset="1" stop-color="#1e3a5f"/>
+    </linearGradient>
+  </defs>
+  <rect x="0" y="0" width="1200" height="700" fill="#ffffff"/>
+  <rect x="0" y="0" width="1200" height="92" fill="url(#hdr)"/>
+  <text x="48" y="46" font-family="Georgia, serif" font-size="30" fill="#ffffff">Findings Triage: Three Dispositions</text>
+  <text x="48" y="74" font-family="Arial, sans-serif" font-size="16" fill="#94A3B8">Every rehearsal observation leaves the review with one disposition, an owner, and a date</text>
+
+  <!-- lane 1 -->
+  <g>
+    <rect x="40" y="140" width="360" height="380" rx="12" fill="#F0F4F8" stroke="#2B6CB0" stroke-width="2"/>
+    <text x="64" y="182" font-family="Arial, sans-serif" font-size="19" font-weight="bold" fill="#1A202C">Correct the Runbook</text>
+    <text x="64" y="216" font-family="Arial, sans-serif" font-size="14" fill="#475569">Timings rebuilt from the actuals</text>
+    <text x="64" y="244" font-family="Arial, sans-serif" font-size="14" fill="#475569">A missing predecessor or deputy</text>
+    <text x="64" y="272" font-family="Arial, sans-serif" font-size="14" fill="#475569">An evidence step nobody could</text>
+    <text x="64" y="296" font-family="Arial, sans-serif" font-size="14" fill="#475569">perform as written</text>
+    <text x="64" y="326" font-family="Arial, sans-serif" font-size="14" fill="#475569">A handoff that needed a call the</text>
+    <text x="64" y="350" font-family="Arial, sans-serif" font-size="14" fill="#475569">plan never mentioned</text>
+    <text x="64" y="396" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#1A202C">Evidence required:</text>
+    <text x="64" y="424" font-family="Arial, sans-serif" font-size="14" fill="#64748B">Corrected runbook re-frozen as a</text>
+    <text x="64" y="448" font-family="Arial, sans-serif" font-size="14" fill="#64748B">new version, change sent to owners</text>
+    <text x="64" y="484" font-family="Arial, sans-serif" font-size="14" fill="#64748B">Owner: cutover lead</text>
+  </g>
+
+  <!-- lane 2 -->
+  <g>
+    <rect x="420" y="140" width="360" height="380" rx="12" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+    <text x="444" y="182" font-family="Arial, sans-serif" font-size="19" font-weight="bold" fill="#1A202C">Fix the System or Data</text>
+    <text x="444" y="216" font-family="Arial, sans-serif" font-size="14" fill="#475569">A conversion behaving differently</text>
+    <text x="444" y="244" font-family="Arial, sans-serif" font-size="14" fill="#475569">from its rehearsal history</text>
+    <text x="444" y="272" font-family="Arial, sans-serif" font-size="14" fill="#475569">An access gap for a user group</text>
+    <text x="444" y="300" font-family="Arial, sans-serif" font-size="14" fill="#475569">A configuration item verification</text>
+    <text x="444" y="324" font-family="Arial, sans-serif" font-size="14" fill="#475569">caught and rejected</text>
+    <text x="444" y="354" font-family="Arial, sans-serif" font-size="14" fill="#475569">A reconciliation that would not close</text>
+    <text x="444" y="396" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#1A202C">Evidence required:</text>
+    <text x="444" y="424" font-family="Arial, sans-serif" font-size="14" fill="#64748B">Fix logged as a defect, corrected</text>
+    <text x="444" y="448" font-family="Arial, sans-serif" font-size="14" fill="#64748B">and retested before the freeze</text>
+    <text x="444" y="484" font-family="Arial, sans-serif" font-size="14" fill="#64748B">Owner: workstream lead</text>
+  </g>
+
+  <!-- lane 3 -->
+  <g>
+    <rect x="800" y="140" width="360" height="380" rx="12" fill="#ffffff" stroke="#E2E8F0" stroke-width="2"/>
+    <text x="824" y="182" font-family="Arial, sans-serif" font-size="19" font-weight="bold" fill="#1A202C">Accept the Risk Openly</text>
+    <text x="824" y="216" font-family="Arial, sans-serif" font-size="14" fill="#475569">A known behaviour the team will</text>
+    <text x="824" y="244" font-family="Arial, sans-serif" font-size="14" fill="#475569">manage live with a workaround</text>
+    <text x="824" y="272" font-family="Arial, sans-serif" font-size="14" fill="#475569">A tight duration the buffer is</text>
+    <text x="824" y="296" font-family="Arial, sans-serif" font-size="14" fill="#475569">explicitly sized to absorb</text>
+    <text x="824" y="326" font-family="Arial, sans-serif" font-size="14" fill="#475569">A manual check substituted for an</text>
+    <text x="824" y="350" font-family="Arial, sans-serif" font-size="14" fill="#475569">automated one, with a named checker</text>
+    <text x="824" y="396" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#1A202C">Evidence required:</text>
+    <text x="824" y="424" font-family="Arial, sans-serif" font-size="14" fill="#64748B">Risk recorded with its mitigation</text>
+    <text x="824" y="448" font-family="Arial, sans-serif" font-size="14" fill="#64748B">named — never left as a private worry</text>
+    <text x="824" y="484" font-family="Arial, sans-serif" font-size="14" fill="#64748B">Owner: decision-maker</text>
+  </g>
+
+  <rect x="40" y="556" width="1120" height="92" rx="12" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+  <text x="64" y="592" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#1A202C">A rehearsal with no findings has usually failed — readiness is findings found,</text>
+  <text x="64" y="620" font-family="Arial, sans-serif" font-size="15" fill="#475569">fixed, and re-verified, reconciled against the go-live checklist before the real weekend begins.</text>
+</svg>
