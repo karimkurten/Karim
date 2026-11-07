@@ -78,13 +78,15 @@ const Hero = () => {
                 : 'opacity-0 translate-y-10'
             }`}
           >
-            {/* Availability badge */}
+            {/* Availability badge — HIDDEN 2026-11-07 at Karim's request (Fiserv role started). Restore by changing false to true. */}
+            {false && (
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-[#2B6CB0]/20 bg-[#2B6CB0]/5 mb-8">
               <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
               <span className="text-sm text-[#2B6CB0] font-medium">
                 Available for New Engagements
               </span>
             </div>
+            )}
 
             {/* Headline */}
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-serif font-bold text-[#1A202C] leading-[1.1] max-w-5xl">
@@ -106,6 +108,8 @@ const Hero = () => {
 
             {/* CTAs */}
             <div className="mt-10 flex flex-wrap gap-4">
+              {/* Hire Me button — HIDDEN 2026-11-07 at Karim's request (Fiserv role started). Restore by removing the false && wrapper. */}
+              {false && (
               <a
                 href={`mailto:${personalInfo.email}`}
                 className="group inline-flex items-center gap-2 px-8 py-4 bg-[#2B6CB0] text-white font-semibold rounded-lg hover:bg-[#2563EB] transition-all duration-300 hover:shadow-xl hover:shadow-[#2B6CB0]/20 hover:-translate-y-0.5"
@@ -116,6 +120,7 @@ const Hero = () => {
                   className="group-hover:translate-x-0.5 transition-transform"
                 />
               </a>
+              )}
               <a
                 href="#experience"
                 onClick={(e) => {
@@ -183,3 +188,4 @@ const Hero = () => {
 };
 
 export default Hero;
+
