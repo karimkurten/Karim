@@ -123,12 +123,15 @@ const Header = () => {
 
           <nav className="hidden lg:flex items-center gap-1">
             {navLinks.map((link) => renderNavItem(link))}
+            {/* Hire Me button — HIDDEN 2026-11-07 at Karim's request (Fiserv role started). Restore by removing the false && wrapper. */}
+            {false && (
             <a
               href={`mailto:${personalInfo.email}`}
               className="ml-4 px-6 py-2.5 text-sm font-semibold text-white bg-[#2B6CB0] rounded-lg hover:bg-[#2563EB] transition-all duration-300 hover:shadow-lg hover:shadow-[#2B6CB0]/20"
             >
               Hire Me
             </a>
+            )}
           </nav>
 
           <button
@@ -148,12 +151,15 @@ const Header = () => {
       >
         <div className="bg-white/95 backdrop-blur-xl border-t border-[#E2E8F0] px-6 py-4 space-y-1">
           {navLinks.map((link) => renderMobileItem(link))}
+          {/* Hire Me button (mobile) — HIDDEN 2026-11-07 at Karim's request. Restore by removing the false && wrapper. */}
+          {false && (
           <a
             href={`mailto:${personalInfo.email}`}
             className="block text-center mt-4 px-6 py-3 text-sm font-semibold text-white bg-[#2B6CB0] rounded-lg hover:bg-[#2563EB] transition-all duration-300"
           >
             Hire Me
           </a>
+          )}
         </div>
       </div>
     </header>
@@ -161,3 +167,4 @@ const Header = () => {
 };
 
 export default Header;
+
