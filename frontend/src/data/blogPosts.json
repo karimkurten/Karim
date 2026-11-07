@@ -1,5 +1,282 @@
 [
   {
+    "slug": "data-freeze-planning",
+    "title": "Data Freeze Planning and Communication",
+    "excerpt": "Data freeze planning for HCM cutover — what freezes, what continues, freeze types, exception control, and the T-minus communication plan.",
+    "publishedAt": "2026-11-07",
+    "readingTime": "8 min read",
+    "cover": "/images/blog/data-freeze-planning-cover.webp",
+    "tags": [
+      "HCM",
+      "Implementation",
+      "Cutover",
+      "Data"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "Every conversion is only as trustworthy as the moment the source data stopped moving. A data freeze is that moment, planned and enforced: the controlled point at which changes in the legacy system stop, so the final extract, conversion, and reconciliation are built on data that will not shift underneath them. It belongs inside [the cutover planning runbook](/blog/cutover-planning-runbook) as a sequenced operation with owners and timings — not as a hopeful email asking everyone to stop touching the system. Freeze planning decides, in writing and in advance, what stops, what continues, and who may grant an exception."
+      },
+      {
+        "type": "h2",
+        "text": "What a data freeze actually freezes"
+      },
+      {
+        "type": "p",
+        "text": "The freeze covers the data the conversion will carry: employee records, job and organisational assignments, compensation, benefit elections, balances, and the reference tables they depend on. From the freeze point, the legacy system becomes a read-only record of the state the new system was built from. Any later change is invisible to the conversion unless someone deliberately carries it across — precisely the failure the freeze exists to prevent."
+      },
+      {
+        "type": "p",
+        "text": "Precision matters, because a freeze is a scope decision, not a system shutdown. The legacy operation does not stop existing during the window: people are still hired, hours are still worked, and statutory obligations still fall due. A plan that pretends otherwise will be quietly routed around within a day. Its job is to name, category by category, what is frozen, what continues under control, and what never freezes at all."
+      },
+      {
+        "type": "img",
+        "src": "/images/blog/data-freeze-planning-1.svg",
+        "alt": "Freeze scope diagram: three categories decided before the window opens - What Freezes, Controlled Exceptions Only, and What Never Freezes - each with example categories, its handling rule, and its owner.",
+        "caption": "Freeze scope: three categories decided in writing before the window opens, so nobody has to improvise the boundary during cutover."
+      },
+      {
+        "type": "h2",
+        "text": "What freezes, what continues, and what never does"
+      },
+      {
+        "type": "p",
+        "text": "Three categories cover almost every programme. First, what freezes outright: in-scope employee, job, and pay data as of the freeze timestamp, with the configuration and reference data the conversion maps from. Second, what continues only as a controlled exception: urgent changes that cannot wait — a statutory correction, a termination that must be processed, a court-ordered deduction — each approved, logged, and queued to be re-applied or reconciled in the new system. Third, what never freezes: time capture for hours still being worked, in-flight transactions already mid-process, and downstream feeds whose owners need a defined handling rule rather than a surprise."
+      },
+      {
+        "type": "p",
+        "text": "The cross-border dimension sharpens the second category. In a combined Canada and United States payroll, a statutory correction carries different deadlines on each side of the border, and a change merely urgent in one jurisdiction can be compliance-critical in the other. The exception criteria should name those cases explicitly, with a payroll owner per jurisdiction to judge them, rather than leaving a generic urgency test to be argued at midnight during cutover."
+      },
+      {
+        "type": "h2",
+        "text": "Choosing the freeze type"
+      },
+      {
+        "type": "p",
+        "text": "Programmes choose among three patterns. A full freeze stops all in-scope change at a single timestamp: cleanest for conversion integrity, hardest on the business, best suited to short windows. A partial or soft freeze freezes most data while named categories — often new hires or specific populations — continue under tighter control, accepting a defined delta to be converted or entered again later. A rolling freeze moves module by module or population by population, so parts of the organisation freeze earlier while others keep operating, at the cost of a more complex reconciliation."
+      },
+      {
+        "type": "p",
+        "text": "The choice is a risk trade, and it should be made as one. The longer and softer the freeze, the larger the delta the team must track, re-apply, and prove — and the more the reconciliation in [the data migration checklist](/blog/data-migration-checklist) has to carry. The harder and earlier the freeze, the more operational pressure accumulates behind it. Practise the chosen pattern in [mock go-lives and dress rehearsals](/blog/mock-go-lives-dress-rehearsals) first: a freeze type the team has never operated is a hypothesis, not a plan."
+      },
+      {
+        "type": "steps",
+        "label": "Planning the freeze, in order",
+        "intro": "Six moves that turn a freeze date into a controlled operation the conversion can trust.",
+        "items": [
+          {
+            "title": "Define the scope in three categories",
+            "text": "List, category by category, what freezes at the freeze point, what continues only as a controlled exception, and what never freezes. Get the list signed off by the HR, payroll, and integration owners — an unsigned scope is a disagreement postponed to the worst possible weekend."
+          },
+          {
+            "title": "Choose the freeze type as a risk trade",
+            "text": "Full, partial, or rolling: weigh conversion integrity against operational pressure, and write down the delta each choice creates and who will reconcile it. The cheapest freeze to announce is often the most expensive to prove."
+          },
+          {
+            "title": "Sequence the window inside the runbook",
+            "text": "Place the freeze timestamp against the final extract, conversion, and verification steps, with buffer for the extract to be validated before conversion starts. A freeze that lands after the extract has begun protects nothing."
+          },
+          {
+            "title": "Publish the exception process before the window opens",
+            "text": "Name who approves an exception, what evidence it needs, how it is logged, and how it will be re-applied or reconciled in the new system. An exception route invented during the window will be used for everything."
+          },
+          {
+            "title": "Enforce technically, not just by announcement",
+            "text": "Restrict update access in the legacy system for the frozen scope, keep read access open, and switch on change auditing for the window. An announced freeze with open access is a request; an enforced freeze is a control."
+          },
+          {
+            "title": "Agree the thaw criteria before freezing",
+            "text": "Define what ends the freeze: conversion verified, exceptions reconciled, and the new system declared the system of record — or, on a rollback decision, the documented return to the legacy system. Nobody should have to negotiate the exit while standing in it."
+          }
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Timing, enforcement, and the honest breach"
+      },
+      {
+        "type": "p",
+        "text": "Timing is a negotiation between two clocks. Freeze too early and the business carries days of held changes and mounting exception pressure; freeze too late and the extract collides with the conversion window, leaving no time to validate control totals. Anchor the freeze to the extract, not the calendar: the window closes around an extract whose totals are agreed before conversion starts."
+      },
+      {
+        "type": "p",
+        "text": "Enforcement deserves the same seriousness. Announce the freeze, certainly — but also restrict update permissions for the frozen scope, preserve read access so the business can still answer questions, and audit changes during the window so a breach is a discovered fact rather than a rumour. When a breach happens, the response is procedural: identify what changed, decide whether the extract must be retaken or the change carried as a logged exception, record the decision, and tell the verification owners, whose baseline may have moved."
+      },
+      {
+        "type": "h2",
+        "text": "The communication plan"
+      },
+      {
+        "type": "p",
+        "text": "A freeze fails socially before it fails technically. Each audience needs a different message at a different moment. HR and payroll operators need the scope, the exception route, and what to do with the change that arrives on freeze morning. Managers need to know which approvals pause and what to tell their teams. Employees need the small, concrete version: what they temporarily cannot update, and where to go instead. Integration owners need the handling rule for every feed touching the frozen data — paused, queued, or continued — agreed before the window."
+      },
+      {
+        "type": "p",
+        "text": "Sequence those messages at T-minus milestones rather than in one announcement: scope and dates when the freeze is agreed, a reminder with the exception process as the window approaches, a confirmation when enforcement begins, and a closing message when the thaw criteria are met. Each message should repeat the two facts people need — what is frozen, and what to do with an urgent change — because those facts prevent the quiet workaround."
+      },
+      {
+        "type": "img",
+        "src": "/images/blog/data-freeze-planning-2.svg",
+        "alt": "Freeze sequence diagram: six stages from announcement to thaw - Announce the Scope, Remind and Publish, Enforce, Exception Window, Extract and Convert, and Thaw by Criteria - each with its owner and its message.",
+        "caption": "Freeze sequence: six stages from announcement to thaw, each with its owner and its message."
+      },
+      {
+        "type": "h2",
+        "text": "Thawing, and the record the freeze leaves behind"
+      },
+      {
+        "type": "p",
+        "text": "The freeze ends by criteria, not by relief. The thaw is declared when the conversion is verified, every logged exception has been re-applied or reconciled in the new system, and the decision recorded in [the HCM go-live checklist](/blog/hcm-go-live-checklist) names the new system as the system of record. From that point, changes are made once, in one place. In the wider arc of [the complete guide to HCM implementation](/blog/complete-guide-hcm-implementation), this is the moment data ownership changes hands — and the freeze log becomes part of the audit record proving the converted data can be trusted. Keep it: months later, when a balance is questioned, that log is how the programme answers."
+      },
+      {
+        "type": "h2",
+        "text": "Common mistakes"
+      },
+      {
+        "type": "p",
+        "text": "Most failed freezes fail predictably: announced but not enforced, scoped by assumption, or opened without an exception route."
+      },
+      {
+        "type": "accordion",
+        "label": "Freeze mistakes, as a diagnostic",
+        "items": [
+          {
+            "q": "Announcing the freeze without enforcing it",
+            "a": "An email does not restrict anyone's access. If update permissions stay open, changes will happen — usually innocently — and the extract quietly diverges from the data verification expects. Pair every announcement with access restriction and change auditing for the window."
+          },
+          {
+            "q": "Freezing everything, including what cannot stop",
+            "a": "Time capture, in-flight transactions, and statutory corrections do not pause because a programme needs them to. A scope that ignores them is routed around within a day. Name what never freezes and give it a handling rule instead."
+          },
+          {
+            "q": "Opening the window with no exception process",
+            "a": "Urgent changes will arrive during any real freeze. Without a named approver, a log, and a rule for re-applying the change in the new system, each one becomes an improvisation — and unreconciled exceptions are how converted data silently goes wrong."
+          },
+          {
+            "q": "Freezing on the calendar instead of against the extract",
+            "a": "A freeze timestamp chosen for tidiness can land after extraction has begun or leave no time to validate control totals. Sequence the freeze inside the runbook, anchored to the extract and the conversion it protects."
+          },
+          {
+            "q": "Communicating once, to everyone, in one message",
+            "a": "Operators, managers, employees, and integration owners need different facts at different moments. A single announcement is forgotten by freeze day. Communicate at T-minus milestones, repeating what is frozen and what to do with an urgent change."
+          },
+          {
+            "q": "Thawing by relief instead of by criteria",
+            "a": "Declaring the freeze over because the weekend ended leaves exceptions unreconciled and two systems half-believed. Thaw only when conversion is verified, exceptions are reconciled, and the new system is formally the system of record."
+          }
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Key Takeaways"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "A freeze is a scope decision in three categories: what freezes, what continues as a controlled exception, and what never freezes.",
+          "Full, partial, and rolling freezes trade conversion integrity against operational pressure — choose deliberately, reconcile the delta.",
+          "Announce the freeze, but enforce it technically: restricted update access, open read access, audited changes.",
+          "Publish the exception route before the window opens; every exception is approved, logged, and reconciled.",
+          "Communicate by audience at T-minus milestones; thaw by criteria — verified conversion, reconciled exceptions, one system of record."
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Frequently Asked Questions"
+      },
+      {
+        "type": "p",
+        "text": "How long should a data freeze last? As short as the cutover honestly allows: long enough to cover the final extract, its validation, and the conversion it feeds, sized from the runbook's timings. Windows stretch when scope is undecided; decide scope first and duration usually shrinks."
+      },
+      {
+        "type": "p",
+        "text": "What happens to a new hire who starts during the freeze? Whatever the scope document says — which is why new hires belong in it explicitly. Common patterns are to hold the record for entry directly into the new system, or process it as a logged exception. Either works; an undocumented improvisation does not."
+      },
+      {
+        "type": "p",
+        "text": "Who should approve freeze exceptions? A named owner with the standing to judge urgency — typically the payroll or HR operations lead for the affected population, with the cutover lead informed so the log stays complete. In cross-border programmes, name the approver per jurisdiction."
+      },
+      {
+        "type": "p",
+        "text": "What if the freeze is breached? Treat it as a controlled event, not a crisis: identify the change, decide whether the extract must be retaken or the change carried as a logged exception, record the decision, and notify the verification owners."
+      },
+      {
+        "type": "h2",
+        "text": "Next Steps"
+      },
+      {
+        "type": "p",
+        "text": "Take your cutover runbook and write the freeze as its own section: the three scope categories, the chosen freeze type, the timestamp anchored to the final extract, the named exception approver and log, the enforcement steps, the T-minus messages per audience, and the thaw criteria. If any line is still a conversation rather than a decision, hold that conversation now — freeze week is the most expensive time to have it first."
+      },
+      {
+        "type": "quiz",
+        "label": "Check your understanding",
+        "questions": [
+          {
+            "q": "On the second day of a freeze, a manager enters an urgent pay correction directly into the legacy system because update access was never restricted. What is the best reading of this event?",
+            "options": [
+              {
+                "text": "The manager broke the rules and should be reminded of the announcement",
+                "correct": false,
+                "why": "The announcement existed, but the control did not. A freeze that relies on memory while access stays open will be breached innocently, and blaming the individual leaves the control gap in place for the next change."
+              },
+              {
+                "text": "The freeze was announced but not enforced: the change must now be identified, carried as a logged exception or trigger a retaken extract, and access restriction and auditing applied for the rest of the window",
+                "correct": true,
+                "why": "Enforcement is technical as well as communicative. Once a breach occurs, the procedural response — identify, decide, record, notify verification — protects the conversion, and the control gap gets closed rather than lamented."
+              },
+              {
+                "text": "The whole freeze should be abandoned and restarted",
+                "correct": false,
+                "why": "A single identified change is manageable through the exception and reconciliation process. Restarting discards a window the business has already paid for and teaches the organisation that freezes are negotiable."
+              }
+            ]
+          },
+          {
+            "q": "A programme chooses a long, soft freeze: most data is frozen for two weeks, but several categories keep changing under informal control. What is the main cost of that choice?",
+            "options": [
+              {
+                "text": "There is no real cost — a soft freeze is simply more flexible",
+                "correct": false,
+                "why": "Flexibility during the window is paid for afterwards. Every category that keeps changing creates a delta that must be tracked, re-applied, and proven in the new system."
+              },
+              {
+                "text": "The delta: every change after the freeze point must be logged, re-applied or reconciled, and evidenced — and the longer and softer the freeze, the larger that reconciliation burden and the harder the converted data is to prove",
+                "correct": true,
+                "why": "Freeze type is a risk trade. A soft freeze moves effort from business disruption during the window to reconciliation risk after it, and that trade should be chosen knowingly, with owners named for the delta."
+              },
+              {
+                "text": "The communications become slightly longer",
+                "correct": false,
+                "why": "Communication grows, but that is the smallest consequence. The material cost is the tracked delta and the proof burden it places on verification and reconciliation."
+              }
+            ]
+          },
+          {
+            "q": "The conversion has finished and the weekend team is eager to declare the freeze over. Which condition set justifies the thaw?",
+            "options": [
+              {
+                "text": "The conversion ran without errors, so the freeze can end immediately",
+                "correct": false,
+                "why": "An error-free run is not verification. Until business owners verify the result and exceptions are reconciled, declaring the new system the record is premature."
+              },
+              {
+                "text": "The scheduled freeze window has expired on the calendar",
+                "correct": false,
+                "why": "The calendar does not know whether the data is trustworthy. Thawing by schedule rather than by criteria leaves two systems half-believed and exceptions unresolved."
+              },
+              {
+                "text": "Conversion is verified, every logged exception has been re-applied or reconciled in the new system, and the new system is formally declared the system of record",
+                "correct": true,
+                "why": "Those are the thaw criteria: proof the converted data is right, proof nothing approved during the window was lost, and a single declared home for every future change."
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
     "slug": "mock-go-lives-dress-rehearsals",
     "title": "Mock Go-Lives and Dress Rehearsals",
     "excerpt": "How to run mock go-lives and dress rehearsals for an HCM go-live — what to rehearse, how to time it, and how findings must change the real runbook.",
