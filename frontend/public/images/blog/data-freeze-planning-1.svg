@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700" role="img" aria-label="The three freeze scope categories: what freezes, controlled exceptions, and what never freezes">
+  <defs>
+    <linearGradient id="hdr" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#0f172a"/>
+      <stop offset="1" stop-color="#1e3a5f"/>
+    </linearGradient>
+  </defs>
+  <rect x="0" y="0" width="1200" height="700" fill="#ffffff"/>
+  <rect x="0" y="0" width="1200" height="92" fill="url(#hdr)"/>
+  <text x="48" y="46" font-family="Georgia, serif" font-size="30" fill="#ffffff">Freeze Scope: Three Categories</text>
+  <text x="48" y="74" font-family="Arial, sans-serif" font-size="16" fill="#94A3B8">Decided in writing before the window opens — so nobody improvises the boundary during cutover</text>
+
+  <!-- column 1 -->
+  <g>
+    <rect x="40" y="140" width="360" height="380" rx="12" fill="#F0F4F8" stroke="#2B6CB0" stroke-width="2"/>
+    <text x="64" y="182" font-family="Arial, sans-serif" font-size="19" font-weight="bold" fill="#1A202C">What Freezes</text>
+    <text x="64" y="216" font-family="Arial, sans-serif" font-size="14" fill="#475569">Employee and job records as of</text>
+    <text x="64" y="240" font-family="Arial, sans-serif" font-size="14" fill="#475569">the freeze timestamp</text>
+    <text x="64" y="268" font-family="Arial, sans-serif" font-size="14" fill="#475569">Compensation and benefit elections</text>
+    <text x="64" y="296" font-family="Arial, sans-serif" font-size="14" fill="#475569">Balances the conversion will carry</text>
+    <text x="64" y="324" font-family="Arial, sans-serif" font-size="14" fill="#475569">Reference and configuration tables</text>
+    <text x="64" y="348" font-family="Arial, sans-serif" font-size="14" fill="#475569">the conversion maps from</text>
+    <text x="64" y="396" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#1A202C">Handling rule:</text>
+    <text x="64" y="424" font-family="Arial, sans-serif" font-size="14" fill="#64748B">Legacy becomes read-only record</text>
+    <text x="64" y="448" font-family="Arial, sans-serif" font-size="14" fill="#64748B">Update access restricted, audited</text>
+    <text x="64" y="484" font-family="Arial, sans-serif" font-size="14" fill="#64748B">Owner: cutover lead with data lead</text>
+  </g>
+
+  <!-- column 2 -->
+  <g>
+    <rect x="420" y="140" width="360" height="380" rx="12" fill="#1e3a5f" stroke="#1e3a5f" stroke-width="2"/>
+    <text x="444" y="182" font-family="Arial, sans-serif" font-size="19" font-weight="bold" fill="#ffffff">Controlled Exceptions Only</text>
+    <text x="444" y="216" font-family="Arial, sans-serif" font-size="14" fill="#ffffff">A statutory correction that</text>
+    <text x="444" y="240" font-family="Arial, sans-serif" font-size="14" fill="#ffffff">cannot wait for the new system</text>
+    <text x="444" y="268" font-family="Arial, sans-serif" font-size="14" fill="#ffffff">A termination that must process</text>
+    <text x="444" y="296" font-family="Arial, sans-serif" font-size="14" fill="#ffffff">A court-ordered deduction</text>
+    <text x="444" y="324" font-family="Arial, sans-serif" font-size="14" fill="#ffffff">A compliance-critical change in</text>
+    <text x="444" y="348" font-family="Arial, sans-serif" font-size="14" fill="#ffffff">either jurisdiction</text>
+    <text x="444" y="396" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#ffffff">Handling rule:</text>
+    <text x="444" y="424" font-family="Arial, sans-serif" font-size="14" fill="#94A3B8">Approved, logged, then re-applied</text>
+    <text x="444" y="448" font-family="Arial, sans-serif" font-size="14" fill="#94A3B8">or reconciled in the new system</text>
+    <text x="444" y="484" font-family="Arial, sans-serif" font-size="14" fill="#94A3B8">Owner: named exception approver</text>
+  </g>
+
+  <!-- column 3 -->
+  <g>
+    <rect x="800" y="140" width="360" height="380" rx="12" fill="#ffffff" stroke="#E2E8F0" stroke-width="2"/>
+    <text x="824" y="182" font-family="Arial, sans-serif" font-size="19" font-weight="bold" fill="#1A202C">What Never Freezes</text>
+    <text x="824" y="216" font-family="Arial, sans-serif" font-size="14" fill="#475569">Time capture for hours still</text>
+    <text x="824" y="240" font-family="Arial, sans-serif" font-size="14" fill="#475569">being worked</text>
+    <text x="824" y="268" font-family="Arial, sans-serif" font-size="14" fill="#475569">In-flight transactions already</text>
+    <text x="824" y="292" font-family="Arial, sans-serif" font-size="14" fill="#475569">mid-process when the window opens</text>
+    <text x="824" y="320" font-family="Arial, sans-serif" font-size="14" fill="#475569">Downstream feeds with an agreed</text>
+    <text x="824" y="344" font-family="Arial, sans-serif" font-size="14" fill="#475569">pause, queue, or continue rule</text>
+    <text x="824" y="396" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#1A202C">Handling rule:</text>
+    <text x="824" y="424" font-family="Arial, sans-serif" font-size="14" fill="#64748B">Continues under its own rule,</text>
+    <text x="824" y="448" font-family="Arial, sans-serif" font-size="14" fill="#64748B">agreed with each feed owner</text>
+    <text x="824" y="484" font-family="Arial, sans-serif" font-size="14" fill="#64748B">Owner: integration owners</text>
+  </g>
+
+  <rect x="40" y="556" width="1120" height="92" rx="12" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+  <text x="64" y="592" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#1A202C">A freeze is a scope decision, not a shutdown — the business keeps living</text>
+  <text x="64" y="620" font-family="Arial, sans-serif" font-size="15" fill="#475569">inside it, and the plan names the rule for every category before the window opens.</text>
+</svg>
