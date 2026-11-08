@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-label="The classic three-stage laundering model and why modern schemes blur it">
+<rect width="1200" height="675" fill="#0f172a"/>
+<text x="60" y="70" font-family="Arial, sans-serif" font-size="34" font-weight="bold" fill="#ffffff">The Classic Model — and Its Limits</text>
+<text x="60" y="105" font-family="Arial, sans-serif" font-size="18" fill="#bfdbfe">A teaching model, not a script. Modern schemes compress, skip, or reverse these stages.</text>
+<g font-family="Arial, sans-serif">
+<rect x="60" y="150" width="320" height="180" rx="16" fill="#1e3a5f" stroke="#60a5fa" stroke-width="2"/>
+<text x="90" y="195" font-size="24" font-weight="bold" fill="#ffffff">1 · PLACEMENT</text>
+<text x="90" y="230" font-size="17" fill="#dbeafe">Illicit value first enters the</text>
+<text x="90" y="255" font-size="17" fill="#dbeafe">financial system: cash deposits,</text>
+<text x="90" y="280" font-size="17" fill="#dbeafe">money services, mule accounts.</text>
+<rect x="440" y="150" width="320" height="180" rx="16" fill="#1e3a5f" stroke="#60a5fa" stroke-width="2"/>
+<text x="470" y="195" font-size="24" font-weight="bold" fill="#ffffff">2 · LAYERING</text>
+<text x="470" y="230" font-size="17" fill="#dbeafe">Transfers, conversions and</text>
+<text x="470" y="255" font-size="17" fill="#dbeafe">shell structures obscure the</text>
+<text x="470" y="280" font-size="17" fill="#dbeafe">trail back to the predicate crime.</text>
+<rect x="820" y="150" width="320" height="180" rx="16" fill="#1e3a5f" stroke="#60a5fa" stroke-width="2"/>
+<text x="850" y="195" font-size="24" font-weight="bold" fill="#ffffff">3 · INTEGRATION</text>
+<text x="850" y="230" font-size="17" fill="#dbeafe">Value re-enters the economy</text>
+<text x="850" y="255" font-size="17" fill="#dbeafe">as apparent legitimate wealth:</text>
+<text x="850" y="280" font-size="17" fill="#dbeafe">property, businesses, luxury goods.</text>
+<path d="M380 240 L440 240" stroke="#93c5fd" stroke-width="4" marker-end="url(#a)"/>
+<path d="M760 240 L820 240" stroke="#93c5fd" stroke-width="4" marker-end="url(#a)"/>
+<rect x="60" y="380" width="1080" height="210" rx="16" fill="#172554" stroke="#3b82f6" stroke-width="2"/>
+<text x="90" y="425" font-size="22" font-weight="bold" fill="#ffffff">Why practitioners do not stop at the model</text>
+<text x="90" y="465" font-size="17" fill="#dbeafe">• Trade-based schemes may never place cash. Crypto on/off-ramps can layer in minutes.</text>
+<text x="90" y="500" font-size="17" fill="#dbeafe">• Professional launderers run all three stages as a service for several criminal clients at once.</text>
+<text x="90" y="535" font-size="17" fill="#dbeafe">• Detection therefore watches behaviour and networks — not a stage checklist.</text>
+</g>
+<defs><marker id="a" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L9,3 L0,6 Z" fill="#93c5fd"/></marker></defs>
+</svg>
