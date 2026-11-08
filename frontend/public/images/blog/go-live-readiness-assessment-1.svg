@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700" role="img" aria-label="The six readiness domains, each with the evidence standard it is judged against">
+  <defs>
+    <linearGradient id="hdr" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#0f172a"/>
+      <stop offset="1" stop-color="#1e3a5f"/>
+    </linearGradient>
+  </defs>
+  <rect x="0" y="0" width="1200" height="700" fill="#ffffff"/>
+  <rect x="0" y="0" width="1200" height="92" fill="url(#hdr)"/>
+  <text x="48" y="46" font-family="Georgia, serif" font-size="30" fill="#ffffff">Six Readiness Domains</text>
+  <text x="48" y="74" font-family="Arial, sans-serif" font-size="16" fill="#94A3B8">Each domain judged on its own — against the evidence standard named beneath it</text>
+
+  <!-- row 1 -->
+  <g>
+    <rect x="40" y="130" width="360" height="200" rx="12" fill="#F0F4F8" stroke="#2B6CB0" stroke-width="2"/>
+    <text x="64" y="168" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#1A202C">Data Converted and Reconciled</text>
+    <text x="64" y="200" font-family="Arial, sans-serif" font-size="14" fill="#475569">Employee, job, pay and balance data</text>
+    <text x="64" y="224" font-family="Arial, sans-serif" font-size="14" fill="#475569">converted from the frozen source and</text>
+    <text x="64" y="248" font-family="Arial, sans-serif" font-size="14" fill="#475569">reconciled record by record</text>
+    <text x="64" y="284" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#1A202C">Evidence:</text>
+    <text x="64" y="308" font-family="Arial, sans-serif" font-size="14" fill="#64748B">Signed reconciliation, totals agreed</text>
+  </g>
+  <g>
+    <rect x="420" y="130" width="360" height="200" rx="12" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+    <text x="444" y="168" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#1A202C">Testing and Acceptance</text>
+    <text x="444" y="200" font-family="Arial, sans-serif" font-size="14" fill="#475569">Business users have tested the</text>
+    <text x="444" y="224" font-family="Arial, sans-serif" font-size="14" fill="#475569">outcomes that matter and judged</text>
+    <text x="444" y="248" font-family="Arial, sans-serif" font-size="14" fill="#475569">them acceptable, on the record</text>
+    <text x="444" y="284" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#1A202C">Evidence:</text>
+    <text x="444" y="308" font-family="Arial, sans-serif" font-size="14" fill="#64748B">Business sign-off against criteria</text>
+  </g>
+  <g>
+    <rect x="800" y="130" width="360" height="200" rx="12" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+    <text x="824" y="168" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#1A202C">Training and Adoption</text>
+    <text x="824" y="200" font-family="Arial, sans-serif" font-size="14" fill="#475569">People can run the first live</text>
+    <text x="824" y="224" font-family="Arial, sans-serif" font-size="14" fill="#475569">processes in their roles unaided,</text>
+    <text x="824" y="248" font-family="Arial, sans-serif" font-size="14" fill="#475569">with floor support arranged</text>
+    <text x="824" y="284" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#1A202C">Evidence:</text>
+    <text x="824" y="308" font-family="Arial, sans-serif" font-size="14" fill="#64748B">Observed practice, managers briefed</text>
+  </g>
+
+  <!-- row 2 -->
+  <g>
+    <rect x="40" y="360" width="360" height="200" rx="12" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+    <text x="64" y="398" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#1A202C">Cutover and Rollback</text>
+    <text x="64" y="430" font-family="Arial, sans-serif" font-size="14" fill="#475569">Runbook sequenced and rehearsed,</text>
+    <text x="64" y="454" font-family="Arial, sans-serif" font-size="14" fill="#475569">timings proven, responsibilities</text>
+    <text x="64" y="478" font-family="Arial, sans-serif" font-size="14" fill="#475569">named shift by shift</text>
+    <text x="64" y="514" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#1A202C">Evidence:</text>
+    <text x="64" y="538" font-family="Arial, sans-serif" font-size="14" fill="#64748B">Rehearsal results, rollback agreed</text>
+  </g>
+  <g>
+    <rect x="420" y="360" width="360" height="200" rx="12" fill="#1e3a5f" stroke="#1e3a5f" stroke-width="2"/>
+    <text x="444" y="398" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#ffffff">Support and Hypercare</text>
+    <text x="444" y="430" font-family="Arial, sans-serif" font-size="14" fill="#ffffff">Roster staffed for the hypercare</text>
+    <text x="444" y="454" font-family="Arial, sans-serif" font-size="14" fill="#ffffff">period, escalation paths reaching</text>
+    <text x="444" y="478" font-family="Arial, sans-serif" font-size="14" fill="#ffffff">people who can decide</text>
+    <text x="444" y="514" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#ffffff">Evidence:</text>
+    <text x="444" y="538" font-family="Arial, sans-serif" font-size="14" fill="#94A3B8">Named roster, confirmed cover</text>
+  </g>
+  <g>
+    <rect x="800" y="360" width="360" height="200" rx="12" fill="#ffffff" stroke="#2B6CB0" stroke-width="2"/>
+    <text x="824" y="398" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#1A202C">Governance and Decision</text>
+    <text x="824" y="430" font-family="Arial, sans-serif" font-size="14" fill="#475569">Decision-maker named, criteria</text>
+    <text x="824" y="454" font-family="Arial, sans-serif" font-size="14" fill="#475569">agreed before the review, and a</text>
+    <text x="824" y="478" font-family="Arial, sans-serif" font-size="14" fill="#475569">record kept of the decision</text>
+    <text x="824" y="514" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#1A202C">Evidence:</text>
+    <text x="824" y="538" font-family="Arial, sans-serif" font-size="14" fill="#64748B">Verdicts, conditions, dissent minuted</text>
+  </g>
+
+  <rect x="40" y="586" width="1120" height="84" rx="12" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+  <text x="64" y="620" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#1A202C">Each domain earns its own verdict — Ready, Ready with conditions, or Not ready —</text>
+  <text x="64" y="648" font-family="Arial, sans-serif" font-size="15" fill="#475569">and the weakest verdict sets the terms of the go/no-go decision.</text>
+</svg>
