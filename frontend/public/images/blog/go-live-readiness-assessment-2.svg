@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700" role="img" aria-label="The assessment-to-decision flow: assess the domains, review the evidence, then go, conditional go, or no-go, each leading to a re-check point">
+  <defs>
+    <linearGradient id="hdr" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#0f172a"/>
+      <stop offset="1" stop-color="#1e3a5f"/>
+    </linearGradient>
+    <marker id="arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#2B6CB0"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="1200" height="700" fill="#ffffff"/>
+  <rect x="0" y="0" width="1200" height="92" fill="url(#hdr)"/>
+  <text x="48" y="46" font-family="Georgia, serif" font-size="30" fill="#ffffff">From Assessment to Decision</text>
+  <text x="48" y="74" font-family="Arial, sans-serif" font-size="16" fill="#94A3B8">Evidence first, verdict per domain — then one of three outcomes, each with a re-check</text>
+
+  <!-- stage row -->
+  <g>
+    <rect x="140" y="130" width="420" height="150" rx="12" fill="#F0F4F8" stroke="#2B6CB0" stroke-width="2"/>
+    <text x="164" y="168" font-family="Arial, sans-serif" font-size="19" font-weight="bold" fill="#1A202C">1 · Assess the Domains</text>
+    <text x="164" y="198" font-family="Arial, sans-serif" font-size="14" fill="#475569">Owners present the evidence for</text>
+    <text x="164" y="222" font-family="Arial, sans-serif" font-size="14" fill="#475569">each of the six domains</text>
+    <text x="164" y="252" font-family="Arial, sans-serif" font-size="14" fill="#64748B">Owner: domain owners</text>
+  </g>
+  <path d="M 564 205 L 576 205" stroke="#2B6CB0" stroke-width="3" marker-end="url(#arr)"/>
+  <g>
+    <rect x="580" y="130" width="420" height="150" rx="12" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+    <text x="604" y="168" font-family="Arial, sans-serif" font-size="19" font-weight="bold" fill="#1A202C">2 · Review the Evidence</text>
+    <text x="604" y="198" font-family="Arial, sans-serif" font-size="14" fill="#475569">Artefacts opened and inspected,</text>
+    <text x="604" y="222" font-family="Arial, sans-serif" font-size="14" fill="#475569">a verdict recorded per domain</text>
+    <text x="604" y="252" font-family="Arial, sans-serif" font-size="14" fill="#64748B">Owner: business judges</text>
+  </g>
+
+  <!-- distribution connector -->
+  <path d="M 790 284 L 790 302 L 220 302 L 220 322" fill="none" stroke="#2B6CB0" stroke-width="3" marker-end="url(#arr)"/>
+  <path d="M 600 302 L 600 322" fill="none" stroke="#2B6CB0" stroke-width="3" marker-end="url(#arr)"/>
+  <path d="M 790 302 L 980 302 L 980 322" fill="none" stroke="#2B6CB0" stroke-width="3" marker-end="url(#arr)"/>
+
+  <!-- outcomes row -->
+  <g>
+    <rect x="40" y="326" width="360" height="170" rx="12" fill="#F0F4F8" stroke="#2B6CB0" stroke-width="2"/>
+    <text x="64" y="364" font-family="Arial, sans-serif" font-size="19" font-weight="bold" fill="#1A202C">Go</text>
+    <text x="64" y="394" font-family="Arial, sans-serif" font-size="14" fill="#475569">All domains ready, judged on</text>
+    <text x="64" y="418" font-family="Arial, sans-serif" font-size="14" fill="#475569">evidence the room inspected</text>
+    <text x="64" y="448" font-family="Arial, sans-serif" font-size="14" fill="#64748B">Proceed to cutover as planned</text>
+    <text x="64" y="472" font-family="Arial, sans-serif" font-size="14" fill="#64748B">Conditions outstanding: none</text>
+  </g>
+  <g>
+    <rect x="420" y="326" width="360" height="170" rx="12" fill="#1e3a5f" stroke="#1e3a5f" stroke-width="2"/>
+    <text x="444" y="364" font-family="Arial, sans-serif" font-size="19" font-weight="bold" fill="#ffffff">Conditional Go</text>
+    <text x="444" y="394" font-family="Arial, sans-serif" font-size="14" fill="#ffffff">Gaps remain, each converted into</text>
+    <text x="444" y="418" font-family="Arial, sans-serif" font-size="14" fill="#ffffff">a named condition with an owner</text>
+    <text x="444" y="448" font-family="Arial, sans-serif" font-size="14" fill="#94A3B8">Proceed, re-check scheduled</text>
+    <text x="444" y="472" font-family="Arial, sans-serif" font-size="14" fill="#94A3B8">Every condition closable in time</text>
+  </g>
+  <g>
+    <rect x="800" y="326" width="360" height="170" rx="12" fill="#ffffff" stroke="#E2E8F0" stroke-width="2"/>
+    <text x="824" y="364" font-family="Arial, sans-serif" font-size="19" font-weight="bold" fill="#1A202C">No-Go, with Re-Plan</text>
+    <text x="824" y="394" font-family="Arial, sans-serif" font-size="14" fill="#475569">A domain not ready, or too many</text>
+    <text x="824" y="418" font-family="Arial, sans-serif" font-size="14" fill="#475569">conditions to close honestly</text>
+    <text x="824" y="448" font-family="Arial, sans-serif" font-size="14" fill="#64748B">Re-plan, recover, re-assess</text>
+    <text x="824" y="472" font-family="Arial, sans-serif" font-size="14" fill="#64748B">The evidence sets the new date</text>
+  </g>
+
+  <!-- converge to re-check -->
+  <path d="M 600 500 L 600 528" fill="none" stroke="#2B6CB0" stroke-width="3" marker-end="url(#arr)"/>
+
+  <rect x="40" y="532" width="1120" height="118" rx="12" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+  <text x="64" y="572" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#1A202C">3 · The Re-Check Point</text>
+  <text x="64" y="602" font-family="Arial, sans-serif" font-size="15" fill="#475569">Every outcome leads here: conditions are judged closed on fresh evidence, dissent stays</text>
+  <text x="64" y="626" font-family="Arial, sans-serif" font-size="15" fill="#475569">on the record, and a condition that has not closed reopens the decision before cutover.</text>
+</svg>
