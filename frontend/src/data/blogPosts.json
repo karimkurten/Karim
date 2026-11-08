@@ -1,5 +1,318 @@
 [
   {
+    "slug": "go-live-readiness-assessment",
+    "title": "The Go-Live Readiness Assessment",
+    "excerpt": "Assess go-live readiness by evidence, not task completion: six domains, conditional-go rules, and the formal review before the go/no-go decision.",
+    "publishedAt": "2026-11-08",
+    "readingTime": "8 min read",
+    "cover": "/images/blog/go-live-readiness-assessment-cover.webp",
+    "tags": [
+      "HCM",
+      "Implementation",
+      "Go-Live",
+      "Readiness"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "A go/no-go decision is only as honest as the judgement that precedes it. The go-live readiness assessment is that judgement, made formal: a structured review in which readiness is assessed domain by domain, against evidence, before anyone commits the organisation to a cutover date. It sits inside [the cutover planning runbook](/blog/cutover-planning-runbook) as the last analytical step before the decision — where the programme stops reporting progress and starts proving it."
+      },
+      {
+        "type": "p",
+        "text": "The output is not a percentage and not a mood. Each domain receives a qualitative verdict — ready, ready with conditions, or not ready — supported by evidence a reviewer can inspect. A domain nobody can evidence is not ready."
+      },
+      {
+        "type": "h2",
+        "text": "An assessment is not a checklist"
+      },
+      {
+        "type": "p",
+        "text": "A checklist counts tasks: items completed, boxes closed, owners reporting done. That count is useful, and [the HCM go-live checklist](/blog/hcm-go-live-checklist) remains the right tool for tracking the work itself. But completion and readiness are different claims. Every task in a domain can be complete while the domain is not ready — testing finished, for example, while the business has never judged the results acceptable. Completion says the work was done; readiness says the outcome holds."
+      },
+      {
+        "type": "p",
+        "text": "The assessment asks a harder question: not \"is it finished?\" but \"what proves it will work on the first live day?\" The answer must be evidence — an artefact, a reconciliation, a rehearsal result, a signed judgement — reviewed by someone other than its producer. Where the only support is an assurance, the honest verdict is ready with conditions at best."
+      },
+      {
+        "type": "img",
+        "src": "/images/blog/go-live-readiness-assessment-1.svg",
+        "alt": "Six readiness domains diagram: Data Converted and Reconciled, Testing and Acceptance, Training and Adoption, Cutover and Rollback, Support and Hypercare, and Governance and Decision - each with its evidence standard, from a signed reconciliation to minuted verdicts and dissent.",
+        "caption": "Six readiness domains: each is judged against its own evidence standard, and each earns its own verdict."
+      },
+      {
+        "type": "h2",
+        "text": "The six readiness domains"
+      },
+      {
+        "type": "p",
+        "text": "Six domains cover the ground a go-live can fail on. Judge each separately, because a strong domain cannot compensate for a weak one: flawless data does not rescue an unstaffed support model."
+      },
+      {
+        "type": "p",
+        "text": "Data converted and reconciled. The converted data has been reconciled to the source and accepted by its business owners — control totals agreed, exceptions dispositioned, the final extract protected by the discipline in [data freeze planning](/blog/data-freeze-planning). The evidence is the signed reconciliation, not the conversion log."
+      },
+      {
+        "type": "p",
+        "text": "Testing and acceptance judged by the business. Testing is complete enough, and — the part that matters — the business has judged the outcomes acceptable against criteria agreed in advance, as set out in [the UAT sign-off criteria](/blog/uat-sign-off-criteria). The acceptance signature belongs to the business, not the delivery team."
+      },
+      {
+        "type": "p",
+        "text": "Training and adoption readiness. The people who will run the first live processes are trained by role and can perform those tasks unaided, managers know what changes for their teams, and floor support is arranged. Completion records are weak evidence; observed practice is stronger."
+      },
+      {
+        "type": "p",
+        "text": "Cutover and rollback preparedness. The runbook is sequenced and rehearsed, its timings proven rather than estimated, responsibilities named shift by shift, and rollback triggers, decision point, and return path agreed before the weekend. A rollback plan never walked through is a document, not a capability."
+      },
+      {
+        "type": "p",
+        "text": "Support and hypercare readiness. The roster is staffed for the hypercare period, escalation paths reach people who can decide, triage runs on a stated rhythm, and cover spans every location and time zone in scope. The evidence is a named roster with confirmed availability."
+      },
+      {
+        "type": "p",
+        "text": "Governance and decision readiness. The go/no-go decision-maker is named, the criteria they will apply were agreed in advance, conditions and dissent will be recorded, and communication routes for either outcome are prepared."
+      },
+      {
+        "type": "h2",
+        "text": "Evidence over attestation"
+      },
+      {
+        "type": "p",
+        "text": "The operating rule is simple: show it, do not claim it. Attestation — an owner reporting confidence — is where weak readiness hides, because confidence is cheapest where scrutiny has been lightest. Evidence reverses the burden. Before the assessment, each domain agrees its evidence standard: the artefacts that will be inspected. At the review, the artefacts are opened, not described."
+      },
+      {
+        "type": "p",
+        "text": "This is not distrust; it is what makes a ready verdict worth anything afterwards. When the first live week gets difficult, the programme that assessed by evidence can point to what was proven and isolate what was not. The programme that assessed by assurance has nothing to point to."
+      },
+      {
+        "type": "steps",
+        "label": "Running the assessment, in order",
+        "intro": "Six moves that turn a readiness review into a verdict the go/no-go decision can safely inherit.",
+        "items": [
+          {
+            "title": "Agree the domains and evidence standards early",
+            "text": "Name the readiness domains and, for each one, the specific evidence that will be inspected — the reconciliation, the acceptance record, the roster, the rehearsal result. Standards set at the review itself will quietly bend toward whatever happens to be available."
+          },
+          {
+            "title": "Run an early warning pass",
+            "text": "Assess once while there is still time to fix what you find. Domains judged not ready at this pass get owners, dates, and a recovery path; the pass exists to surface problems, not to rehearse a verdict."
+          },
+          {
+            "title": "Have owners present evidence, not status",
+            "text": "Each domain owner brings the artefacts themselves and walks the reviewers through them. A summary slide about evidence is attestation in a new costume; open the reconciliation, the sign-off record, and the roster."
+          },
+          {
+            "title": "Record a verdict per domain",
+            "text": "Each domain is judged ready, ready with conditions, or not ready, by the business leaders accountable for living with the outcome. Verdicts are recorded domain by domain, never blended into a single average that hides the weak one."
+          },
+          {
+            "title": "Convert gaps into named conditions",
+            "text": "Every condition gets a plain statement of what must be true, a named owner, a date, and the re-check at which it will be judged closed. A condition without a re-check is a hope recorded in nicer language."
+          },
+          {
+            "title": "Hold the final pass close to cutover",
+            "text": "Re-assess shortly before the decision, confirm which early conditions have closed with fresh evidence, and hand the decision-maker a record: verdicts, conditions, dissent, and the evidence each verdict rests on."
+          }
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Readiness across the border: Canada and US payroll"
+      },
+      {
+        "type": "p",
+        "text": "In a combined Canada and United States programme, readiness is per jurisdiction, not blended. Payroll evidence satisfying one side of the border says nothing about the other: statutory calendars, filing deadlines, and deduction rules differ, and a domain can be ready for one population while unready for the other. Judge the payroll-facing domains — data, testing, and support — jurisdiction by jurisdiction, with evidence presented separately for each. An averaged verdict across two jurisdictions is precisely the summary an assessment exists to prevent."
+      },
+      {
+        "type": "h2",
+        "text": "Timing: assess twice, not once"
+      },
+      {
+        "type": "p",
+        "text": "A single assessment, held at the end, can only deliver a verdict; it cannot improve one. Assess at least twice. The early warning pass, held while recovery is still possible, finds the domains quietly behind and gives them owners and dates. The final pass, close to cutover, judges what the early pass found: conditions closed on fresh evidence, or still open and priced into the decision."
+      },
+      {
+        "type": "p",
+        "text": "Rehearsals feed both passes. The timings and rollback walk-through proven in [mock go-lives and dress rehearsals](/blog/mock-go-lives-dress-rehearsals) are among the strongest evidence the cutover domain can present. An assessment drawing on rehearsal results judges performance; one that cannot judges intentions."
+      },
+      {
+        "type": "h2",
+        "text": "The assessment meeting itself"
+      },
+      {
+        "type": "p",
+        "text": "Who sits in the room decides what the assessment is worth. Domain owners present evidence; they do not judge their own domains. The judging belongs to the business leaders who will live with the outcome — the HR, payroll, finance, and operations owners of the first live processes — with the programme lead facilitating."
+      },
+      {
+        "type": "p",
+        "text": "Dissent is part of the record, not a problem to be managed away. When a judge believes a domain is not ready and the room decides otherwise, that view is minuted with its reasoning, alongside the verdict. The minute protects everyone: the dissenter was heard, the majority owns its call, and if the concern proves right, the programme knows where to look."
+      },
+      {
+        "type": "img",
+        "src": "/images/blog/go-live-readiness-assessment-2.svg",
+        "alt": "Assessment-to-decision flow diagram: Assess the Domains, then Review the Evidence, leading to three outcomes - Go, Conditional Go with named conditions, and No-Go with Re-Plan - all converging on a Re-Check Point where conditions are judged closed on fresh evidence.",
+        "caption": "From assessment to decision: evidence review produces one of three outcomes, and every outcome carries a re-check point."
+      },
+      {
+        "type": "h2",
+        "text": "How a conditional go works"
+      },
+      {
+        "type": "p",
+        "text": "Most real programmes land between the clean go and the honest no-go, and the conditional go exists for them — provided it runs as a control rather than a compromise. A condition is a specific, closable gap: the evidence that must exist, its owner, its due date, and the re-check at which a named judge confirms it closed. Conditions are few, written, and visible to everyone at the decision."
+      },
+      {
+        "type": "p",
+        "text": "Two failure patterns corrupt the mechanism. The first is the condition that cannot close in the time allowed, accepted anyway to protect the date. The second is volume: a go carrying a long tail of conditions is a no-go nobody wanted to say aloud. When conditions multiply, the honest move is to name that and re-plan."
+      },
+      {
+        "type": "h2",
+        "text": "Common mistakes"
+      },
+      {
+        "type": "p",
+        "text": "Most weak assessments fail the same few ways: they measure completion instead of proof, average away the weak domain, or let conditions substitute for a decision."
+      },
+      {
+        "type": "accordion",
+        "label": "Readiness mistakes, as a diagnostic",
+        "items": [
+          {
+            "q": "Scoring readiness from task completion",
+            "a": "A domain with every task closed can still be unready, because completion records that work happened, not that the outcome holds. Judge the evidence for the outcome — the reconciliation, the acceptance, the rehearsal — and let task lists stay in the checklist where they belong."
+          },
+          {
+            "q": "Accepting attestation instead of evidence",
+            "a": "An owner reporting confidence is the weakest form of proof, and it concentrates exactly where scrutiny has been lightest. Agree the evidence standard per domain in advance, and open the artefacts at the review rather than hearing them described."
+          },
+          {
+            "q": "Blending domains into one overall score",
+            "a": "A single averaged score lets a strong domain subsidise a failing one, and go-lives fail in the failing domain. Record a verdict per domain, and let the weakest verdict set the terms of the decision."
+          },
+          {
+            "q": "Assessing once, at the end",
+            "a": "A single late assessment can only announce problems, not fix them. Run an early warning pass while recovery is still possible, then a final pass that judges whether the early conditions actually closed, on fresh evidence."
+          },
+          {
+            "q": "Letting conditions replace the decision",
+            "a": "Conditions are for specific, closable gaps with an owner, a date, and a re-check. A conditional go carrying a long tail of conditions, or conditions that cannot close in the time allowed, is a no-go the room was unwilling to name."
+          },
+          {
+            "q": "Silencing or forgetting dissent",
+            "a": "A judge who believes a domain is not ready is giving the programme information. Minute the dissent with its reasoning, decide openly, and keep the record — if the concern proves right, it tells the team exactly where to look first."
+          }
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Key Takeaways"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "An assessment judges outcomes against evidence; a checklist counts tasks. The decision needs the assessment.",
+          "Judge six domains separately — data, testing and acceptance, training and adoption, cutover and rollback, support and hypercare, governance — with a verdict for each.",
+          "Evidence over attestation: agree each domain's evidence standard in advance, and inspect the artefacts.",
+          "A conditional go is a control: conditions named, owned, dated, and closed at a re-check — or the answer is no-go.",
+          "Assess twice, minute the dissent, and judge payroll readiness per jurisdiction."
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Frequently Asked Questions"
+      },
+      {
+        "type": "p",
+        "text": "How is a readiness assessment different from a go-live checklist? A checklist tracks whether tasks are complete; an assessment judges whether the outcomes those tasks were meant to produce are actually proven. Its verdicts rest on inspected evidence — reconciliations, acceptance records, rehearsal results — not completion counts."
+      },
+      {
+        "type": "p",
+        "text": "Who should judge readiness? The business leaders who will own the first live processes — HR, payroll, finance, and operations — judging evidence presented by the domain owners. Owners present; they do not grade their own domains."
+      },
+      {
+        "type": "p",
+        "text": "When is a conditional go the right call? When the remaining gaps are few, specific, and genuinely closable before their re-check: each condition has a named owner, a date, and a judge who will confirm closure on fresh evidence. If conditions are numerous or cannot close in time, the conditional go disguises a no-go."
+      },
+      {
+        "type": "p",
+        "text": "How early should the first assessment run? Early enough that a not-ready verdict can still change the plan — while owners can be assigned, evidence produced, and dates reconsidered. A first assessment held days before cutover is a verdict, not a management tool."
+      },
+      {
+        "type": "h2",
+        "text": "Next Steps"
+      },
+      {
+        "type": "p",
+        "text": "Take your next go-live and write the assessment before you need it: the six domains, the evidence standard for each, the two assessment dates, the judges, and the condition format — named, owned, dated, re-checked. Then run the early pass and read its results without flinching. Every weak verdict is a problem found while it was still cheap."
+      },
+      {
+        "type": "quiz",
+        "label": "Check your understanding",
+        "questions": [
+          {
+            "q": "A domain owner reports every task complete and the team confident, but the reconciliation artefact has not been reviewed by the business owners of the data. What is the honest verdict for that domain?",
+            "options": [
+              {
+                "text": "Ready, because task completion and team confidence together are sufficient grounds",
+                "correct": false,
+                "why": "Completion records that work happened and confidence records how the team feels; neither proves the outcome. The assessment exists precisely to separate those claims from readiness."
+              },
+              {
+                "text": "Ready with conditions at best, with the business review of the reconciliation named as a condition with an owner, a date, and a re-check",
+                "correct": true,
+                "why": "The evidence standard for the data domain is a reconciliation the business has inspected and accepted. Until that exists, the strongest honest verdict carries it as a named, owned, dated condition."
+              },
+              {
+                "text": "Not ready, and the whole go-live must stop immediately",
+                "correct": false,
+                "why": "A single missing evidence item in one domain is what the conditional mechanism is for. Escalating every gap to a full stop teaches teams to hide gaps instead of surfacing them."
+              }
+            ]
+          },
+          {
+            "q": "Five domains are judged ready and one, support and hypercare, is judged not ready. The programme lead proposes an overall verdict of ready, since most domains passed. What is wrong with that proposal?",
+            "options": [
+              {
+                "text": "Nothing — readiness is an average, and five of six is a strong result",
+                "correct": false,
+                "why": "Go-lives do not fail on average; they fail in the weak domain. An unstaffed support model will be exactly where the first live week breaks, regardless of how strong the other domains are."
+              },
+              {
+                "text": "The arithmetic is fine but the result should be recorded differently",
+                "correct": false,
+                "why": "The problem is not presentation. Blending verdicts changes the decision itself, by letting strong domains subsidise a failing one the organisation will have to live with."
+              },
+              {
+                "text": "Verdicts are recorded per domain and never blended: the not-ready domain sets the terms, so the outcome is a conditional go with that domain's recovery as the condition, or a no-go",
+                "correct": true,
+                "why": "Separate verdicts are the assessment's core protection. The weakest domain defines the risk of the decision, and the decision has to answer it directly rather than average it away."
+              }
+            ]
+          },
+          {
+            "q": "At the final pass, a programme carries a conditional go with many open conditions, several of which cannot realistically close before cutover. What should the assessment record say?",
+            "options": [
+              {
+                "text": "That the conditions roll into hypercare and will be managed as live issues",
+                "correct": false,
+                "why": "Rolling unclosable conditions into hypercare converts known readiness gaps into live incidents and removes the re-check that made them conditions rather than surprises."
+              },
+              {
+                "text": "That the honest reading is a no-go with a re-plan: conditions are a control for few, specific, closable gaps, and a long tail of unclosable ones means the evidence does not support going",
+                "correct": true,
+                "why": "The conditional go works only while conditions stay few and closable. When they multiply beyond that, naming the no-go and re-planning is the decision the evidence has already made."
+              },
+              {
+                "text": "That the conditions be reworded more generally so they can be marked closed",
+                "correct": false,
+                "why": "Rewording a condition to make it closable destroys the record's honesty and leaves the underlying gap in place, unowned, to surface during the first live week instead."
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
     "slug": "data-freeze-planning",
     "title": "Data Freeze Planning and Communication",
     "excerpt": "Data freeze planning for HCM cutover — what freezes, what continues, freeze types, exception control, and the T-minus communication plan.",
