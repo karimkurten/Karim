@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-label="The five lenses of an enterprise AML risk assessment">
+<rect width="1200" height="675" fill="#0f172a"/>
+<text x="60" y="70" font-family="Arial, sans-serif" font-size="34" font-weight="bold" fill="#ffffff">Five Lenses of an AML Risk Assessment</text>
+<text x="60" y="105" font-family="Arial, sans-serif" font-size="18" fill="#bfdbfe">Score each lens on evidence. A risk you cannot evidence is an opinion, not an assessment.</text>
+<g font-family="Arial, sans-serif" font-size="17">
+<rect x="60" y="150" width="340" height="140" rx="14" fill="#1e3a5f" stroke="#60a5fa" stroke-width="2"/><text x="85" y="190" font-size="21" font-weight="bold" fill="#ffffff">CUSTOMERS</text><text x="85" y="222" fill="#dbeafe">Who they are, beneficial owners,</text><text x="85" y="247" fill="#dbeafe">PEPs, complexity, opacity</text>
+<rect x="430" y="150" width="340" height="140" rx="14" fill="#1e3a5f" stroke="#60a5fa" stroke-width="2"/><text x="455" y="190" font-size="21" font-weight="bold" fill="#ffffff">PRODUCTS &amp; SERVICES</text><text x="455" y="222" fill="#dbeafe">Cash intensity, anonymity,</text><text x="455" y="247" fill="#dbeafe">speed, cross-border reach</text>
+<rect x="800" y="150" width="340" height="140" rx="14" fill="#1e3a5f" stroke="#60a5fa" stroke-width="2"/><text x="825" y="190" font-size="21" font-weight="bold" fill="#ffffff">TRANSACTIONS</text><text x="825" y="222" fill="#dbeafe">Volume, value, velocity,</text><text x="825" y="247" fill="#dbeafe">structuring potential</text>
+<rect x="245" y="330" width="340" height="140" rx="14" fill="#1e3a5f" stroke="#60a5fa" stroke-width="2"/><text x="270" y="370" font-size="21" font-weight="bold" fill="#ffffff">GEOGRAPHY</text><text x="270" y="402" fill="#dbeafe">Countries of operation, sourcing</text><text x="270" y="427" fill="#dbeafe">and destination, sanctions exposure</text>
+<rect x="615" y="330" width="340" height="140" rx="14" fill="#1e3a5f" stroke="#60a5fa" stroke-width="2"/><text x="640" y="370" font-size="21" font-weight="bold" fill="#ffffff">DELIVERY CHANNELS</text><text x="640" y="402" fill="#dbeafe">Digital onboarding, agents,</text><text x="640" y="427" fill="#dbeafe">intermediaries, non-face-to-face</text>
+<rect x="60" y="510" width="1080" height="105" rx="14" fill="#172554" stroke="#3b82f6" stroke-width="2"/>
+<text x="90" y="552" font-size="19" font-weight="bold" fill="#ffffff">Output: inherent risk → controls → residual risk → risk appetite decision</text>
+<text x="90" y="582" font-size="16" fill="#dbeafe">If residual risk sits above appetite, the answer is more control, a narrower offer — or exit. Never a quieter register.</text>
+</g>
+</svg>
