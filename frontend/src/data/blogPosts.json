@@ -1,5 +1,302 @@
 [
   {
+    "slug": "project-managers-guide-to-go-live",
+    "title": "Project Manager's Guide to Go-Live",
+    "excerpt": "The project manager's guide to go-live: chairing go/no-go, commanding the cutover weekend, holding scope, leading hypercare, and closing well.",
+    "publishedAt": "2026-11-09",
+    "readingTime": "8 min read",
+    "cover": "/images/blog/project-managers-guide-to-go-live-cover.webp",
+    "tags": [
+      "HCM",
+      "Implementation",
+      "Go-Live",
+      "Project Management"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "Most implementation work rewards a project manager for keeping many things moving at once. Go-live rewards something narrower and harder: one person visibly owning the decisions, the rhythm, and the record while the organisation crosses from project to live operation. The artefacts matter — [the cutover planning runbook](/blog/cutover-planning-runbook) sequences the work — but artefacts do not chair a difficult meeting, refuse a late change, or make the call in the middle of the night. The project manager does."
+      },
+      {
+        "type": "p",
+        "text": "That makes go-live a distinct discipline, not delivery's last phase. Your product is no longer progress; it is judgement under time pressure, communicated clearly enough for everyone to act on at once."
+      },
+      {
+        "type": "h2",
+        "text": "The job changes at go-live"
+      },
+      {
+        "type": "p",
+        "text": "Earlier in an implementation, ownership is distributed: workstream leads run their areas while the PM integrates, unblocks, and reports. As go-live approaches, that model inverts. Decisions that were safely parallel must be sequenced through one point, because two teams acting on different assumptions during cutover costs more than a short wait for a single decision. Centralising decisions is not a power preference; it is how a weekend with no slack stays coherent."
+      },
+      {
+        "type": "p",
+        "text": "The shift is also emotional: the PM becomes the person who absorbs pressure on the team's behalf. Holding it — without passing it down as panic or upward as false reassurance — is the final weeks' real work, because teams copy the register of the person chairing."
+      },
+      {
+        "type": "img",
+        "src": "/images/blog/project-managers-guide-to-go-live-1.svg",
+        "alt": "The project manager's go-live arc diagram: five phases - Readiness, The Decision, Cutover Weekend, First Live Cycle, and Hypercare Exit and Closure - each panel stating the command responsibility the project manager personally carries in that phase.",
+        "caption": "The PM's go-live arc: five phases, each with the command responsibility the project manager personally owns."
+      },
+      {
+        "type": "h2",
+        "text": "Chairing the go/no-go decision"
+      },
+      {
+        "type": "p",
+        "text": "The project manager rarely owns the go/no-go decision — that belongs to the business leaders who will live with the outcome — but the PM almost always chairs it, and chairing is its own responsibility. The chair sets the criteria, agreed before the meeting rather than invented inside it, and protects the sequence: evidence first, verdicts second, decision last."
+      },
+      {
+        "type": "p",
+        "text": "That evidence is inherited, not improvised: a well-run chair builds the meeting on [the go-live readiness assessment](/blog/go-live-readiness-assessment) and its domain-by-domain verdicts, not on fresh status reporting. If a domain arrives without evidence, the chair names that plainly instead of letting confidence fill the gap, and records dissent — a leader's not-ready view, minuted with its reasoning, is the first place to look if the concern proves right."
+      },
+      {
+        "type": "p",
+        "text": "Two disciplines separate a chaired decision from a drifted one. The first is the rollback point, confirmed before cutover: the moment after which returning is no longer the plan, and who may call a rollback before it. The second is communication — either outcome leaves the room with a prepared message, a named sender, and a sending time."
+      },
+      {
+        "type": "steps",
+        "label": "The PM's go-live arc, in order",
+        "intro": "Six moves that carry a project manager from preparation to proper closure, in the order the responsibility actually arrives.",
+        "items": [
+          {
+            "title": "Confirm your decision rights early",
+            "text": "Agree, well before the final weeks, what you may decide alone, what you recommend, and what belongs to the sponsor and business owners — including who can call a pause or a rollback. Decision rights negotiated during the weekend are negotiated too late."
+          },
+          {
+            "title": "Chair readiness into a decision",
+            "text": "Build the go/no-go meeting on the readiness verdicts, sequence evidence before opinions, record conditions and dissent, and leave the room with one communicated outcome. Your product is a decision the organisation can act on, not a meeting that went well."
+          },
+          {
+            "title": "Freeze the scope you will defend",
+            "text": "From an agreed point, every late change is a decision with a price stated aloud — what it displaces, what it risks, and who accepts that risk. Protect the freeze personally, because nobody else in the room is positioned to."
+          },
+          {
+            "title": "Command the cutover weekend",
+            "text": "Run the weekend on a stated rhythm: checkpoints at set times, one issue log, triage that separates noise from blockers, and updates that go out on schedule whether the news is good or not. Predictability is the service you provide."
+          },
+          {
+            "title": "Lead the first live cycle in person",
+            "text": "Stay visibly present through the first live processes and the first pay cycle, run hypercare triage on its rhythm, and judge issues by business impact rather than arrival order. Presence in the hard first days is what the organisation remembers."
+          },
+          {
+            "title": "Close the project deliberately",
+            "text": "Exit hypercare against agreed criteria, hand every open item to a named operational owner, capture the lessons while they are still specific, and close the record. A project that fades out leaves its loose ends for operations to find."
+          }
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Holding scope and schedule under pressure"
+      },
+      {
+        "type": "p",
+        "text": "Every go-live attracts late scope, dressed as reasonableness: a small report, one more approval step, a minor population. Some of it is genuinely valuable. The discipline is not refusal, but pricing: every late request pays for itself in the open — what it displaces, what retesting it triggers, what risk the requester accepts on the record. What survives that pricing is a decision; the rest was never as small as it sounded."
+      },
+      {
+        "type": "p",
+        "text": "[The HCM go-live checklist](/blog/hcm-go-live-checklist) shows what is already committed and what a new item would join, turning an argument about importance into a conversation about capacity. Schedule discipline works the same way: when a task slips, re-plan from the slip rather than quietly compressing later tasks and hoping the weekend absorbs it."
+      },
+      {
+        "type": "p",
+        "text": "In a combined Canada and United States programme, this discipline is per jurisdiction: a late payroll change may be trivial on one side of the border and a statutory problem on the other. The PM need not be the payroll expert, and never improvises compliance judgements — that advice belongs to payroll and tax specialists. The PM routes the question to them before accepting the change, and refuses one blended answer for two jurisdictions."
+      },
+      {
+        "type": "h2",
+        "text": "In command during the cutover weekend"
+      },
+      {
+        "type": "p",
+        "text": "The cutover weekend runs on rhythm, not heroics. Before it begins, the project manager publishes the cadence and then keeps it: checkpoints at stated times, a single issue log everyone can see, and scheduled updates to sponsors and business leaders that go out even when nothing has changed — because silence is what stakeholders experience as failure."
+      },
+      {
+        "type": "p",
+        "text": "Triage is the PM's core weekend skill. Issues arrive undifferentiated — a blocker that stops the sequence, a defect with a workaround, a question that only feels urgent — and triage separates them by one test: does this stop the next runbook step, or put a live process at risk? Blockers get an owner, a decision path, and the next update time before the conversation ends. Everything else is logged, sequenced, and visibly not lost, so the team can leave it alone."
+      },
+      {
+        "type": "p",
+        "text": "Escalation must be designed before it is needed: named levels, named people, and what each level may decide. The rehearsals in [mock go-lives and dress rehearsals](/blog/mock-go-lives-dress-rehearsals) are where that design earns credibility — an escalation path first used live, at night, under pressure, is a hope rather than a mechanism. The PM also protects the team itself: shifts honoured, handovers explicit, rest defended."
+      },
+      {
+        "type": "img",
+        "src": "/images/blog/project-managers-guide-to-go-live-2.svg",
+        "alt": "Escalation and communication cadence flow diagram for the cutover weekend: an issue is raised, triaged by the project manager, decided at one of three levels - Workstream Lead, Project Manager, or Sponsor and Business Owners - and closed by a scheduled communication update.",
+        "caption": "Cutover weekend cadence: every issue moves through triage and a named decision level, and every decision returns as a scheduled update."
+      },
+      {
+        "type": "h2",
+        "text": "The first live cycle and hypercare"
+      },
+      {
+        "type": "p",
+        "text": "Go-live day is the midpoint of the PM's responsibility, not the end. The first live processes — the first transactions, the first approvals, and above all the first pay cycle — are where the organisation decides whether the programme told the truth. The project manager stays visible through them, chairing hypercare triage and insisting issues are prioritised by business impact, not volume."
+      },
+      {
+        "type": "p",
+        "text": "Hypercare entry should be as deliberate as cutover itself. The PM confirms the roster, the triage rhythm, and the escalation path into operations — and, critically, the exit criteria, agreed before hypercare begins. Without them, hypercare ends by exhaustion or drift, and the boundary with normal operations never forms. With them, exit is judged on evidence, within the wider arc of [the complete guide to HCM implementation](/blog/complete-guide-hcm-implementation)."
+      },
+      {
+        "type": "h2",
+        "text": "Closing the project properly"
+      },
+      {
+        "type": "p",
+        "text": "A project manager's last go-live duty is an ending. Open items are handed to named operational owners with dates, not released into a shared inbox. Outstanding conditions from the go/no-go decision are confirmed closed or formally transferred, and the record is filed where operations can find it. The lessons review happens while the experience is still specific — what the rehearsals caught, where the runbook misjudged time — not months later, when only generalities survive."
+      },
+      {
+        "type": "p",
+        "text": "Closure also returns the organisation to its owners: reporting stops, and business leaders resume unshared ownership of the live processes. Leaving cleanly, with no dependency on your continued presence, is the final proof the go-live was managed rather than merely survived."
+      },
+      {
+        "type": "h2",
+        "text": "Common mistakes"
+      },
+      {
+        "type": "p",
+        "text": "Most difficult go-lives are not undone by technical failure. They are undone by ownership failures — decisions nobody clearly held, pressure nobody absorbed, and endings nobody managed."
+      },
+      {
+        "type": "accordion",
+        "label": "Go-live leadership mistakes, as a diagnostic",
+        "items": [
+          {
+            "q": "Letting the go/no-go meeting drift into status reporting",
+            "a": "Status tells the room what happened; a decision meeting must judge evidence and commit. Chair the sequence — criteria agreed in advance, verdicts per domain, dissent recorded, one decision with a prepared communication — or the meeting ends with a mood instead of an outcome."
+          },
+          {
+            "q": "Accepting late scope to keep people happy",
+            "a": "Unpriced kindness in the final weeks is paid for during cutover. Make every late request state what it displaces, what retesting it triggers, and who accepts the risk on the record. Requests that survive that pricing are legitimate decisions; the rest were never small."
+          },
+          {
+            "q": "Communicating only when there is news",
+            "a": "Stakeholders experience silence as failure, often before anything has actually failed. Publish the update cadence before the weekend and keep it when the update is that nothing has changed. Predictable communication is what buys the team room to work."
+          },
+          {
+            "q": "Triaging by volume instead of impact",
+            "a": "The loudest issue is rarely the one stopping the sequence. Triage by a single test — does this block the next runbook step or put a live process at risk — give blockers an owner and a decision path, and keep everything else logged and visibly sequenced."
+          },
+          {
+            "q": "Treating go-live day as the finish line",
+            "a": "The first live cycle is where the organisation judges whether the programme told the truth. Stay visible through it, run hypercare on its rhythm, and agree the exit criteria before hypercare starts, so the end is judged on evidence rather than exhaustion."
+          },
+          {
+            "q": "Letting the project fade out instead of closing it",
+            "a": "Open items without named owners, unfiled decisions, and a lessons review held too late are the loose ends operations inherits. Hand over every item to a named owner, close the record, and capture lessons while they are still specific."
+          }
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Key Takeaways"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "At go-live the PM's product changes from progress to judgement: decisions, rhythm, and the record, owned personally.",
+          "Chair the go/no-go on evidence and pre-agreed criteria; record dissent, and communicate the outcome as part of the decision.",
+          "Price every late change in the open — what it displaces, what it risks, who accepts it — per jurisdiction, through the specialists.",
+          "Command the weekend on a stated cadence: checkpoints, one issue log, triage by impact, updates on schedule.",
+          "Stay through the first live cycle, exit hypercare against pre-agreed criteria, and close the project deliberately."
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Frequently Asked Questions"
+      },
+      {
+        "type": "p",
+        "text": "Does the project manager make the go/no-go decision? Usually the PM chairs it rather than owning it: the business leaders who will live with the outcome decide. The chair owns the decision's quality — criteria agreed in advance, evidence per domain, dissent recorded, the outcome communicated promptly."
+      },
+      {
+        "type": "p",
+        "text": "What should the PM do when a cutover task slips badly? Re-plan from the slip at the next checkpoint: restate what the delay changes downstream and what decision is now needed. Quiet compression only hides the problem until a worse hour."
+      },
+      {
+        "type": "p",
+        "text": "How often should stakeholders be updated during the cutover weekend? On a cadence published before the weekend begins — updates at stated times, sent whether or not there is news. Predictability is the point: stakeholders who know when the next update arrives can let the team work."
+      },
+      {
+        "type": "p",
+        "text": "When does the project manager's go-live responsibility end? After the first live cycle has run under hypercare, the pre-agreed exit criteria are met, open items sit with named owners, and the record is closed. Go-live day is the midpoint, not the end."
+      },
+      {
+        "type": "h2",
+        "text": "Next Steps"
+      },
+      {
+        "type": "p",
+        "text": "Before your next go-live, write down what belongs to you personally: your decision rights and who holds the rest, the go/no-go criteria and chairing plan, the freeze point you will defend, the weekend cadence you will publish, and the hypercare exit criteria. If any line is blank, that is the conversation to have this week — while it is still a conversation, not yet a weekend."
+      },
+      {
+        "type": "quiz",
+        "label": "Check your understanding",
+        "questions": [
+          {
+            "q": "Two days before cutover, a senior stakeholder asks for one more approval step to be added, describing it as small. What is the project manager's disciplined response?",
+            "options": [
+              {
+                "text": "Accept it to preserve goodwill, since refusing senior stakeholders so close to go-live damages the relationship",
+                "correct": false,
+                "why": "Goodwill bought with unpriced scope is repaid during cutover, when the added step meets real data and real deadlines. The relationship is better served by an honest price now than by a failure the stakeholder will also remember."
+              },
+              {
+                "text": "Price it in the open: what it displaces, what configuration and retesting it triggers, and who accepts that risk on the record — then let the decision be made on that basis",
+                "correct": true,
+                "why": "The discipline is not automatic refusal; it is making the true cost visible before the decision. A request that survives honest pricing is a legitimate decision, and one that does not was never as small as it sounded."
+              },
+              {
+                "text": "Refuse all changes after the freeze point without discussion, whatever their merit",
+                "correct": false,
+                "why": "A freeze that cannot price an exception becomes theatre, and genuinely necessary changes get smuggled in instead. The freeze works because exceptions are possible — visibly, priced, and owned."
+              }
+            ]
+          },
+          {
+            "q": "During the cutover weekend, several issues arrive at once: a loud complaint about a report format, and a quiet note that a step in the sequence cannot start. How should the PM triage them?",
+            "options": [
+              {
+                "text": "By impact on the sequence: the step that cannot start is the blocker and gets an owner, a decision path, and the next update time first, while the report issue is logged and visibly sequenced",
+                "correct": true,
+                "why": "Triage exists to separate what stops the runbook or risks a live process from everything else. The quiet blocker threatens the weekend; the loud issue threatens only comfort, and logging it visibly is what allows the team to leave it alone safely."
+              },
+              {
+                "text": "In arrival order, so every stakeholder sees the process is fair",
+                "correct": false,
+                "why": "Fairness in a cutover is not a queue; it is the right issue getting the scarce decision capacity first. Arrival order spends that capacity on whatever arrived earliest, regardless of what it blocks."
+              },
+              {
+                "text": "By seniority of the person raising the issue, so leadership concerns are cleared first",
+                "correct": false,
+                "why": "Seniority triage teaches the organisation to escalate socially rather than factually, and it starves genuine blockers raised by junior staff — who are usually the people closest to the sequence."
+              }
+            ]
+          },
+          {
+            "q": "Hypercare is going well and the team is tired. A sponsor suggests simply letting support fade into operations over the next few weeks. What should the PM do?",
+            "options": [
+              {
+                "text": "Agree, since a smooth fade avoids an artificial boundary",
+                "correct": false,
+                "why": "A fade never forms the boundary at all: open items lose their owners, operations inherits problems without a record, and nobody can say when project support actually ended or what it handed over."
+              },
+              {
+                "text": "Extend hypercare indefinitely to be safe, since extra support cannot hurt",
+                "correct": false,
+                "why": "Indefinite hypercare keeps the business dependent on the project team, delays operational ownership, and exhausts the people it claims to protect. Safety lies in a judged exit, not an endless one."
+              },
+              {
+                "text": "Exit against the criteria agreed before hypercare began: judge them on evidence, hand every open item to a named operational owner, and close the project record",
+                "correct": true,
+                "why": "Exit criteria set in advance turn the end of hypercare into the same kind of evidence-based decision as the go-live itself. Named handovers and a closed record are what let operations own the live processes without the project lingering behind them."
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
     "slug": "complete-guide-aml-financial-crime-prevention",
     "title": "The Complete Guide to Anti-Money Laundering and Financial Crime Prevention",
     "excerpt": "Build an AML program that produces signal: verified FINTRAC and FATF evidence, the Signal System framework, an 8-step method, 12 risks, and templates.",
