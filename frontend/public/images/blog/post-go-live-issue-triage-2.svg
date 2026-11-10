@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-label="Triage cadence and escalation: morning triage, midday check, and end-of-day update above three fix decisions and an escalation path from owner to sponsor">
+  <defs>
+    <linearGradient id="hdr" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#0f172a"/>
+      <stop offset="1" stop-color="#1e3a5f"/>
+    </linearGradient>
+    <marker id="arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#2B6CB0"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="1200" height="720" fill="#ffffff"/>
+  <rect x="0" y="0" width="1200" height="92" fill="url(#hdr)"/>
+  <text x="48" y="46" font-family="Georgia, serif" font-size="30" fill="#ffffff">Triage Cadence, Decisions, and Escalation</text>
+  <text x="48" y="74" font-family="Arial, sans-serif" font-size="16" fill="#94A3B8">A daily rhythm the business can trust — and a clear path when a decision needs a higher level</text>
+
+  <!-- cadence row -->
+  <g>
+    <rect x="40" y="124" width="360" height="140" rx="12" fill="#F0F4F8" stroke="#2B6CB0" stroke-width="2"/>
+    <text x="64" y="160" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#1A202C">Morning Triage</text>
+    <text x="64" y="188" font-family="Arial, sans-serif" font-size="14" fill="#475569">Rate new arrivals, re-rate</text>
+    <text x="64" y="212" font-family="Arial, sans-serif" font-size="14" fill="#475569">anything whose impact grew</text>
+    <text x="64" y="240" font-family="Arial, sans-serif" font-size="14" fill="#64748B">Owners confirmed for the day</text>
+  </g>
+  <path d="M 404 194 L 416 194" stroke="#2B6CB0" stroke-width="3" marker-end="url(#arr)"/>
+  <g>
+    <rect x="420" y="124" width="360" height="140" rx="12" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+    <text x="444" y="160" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#1A202C">Midday Check</text>
+    <text x="444" y="188" font-family="Arial, sans-serif" font-size="14" fill="#475569">Top items moving, blockers</text>
+    <text x="444" y="212" font-family="Arial, sans-serif" font-size="14" fill="#475569">escalated while time remains</text>
+    <text x="444" y="240" font-family="Arial, sans-serif" font-size="14" fill="#64748B">Short, and only on exceptions</text>
+  </g>
+  <path d="M 784 194 L 796 194" stroke="#2B6CB0" stroke-width="3" marker-end="url(#arr)"/>
+  <g>
+    <rect x="800" y="124" width="360" height="140" rx="12" fill="#1e3a5f" stroke="#1e3a5f" stroke-width="2"/>
+    <text x="824" y="160" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#ffffff">End-of-Day Update</text>
+    <text x="824" y="188" font-family="Arial, sans-serif" font-size="14" fill="#ffffff">Resolved, in progress, and</text>
+    <text x="824" y="212" font-family="Arial, sans-serif" font-size="14" fill="#ffffff">what to expect tomorrow</text>
+    <text x="824" y="240" font-family="Arial, sans-serif" font-size="14" fill="#94A3B8">Sent on schedule, every day</text>
+  </g>
+
+  <path d="M 600 268 L 600 290" fill="none" stroke="#2B6CB0" stroke-width="3" marker-end="url(#arr)"/>
+
+  <!-- decision row -->
+  <g>
+    <rect x="40" y="294" width="360" height="160" rx="12" fill="#F0F4F8" stroke="#2B6CB0" stroke-width="2"/>
+    <text x="64" y="330" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#1A202C">Decide: Fix Now</text>
+    <text x="64" y="358" font-family="Arial, sans-serif" font-size="14" fill="#475569">Impact justifies interrupting</text>
+    <text x="64" y="382" font-family="Arial, sans-serif" font-size="14" fill="#475569">other work, fix tested safely</text>
+    <text x="64" y="412" font-family="Arial, sans-serif" font-size="14" fill="#64748B">For: top-severity items</text>
+  </g>
+  <g>
+    <rect x="420" y="294" width="360" height="160" rx="12" fill="#ffffff" stroke="#E2E8F0" stroke-width="2"/>
+    <text x="444" y="330" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#1A202C">Work Around, Schedule</text>
+    <text x="444" y="358" font-family="Arial, sans-serif" font-size="14" fill="#475569">Safe workaround published,</text>
+    <text x="444" y="382" font-family="Arial, sans-serif" font-size="14" fill="#475569">proper fix in a controlled slot</text>
+    <text x="444" y="412" font-family="Arial, sans-serif" font-size="14" fill="#64748B">Decision recorded on the item</text>
+  </g>
+  <g>
+    <rect x="800" y="294" width="360" height="160" rx="12" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+    <text x="824" y="330" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#1A202C">Defer to Backlog</text>
+    <text x="824" y="358" font-family="Arial, sans-serif" font-size="14" fill="#475569">Real but minor, deferred with</text>
+    <text x="824" y="382" font-family="Arial, sans-serif" font-size="14" fill="#475569">the reporter informed</text>
+    <text x="824" y="412" font-family="Arial, sans-serif" font-size="14" fill="#64748B">Reviewed at hypercare exit</text>
+  </g>
+
+  <path d="M 600 458 L 600 480" fill="none" stroke="#2B6CB0" stroke-width="3" marker-end="url(#arr)"/>
+
+  <!-- escalation strip -->
+  <rect x="40" y="484" width="1120" height="180" rx="12" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+  <text x="64" y="520" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#1A202C">Escalation Path — each level knows what it may decide</text>
+  <text x="64" y="556" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="#1A202C">Owner</text>
+  <path d="M 140 550 L 168 550" stroke="#2B6CB0" stroke-width="3" marker-end="url(#arr)"/>
+  <text x="176" y="556" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="#1A202C">Triage Lead</text>
+  <path d="M 292 550 L 320 550" stroke="#2B6CB0" stroke-width="3" marker-end="url(#arr)"/>
+  <text x="328" y="556" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="#1A202C">Project Manager</text>
+  <path d="M 492 550 L 520 550" stroke="#2B6CB0" stroke-width="3" marker-end="url(#arr)"/>
+  <text x="528" y="556" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="#1A202C">Sponsor</text>
+  <text x="64" y="590" font-family="Arial, sans-serif" font-size="14" fill="#475569">Escalation is routing, not blame: an issue rises when its decision</text>
+  <text x="64" y="614" font-family="Arial, sans-serif" font-size="14" fill="#475569">exceeds the authority of the level holding it.</text>
+  <text x="64" y="642" font-family="Arial, sans-serif" font-size="14" fill="#64748B">Close with evidence: fix verified live, reporter confirms, record states what changed.</text>
+</svg>
