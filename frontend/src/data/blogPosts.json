@@ -1,5 +1,278 @@
 [
   {
+    "slug": "post-go-live-issue-triage",
+    "title": "Post-Go-Live Issue Triage Process",
+    "excerpt": "A practical post-go-live issue triage process for HCM: log once, rate by impact, route to the right owner, and close with evidence.",
+    "publishedAt": "2026-11-10",
+    "readingTime": "8 min read",
+    "cover": "/images/blog/post-go-live-issue-triage-cover.webp",
+    "tags": [
+      "HCM",
+      "Implementation",
+      "Go-Live",
+      "Hypercare"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "Go-live does not end the work of an implementation; it changes its shape. The controlled world of testing, where problems arrived in a managed queue, gives way to live operation, where a payroll manager, a supervisor, and an employee with a payslip question may all report problems at the same moment, in different words, with very different urgency. Some reports will be genuine defects. Others will be training gaps, data questions, or the reasonable anxiety of people using a new system. Triage is the discipline that tells them apart — quickly, fairly, and in public."
+      },
+      {
+        "type": "p",
+        "text": "Without it, the first live weeks organise themselves badly: whoever shouts loudest gets attention, blockers wait behind cosmetic complaints, and the team proves it is busy instead of removing what stops the business. A deliberate process — agreed before go-live, run on a stated rhythm, visible to everyone — protects the system and its people."
+      },
+      {
+        "type": "h2",
+        "text": "Triage is not support as usual"
+      },
+      {
+        "type": "p",
+        "text": "Normal support assumes a stable system and a steady flow of individual requests. Hypercare assumes neither: the system has just changed, the users have changed with it, and report volume reflects learning as much as failure. Treating hypercare like ordinary support — first come, first served, every ticket equal — misreads the moment. The question in the first live weeks is never simply what arrived first; it is what is stopping the organisation from working, paying, scheduling, or complying today."
+      },
+      {
+        "type": "p",
+        "text": "That is why triage belongs inside the wider discipline of [the project manager's guide to go-live](/blog/project-managers-guide-to-go-live): triage is the mechanism the PM's go-live rhythm runs on, and it is a decision process, not a sorting chore. Every report should leave with a judgement — how serious it is, who owns it, what happens next, and when the reporter hears back. An unjudged report is worse than one waiting with a stated reason, because silence invites side channels, and side channels destroy the single view of the truth."
+      },
+      {
+        "type": "img",
+        "src": "/images/blog/post-go-live-issue-triage-1.svg",
+        "alt": "Post-go-live triage flow diagram: one intake, a complete record, and severity rating feeding four severity lanes rated by business impact, each with its response.",
+        "caption": "Post-go-live triage flow: one intake, one record, severity lanes rated by business impact."
+      },
+      {
+        "type": "h2",
+        "text": "One intake, one log, one complete record"
+      },
+      {
+        "type": "p",
+        "text": "The process starts with a single door: during hypercare there is one place to report an issue — one log, one address the whole organisation knows — and the triage lead defends it kindly but firmly. Reports arriving by hallway conversation or private message are not refused; they are captured into the log on the spot, by whoever received them, so helping someone informally never means their problem leaves the record. The one-record discipline of [the cutover planning runbook](/blog/cutover-planning-runbook) simply continues into live operation."
+      },
+      {
+        "type": "p",
+        "text": "What gets captured matters as much as where: who is affected, which process is stopped or degraded, what was expected, what actually happened, and when it was first seen. Vague reports are completed, not rejected — one short conversation at intake, because a defect chased on a vague description costs hours and ends with the wrong fix. Duplicates are merged, not dismissed: linked to one master item, every reporter kept informed. A cluster of similar reports is itself evidence — often a training gap, not ten defects."
+      },
+      {
+        "type": "steps",
+        "label": "The triage sequence, in order",
+        "intro": "Six steps that carry every report from arrival to a judged, owned, and communicated outcome.",
+        "items": [
+          {
+            "title": "Capture it once, in the one log",
+            "text": "Every report enters the single hypercare log, however it arrived. Reports received informally are logged on the spot by the person who received them, so no problem lives only in a conversation."
+          },
+          {
+            "title": "Complete the record at intake",
+            "text": "State who is affected, which process is stopped or degraded, what was expected, what actually happened, and when it was first seen. Complete vague reports with one short conversation now rather than hours of chasing later."
+          },
+          {
+            "title": "Rate severity by business impact",
+            "text": "Judge what the issue stops — a pay cycle, a live process, a group of users, or one person's convenience — and assign the severity lane. Volume, seniority, and arrival order do not set severity."
+          },
+          {
+            "title": "Route to a named owner",
+            "text": "Assign one named owner with the skill and authority to act, and a next update time. Configuration, data, training, access, and vendor questions go to different owners; unowned issues are escalated, not parked."
+          },
+          {
+            "title": "Decide: fix now, work around, or schedule",
+            "text": "Choose deliberately between an immediate fix, a safe workaround with a scheduled fix, or a planned change after hypercare. Record the decision and its reasoning on the item itself."
+          },
+          {
+            "title": "Close with evidence and tell the reporter",
+            "text": "Verify the fix in the live process, confirm it with the person who reported it, and close the record with what changed. Closure is a confirmation, not an assumption."
+          }
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Severity by impact, not by volume or seniority"
+      },
+      {
+        "type": "p",
+        "text": "Severity is the heart of triage, and it must rest on business impact alone. A practical scale asks: does this stop a critical live process, stop or corrupt a process for a group, degrade work that continues with effort, or affect one person's convenience? The top of the scale — anything threatening the pay cycle or a core process with no workaround — is an emergency: immediate ownership, continuous work, sponsor visibility. The bottom of the scale is sequenced honestly behind what the business cannot do without."
+      },
+      {
+        "type": "p",
+        "text": "Two corruptions threaten every scale. The first is volume: a minor issue reported by fifty people feels larger than a blocker reported by one payroll specialist, yet the blocker may stop everyone being paid. Volume is information — it points to training and communication needs — but it is not severity. The second is seniority: an executive's inconvenience outranking a stopped front-line process. The remedy is the evidence habit practised in [the go-live readiness assessment](/blog/go-live-readiness-assessment): rate against stated criteria, record the reasoning, and let anyone challenge it against the same criteria. A rating that can be explained can be defended. The task detail beneath these judgements sits in [the HCM go-live checklist](/blog/hcm-go-live-checklist)."
+      },
+      {
+        "type": "h2",
+        "text": "Ownership, workarounds, and fixing now or later"
+      },
+      {
+        "type": "p",
+        "text": "A rated issue still needs one named owner — a person, not a team — who carries it to its next decision. Ownership means routing the analysis, chasing the inputs, and reporting back at the promised time — not fixing everything personally. Hypercare issues fall into recognisable families: configuration behaving differently with live data, migrated data proving incomplete, access roles that miss a real job, integrations on a live schedule, and the large family that is not a defect at all — users meeting a new process for the first time. Routed to training and communications, that family resolves faster and more honestly than via a developer queue."
+      },
+      {
+        "type": "p",
+        "text": "For genuine defects, triage decides explicitly between three outcomes. Fix now, when impact justifies interrupting other work and the change can be tested safely. Work around and schedule, when a documented workaround keeps the business running and the proper fix deserves a controlled slot. Or defer a real but minor issue to the post-hypercare backlog, with the reporter's knowledge. What triage must never do is let the decision happen by default, through delay. In cross-border programmes the caution doubles: a pay issue spanning Canada and the United States may need different treatment each side of the border, and the triage lead never improvises that judgement — payroll and tax questions go to each jurisdiction's specialists, and the item waits, visibly, for their answer."
+      },
+      {
+        "type": "img",
+        "src": "/images/blog/post-go-live-issue-triage-2.svg",
+        "alt": "Daily triage cadence diagram: morning triage, midday check, and end-of-day update above three decision panels - fix now, work around and schedule, defer to backlog - with an escalation path from owner to triage lead to project manager to sponsor.",
+        "caption": "Triage cadence and escalation: a daily rhythm, three fix decisions, and a clear escalation path."
+      },
+      {
+        "type": "h2",
+        "text": "Cadence, communication, and escalation"
+      },
+      {
+        "type": "p",
+        "text": "Triage runs on a rhythm the organisation can set its watch by: a short morning session rates everything that arrived overnight and re-rates anything whose impact has grown; a brief midday check confirms the top items are moving; and an end-of-day update tells the business, in plain language, what was resolved, what is being worked on, and what to expect tomorrow. That update goes out on schedule whether the day was triumphant or difficult — predictable communication buys the team room to work and drains the side channels, because people stop hunting for news they reliably receive."
+      },
+      {
+        "type": "p",
+        "text": "Escalation follows a path agreed before it is needed — owner, triage lead, project manager, sponsor — each level knowing what it may decide. An issue rises because its decision exceeds that level's authority, not because someone failed. Triage is also where hypercare earns its ending: the daily review watches the queue — falling volume, fewer top-severity items, more how-to questions — as evidence for the exit conversation, inside [the complete guide to HCM implementation](/blog/complete-guide-hcm-implementation). A queue changing character is a system settling; one that is not deserves honesty, not a hopeful date."
+      },
+      {
+        "type": "h2",
+        "text": "Common mistakes"
+      },
+      {
+        "type": "p",
+        "text": "Most triage failures are discipline failures under pressure — doors left open, ratings bent, closures assumed instead of proven."
+      },
+      {
+        "type": "accordion",
+        "label": "Triage mistakes, as a diagnostic",
+        "items": [
+          {
+            "q": "Letting issues arrive through five different channels",
+            "a": "Every side channel is a second, invisible queue that nobody triages. Keep one intake and one log, capture informal reports into it on the spot, and publish the daily update on schedule so people stop hunting for news through private routes."
+          },
+          {
+            "q": "Rating severity by how loud or senior the reporter is",
+            "a": "Volume and seniority are information, not severity. Rate against stated impact criteria — what process is stopped, for whom, with what workaround — and record the reasoning on the item so the rating can be explained and challenged fairly."
+          },
+          {
+            "q": "Closing issues when the fix is deployed, not when it is proven",
+            "a": "A deployed fix is a hypothesis. Verify it in the live process, confirm it with the person who reported the problem, and only then close the record with what changed. Assumed closures return as angrier duplicates."
+          },
+          {
+            "q": "Treating every report as a defect",
+            "a": "Many hypercare reports are training, access, data, or process-understanding questions wearing a defect's clothes. Route each family to the owner who resolves it fastest; forcing everything through a fix queue delays real defects and frustrates everyone else."
+          },
+          {
+            "q": "Improvising payroll answers across jurisdictions",
+            "a": "A pay question spanning Canada and the United States is two questions, not one. Route each side to its payroll and tax specialists, keep the item visibly waiting for their answer, and never let triage confidence substitute for specialist judgement."
+          },
+          {
+            "q": "Letting the queue decide hypercare's end",
+            "a": "Hypercare should end against evidence and agreed criteria, not exhaustion or a date chosen in hope. Watch the queue's character — severity mix, repeat reports, how-to volume — and let that evidence drive the exit conversation."
+          }
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Key Takeaways"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "Triage is a decision process: every report leaves rated, owned, and with a promised update.",
+          "Keep one intake and one log; capture informal reports into it on the spot.",
+          "Rate severity by business impact alone — never by volume, arrival order, or seniority.",
+          "Decide explicitly on every defect: fix now, work around and schedule, or defer — with the reporter informed.",
+          "Run the daily rhythm; close only with evidence, confirmed by the reporter."
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Frequently Asked Questions"
+      },
+      {
+        "type": "p",
+        "text": "How often should the triage team meet during hypercare? Daily at minimum in the early weeks — morning rating, a midday check on top items, an end-of-day update. The rhythm relaxes as volume and severity fall, by evidence, not fatigue."
+      },
+      {
+        "type": "p",
+        "text": "What belongs in a good issue record? Who is affected, which process is stopped or degraded, what was expected, what happened, and when it was first seen — plus the rating and its reasoning, the named owner, and the next update time."
+      },
+      {
+        "type": "p",
+        "text": "A senior leader wants their minor issue fixed first. What should happen? The rating stays where the impact criteria put it, and the triage lead explains the reasoning plainly. Leaders accept a visible, fairly applied scale; what they resist is a queue nobody can explain."
+      },
+      {
+        "type": "p",
+        "text": "When is an issue truly closed? When the fix is verified in the live process and the reporter confirms it — with the record stating what changed, so a recurrence is recognised, not restarted."
+      },
+      {
+        "type": "h2",
+        "text": "Next Steps"
+      },
+      {
+        "type": "p",
+        "text": "Before go-live, write the triage process down: the single intake and log, the record every report must carry, severity criteria, owner routes for configuration, data, access, integration, and training questions, the daily rhythm, and the escalation path. Rehearse it once before live issues arrive — a process first used under pressure is a hope, not a mechanism."
+      },
+      {
+        "type": "quiz",
+        "label": "Check your understanding",
+        "questions": [
+          {
+            "q": "On the second live day, fifty employees report that a self-service screen is confusing, while one payroll specialist reports that a step in the pay process cannot run. How should triage rate them?",
+            "options": [
+              {
+                "text": "The screen issue first, because fifty reports show the larger problem",
+                "correct": false,
+                "why": "Volume is information about communication and training needs, not severity. Fifty confused users matter and deserve a routed answer, but they do not outrank a stopped pay process."
+              },
+              {
+                "text": "The pay process issue as top severity because it stops a critical live process, while the screen reports are linked, counted as a pattern, and routed to training and communications",
+                "correct": true,
+                "why": "Severity rests on business impact: what is stopped, for whom, and whether a workaround exists. The pattern of fifty reports is still acted on — as the training and communication signal it is."
+              },
+              {
+                "text": "In arrival order, so the process is visibly fair to everyone",
+                "correct": false,
+                "why": "Fairness in triage is a rating anyone can explain against stated criteria, not a queue. Arrival order spends scarce fix capacity on whatever arrived earliest, regardless of what it blocks."
+              }
+            ]
+          },
+          {
+            "q": "A defect has a safe, documented workaround, and the proper fix needs careful testing the team cannot do well today. What is the disciplined triage decision?",
+            "options": [
+              {
+                "text": "Fix it immediately anyway, because hypercare exists to fix things fast",
+                "correct": false,
+                "why": "Speed without safe testing trades one live problem for the risk of a larger one. Hypercare rewards judgement about timing, not reflexes."
+              },
+              {
+                "text": "Leave it unrecorded until the team has time, so the queue looks clean",
+                "correct": false,
+                "why": "An unrecorded issue is an unmanaged one: the workaround stays tribal knowledge, the reporter hears nothing, and the fix competes for attention from memory instead of evidence."
+              },
+              {
+                "text": "Work around and schedule: publish the workaround, record the decision and reasoning on the item, and give the proper fix a controlled slot with a named owner",
+                "correct": true,
+                "why": "This keeps the business running today and the fix safe tomorrow, with the decision visible to the reporter and the team. The choice was made deliberately, not by default through delay."
+              }
+            ]
+          },
+          {
+            "q": "A manager reports a pay calculation concern that affects employees in both Canada and the United States, and asks the triage lead for an immediate answer. What should happen?",
+            "options": [
+              {
+                "text": "Route it as two jurisdiction questions to the payroll and tax specialists on each side, keep the item visibly waiting with a promised update time, and give no improvised compliance answer",
+                "correct": true,
+                "why": "Pay rules differ by jurisdiction, and a confident blended answer risks being wrong twice. Triage owns the routing, the record, and the communication — specialists own the judgement."
+              },
+              {
+                "text": "Give the most likely answer now and correct it later if the specialists disagree",
+                "correct": false,
+                "why": "A wrong pay answer acted on immediately creates corrections, employee distrust, and possibly filings to redo. A short, explained wait is cheaper than a confident error."
+              },
+              {
+                "text": "Close it as a training question, since most hypercare reports turn out to be misunderstandings",
+                "correct": false,
+                "why": "Many reports are misunderstandings, but a pay calculation concern must be assessed on its facts by the right specialists. Pattern-matching it away risks missing a genuine defect in the most sensitive process of all."
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
     "slug": "project-managers-guide-to-go-live",
     "title": "Project Manager's Guide to Go-Live",
     "excerpt": "The project manager's guide to go-live: chairing go/no-go, commanding the cutover weekend, holding scope, leading hypercare, and closing well.",
