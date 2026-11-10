@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-label="Post-go-live triage flow: one intake, a complete record, severity rating, and a named owner, then four severity lanes rated by business impact">
+  <defs>
+    <linearGradient id="hdr" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#0f172a"/>
+      <stop offset="1" stop-color="#1e3a5f"/>
+    </linearGradient>
+    <marker id="arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#2B6CB0"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="1200" height="760" fill="#ffffff"/>
+  <rect x="0" y="0" width="1200" height="92" fill="url(#hdr)"/>
+  <text x="48" y="46" font-family="Georgia, serif" font-size="30" fill="#ffffff">Post-Go-Live Triage: Flow and Severity Lanes</text>
+  <text x="48" y="74" font-family="Arial, sans-serif" font-size="16" fill="#94A3B8">Every report follows one flow — then severity, rated by business impact, sets the response</text>
+
+  <!-- flow row -->
+  <g>
+    <rect x="40" y="124" width="256" height="118" rx="12" fill="#F0F4F8" stroke="#2B6CB0" stroke-width="2"/>
+    <text x="62" y="160" font-family="Arial, sans-serif" font-size="17" font-weight="bold" fill="#1A202C">1 · One Intake</text>
+    <text x="62" y="188" font-family="Arial, sans-serif" font-size="13" fill="#475569">One door, one log</text>
+    <text x="62" y="210" font-family="Arial, sans-serif" font-size="13" fill="#475569">for every report</text>
+  </g>
+  <path d="M 300 183 L 312 183" stroke="#2B6CB0" stroke-width="3" marker-end="url(#arr)"/>
+  <g>
+    <rect x="316" y="124" width="256" height="118" rx="12" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+    <text x="338" y="160" font-family="Arial, sans-serif" font-size="17" font-weight="bold" fill="#1A202C">2 · Complete Record</text>
+    <text x="338" y="188" font-family="Arial, sans-serif" font-size="13" fill="#475569">Who is affected, which</text>
+    <text x="338" y="210" font-family="Arial, sans-serif" font-size="13" fill="#475569">process is stopped</text>
+  </g>
+  <path d="M 576 183 L 588 183" stroke="#2B6CB0" stroke-width="3" marker-end="url(#arr)"/>
+  <g>
+    <rect x="592" y="124" width="256" height="118" rx="12" fill="#1e3a5f" stroke="#1e3a5f" stroke-width="2"/>
+    <text x="614" y="160" font-family="Arial, sans-serif" font-size="17" font-weight="bold" fill="#ffffff">3 · Severity Rating</text>
+    <text x="614" y="188" font-family="Arial, sans-serif" font-size="13" fill="#ffffff">Rated by impact,</text>
+    <text x="614" y="210" font-family="Arial, sans-serif" font-size="13" fill="#ffffff">reasoning recorded</text>
+  </g>
+  <path d="M 852 183 L 864 183" stroke="#2B6CB0" stroke-width="3" marker-end="url(#arr)"/>
+  <g>
+    <rect x="868" y="124" width="292" height="118" rx="12" fill="#ffffff" stroke="#2B6CB0" stroke-width="2"/>
+    <text x="890" y="160" font-family="Arial, sans-serif" font-size="17" font-weight="bold" fill="#1A202C">4 · Named Owner</text>
+    <text x="890" y="188" font-family="Arial, sans-serif" font-size="13" fill="#475569">One person, one next</text>
+    <text x="890" y="210" font-family="Arial, sans-serif" font-size="13" fill="#475569">step, one update time</text>
+  </g>
+
+  <path d="M 600 246 L 600 268" fill="none" stroke="#2B6CB0" stroke-width="3" marker-end="url(#arr)"/>
+
+  <!-- severity lanes -->
+  <g>
+    <rect x="40" y="272" width="1120" height="96" rx="12" fill="#1e3a5f" stroke="#1e3a5f" stroke-width="2"/>
+    <text x="64" y="308" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#ffffff">Lane 1 · Stops a Critical Process</text>
+    <text x="64" y="336" font-family="Arial, sans-serif" font-size="14" fill="#ffffff">Pay cycle or core process stopped, no workaround</text>
+    <text x="830" y="308" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#ffffff">Response:</text>
+    <text x="830" y="336" font-family="Arial, sans-serif" font-size="14" fill="#94A3B8">Act now, sponsor visible</text>
+  </g>
+  <g>
+    <rect x="40" y="382" width="1120" height="96" rx="12" fill="#F0F4F8" stroke="#2B6CB0" stroke-width="2"/>
+    <text x="64" y="418" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#1A202C">Lane 2 · Stops Work for a Group</text>
+    <text x="64" y="446" font-family="Arial, sans-serif" font-size="14" fill="#475569">A team or site cannot complete a live process</text>
+    <text x="830" y="418" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#1A202C">Response:</text>
+    <text x="830" y="446" font-family="Arial, sans-serif" font-size="14" fill="#64748B">Same-day owner and plan</text>
+  </g>
+  <g>
+    <rect x="40" y="492" width="1120" height="96" rx="12" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+    <text x="64" y="528" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#1A202C">Lane 3 · Degraded, With a Workaround</text>
+    <text x="64" y="556" font-family="Arial, sans-serif" font-size="14" fill="#475569">Work continues with extra effort or a workaround</text>
+    <text x="830" y="528" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#1A202C">Response:</text>
+    <text x="830" y="556" font-family="Arial, sans-serif" font-size="14" fill="#64748B">Workaround, scheduled fix</text>
+  </g>
+  <g>
+    <rect x="40" y="602" width="1120" height="96" rx="12" fill="#ffffff" stroke="#E2E8F0" stroke-width="2"/>
+    <text x="64" y="638" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#1A202C">Lane 4 · Question or Minor Issue</text>
+    <text x="64" y="666" font-family="Arial, sans-serif" font-size="14" fill="#475569">How-to, access, or one person affected</text>
+    <text x="830" y="638" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#1A202C">Response:</text>
+    <text x="830" y="666" font-family="Arial, sans-serif" font-size="14" fill="#64748B">Route, answer, batch fixes</text>
+  </g>
+</svg>
