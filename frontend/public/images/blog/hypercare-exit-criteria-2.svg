@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-label="Hypercare step-down and exit decision flow: full hypercare to reduced cover to business as usual, with an exit decision gate and a re-entry and escalation path">
+  <defs>
+    <linearGradient id="hdr" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#0f172a"/>
+      <stop offset="1" stop-color="#1e3a5f"/>
+    </linearGradient>
+    <marker id="arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#2B6CB0"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="1200" height="720" fill="#ffffff"/>
+  <rect x="0" y="0" width="1200" height="92" fill="url(#hdr)"/>
+  <text x="48" y="46" font-family="Georgia, serif" font-size="30" fill="#ffffff">Step-Down: From Hypercare to Business as Usual</text>
+  <text x="48" y="74" font-family="Arial, sans-serif" font-size="16" fill="#94A3B8">Cover steps down against evidence — and can step back up without drama</text>
+
+  <g>
+    <rect x="40" y="124" width="360" height="140" rx="12" fill="#1e3a5f" stroke="#1e3a5f" stroke-width="2"/>
+    <text x="64" y="160" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#ffffff">Full Hypercare</text>
+    <text x="64" y="188" font-family="Arial, sans-serif" font-size="14" fill="#ffffff">Daily triage, extended cover,</text>
+    <text x="64" y="212" font-family="Arial, sans-serif" font-size="14" fill="#ffffff">project team in the room</text>
+    <text x="64" y="240" font-family="Arial, sans-serif" font-size="14" fill="#94A3B8">For the first live cycles</text>
+  </g>
+  <path d="M 404 194 L 416 194" stroke="#2B6CB0" stroke-width="3" marker-end="url(#arr)"/>
+  <g>
+    <rect x="420" y="124" width="360" height="140" rx="12" fill="#F0F4F8" stroke="#2B6CB0" stroke-width="2"/>
+    <text x="444" y="160" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#1A202C">Reduced Cover</text>
+    <text x="444" y="188" font-family="Arial, sans-serif" font-size="14" fill="#475569">Shorter hours, fewer sessions,</text>
+    <text x="444" y="212" font-family="Arial, sans-serif" font-size="14" fill="#475569">support leads, project advises</text>
+    <text x="444" y="240" font-family="Arial, sans-serif" font-size="14" fill="#64748B">A trial of normal life</text>
+  </g>
+  <path d="M 784 194 L 796 194" stroke="#2B6CB0" stroke-width="3" marker-end="url(#arr)"/>
+  <g>
+    <rect x="800" y="124" width="360" height="140" rx="12" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+    <text x="824" y="160" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#1A202C">Business as Usual</text>
+    <text x="824" y="188" font-family="Arial, sans-serif" font-size="14" fill="#475569">Normal support routes, normal</text>
+    <text x="824" y="212" font-family="Arial, sans-serif" font-size="14" fill="#475569">change control, owned backlog</text>
+    <text x="824" y="240" font-family="Arial, sans-serif" font-size="14" fill="#64748B">Hypercare formally closed</text>
+  </g>
+
+  <path d="M 600 268 L 600 290" fill="none" stroke="#2B6CB0" stroke-width="3" marker-end="url(#arr)"/>
+
+  <g>
+    <rect x="40" y="294" width="1120" height="160" rx="12" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+    <text x="64" y="330" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#1A202C">Exit Decision Gate — reviewed at each step-down</text>
+    <text x="64" y="362" font-family="Arial, sans-serif" font-size="14" fill="#475569">Criteria met across all five domains: step down, announce the new cover, and set the next review.</text>
+    <text x="64" y="390" font-family="Arial, sans-serif" font-size="14" fill="#475569">One domain weak: hold that domain, strengthen it, and review again — do not force the date.</text>
+    <text x="64" y="418" font-family="Arial, sans-serif" font-size="14" fill="#64748B">Decision, evidence, and dissent are recorded — the gate is a judgement, not a ceremony.</text>
+  </g>
+
+  <path d="M 600 458 L 600 480" fill="none" stroke="#2B6CB0" stroke-width="3" marker-end="url(#arr)"/>
+
+  <rect x="40" y="484" width="1120" height="180" rx="12" fill="#ffffff" stroke="#2B6CB0" stroke-width="2"/>
+  <text x="64" y="520" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#1A202C">Re-Entry and Escalation — stepping back up is planned, not a failure</text>
+  <text x="64" y="556" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="#1A202C">New Blocker</text>
+  <path d="M 176 550 L 204 550" stroke="#2B6CB0" stroke-width="3" marker-end="url(#arr)"/>
+  <text x="212" y="556" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="#1A202C">Support Escalates</text>
+  <path d="M 368 550 L 396 550" stroke="#2B6CB0" stroke-width="3" marker-end="url(#arr)"/>
+  <text x="404" y="556" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="#1A202C">Cover Restored</text>
+  <path d="M 544 550 L 572 550" stroke="#2B6CB0" stroke-width="3" marker-end="url(#arr)"/>
+  <text x="580" y="556" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="#1A202C">Exit Re-Reviewed</text>
+  <text x="64" y="590" font-family="Arial, sans-serif" font-size="14" fill="#475569">A critical defect, a failed cycle, or a support route that breaks can restore</text>
+  <text x="64" y="614" font-family="Arial, sans-serif" font-size="14" fill="#475569">hypercare cover for the affected area only.</text>
+  <text x="64" y="642" font-family="Arial, sans-serif" font-size="14" fill="#64748B">Re-entry has a named trigger, a named owner, and a fresh exit review — never an open-ended return.</text>
+</svg>
