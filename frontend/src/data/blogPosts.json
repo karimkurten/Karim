@@ -1,5 +1,282 @@
 [
   {
+    "slug": "hypercare-exit-criteria",
+    "title": "Hypercare Exit Criteria: Knowing When You're Done",
+    "excerpt": "Hypercare exit criteria for HCM: prove the business cycle, stabilise defects, transfer knowledge, and hand over with evidence.",
+    "publishedAt": "2026-11-11",
+    "readingTime": "8 min read",
+    "cover": "/images/blog/hypercare-exit-criteria-cover.webp",
+    "tags": [
+      "HCM",
+      "Implementation",
+      "Go-Live",
+      "Hypercare"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "Every hypercare period faces the same awkward question, asked in two opposite ways. The project team, tired and needed elsewhere, asks why support cannot simply take over now. The business, burned by the difficult first weeks, asks why anyone would ever leave. Both questions sound reasonable, and neither can be answered from a calendar. Hypercare is done not when a planned number of weeks has passed, but when the organisation can run, support, and improve the system without the project team in the room — and can show the evidence for that claim."
+      },
+      {
+        "type": "p",
+        "text": "That evidence standard is what exit criteria provide. Agreed before go-live, they turn a contested ending into a shared judgement: what must be true, in which domains, before cover steps down. Without them, hypercare ends by exhaustion, by budget, or by a single difficult incident."
+      },
+      {
+        "type": "h2",
+        "text": "Exit is a decision, not a date"
+      },
+      {
+        "type": "p",
+        "text": "A date is a planning convenience, not a finding about the system. Some implementations settle quickly because the scope was contained and the first cycles ran cleanly; others meet their real test late, when a monthly process or an unusual pay case appears for the first time. Ending on the planned date regardless of that reality does not close hypercare — it merely withdraws help while the need continues."
+      },
+      {
+        "type": "p",
+        "text": "The opposite failure is just as common. Cover stays intensive because nobody defined what sufficient looks like, every residual worry argues for one more week, and the project team becomes a permanent shadow support desk. That outcome blurs accountability and teaches the organisation that escalating to the project beats the support route it should be learning. A disciplined exit protects both sides: the business is not abandoned early, and the project is not retained by default."
+      },
+      {
+        "type": "p",
+        "text": "Treat exit as the mirror of the go-live decision inside [the project manager's guide to go-live](/blog/project-managers-guide-to-go-live): a gate with stated criteria, reviewed evidence, and a recorded outcome. The gate can be passed, passed for part of the scope, or not yet passed — all three respectable when the evidence supports them."
+      },
+      {
+        "type": "img",
+        "src": "/images/blog/hypercare-exit-criteria-1.svg",
+        "alt": "Hypercare exit criteria framework diagram: five evidence domains - defect state, business cycle proven, support readiness and knowledge transfer, adoption and user confidence, and backlog and ownership handover - each with the evidence exit requires.",
+        "caption": "Hypercare exit framework: five evidence domains."
+      },
+      {
+        "type": "h2",
+        "text": "Prove the business cycle first"
+      },
+      {
+        "type": "p",
+        "text": "The strongest single test of readiness is deceptively simple: has the business completed its real work, in the live system, without the project carrying it? For HCM, that centre of gravity is the pay cycle — planned, calculated, checked, approved, and closed by the people who will own it every cycle from now on — together with the hiring, absence, and reporting work around it. A system that has only been watched while the project team performed the difficult steps has not yet been proven, however quiet the issue log looks."
+      },
+      {
+        "type": "p",
+        "text": "Proving the cycle means the business ran it, with support available but not leading. The payroll team handled the awkward cases that always arrive — a late timesheet, a retroactive change, a leaver with a tangled record — through the new process rather than around it. Managers completed approvals on time because they understood them, not because hypercare chased each one individually. Where the cycle exposed defects, they entered [the post-go-live issue triage process](/blog/post-go-live-issue-triage) and were resolved or honestly workarounded. In cross-border programmes the proof is needed on both sides: a cycle proven for Canada does not prove the United States cycle."
+      },
+      {
+        "type": "steps",
+        "label": "The exit sequence, in order",
+        "intro": "Six steps that carry hypercare from intensive cover to a closed, owned handover.",
+        "items": [
+          {
+            "title": "Review the evidence domain by domain",
+            "text": "Walk the five domains in order: defect state, business cycle proven, support readiness and knowledge transfer, adoption and user confidence, and backlog and ownership handover. Record the evidence for each, including where it is thin."
+          },
+          {
+            "title": "Name what is not yet true",
+            "text": "State plainly which criteria are unmet and what would make them true. An honest gap list with owners and dates is a stronger exit position than a general claim that things feel calmer."
+          },
+          {
+            "title": "Step cover down, do not switch it off",
+            "text": "Reduce hours, session frequency, and project presence in stages, announcing each change in advance. Each step-down is a trial of normal life while a safety net still exists."
+          },
+          {
+            "title": "Watch the step-down honestly",
+            "text": "Review volume, severity, and support performance after each reduction. If the evidence holds, continue; if a domain breaks, restore cover for that area and say why."
+          },
+          {
+            "title": "Hand over every remaining item",
+            "text": "Transfer the backlog item by item to named business-as-usual owners, with priorities, workarounds, and review dates each owner accepts. Nothing transfers by assumption."
+          },
+          {
+            "title": "Close formally and communicate the new normal",
+            "text": "Record the exit decision, publish the support routes and hours that now apply, thank the hypercare team visibly, and close the hypercare log into its business-as-usual successor."
+          }
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Five domains, and none can be averaged away"
+      },
+      {
+        "type": "p",
+        "text": "Exit criteria fail when they collapse into a single overall impression. A quiet defect log does not compensate for support that has never handled a live case alone, and enthusiastic users do not compensate for a backlog nobody owns. Assess five domains separately, and let the weakest one set the pace. First, defect state: no process-stopping defects open, and what remains is minor, workarounded, and stable rather than growing. Second, the business cycle, as above: proven live, owned by the business. Third, support readiness: the support team can receive, route, and resolve through tested routes — the practical payoff of [knowledge transfer planning](/blog/knowledge-transfer-planning), demonstrated with support leading and the project watching."
+      },
+      {
+        "type": "p",
+        "text": "Fourth, adoption and user confidence: users work in the new process, questions have shifted from survival to how-to, and local champions answer more than they escalate. Fifth, backlog and ownership: every remaining defect, enhancement idea, and deferred question has a named owner, a priority, and a home in normal governance. The evidence habit is the same one practised in [the go-live readiness assessment](/blog/go-live-readiness-assessment): claims are shown, not asserted, and anyone at the gate can ask to see the underlying record."
+      },
+      {
+        "type": "h2",
+        "text": "Step down, hand over, and keep a way back"
+      },
+      {
+        "type": "p",
+        "text": "The safest exit is a staircase, not a cliff edge. Full hypercare gives way to reduced cover — shorter hours, fewer triage sessions, support leading with the project advising — and only then to business as usual. Each step is announced before it happens, with clear guidance on where help now lives, because an unannounced reduction feels like abandonment. The step-down is also a test: if normal routes hold, confidence in full exit is earned."
+      },
+      {
+        "type": "p",
+        "text": "Handover is item-level work. The remaining backlog is walked line by line with its receiving owners; workarounds are written down where the next person will actually find them; deferred items carry the reasoning recorded during triage, inside [the complete guide to HCM implementation](/blog/complete-guide-hcm-implementation) arc that hypercare now closes. Finally, agree the way back before anyone needs it: a named trigger — a process-stopping defect, a failed cycle, a support route that breaks — restores cover for the affected area, without blame or renegotiation. A planned re-entry makes leaders braver about exiting, because stepping down is no longer a one-way door."
+      },
+      {
+        "type": "img",
+        "src": "/images/blog/hypercare-exit-criteria-2.svg",
+        "alt": "Hypercare step-down diagram: full hypercare stepping down through reduced cover to business as usual, with an exit decision gate and a re-entry path that restores cover for the affected area when a blocker appears.",
+        "caption": "Step-down flow: full hypercare to business as usual, with re-entry."
+      },
+      {
+        "type": "h2",
+        "text": "The exit conversation itself"
+      },
+      {
+        "type": "p",
+        "text": "Hold the exit review as a working session, not a ceremony. Bring the triage log, the cycle record, the support evidence, and the backlog, and walk the domains in order. Invite the people who will live with the decision — business owners, support leadership, payroll, and the sponsor — and give dissent a proper place, with unevidenced concerns given an owner and a review date. Record the outcome in one of three honest forms: exit, exit for a defined part of the scope while the rest continues, or continue with stated gaps and a new review date."
+      },
+      {
+        "type": "p",
+        "text": "Communicate the decision as carefully as it was made: what is changing, where help lives now, and when the new arrangement will be reviewed. Users who know the plan experience a transition; users who discover it experience a withdrawal."
+      },
+      {
+        "type": "h2",
+        "text": "Common mistakes"
+      },
+      {
+        "type": "p",
+        "text": "Most poor exits are not technical failures — they are endings chosen by date, by fatigue, or by optimism, instead of by evidence."
+      },
+      {
+        "type": "accordion",
+        "label": "Exit mistakes, as a diagnostic",
+        "items": [
+          {
+            "q": "Ending hypercare on the planned date regardless of evidence",
+            "a": "A date is a planning convenience, not a finding about the system. If a full business cycle has not run live, or process-stopping defects remain open, the date moves or the scope of exit narrows. Withdrawing help on schedule while need continues teaches the business to bypass official support."
+          },
+          {
+            "q": "Letting hypercare drift on with no definition of done",
+            "a": "Without agreed criteria, every residual worry argues for one more week and the project becomes a permanent shadow support desk. Define the five domains before go-live, review them on a stated rhythm, and let the weakest domain set an honest pace."
+          },
+          {
+            "q": "Judging readiness by how quiet the log feels",
+            "a": "Quiet can mean settled, but it can also mean untested: a monthly process or unusual pay case may simply not have occurred yet. Judge the cycle that has actually run, the severity mix, and whether support has handled live cases alone, not the general calm."
+          },
+          {
+            "q": "Handing over the backlog as a single bulk transfer",
+            "a": "A backlog transferred in bulk is a backlog abandoned in detail. Walk it item by item with receiving owners, confirm each accepts the item with its priority, workaround, and review date, and record anything nobody owns as an explicit gap."
+          },
+          {
+            "q": "Switching cover off in one step",
+            "a": "A cliff-edge exit removes help and tests the new arrangement at the same moment, so any failure becomes a crisis of confidence. Step cover down in stages, announce each stage, and treat every step-down as a trial while a safety net still exists."
+          },
+          {
+            "q": "Having no agreed way back",
+            "a": "Without a planned re-entry trigger, leaders either delay exit from fear or treat a returning problem as a failure to hide. Agree in advance which events restore cover, for which area, and who decides, so stepping back up is governance, not embarrassment."
+          }
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Key Takeaways"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "Hypercare ends on evidence, not on a date, exhaustion, or a general feeling of calm.",
+          "Prove the business cycle live, owned by the business — on both sides of a cross-border programme.",
+          "Assess five domains separately; the weakest domain sets the pace and cannot be averaged away.",
+          "Step cover down in announced stages, and hand the backlog over item by item to named owners.",
+          "Agree the re-entry trigger in advance, so exit is a confident decision rather than a one-way door."
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Frequently Asked Questions"
+      },
+      {
+        "type": "p",
+        "text": "How long should hypercare last? As long as the evidence requires — until a full business cycle has run live under business ownership and the five domains hold. A planned duration is an estimate to resource against, not the criterion itself."
+      },
+      {
+        "type": "p",
+        "text": "Who decides that hypercare is over? The exit gate: business process owners, support leadership, and the sponsor, reviewing recorded evidence with the project manager. No single party — including the project — should be able to declare exit alone."
+      },
+      {
+        "type": "p",
+        "text": "What happens to issues still open at exit? They transfer, item by item, to named business-as-usual owners with a priority, any workaround, and a review date. Open does not mean abandoned; unowned is the only unacceptable state at handover."
+      },
+      {
+        "type": "p",
+        "text": "Hypercare has ended, and then a serious defect appears. Was the exit wrong? Not necessarily. Serious defects can surface in any live system. What matters is whether the agreed re-entry path works: cover restored for the affected area, the item owned, and the exit evidence re-reviewed without blame."
+      },
+      {
+        "type": "h2",
+        "text": "Next Steps"
+      },
+      {
+        "type": "p",
+        "text": "Before go-live, write the exit criteria down: the five domains, the evidence each requires, who sits at the exit gate, the step-down stages, and the re-entry triggers. Review them weekly during hypercare so the ending is visible from the start, and the business that helped define it can trust it when it arrives."
+      },
+      {
+        "type": "quiz",
+        "label": "Check your understanding",
+        "questions": [
+          {
+            "q": "The planned hypercare end date arrives. The issue log is quiet, but the first full pay cycle under business ownership completes next week and has not yet run. What is the disciplined decision?",
+            "options": [
+              {
+                "text": "Exit on the planned date, because the quiet log shows the system has settled",
+                "correct": false,
+                "why": "Quiet can mean untested rather than settled. The most important live proof, a complete cycle owned by the business, has not happened yet, so the central criterion is unmet."
+              },
+              {
+                "text": "Hold or narrow the exit until the cycle has run live under business ownership, step cover down in the meantime if other domains allow, and set the review for immediately after the cycle",
+                "correct": true,
+                "why": "Exit rests on evidence domain by domain. The cycle is the strongest single proof of readiness, and waiting one cycle with reduced cover is far cheaper than withdrawing help just before the real test."
+              },
+              {
+                "text": "Extend full hypercare indefinitely until every possible process has occurred at least once",
+                "correct": false,
+                "why": "Indefinite cover is the opposite failure: it blurs accountability and turns the project into a shadow support desk. The criterion is the core business cycle and the five domains, not every conceivable event."
+              }
+            ]
+          },
+          {
+            "q": "Four exit domains look strong, but the support team has never resolved a live case without a project specialist in the room. How should the gate treat this?",
+            "options": [
+              {
+                "text": "Exit anyway, because four strong domains out of five is a clear majority",
+                "correct": false,
+                "why": "Domains are not averaged. Support readiness is the capability the business will depend on every day after exit, and it is currently unproven rather than merely imperfect."
+              },
+              {
+                "text": "Average the concern away by noting that users are confident and defects are low",
+                "correct": false,
+                "why": "User confidence and a low defect count do not demonstrate that support can receive, route, and resolve alone. Each domain must show its own evidence."
+              },
+              {
+                "text": "Let the weakest domain set the pace: reverse the shadowing so support leads with the project watching, prove readiness on live cases, and review that domain again before full exit",
+                "correct": true,
+                "why": "This strengthens exactly what is unproven while other domains step down normally. The exit follows once support has demonstrated, not promised, independent handling."
+              }
+            ]
+          },
+          {
+            "q": "Two weeks after a clean exit, a defect stops a period-end process. What should happen under a well-run exit?",
+            "options": [
+              {
+                "text": "Follow the re-entry path agreed at exit: restore cover for the affected area under the named decision-maker, own the defect through normal triage, and re-review the exit evidence without treating the return as a scandal",
+                "correct": true,
+                "why": "A planned re-entry is governance, not failure. It was agreed precisely so a serious late defect triggers a calm, scoped response instead of blame or improvised escalation."
+              },
+              {
+                "text": "Keep hypercare closed at all costs, because reopening it would admit the exit was a mistake",
+                "correct": false,
+                "why": "Protecting the exit decision matters less than the stopped process. Refusing to restore cover turns a manageable defect into a business failure and destroys trust in the exit process itself."
+              },
+              {
+                "text": "Restore full hypercare for the entire system indefinitely",
+                "correct": false,
+                "why": "Re-entry should be scoped to the affected area with a fresh exit review. A blanket, open-ended return discards the evidence that justified exit everywhere else."
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
     "slug": "post-go-live-issue-triage",
     "title": "Post-Go-Live Issue Triage Process",
     "excerpt": "A practical post-go-live issue triage process for HCM: log once, rate by impact, route to the right owner, and close with evidence.",
