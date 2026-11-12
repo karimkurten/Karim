@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-label="Hypercare triage-to-exit flow: daily triage control, weekly pattern review, cycle proof, and exit readiness, above readiness domains for support, users, and the owned backlog">
+  <defs>
+    <linearGradient id="hdr" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#0f172a"/>
+      <stop offset="1" stop-color="#1e3a5f"/>
+    </linearGradient>
+    <marker id="arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#2B6CB0"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="1200" height="720" fill="#ffffff"/>
+  <rect x="0" y="0" width="1200" height="92" fill="url(#hdr)"/>
+  <text x="48" y="46" font-family="Georgia, serif" font-size="30" fill="#ffffff">From Daily Triage to Exit Readiness</text>
+  <text x="48" y="74" font-family="Arial, sans-serif" font-size="16" fill="#94A3B8">Each stage produces the evidence the next stage — and the exit gate — depends on</text>
+
+  <g>
+    <rect x="40" y="124" width="262" height="140" rx="12" fill="#1e3a5f" stroke="#1e3a5f" stroke-width="2"/>
+    <text x="60" y="160" font-family="Arial, sans-serif" font-size="17" font-weight="bold" fill="#ffffff">Daily Triage Control</text>
+    <text x="60" y="188" font-family="Arial, sans-serif" font-size="14" fill="#ffffff">Severity confirmed, owners</text>
+    <text x="60" y="212" font-family="Arial, sans-serif" font-size="14" fill="#ffffff">named, routes tested</text>
+    <text x="60" y="240" font-family="Arial, sans-serif" font-size="14" fill="#94A3B8">Every morning</text>
+  </g>
+  <path d="M 306 194 L 318 194" stroke="#2B6CB0" stroke-width="3" marker-end="url(#arr)"/>
+  <g>
+    <rect x="322" y="124" width="262" height="140" rx="12" fill="#F0F4F8" stroke="#2B6CB0" stroke-width="2"/>
+    <text x="342" y="160" font-family="Arial, sans-serif" font-size="17" font-weight="bold" fill="#1A202C">Weekly Pattern Review</text>
+    <text x="342" y="188" font-family="Arial, sans-serif" font-size="14" fill="#475569">Trends read, causes named,</text>
+    <text x="342" y="212" font-family="Arial, sans-serif" font-size="14" fill="#475569">adoption checked honestly</text>
+    <text x="342" y="240" font-family="Arial, sans-serif" font-size="14" fill="#64748B">Every week</text>
+  </g>
+  <path d="M 588 194 L 600 194" stroke="#2B6CB0" stroke-width="3" marker-end="url(#arr)"/>
+  <g>
+    <rect x="604" y="124" width="262" height="140" rx="12" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+    <text x="624" y="160" font-family="Arial, sans-serif" font-size="17" font-weight="bold" fill="#1A202C">Cycle Proof</text>
+    <text x="624" y="188" font-family="Arial, sans-serif" font-size="14" fill="#475569">Pay cycle run live, led by</text>
+    <text x="624" y="212" font-family="Arial, sans-serif" font-size="14" fill="#475569">the business, per country</text>
+    <text x="624" y="240" font-family="Arial, sans-serif" font-size="14" fill="#64748B">Every cycle</text>
+  </g>
+  <path d="M 870 194 L 882 194" stroke="#2B6CB0" stroke-width="3" marker-end="url(#arr)"/>
+  <g>
+    <rect x="886" y="124" width="274" height="140" rx="12" fill="#F0F4F8" stroke="#2B6CB0" stroke-width="2"/>
+    <text x="906" y="160" font-family="Arial, sans-serif" font-size="17" font-weight="bold" fill="#1A202C">Exit Readiness</text>
+    <text x="906" y="188" font-family="Arial, sans-serif" font-size="14" fill="#475569">Evidence file complete,</text>
+    <text x="906" y="212" font-family="Arial, sans-serif" font-size="14" fill="#475569">step-down agreed</text>
+    <text x="906" y="240" font-family="Arial, sans-serif" font-size="14" fill="#64748B">At the exit gate</text>
+  </g>
+
+  <path d="M 600 268 L 600 290" fill="none" stroke="#2B6CB0" stroke-width="3" marker-end="url(#arr)"/>
+
+  <g>
+    <rect x="40" y="294" width="1120" height="160" rx="12" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+    <text x="64" y="330" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#1A202C">Readiness Domains — checked at every stage</text>
+    <text x="64" y="362" font-family="Arial, sans-serif" font-size="14" fill="#475569">Support ready: live cases received, routed, and resolved by support, with the project only watching.</text>
+    <text x="64" y="390" font-family="Arial, sans-serif" font-size="14" fill="#475569">Users adopting: work happens in the new process, questions are how-to, shadow workarounds are retiring.</text>
+    <text x="64" y="418" font-family="Arial, sans-serif" font-size="14" fill="#64748B">Backlog owned: every remaining item accepted by a named owner, with a priority and a review date.</text>
+  </g>
+
+  <path d="M 600 458 L 600 480" fill="none" stroke="#2B6CB0" stroke-width="3" marker-end="url(#arr)"/>
+
+  <rect x="40" y="484" width="1120" height="180" rx="12" fill="#ffffff" stroke="#2B6CB0" stroke-width="2"/>
+  <text x="64" y="520" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#1A202C">The Evidence Strip — nothing is asserted, everything is shown</text>
+  <text x="64" y="556" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="#1A202C">Hypercare Log</text>
+  <path d="M 196 550 L 224 550" stroke="#2B6CB0" stroke-width="3" marker-end="url(#arr)"/>
+  <text x="232" y="556" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="#1A202C">Cycle Records</text>
+  <path d="M 366 550 L 394 550" stroke="#2B6CB0" stroke-width="3" marker-end="url(#arr)"/>
+  <text x="402" y="556" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="#1A202C">Support Cases</text>
+  <path d="M 534 550 L 562 550" stroke="#2B6CB0" stroke-width="3" marker-end="url(#arr)"/>
+  <text x="570" y="556" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="#1A202C">Owned Backlog</text>
+  <text x="64" y="590" font-family="Arial, sans-serif" font-size="14" fill="#475569">Each check writes into one of these records the day it happens,</text>
+  <text x="64" y="614" font-family="Arial, sans-serif" font-size="14" fill="#475569">so exit evidence is never assembled after the fact.</text>
+  <text x="64" y="642" font-family="Arial, sans-serif" font-size="14" fill="#64748B">A gap found in any record gets real work and a review date — never a rewrite of history.</text>
+</svg>
