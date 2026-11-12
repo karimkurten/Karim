@@ -1,5 +1,278 @@
 [
   {
+    "slug": "hypercare-checklist",
+    "title": "Hypercare Checklist: What to Check and When",
+    "excerpt": "A practical hypercare checklist for HCM: daily triage, cycle checks, support readiness, user adoption, and exit evidence in one place.",
+    "publishedAt": "2026-11-12",
+    "readingTime": "8 min read",
+    "cover": "/images/blog/hypercare-checklist-cover.webp",
+    "tags": [
+      "HCM",
+      "Implementation",
+      "Go-Live",
+      "Hypercare"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "Hypercare fails in an unglamorous way. It is rarely one dramatic defect that undoes it; it is the small check nobody ran on Tuesday, the workaround nobody wrote down, the support question routed to a person who had already left the project. A checklist prevents that kind of drift — but only if it is organised by rhythm rather than dumped as one long list. Some things must be checked every day or they stop being true. Some only make sense weekly, when a pattern can be seen. Some belong to the business cycle itself, and a few matter only when exit approaches. This article sets out that rhythm for an HCM hypercare period: what to check, when to check it, and what evidence each check should leave behind."
+      },
+      {
+        "type": "p",
+        "text": "Think of this checklist as the operational companion to [the hypercare exit criteria](/blog/hypercare-exit-criteria). The exit criteria say what must be true before cover steps down; this checklist is how those truths get built and proven, one working day at a time. Used together, they end the two most common hypercare arguments — settled, says the project; not settled, says the business — because both sides are looking at the same checked record."
+      },
+      {
+        "type": "h2",
+        "text": "A checklist is a rhythm, not a document"
+      },
+      {
+        "type": "p",
+        "text": "A checklist printed once and pinned to a wall is decoration. The value sits in the cadence: a short daily pass that never gets skipped because the day felt quiet, a weekly review that looks for patterns a single day cannot show, and cycle checks tied to the moments the business actually depends on the system. Each rhythm has a different owner and a different question. The daily pass asks whether today is under control. The weekly review asks whether the trend is improving and what it is teaching. The cycle check asks whether the system carried real business, owned by the business, end to end."
+      },
+      {
+        "type": "p",
+        "text": "Keep the checklist short enough to finish. A daily list that takes ten focused minutes will be run honestly for weeks; a forty-item ritual will be pencil-whipped by the second week. Where a check repeatedly finds nothing, record that finding rather than deleting the check — a run of clean results is itself evidence the exit gate will later ask for. Where a check repeatedly finds problems, the answer is not a longer checklist but a fix, an owner, and a review date in triage."
+      },
+      {
+        "type": "img",
+        "src": "/images/blog/hypercare-checklist-1.svg",
+        "alt": "Hypercare checklist rhythm diagram: four layers - daily checks, weekly review, per-cycle checks, and exit-readiness checks - each with its check items, its owner, and the question it answers.",
+        "caption": "Hypercare checklist rhythm: daily, weekly, per-cycle, and exit layers."
+      },
+      {
+        "type": "h2",
+        "text": "The daily checks: triage, cover, and the day's truth"
+      },
+      {
+        "type": "p",
+        "text": "Start every hypercare day with the issue picture, reviewed the way [the post-go-live issue triage process](/blog/post-go-live-issue-triage) describes: new items logged since the last session, severity confirmed rather than assumed, and every process-stopping item carrying a named owner, a next step, and a time for the next update. The daily check is not a status recital; it is a routing decision. Items that can be answered from a guide are answered and closed. Items that need a configuration change enter change control the same day, not at the end of the week. Items waiting on the business are named as waiting, with the person who can unblock them identified politely and precisely."
+      },
+      {
+        "type": "p",
+        "text": "Then check cover itself. Who is on point today, which hours are staffed, and does every route a user might take — the help channel, the super-user network, the escalation path — actually reach a person? Cover rosters decay quietly: someone returns to their substantive role, a shared mailbox stops being monitored. A two-minute confirmation that the published routes work prevents the most damaging hypercare story of all, the user who asked correctly and heard nothing. Close the day by recording volume, severity mix, escalations, and any workaround used, where the next shift will find it."
+      },
+      {
+        "type": "steps",
+        "label": "One hypercare day, in order",
+        "intro": "Six checks that carry a hypercare day from the opening triage to a record the next day can trust.",
+        "items": [
+          {
+            "title": "Open with the triage board",
+            "text": "Review new and open items by severity. Confirm every process-stopping item has a named owner, a next step, and a time for the next update before anything else is discussed."
+          },
+          {
+            "title": "Confirm cover and routes",
+            "text": "Check who is on point, which hours are staffed, and that the help channel, super-user network, and escalation path each reach a real person today."
+          },
+          {
+            "title": "Watch the live business",
+            "text": "Follow the work happening in the system today: approvals moving, time and absence entries flowing, and any cycle task due. Chase stalled approvals early, while the day can still recover."
+          },
+          {
+            "title": "Close or advance every workaround",
+            "text": "For each workaround in use, confirm it is written down where users find it, has an owner, and has a fix or a review date. No workaround lives only in one person's head."
+          },
+          {
+            "title": "Feed support what the day taught",
+            "text": "Pass the day's resolved answers, new guides, and recurring questions to the support team the same day, so tomorrow's first contact starts from today's learning."
+          },
+          {
+            "title": "Write the day down",
+            "text": "Record volume, severity mix, escalations, restorations, and open risks in the hypercare log. The log is the evidence base for the weekly review and, later, the exit gate."
+          }
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "The weekly and per-cycle checks"
+      },
+      {
+        "type": "p",
+        "text": "Weekly, step back from individual items and read the pattern. Which categories keep recurring, and is the recurrence a training gap, a guide gap, or a genuine defect wearing different clothes? Is volume falling because the system is settling, or because users have stopped reporting and started working around it privately? That second possibility is the dangerous one: test it by asking super-users directly and comparing the log against what the business says its week actually felt like. Review adoption the same way — which teams work fully in the new process, which keep shadow records, and what specific help the holdouts need."
+      },
+      {
+        "type": "p",
+        "text": "The per-cycle checks carry the most weight, because the cycle is where hypercare proves itself. Before the cycle, confirm inputs: time approved, changes entered, interfaces and files received, and the checklist from the previous cycle's lessons applied. During the cycle, confirm the business team is leading each step with support alongside rather than in front — who ran the calculation, who checked the results, who approved them. After the cycle, hold a short review while memory is fresh: what was checked, what surprised, which defects or workarounds the cycle produced, and what changes before the next one. In cross-border programmes, run this discipline for each country's cycle separately; a clean Canadian cycle proves nothing about the United States cycle, with its different rules, deadlines, and failure modes. The evidence habit throughout is the one practised in [the go-live readiness assessment](/blog/go-live-readiness-assessment): claims are shown from records, not asserted from confidence."
+      },
+      {
+        "type": "h2",
+        "text": "Support, users, and the checks people skip"
+      },
+      {
+        "type": "p",
+        "text": "Support readiness is checked by watching support work, not by asking whether the team feels ready. Each week, confirm that support has received, routed, and resolved real cases through the normal routes, with the project observing rather than leading — the practical test of [knowledge transfer planning](/blog/knowledge-transfer-planning). Check the knowledge base as a user would: pick the week's three most common questions and find their answers using only the published guides. If an answer lives in a chat thread, a personal notebook, or a project member's memory, transfer it that week. Also check the boundary cases support finds hardest, such as retroactive pay corrections, leaver processing, and year-to-date adjustments, and schedule guided practice on them before the cycle forces the lesson."
+      },
+      {
+        "type": "p",
+        "text": "User checks are equally concrete. Confirm communications said one thing clearly: where help lives now, and what changed this week. Confirm super-users are answering more than they escalate, and give them the week's answers before users ask. Watch for quiet workarounds — the spreadsheet kept just in case, the approval chased by personal message instead of the system — because each one points precisely at training, access, or trust that still needs work."
+      },
+      {
+        "type": "img",
+        "src": "/images/blog/hypercare-checklist-2.svg",
+        "alt": "Hypercare triage-to-exit flow diagram: daily triage control, weekly pattern review, cycle proof, and exit readiness, above readiness domains for support, users, and the owned backlog, and an evidence strip of log, cycle records, support cases, and backlog.",
+        "caption": "Triage-to-exit flow: daily control, weekly pattern, cycle proof, and exit readiness."
+      },
+      {
+        "type": "h2",
+        "text": "Exit-readiness checks: building the file as you go"
+      },
+      {
+        "type": "p",
+        "text": "In the final stretch, the checklist turns toward exit without changing its rhythm. Check the backlog the way the exit gate will: every item with a named owner who has accepted it, a priority, any workaround in writing, and a review date. Check the support file: cases resolved by support alone, guides published, guided practice on the hard cases. Check the cycle file: each cycle's before, during, and after records, signed by the owners who ran them. Fill any gap with real work in the remaining weeks, not paperwork at the end."
+      },
+      {
+        "type": "p",
+        "text": "Finally, check the step-down plan itself, inside the wider arc of [the complete guide to HCM implementation](/blog/complete-guide-hcm-implementation): which cover reduces first, what gets announced and when, which review confirms each stage held, and which trigger restores cover if something breaks. A checklist run daily and reviewed weekly makes this conversation short: exit becomes a reading of the record, not a negotiation about feelings."
+      },
+      {
+        "type": "h2",
+        "text": "Common mistakes"
+      },
+      {
+        "type": "p",
+        "text": "Most checklist failures are rhythm failures: the list exists, but it is run late, run partially, or run as theatre instead of as control."
+      },
+      {
+        "type": "accordion",
+        "label": "Checklist mistakes, as a diagnostic",
+        "items": [
+          {
+            "q": "Running one long checklist instead of a rhythm",
+            "a": "A single undifferentiated list mixes daily control with weekly pattern-spotting and cycle proof, so it is too long for daily use and too shallow for the cycle. Split it into daily, weekly, per-cycle, and exit layers, each with its own owner and question."
+          },
+          {
+            "q": "Skipping the daily pass on quiet days",
+            "a": "Quiet days are when cover rosters decay, routes stop being monitored, and small items age unnoticed. The daily pass exists precisely to verify that quiet means settled rather than unwatched. Run it, record the clean result, and bank the evidence."
+          },
+          {
+            "q": "Treating workarounds as closed once they work",
+            "a": "A working workaround is still a defect with a manual detour. Unless it is written where users find it, owned, and carrying a fix or review date, it will fail the first time its inventor is absent. Advance or retire every workaround daily."
+          },
+          {
+            "q": "Judging support ready without watching support work",
+            "a": "Confidence in a handover meeting is not readiness. Watch support receive, route, and resolve live cases through normal routes with the project observing, and test the knowledge base by finding real answers as a user would."
+          },
+          {
+            "q": "Checking only the issue log at the weekly review",
+            "a": "The log shows what was reported, not what the week felt like. Falling volume can mean users stopped reporting and went private. Test the log against super-user reports and informal channels before calling the trend an improvement."
+          },
+          {
+            "q": "Assembling exit evidence at the end",
+            "a": "Evidence reconstructed in the final week is paperwork, not proof. Build the cycle file, support file, and owned backlog as the daily and weekly checks produce them, so the exit gate reads a record that already exists."
+          }
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Key Takeaways"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "Organise hypercare checks by rhythm: daily control, weekly pattern, per-cycle proof, and exit readiness.",
+          "Never skip the daily pass on quiet days — verify cover, routes, triage, and workarounds, then write the day down.",
+          "Judge the weekly trend against what users actually experienced, not only against what the log recorded.",
+          "Prove each business cycle with the business leading, separately for each country in a cross-border programme.",
+          "Build the exit evidence file as you go, so the exit gate reads a record instead of hearing a reconstruction."
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Frequently Asked Questions"
+      },
+      {
+        "type": "p",
+        "text": "How long should the daily hypercare check take? Minutes, not hours — a focused triage and cover confirmation that a small team completes in one short session. If the daily list cannot be finished quickly and honestly, it is too long; move pattern work to the weekly review where it belongs."
+      },
+      {
+        "type": "p",
+        "text": "Who owns the checklist during hypercare? The hypercare lead owns the daily rhythm, business process owners own the per-cycle checks for their areas, and support leadership progressively owns the support checks as cover steps down. One named owner per layer keeps the rhythm from becoming everyone's job and therefore no one's."
+      },
+      {
+        "type": "p",
+        "text": "What should happen when a check keeps failing? Stop lengthening the checklist. A repeatedly failing check points at a defect, a training gap, or a broken route: give it an owner, a fix, and a review date in triage, and keep the original check in place to prove the fix held."
+      },
+      {
+        "type": "p",
+        "text": "Does one checklist work for both Canada and the United States in a cross-border programme? The rhythm is shared, but the cycle checks are not. Each country's pay cycle, deadlines, and statutory tasks need their own before, during, and after checks, proven separately under that country's business owners."
+      },
+      {
+        "type": "h2",
+        "text": "Next Steps"
+      },
+      {
+        "type": "p",
+        "text": "Before go-live, build the four layers: the daily six, the weekly pattern review, the per-cycle checks for each country, and the exit-readiness file structure. Assign an owner to each layer, agree where the records live, and start the daily rhythm on the first morning of hypercare — the exit gate will thank you for the record."
+      },
+      {
+        "type": "quiz",
+        "label": "Check your understanding",
+        "questions": [
+          {
+            "q": "It is a quiet hypercare morning: no new severe items, and yesterday was calm. What should happen to the daily check?",
+            "options": [
+              {
+                "text": "Skip it and use the time elsewhere, since there is nothing to triage",
+                "correct": false,
+                "why": "Quiet is a claim the daily pass exists to verify. Cover rosters, monitored routes, and ageing small items all decay on exactly these days, and the clean record is itself exit evidence."
+              },
+              {
+                "text": "Run it in full: confirm triage, cover, routes, and workarounds, record the clean result, and close the day in the log",
+                "correct": true,
+                "why": "The daily rhythm is control, not ceremony. A short, honest pass on a quiet day proves the system is watched, keeps routes tested, and banks the evidence the weekly review and exit gate will rely on."
+              },
+              {
+                "text": "Replace it with a general message asking users to report anything wrong",
+                "correct": false,
+                "why": "Asking users to self-report tests nothing about cover, routing, or the backlog. Unreported problems are precisely what the daily and weekly checks are designed to surface."
+              }
+            ]
+          },
+          {
+            "q": "Weekly volume has fallen for three weeks. Super-users, however, say teams are keeping private spreadsheets and asking each other instead of logging issues. How should the checklist treat the falling trend?",
+            "options": [
+              {
+                "text": "As improvement, because the log is the official record and it clearly shows fewer issues",
+                "correct": false,
+                "why": "The log records reporting behaviour as well as system health. When the two diverge, trusting the log alone certifies a shadow system as success."
+              },
+              {
+                "text": "As a warning: test the log against lived experience, find why users went private, fix the training, access, or trust cause, and keep checking until reporting and reality match again",
+                "correct": true,
+                "why": "The weekly review exists to compare the record with the business's actual week. Private workarounds are precise pointers to what still needs work, and the trend only counts once official routes carry the real questions again."
+              },
+              {
+                "text": "As a reason to close hypercare early, since users are coping without support",
+                "correct": false,
+                "why": "Coping privately is the opposite of readiness: it hides defects, fragments knowledge, and collapses when a key person is absent. Exit requires the new process working openly, not being bypassed."
+              }
+            ]
+          },
+          {
+            "q": "Exit is two weeks away, and the team proposes assembling the cycle records, support evidence, and backlog acceptance in the final week. What does the checklist discipline say?",
+            "options": [
+              {
+                "text": "That is efficient, because the facts are known and only the paperwork remains",
+                "correct": false,
+                "why": "Reconstructed evidence cannot show who ran a cycle, who resolved a case, or who accepted an item at the time. Gaps discovered in the final week leave no time to fill them with real work."
+              },
+              {
+                "text": "Build the file as you go is the rule: if gaps exist now, name them, fill them with real observed work in the remaining weeks — another owned cycle, another support-led week — and let the gate read the resulting record",
+                "correct": true,
+                "why": "Exit evidence is a by-product of the daily, weekly, and per-cycle checks, not an end-of-project assembly task. Two weeks is enough to prove a genuine gap properly, but not to paper over one honestly."
+              },
+              {
+                "text": "Postpone exit indefinitely whenever any evidence file is incomplete",
+                "correct": false,
+                "why": "Indefinite delay is not the standard either. The gate can exit part of the scope, hold one domain, and set a review date — proportionality, driven by which evidence is actually missing."
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
     "slug": "hypercare-exit-criteria",
     "title": "Hypercare Exit Criteria: Knowing When You're Done",
     "excerpt": "Hypercare exit criteria for HCM: prove the business cycle, stabilise defects, transfer knowledge, and hand over with evidence.",
