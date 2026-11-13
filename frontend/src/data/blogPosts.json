@@ -1,5 +1,274 @@
 [
   {
+    "slug": "hypercare-first-90-days",
+    "title": "Hypercare After Go-Live: Planning the First 90 Days",
+    "excerpt": "Plan HCM hypercare across 90 days: stabilise in Days 1-14, prove cycles and transfer ownership by Day 45, then normalise and step down with evidence.",
+    "publishedAt": "2026-11-13",
+    "readingTime": "8 min read",
+    "cover": "/images/blog/hypercare-first-90-days-cover.webp",
+    "tags": [
+      "HCM",
+      "Implementation",
+      "Go-Live",
+      "Hypercare"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "Most hypercare plans describe the first week in detail and the following eleven weeks not at all. Cover is intense at go-live, and then the plan quietly assumes the work will fade on its own. Sometimes it does. More often, the project team drifts back to other duties, the first full pay cycles arrive after the early energy has gone, and the business discovers in week six that nobody owns the problem it is now facing. A 90-day plan prevents that drift by treating hypercare as three distinct jobs in sequence, each with its own purpose, staffing shape, and evidence."
+      },
+      {
+        "type": "p",
+        "text": "This article sets out that plan for an HCM programme: Days 1 to 14 to stabilise, Days 15 to 45 to prove the cycles and transfer ownership, and Days 46 to 90 to normalise and step cover down in stages. It is the planning companion to [the hypercare checklist](/blog/hypercare-checklist). The checklist runs the daily rhythm; this plan decides how the rhythm, team, and governance change as the ninety days unfold."
+      },
+      {
+        "type": "h2",
+        "text": "A 90-day plan is a taper, not a deadline"
+      },
+      {
+        "type": "p",
+        "text": "Ninety days is not a promise that support ends on day ninety. It is a planning horizon long enough to contain several complete cycles, the first month-end and quarter-end routines, and the quirks a fortnight of cover would never see. Planning across it forces honest questions early: which cycles fall inside the window, and which key dates collide with holidays or freezes. In a cross-border Canada and United States programme, that matters twice over: each country brings its own pay dates and statutory deadlines, and a quiet week in one can be the busiest week in the other."
+      },
+      {
+        "type": "p",
+        "text": "A good plan also tapers deliberately. Cover held at go-live intensity exhausts the team and teaches dependence; cover dropped sharply after two weeks abandons users just as harder, less frequent processes appear. Write the taper down in advance — which roles reduce first, which stay until a named cycle is proven, which reviews authorise each reduction. Pre-agreed, stepping down reads as the plan working; improvised, it reads as leaving early."
+      },
+      {
+        "type": "img",
+        "src": "/images/blog/hypercare-first-90-days-1.svg",
+        "alt": "Hypercare first 90 days plan diagram: three phases - days 1 to 14 stabilise, days 15 to 45 prove and transfer, days 46 to 90 normalise and step down - each with its main work and its exit signal.",
+        "caption": "90-day hypercare plan: stabilise, prove and transfer, normalise and step down."
+      },
+      {
+        "type": "h2",
+        "text": "Days 1 to 14: stabilise the service"
+      },
+      {
+        "type": "p",
+        "text": "The first fortnight has one job: make the new service predictable. Users do not yet need optimisation; they need to know where help lives, to see issues acknowledged quickly, and to watch the same problem stop recurring. Run the daily rhythm without exception — triage by severity, confirmed cover, a written record — following [the post-go-live issue triage process](/blog/post-go-live-issue-triage) so every process-stopping item carries a named owner, a next step, and a time for the next update. Staff this phase at full strength, with the fastest escalation routes of the ninety days."
+      },
+      {
+        "type": "p",
+        "text": "Resist two temptations. The first is redesigning processes that are merely unfamiliar: early complaints often describe learning, not defects, and changing a working process in week one restarts that learning for everyone. Log the friction, support people through it, revisit it later with evidence. The second is declaring victory on volume. A quiet day proves little; a well-run fortnight, with workarounds documented and recurring questions turned into guides the same day, proves the service can be trusted. End with a short stabilisation review: what recurred, what is still fragile, what the calendar demands next."
+      },
+      {
+        "type": "steps",
+        "label": "Building the 90-day plan before go-live",
+        "intro": "Five planning moves that turn a go-live date into a managed ninety days.",
+        "items": [
+          {
+            "title": "Map every cycle to a date",
+            "text": "List each pay cycle, month-end, and statutory deadline for every country in scope, with its business owner. The calendar, not optimism, decides how long each kind of cover must last."
+          },
+          {
+            "title": "Name the phase owners",
+            "text": "Assign one accountable owner for stabilisation, one for cycle proof and transfer, and one for normalisation and step-down. Phases without owners drift into whoever is still available."
+          },
+          {
+            "title": "Write the staffing taper",
+            "text": "Record which roles are full-time in Days 1 to 14, which reduce after the first proven cycles, and which stay until a named event. Share the taper with the business before go-live."
+          },
+          {
+            "title": "Schedule the governance now",
+            "text": "Book the daily triage, weekly pattern review, per-cycle reviews, and formal step-down reviews for the full ninety days. Meetings booked early survive diary pressure; meetings left for later do not happen."
+          },
+          {
+            "title": "Define the evidence as you go",
+            "text": "Agree where cycle records, support cases, guides, and the owned backlog will live from day one, so each phase produces the proof the next phase and the exit gate will ask for."
+          }
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Days 15 to 45: prove the cycles and move ownership"
+      },
+      {
+        "type": "p",
+        "text": "The middle phase is where hypercare earns its length. Daily volume should now be interpretable, common questions have guides, and attention shifts to the cycles that carry real risk: each pay run, time and absence deadlines, month-end close, and the interfaces other systems depend on. Plan for the business to lead each cycle, with the project alongside rather than in front. Who prepared the inputs, ran the steps, checked the results, and approved them should be recorded every time, separately for each country — because a project-led cycle proves the project, not the operation the business must sustain after step-down."
+      },
+      {
+        "type": "p",
+        "text": "Ownership moves on purpose in this phase, guided by [knowledge transfer planning](/blog/knowledge-transfer-planning). Support takes live cases through normal routes while the project observes, super-users answer first and escalate second, and guided practice covers the hard, infrequent cases — retroactive corrections, leaver processing, year-to-date adjustments — before a deadline forces the lesson. Transfer is measured by observed work, not attendance: a topic is transferred when the new owner has done it unaided on a real case, and the record shows it. If a cycle fails or a transfer stalls, this phase still has time to repeat it properly."
+      },
+      {
+        "type": "h2",
+        "text": "Days 46 to 90: normalise, step down, and close"
+      },
+      {
+        "type": "p",
+        "text": "In the final phase the question changes from can the business run this to does this now run as normal business. Daily triage can lighten where the record justifies it, cover hours narrow to the published support pattern, and project members release in the taper's order — general cover first, scarce specialists last, nobody released whose named cycle or transfer is still unproven. Each reduction is announced beforehand, confirmed by a short review afterwards, and reversible: agree in advance which signal, such as a failed cycle or an unowned severe backlog, restores cover, and who can invoke it."
+      },
+      {
+        "type": "p",
+        "text": "Close by reading the record against [the hypercare exit criteria](/blog/hypercare-exit-criteria), not by negotiating impressions. The cycle file should show business-led cycles with signed reviews, the support file cases resolved through normal routes, and every remaining item an accepted owner. Where one domain is ready and another is not, exit proportionally: step down what is proven, hold cover where it is not, set the review date. That makes the ninety days the final stage of [the complete guide to HCM implementation](/blog/complete-guide-hcm-implementation), not an open-ended project extension."
+      },
+      {
+        "type": "img",
+        "src": "/images/blog/hypercare-first-90-days-2.svg",
+        "alt": "Hypercare cover taper and ownership diagram: project cover stepping down in stages while business and support ownership steps up, across cycle proof, knowledge transfer, and adoption domains, with governance and an evidence strip.",
+        "caption": "Cover taper and governance cadence: full cover, shared ownership, normal operations."
+      },
+      {
+        "type": "h2",
+        "text": "Staffing, governance, and honest measures"
+      },
+      {
+        "type": "p",
+        "text": "Three threads hold the phases together. Staffing follows the taper: full, blended cover early; a smaller, more specialised team mid-phase as support and super-users carry routine work; named on-call expertise late, rather than a standing room waiting for questions that no longer come. Protect the taper by naming deputies for scarce roles — a plan depending on one person for ninety consecutive days is not a plan."
+      },
+      {
+        "type": "p",
+        "text": "Governance follows a steady cadence: daily triage while volume demands it, a weekly pattern review reading categories and recurrence, a review after every cycle, and formal step-down reviews at each phase boundary. Keep measures honest and qualitative where numbers would mislead. Track direction and evidence — whether recurrence is falling, whether support resolves more cases unaided, whether cycles complete with fewer workarounds, whether users use official routes — and record what was observed, by whom, on which cycle. Truthful observations carry a step-down decision; invented precision will not."
+      },
+      {
+        "type": "h2",
+        "text": "Common mistakes"
+      },
+      {
+        "type": "p",
+        "text": "Most 90-day failures are planning failures made before go-live: the taper or transfer was never designed."
+      },
+      {
+        "type": "accordion",
+        "label": "90-day planning mistakes, as a diagnostic",
+        "items": [
+          {
+            "q": "Planning the first week and improvising the rest",
+            "a": "The hardest processes are infrequent ones: later pay cycles, month-end, and quarter-end routines arrive after week two. Map every cycle and deadline to a date before go-live, and staff the plan to the calendar, not to the launch."
+          },
+          {
+            "q": "Holding go-live staffing for the full ninety days",
+            "a": "Permanent full cover exhausts the team and teaches the business to depend on it, so readiness never develops. Write the taper in advance, reduce in stages at phase reviews, and keep scarce specialists until their named events are proven."
+          },
+          {
+            "q": "Cutting cover sharply after a quiet fortnight",
+            "a": "Early quiet usually means simple questions were answered, not that the operation is proven. Step down only against cycle evidence and observed support work, in stages, with an agreed trigger that restores cover if a stage does not hold."
+          },
+          {
+            "q": "Treating knowledge transfer as sessions delivered",
+            "a": "Attendance is not transfer. A topic moves when its new owner has handled a real case unaided through the normal route and the record shows it. Schedule guided practice on hard, infrequent cases before a deadline forces the lesson."
+          },
+          {
+            "q": "Letting the project lead every cycle to keep it safe",
+            "a": "A project-led cycle proves the project. From the middle phase, the business prepares, runs, checks, and approves each cycle with the project alongside, recorded per country, so the proof matches the operation that must survive step-down."
+          },
+          {
+            "q": "Inventing precise targets to make the plan look rigorous",
+            "a": "Fabricated percentages and thresholds collapse under the first serious question and discredit honest evidence. Use observed direction, named reviewers, and signed cycle records, and state plainly what has and has not been proven."
+          }
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Key Takeaways"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "Plan three jobs: stabilise Days 1 to 14, prove cycles and transfer ownership Days 15 to 45, normalise and step down Days 46 to 90.",
+          "Build the plan from the cycle calendar — every pay cycle, month-end, and statutory deadline, per country.",
+          "Write the staffing taper and governance cadence down before go-live; authorise each reduction at a phase review.",
+          "Transfer counts only when the new owner has done the work unaided, observed and recorded.",
+          "Measure with honest observed evidence, never invented precision."
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Frequently Asked Questions"
+      },
+      {
+        "type": "p",
+        "text": "Does hypercare have to last exactly 90 days? No. Ninety days is a planning horizon capturing several full cycles and the first month-end and quarter-end routines. Step down each domain when its evidence is ready — earlier where cycles prove quickly, later where a named event is outstanding."
+      },
+      {
+        "type": "p",
+        "text": "When should cover first reduce? At the first phase review, only for roles whose work has settled on the record: routine questions carried by guides and super-users, support resolving cases unaided. Scarce specialists stay until their cycles are proven business-led."
+      },
+      {
+        "type": "p",
+        "text": "Who owns the plan after the project team steps down? Support leadership owns the service, business owners own their cycles and remaining backlog, and a named owner holds the review dates and the trigger for restoring cover."
+      },
+      {
+        "type": "p",
+        "text": "How is a cross-border programme planned differently? Phases and governance are shared, but the calendar, proof, and step-down decisions are per country. Canadian and United States cycles, deadlines, and statutory tasks differ, so each country proves its own cycles under its own owners."
+      },
+      {
+        "type": "h2",
+        "text": "Next Steps"
+      },
+      {
+        "type": "p",
+        "text": "Before go-live, build the calendar, name the phase owners, write the taper, book the governance, and agree where evidence will live. Then run the first fortnight at full strength and let the record — not optimism — authorise every reduction."
+      },
+      {
+        "type": "quiz",
+        "label": "Check your understanding",
+        "questions": [
+          {
+            "q": "It is day 16 and the first week was quiet, so a sponsor proposes cutting cover by half immediately. What does the 90-day plan say?",
+            "options": [
+              {
+                "text": "Agree, because low early volume shows the system has settled",
+                "correct": false,
+                "why": "Early quiet shows simple questions were answered. The infrequent, higher-risk cycles have not yet run, and cutting before they are proven removes cover exactly when it is first truly tested."
+              },
+              {
+                "text": "Hold the taper: reductions happen at phase reviews against cycle evidence and observed support work, in stages, with an agreed trigger to restore cover",
+                "correct": true,
+                "why": "The taper was written before go-live precisely for this moment. A staged, evidence-led reduction protects the coming cycles, keeps the business confidence the plan built, and can be reversed if a stage does not hold."
+              },
+              {
+                "text": "Keep full go-live staffing unchanged for the entire ninety days to be safe",
+                "correct": false,
+                "why": "Full cover held indefinitely exhausts the team and prevents the business and support from developing ownership. Safety comes from proven transfer, not from permanent project presence."
+              }
+            ]
+          },
+          {
+            "q": "In week five, the project team is still preparing, running, and approving every pay cycle because it is faster that way. What is the planning problem?",
+            "options": [
+              {
+                "text": "There is no problem, because the cycles are completing accurately and on time",
+                "correct": false,
+                "why": "Accurate project-led cycles prove the project, not the operation. When cover steps down, the business inherits a process it has never actually run."
+              },
+              {
+                "text": "Ownership is not transferring: the business should lead each cycle in this phase, with the project alongside, recorded per country, so the proof matches post-step-down reality",
+                "correct": true,
+                "why": "The middle phase exists to move ownership while help is still present. Business-led cycles, observed support work, and guided practice on hard cases are the evidence the final phase and the exit gate rely on."
+              },
+              {
+                "text": "The cycles should be handed over entirely at once, with the project leaving the room",
+                "correct": false,
+                "why": "Abrupt handover is as risky as no handover. Transfer is staged: business leads, project observes, then project withdraws once the record shows the work done unaided."
+              }
+            ]
+          },
+          {
+            "q": "At day 90, payroll cycles are proven and support is confident, but one domain still has recurring issues and an unproven quarter-end routine. What should happen?",
+            "options": [
+              {
+                "text": "Close all of hypercare, because the 90-day date has arrived",
+                "correct": false,
+                "why": "The date is a planning horizon, not an automatic end. Closing cover over an unproven routine and a recurring problem simply moves the risk to the business without support."
+              },
+              {
+                "text": "Extend hypercare indefinitely for every domain until everything is perfect",
+                "correct": false,
+                "why": "Indefinite cover for proven domains wastes scarce expertise and delays normal operations. The response should be proportional to what is actually unproven."
+              },
+              {
+                "text": "Exit proportionally: step down the proven domains, hold cover for the one domain until its quarter-end routine is proven, and set a review date",
+                "correct": true,
+                "why": "Step-down follows evidence per domain. Proven areas normalise on schedule, the held area keeps named cover for its outstanding event, and the review date keeps the decision active rather than open-ended."
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
     "slug": "hypercare-checklist",
     "title": "Hypercare Checklist: What to Check and When",
     "excerpt": "A practical hypercare checklist for HCM: daily triage, cycle checks, support readiness, user adoption, and exit evidence in one place.",
