@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="780" viewBox="0 0 1200 780" role="img" aria-label="Hypercare first 90 days plan: three phases - days 1 to 14 stabilise, days 15 to 45 prove and transfer, days 46 to 90 normalise and step down - each with its purpose, its main work, and its exit signal">
+  <defs>
+    <linearGradient id="hdr" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#0f172a"/>
+      <stop offset="1" stop-color="#1e3a5f"/>
+    </linearGradient>
+  </defs>
+  <rect x="0" y="0" width="1200" height="780" fill="#ffffff"/>
+  <rect x="0" y="0" width="1200" height="92" fill="url(#hdr)"/>
+  <text x="48" y="46" font-family="Georgia, serif" font-size="30" fill="#ffffff">Hypercare: The First 90 Days in Three Phases</text>
+  <text x="48" y="74" font-family="Arial, sans-serif" font-size="16" fill="#94A3B8">Each phase has a different job — intensity falls only as proof accumulates</text>
+
+  <g>
+    <rect x="40" y="124" width="1120" height="150" rx="12" fill="#1e3a5f" stroke="#1e3a5f" stroke-width="2"/>
+    <text x="64" y="162" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#ffffff">Days 1–14 · Stabilise</text>
+    <text x="64" y="192" font-family="Arial, sans-serif" font-size="14" fill="#ffffff">Full cover, daily triage, every route tested live.</text>
+    <text x="64" y="216" font-family="Arial, sans-serif" font-size="14" fill="#ffffff">Workarounds written down, owners named, log started.</text>
+    <text x="64" y="240" font-family="Arial, sans-serif" font-size="14" fill="#ffffff">First cycle watched closely, business alongside.</text>
+    <text x="830" y="162" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#ffffff">Exit signal:</text>
+    <text x="830" y="192" font-family="Arial, sans-serif" font-size="14" fill="#94A3B8">No process-stopping item</text>
+    <text x="830" y="216" font-family="Arial, sans-serif" font-size="14" fill="#94A3B8">without an owner, a next</text>
+    <text x="830" y="240" font-family="Arial, sans-serif" font-size="14" fill="#94A3B8">step, and an update time</text>
+  </g>
+  <g>
+    <rect x="40" y="288" width="1120" height="150" rx="12" fill="#F0F4F8" stroke="#2B6CB0" stroke-width="2"/>
+    <text x="64" y="326" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#1A202C">Days 15–45 · Prove and Transfer</text>
+    <text x="64" y="356" font-family="Arial, sans-serif" font-size="14" fill="#475569">Business leads each cycle, support alongside, project observing.</text>
+    <text x="64" y="380" font-family="Arial, sans-serif" font-size="14" fill="#475569">Knowledge transfer on live cases, guides tested as a user would.</text>
+    <text x="64" y="404" font-family="Arial, sans-serif" font-size="14" fill="#475569">Weekly pattern review replaces daily firefighting as the main event.</text>
+    <text x="830" y="326" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#1A202C">Exit signal:</text>
+    <text x="830" y="356" font-family="Arial, sans-serif" font-size="14" fill="#64748B">A full cycle run clean by</text>
+    <text x="830" y="380" font-family="Arial, sans-serif" font-size="14" fill="#64748B">the business, per country,</text>
+    <text x="830" y="404" font-family="Arial, sans-serif" font-size="14" fill="#64748B">with records signed</text>
+  </g>
+  <g>
+    <rect x="40" y="452" width="1120" height="150" rx="12" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+    <text x="64" y="490" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#1A202C">Days 46–90 · Normalise and Step Down</text>
+    <text x="64" y="520" font-family="Arial, sans-serif" font-size="14" fill="#475569">Cover tapers in stages, each stage announced and reviewed.</text>
+    <text x="64" y="544" font-family="Arial, sans-serif" font-size="14" fill="#475569">Support owns the backlog item by item; hard cases practised.</text>
+    <text x="64" y="568" font-family="Arial, sans-serif" font-size="14" fill="#475569">Exit gate reads the record built since day one.</text>
+    <text x="830" y="490" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#1A202C">Exit signal:</text>
+    <text x="830" y="520" font-family="Arial, sans-serif" font-size="14" fill="#64748B">Step-down holds at review;</text>
+    <text x="830" y="544" font-family="Arial, sans-serif" font-size="14" fill="#64748B">re-entry trigger agreed if</text>
+    <text x="830" y="568" font-family="Arial, sans-serif" font-size="14" fill="#64748B">a blocker returns</text>
+  </g>
+  <g>
+    <rect x="40" y="616" width="1120" height="108" rx="12" fill="#ffffff" stroke="#2B6CB0" stroke-width="2"/>
+    <text x="64" y="652" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#1A202C">The Rule Across All 90 Days</text>
+    <text x="64" y="680" font-family="Arial, sans-serif" font-size="14" fill="#475569">Cover reduces because evidence says it can —</text>
+    <text x="64" y="704" font-family="Arial, sans-serif" font-size="14" fill="#475569">never because the calendar says it should.</text>
+    <text x="830" y="652" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#1A202C">Cadence:</text>
+    <text x="830" y="680" font-family="Arial, sans-serif" font-size="14" fill="#64748B">Daily, then weekly, then</text>
+    <text x="830" y="704" font-family="Arial, sans-serif" font-size="14" fill="#64748B">per cycle and per stage</text>
+  </g>
+  <text x="48" y="756" font-family="Arial, sans-serif" font-size="14" fill="#64748B">Plan the 90 days before go-live — the phases, the taper, and the proof each stage requires.</text>
+</svg>
