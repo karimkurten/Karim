@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="780" viewBox="0 0 1200 780" role="img" aria-label="Hypercare cover taper and transfer diagram: project cover stepping down in stages while business and support ownership steps up, across cycle proof, knowledge transfer, and adoption domains">
+  <defs>
+    <linearGradient id="hdr2" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#0f172a"/>
+      <stop offset="1" stop-color="#1e3a5f"/>
+    </linearGradient>
+  </defs>
+  <rect x="0" y="0" width="1200" height="780" fill="#ffffff"/>
+  <rect x="0" y="0" width="1200" height="92" fill="url(#hdr2)"/>
+  <text x="48" y="46" font-family="Georgia, serif" font-size="30" fill="#ffffff">Stepping Down Cover, Stepping Up Ownership</text>
+  <text x="48" y="74" font-family="Arial, sans-serif" font-size="16" fill="#94A3B8">Two movements, one plan — project cover falls as business and support ownership rises</text>
+
+  <g>
+    <rect x="40" y="124" width="540" height="150" rx="12" fill="#1e3a5f" stroke="#1e3a5f" stroke-width="2"/>
+    <text x="64" y="162" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#ffffff">Project Cover — Steps Down</text>
+    <text x="64" y="192" font-family="Arial, sans-serif" font-size="14" fill="#ffffff">Full cover → reduced hours → on-call only</text>
+    <text x="64" y="216" font-family="Arial, sans-serif" font-size="14" fill="#ffffff">Each reduction announced, dated, and reviewed</text>
+    <text x="64" y="240" font-family="Arial, sans-serif" font-size="14" fill="#94A3B8">Restore cover for one area if its trigger fires</text>
+  </g>
+  <g>
+    <rect x="620" y="124" width="540" height="150" rx="12" fill="#F0F4F8" stroke="#2B6CB0" stroke-width="2"/>
+    <text x="644" y="162" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#1A202C">Ownership — Steps Up</text>
+    <text x="644" y="192" font-family="Arial, sans-serif" font-size="14" fill="#475569">Business runs cycles → support resolves alone</text>
+    <text x="644" y="216" font-family="Arial, sans-serif" font-size="14" fill="#475569">Guides carry answers → backlog owned item by item</text>
+    <text x="644" y="240" font-family="Arial, sans-serif" font-size="14" fill="#64748B">Proven on live work, observed — not asserted</text>
+  </g>
+  <g>
+    <rect x="40" y="288" width="360" height="150" rx="12" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+    <text x="64" y="326" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#1A202C">Cycle Proof</text>
+    <text x="64" y="356" font-family="Arial, sans-serif" font-size="14" fill="#475569">Each pay and time cycle run</text>
+    <text x="64" y="380" font-family="Arial, sans-serif" font-size="14" fill="#475569">by its business owners, per</text>
+    <text x="64" y="404" font-family="Arial, sans-serif" font-size="14" fill="#475569">country, with signed records</text>
+  </g>
+  <g>
+    <rect x="420" y="288" width="360" height="150" rx="12" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+    <text x="444" y="326" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#1A202C">Knowledge Transfer</text>
+    <text x="444" y="356" font-family="Arial, sans-serif" font-size="14" fill="#475569">Shadowing with accountability,</text>
+    <text x="444" y="380" font-family="Arial, sans-serif" font-size="14" fill="#475569">guided practice on hard cases,</text>
+    <text x="444" y="404" font-family="Arial, sans-serif" font-size="14" fill="#475569">answers moved into guides</text>
+  </g>
+  <g>
+    <rect x="800" y="288" width="360" height="150" rx="12" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+    <text x="824" y="326" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#1A202C">Adoption</text>
+    <text x="824" y="356" font-family="Arial, sans-serif" font-size="14" fill="#475569">Teams working in the new</text>
+    <text x="824" y="380" font-family="Arial, sans-serif" font-size="14" fill="#475569">process openly; shadow records</text>
+    <text x="824" y="404" font-family="Arial, sans-serif" font-size="14" fill="#475569">named and retired, not ignored</text>
+  </g>
+  <g>
+    <rect x="40" y="452" width="1120" height="150" rx="12" fill="#ffffff" stroke="#2B6CB0" stroke-width="2"/>
+    <text x="64" y="490" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#1A202C">Governance Across the 90 Days</text>
+    <text x="64" y="520" font-family="Arial, sans-serif" font-size="14" fill="#475569">Daily triage early, weekly pattern review throughout, a stage review at each taper step,</text>
+    <text x="64" y="544" font-family="Arial, sans-serif" font-size="14" fill="#475569">and an exit gate that reads the log, the cycle file, the support file, and the owned backlog.</text>
+    <text x="64" y="568" font-family="Arial, sans-serif" font-size="14" fill="#475569">Decisions recorded with owners — so the plan survives the people who wrote it.</text>
+    <text x="830" y="490" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#1A202C">If proof stalls:</text>
+    <text x="830" y="520" font-family="Arial, sans-serif" font-size="14" fill="#64748B">Hold that stage, fix the</text>
+    <text x="830" y="544" font-family="Arial, sans-serif" font-size="14" fill="#64748B">cause, review again — do</text>
+    <text x="830" y="568" font-family="Arial, sans-serif" font-size="14" fill="#64748B">not taper on hope</text>
+  </g>
+  <g>
+    <rect x="40" y="616" width="1120" height="108" rx="12" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+    <text x="64" y="652" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#1A202C">Evidence Strip</text>
+    <text x="64" y="680" font-family="Arial, sans-serif" font-size="14" fill="#475569">Hypercare log · Cycle records · Support cases resolved alone · Guides published · Backlog accepted item by item</text>
+    <text x="64" y="704" font-family="Arial, sans-serif" font-size="14" fill="#64748B">Built as the work happens — never assembled in the final week.</text>
+  </g>
+  <text x="48" y="756" font-family="Arial, sans-serif" font-size="14" fill="#64748B">A 90-day plan is a promise with stages: less cover, more ownership, proof at every step.</text>
+</svg>
