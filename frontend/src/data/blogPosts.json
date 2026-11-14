@@ -1,5 +1,278 @@
 [
   {
+    "slug": "service-transition-support-handoff",
+    "title": "Service Transition: Handing Over to Support",
+    "excerpt": "Hand an HCM implementation to support without losing control: readiness checks, the transition pack, shadowing, and signed acceptance.",
+    "publishedAt": "2026-11-14",
+    "readingTime": "8 min read",
+    "cover": "/images/blog/service-transition-support-handoff-cover.webp",
+    "tags": [
+      "HCM",
+      "Implementation",
+      "Hypercare",
+      "Support"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "Too many implementations end with a single handover meeting: a slide deck, a folder of documents nobody has tested under pressure, and a project team that leaves believing the work is done. Support learns the truth over the following weeks, usually from users, when a pay cycle fails, an interface stops, or a known workaround exists only in the memory of someone who has moved on. The failure is rarely effort. It is treating transition as an event instead of a managed phase with readiness criteria, evidence, and sign-off."
+      },
+      {
+        "type": "p",
+        "text": "This article sets out how to run that phase for an HCM service: what readiness means, what belongs in the transition pack, how shadowing and reverse-shadowing prove knowledge, and how acceptance, backlog, and access close cleanly. It sits alongside [the first 90 days of hypercare](/blog/hypercare-first-90-days). Hypercare stabilises the service; transition makes sure someone other than the project can keep it stable."
+      },
+      {
+        "type": "h2",
+        "text": "Transition is a phase, not a meeting"
+      },
+      {
+        "type": "p",
+        "text": "A managed transition starts well before the project ends, while the people who built the solution are still available to be questioned and corrected. It has a plan, a named transition lead on each side, and a timetable tied to the service calendar rather than to the project closure date. Work moves in stages, each stage produces evidence, and nothing counts as transferred until the receiving team has demonstrated it on real work."
+      },
+      {
+        "type": "p",
+        "text": "That discipline changes the conversation. Instead of asking whether documents were sent, leaders ask whether support can run the next pay cycle unaided, resolve common cases through normal routes, and escalate uncommon ones to the right place first time. Those questions connect directly to [knowledge transfer planning](/blog/knowledge-transfer-planning): attendance at a walkthrough is not transfer, and a shared drive full of files is not readiness."
+      },
+      {
+        "type": "img",
+        "src": "/images/blog/service-transition-support-handoff-1.svg",
+        "alt": "Service transition pack diagram: six domains support must receive and prove - runbooks and procedures, configuration and integrations, known issues and decisions, people access and escalation, service levels and critical calendar, and readiness proof.",
+        "caption": "Transition pack: runbooks, configuration, known issues, people, service levels, and readiness proof."
+      },
+      {
+        "type": "steps",
+        "label": "Preparing the transition to support",
+        "intro": "Five moves that turn a handover date into a managed transition.",
+        "items": [
+          {
+            "title": "Name owners on both sides",
+            "text": "Appoint a transition lead for the project and an accountable owner in support for each domain. A handover with one sender and no named receiver will drift, however good the documents are."
+          },
+          {
+            "title": "Build the pack from live work",
+            "text": "Assemble runbooks, configuration records, and the known-issue log from cases and cycles the teams have actually handled, then test each item by having support use it without project help."
+          },
+          {
+            "title": "Sequence by domain and cycle",
+            "text": "Plan the order in which payroll, time, absence, integrations, and reporting move, and anchor each move to a real cycle date so proof happens on live work, not in a quiet week."
+          },
+          {
+            "title": "Run shadow and reverse-shadow stages",
+            "text": "First support watches the project work with structured questions, then support leads while the project observes and intervenes only when needed. Record what was proven at each stage."
+          },
+          {
+            "title": "Hold a formal acceptance review",
+            "text": "Support leadership reviews the readiness evidence, the pack, and the owned backlog, then signs acceptance — with any conditions or exceptions written down, owned, and dated."
+          }
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Readiness means support can prove it"
+      },
+      {
+        "type": "p",
+        "text": "Readiness is often declared on staffing alone: the team exists, the rota is filled, the mailbox is live. Those are necessary and nowhere near sufficient. A ready team has the right access to every environment it must use, tested under its own credentials rather than borrowed logins. It knows which cases it owns, which it escalates, and to whom, and it has already handled representative cases — including awkward ones such as retroactive pay corrections, leaver processing, and failed interface files — before handling them alone."
+      },
+      {
+        "type": "p",
+        "text": "Test readiness where it will be used. Have support run the triage queue through [the post-go-live issue triage process](/blog/post-go-live-issue-triage), so severity, ownership, and update discipline are practised before the project steps back. Review results qualitatively: which cases were resolved unaided, which needed prompting, which exposed a gap in the pack or access. A gap found now is a task; the same gap after closure is an incident."
+      },
+      {
+        "type": "p",
+        "text": "In a cross-border Canada and United States service, readiness is per country as well as per domain. Pay dates, deadlines, and correction rules differ, so a team proven on one country's cycle is not proven on the other's."
+      },
+      {
+        "type": "h2",
+        "text": "The transition pack: what actually moves"
+      },
+      {
+        "type": "p",
+        "text": "The pack is the working memory of the service, organised for the person on call at a difficult moment, not for the person who wrote it. It starts with runbooks for every recurring operation — each pay cycle, interface, report, and period-end routine — written as steps a competent colleague can follow without the author present. Alongside them sit configuration records that explain not only what was set up but why: the decisions and constraints future change must respect."
+      },
+      {
+        "type": "p",
+        "text": "Three inventories prevent most early confusion. The integration inventory lists every connection, its owner on each side, its schedule, failure signs, and recovery steps. The known-issue and workaround log records every defect or quirk support will meet, with symptoms, impact, the agreed workaround, and the route to a permanent fix. The decision history captures choices users will question later — why a rule was set one way, who approved it, and what would change it. Add escalation routes with named contacts, agreed service levels and support hours stated plainly, and a calendar of critical cycles covering pay runs, month-end, quarter-end, and year-end peaks for each country. If an item has never been used by support during shadowing, treat it as unverified and test it before acceptance."
+      },
+      {
+        "type": "h2",
+        "text": "Shadowing, reverse-shadowing, and a phased handover"
+      },
+      {
+        "type": "p",
+        "text": "Knowledge moves best on live work, in two directions. In shadowing, support joins the project as it handles real cases and cycles, asking a new owner's questions and noting where the pack is unclear. In reverse-shadowing, the roles swap: support leads, decides, and communicates, while the project watches, resists taking over, and intervenes only to prevent harm. That second stage is where readiness becomes visible — and gaps surface while help is still in the room."
+      },
+      {
+        "type": "p",
+        "text": "Phase the handover by domain rather than moving everything at once. Payroll might transfer after a cycle support ran under observation, while integrations transfer later, once support has recovered a failed file unaided. Proven domains move, unproven domains keep cover, and the acceptance review records a status for each. This is the same evidence logic as [the hypercare exit criteria](/blog/hypercare-exit-criteria) — step down where the record supports it, hold where it does not."
+      },
+      {
+        "type": "img",
+        "src": "/images/blog/service-transition-support-handoff-2.svg",
+        "alt": "Phased service transition timeline diagram: prepare, shadow, reverse-shadow, then accept and own, with an acceptance gate recording conditions, exceptions, and the owned backlog.",
+        "caption": "Phased handover: prepare, shadow, reverse-shadow, accept and own, with an acceptance gate."
+      },
+      {
+        "type": "h2",
+        "text": "Acceptance, backlog, and access: closing cleanly"
+      },
+      {
+        "type": "p",
+        "text": "Transition ends with a decision, not a drift. Support leadership reviews the readiness evidence, the pack, the shadowing record, and the remaining work, then signs acceptance. Sign-off should name any conditions or exceptions explicitly — a domain accepted except for one unproven routine, a workaround accepted until a fix date — each with an owner and a review date. Unrecorded exceptions become tomorrow's disputes."
+      },
+      {
+        "type": "p",
+        "text": "The backlog transfer deserves the same rigour. Every open item moves with a named owner, a priority, a next step, and its history intact, so nothing restarts from a user's retelling. Draw a clear line between what moves and what stays: the project retains closure reporting, benefits tracking, and any contracted remediation it still owns; support takes live cases, recurring operations, and the owned backlog from the acceptance date. Finally, close the practical transfer: support credentials and access confirmed working, project-only access reviewed and removed, and support routes pointing at the receiving team. Done well, this makes transition the disciplined final stage of [the complete guide to HCM implementation](/blog/complete-guide-hcm-implementation)."
+      },
+      {
+        "type": "h2",
+        "text": "Common mistakes"
+      },
+      {
+        "type": "p",
+        "text": "Most failed handovers were visible weeks earlier: the pack was written for its authors, stages were skipped, or nobody with authority accepted the service."
+      },
+      {
+        "type": "accordion",
+        "label": "Service transition mistakes, as a diagnostic",
+        "items": [
+          {
+            "q": "The big-bang handover meeting",
+            "a": "A single meeting cannot transfer a service. Knowledge, access, backlog, and confidence all move at different speeds, and none of them move in a slide presentation. Run transition as a phase with stages, evidence, and a timetable tied to real cycles."
+          },
+          {
+            "q": "Documents nobody has tested",
+            "a": "A runbook that support has never followed is a draft, not a handover. Test every critical document during shadowing and reverse-shadowing, correct it where the new owner stumbles, and only then count it as transferred."
+          },
+          {
+            "q": "Support learning about go-live from users",
+            "a": "When users know more about the new service than the team supporting it, every early case starts with an apology. Involve support before go-live, give them the pack and the calendar early, and let them handle real cases while the project is still present."
+          },
+          {
+            "q": "Counting walkthrough attendance as knowledge transfer",
+            "a": "Being shown is not being able. A topic is transferred when support has handled it unaided on a real case, through the normal route, with the record to show it. Schedule guided practice on hard, infrequent cases before a deadline forces the lesson."
+          },
+          {
+            "q": "Acceptance without conditions on the record",
+            "a": "A cheerful sign-off that hides known gaps stores up conflict. Record every condition and exception at acceptance, with an owner and a review date, so partial readiness is managed openly instead of discovered later."
+          },
+          {
+            "q": "Moving everything on one date regardless of proof",
+            "a": "Domains prove at different speeds. Transfer each domain when its own evidence is ready, hold project cover where proof is missing, and let the acceptance review carry a different status per domain rather than forcing a single verdict."
+          }
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Key Takeaways"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "Run transition as a managed phase with stages and evidence, never as a single meeting.",
+          "Readiness means support has proven the work on real cases, with its own access, per domain and per country.",
+          "Build the pack for the person on call: runbooks, configuration rationale, inventories, workarounds, decisions, escalation routes, and the critical-cycle calendar.",
+          "Use shadowing then reverse-shadowing, phased by domain, so gaps surface while help remains.",
+          "Close with signed acceptance, conditions on the record, an owned backlog, and access tidied."
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Frequently Asked Questions"
+      },
+      {
+        "type": "p",
+        "text": "When should service transition start? Before hypercare peaks, while the project team is still fully available. Involve support in live cases and cycles early, build the pack from that work, and schedule acceptance against real cycle dates, not the closure date."
+      },
+      {
+        "type": "p",
+        "text": "What is the difference between shadowing and reverse-shadowing? In shadowing, support observes the project handling real work and tests the pack with questions. In reverse-shadowing, support leads and the project observes, intervening only to prevent harm. The second stage proves knowledge has moved."
+      },
+      {
+        "type": "p",
+        "text": "Who signs acceptance, and what if the service is only partly ready? Support leadership signs, after reviewing readiness evidence, the pack, and the backlog. Partial readiness is acceptable when explicit: accept proven domains, record conditions with owners and review dates, and hold project cover where proof is missing."
+      },
+      {
+        "type": "p",
+        "text": "What stays with the project after acceptance? Closure reporting, benefits tracking, and any remediation the project contractually still owns. Live cases, recurring operations, and the accepted backlog move to support from the acceptance date, under the agreed service levels."
+      },
+      {
+        "type": "h2",
+        "text": "Next Steps"
+      },
+      {
+        "type": "p",
+        "text": "List the domains in scope, name the owner on each side, and start the pack from the next live cycle rather than from memory. Book shadowing and reverse-shadowing against real pay and period-end dates, agree where the readiness record will live, and set the acceptance review now — while there is still time to fix what the evidence exposes."
+      },
+      {
+        "type": "quiz",
+        "label": "Check your understanding",
+        "questions": [
+          {
+            "q": "The project sends support a complete folder of runbooks and configuration notes, and proposes closing transition. Support has not yet used any of the documents on a live case. What should happen?",
+            "options": [
+              {
+                "text": "Accept, because a complete document set is the handover",
+                "correct": false,
+                "why": "Documents that have never been used by their new owner are unverified. Gaps, unclear steps, and missing access only appear when support follows the pack on real work."
+              },
+              {
+                "text": "Test the pack through shadowing and reverse-shadowing on live cases, correct what fails, and only then move to acceptance",
+                "correct": true,
+                "why": "Transition proves knowledge on real work. Support leading real cases with the project observing shows whether the pack, access, and escalation routes actually work, while help is still available."
+              },
+              {
+                "text": "Rewrite the entire pack from scratch inside the support team",
+                "correct": false,
+                "why": "The pack holds configuration rationale and decision history support cannot recreate alone. The answer is to test and improve it jointly, not to discard it or to accept it untested."
+              }
+            ]
+          },
+          {
+            "q": "At the acceptance review, payroll is proven across both countries, but the integrations domain has never recovered a failed file without project help. What is the right decision?",
+            "options": [
+              {
+                "text": "Reject the whole transition until every domain is perfect",
+                "correct": false,
+                "why": "Holding proven domains hostage wastes readiness that has been earned and delays normal operations where the evidence supports them. The response should be proportionate to the gap."
+              },
+              {
+                "text": "Accept everything, because one weak domain should not block the programme",
+                "correct": false,
+                "why": "Accepting an unproven domain without a record simply transfers the risk silently. The first failed file after closure becomes an incident with no cover and no agreed plan."
+              },
+              {
+                "text": "Accept the proven domains, record the integrations gap as a condition with an owner and review date, and hold project cover for that domain until it is proven",
+                "correct": true,
+                "why": "Acceptance can carry different statuses per domain. Written conditions, a named owner, and a review date keep the gap managed openly while proven areas move to normal support."
+              }
+            ]
+          },
+          {
+            "q": "Two weeks after closure, users report that support first heard about a recurring go-live workaround from them. What did transition miss?",
+            "options": [
+              {
+                "text": "Nothing — users will always know workarounds the support team does not",
+                "correct": false,
+                "why": "A workaround in daily use is core service knowledge. If support learns it from users, the known-issue log and the shadowing stages both failed to capture live practice."
+              },
+              {
+                "text": "The known-issue and workaround log, and live-case involvement before closure: support should have handled real cases during transition, with every workaround recorded, tested, and escalated through agreed routes",
+                "correct": true,
+                "why": "The pack exists so the person on call is never the least-informed person in the conversation. Building it from live work, and involving support before go-live, is how workarounds reach it."
+              },
+              {
+                "text": "A larger handover meeting, with more slides about the workaround",
+                "correct": false,
+                "why": "A bigger meeting repeats the original error. Workarounds transfer by being recorded in the log and practised on real cases, not by being presented once to a room."
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
     "slug": "hypercare-first-90-days",
     "title": "Hypercare After Go-Live: Planning the First 90 Days",
     "excerpt": "Plan HCM hypercare across 90 days: stabilise in Days 1-14, prove cycles and transfer ownership by Day 45, then normalise and step down with evidence.",
