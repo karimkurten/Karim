@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="640" viewBox="0 0 1200 640" role="img" aria-label="The transition pack and readiness domains: runbooks and procedures, configuration and integrations, known issues and decisions, people and escalation, service levels and critical calendar, and readiness proof">
+  <defs>
+    <linearGradient id="hdr" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#0f172a"/>
+      <stop offset="1" stop-color="#1e3a5f"/>
+    </linearGradient>
+  </defs>
+  <rect x="0" y="0" width="1200" height="640" fill="#ffffff"/>
+  <rect x="0" y="0" width="1200" height="88" fill="url(#hdr)"/>
+  <text x="48" y="40" font-family="Georgia, serif" font-size="29" fill="#ffffff">The Transition Pack: Six Readiness Domains</text>
+  <text x="48" y="70" font-family="Arial, sans-serif" font-size="20" fill="#94A3B8">Built for the person on call — tested on live work, not filed and forgotten</text>
+
+  <g>
+    <rect x="40" y="108" width="353" height="168" rx="12" fill="#F0F4F8" stroke="#2B6CB0" stroke-width="2"/>
+    <text x="60" y="146" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="#1A202C">Runbooks and Procedures</text>
+    <text x="60" y="180" font-family="Arial, sans-serif" font-size="20" fill="#475569">Every cycle, interface,</text>
+    <text x="60" y="210" font-family="Arial, sans-serif" font-size="20" fill="#475569">report and period-end</text>
+    <text x="60" y="240" font-family="Arial, sans-serif" font-size="20" fill="#475569">routine, step by step</text>
+  </g>
+  <g>
+    <rect x="413" y="108" width="353" height="168" rx="12" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+    <text x="433" y="146" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="#1A202C">Config and Integrations</text>
+    <text x="433" y="180" font-family="Arial, sans-serif" font-size="20" fill="#475569">What was set up and why;</text>
+    <text x="433" y="210" font-family="Arial, sans-serif" font-size="20" fill="#475569">every connection, owner,</text>
+    <text x="433" y="240" font-family="Arial, sans-serif" font-size="20" fill="#475569">schedule and recovery</text>
+  </g>
+  <g>
+    <rect x="787" y="108" width="353" height="168" rx="12" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+    <text x="807" y="146" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="#1A202C">Known Issues, Decisions</text>
+    <text x="807" y="180" font-family="Arial, sans-serif" font-size="20" fill="#475569">Workarounds with symptoms</text>
+    <text x="807" y="210" font-family="Arial, sans-serif" font-size="20" fill="#475569">and fix routes; decisions</text>
+    <text x="807" y="240" font-family="Arial, sans-serif" font-size="20" fill="#475569">with who approved them</text>
+  </g>
+  <g>
+    <rect x="40" y="292" width="353" height="168" rx="12" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+    <text x="60" y="330" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="#1A202C">People and Escalation</text>
+    <text x="60" y="364" font-family="Arial, sans-serif" font-size="20" fill="#475569">Named owners both sides;</text>
+    <text x="60" y="394" font-family="Arial, sans-serif" font-size="20" fill="#475569">escalation routes with</text>
+    <text x="60" y="424" font-family="Arial, sans-serif" font-size="20" fill="#475569">contacts that answer</text>
+  </g>
+  <g>
+    <rect x="413" y="292" width="353" height="168" rx="12" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+    <text x="433" y="330" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="#1A202C">Levels and Calendar</text>
+    <text x="433" y="364" font-family="Arial, sans-serif" font-size="20" fill="#475569">Service levels and hours</text>
+    <text x="433" y="394" font-family="Arial, sans-serif" font-size="20" fill="#475569">stated plainly; pay runs,</text>
+    <text x="433" y="424" font-family="Arial, sans-serif" font-size="20" fill="#475569">month-end and year-end</text>
+  </g>
+  <g>
+    <rect x="787" y="292" width="353" height="168" rx="12" fill="#F0F4F8" stroke="#2B6CB0" stroke-width="2"/>
+    <text x="807" y="330" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="#1A202C">Readiness Proof</text>
+    <text x="807" y="364" font-family="Arial, sans-serif" font-size="20" fill="#475569">Cases resolved unaided,</text>
+    <text x="807" y="394" font-family="Arial, sans-serif" font-size="20" fill="#475569">cycles run by support,</text>
+    <text x="807" y="424" font-family="Arial, sans-serif" font-size="20" fill="#475569">recorded per country</text>
+  </g>
+  <g>
+    <rect x="40" y="476" width="1100" height="88" rx="12" fill="#ffffff" stroke="#2B6CB0" stroke-width="2"/>
+    <text x="60" y="514" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="#1A202C">The Acceptance Test</text>
+    <text x="60" y="546" font-family="Arial, sans-serif" font-size="20" fill="#475569">Nothing counts as transferred until support has used it on real work.</text>
+    <text x="820" y="514" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#1A202C">If untested:</text>
+    <text x="820" y="546" font-family="Arial, sans-serif" font-size="20" fill="#64748B">Test it before sign-off</text>
+  </g>
+  <text x="48" y="604" font-family="Arial, sans-serif" font-size="20" fill="#64748B">A pack support has never used is a draft — transition proves it, item by item.</text>
+</svg>
