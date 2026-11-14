@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="640" viewBox="0 0 1200 640" role="img" aria-label="Phased handover timeline: prepare, shadow, reverse-shadow, accept and own, with an acceptance gate recording conditions, exceptions, and the owned backlog">
+  <defs>
+    <linearGradient id="hdr2" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#0f172a"/>
+      <stop offset="1" stop-color="#1e3a5f"/>
+    </linearGradient>
+  </defs>
+  <rect x="0" y="0" width="1200" height="640" fill="#ffffff"/>
+  <rect x="0" y="0" width="1200" height="88" fill="url(#hdr2)"/>
+  <text x="48" y="40" font-family="Georgia, serif" font-size="29" fill="#ffffff">Phased Handover: Prepare to Accepted Ownership</text>
+  <text x="48" y="70" font-family="Arial, sans-serif" font-size="20" fill="#94A3B8">Four stages on live work — each domain moves only on its own evidence</text>
+
+  <g>
+    <rect x="40" y="112" width="272" height="210" rx="12" fill="#1e3a5f" stroke="#1e3a5f" stroke-width="2"/>
+    <text x="60" y="152" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="#ffffff">1 · Prepare</text>
+    <text x="60" y="192" font-family="Arial, sans-serif" font-size="20" fill="#ffffff">Build the pack</text>
+    <text x="60" y="222" font-family="Arial, sans-serif" font-size="20" fill="#ffffff">from live work;</text>
+    <text x="60" y="252" font-family="Arial, sans-serif" font-size="20" fill="#ffffff">name owners on</text>
+    <text x="60" y="282" font-family="Arial, sans-serif" font-size="20" fill="#ffffff">both sides</text>
+  </g>
+  <text x="313" y="228" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="#2B6CB0">&#8250;</text>
+  <g>
+    <rect x="322" y="112" width="272" height="210" rx="12" fill="#F0F4F8" stroke="#2B6CB0" stroke-width="2"/>
+    <text x="342" y="152" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="#1A202C">2 · Shadow</text>
+    <text x="342" y="192" font-family="Arial, sans-serif" font-size="20" fill="#475569">Support watches</text>
+    <text x="342" y="222" font-family="Arial, sans-serif" font-size="20" fill="#475569">the project on</text>
+    <text x="342" y="252" font-family="Arial, sans-serif" font-size="20" fill="#475569">real cases and</text>
+    <text x="342" y="282" font-family="Arial, sans-serif" font-size="20" fill="#475569">tests the pack</text>
+  </g>
+  <text x="595" y="228" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="#2B6CB0">&#8250;</text>
+  <g>
+    <rect x="604" y="112" width="272" height="210" rx="12" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+    <text x="624" y="152" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="#1A202C">3 · Reverse-Shadow</text>
+    <text x="624" y="192" font-family="Arial, sans-serif" font-size="20" fill="#475569">Support leads,</text>
+    <text x="624" y="222" font-family="Arial, sans-serif" font-size="20" fill="#475569">project observes;</text>
+    <text x="624" y="252" font-family="Arial, sans-serif" font-size="20" fill="#475569">gaps surface</text>
+    <text x="624" y="282" font-family="Arial, sans-serif" font-size="20" fill="#475569">while help remains</text>
+  </g>
+  <text x="877" y="228" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="#2B6CB0">&#8250;</text>
+  <g>
+    <rect x="886" y="112" width="272" height="210" rx="12" fill="#F0F4F8" stroke="#2B6CB0" stroke-width="2"/>
+    <text x="906" y="152" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="#1A202C">4 · Accept and Own</text>
+    <text x="906" y="192" font-family="Arial, sans-serif" font-size="20" fill="#475569">Support signs</text>
+    <text x="906" y="222" font-family="Arial, sans-serif" font-size="20" fill="#475569">acceptance; backlog</text>
+    <text x="906" y="252" font-family="Arial, sans-serif" font-size="20" fill="#475569">and access transfer</text>
+    <text x="906" y="282" font-family="Arial, sans-serif" font-size="20" fill="#475569">cleanly</text>
+  </g>
+  <g>
+    <rect x="40" y="346" width="1118" height="150" rx="12" fill="#ffffff" stroke="#2563EB" stroke-width="2"/>
+    <text x="60" y="386" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="#1A202C">Acceptance Gate — Before Sign-Off</text>
+    <text x="60" y="422" font-family="Arial, sans-serif" font-size="20" fill="#475569">Readiness evidence reviewed; conditions and exceptions recorded</text>
+    <text x="60" y="452" font-family="Arial, sans-serif" font-size="20" fill="#475569">with an owner and a review date for every open item.</text>
+    <text x="820" y="386" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#1A202C">If a domain is unproven:</text>
+    <text x="820" y="422" font-family="Arial, sans-serif" font-size="20" fill="#64748B">Hold its cover, set the</text>
+    <text x="820" y="452" font-family="Arial, sans-serif" font-size="20" fill="#64748B">next review date</text>
+  </g>
+  <g>
+    <rect x="40" y="520" width="1118" height="64" rx="12" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+    <text x="60" y="560" font-family="Arial, sans-serif" font-size="20" fill="#475569">Phased by domain — payroll, time, integrations, and reporting each move on their own proof.</text>
+  </g>
+  <text x="48" y="620" font-family="Arial, sans-serif" font-size="20" fill="#64748B">Transition ends with a signed decision, not a quiet drift away.</text>
+</svg>
