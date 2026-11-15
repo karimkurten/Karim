@@ -1,5 +1,1492 @@
 [
   {
+    "slug": "complete-guide-compliance-governance-enterprise-implementations",
+    "title": "The Complete Guide to Compliance and Governance for Enterprise Implementations",
+    "excerpt": "Build governance that produces proof: verified ACFE, OECD and OSFI evidence, the Proof System framework, an 8-step method, 12 risks, and templates.",
+    "publishedAt": "2026-11-15",
+    "readingTime": "68 min read",
+    "cover": "/images/blog/compliance-governance-cover.webp",
+    "tags": [
+      "Compliance",
+      "Governance",
+      "Risk Management",
+      "Implementation",
+      "Internal Controls"
+    ],
+    "content": [
+      {
+        "type": "h2",
+        "text": "Executive Summary"
+      },
+      {
+        "type": "p",
+        "text": "Most enterprise implementations have governance on paper."
+      },
+      {
+        "type": "p",
+        "text": "They have a steering committee, a charter, a risk log, a decision log, and sign-off emails nobody can find six months later. What they often lack is a connected system — one where a decision traces to the obligation that required it, the control that enforced it, the evidence that proves it happened, and the fix when it did not."
+      },
+      {
+        "type": "p",
+        "text": "This guide builds that system."
+      },
+      {
+        "type": "p",
+        "text": "You will learn how to separate four ideas that programmes routinely blur together — governance, compliance, control, and assurance — and why blurring them is expensive. You will learn how to assign decision rights so that approvals mean something. You will learn how to build an obligations register that translates external requirements and internal policy into owned, testable programme work. You will learn how to place controls inside the delivery workflow itself, instead of bolting them on at go-live. And you will learn how to produce evidence as a by-product of doing the work, rather than as a scramble in the week before an audit."
+      },
+      {
+        "type": "p",
+        "text": "The framework at the centre of the guide is original. It is called the Proof System, and it has five disciplines: Decide, Map, Run, Prove, and Repair. Decide establishes who can decide what, and how fast. Map records every obligation the programme must satisfy. Run embeds controls in the workflow. Prove gathers evidence and applies three-lines assurance. Repair closes the loop when something fails — because something always fails."
+      },
+      {
+        "type": "p",
+        "text": "Why does this matter now? Because the obligations are not getting simpler. In PwC's Global Compliance Survey 2025 (PwC, 2025), 85% of respondents globally — and 94% of Canadian respondents — said compliance requirements had become more complex in the previous three years. In CUBE's Cost of Compliance Report 2026 (CUBE, 4 November 2026), 64% of firms reported higher compliance costs over the past year. A programme that treats governance as ceremony will pay for both and get the benefit of neither."
+      },
+      {
+        "type": "p",
+        "text": "Who should read this? Implementation and project managers running enterprise programmes, programme management office leads, compliance, risk, and internal audit professionals who support delivery, and sponsors who approve scope, funding, and go-live — and carry the accountability when those decisions are questioned later. It is most useful on programmes that cross jurisdictions, handle payroll, personal data, or regulated processes, or replace a core system."
+      },
+      {
+        "type": "p",
+        "text": "Four key findings run through the guide."
+      },
+      {
+        "type": "p",
+        "text": "First, governance fails at the joins. The decision was made in one forum, the obligation sat in another document, the control lived in a spreadsheet, and the evidence was never kept. Connecting the five disciplines matters more than perfecting any one of them."
+      },
+      {
+        "type": "p",
+        "text": "Second, controls that live outside the workflow get bypassed under pressure. Controls that live inside it — a required field, a segregation check, a gate that cannot be passed without an artefact — survive the busy weeks."
+      },
+      {
+        "type": "p",
+        "text": "Third, evidence is a design choice. If you decide at the start what proof each control must leave behind, assurance is cheap. If you decide at the end, it is archaeology."
+      },
+      {
+        "type": "p",
+        "text": "Fourth, there is no shortcut benchmark to hide behind. As Part 2 states plainly, no authoritative universal benchmark exists for governance effectiveness on enterprise implementations. You will have to define your own measures, baseline them, and improve against yourselves. This guide shows you how, without inventing numbers."
+      },
+      {
+        "type": "p",
+        "text": "A note on scope. This guide describes compliance and governance practice — how programmes organise decisions, obligations, controls, and evidence. It is not legal or regulatory advice, and it is not an interpretation of any law or regulation. Where a requirement is legal in nature, your own legal and compliance advisers interpret it. This guide helps you run the programme that acts on that interpretation, and can prove that it did."
+      },
+      {
+        "type": "h2",
+        "text": "Introduction"
+      },
+      {
+        "type": "p",
+        "text": "Picture a go-live review, three weeks before cutover."
+      },
+      {
+        "type": "p",
+        "text": "The sponsor asks a simple question: who approved the decision to process payroll in parallel for only one cycle instead of two? The room goes quiet. Someone remembers a call. Someone else remembers an email thread with a different conclusion. The programme manager opens the decision log. The decision is not in it. The risk that the decision created is not in the risk register either, because the risk discussion happened on the same call."
+      },
+      {
+        "type": "p",
+        "text": "Nothing dishonest happened in that room. Nobody was hiding anything. The programme simply never built the habit of recording decisions at the moment they were made, with the reasoning, the owner, and the obligation they touched."
+      },
+      {
+        "type": "p",
+        "text": "That is a governance failure. It is also the most common kind. Not fraud. Not defiance. Just drift."
+      },
+      {
+        "type": "p",
+        "text": "I have spent my career on enterprise implementations, including cross-border programmes spanning Canada and the United States, where a single payroll touches federal and provincial or state rules, privacy expectations, collective agreements, and internal policy at the same time. I hold PMP, RMP, and CSM credentials, and the pattern I see repeatedly is not a lack of governance artefacts. It is a lack of connection between them. What programmes miss is the thread that runs from an obligation, through a decision and a control, to evidence someone independent can inspect."
+      },
+      {
+        "type": "p",
+        "text": "Governance is often introduced as oversight — something done to the programme by people outside it. That framing guarantees resistance. A better framing: governance is how a programme makes its decisions defensible — to its sponsor, its auditors, its regulator where one applies, and its own future self, when the people who remember have moved on."
+      },
+      {
+        "type": "p",
+        "text": "Compliance gets a similarly unhelpful framing: a list of prohibitions owned by another department. In practice, on an implementation, compliance is mostly translation work. A requirement or policy has to become a configuration choice, a test case, an approval step, a retention rule, a training task. If nobody owns that translation, the requirement does not disappear. It surfaces late — in testing, in an audit, or after go-live, when fixing it costs the most."
+      },
+      {
+        "type": "p",
+        "text": "This guide is deliberately practical. It does not ask you to adopt a new bureaucracy. It asks you to run five disciplines, with a small set of artefacts, maintained as part of delivery rather than alongside it:"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "A decision register with named decision rights, not just meeting minutes.",
+          "An obligations register that every requirement, policy, and commitment flows into.",
+          "A control library where each control sits inside a real workflow step.",
+          "An evidence pack that grows as the programme runs.",
+          "An issues and remediation log that closes the loop and feeds lessons back into the first four artefacts."
+        ]
+      },
+      {
+        "type": "p",
+        "text": "The rest of Part A lays the foundations. Part 1 defines the terms precisely, using COSO, ISO, and the Three Lines Model as published. Part 2 examines the evidence, including its limits. Part 3 introduces the Proof System. Part 4 sets out an eight-step methodology that Part B then works through in operational detail, with templates, scenarios, and metrics."
+      },
+      {
+        "type": "p",
+        "text": "If you run programmes for a living, you already do most of this work informally. The argument here is simple: do it deliberately, connect it, and keep the proof. Informal governance works until the first hard question. Connected governance answers it."
+      },
+      {
+        "type": "h2",
+        "text": "Part 1 — Fundamentals: Compliance, Governance, and the Space Between Them"
+      },
+      {
+        "type": "p",
+        "text": "Programmes get into trouble with these words before they get into trouble with the work. A steering committee is called governance. A policy sign-off is called compliance. A checklist is called a control. A status report is called assurance. When everything is called everything, nothing can be managed, because nobody can tell what is missing."
+      },
+      {
+        "type": "p",
+        "text": "Start with working definitions you can use in a programme room."
+      },
+      {
+        "type": "p",
+        "text": "Governance is the system by which decisions are made, owned, and reviewed. Who decides. On what information. Within what limits. With what record. And who can overturn the decision, and how. Governance is about authority and accountability. If a programme cannot answer, for any material decision, who had the right to make it, governance is weak — no matter how many committees it has."
+      },
+      {
+        "type": "p",
+        "text": "Compliance is conformance with obligations. Obligations come from more places than law. They include regulation and statute where they apply, contracts, collective agreements, funder or client requirements, and the organisation's own policies and standards. Compliance work is the translation of those obligations into programme behaviour, and the demonstration that the behaviour happened. Note the second half. Doing the right thing without being able to show it is, for assurance purposes, indistinguishable from not doing it."
+      },
+      {
+        "type": "p",
+        "text": "A control is a specific action, check, or system behaviour designed to prevent, detect, or correct an unwanted outcome. A control has an owner, a frequency, a defined pass and fail, and evidence. If it has none of those four, it is an intention, not a control. \"We review payroll changes carefully\" is an intention. \"The payroll lead compares the change report to approved requests every cycle, signs the comparison, and files it in the cycle folder; a second person re-performs it monthly\" is a control."
+      },
+      {
+        "type": "p",
+        "text": "Assurance is independent evaluation of whether governance, compliance, and controls are working. Assurance is not reporting. A RAG status written by the person doing the work is reporting. Assurance requires enough independence — of person, of reporting line, or of method — that the conclusion could credibly be negative. If the reviewer cannot say no, it is not assurance."
+      },
+      {
+        "type": "p",
+        "text": "The space between these four ideas is where implementations live. Governance without compliance produces confident decisions about the wrong requirements. Compliance without controls produces registers nobody enforces. Controls without assurance produce false comfort. Assurance without governance produces findings nobody has the authority to fix. You need all four, connected."
+      },
+      {
+        "type": "p",
+        "text": "Established frameworks already describe this territory well. Use them as published, not as slogans."
+      },
+      {
+        "type": "p",
+        "text": "The COSO Internal Control — Integrated Framework (COSO, 2013) organises internal control into five components — control environment, risk assessment, control activities, information and communication, and monitoring activities — expressed through 17 principles, applied to three categories of objectives: operations, reporting, and compliance. Its value for an implementation is its discipline about monitoring. It forces the question most programmes skip: once a control exists, how will you know it is still operating in month nine, after the original designer has rolled off?"
+      },
+      {
+        "type": "p",
+        "text": "COSO's companion, Enterprise Risk Management — Integrating with Strategy and Performance (COSO, 2017), uses five components and 20 principles, and places risk inside strategy and performance rather than beside them. A board that discusses risk only as a register review, separate from its scope and sequencing decisions, is not doing what COSO ERM describes. Risk belongs in the decision itself."
+      },
+      {
+        "type": "p",
+        "text": "ISO 37301:2021, Compliance management systems — Requirements with guidance for use (ISO, published 13 April 2021), is a Type A, certifiable standard. It replaced ISO 19600:2014, and was systematically reviewed and confirmed in 2026. Its contribution is structural: it treats compliance as a management system — leadership accountability, planning, support, operation, performance evaluation, and improvement — rather than as a department. Your programme does not need certification to benefit. It needs the structure."
+      },
+      {
+        "type": "p",
+        "text": "Corporate governance above the programme matters too. The G20/OECD Principles of Corporate Governance 2023 (OECD, adopted by the OECD Council on 8 June 2023 and endorsed by G20 Leaders in September 2023) set out six chapters, including a new chapter on sustainability and resilience. A programme does not implement OECD principles directly, but its sponsor and board operate inside them — disclosure and board responsibilities shape what a programme will ultimately have to evidence."
+      },
+      {
+        "type": "p",
+        "text": "Finally, the IIA Three Lines Model (Institute of Internal Auditors, published July 2020, updating the Three Lines of Defense from 2013) allocates ownership cleanly. In implementation terms: the first line is the delivery team — workstream leads and process owners who own risk and operate controls in their own work. The second line is challenge and support — compliance and risk specialists, and the programme management office where it sets standards, reviews evidence, and challenges first-line conclusions. The third line is independent assurance — internal audit or an equivalent independent reviewer — evaluating the first two lines and reporting to the governing body. The model allows first- and second-line roles to be blended or separated, which suits real programmes. What it does not allow is confusion about the third line: independence is the point."
+      },
+      {
+        "type": "p",
+        "text": "You do not need to run COSO, ISO 37301, and the Three Lines Model as three separate programmes. You need their combined lesson: assign authority, translate obligations, operate controls, check independently, and improve. The Proof System in Part 3 is simply that lesson, organised for delivery teams."
+      },
+      {
+        "type": "img",
+        "src": "/images/blog/compliance-governance-three-lines.svg",
+        "alt": "The Three Lines Model applied to an implementation — first line delivery team owns controls, second line compliance and PMO challenge, third line independent assurance, governing body above all three",
+        "caption": "Who owns it, who challenges it, who independently proves it? If one name answers all three, you have one hope, not three lines."
+      },
+      {
+        "type": "h2",
+        "text": "Part 2 — Why It Matters: The Evidence, With Caveats"
+      },
+      {
+        "type": "p",
+        "text": "Good practitioners should ask what the evidence actually shows — and what it does not. This section uses only published research, with its limits stated. It also states a limit that applies to this whole field, upfront."
+      },
+      {
+        "type": "p",
+        "text": "There is no authoritative universal benchmark for governance effectiveness on enterprise implementations. No body publishes a verified typical control-failure rate for implementations, a standard decision-turnaround time, or a governance maturity score you can compare your programme against. Anyone who quotes you one without a source, a population, and a date is selling, not informing. This guide therefore defines measures in Part B for you to baseline against your own programme. It invents no benchmarks here."
+      },
+      {
+        "type": "p",
+        "text": "What the published evidence does show, consistently, is the cost of weak control environments and pressured cultures."
+      },
+      {
+        "type": "p",
+        "text": "The Association of Certified Fraud Examiners' Occupational Fraud 2024: A Report to the Nations (ACFE, March 2024) analysed 1,921 cases across 138 countries and territories, with total losses of more than $3.1 billion. The ACFE estimates organisations lose 5% of revenue to fraud each year. The median loss per case was $145,000, and the average loss was $1.7 million. Those are fraud figures, not implementation figures — but the control findings transfer, because they describe how organisations detect failure and how long it runs first. Tips detected 43% of cases. Internal audit detected 14%, management review 13%, and external audit only 3%. The formal external check many boards rely on most was the least common way cases came to light. The controls closest to the work detected far more."
+      },
+      {
+        "type": "p",
+        "text": "The same report underlines the value of a speaking-up channel. Organisations with hotlines had a median loss of $100,000, compared with $200,000 without them, and a median duration of 12 months compared with 24 months. Detection speed is a governance design outcome. A safe, visible route for raising concerns — visibly acted on — shortens the life of every kind of failure, not only fraud."
+      },
+      {
+        "type": "p",
+        "text": "Two further ACFE findings should shape how you design controls. The most common anti-fraud controls in victim organisations were a code of conduct, present in 85%, and external audit of financial statements, present in 84% — presence alone plainly did not prevent loss. And more than half of cases correlated with a lack of internal controls or with management override of existing controls. Override is a governance problem, not a controls problem. A control a senior person can quietly bypass, without a record, will be bypassed under deadline pressure. The report also found external audit presence associated with 52% smaller losses and detection twice as fast — association, not proof of cause, and this guide reports it as such."
+      },
+      {
+        "type": "p",
+        "text": "Culture evidence points the same way. The Ethics & Compliance Initiative's Global Business Ethics Survey 2023 (ECI GBES 2023, reported January 2024), covering 42 countries, found that 28% of employees globally felt pressure to compromise workplace standards or the law — up from 20% in 2019 and close to the 29% recorded in 2020 — and that 65% observed misconduct, up from 60% in 2020. Pressure is not abstract on an implementation. Pressure is what a go-live date does to a test sign-off. Assume it exists in your team and design for it: independent sign-off where it counts, recorded dissent, and a genuine right to escalate without penalty."
+      },
+      {
+        "type": "p",
+        "text": "Complexity and cost complete the picture. PwC's Global Compliance Survey 2025 (PwC, 2025) found that 85% of respondents globally, and 94% of Canadian respondents, said compliance requirements had become more complex over the previous three years. Technology was already widely used in response — for training by 82%, for risk assessment by 76%, and for compliance or transaction monitoring by 75% — and 82% of companies planned to invest more in technology for compliance. CUBE's Cost of Compliance Report 2026 (CUBE, 4 November 2026), surveying more than 2,000 senior practitioners across 11 countries including Canada in June–July 2026, found that 61% of firms now embed regulatory change within a year, up from 26% in 2025, while 64% reported higher compliance costs, driven mainly by technology investment and AI governance. Organisations are getting faster at absorbing change — and spending more to do it. Neither supports leaving governance to improvisation."
+      },
+      {
+        "type": "p",
+        "text": "Delivery performance remains uneven. PMI's Pulse of the Profession 2024 (PMI, 2024) reported an average project performance rate of 73.8% — the share of completed projects meeting their business goals, as reported. Hybrid approaches rose from 20% in 2020 to 31% in 2023, and organisations offering at least three supportive resources saw an 8.3 percentage-point increase in project performance versus those offering none. PMI does not attribute that gap to governance alone, and neither does this guide. But support, structure, and resourcing — the things governance organises — move with performance in the data we have."
+      },
+      {
+        "type": "p",
+        "text": "Regulated sectors show where expectations are heading. OSFI's Guideline E-21 on Operational Risk Management and Resilience (OSFI, 22 August 2024) phases in adherence through to 1 September 2026, with scenario testing for all critical operations complete by 1 September 2027. OSFI's Guideline B-13 on Technology and Cyber Risk Management (OSFI, July 2022; effective 1 January 2024) sets out 17 principles across three domains. These bind federally regulated financial institutions in Canada, not every implementation. Their direction is instructive for everyone: regulators increasingly expect named accountability, tested resilience, and evidence — not attestations."
+      },
+      {
+        "type": "p",
+        "text": "The honest summary: weak controls, override, pressure, and slow detection are costly, and obligations are growing more complex and more expensive to meet — but no universal scorecard tells you your governance is good enough. That gap is the reason the next section exists: if no external benchmark will prove your programme is well governed, it must prove it itself."
+      },
+      {
+        "type": "h2",
+        "text": "Part 3 — The Proof System: An Original Framework"
+      },
+      {
+        "type": "p",
+        "text": "The Proof System is a framework I developed for enterprise implementations to solve the connection problem described in the Introduction. It has five disciplines. Each one is simple on its own. The value is in the loop they form together."
+      },
+      {
+        "type": "p",
+        "text": "1. Decide — decision rights before decisions. Every programme makes hundreds of decisions. Only some are material: scope changes, design choices with compliance consequences, data conversion rules, cutover timing, go-live itself. Decide means naming, in advance, who can make each class of material decision, what information they need, what limits apply, and how the decision is recorded. The artefact is a decision-rights matrix supported by a decision register. The test is traceability: pick any material outcome in the delivered system and walk back to a recorded decision, made by someone who had the right to make it, with the reasoning intact. If you cannot walk back, Decide has failed — even if the outcome happens to be good."
+      },
+      {
+        "type": "p",
+        "text": "2. Map — every obligation, in one register, with an owner. Obligations arrive from everywhere: legislation and regulation as interpreted by your advisers, contracts, collective agreements, internal policy, security standards, records retention schedules, and commitments made to sponsors and clients. Map means capturing each one in a single obligations register with a plain-language statement of what the programme must do, a source, an owner, the workstreams it touches, and the control or controls that will satisfy it. The register is not a legal document and must never become one. It is a translation and tracking tool. Its test is coverage: when a new requirement lands mid-programme — and CUBE's 2026 finding that 61% of firms now embed regulatory change within a year tells you how routine that has become — there is one obvious place it goes, and one obvious owner who assesses its impact."
+      },
+      {
+        "type": "p",
+        "text": "3. Run — controls inside the workflow, not beside it. A control that requires extra effort outside the normal flow will be skipped in the busiest week, which is precisely when it matters. Run means designing each control into the step it protects: the approval inside the change tool, the segregation enforced by system roles, the reconciliation produced as part of the payroll cycle rather than after it, the test gate that cannot be marked complete without its evidence attached. Each control gets an owner, a frequency, a pass/fail definition, and a named evidence output. The test is survivability: would this control still operate if the programme were under maximum pressure and two key people were away? If not, redesign it until the honest answer is yes."
+      },
+      {
+        "type": "p",
+        "text": "4. Prove — evidence by design, assurance in three lines. Prove has two halves. First, evidence: for every control and material decision, define at design time what artefact will show it happened — a signed comparison, a log extract, a register entry, a test result — and where it will be filed. Evidence collected as a by-product costs almost nothing; evidence reconstructed later costs weeks and convinces nobody. Second, assurance, organised on the Three Lines Model: the first line checks its own work, the second line samples, reviews, and challenges, and the third line evaluates independently. The test is inspectability: could a competent reviewer, new to the programme, verify your ten most important controls from the evidence pack alone, without interviewing the people who ran them? If not, the evidence is not yet proof."
+      },
+      {
+        "type": "p",
+        "text": "5. Repair — failure is input, not embarrassment. Controls fail. Decisions turn out wrong. Obligations get missed. A system that punishes the reporting of failure will stop hearing about it, and the ECI pressure data in Part 2 tells you the silence will not mean health. Repair means a single remediation log where failures, findings, incidents, and missed obligations are recorded with root cause, corrective action, owner, and due date — and where closure requires evidence, not assertion. Repair also feeds back: a repeated failure changes a control in Run, a missed obligation changes Map, an override changes Decide. The test is learning: can you point to one rule that is different today because a failure taught you something? If not, your log is a graveyard, not a loop."
+      },
+      {
+        "type": "p",
+        "text": "Why call it the Proof System? Because proof is the standard that disciplines every choice inside it. Not proof the programme was perfect — no honest programme can offer that. Proof that decisions were made by the right people, obligations were known and owned, controls operated, independent eyes checked, and failures were found, fixed, and learned from. A sponsor, auditor, or regulator may still disagree with a decision. What they cannot fairly say, if the system ran, is that nobody was governing."
+      },
+      {
+        "type": "p",
+        "text": "The five disciplines also scale. A small implementation runs them with five lean artefacts. A multi-year, multi-country programme runs them with dedicated owners per discipline. What does not scale down to zero is the loop itself. Remove Decide and controls get overridden silently. Remove Map and late requirements ambush testing. Remove Run and compliance becomes a pre-go-live scramble. Remove Prove and you have activity without assurance. Remove Repair and you repeat the same finding in every phase."
+      },
+      {
+        "type": "p",
+        "text": "Part 4 turns the framework into a sequence. The eight steps that follow are the Proof System, scheduled against the life of an implementation."
+      },
+      {
+        "type": "img",
+        "src": "/images/blog/compliance-governance-proof-system.webp",
+        "alt": "The Proof System — five connected stages forming a closed loop around a central checkmark seal: Decide, Map, Run, Prove, Repair",
+        "caption": "Five disciplines, one test: can the decision, the control, and the evidence be shown — not just described?"
+      },
+      {
+        "type": "h2",
+        "text": "Part 4 — Methodology: The Eight Steps, Phase by Phase"
+      },
+      {
+        "type": "p",
+        "text": "Frameworks fail when nobody can answer the question: what do we do on Monday? This methodology answers it. Eight steps, sequenced against the natural phases of an enterprise implementation, convert the Proof System from an idea into programme work with owners and deliverables."
+      },
+      {
+        "type": "p",
+        "text": "The steps are sequential in design and iterative in operation. You build the foundations in Steps 1 to 3 before configuration begins, because retrofitting decision rights and obligations onto a programme that has already made its big design choices is painful and only partly possible. You design and operate controls in Steps 4 and 5 while the solution is being built and tested. You prove and prepare in Steps 6 and 7 as go-live approaches. And you run Step 8 — repair and learn — from the first month to the last, because findings do not wait politely for the phase plan."
+      },
+      {
+        "type": "p",
+        "text": "Mobilisation: Steps 1 and 2. Step 1 establishes the governance charter and decision rights: a short, specific document naming the forums, what each decides, who votes, what thresholds escalate a decision, and how decisions are recorded. Step 2 builds the obligations register — obligations gathered from advisers, contracts, policies, and commitments, translated into plain programme language, each with an owner and affected workstreams. Both steps end with sponsor approval, itself the first entry in the decision register."
+      },
+      {
+        "type": "p",
+        "text": "Design: Step 3. Step 3 designs the control library. For each obligation and material risk, the team defines a control: owner, workflow step, frequency, pass and fail, and evidence output. Design happens alongside solution design, so system roles, approval chains, and reports are configured to produce the control rather than work around it. Segregation of duties is designed into role definitions here, before access is granted to anyone."
+      },
+      {
+        "type": "p",
+        "text": "Build and test: Steps 4 and 5. Step 4 puts controls into operation and starts the evidence pack. From the first test cycle, controls run for real: change approvals, conversion reconciliations, access reviews, and test sign-offs leave their designed evidence in the designed location. Step 5 tests the controls themselves, separately from the solution. A payroll calculation can pass while the control over who approved its change was never exercised. Control testing uses sampling, re-performance for the highest-risk controls, and negative tests — an unapproved change should be rejected; verify that it is."
+      },
+      {
+        "type": "p",
+        "text": "Readiness and go-live: Steps 6 and 7. Step 6 is the assurance review. Second-line reviewers sample the evidence pack against the obligations register and report gaps while time remains to close them. Third-line engagement, where internal audit exists, is agreed here — scope, timing, and evidence needs — rather than discovered after go-live. Step 7 is the governed go-live decision: pre-agreed criteria, evidence against each, recorded dissent, explicit conditions, and a named decision-maker. A go-live approved without criteria is a hope with a date."
+      },
+      {
+        "type": "p",
+        "text": "Hypercare and closure: Step 8, running throughout. Step 8 operates the remediation log as the learning loop. Every control failure, finding, incident, and missed obligation enters one log, gets a root cause, and closes only with evidence. At phase ends, the programme reviews the log for patterns and amends its decision rules, register, and controls. Closure includes a final evidence index, so the proof survives the team that ran it."
+      },
+      {
+        "type": "p",
+        "text": "Two warnings. First, keep artefacts small enough to maintain. A register with forty well-kept entries beats a portal with four hundred stale ones; stale governance is worse than lean governance because it looks authoritative while being wrong. Second, assign a named owner to each step, not a team. Teams maintain nothing. People do."
+      },
+      {
+        "type": "p",
+        "text": "The interactive summary below compresses the eight steps into a form you can use in a mobilisation workshop. Part B of this cornerstone then expands each step with detailed procedures, templates — including a RAID log, a risk and obligations register structure, checklists, a RACI, and decision frameworks — anonymised scenarios, a labelled hypothetical case study, metrics you define and baseline yourselves, and the common mistakes that undo each step."
+      },
+      {
+        "type": "steps",
+        "label": "The Eight Steps to Governance That Proves Itself",
+        "items": [
+          {
+            "title": "Step 1 — Establish decision rights and the governance charter",
+            "text": "Name every forum, what it decides, who votes, and what thresholds escalate a decision upward. Record how decisions are logged and communicated. Keep the charter short, specific, and sponsor-approved. This becomes the first entry in your decision register and the reference point whenever authority is disputed under pressure."
+          },
+          {
+            "title": "Step 2 — Build the obligations register",
+            "text": "Gather obligations from advisers, contracts, policies, agreements, and programme commitments. Translate each into plain programme language, assign a single owner, and map it to affected workstreams. The register is a tracking and translation tool, never a legal interpretation. Review it whenever scope, jurisdiction, or requirements change during delivery."
+          },
+          {
+            "title": "Step 3 — Design the control library with the solution",
+            "text": "For each obligation and material risk, define a control with an owner, workflow step, frequency, clear pass and fail criteria, and a named evidence output. Design segregation of duties into system roles now, before access is granted. Controls designed after configuration get worked around instead of built in."
+          },
+          {
+            "title": "Step 4 — Run controls in the workflow and start the evidence pack",
+            "text": "Operate controls for real from the first test cycle: change approvals, conversion reconciliations, access reviews, and sign-offs all leave designed evidence in the designed location. Evidence collected as a by-product costs almost nothing. Evidence reconstructed before an audit costs weeks and convinces nobody reviewing it later."
+          },
+          {
+            "title": "Step 5 — Test the controls, not only the solution",
+            "text": "Test control operation separately from solution testing, using sampling and re-performance for the highest-risk controls. Run deliberate negative tests: an unapproved change should be rejected, an unauthorised role should be blocked. A calculation can pass while the approval control around it was never actually exercised."
+          },
+          {
+            "title": "Step 6 — Run second-line assurance before go-live",
+            "text": "Compliance, risk, and programme management reviewers sample the evidence pack against the obligations register and report gaps while time remains to close them. Agree any internal audit scope, timing, and evidence needs here. Assurance that arrives after go-live can only document failure, not prevent it."
+          },
+          {
+            "title": "Step 7 — Make go-live a governed decision",
+            "text": "Decide go-live against pre-agreed criteria, with evidence presented for each criterion, dissent recorded, and conditions stated explicitly where approval is conditional. Name the decision-maker in the register. A go-live approved without criteria is a hope with a date, and it leaves the sponsor exposed later."
+          },
+          {
+            "title": "Step 8 — Repair, remediate, and feed the learning back",
+            "text": "Log every control failure, finding, incident, and missed obligation in one remediation log with root cause, owner, and due date. Close items only with evidence. Review patterns at each phase end and amend decision rules, the register, and controls accordingly, so the same finding never repeats."
+          }
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Part 5 — Real-World Scenarios"
+      },
+      {
+        "type": "p",
+        "text": "The scenarios that follow are anonymised composites, built from patterns seen repeatedly across enterprise implementations, combined and altered so no single organisation, client, or individual can be identified. Read them as diagnostic tools: if a scenario feels familiar, that familiarity is the point."
+      },
+      {
+        "type": "h3",
+        "text": "Composite Scenario 1: The Payroll Approval Override at Go-Live"
+      },
+      {
+        "type": "p",
+        "text": "Composite scenario — anonymised, not a single real organisation."
+      },
+      {
+        "type": "p",
+        "text": "It is the first live payroll run. Parallel results matched within tolerance, sign-off was given, and the steering committee is watching for a clean close. Late in the afternoon, a manager notices a group of employees set up with the wrong earning code. The fix is small. The approved change window, however, has closed, and the normal approver for payroll configuration changes is on leave."
+      },
+      {
+        "type": "p",
+        "text": "A director approves the correction verbally, in the room. The change is made, payroll completes on time, and everyone moves on. No ticket is raised. No second approver reviews the change. The decision log records a successful go-live and nothing else."
+      },
+      {
+        "type": "p",
+        "text": "Three weeks later, internal audit samples that first pay run. The amounts and the earning code are correct. What audit cannot find is any record of who authorised a change to live payroll configuration, why the normal control was bypassed, or whether anyone checked the change afterwards. The finding is not about money. It is about override."
+      },
+      {
+        "type": "p",
+        "text": "That pattern matches wider evidence. More than half of occupational fraud cases were correlated with a lack of internal controls or with management override of existing controls (ACFE, *Occupational Fraud 2024: A Report to the Nations*, March 2024). The same report estimated organisations lose 5% of revenue to fraud each year, based on 1,921 cases across 138 countries and territories, with a median loss of $145,000 (ACFE, March 2024). A well-intentioned payroll override is not fraud, but it uses the same pathway: authority exercised outside the designed control, with no contemporaneous record."
+      },
+      {
+        "type": "p",
+        "text": "The lesson is not \"never allow an exception\" — go-live will always produce exceptions. An exception needs its own control: a named approver under a pre-agreed emergency delegation, a time-stamped record, retrospective review, and closure in the decision log. That is Decide and Prove working together. The decision was defensible. Without the record, it could not be proved."
+      },
+      {
+        "type": "h3",
+        "text": "Composite Scenario 2: Vendor Access Left Open After Hypercare"
+      },
+      {
+        "type": "p",
+        "text": "Composite scenario — anonymised, not a single real organisation."
+      },
+      {
+        "type": "p",
+        "text": "An implementation partner needs elevated access during hypercare to investigate defects, adjust configuration, and support data corrections. Access is granted quickly, as it should be during stabilisation. Hypercare exit criteria are met, the partner's engagement ends, and the project team disperses."
+      },
+      {
+        "type": "p",
+        "text": "Nobody owns the access review."
+      },
+      {
+        "type": "p",
+        "text": "Four months later, a routine recertification finds several external accounts still active. None shows misuse. Two belong to people who have left the partner organisation. The accounts were never closed because closing them was assigned to no named owner, tied to no hypercare exit checklist, and tested as no control."
+      },
+      {
+        "type": "p",
+        "text": "This is a Run and Prove failure. The control existed on paper — access should be time-bound and reviewed — but it was not run on a cadence, and no evidence pack proved it had run. Vendor access should expire by default, not by memory: expiry dates, a named internal owner for every external account, and a hypercare exit gate that cannot close until access is removed or formally extended. Access continuing into support should be re-approved under the support model, not inherited silently from the project."
+      },
+      {
+        "type": "p",
+        "text": "In the Ethics & Compliance Initiative Global Business Ethics Survey 2023, 28% of employees globally felt pressure to compromise workplace standards or the law, up from 20% in 2019, and 65% had observed misconduct (ECI GBES 2023, reported January 2024). Governance that relies on memory under pressure is not governance. It is hope, documented."
+      },
+      {
+        "type": "h3",
+        "text": "Composite Scenario 3: The Quebec Privacy Assessment That Was Skipped for a New Module"
+      },
+      {
+        "type": "p",
+        "text": "Composite scenario — anonymised, not a single real organisation."
+      },
+      {
+        "type": "p",
+        "text": "A programme is adding a new HR module for a workforce that includes employees in Quebec. The module will collect additional personal information and share some of it with a service provider outside the province. The timeline is tight. The privacy impact assessment completed for the core system is treated as if it covers the new module, even though the data, purpose, and transfer differ. No new assessment is started, and no one records the decision to rely on the earlier one."
+      },
+      {
+        "type": "p",
+        "text": "Quebec's Law 25 was fully in force on 22 September 2024, when its final phase on data portability took effect (Government of Quebec / Commission d'accès à l'information, Law 25, assented 22 September 2021, fully in force 22 September 2024). The law provides for administrative monetary penalties of up to $10 million CAD or 2% of worldwide turnover, whichever is greater, and penal fines of up to $25 million CAD or 4% (Government of Quebec / CAI, Law 25). Those figures explain why assessment discipline matters in programme planning; they are not legal advice on any specific situation — that interpretation belongs to qualified legal and privacy professionals."
+      },
+      {
+        "type": "p",
+        "text": "In the composite, the issue surfaces at a pre-launch readiness review, late enough that completing a proper assessment compresses testing. The programme must choose between delaying the module and launching with an incomplete record. Both are worse than the option available months earlier: map the new obligation when the module was approved, assign an owner, and run the assessment alongside design."
+      },
+      {
+        "type": "p",
+        "text": "This is the Map discipline failing quietly. Obligations attach when scope changes, not only at go-live. Any change introducing new personal information, a new jurisdiction, a new recipient, or a new purpose should trigger a check against the obligations register, as discussed in [Data Privacy in HR Migrations](/blog/data-privacy-hr-migrations). A register reviewed only at phase gates will be outrun by scope changes between gates."
+      },
+      {
+        "type": "h3",
+        "text": "Composite Scenario 4: The Steering-Committee Decision Made With No Record"
+      },
+      {
+        "type": "p",
+        "text": "Composite scenario — anonymised, not a single real organisation."
+      },
+      {
+        "type": "p",
+        "text": "A steering committee discusses a trade-off: proceed to go-live with a known reporting defect and a manual workaround, or delay by one cycle. Executives debate it thoroughly. The chair summarises a consensus to proceed, with conditions. People leave believing the conditions were agreed."
+      },
+      {
+        "type": "p",
+        "text": "No decision record is written. The minutes, issued two weeks later, record attendance and general discussion, but not the decision, conditions, dissent, or the owner for the workaround review."
+      },
+      {
+        "type": "p",
+        "text": "Six weeks later the workaround fails during a reporting deadline. Participants now remember the conditions differently: one believed it would be reviewed weekly, another that it would end after the first cycle, a third recalls no condition at all. There is no bad faith in the room. There is simply no record to return to."
+      },
+      {
+        "type": "p",
+        "text": "Programmes often treat decision-making as the event and the record as administration. In governance terms, they are the same thing. A decision without a record of options, criteria, conditions, and review date cannot be proved, repaired cleanly, or learned from. That is why decision-log discipline is a control in its own right in Part 9, and why it connects to the risk discipline in [Risk Management for Enterprise Implementations](/blog/risk-management-for-enterprise-implementations)."
+      },
+      {
+        "type": "p",
+        "text": "Together, these composites show one pattern: small omissions — an unrecorded approval, an unowned review, an unmapped obligation, an unwritten decision — that matter only when someone later asks the programme to prove what it did. The Proof System exists for that moment."
+      },
+      {
+        "type": "h2",
+        "text": "Part 6 — Risk Analysis: The Twelve Risks That Decide Governance"
+      },
+      {
+        "type": "p",
+        "text": "Governance risks differ from delivery risks. A delivery risk threatens a date, a budget, or a scope item. A governance risk threatens the organisation's ability to show that its decisions were authorised, its obligations understood, its controls actually ran, and its problems repaired. A programme can hit its go-live date and still fail on governance — the more dangerous outcome, because the failure is discovered later, by audit, a regulator, or a dispute, when reconstruction is hardest."
+      },
+      {
+        "type": "p",
+        "text": "The twelve risks below decide most governance outcomes on enterprise implementations. Each is stated with cause, early warning sign, mitigation, and contingency — what to do when mitigation has failed. Use them as a starting structure for a programme risk register, then tailor probability, impact, and ownership to your context. No universal likelihood or benchmark is attached, because no authoritative source provides one."
+      },
+      {
+        "type": "p",
+        "text": "Detection evidence underlines why several risks matter. Tips were the detection method in 43% of occupational fraud cases, compared with 14% for internal audit, 13% for management review, and only 3% for external audit (ACFE, March 2024). Organisations with hotlines had a median loss of $100,000 compared with $200,000 for those without, and a median duration of 12 months compared with 24 months (ACFE, March 2024, summarised in ACFE *Fraud Magazine*, May/June 2024)."
+      },
+      {
+        "type": "p",
+        "text": "1. Management override of controls. *Cause: delivery pressure combined with senior authority that can bypass approval, segregation, or change controls. *Early warning sign: verbal approvals, retrospective tickets, or recurring \"temporary\" exceptions. *Mitigation: pre-agreed emergency delegation, dual approval for high-risk changes, and a log of every override reviewed by the steering committee. *Contingency: freeze further overrides, retrospectively review all affected changes, and record outcomes and remediation in the decision log."
+      },
+      {
+        "type": "p",
+        "text": "2. Unmapped or stale obligations. *Cause: scope, jurisdiction, data, or vendor changes never checked against the obligations register. *Early warning sign: the register has not changed while the programme has. *Mitigation: trigger-based register reviews on every material change, with a named owner per obligation. *Contingency: pause the affected scope, complete a rapid assessment, and obtain a recorded decision before proceeding."
+      },
+      {
+        "type": "p",
+        "text": "3. Decision-making without a record. *Cause: fast-moving forums, verbal consensus, and minutes that summarise discussion instead of decisions. *Early warning sign: participants describe the same decision differently. *Mitigation: a decision log completed in the meeting — decision, rationale, conditions, owner, review date. *Contingency: reconstruct the record promptly, mark it as reconstructed, and re-confirm or reverse the decision explicitly."
+      },
+      {
+        "type": "p",
+        "text": "4. Control design that cannot be run. *Cause: controls written to satisfy a document review rather than the capacity and cadence of the team who must operate them. *Early warning sign: controls completed late, in bulk, or just before an audit. *Mitigation: test each control with its operator during design, simplify where friction is proven, and automate only after the manual control works. *Contingency: redesign the control, record the gap period honestly, and apply a compensating check until the new control operates."
+      },
+      {
+        "type": "p",
+        "text": "5. Evidence gaps and reconstructed evidence. *Cause: evidence treated as an end-of-phase task instead of a by-product of running the control. *Early warning sign: evidence requests produce screenshots created after the fact, or files with no owner or date. *Mitigation: define the evidence artefact at design time and capture it when the control runs. *Contingency: disclose the gap as a gap — never backfill it as if contemporaneous — and increase testing over the affected period."
+      },
+      {
+        "type": "p",
+        "text": "6. Vendor and third-party access drift. *Cause: project access granted for delivery or hypercare is never expired or re-approved under the support model. *Early warning sign: external accounts with no named internal owner or expiry date. *Mitigation: time-bound access by default, owner assigned at grant, and an access gate in hypercare exit. *Contingency: disable unowned accounts immediately, review their activity, and re-grant only through fresh approval."
+      },
+      {
+        "type": "p",
+        "text": "7. Segregation-of-duties conflicts. *Cause: small teams, combined roles during go-live, or configuration that lets one person create, approve, and pay, or change and approve their own change. *Early warning sign: conflict reports accepted without review or expiry. *Mitigation: design roles to separate incompatible duties, review conflicts before go-live, and time-limit any accepted conflict with a compensating review. *Contingency: remove the conflicting access, retrospectively review affected transactions, and record findings and actions."
+      },
+      {
+        "type": "p",
+        "text": "8. Change control bypass. *Cause: urgent fixes, defect pressure, or parallel workstreams moving changes directly into production. *Early warning sign: production changes with no matching approved record, or records created after deployment. *Mitigation: a single visible change route, an expedited route for genuine urgency that still requires approval and testing evidence, and reconciliation of production changes to records. *Contingency: halt non-emergency changes, reconcile the full change population, and assess each unapproved change for impact and rollback."
+      },
+      {
+        "type": "p",
+        "text": "9. Privacy and cross-border transfer oversight. *Cause: new data, jurisdictions, recipients, or purposes introduced without a fresh assessment. *Early warning sign: data-flow diagrams that no longer match the live design. *Mitigation: maintain current data-flow records, trigger assessments on change, and involve privacy professionals early. *Contingency: suspend the affected transfer or feature by internal decision where needed, complete the assessment, and record the decision before resuming."
+      },
+      {
+        "type": "p",
+        "text": "10. Weak speaking-up and escalation routes. *Cause: staff and vendor personnel do not trust that raising a concern is safe, worthwhile, or separate from line management. *Early warning sign: a large programme with zero escalations and risks that surface only after failure. *Mitigation: publish multiple routes, protect anonymity where the route offers it, brief vendor teams as well as employees, and report themes to the steering committee. The most common controls in victim organisations included a code of conduct, present in 85%, and an external audit of financial statements, present in 84% (ACFE, March 2024) — speaking-up routes sit alongside those formal controls, not instead of them. *Contingency: commission an independent review of routes and recent concerns, and act visibly on what it finds."
+      },
+      {
+        "type": "p",
+        "text": "11. Remediation that never closes. *Cause: findings are accepted and owners named, but dates slip repeatedly with no escalation. *Early warning sign: the same findings age across successive reports with revised dates only. *Mitigation: age-based escalation, a single remediation log, and steering-committee review of overdue items by age, not just count. *Contingency: re-plan with executive sponsorship, interim compensating controls, and recorded risk acceptance if the organisation chooses to live with the gap."
+      },
+      {
+        "type": "p",
+        "text": "12. Governance theatre. *Cause: forums meet, packs circulate, and dashboards show green, while no decision is challenged, no evidence sampled, and no uncomfortable item escalated. *Early warning sign: meetings that never change a plan, stop a release, or record a dissent. *Mitigation: require evidence sampling in reviews, rotate challenge roles, and track whether forums actually make and record decisions — a discipline related to using tools without surrendering judgement, as explored in [AI for Project Managers](/blog/ai-for-project-managers). *Contingency: reset the forum's mandate, membership, and inputs, with an independent review of the last cycle of decisions."
+      },
+      {
+        "type": "p",
+        "text": "Read together, the twelve risks share one property: each is visible early, cheaply, to anyone who looks at records rather than assurances. Governance rarely fails without warning. It fails because the warning sat in a log nobody reviewed, or a meeting nobody recorded."
+      },
+      {
+        "type": "img",
+        "src": "/images/blog/compliance-governance-obligations-map.svg",
+        "alt": "An obligations register flowing from external obligations — law, regulation, contract, policy — through a named owner and controls to evidence and a review date",
+        "caption": "An obligation with no owner, no control, and no evidence is a hope written in formal language."
+      },
+      {
+        "type": "accordion",
+        "label": "The Twelve Governance Risks — Warning Signs and Responses",
+        "items": [
+          {
+            "title": "Risk 1 — Management override of controls",
+            "text": "Warning sign: verbal approvals and retrospective tickets become normal under pressure. Response: apply the pre-agreed emergency delegation, require dual approval for high-risk changes, log every override, and have the steering committee review the complete override log at each meeting."
+          },
+          {
+            "title": "Risk 2 — Unmapped or stale obligations",
+            "text": "Warning sign: the obligations register has not changed while scope, data, or jurisdictions have. Response: pause the affected scope, run a rapid obligations assessment, assign a named owner to each new obligation, and record the decision before work proceeds."
+          },
+          {
+            "title": "Risk 3 — Decisions without a record",
+            "text": "Warning sign: participants describe the same meeting decision differently afterwards. Response: complete the decision log in the meeting itself, covering decision, rationale, conditions, owner, and review date, then reconstruct and re-confirm any earlier unrecorded decision explicitly."
+          },
+          {
+            "title": "Risk 4 — Controls that cannot be run",
+            "text": "Warning sign: controls are completed late, in bulk, or immediately before an audit. Response: test each control with its operator, simplify where friction is proven, add a compensating check for the gap period, and redesign honestly rather than forcing compliance theatre."
+          },
+          {
+            "title": "Risk 5 — Evidence gaps",
+            "text": "Warning sign: evidence requests produce screenshots created after the fact, with no owner or date. Response: define the evidence artefact at design time, capture it when the control runs, disclose gaps as gaps, and increase testing over the affected period."
+          },
+          {
+            "title": "Risk 6 — Vendor access drift",
+            "text": "Warning sign: external accounts have no named internal owner or no expiry date. Response: disable unowned accounts, review their activity, make access time-bound by default, and re-grant only through fresh approval under the support model, never by inheritance."
+          },
+          {
+            "title": "Risk 7 — Segregation-of-duties conflicts",
+            "text": "Warning sign: conflict reports exist but are accepted without review or expiry. Response: remove or time-limit the conflicting access, add a compensating review, retrospectively check affected transactions, and record findings, owners, and closure in the remediation log."
+          },
+          {
+            "title": "Risk 8 — Change control bypass",
+            "text": "Warning sign: production changes appear with no matching approved record, or records created after deployment. Response: halt non-emergency changes, reconcile the full production change population against records, and assess each unapproved change for impact, testing, and possible rollback."
+          },
+          {
+            "title": "Risk 9 — Privacy and cross-border oversight",
+            "text": "Warning sign: data-flow diagrams no longer match the live design after scope changes. Response: suspend the affected transfer or feature by internal decision where needed, complete a fresh assessment with privacy professionals, and record the decision before resuming."
+          },
+          {
+            "title": "Risk 10 — Weak speaking-up routes",
+            "text": "Warning sign: a large programme reports zero escalations and zero concerns over many months. Response: publish multiple routes to employees and vendor teams, report themes to the steering committee, and commission an independent review if silence persists."
+          },
+          {
+            "title": "Risk 11 — Remediation that never closes",
+            "text": "Warning sign: the same findings age across successive reports with revised dates only. Response: escalate by age, apply interim compensating controls, re-plan with executive sponsorship, and record explicit risk acceptance if the organisation chooses to live with the gap."
+          },
+          {
+            "title": "Risk 12 — Governance theatre",
+            "text": "Warning sign: forums meet and dashboards stay green, yet no plan ever changes and no dissent is recorded. Response: require evidence sampling in reviews, rotate the challenge role, and reset the forum mandate if decisions and records do not improve."
+          }
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Part 7 — Implementation Considerations"
+      },
+      {
+        "type": "p",
+        "text": "Governance fails in two opposite ways. Too little, and the programme cannot prove anything. Too much, applied uniformly regardless of risk, and delivery slows until people route around the system — creating exactly the unrecorded decisions governance was meant to prevent. The implementation task is proportionality: match the weight of governance to the consequence of the decision."
+      },
+      {
+        "type": "h3",
+        "text": "Proportionality in Practice"
+      },
+      {
+        "type": "p",
+        "text": "Start by tiering decisions and controls. A change to a payroll calculation, a bank-detail process, or access to sensitive personal information carries a different consequence from a change to a report layout. The first group deserves dual approval, testing evidence, and a recorded decision. The second deserves a competent owner, a standard change record, and sampling. If everything requires a committee, urgency becomes the excuse for bypass. If nothing does, high-consequence changes move at the speed of a chat message."
+      },
+      {
+        "type": "p",
+        "text": "Proportionality also applies to evidence. Ask for the artefact that proves the control ran — an approval record, a system log, a reconciled report — not a slide deck describing it. Short, real evidence beats long, prepared evidence."
+      },
+      {
+        "type": "h3",
+        "text": "Building in Phases"
+      },
+      {
+        "type": "p",
+        "text": "Do not launch a complete governance system on day one. Build it in Proof System order. First, Decide: agree decision rights, forums, and the decision log before major decisions begin. Second, Map: build the obligations register for the scope actually approved, not a hypothetical final state. Third, Run: operate a small set of high-consequence controls well, rather than a large library badly. Fourth, Prove: test those controls and assemble the first evidence pack early, while correction is cheap. Fifth, Repair: run the first remediation cycle before go-live, so ageing, escalation, and closure are practised routines, not new inventions under pressure. A programme that cannot keep a decision log has no business buying a governance platform."
+      },
+      {
+        "type": "h3",
+        "text": "Regulated and Non-Regulated Contexts"
+      },
+      {
+        "type": "p",
+        "text": "In a regulated context, obligations, timelines, and assurance expectations are set externally; the programme's job is to map them accurately and prove adherence. In a non-regulated context, the organisation sets more of its own standard — which makes governance harder to defend, not less necessary. Without an external deadline, internal governance competes with every delivery priority and usually loses unless a named executive owns it."
+      },
+      {
+        "type": "p",
+        "text": "The practical difference is in Map. Regulated programmes must show traceability from an external obligation to an owner, a control, and evidence. Non-regulated programmes should borrow that traceability for their highest-consequence internal obligations — payroll accuracy, data protection, financial reporting, safety — and apply lighter treatment elsewhere."
+      },
+      {
+        "type": "h3",
+        "text": "Canada and the United States: Cross-Border Reality"
+      },
+      {
+        "type": "p",
+        "text": "Cross-border programmes add a specific trap: assuming a control designed for one jurisdiction satisfies another. Payroll approvals, privacy assessments, record retention, and reporting calendars differ across the border, and differ again within Canada at provincial level, as the Quebec scenario showed. The obligations register must therefore be organised by jurisdiction, not just by topic. A single line reading \"privacy assessment complete\" is meaningless across federal, provincial, and state obligations. Separate lines, separate owners, separate evidence."
+      },
+      {
+        "type": "p",
+        "text": "Where one team serves both countries, make the differences explicit in design workshops and test cases. Most cross-border governance failures I have seen were not disagreements about standards. They were silent assumptions that one country's process had covered the other's requirement."
+      },
+      {
+        "type": "h3",
+        "text": "Phased Regulatory Implementation: Two Worked Examples"
+      },
+      {
+        "type": "p",
+        "text": "Regulators themselves use phased implementation, and programmes can learn from the pattern. The Office of the Superintendent of Financial Institutions published the final Guideline E-21, Operational Risk Management and Resilience, on 22 August 2024, with Sections 1–2 effective immediately, full adherence for Section 4 required by 1 September 2025, full adherence overall by 1 September 2026, and scenario testing for all critical operations complete by 1 September 2027 (OSFI, 22 August 2024). Note the logic: governance and accountability first, critical operational requirements next, full adherence later, testing last — because testing a system that does not yet exist proves nothing."
+      },
+      {
+        "type": "p",
+        "text": "Guideline B-13, Technology and Cyber Risk Management, follows a similar shape: final guideline issued 13 July 2022, effective 1 January 2024, organised as 17 principles across three domains — governance and risk management; technology operations and resilience; and cyber security (OSFI, July 2022). An eighteen-month runway between publication and effect gave institutions time to map obligations, assign owners, and build controls before adherence was expected."
+      },
+      {
+        "type": "p",
+        "text": "Apply the same sequencing inside a programme. Announce requirements with a runway. Put decision rights and ownership first. Set earlier dates for the highest-consequence controls, later dates for full coverage, and schedule the first independent test after controls have operated, not immediately after they are written. A launch demanding everything at once usually gets a burst of paperwork and little operating reality."
+      },
+      {
+        "type": "img",
+        "src": "/images/blog/compliance-governance-control-room.webp",
+        "alt": "A compliance operations view — a wall board of obligations, controls, evidence checks and open remediation items as connected cards reviewed by two professionals",
+        "caption": "Governance you can see: obligations, controls, evidence and remediation on one board, reviewed on a cadence."
+      },
+      {
+        "type": "h2",
+        "text": "Part 8 — Technology and AI Considerations"
+      },
+      {
+        "type": "p",
+        "text": "Technology can make governance run at scale. It cannot decide what good governance is. Yet a striking share of governance investment still starts with a tool purchase and works backwards to a process. The sequence matters more than the software."
+      },
+      {
+        "type": "h3",
+        "text": "What the Evidence Says About Technology Adoption"
+      },
+      {
+        "type": "p",
+        "text": "Compliance requirements have become harder to manage, and organisations are responding with technology. In the PwC Global Compliance Survey 2025, 85% of respondents globally — and 94% of Canadian respondents — said compliance requirements had become more complex in the previous three years, and 82% of companies planned to invest more in compliance technology (PwC, 2025, Canada insights 2 May 2025). The same survey reported technology already in use for training at 82% of organisations, risk assessment at 76%, and compliance or transaction monitoring at 75% (PwC, 2025)."
+      },
+      {
+        "type": "p",
+        "text": "Regulatory change itself is moving faster. In the CUBE Cost of Compliance Report 2026, based on a survey conducted in June–July 2026 of more than 2,000 senior practitioners across 11 countries including Canada, 61% of firms said they now embed regulatory change within a year, up from 26% in 2025, while 64% reported higher compliance costs over the past year, driven mainly by technology investment and AI governance (CUBE, 4 November 2026). Nothing in that evidence says the spend automatically produced better governance. It says the operating problem is getting bigger and organisations are buying capacity to cope."
+      },
+      {
+        "type": "h3",
+        "text": "Where Tooling Genuinely Helps"
+      },
+      {
+        "type": "p",
+        "text": "Governance, risk, and compliance platforms earn their cost in four places. First, registers: an obligations register, control library, and remediation log in one system, with owners, dates, and status visible, will outperform disconnected spreadsheets once a programme passes a modest size. Second, workflow controls: approvals routed inside the system that executes the work — change management, access provisioning, payroll processing — create evidence as a by-product, the strongest kind. Third, monitoring: automated checks over access, configuration, and transactions can test a whole population instead of a sample, provided someone owns acting on exceptions. Fourth, reporting: a single view of overdue controls, ageing remediation, and unmapped obligations gives a steering committee something real to govern with."
+      },
+      {
+        "type": "p",
+        "text": "Notice what is absent: the tool deciding. The moment a dashboard's green status substitutes for sampling the underlying evidence, the tool has become part of Risk 12 — governance theatre with better graphics."
+      },
+      {
+        "type": "h3",
+        "text": "Governing AI Inside the Programme"
+      },
+      {
+        "type": "p",
+        "text": "AI now appears in implementations in two ways: as a tool the programme uses — drafting, summarising, testing support, code assistance — and as a feature of the system being implemented, such as screening, matching, or automated recommendations. Both need governance, treated explicitly rather than discovered in a readiness review."
+      },
+      {
+        "type": "p",
+        "text": "Two reference frameworks help structure that work. The NIST AI Risk Management Framework 1.0 (NIST AI 100-1), released 26 January 2023, is a voluntary framework organised around four functions: Govern, Map, Measure, and Manage (NIST, 2023). Its Generative AI Profile followed on 26 July 2024 (NIST AI 600-1, 2024). ISO/IEC 42001:2023, published 18 December 2023, is the first international AI management system standard and is certifiable (ISO/IEC, December 2023). Neither needs wholesale adoption by a delivery programme. Both give a useful discipline: assign accountability, inventory where AI is actually operating, define how outputs are checked, and decide in advance what happens when it performs badly."
+      },
+      {
+        "type": "p",
+        "text": "In programme terms, that means four minimum controls. Keep an inventory of AI uses, including embedded vendor features, not just tools bought directly. Require human review proportionate to consequence: a summarised meeting note and an automated screening decision are not the same risk. Record which AI outputs were relied on in material decisions, so the decision can be revisited if the tool's behaviour is questioned. And agree exit and fallback arrangements before dependence builds — a manual process that no longer exists is not a fallback. These themes connect to [AI for Project Managers](/blog/ai-for-project-managers) and to [The Complete Guide to AML and Financial Crime Prevention](/blog/complete-guide-aml-financial-crime-prevention), where monitoring tools teach the same lesson: detection software supports judgement, it does not replace it."
+      },
+      {
+        "type": "h3",
+        "text": "The Tool-First Warning"
+      },
+      {
+        "type": "p",
+        "text": "A final caution, from experience. Tool-first governance produces a familiar artefact: a beautifully configured platform on top of an undecided organisation. Registers are loaded before ownership is agreed, workflows encode approval chains nobody has tested, and reports are generated for forums that never challenge them. Six months later the platform is blamed."
+      },
+      {
+        "type": "p",
+        "text": "Run the sequence in reverse. Agree decisions, obligations, and controls on paper. Operate them manually for one cycle. Fix what friction reveals. Then automate what has proved stable, starting with evidence capture and overdue-item reporting, where the return is immediate. Technology bought at that point fits the governance the organisation actually runs — the only governance it has."
+      },
+      {
+        "type": "h2",
+        "text": "Part 9 — Governance in Practice: Bodies, Cadence, and Records"
+      },
+      {
+        "type": "p",
+        "text": "Governance becomes real in rooms, on calendars, and in records. This part describes the operating machinery: which bodies a programme needs, what each is for, how often each should meet, and what each must produce. Keep the structure as small as possible. Every body must make decisions the next body cannot make for it; otherwise merge them."
+      },
+      {
+        "type": "h3",
+        "text": "The Steering Committee"
+      },
+      {
+        "type": "p",
+        "text": "The steering committee owns the programme's material decisions: scope and funding changes, go-live and delay decisions, acceptance of significant residual risk, and escalation of remediation delivery teams cannot close. It should meet on a fixed cadence — monthly for most programmes, more often near go-live — with a pack that leads with decisions required, not progress reported. Each decision needs a log entry made in the meeting: decision, rationale, options rejected, conditions, owner, review date."
+      },
+      {
+        "type": "p",
+        "text": "A steering committee that only receives updates is a reporting forum, not a governing body. The test is simple: if it stopped meeting for two months, which decisions would stall? If the answer is none, it is not governing."
+      },
+      {
+        "type": "h3",
+        "text": "The Design Authority"
+      },
+      {
+        "type": "p",
+        "text": "The design authority owns integrity of the solution design: how requirements are interpreted, how configuration and integration choices fit together, and whether a proposed change damages reporting, controls, or data quality downstream. It meets more frequently than the steering committee — weekly during design and build is typical — and its value is in saying no early, while change is cheap. Its decisions are narrower but just as record-dependent, because design decisions are the ones auditors and support teams reconstruct years later. Record the decision, the alternatives, and the control or reporting impact considered."
+      },
+      {
+        "type": "h3",
+        "text": "The Change Board"
+      },
+      {
+        "type": "p",
+        "text": "The change board (often called a change advisory board) owns movement into production: whether a change is approved, tested, scheduled, and reversible. Its cadence follows the release rhythm, with an expedited route for genuine emergencies that still requires named approval and retrospective review. Its core record is the change log reconciled to what actually reached production. Any gap between the two is Risk 8 made visible, and should be reported as such, not quietly corrected."
+      },
+      {
+        "type": "p",
+        "text": "Below these bodies, delivery governance runs through ordinary programme management: RAID reviews, readiness gates, and hypercare exit. The principle is layering without duplication. An issue escalates when the current layer cannot decide it, arriving with a recommendation and the record of what has already been tried."
+      },
+      {
+        "type": "h3",
+        "text": "Reference Point: Corporate Governance Principles"
+      },
+      {
+        "type": "p",
+        "text": "Programme governance sits inside organisational governance, whose most widely used reference point is the G20/OECD Principles of Corporate Governance 2023, adopted by the OECD Council on 8 June 2023 and endorsed by G20 Leaders in September 2023, organised in six chapters including a new chapter on sustainability and resilience (OECD, published 11 September 2023). A programme does not need to recite those principles. It should show the same properties at programme scale: clear responsibilities, accountable decision-makers, disclosure of material issues, and oversight separate from execution. ISO 37301:2021, the compliance management systems standard published 13 April 2021 and confirmed following systematic review in 2026 (ISO/TC 309), and the COSO Internal Control — Integrated Framework (2013), with five components and 17 principles across operations, reporting, and compliance objectives, offer compatible structures for organisations wanting a formal management-system shape around this work (COSO, 2013)."
+      },
+      {
+        "type": "h3",
+        "text": "Decision-Log Discipline"
+      },
+      {
+        "type": "p",
+        "text": "If a programme adopts only one practice from this article, it should be this one. A decision log is a control, not a notebook. Minimum fields: date, decision, forum, decision-maker, options considered, criteria, conditions, dissent, owner for resulting actions, and review date. Complete it in the meeting, not after. Review open conditions at the next meeting. Close entries only when conditions are met or formally discharged."
+      },
+      {
+        "type": "p",
+        "text": "Paired with the log, the Three Lines Model assigns assurance cleanly: published by the Institute of Internal Auditors in July 2020, it distinguishes the governing body, management in first- and second-line roles, and internal audit as the third line providing independent assurance (IIA, July 2020, updated September 2024 for the Global Internal Audit Standards glossary). On a programme: the delivery team owns its controls, a compliance or programme-management function challenges and monitors them, and independent assurance tests them. Confusing those lines — delivery marking its own work as assured — is a quiet, common failure."
+      },
+      {
+        "type": "h2",
+        "text": "Part 10 — Metrics and KPIs: Measuring Without Invented Benchmarks"
+      },
+      {
+        "type": "p",
+        "text": "Governance measurement has a credibility problem. Dashboards display maturity scores, control pass rates, and traffic lights compared against benchmarks that, on inspection, have no authoritative source. This section takes a different approach: define measures precisely, report them honestly, and set targets against your own baseline. No authoritative universal benchmark exists for governance maturity, compliance-programme effectiveness, decision turnaround, or a typical control-failure rate for enterprise implementations. That is not a research gap to be filled with a plausible number. It is a fact about the field, and any source offering such a benchmark without a published method should be treated with caution."
+      },
+      {
+        "type": "h3",
+        "text": "The Measures Worth Keeping"
+      },
+      {
+        "type": "p",
+        "text": "Obligations coverage. The proportion of in-scope obligations with a named owner, at least one mapped control, and a current review date. Define \"in-scope\" in writing, or the measure will improve by quietly narrowing scope. Report the count as well as the percentage, and list unmapped obligations by name — the names are the useful part."
+      },
+      {
+        "type": "p",
+        "text": "Control test pass rate — with a strict definition. A control passes only if the tester obtained contemporaneous evidence that it operated as designed, for the period tested, by the person or system specified. Anything else is a fail or a gap, recorded as such. A pass rate built on a loose definition is worse than no measure: it converts uncertainty into false assurance. Report passes, fails, and not-tested separately."
+      },
+      {
+        "type": "p",
+        "text": "Evidence timeliness. The proportion of control evidence captured when the control ran, rather than assembled later for review. This predicts audit pain better than most measures. Watch it monthly with a simple sample: check whether recent evidence artefacts' dates match their control dates."
+      },
+      {
+        "type": "p",
+        "text": "Decision-record completeness. The proportion of material decisions with a complete log entry — decision, rationale, conditions, owner, review date — created at the time of the decision. Sample steering-committee and design-authority decisions monthly. Reconstructed entries count separately; they show the system recovering, not operating."
+      },
+      {
+        "type": "p",
+        "text": "Remediation ageing. Open findings analysed by age band — for example current, 30–60 days overdue, 61–90, and over 90 — with the oldest five items named at the steering committee. Counts alone hide risk: ten findings a week old differ entirely from three findings aged six months. Ageing, reviewed as in [Risk Management for Enterprise Implementations](/blog/risk-management-for-enterprise-implementations), is where Repair becomes visible."
+      },
+      {
+        "type": "p",
+        "text": "Training and attestation completion. The proportion of people in control-critical roles who completed required training and, where used, attestations by the due date — reported by role, not blended. Completion is an input measure: it shows exposure was delivered, not that behaviour changed. Pair it with control testing before drawing conclusions."
+      },
+      {
+        "type": "h3",
+        "text": "Setting Targets Honestly"
+      },
+      {
+        "type": "p",
+        "text": "Set each target from the organisation's own first measurement. Run the measures for one or two cycles, publish the baseline internally, then set an improvement target the steering committee actually debates — for example, moving evidence timeliness from its measured baseline to a higher level committed to by a named date. That target is a management commitment, not a benchmark, and should be labelled as such wherever it appears."
+      },
+      {
+        "type": "p",
+        "text": "Two disciplines protect the system. First, never change a definition mid-period without restating earlier figures; quiet definition changes are how governance reporting becomes fiction. Second, report measures to the forum that can act on them, with the underlying items visible. A metric no one can trace to named obligations, controls, decisions, and findings is decoration."
+      },
+      {
+        "type": "p",
+        "text": "Measured this way, governance stops being a claim and becomes a record. That is the whole argument of the Proof System: Decide clearly, Map completely, Run consistently, Prove with contemporaneous evidence, and Repair visibly. A programme that can show those five things, with its own numbers and baseline, needs no invented benchmark to be credible."
+      },
+      {
+        "type": "img",
+        "src": "/images/blog/compliance-governance-evidence-funnel.svg",
+        "alt": "The evidence funnel — obligations, controls, tests, evidence packs, assurance findings — with a note that no authoritative benchmark pass rate exists",
+        "caption": "No authoritative benchmark pass rate is published. Measure your own funnel — honestly, against your own baseline."
+      },
+      {
+        "type": "h2",
+        "text": "Part 11 — Common Mistakes"
+      },
+      {
+        "type": "p",
+        "text": "Good governance rarely fails in one dramatic moment. It fails in small, repeated shortcuts that look efficient at the time. These ten mistakes appear again and again in enterprise implementations. Each maps to a discipline in the Proof System: Decide, Map, Run, Prove, Repair."
+      },
+      {
+        "type": "p",
+        "text": "1. Approving in conversation, deciding nowhere. Why it happens: A steering meeting runs long, a senior leader nods, everyone leaves believing a decision was made. No owner, no date, no record. The fix: No decision counts until it is in the decision log with an owner, a date, and the rejected options. If it is not logged, it did not happen."
+      },
+      {
+        "type": "p",
+        "text": "2. Building an obligations register once, then never updating it. Why it happens: The register is treated as a kickoff artefact and filed. The fix: Assign a named owner for regulatory change. The CUBE Cost of Compliance Report 2026 found 61% of firms now embed regulatory change within a year, up from 26% in 2025 (CUBE, 4 November 2026). Review the register on a fixed cadence and after every material change."
+      },
+      {
+        "type": "p",
+        "text": "3. Writing controls no one can actually perform. Why it happens: Controls are copied from a framework or prior programme without testing them against real workloads and calendars. The fix: Walk each control through with the person who will perform it, using real data and a real deadline. If they cannot do it during month-end, rewrite the control."
+      },
+      {
+        "type": "p",
+        "text": "4. Treating segregation of duties as an org chart problem. Why it happens: Teams check job titles instead of system access. One person ends up able to create a supplier, approve a payment, and reconcile the account — under three roles. The fix: Test segregation at permission level. Run the conflict report from the system itself, before go-live and after every role change."
+      },
+      {
+        "type": "p",
+        "text": "5. Collecting evidence after the fact. Why it happens: The control ran, but nobody saved the proof. At audit time, the team reconstructs screenshots from memory. The fix: Evidence is part of the control. Define the artefact, format, and storage location at design time. If proof is not captured at performance, the control is incomplete."
+      },
+      {
+        "type": "p",
+        "text": "6. Letting exceptions become the process. Why it happens: A one-time override is granted under go-live pressure, then granted again. Within a month, the exception is how the work gets done. The fix: Every exception gets an expiry date, a compensating control, and an approver who is not the requester. Expired exceptions close automatically; renewal requires fresh justification."
+      },
+      {
+        "type": "p",
+        "text": "7. Confusing attendance with oversight. Why it happens: Forums meet, packs are presented, minutes are taken — but no decision is challenged and no action is closed. The fix: Judge a forum by its outputs: decisions made, risks accepted in writing, actions closed on time. Two cycles with none of those: redesign it or retire it."
+      },
+      {
+        "type": "p",
+        "text": "8. Hiding bad news until it is undeniable. Why it happens: Teams fear that raising a risk early will be read as failure. The Ethics & Compliance Initiative Global Business Ethics Survey 2023 found 28% of employees globally felt pressure to compromise workplace standards or the law (ECI GBES 2023, reported January 2024). The fix: Reward early escalation visibly. The first person to surface a problem should get help, not blame. Track time-to-escalation as a health measure."
+      },
+      {
+        "type": "p",
+        "text": "9. Auditing only at the end. Why it happens: Assurance is scheduled as a final gate, so problems surface when fixing them is most expensive. The fix: Use the Three Lines Model throughout delivery (Institute of Internal Auditors, July 2020): first line owns the control, second line challenges it during delivery, third line tests it independently — early enough to change the outcome."
+      },
+      {
+        "type": "p",
+        "text": "10. Closing findings on promises instead of proof. Why it happens: A remediation owner reports \"done,\" the tracker turns green, and nobody re-tests. The fix: A finding closes only when the corrected control has run, produced evidence, and been independently reviewed. A promise is a plan. Proof is a closure."
+      },
+      {
+        "type": "p",
+        "text": "None of these mistakes requires bad intent. Most come from capable people under time pressure with unclear decision rights. That is why governance has to be designed, not improvised."
+      },
+      {
+        "type": "h2",
+        "text": "Part 12 — Case Study: The Approval That Left No Trace (Hypothetical)"
+      },
+      {
+        "type": "p",
+        "text": "This case study is HYPOTHETICAL. The organisation, people, and events below are fictional, created to illustrate how a control failure develops and is repaired."
+      },
+      {
+        "type": "p",
+        "text": "Northbridge Foods is a fictional mid-size employer with about 2,400 employees across Ontario, Quebec, and three US states, implementing a new payroll platform with a phased go-live: Canada first, the United States eight weeks later."
+      },
+      {
+        "type": "p",
+        "text": "Two weeks before the Canadian go-live, parallel payroll testing surfaced a problem: a small group of salaried employees with mid-period transfers between provinces were calculating incorrectly. The vendor fix was due three weeks after go-live. The board faced a choice: delay, or go live with a manual workaround."
+      },
+      {
+        "type": "p",
+        "text": "In this hypothetical, the workaround was this: a payroll lead would review each transfer case, calculate an adjustment, and a second person would approve it before the pay run closed. The programme director said, \"We can live with that for one cycle.\" Everyone nodded. The meeting moved on."
+      },
+      {
+        "type": "p",
+        "text": "Nothing was written down. There was no decision log entry, no expiry date, no definition of \"one cycle,\" and no named approver pool."
+      },
+      {
+        "type": "p",
+        "text": "The first pay cycle worked. The second cycle, the usual approver was on leave. The payroll lead — under deadline, acting in good faith — entered the adjustment and approved it under a shared supervisor login kept active for emergencies. The third cycle, the vendor fix arrived, but nobody retired the workaround, so the manual process kept running alongside the corrected calculation for two employees. One was overpaid. One was underpaid."
+      },
+      {
+        "type": "p",
+        "text": "The issue did not surface through a control. It surfaced, in this hypothetical, through an anonymous tip to the ethics line from a payroll team member uncomfortable with the shared login. That matches the wider evidence: tips were the detection method in 43% of occupational fraud cases in the ACFE Occupational Fraud 2024 report (ACFE, March 2024), ahead of internal audit at 14% and management review at 13%. The same report found more than half of cases correlated with a lack of internal controls or management override of controls (ACFE, March 2024)."
+      },
+      {
+        "type": "p",
+        "text": "The investigation in this hypothetical confirmed no fraud and no intent to deceive. It found something more common: an approval that left no trace. No one could reconstruct who had approved what, under which authority, or when the workaround was supposed to end."
+      },
+      {
+        "type": "p",
+        "text": "Remediation followed the Proof System, step by step."
+      },
+      {
+        "type": "p",
+        "text": "Decide. The workaround decision was reconstructed, then re-made properly: written decision, named accountable executive, hard end date, and a rule that any extension required a new decision."
+      },
+      {
+        "type": "p",
+        "text": "Map. The manual adjustment was added to the control map as a temporary control, linked to the payroll accuracy obligation it protected, with the shared-login practice flagged as a segregation-of-duties conflict."
+      },
+      {
+        "type": "p",
+        "text": "Run. The shared login was disabled the same day. Adjustments required entry by one named person and approval by a different named person, inside the system."
+      },
+      {
+        "type": "p",
+        "text": "Prove. For the next three pay cycles, an evidence pack was assembled for every manual adjustment: the calculation, the approver, the timestamp, and a reconciliation to the corrected system output."
+      },
+      {
+        "type": "p",
+        "text": "Repair. The two incorrect payments were corrected, the affected employees were notified in plain language, and the workaround closed only after two consecutive clean cycles produced complete evidence. One standing rule was added: no go-live workaround exists unless it exists in the decision log."
+      },
+      {
+        "type": "p",
+        "text": "The lesson of this hypothetical is not that workarounds are wrong. A time-boxed workaround can be the right call. The failure was that a consequential decision lived only in a conversation — and the system relied on a tip, the most common detection route in the ACFE 2024 evidence, to find out."
+      },
+      {
+        "type": "h2",
+        "text": "Part 13 — Templates"
+      },
+      {
+        "type": "p",
+        "text": "Use these templates as starting structures. Adapt the fields to your obligations and systems — a template only helps if the fields are actually completed, owned, and reviewed."
+      },
+      {
+        "type": "h3",
+        "text": "Template 1: Obligations Register"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "Field — What to record",
+          "Obligation ID — Unique reference, e.g. OBL-001",
+          "Obligation title — Short name in plain language",
+          "Source — Statute, regulation, contract, policy, or standard",
+          "Source reference — Section, clause, or guideline paragraph",
+          "Jurisdiction — Country, province/state, or regulator",
+          "Effective date — Date the obligation takes effect",
+          "Owner — Named person accountable for this obligation",
+          "Applies to — Processes, populations, and systems in scope",
+          "Linked controls — Control IDs satisfying this obligation",
+          "Review cadence — How often the entry is re-checked",
+          "Last reviewed — Date and reviewer",
+          "Change trigger — Event forcing an out-of-cycle review",
+          "Status — Active, pending change, retired"
+        ]
+      },
+      {
+        "type": "h3",
+        "text": "Template 2: Control Library Entry"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "Field — What to record",
+          "Control ID — Unique reference, e.g. CTL-014",
+          "Control objective — Risk or obligation addressed",
+          "Control description — Exactly what is performed, in plain steps",
+          "Control type — Preventive or detective; manual, automated, or hybrid",
+          "Frequency — Per transaction, daily, per pay cycle, monthly, quarterly",
+          "Performer — Role and named backup",
+          "Approver / reviewer — Role; must differ from performer where segregation applies",
+          "System of record — Where the control is performed",
+          "Evidence produced — Artefact name, format, storage location",
+          "Linked obligation(s) — Obligation IDs from the register",
+          "Failure response — What happens when the control fails or is skipped",
+          "Last tested — Date, tester, and result",
+          "Status — Designed, operating, under remediation, retired"
+        ]
+      },
+      {
+        "type": "h3",
+        "text": "Template 3: RACI for Governance Decisions"
+      },
+      {
+        "type": "p",
+        "text": "R = Responsible (does the work), A = Accountable (owns the outcome, one per row), C = Consulted, I = Informed."
+      },
+      {
+        "type": "ul",
+        "items": [
+          "Decision — Delivery Lead",
+          "Approve go-live readiness — R",
+          "Accept a material residual risk — C",
+          "Grant a control exception — R",
+          "Retire a temporary workaround — R",
+          "Approve a regulatory change response — C",
+          "Close a high-severity finding — C",
+          "Approve segregation-of-duties conflict (time-boxed) — R"
+        ]
+      },
+      {
+        "type": "h3",
+        "text": "Template 4: Decision Log"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "Decision ID and date",
+          "Decision statement (one sentence, plain language)",
+          "Decision owner (named person, not a team)",
+          "Forum where decided",
+          "Options considered, including the rejected option and why",
+          "Evidence relied on",
+          "Risk accepted, if any, and who accepted it",
+          "Conditions and expiry date, if time-boxed",
+          "Actions created, with owners and due dates",
+          "Review or reversal trigger"
+        ]
+      },
+      {
+        "type": "h3",
+        "text": "Template 5: Evidence Pack Checklist"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "[ ] Control ID and period covered on the pack cover",
+          "[ ] Population defined, with source report and date",
+          "[ ] Sample selection method recorded, where sampling is used",
+          "[ ] Evidence artefact per item, unedited, from the system of record",
+          "[ ] Performer and approver identifiable per item",
+          "[ ] Timestamps visible and within the period",
+          "[ ] Exceptions listed separately, approvals attached",
+          "[ ] Reconciliation to an independent total, where applicable",
+          "[ ] Reviewer sign-off with date, separate from the performer",
+          "[ ] Storage location and retention period recorded"
+        ]
+      },
+      {
+        "type": "h3",
+        "text": "Template 6: Remediation Tracker"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "Field — What to record",
+          "Finding ID — Unique reference",
+          "Source — Audit, control test, incident, tip, self-identified",
+          "Severity — High, medium, low — with basis for the rating",
+          "Root cause — Process, access, training, design, or oversight",
+          "Agreed action — Specific correction, not a general intention",
+          "Owner — Named person",
+          "Due date — Original date, plus revised date with reason",
+          "Compensating control — What protects the process meanwhile",
+          "Evidence of completion — Artefact proving the fix ran",
+          "Independent verification — Who re-tested, and when",
+          "Status — Open, in progress, ready for verification, closed"
+        ]
+      },
+      {
+        "type": "h3",
+        "text": "Template 7: Governance Calendar"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "Weekly: delivery risk review; exception expiry check; new decisions logged.",
+          "Per pay cycle / per release: control evidence assembled; segregation-of-duties spot check.",
+          "Monthly: obligations register change review; remediation review, overdue items escalated; decision log quality check.",
+          "Quarterly: second-line control testing; access review for privileged roles; forum effectiveness review.",
+          "Semi-annually: scenario exercise for a critical operation failure; policy attestation refresh.",
+          "Annually: full obligations re-validation; framework alignment review; lessons-learned review."
+        ]
+      },
+      {
+        "type": "p",
+        "text": "A calendar only works if each item has an owner and an output. If an activity produces no decision, no evidence, and no closed action, question whether it should exist in its current form."
+      },
+      {
+        "type": "quiz",
+        "label": "Self-Check: Is Your Governance Producing Proof?",
+        "questions": [
+          {
+            "q": "A committee agrees a go-live workaround, but nothing is logged. Under the Proof System, what is the position?",
+            "options": [
+              {
+                "text": "It does not count until logged with an owner, date, and expiry",
+                "correct": true
+              },
+              {
+                "text": "The decision counts because senior people were present",
+                "correct": false
+              },
+              {
+                "text": "It counts if the minutes mention it",
+                "correct": false
+              }
+            ]
+          },
+          {
+            "q": "A control is performed every cycle, but no evidence is saved. How is it treated at review?",
+            "options": [
+              {
+                "text": "As operating, because the team can describe it",
+                "correct": false
+              },
+              {
+                "text": "As incomplete, because evidence is part of the control design",
+                "correct": true
+              },
+              {
+                "text": "As a minor documentation issue",
+                "correct": false
+              }
+            ]
+          },
+          {
+            "q": "An exception has been renewed three times without fresh justification. What should happen?",
+            "options": [
+              {
+                "text": "It closes; a new request needs justification and a compensating control",
+                "correct": true
+              },
+              {
+                "text": "It should continue, because renewal shows it is needed",
+                "correct": false
+              },
+              {
+                "text": "Ownership transfers to the delivery team",
+                "correct": false
+              }
+            ]
+          },
+          {
+            "q": "A remediation owner reports a high-severity finding as done. What is required before closure?",
+            "options": [
+              {
+                "text": "The owner's confirmation in the tracker",
+                "correct": false
+              },
+              {
+                "text": "A note from the programme manager",
+                "correct": false
+              },
+              {
+                "text": "The corrected control has run, produced evidence, and been independently reviewed",
+                "correct": true
+              }
+            ]
+          },
+          {
+            "q": "Which detection method accounted for the largest share of cases in the ACFE 2024 report?",
+            "options": [
+              {
+                "text": "External audit",
+                "correct": false
+              },
+              {
+                "text": "Tips, at 43% of cases",
+                "correct": true
+              },
+              {
+                "text": "Management review",
+                "correct": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Part 14 — Decision Framework"
+      },
+      {
+        "type": "p",
+        "text": "Governance design involves trade-offs, not absolutes. These three decisions come up on almost every enterprise implementation. Make them explicitly, record the reasoning in the decision log, and revisit them when scale or risk changes."
+      },
+      {
+        "type": "h3",
+        "text": "Centralise or federate?"
+      },
+      {
+        "type": "p",
+        "text": "Centralise governance when the obligation is the same everywhere, the cost of inconsistency is high, and scarce expertise needs consistent application. Payroll tax treatment, privacy obligations, financial controls, and access governance usually belong here. One interpretation, one control design, one evidence standard."
+      },
+      {
+        "type": "p",
+        "text": "Federate when local conditions genuinely differ — provincial or state requirements, language obligations, local calendars — and when local teams can own the control. Federation without capability is not empowerment. It is abdication."
+      },
+      {
+        "type": "p",
+        "text": "The test: if two sites answering the same question differently would create a compliance problem, centralise the decision and federate only the execution. If different answers are legitimate because obligations differ, federate the decision too, but require the same documentation format. In both models, the obligations register stays single and shared. Federated registers diverge silently."
+      },
+      {
+        "type": "h3",
+        "text": "When is a control worth its cost?"
+      },
+      {
+        "type": "p",
+        "text": "A control is worth its cost when the loss it prevents or the obligation it satisfies justifies the time to perform and prove it. Test it with four questions."
+      },
+      {
+        "type": "p",
+        "text": "First, what specific failure does it prevent or detect? If nobody can name the failure, the control is decoration. Second, what obligation does it map to? Unmapped controls are the first skipped under pressure. Third, what evidence does it produce, and who reads it? A detective control nobody reviews is cost with no benefit. Fourth, what happens when it fails? A control with no failure response fails quietly."
+      },
+      {
+        "type": "p",
+        "text": "Cost matters, counted honestly: performer time, approver time, delay, and evidence handling. The PwC Global Compliance Survey 2025 found 82% of companies plan to invest more in technology for compliance, and 75% reported using technology for compliance and transaction monitoring (PwC, 2025). Automation can cut a control's cost sharply — but automate the control as designed first. Automating a poorly designed control produces bad evidence faster."
+      },
+      {
+        "type": "p",
+        "text": "There is no authoritative universal benchmark for how much control is enough. Set the level against your own register and incident history."
+      },
+      {
+        "type": "h3",
+        "text": "Escalate or accept the risk?"
+      },
+      {
+        "type": "p",
+        "text": "Escalate when the risk exceeds the authority in the room, when the obligation is unclear, when the impact falls on people not represented in the decision, or when the same risk has recurred after a previous fix. Escalation is not failure. Late escalation is."
+      },
+      {
+        "type": "p",
+        "text": "Accept a risk only when four conditions are met: the risk is stated plainly, impact and likelihood are honestly assessed, a named person with sufficient authority accepts it in the decision log, and a review trigger is set. An accepted risk with no review trigger is a forgotten risk."
+      },
+      {
+        "type": "p",
+        "text": "If a team accepts the same risk repeatedly, the issue is a design flaw or resourcing gap. Escalate the pattern, not just the instance."
+      },
+      {
+        "type": "flip",
+        "label": "Governance Choices: Paper System or Proof System?",
+        "items": [
+          {
+            "front": "A decision made in a meeting and remembered",
+            "back": "Proof System: the decision is logged with an owner, a date, rejected options, and an expiry. If it is not logged, it did not happen."
+          },
+          {
+            "front": "A control described in a policy document",
+            "back": "Proof System: performed by a named person, on a defined cadence, producing evidence from the system of record."
+          },
+          {
+            "front": "An exception renewed because it has always been renewed",
+            "back": "Proof System: every exception expires. Renewal needs fresh justification, a compensating control, and an independent approver."
+          },
+          {
+            "front": "A finding closed when the owner says it is done",
+            "back": "Proof System: a finding closes when the corrected control has run, produced evidence, and been re-tested."
+          }
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Part 15 — Future Trends, With Sources Only"
+      },
+      {
+        "type": "p",
+        "text": "This section covers only developments with a verifiable source behind them. Where the evidence is thin, it says so."
+      },
+      {
+        "type": "p",
+        "text": "From adoption to assurance in regulatory technology. The CUBE Cost of Compliance Report 2026, surveying more than 2,000 senior practitioners across 11 countries including Canada, reported 61% of firms now embed regulatory change within a year, up from 26% in 2025, and 64% reported higher compliance costs, driven mainly by technology investment and AI governance (CUBE, 4 November 2026). The shift: less effort on finding change, more on proving it was embedded correctly. Evidence design matters more as change cycles shorten."
+      },
+      {
+        "type": "p",
+        "text": "Scenario testing becomes a dated expectation. OSFI Guideline E-21 on Operational Risk Management and Resilience, published 22 August 2024, sets a horizon under which scenario testing for all critical operations is to be complete by 1 September 2027 (OSFI, 22 August 2024). Programmes serving regulated entities will increasingly be asked to join scenario exercises, not just describe controls. Governance that produces evidence under exercise conditions becomes the differentiator."
+      },
+      {
+        "type": "p",
+        "text": "AI governance is standardising — in layers. NIST released the AI Risk Management Framework 1.0 on 26 January 2023 (Govern, Map, Measure, Manage) and the Generative AI Profile on 26 July 2024 (NIST, 2023 and 2024). ISO/IEC 42001:2023, published 18 December 2023, became the first certifiable AI management system standard (ISO/IEC, December 2023). Together they signal the direction: AI used inside delivery will be expected to sit inside a management system with named accountability. Start mapping AI use in delivery now, before a client or auditor asks for that map."
+      },
+      {
+        "type": "p",
+        "text": "Established compliance standards are being confirmed, not replaced. ISO 37301:2021, first published 13 April 2021, was systematically reviewed and confirmed in 2026 (ISO, confirmed 3 August 2026). The underlying model — obligations, controls, evidence, improvement — is stable. Programmes do not need a new framework each year. They need to operate the one they have chosen, and prove it."
+      },
+      {
+        "type": "p",
+        "text": "Where the evidence is thin. There is no reliable published evidence base yet for the effectiveness of specific AI governance controls in live implementations, for typical governance maturity in mid-size employers, or for standard control-failure rates in payroll and HR technology programmes. Vendors publish claims in all three areas; treat them as marketing until independent, dated, method-described research supports them. Build your own baseline instead: exception rate, evidence completeness, time-to-escalation."
+      },
+      {
+        "type": "h2",
+        "text": "Key Takeaways"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "Governance produces value only when it produces proof a third party can inspect.",
+          "The Proof System has five disciplines — Decide, Map, Run, Prove, Repair — and weakness in one weakens all.",
+          "No decision counts until logged with an owner, a date, and, where relevant, an expiry.",
+          "The obligations register is a living control, not a kickoff artefact; give it a named owner and review cadence.",
+          "Evidence is part of control design. If proof is not captured at performance, the control is incomplete.",
+          "Exceptions must expire. Renewal requires fresh justification, a compensating control, and an independent approver.",
+          "Tips detected 43% of occupational fraud cases (ACFE, 2024) — design speak-up routes as real controls.",
+          "Segregation of duties must be tested at system permission level, not by job title.",
+          "Findings close on re-tested proof, not promises.",
+          "No authoritative universal governance maturity benchmark exists — measure against your own obligations and baseline."
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "FAQ"
+      },
+      {
+        "type": "h3",
+        "text": "What is the difference between compliance and governance in an implementation?"
+      },
+      {
+        "type": "p",
+        "text": "Compliance is meeting the obligations that apply to you — statutory, regulatory, contractual, and policy requirements. Governance is the system of decision rights, oversight, and evidence that ensures those obligations are met consistently, and that someone can prove it. Compliance is the what. Governance is the how, the who, and the proof."
+      },
+      {
+        "type": "h3",
+        "text": "Where should a programme start if it has no governance structure at all?"
+      },
+      {
+        "type": "p",
+        "text": "Start with Decide and Map: a decision log, one forum with real authority, and the obligations register for in-scope processes. Those artefacts force the right conversations early and give later controls somewhere to attach."
+      },
+      {
+        "type": "h3",
+        "text": "How detailed does an obligations register need to be?"
+      },
+      {
+        "type": "p",
+        "text": "Detailed enough that each obligation links to at least one control, one owner, and one review date — one line per obligation, source reference recorded. Registers fail two ways: too high-level to be actionable, or too granular to maintain. Aim for actionable and maintained."
+      },
+      {
+        "type": "h3",
+        "text": "Who should own controls — the delivery team or a compliance function?"
+      },
+      {
+        "type": "p",
+        "text": "The delivery team owns performance — the first line in the Three Lines Model (Institute of Internal Auditors, July 2020). A compliance or risk function designs, challenges, and tests — the second line. Internal audit provides independent assurance — the third line. Blurring the first two lines is how controls get marked by the people who perform them."
+      },
+      {
+        "type": "h3",
+        "text": "How do we handle a control that cannot be performed as designed during go-live?"
+      },
+      {
+        "type": "p",
+        "text": "Use an exception, properly: document the deviation, name the approver, add a compensating control, set a short expiry date. Never perform a different control silently and record the original. The record has to describe reality."
+      },
+      {
+        "type": "h3",
+        "text": "What evidence is good enough for an auditor or regulator?"
+      },
+      {
+        "type": "p",
+        "text": "Evidence from the system of record, unedited, showing who performed the control, who approved it, and when — covering the full period, with exceptions visible rather than removed. Reconstructed evidence is weaker in every review."
+      },
+      {
+        "type": "h3",
+        "text": "How often should governance forums meet?"
+      },
+      {
+        "type": "p",
+        "text": "As often as decisions need making at that level — weekly for delivery risk forums, monthly for programme boards, quarterly for control testing reviews. Judge each forum by its outputs; one that makes no decisions should be redesigned or retired."
+      },
+      {
+        "type": "h3",
+        "text": "What is a compensating control?"
+      },
+      {
+        "type": "p",
+        "text": "A different control addressing the same risk while the primary control cannot operate. Example: if system-enforced approval is unavailable during a transition, a documented manual review of 100% of transactions by an independent person can compensate — for a defined, short period, with its own evidence."
+      },
+      {
+        "type": "h3",
+        "text": "How do privacy obligations fit into implementation governance?"
+      },
+      {
+        "type": "p",
+        "text": "As entries in the obligations register, with controls mapped like any other obligation. In Quebec, Law 25 has been fully in force since 22 September 2024, with administrative monetary penalties of up to $10 million CAD or 2% of worldwide turnover, whichever is greater (Government of Quebec / Commission d'accès à l'information, Law 25). Describe your practice; take interpretation questions to qualified legal counsel."
+      },
+      {
+        "type": "h3",
+        "text": "Should we adopt ISO 37301 or COSO as our framework?"
+      },
+      {
+        "type": "p",
+        "text": "Both are credible: ISO 37301:2021 is a certifiable compliance management system standard (ISO, 13 April 2021), and the COSO Internal Control — Integrated Framework (COSO, 2013) defines five components and 17 principles. Choose based on certification needs, what clients and regulators recognise, and what your team will actually operate. The framework matters less than whether its controls produce evidence."
+      },
+      {
+        "type": "h3",
+        "text": "How do we govern AI tools used inside the delivery programme itself?"
+      },
+      {
+        "type": "p",
+        "text": "Map them first: which tools, used for what, handling which data. Then apply a risk structure — the NIST AI Risk Management Framework functions of Govern, Map, Measure, and Manage (NIST, 26 January 2023) are a practical start, and ISO/IEC 42001:2023 provides a certifiable model (ISO/IEC, 18 December 2023). Name an accountable owner per use. Unmapped AI use is a governance gap."
+      },
+      {
+        "type": "h3",
+        "text": "How do we know if our governance is working?"
+      },
+      {
+        "type": "p",
+        "text": "Look at outputs over time: decisions logged with owners, exception expiry compliance, evidence completeness, time from finding to verified closure, and time-to-escalation. PMI Pulse of the Profession 2024 reported an average project performance rate of 73.8% (PMI, 2024) — delivery context, not a governance benchmark. None exists. Build your trend line from your own data."
+      },
+      {
+        "type": "h2",
+        "text": "References"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "Association of Certified Fraud Examiners (ACFE). *Occupational Fraud 2024: A Report to the Nations. March 2024.",
+          "OECD. *G20/OECD Principles of Corporate Governance 2023. Adopted by the OECD Council 8 June 2023; published 11 September 2023.",
+          "Office of the Superintendent of Financial Institutions (OSFI). *Guideline E-21: Operational Risk Management and Resilience. Final version published 22 August 2024.",
+          "Office of the Superintendent of Financial Institutions (OSFI). *Guideline B-13: Technology and Cyber Risk Management. Final version published 13 July 2022; effective 1 January 2024.",
+          "CUBE. *Cost of Compliance Report 2026. Published 4 November 2026.",
+          "PwC. *Global Compliance Survey 2025. 2025; Canada insights published 2 May 2025.",
+          "Ethics & Compliance Initiative (ECI). *Global Business Ethics Survey 2023. Reported January 2024.",
+          "International Organization for Standardization (ISO). *ISO 37301:2021 — Compliance management systems: Requirements with guidance for use. Published 13 April 2021; systematically reviewed and confirmed 2026 (3 August 2026).",
+          "Committee of Sponsoring Organizations of the Treadway Commission (COSO). *Internal Control — Integrated Framework. 2013.",
+          "Committee of Sponsoring Organizations of the Treadway Commission (COSO). *Enterprise Risk Management — Integrating with Strategy and Performance. 2017.",
+          "Institute of Internal Auditors (IIA). *The IIA's Three Lines Model. Published July 2020.",
+          "National Institute of Standards and Technology (NIST). *Artificial Intelligence Risk Management Framework (AI RMF 1.0), NIST AI 100-1. Released 26 January 2023.",
+          "National Institute of Standards and Technology (NIST). *Artificial Intelligence Risk Management Framework: Generative Artificial Intelligence Profile, NIST AI 600-1. Released 26 July 2024.",
+          "ISO/IEC. *ISO/IEC 42001:2023 — Artificial intelligence management system. Published 18 December 2023.",
+          "Government of Quebec / Commission d'accès à l'information (CAI). *Law 25 — An Act to modernize legislative provisions as regards the protection of personal information. Assented 22 September 2021; fully in force 22 September 2024.",
+          "Project Management Institute (PMI). *Pulse of the Profession 2024* (15th edition). 2024."
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "CTA"
+      },
+      {
+        "type": "p",
+        "text": "Put the templates to work this week: start the decision log, build the first page of your obligations register, and set expiry dates on every open exception."
+      },
+      {
+        "type": "p",
+        "text": "For the wider delivery system, read [The Complete Guide to HCM Implementation](/blog/complete-guide-hcm-implementation) and [Risk Management for Enterprise Implementations](/blog/risk-management-for-enterprise-implementations). Governance, risk, and delivery are one system. Proof connects them."
+      }
+    ]
+  },
+  {
     "slug": "core-hr-implementation-guide",
     "title": "Core HR Implementation: A Module Guide",
     "excerpt": "Design Core HR first: the employee record, structures, positions, lifecycle, security, and data standards every other module depends on.",
