@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="640" viewBox="0 0 1200 640" role="img" aria-label="The Core HR foundation: a central employee record surrounded by organisation structure, job architecture and positions, lifecycle events, security and privacy, and data standards, with downstream modules reading Core HR">
+  <defs>
+    <linearGradient id="hdr" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#0f172a"/>
+      <stop offset="1" stop-color="#1e3a5f"/>
+    </linearGradient>
+  </defs>
+  <rect x="0" y="0" width="1200" height="640" fill="#ffffff"/>
+  <rect x="0" y="0" width="1200" height="88" fill="url(#hdr)"/>
+  <text x="48" y="40" font-family="Georgia, serif" font-size="29" fill="#ffffff">Core HR: The Foundation Every Module Reads</text>
+  <text x="48" y="70" font-family="Arial, sans-serif" font-size="20" fill="#94A3B8">One employee record at the centre — five structures that keep it trustworthy</text>
+
+  <g>
+    <rect x="40" y="108" width="353" height="168" rx="12" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+    <text x="60" y="146" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="#1A202C">Organisation Structure</text>
+    <text x="60" y="180" font-family="Arial, sans-serif" font-size="20" fill="#475569">Legal entities, locations</text>
+    <text x="60" y="210" font-family="Arial, sans-serif" font-size="20" fill="#475569">and departments, designed</text>
+    <text x="60" y="240" font-family="Arial, sans-serif" font-size="20" fill="#475569">per country, each owned</text>
+  </g>
+  <g>
+    <rect x="413" y="108" width="353" height="168" rx="12" fill="#1e3a5f" stroke="#1e3a5f" stroke-width="2"/>
+    <text x="433" y="146" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="#ffffff">The Employee Record</text>
+    <text x="433" y="180" font-family="Arial, sans-serif" font-size="20" fill="#ffffff">The person model: who a</text>
+    <text x="433" y="210" font-family="Arial, sans-serif" font-size="20" fill="#ffffff">person is, their assignments,</text>
+    <text x="433" y="240" font-family="Arial, sans-serif" font-size="20" fill="#ffffff">one home for every fact</text>
+  </g>
+  <g>
+    <rect x="787" y="108" width="353" height="168" rx="12" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+    <text x="807" y="146" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="#1A202C">Jobs and Positions</text>
+    <text x="807" y="180" font-family="Arial, sans-serif" font-size="20" fill="#475569">Jobs describe the work;</text>
+    <text x="807" y="210" font-family="Arial, sans-serif" font-size="20" fill="#475569">positions are the approved</text>
+    <text x="807" y="240" font-family="Arial, sans-serif" font-size="20" fill="#475569">slots headcount counts</text>
+  </g>
+  <g>
+    <rect x="40" y="292" width="353" height="168" rx="12" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+    <text x="60" y="330" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="#1A202C">Lifecycle Events</text>
+    <text x="60" y="364" font-family="Arial, sans-serif" font-size="20" fill="#475569">Hire, transfer, promotion,</text>
+    <text x="60" y="394" font-family="Arial, sans-serif" font-size="20" fill="#475569">leave and termination as</text>
+    <text x="60" y="424" font-family="Arial, sans-serif" font-size="20" fill="#475569">dated, approved events</text>
+  </g>
+  <g>
+    <rect x="413" y="292" width="353" height="168" rx="12" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+    <text x="433" y="330" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="#1A202C">Security and Privacy</text>
+    <text x="433" y="364" font-family="Arial, sans-serif" font-size="20" fill="#475569">Roles follow real work;</text>
+    <text x="433" y="394" font-family="Arial, sans-serif" font-size="20" fill="#475569">access by purpose, with</text>
+    <text x="433" y="424" font-family="Arial, sans-serif" font-size="20" fill="#475569">an audit trail on change</text>
+  </g>
+  <g>
+    <rect x="787" y="292" width="353" height="168" rx="12" fill="#F0F4F8" stroke="#2B6CB0" stroke-width="2"/>
+    <text x="807" y="330" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="#1A202C">Data Standards</text>
+    <text x="807" y="364" font-family="Arial, sans-serif" font-size="20" fill="#475569">Naming, formats and</text>
+    <text x="807" y="394" font-family="Arial, sans-serif" font-size="20" fill="#475569">governed lists; effective</text>
+    <text x="807" y="424" font-family="Arial, sans-serif" font-size="20" fill="#475569">dating protects history</text>
+  </g>
+  <g>
+    <rect x="40" y="476" width="1100" height="88" rx="12" fill="#ffffff" stroke="#2B6CB0" stroke-width="2"/>
+    <text x="60" y="514" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="#1A202C">Downstream Modules Read Core HR</text>
+    <text x="60" y="546" font-family="Arial, sans-serif" font-size="20" fill="#475569">Payroll, time, recruiting, benefits and reporting consume this record.</text>
+    <text x="820" y="514" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#1A202C">If it is wrong here:</text>
+    <text x="820" y="546" font-family="Arial, sans-serif" font-size="20" fill="#64748B">It is wrong everywhere</text>
+  </g>
+  <text x="48" y="604" font-family="Arial, sans-serif" font-size="20" fill="#64748B">Errors in the foundation do not stay in the foundation — they propagate.</text>
+</svg>
