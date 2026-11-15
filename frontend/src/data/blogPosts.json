@@ -1,5 +1,286 @@
 [
   {
+    "slug": "core-hr-implementation-guide",
+    "title": "Core HR Implementation: A Module Guide",
+    "excerpt": "Design Core HR first: the employee record, structures, positions, lifecycle, security, and data standards every other module depends on.",
+    "publishedAt": "2026-11-15",
+    "readingTime": "8 min read",
+    "cover": "/images/blog/core-hr-implementation-guide-cover.webp",
+    "tags": [
+      "HCM",
+      "Implementation",
+      "Core HR",
+      "HR Technology"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "Every HCM programme has a module that other modules quietly depend on. Core HR holds the employee record: who a person is, where they sit in the organisation, and what job or position they hold. Payroll reads that record to pay correctly, time reads it to apply the right rules, recruiting reads it to open the right vacancy, and reporting reads it to answer leaders' questions. When Core HR is vague, every downstream module inherits the vagueness."
+      },
+      {
+        "type": "p",
+        "text": "This guide treats Core HR as a foundation module in its own right: the person model, organisation structure, job architecture and position management, lifecycle events, security, and data standards. It is the starting point of [the complete guide to HCM implementation](/blog/complete-guide-hcm-implementation), and it deserves to be designed and proven before anything is built on top of it."
+      },
+      {
+        "type": "h2",
+        "text": "One record that every module trusts"
+      },
+      {
+        "type": "p",
+        "text": "Core HR begins with a decision that sounds simple and is not: what is a person in this system? Organisations employ more kinds of people than the word employee suggests: permanent and temporary staff, contractors who need system access but not pay, secondees in two structures at once, and former employees whose records must stay readable for years. The person model defines each type, states which types become employment records, and explains how one person holds more than one assignment without becoming two records."
+      },
+      {
+        "type": "p",
+        "text": "The record itself then needs a clear centre. Each employment fact needs one agreed home, one format, and one owner. Where two modules claim the same fact, settle it during Core HR design, not payroll testing. That work belongs in discovery, alongside [requirements gathering for an HCM implementation](/blog/requirements-gathering-hcm-implementation): a requirement that never names the owning record will be configured twice and reconciled forever."
+      },
+      {
+        "type": "steps",
+        "label": "Implementing Core HR, in order",
+        "intro": "Five moves that turn a foundation module into a record the whole programme can build on.",
+        "items": [
+          {
+            "title": "Discover and decide the person model",
+            "text": "Define every person type the system must hold, which types become employment records, and how multiple assignments work. Record the decisions with owners before any structure is configured."
+          },
+          {
+            "title": "Design the structures",
+            "text": "Build the legal entity, location, and department hierarchy, then the job architecture and position rules that sit inside it. Test the design against awkward real cases, not only the standard chart."
+          },
+          {
+            "title": "Set data standards and load",
+            "text": "Agree naming, formats, effective dating, and history rules, assign an owner to each core field, and load foundation data early so downstream design works with real records."
+          },
+          {
+            "title": "Configure lifecycle and security",
+            "text": "Model hire, transfer, promotion, leave, and termination as dated events with approvals, and build roles that give each audience only the access its work requires."
+          },
+          {
+            "title": "Prove it downstream",
+            "text": "Run lifecycle scenarios end to end, then let payroll, time, recruiting, and reporting consume the records in their own testing. Core HR is ready when others can build on it without workarounds."
+          }
+        ]
+      },
+      {
+        "type": "img",
+        "src": "/images/blog/core-hr-implementation-guide-1.svg",
+        "alt": "Core HR foundation diagram: a central employee record and person model surrounded by organisation structure, job architecture and positions, lifecycle events, security and privacy, and data standards, with a base strip noting that payroll, time, recruiting, and reporting all read Core HR.",
+        "caption": "Core HR foundation: employee record, organisation structure, job architecture, lifecycle events, security, and data standards."
+      },
+      {
+        "type": "h2",
+        "text": "Structures and job architecture: entities, positions, and jobs"
+      },
+      {
+        "type": "p",
+        "text": "Above the person sits the organisation structure, reflecting legal and operational reality at the same time. Legal entities determine which organisation employs a person, which rules apply, and where obligations fall. Locations determine where work happens, which can differ from the employing entity. A structure that copies the reporting chart and ignores legal entities will fail the first time payroll or compliance reporting asks a legal question, so design each view deliberately, with a named owner."
+      },
+      {
+        "type": "p",
+        "text": "In a Canada and United States programme, this design is per country as well. Entity structures and employment categories differ between the two countries, and a blended structure serves neither well. Design the shared principles once, then let each country express them in its own entities and locations."
+      },
+      {
+        "type": "p",
+        "text": "Job architecture is the second structural decision, and position management is where programmes most often cut corners. A job is a reusable description of work: a title, a level, a family. A position is a specific, budgeted slot in a department and location, reporting to a named manager. Headcount is the count of approved positions, filled and vacant. Managing positions gains control of establishment, vacancies, and approvals at the cost of discipline: every hire, transfer, and restructure must create, move, or close a position properly."
+      },
+      {
+        "type": "h2",
+        "text": "Lifecycle events, security, and the standards that hold them"
+      },
+      {
+        "type": "p",
+        "text": "The record must model the full lifecycle as dated events: hire and rehire, transfer, promotion, changes to hours and terms, leave and return, secondment, and termination with its reason and final dates. Each event needs a definition, an approval path, and an effective date rule. A promotion payroll learns about late is a Core HR design gap presenting as someone else's error."
+      },
+      {
+        "type": "p",
+        "text": "Effective dating is the discipline underneath every event. Core HR must say what was true on a past date, what is true now, and what has been agreed for a future date, without overwriting history. Corrections and changes are different actions: one fixes a fact recorded wrongly, the other records a new truth from a stated date."
+      },
+      {
+        "type": "p",
+        "text": "Security, roles, and privacy decide who can see and change all of this, and they belong in the foundation design, not a late access exercise. Roles should follow real work: what a manager needs for their own team, what payroll needs to run a cycle, and what almost no one should see. Those boundaries connect directly to [data privacy in HR migrations](/blog/data-privacy-hr-migrations): design access around purpose, keep an audit trail, and test roles."
+      },
+      {
+        "type": "p",
+        "text": "Data standards and ownership keep the record coherent after the project team leaves. Agree naming conventions, formats, and governed lists for fields such as employment type and termination reason. Every core field needs an owner who can rule on disputes. Without ownership, each department invents its own spellings and codes, and reporting becomes translation work."
+      },
+      {
+        "type": "h2",
+        "text": "Downstream dependencies and what good enough means"
+      },
+      {
+        "type": "p",
+        "text": "Sequencing follows from dependency. Core HR is designed and built first because payroll, time, recruiting, benefits, and reporting all consume its structures and records, as the phase order in [the HCM implementation phases](/blog/hcm-implementation-phases) makes clear. A payroll build that starts before positions and entities are settled will be rebuilt. Building first is the cheapest point to settle arguments every other module would otherwise settle separately."
+      },
+      {
+        "type": "p",
+        "text": "Good enough to build on has a practical meaning. It does not require every historical record to be perfect or every rare person type to be modelled on day one. It requires stable, owned structures, a person model covering the populations in scope, lifecycle events that work for common and known awkward cases, tested security roles, and foundation data loaded and reconciled. Load it following [the HCM data migration guide](/blog/hcm-data-migration-guide): cleanse first, reconcile afterwards, and record every exception. What can safely wait is depth, not integrity: later phases can extend history and add populations to structures designed to be extended."
+      },
+      {
+        "type": "img",
+        "src": "/images/blog/core-hr-implementation-guide-2.svg",
+        "alt": "Core HR implementation sequence diagram: discover and decide, design structures, build and load, test lifecycles, then prove downstream, with a gate panel defining what good enough to build on means.",
+        "caption": "Implementation sequence: discover and decide, design structures, build and load, test lifecycles, prove downstream."
+      },
+      {
+        "type": "h2",
+        "text": "Testing Core HR on real lifecycles"
+      },
+      {
+        "type": "p",
+        "text": "Test Core HR the way the organisation will use it: as stories over time, not as isolated screens. Build scenarios that follow one person through hire, a change of hours, a promotion, a transfer, a period of leave, and a return, checking the record and history at each step. Add the awkward stories early: a rehire with a gap in service, a future-dated transfer then corrected, and a termination followed by a final pay adjustment. Each scenario should check effective-dated history explicitly."
+      },
+      {
+        "type": "p",
+        "text": "Security testing is part of the same pass. Sign in as each role, confirm it can do what it must, and try to see what it should not. Finally, hand the records to the downstream teams and let their testing be the verdict: if payroll, time, and reporting can consume Core HR without private spreadsheets and manual fixes, the foundation is holding."
+      },
+      {
+        "type": "h2",
+        "text": "Common mistakes"
+      },
+      {
+        "type": "p",
+        "text": "Most Core HR problems are foundation decisions made quickly, discovered slowly, and paid for by every module that followed."
+      },
+      {
+        "type": "accordion",
+        "label": "Core HR mistakes, as a diagnostic",
+        "items": [
+          {
+            "q": "Copying the reporting chart as the whole structure",
+            "a": "A chart of managers is not a legal or operational structure. If legal entities, locations, and cost centres are not designed in their own right, payroll and compliance reporting will ask legal questions the structure cannot answer."
+          },
+          {
+            "q": "Managing jobs where positions were promised",
+            "a": "Jobs describe work; positions control establishment, vacancies, and approvals. Promising position control and then configuring only jobs leaves headcount, budgeting, and recruiting without the slot each hire was approved against."
+          },
+          {
+            "q": "Letting history be overwritten",
+            "a": "Editing the past to fix the present destroys the ability to explain past pay and past reports. Separate corrections from changes, date every change, and keep the earlier truth readable."
+          },
+          {
+            "q": "Designing security after configuration",
+            "a": "Roles added at the end rarely match the data model built at the start. Design access with the structures, test each role against realistic cases, and audit who can see the most sensitive fields."
+          },
+          {
+            "q": "Starting payroll before the foundation settles",
+            "a": "Every unsettled entity, position rule, and lifecycle definition becomes payroll rework. Stabilise and load Core HR first, then let downstream builds consume records they can trust."
+          },
+          {
+            "q": "No owner for data standards",
+            "a": "Unowned fields drift: duplicate spellings, local codes, and free text where a governed list was needed. Name an owner for each core field and for each standard, with authority to rule on exceptions."
+          }
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Key Takeaways"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "Core HR is the foundation module: payroll, time, recruiting, and reporting all read the employee record.",
+          "Decide the person model first, including contractors, secondees, and people holding more than one assignment.",
+          "Design legal entities, locations, and departments deliberately, per country in a Canada and United States programme.",
+          "Separate jobs, positions, and headcount, and choose the position model consciously.",
+          "Model the lifecycle as dated events, protect history with effective dating, and build security and data ownership into the foundation."
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Frequently Asked Questions"
+      },
+      {
+        "type": "p",
+        "text": "What is the difference between a job and a position? A job is a reusable description of work. A position is a specific approved slot in a specific department and location, filled or vacant, and it is positions that control establishment, vacancies, and hiring approvals."
+      },
+      {
+        "type": "p",
+        "text": "Why must Core HR be built before payroll and time? Because those modules consume Core HR structures and records. Building downstream first means rebuilding when the foundation settles."
+      },
+      {
+        "type": "p",
+        "text": "What does effective dating actually protect? It protects the ability to explain the past. With effective dating, the system can show what was true on an earlier date, what is true now, and what is planned for the future. Without it, corrections overwrite history and past results cannot be reproduced."
+      },
+      {
+        "type": "p",
+        "text": "How much Core HR is enough before other modules start? Enough means stable, owned structures, a person model covering the populations in scope, working lifecycle events, tested security roles, and loaded, reconciled data."
+      },
+      {
+        "type": "h2",
+        "text": "Next Steps"
+      },
+      {
+        "type": "p",
+        "text": "Start with the decisions, not the configuration. Write the person model, the entity and location structure, and the position rules down, test them against your most awkward real cases, and get each one owned and agreed. Then set the data standards, load a reconciled foundation, and prove the lifecycle end to end before downstream builds begin."
+      },
+      {
+        "type": "quiz",
+        "label": "Check your understanding",
+        "questions": [
+          {
+            "q": "A programme configures jobs carefully but never creates positions, while its business case promises vacancy and headcount control. What is the problem?",
+            "options": [
+              {
+                "text": "None, because jobs and positions are two names for the same thing",
+                "correct": false,
+                "why": "Jobs describe reusable kinds of work. Positions are the specific approved slots that vacancy, establishment, and hiring approval controls act on, so the two are not interchangeable."
+              },
+              {
+                "text": "The foundation cannot deliver the promised control: without positions there is no approved slot to count, hold vacant, or hire against",
+                "correct": true,
+                "why": "Headcount and vacancy control operate on positions. A jobs-only model can describe work well and still leave budgeting, recruiting, and approvals with nothing concrete to control."
+              },
+              {
+                "text": "The programme should add positions only inside the recruiting module",
+                "correct": false,
+                "why": "Positions belong to the Core HR structure that every module reads. Creating them in one downstream module leaves payroll, reporting, and approvals working from a different structure."
+              }
+            ]
+          },
+          {
+            "q": "An HR user corrects a past transfer by overwriting the old department with the new one, so history now shows the person was always in the new team. What has been lost?",
+            "options": [
+              {
+                "text": "Nothing important, because the current record is now correct",
+                "correct": false,
+                "why": "The current fact may be right while the historical record is now wrong. Past reports and pay results that depended on the old department can no longer be explained or reproduced."
+              },
+              {
+                "text": "Only a small amount of storage efficiency",
+                "correct": false,
+                "why": "Storage is not the issue. The loss is evidential: the dated history that shows what was true at the time, and who changed it, has been replaced by a tidier fiction."
+              },
+              {
+                "text": "The effective-dated history: the system can no longer show what was true on a past date, so past outcomes cannot be explained",
+                "correct": true,
+                "why": "Corrections and changes are different actions. A change records a new truth from a stated date and keeps the earlier truth readable; overwriting merges the two and destroys the audit trail."
+              }
+            ]
+          },
+          {
+            "q": "Payroll design is ready to start, but legal entities are still disputed and foundation data has not been loaded. What should the programme do?",
+            "options": [
+              {
+                "text": "Start payroll anyway and let payroll settle the entity questions as they arise",
+                "correct": false,
+                "why": "Payroll would then settle a foundation question inside one module, and every other consumer of the structure would inherit or contest that settlement later, at rebuild cost."
+              },
+              {
+                "text": "Settle and own the entity structure, load and reconcile the foundation data, and only then build payroll on records it can trust",
+                "correct": true,
+                "why": "Sequencing follows dependency. Entities decide which rules apply to whom, and loaded, reconciled records give payroll something real to configure and test against."
+              },
+              {
+                "text": "Pause the whole programme until every historical record is perfect",
+                "correct": false,
+                "why": "Good enough to build on means integrity, not perfection. Stable structures, an agreed person model, working lifecycle events, and reconciled data are the gate; historical depth can follow."
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
     "slug": "service-transition-support-handoff",
     "title": "Service Transition: Handing Over to Support",
     "excerpt": "Hand an HCM implementation to support without losing control: readiness checks, the transition pack, shadowing, and signed acceptance.",
