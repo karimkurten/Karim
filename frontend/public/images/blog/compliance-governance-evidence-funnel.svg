@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-label="Evidence funnel from obligations to assurance findings">
+<rect width="1200" height="675" fill="#0f172a"/>
+<text x="600" y="52" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="30" font-weight="bold">The Evidence Funnel</text>
+<rect x="200" y="90" width="800" height="70" rx="10" fill="#1e3a5f" stroke="#60a5fa" stroke-width="2"/>
+<text x="600" y="132" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="20" font-weight="bold">OBLIGATIONS — everything the organisation must do</text>
+<rect x="280" y="185" width="640" height="70" rx="10" fill="#1e3a5f"/>
+<text x="600" y="227" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="20" font-weight="bold">CONTROLS — the ones designed to meet them</text>
+<rect x="360" y="280" width="480" height="70" rx="10" fill="#1e3a5f"/>
+<text x="600" y="322" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="20" font-weight="bold">TESTS — controls actually exercised</text>
+<rect x="440" y="375" width="320" height="70" rx="10" fill="#1e3a5f"/>
+<text x="600" y="417" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="20" font-weight="bold">EVIDENCE PACKS</text>
+<rect x="500" y="470" width="200" height="70" rx="10" fill="#2563eb"/>
+<text x="600" y="512" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="19" font-weight="bold">FINDINGS</text>
+<text x="600" y="585" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="17" font-weight="bold">Each stage is smaller than the one above it. The gaps between stages are the governance story.</text>
+<text x="600" y="625" text-anchor="middle" fill="#bfdbfe" font-family="Arial, sans-serif" font-size="16">No authoritative benchmark pass rate exists. Measure your own funnel — honestly, against your own baseline.</text>
+</svg>
