@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-label="Three Lines Model applied to an implementation">
+<rect width="1200" height="675" fill="#0f172a"/>
+<text x="600" y="52" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="30" font-weight="bold">The Three Lines Model in an Implementation</text>
+<rect x="150" y="76" width="900" height="64" rx="10" fill="#1e3a5f" stroke="#60a5fa" stroke-width="2"/>
+<text x="600" y="104" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="21" font-weight="bold">GOVERNING BODY — Steering Committee / Board Committee</text>
+<text x="600" y="128" text-anchor="middle" fill="#bfdbfe" font-family="Arial, sans-serif" font-size="16">Accountable for governance. Receives assurance. Owns risk appetite.</text>
+<rect x="60" y="180" width="330" height="250" rx="10" fill="#1e3a5f"/>
+<text x="225" y="220" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="20" font-weight="bold">FIRST LINE</text>
+<text x="225" y="252" text-anchor="middle" fill="#bfdbfe" font-family="Arial, sans-serif" font-size="16">Delivery team</text>
+<text x="225" y="292" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="15">Owns the risk and the controls</text>
+<text x="225" y="322" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="15">Runs controls in the workflow</text>
+<text x="225" y="352" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="15">Produces the evidence</text>
+<text x="225" y="382" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="15">Fixes what it finds</text>
+<rect x="435" y="180" width="330" height="250" rx="10" fill="#1e3a5f"/>
+<text x="600" y="220" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="20" font-weight="bold">SECOND LINE</text>
+<text x="600" y="252" text-anchor="middle" fill="#bfdbfe" font-family="Arial, sans-serif" font-size="16">Compliance · PMO · Risk</text>
+<text x="600" y="292" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="15">Sets the standards and methods</text>
+<text x="600" y="322" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="15">Challenges the first line</text>
+<text x="600" y="352" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="15">Monitors and tests controls</text>
+<text x="600" y="382" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="15">Escalates what is not fixed</text>
+<rect x="810" y="180" width="330" height="250" rx="10" fill="#1e3a5f"/>
+<text x="975" y="220" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="20" font-weight="bold">THIRD LINE</text>
+<text x="975" y="252" text-anchor="middle" fill="#bfdbfe" font-family="Arial, sans-serif" font-size="16">Independent assurance</text>
+<text x="975" y="292" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="15">Independent of delivery</text>
+<text x="975" y="322" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="15">Audits design and operation</text>
+<text x="975" y="352" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="15">Reports to the governing body</text>
+<text x="975" y="382" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="15">Never owns the fix</text>
+<text x="600" y="485" text-anchor="middle" fill="#93c5fd" font-family="Arial, sans-serif" font-size="17">First and second line roles may be blended or separated — independence of the third line may not.</text>
+<text x="600" y="525" text-anchor="middle" fill="#bfdbfe" font-family="Arial, sans-serif" font-size="16">After the Institute of Internal Auditors, The Three Lines Model (July 2020, glossary updated September 2024).</text>
+<text x="600" y="575" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="17" font-weight="bold">The test: who owns it, who challenges it, who independently proves it?</text>
+<text x="600" y="625" text-anchor="middle" fill="#bfdbfe" font-family="Arial, sans-serif" font-size="15">If one name answers all three, you do not have three lines. You have one hope.</text>
+</svg>
