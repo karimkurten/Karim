@@ -1,3 +1,4 @@
+CONTENT-BEGINS
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 import Header from '../components/Header';
@@ -485,6 +486,20 @@ export default function BlogPost() {
     ? contentBlocks
     : [...contentBlocks, { type: 'cta', text: DEFAULT_CTA_TEXT }];
 
+  // The inline promo banner belongs at the END of the first section — after
+  // its paragraphs have finished — never mid-section after the first
+  // paragraph. The first section is the opening heading's block group, or
+  // the intro paragraphs before the first heading when the article opens
+  // with body text.
+  const firstH2Idx = displayBlocks.findIndex((b) => b.type === 'h2');
+  let inlinePromoAfter = -1;
+  if (firstH2Idx === 0) {
+    const secondH2Idx = displayBlocks.findIndex((b, i) => i > 0 && b.type === 'h2');
+    inlinePromoAfter = secondH2Idx > 0 ? secondH2Idx - 1 : -1;
+  } else if (firstH2Idx > 0) {
+    inlinePromoAfter = firstH2Idx - 1;
+  }
+
   const postSchema = {
     '@context': 'https://schema.org',
     '@graph': [
@@ -595,7 +610,7 @@ export default function BlogPost() {
                 {displayBlocks.map((block, idx) => (
                   <React.Fragment key={`${post.slug}-block-${idx}`}>
                     <ContentBlock block={block} />
-                    {idx === 1 && <PayhipPromoBanner post={post} placement="inline" />}
+                    {idx === inlinePromoAfter && <PayhipPromoBanner post={post} placement="inline" />}
                   </React.Fragment>
                 ))}
               </div>
@@ -673,4 +688,5 @@ export default function BlogPost() {
     </>
   );
 }
+
 
