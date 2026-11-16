@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="640" viewBox="0 0 1200 640" role="img" aria-label="Task ownership and dependencies: the Core HR record triggers provisioning, forms, training, and manager and buddy tasks">
+  <defs>
+    <linearGradient id="hdr" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#0f172a"/>
+      <stop offset="1" stop-color="#1e3a5f"/>
+    </linearGradient>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#2B6CB0"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="1200" height="640" fill="#ffffff"/>
+  <rect x="0" y="0" width="1200" height="88" fill="url(#hdr)"/>
+  <text x="48" y="40" font-family="Georgia, serif" font-size="29" fill="#ffffff">One Record Triggers All Onboarding Work</text>
+  <text x="48" y="70" font-family="Arial, sans-serif" font-size="20" fill="#94A3B8">Core HR facts drive provisioning, forms, training and manager tasks</text>
+
+  <g>
+    <rect x="325" y="108" width="550" height="104" rx="12" fill="#1e3a5f" stroke="#1e3a5f" stroke-width="2"/>
+    <text x="600" y="146" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="#ffffff" text-anchor="middle">The Core HR Record</text>
+    <text x="600" y="180" font-family="Arial, sans-serif" font-size="20" fill="#ffffff" text-anchor="middle">Person — Position — Manager — Location — Start date</text>
+  </g>
+  <line x1="440" y1="212" x2="230" y2="248" stroke="#2B6CB0" stroke-width="2" marker-end="url(#arr)"/>
+  <line x1="540" y1="212" x2="500" y2="248" stroke="#2B6CB0" stroke-width="2" marker-end="url(#arr)"/>
+  <line x1="660" y1="212" x2="700" y2="248" stroke="#2B6CB0" stroke-width="2" marker-end="url(#arr)"/>
+  <line x1="760" y1="212" x2="970" y2="248" stroke="#2B6CB0" stroke-width="2" marker-end="url(#arr)"/>
+  <line x1="500" y1="212" x2="310" y2="432" stroke="#2B6CB0" stroke-width="2" marker-end="url(#arr)"/>
+
+  <g>
+    <rect x="40" y="252" width="353" height="168" rx="12" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+    <text x="60" y="290" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="#1A202C">Provisioning: IT</text>
+    <text x="60" y="324" font-family="Arial, sans-serif" font-size="20" fill="#475569">Accounts, devices and</text>
+    <text x="60" y="354" font-family="Arial, sans-serif" font-size="20" fill="#475569">application access from</text>
+    <text x="60" y="384" font-family="Arial, sans-serif" font-size="20" fill="#475569">position and location</text>
+  </g>
+  <g>
+    <rect x="413" y="252" width="353" height="168" rx="12" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+    <text x="433" y="290" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="#1A202C">Forms: HR</text>
+    <text x="433" y="324" font-family="Arial, sans-serif" font-size="20" fill="#475569">Eligibility steps, signed</text>
+    <text x="433" y="354" font-family="Arial, sans-serif" font-size="20" fill="#475569">documents and payroll</text>
+    <text x="433" y="384" font-family="Arial, sans-serif" font-size="20" fill="#475569">inputs verified complete</text>
+  </g>
+  <g>
+    <rect x="787" y="252" width="353" height="168" rx="12" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+    <text x="807" y="290" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="#1A202C">Training: New Hire</text>
+    <text x="807" y="324" font-family="Arial, sans-serif" font-size="20" fill="#475569">Required learning by</text>
+    <text x="807" y="354" font-family="Arial, sans-serif" font-size="20" fill="#475569">role, with due dates</text>
+    <text x="807" y="384" font-family="Arial, sans-serif" font-size="20" fill="#475569">set by horizon</text>
+  </g>
+
+  <g>
+    <rect x="40" y="436" width="540" height="88" rx="12" fill="#F0F4F8" stroke="#2B6CB0" stroke-width="2"/>
+    <text x="60" y="474" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="#1A202C">Manager and Buddy Tasks</text>
+    <text x="60" y="506" font-family="Arial, sans-serif" font-size="20" fill="#475569">Schedule, introductions, check-ins, orientation</text>
+  </g>
+  <g>
+    <rect x="600" y="436" width="540" height="88" rx="12" fill="#ffffff" stroke="#E2E8F0" stroke-width="2"/>
+    <text x="620" y="474" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="#1A202C">When Facts Change</text>
+    <text x="620" y="506" font-family="Arial, sans-serif" font-size="20" fill="#64748B">Cancel stale tasks, re-trigger, notify owners</text>
+  </g>
+  <text x="48" y="568" font-family="Arial, sans-serif" font-size="20" fill="#64748B">Moved start dates and changed managers are normal — the design must handle them cleanly.</text>
+  <text x="48" y="600" font-family="Arial, sans-serif" font-size="20" fill="#94A3B8">Provision from the record, never by re-keying facts from email.</text>
+</svg>
