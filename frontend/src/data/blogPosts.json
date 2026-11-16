@@ -1,5 +1,286 @@
 [
   {
+    "slug": "onboarding-module-implementation",
+    "title": "Onboarding Module Implementation",
+    "excerpt": "Implement onboarding as Core HR's first consumer: preboarding, day-one and 90-day tasks, owners, provisioning, and new-hire measurement.",
+    "publishedAt": "2026-11-16",
+    "readingTime": "8 min read",
+    "cover": "/images/blog/onboarding-module-implementation-cover.webp",
+    "tags": [
+      "HCM",
+      "Implementation",
+      "Onboarding",
+      "HR Technology"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "Onboarding is where a new hire first feels whether the organisation is ready for them. Behind that feeling sits a module with a practical job: turn an accepted offer into a complete, compliant, and equipped start. It sequences forms, documents, system access, equipment, training, and introductions across several weeks and several owners."
+      },
+      {
+        "type": "p",
+        "text": "This guide treats onboarding as a designed workflow, not a checklist added at the end of a programme. It covers preboarding, day one, and the first 90 days, task design by owner, provisioning dependencies, manager enablement, measurement, and testing."
+      },
+      {
+        "type": "h2",
+        "text": "The first downstream consumer of Core HR"
+      },
+      {
+        "type": "p",
+        "text": "Onboarding is the first downstream consumer of Core HR, and that dependency should shape the build order. The module does not create a person from nothing. It reads the hire record, confirms the position, manager, location, and start date, and then creates or activates the employment record every later process will use. If those foundation facts are unsettled, onboarding passes the uncertainty on to payroll, time, and provisioning in a more visible form."
+      },
+      {
+        "type": "p",
+        "text": "Design the handoff explicitly. Agree which fields arrive from recruiting, which the new hire supplies during preboarding, which HR verifies, and which must never be typed twice. This work follows directly from [the Core HR implementation guide](/blog/core-hr-implementation-guide): the person model, position rules, and effective dating agreed there are the inputs onboarding triggers from. Within [the complete guide to HCM implementation](/blog/complete-guide-hcm-implementation), onboarding is also the first module most employees ever touch, so its quality sets trust in the whole system."
+      },
+      {
+        "type": "steps",
+        "label": "Implementing onboarding, in order",
+        "intro": "Five moves that turn a task list into a reliable start for every new hire.",
+        "items": [
+          {
+            "title": "Map the journey by horizon",
+            "text": "Separate preboarding, day-one, first-week, and first-90-days work, and state what must be true at the end of each horizon. Keep urgent compliance and access work early and developmental work later."
+          },
+          {
+            "title": "Assign every task one owner",
+            "text": "Give each task to HR, the manager, IT, a buddy, or the new hire, with a trigger, a due rule, and an escalation path. A task owned by everyone is owned by no one."
+          },
+          {
+            "title": "Connect the dependencies",
+            "text": "Link each downstream step to the Core HR fact it needs: position for provisioning, location for equipment and rules, manager for approvals and introductions. Test what happens when a fact changes."
+          },
+          {
+            "title": "Enable managers and buddies",
+            "text": "Provide guides, reminders, and short training so managers complete their tasks well and on time. The module can assign work, but only enablement makes that work consistent."
+          },
+          {
+            "title": "Test realistic hires and measure",
+            "text": "Run standard, rehire, transfer, and cross-border scenarios end to end, fix the breaks, then track completion, timeliness, and new-hire experience after go-live."
+          }
+        ]
+      },
+      {
+        "type": "img",
+        "src": "/images/blog/onboarding-module-implementation-1.svg",
+        "alt": "Onboarding journey diagram: five stages from offer accepted through preboarding, day one, and the first week to the first 90 days, with the lead owner named at each stage and a strip showing the owners who act across the whole journey.",
+        "caption": "Onboarding journey: offer accepted, preboarding, day one, first week, and first 90 days, with owners at each stage."
+      },
+      {
+        "type": "h2",
+        "text": "Three horizons: preboarding, day one, and the first 90 days"
+      },
+      {
+        "type": "p",
+        "text": "Preboarding covers the period between offer acceptance and the first working day. Its purpose is to remove avoidable friction before the start date: personal details and banking information where the process requires them, signed documents, policy acknowledgements, and early introductions. Each form should exist because a legal, payroll, safety, or access need requires it then, not because collecting everything early feels tidy."
+      },
+      {
+        "type": "p",
+        "text": "Day one has a different purpose: belonging and basic capability. The new hire should be expected, met, equipped, and able to sign in. The first-week schedule should be visible in advance, the manager should be present in fact and not only in the plan, and introductions should connect the person to the team and to the buddy who will answer everyday questions. Essential access must be ready on day one."
+      },
+      {
+        "type": "p",
+        "text": "The first 90 days extend onboarding beyond logistics into performance and belonging: role training, later compliance steps, goal setting, scheduled check-ins, and feedback conversations. A better design keeps a light structure in place: tasks that surface at the right week, and a clear point where onboarding closes."
+      },
+      {
+        "type": "h2",
+        "text": "Designing tasks by owner: HR, manager, IT, buddy, and new hire"
+      },
+      {
+        "type": "p",
+        "text": "Every onboarding task needs five design decisions: the owner who completes it, the trigger that creates it, the due rule that times it, the evidence that proves it done, and the escalation that fires when it stalls."
+      },
+      {
+        "type": "p",
+        "text": "HR tasks carry verification and compliance: confirming eligibility documents and work authorisation steps at a practice level, checking forms, and validating payroll inputs. Manager tasks carry judgement and welcome: confirming role expectations, preparing the first-week schedule, assigning a buddy, and holding early check-ins. IT tasks carry provisioning: accounts, devices, and application access driven by the position, location, and manager held in Core HR. Buddy tasks carry orientation: introductions, team norms, and practical questions. New hire tasks carry supply and acknowledgement: providing information, reading policies, and completing required training."
+      },
+      {
+        "type": "p",
+        "text": "Forms and compliance steps deserve restraint and precision. Each document needs a named signer, a retention rule, and a stated consequence if it is incomplete on the start date. An account cannot be created correctly before the record exists, and equipment cannot be prepared before location and start date are firm. When a start date moves late, the design must say which tasks are cancelled, which are re-triggered, and who is notified."
+      },
+      {
+        "type": "img",
+        "src": "/images/blog/onboarding-module-implementation-2.svg",
+        "alt": "Onboarding dependency diagram: the Core HR record of person, position, manager, location, and start date triggering provisioning, forms, training, and manager and buddy tasks, with a panel covering what happens when the underlying facts change.",
+        "caption": "Task ownership and dependencies: the Core HR record triggers provisioning, forms, training, and manager tasks."
+      },
+      {
+        "type": "h2",
+        "text": "Manager enablement, measurement, and phased populations"
+      },
+      {
+        "type": "p",
+        "text": "Managers complete a large share of onboarding, yet they are often the least trained users of the module. Enablement should be practical and brief: what arrives, when it arrives, what good completion looks like, and where to get help. Where role training forms part of onboarding, connect task design to [a training needs analysis for HCM](/blog/training-needs-analysis-hcm) so required learning follows the role and its risks, rather than assigning every course to every hire."
+      },
+      {
+        "type": "p",
+        "text": "Measurement should cover both completion and experience. Completion measures whether tasks finish on time, and where they stall by owner group and location. Experience measures whether the new hire felt expected, equipped, and informed, gathered with a short survey or structured check-in near the end of the first week and again near day 30. Keep the two views together. The discipline in [HCM adoption metrics](/blog/hcm-adoption-metrics) applies directly: define each measure and review stalls as design signals."
+      },
+      {
+        "type": "p",
+        "text": "Finally, phase the population deliberately. Start with one or two well-understood hire types or locations, prove the workflow, then extend to more complex populations such as shift-based roles or additional countries. Each phase needs its own announcement and support plan, in the spirit of [a go-live communication plan](/blog/go-live-communication-plan)."
+      },
+      {
+        "type": "h2",
+        "text": "Testing with realistic hire scenarios"
+      },
+      {
+        "type": "p",
+        "text": "Test onboarding as complete hire stories, not as isolated tasks. A standard scenario follows one person from offer acceptance through preboarding, provisioning, day one, and the first 90 days. A rehire tests whether the prior record is found and reused correctly, and whether access is restored without duplicating the person. An internal transfer tests whether a shorter mover workflow serves better than treating an experienced employee as a new hire."
+      },
+      {
+        "type": "p",
+        "text": "Cross-border hiring between Canada and the United States needs its own scenarios at a practice level. Forms, document steps, payroll inputs, and statutory training differ by country and often by province or state, so a single blended workflow usually serves neither population well. Use shared principles with country-specific task sets, and test each set separately. Also test change itself: a start date that moves after provisioning has begun."
+      },
+      {
+        "type": "h2",
+        "text": "Common mistakes"
+      },
+      {
+        "type": "p",
+        "text": "Most onboarding problems are design decisions made quickly: tasks without owners, forms without purpose, and provisioning expected to succeed without its facts."
+      },
+      {
+        "type": "accordion",
+        "label": "Onboarding mistakes, as a diagnostic",
+        "items": [
+          {
+            "q": "One long checklist for every hire",
+            "a": "A single undifferentiated list ignores horizon, role, location, and country. Separate preboarding, day-one, and 90-day work, and vary task sets by population so each hire sees only what applies to them."
+          },
+          {
+            "q": "Tasks with no single owner",
+            "a": "Shared ownership produces stalls that no one escalates. Give every task one accountable owner, a trigger, a due rule, and a visible escalation path when the due date passes."
+          },
+          {
+            "q": "Collecting every form before day one",
+            "a": "Front-loading all paperwork overwhelms new hires and degrades data quality. Collect what compliance, payroll, and access genuinely need early, and sequence the rest across the first weeks."
+          },
+          {
+            "q": "Provisioning disconnected from Core HR",
+            "a": "Manual re-keying of position, manager, and location invites wrong access and late equipment. Drive provisioning from the Core HR record and define what happens when those facts change."
+          },
+          {
+            "q": "Managers assigned tasks but never enabled",
+            "a": "Assignment is not enablement. Without short guides, reminders, and examples of good completion, manager tasks vary by team and the new-hire experience varies with them."
+          },
+          {
+            "q": "Testing only the standard hire",
+            "a": "Rehires, transfers, withdrawn offers, and changed start dates are where workflows break. Test those stories before go-live, including separate Canada and United States task sets."
+          }
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Key Takeaways"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "Onboarding is the first downstream consumer of Core HR: it triggers from the person, position, manager, location, and start date held there.",
+          "Design by horizon: preboarding removes friction, day one delivers belonging and capability, and the first 90 days carry training, goals, and check-ins.",
+          "Every task needs one owner, one trigger, one due rule, proof of completion, and an escalation path.",
+          "Drive provisioning from the Core HR record, and design explicitly for late changes to start date, position, or manager.",
+          "Measure completion and experience together, phase populations deliberately, and test rehires, transfers, and cross-border hires before go-live."
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Frequently Asked Questions"
+      },
+      {
+        "type": "p",
+        "text": "What belongs in preboarding, and what should wait? Only what the start genuinely depends on: identity and payroll inputs, signed offer documents, essential policy acknowledgements, and information provisioning needs early. Role training and goal setting wait for the first weeks, when the new hire has context for them."
+      },
+      {
+        "type": "p",
+        "text": "Who should own onboarding: HR or the hiring manager? Both own different parts. HR owns verification, compliance steps, and workflow integrity. The manager owns welcome, role clarity, the first-week schedule, and check-ins. IT owns provisioning, the buddy owns orientation, and the new hire owns supplying information and completing learning."
+      },
+      {
+        "type": "p",
+        "text": "How is an internal transfer different from a new hire in the system? A transfer already has a record, history, and usually some access. Treating the person as a new hire duplicates records and repeats irrelevant forms. Use a shorter mover workflow instead: introductions, changed access, role training, and handover tasks."
+      },
+      {
+        "type": "p",
+        "text": "When is onboarding ready to go live? When realistic scenarios pass end to end: a standard hire, a rehire, a transfer, a changed start date, and separate Canada and United States hires, each producing the right tasks for the right owners."
+      },
+      {
+        "type": "h2",
+        "text": "Next Steps"
+      },
+      {
+        "type": "p",
+        "text": "Start with the journey on one page. List the tasks for each horizon, assign each to one owner with its trigger and due rule, and mark every dependency on Core HR beside it. Then enable managers with short guides, build the scenario set including rehire, transfer, and cross-border cases, and agree the measures before the first cohort starts."
+      },
+      {
+        "type": "quiz",
+        "label": "Check your understanding",
+        "questions": [
+          {
+            "q": "Provisioning repeatedly gives new hires the wrong application access, and IT re-keys position and manager details from emails to fix it. What is the design problem?",
+            "options": [
+              {
+                "text": "IT needs a longer email template with more detail",
+                "correct": false,
+                "why": "More detail in an email does not fix a broken dependency. The facts already exist in Core HR, and re-keying them will keep producing transcription errors however careful the template is."
+              },
+              {
+                "text": "Provisioning is disconnected from the Core HR record it should be driven by, so position, manager, and location are copied instead of consumed",
+                "correct": true,
+                "why": "Access follows position, manager, and location. Driving provisioning from the single Core HR record, with defined handling for late changes, removes the copy step where the errors enter."
+              },
+              {
+                "text": "New hires should request their own access after starting",
+                "correct": false,
+                "why": "Self-requests after day one guarantee a slow start and inconsistent access. Essential access should be provisioned from the record before the start date, with role changes handled as exceptions."
+              }
+            ]
+          },
+          {
+            "q": "A programme assigns every onboarding task jointly to HR and the hiring manager so nothing is missed. Completion stalls and no one escalates. Why?",
+            "options": [
+              {
+                "text": "Joint ownership diffuses accountability: with two owners, neither the trigger, the due rule, nor the escalation has a single person responsible for acting",
+                "correct": true,
+                "why": "Tasks complete reliably when one owner is accountable, even when others contribute. Split the work into separate HR and manager tasks, each with its own due rule and escalation."
+              },
+              {
+                "text": "The tasks were probably too long and should be shortened",
+                "correct": false,
+                "why": "Length can matter, but it does not explain missing escalation. The stall pattern here follows the ownership design: a task owned by everyone is owned by no one."
+              },
+              {
+                "text": "Managers need more reminder emails about the shared list",
+                "correct": false,
+                "why": "Reminders cannot substitute for accountability. More messages about an unowned task usually produce more ignoring, not more completion."
+              }
+            ]
+          },
+          {
+            "q": "Testing covered the standard full-time hire thoroughly, and go-live is next week. Rehires, transfers, and hires in the other country were left for later. What should the programme do?",
+            "options": [
+              {
+                "text": "Go live anyway, because the standard hire is the majority case",
+                "correct": false,
+                "why": "The untested cases are exactly where duplicate records, wrong task sets, and wrong country steps appear. A majority case passing does not make the minority cases safe."
+              },
+              {
+                "text": "Treat transfers as new hires to keep one simple workflow",
+                "correct": false,
+                "why": "Transfers already hold a record and history. Forcing them through a new-hire workflow duplicates records and repeats irrelevant forms instead of using a shorter mover workflow."
+              },
+              {
+                "text": "Test rehire, transfer, changed start date, and separate Canada and United States scenarios before go-live, and phase populations if fixes need time",
+                "correct": true,
+                "why": "These stories exercise record reuse, mover tasks, change handling, and country-specific steps. Phasing lets the proven populations start while complex cases are fixed properly."
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
     "slug": "complete-guide-compliance-governance-enterprise-implementations",
     "title": "The Complete Guide to Compliance and Governance for Enterprise Implementations",
     "excerpt": "Build governance that produces proof: verified ACFE, OECD and OSFI evidence, the Proof System framework, an 8-step method, 12 risks, and templates.",
