@@ -40,8 +40,8 @@ export default function AboutPage() {
   return (
     <>
       <SEO
-        title="About Karim Chaouki — HCM Implementation Consultant"
-        description="Karim Chaouki is a Toronto-based senior implementation consultant for HCM and payroll systems — PMP certified, bilingual EN/FR, 22+ years in delivery."
+        title="About Karim Chaouki — Bilingual Implementation Manager"
+        description="Karim Chaouki is a bilingual implementation manager at Fiserv, leading complex client implementations and conversions — PMP certified, bilingual EN/FR, 22+ years in delivery."
         canonical="/about"
         ogImage="https://www.karimchaouki.com/images/karim-chaouki.jpg"
         schema={schema}
@@ -65,8 +65,9 @@ export default function AboutPage() {
                   About Karim Chaouki
                 </h1>
                 <p className="text-xl text-blue-200 leading-relaxed mb-6">
-                  Senior Implementation Consultant specializing in AML compliance, ADP Workforce Now HCM, and
-                  payroll systems for Canadian financial institutions. 22+ years delivering complex
+                  Bilingual Implementation Manager at Fiserv, leading complex, high-priority client
+                  implementations and conversions. Specialized in AML compliance, HCM and payroll
+                  systems for Canadian financial institutions. 22+ years delivering complex
                   projects that other teams couldn't finish.
                 </p>
                 <div className="flex flex-wrap gap-3">
@@ -79,7 +80,7 @@ export default function AboutPage() {
               <div className="flex justify-center md:justify-end">
                 <img
                   src="/images/karim-chaouki.jpg"
-                  alt="Karim Chaouki — Senior Implementation Consultant, AML and ADP Workforce Now Specialist, Toronto Canada"
+                  alt="Karim Chaouki — Bilingual Implementation Manager at Fiserv, Toronto Canada"
                   className="w-48 h-48 md:w-56 md:h-56 rounded-2xl object-cover border-4 border-white/20 shadow-2xl"
                   width="224"
                   height="224"
@@ -252,4 +253,5 @@ export default function AboutPage() {
     </>
   );
 }
+
 
