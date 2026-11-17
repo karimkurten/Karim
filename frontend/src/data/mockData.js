@@ -16,7 +16,7 @@ export const personalInfo = {
     { lang: "Arabic", level: "Native" },
   ],
   summary:
-    "Strategic Project and Program Manager with 7+ years of progressive experience in HCM software implementation, multi-project portfolio management, and cross-border client onboarding. Currently leading complex, high-priority client implementations and conversions at Fiserv, delivering payment solutions for enterprise clients across Canada and the United States.",
+    "I lead complex client implementations from first plan to stable go-live — the kind of projects where the technology is only half the challenge, and the other half is getting every stakeholder, vendor, and client team moving in the same direction.\n\nAs a Bilingual Implementation Manager at Fiserv (Mississauga), I run high-priority client implementations and conversions for large, technical payment-solution deployments. I build the project plans, coordinate product, engineering, sales, and vendor teams, and stay accountable for milestones, quality, and the client's experience through delivery and transition to ongoing service.\n\nBefore Fiserv, I spent three years in ADP Canada's Center of Excellence leading enterprise HCM implementations across Canada and the United States — 50+ clients delivered with a 100% on-time record. Structured delivery discipline is what moved those numbers: client satisfaction up 20%, setup errors down 30%, system accuracy at 98%. I also mentored 15+ implementation consultants, because a methodology that only lives in one person's head is a risk, not a process.\n\nMy foundation is financial services. At Laurentian Bank I worked in the Financial Intelligence Unit on AML/KYC analytical frameworks supporting FINTRAC audits, after several years leading bilingual client service teams. That background is why risk management is built into how I run projects rather than bolted on — I hold PMI's PMP and RMP certifications, plus CSM and a Financial Intelligence Specialist designation.\n\nI work fluently in English and French, including full project governance in French for Quebec-based stakeholders, and I am a native Arabic speaker.\n\nThe work I am best positioned for: complex, multi-stakeholder implementations and conversions in payments, financial services, and enterprise software — programs where delivery risk is real, clients are demanding, and \"on time\" has to mean something.",
 };
 
 const getClientsServed = () => {
@@ -71,6 +71,11 @@ export const differentiators = [
 
 export const expertise = [
   {
+    name: "Implementation & Delivery",
+    icon: "zap",
+    items: ["Implementation Management", "Project Management", "Client Onboarding"],
+  },
+  {
     name: "HCM & HRIS",
     icon: "users",
     items: ["ADP Workforce Now", "System Configuration", "Client Onboarding"],
@@ -124,7 +129,9 @@ export const experience = [
       "Develop, coordinate, and execute project plans, task schedules, and resource activities to ensure on-time delivery and quality outcomes",
       "Coordinate cross-functional teams across product, engineering, sales, and vendor partners to deliver custom technical solutions",
       "Identify opportunities to streamline procedures and improve product efficiency through process changes and technical solutions",
+      "Interface with internal departments, clients, sales, and vendors to align solutions and communicate services clearly",
       "Ensure adherence to project methodologies, delivery processes, and implementation management standards, resolving issues independently and escalating only the most complex matters",
+      "Deliver in English and French for clients across Canada",
     ],
   },
   {
@@ -134,11 +141,12 @@ export const experience = [
     period: "06/2023 – 10/2026",
     location: "Toronto, ON",
     achievements: [
-      "Lead HCM implementation projects specializing in complex cross-border deployments for enterprise clients across Canada and the US",
-      "Managed end-to-end implementation of ADP Workforce Now HCM suite for 50+ clients with 100% on-time completion rate",
-      "Achieved 20% improvement in client satisfaction scores through structured implementation methodology",
+      "Led enterprise HCM implementation projects in ADP's Center of Excellence, specializing in complex cross-border deployments for clients across Canada and the United States — end to end, from requirements and configuration through testing, go-live, and stabilization",
+      "Implemented the Workforce Now HCM suite for 50+ enterprise clients with a 100% on-time completion rate",
+      "Improved client satisfaction scores by 20% through a structured implementation methodology",
       "Reduced setup errors by 30% and improved system accuracy to 98%",
       "Mentored 15+ new implementation consultants, accelerating ramp-up time by 25%",
+      "Ran bilingual (English/French) delivery and governance for clients with Quebec operations and national footprints",
     ],
   },
   {
@@ -337,4 +345,5 @@ export const navLinks = [
   { label: "Testimonials", href: "#testimonials" },
   { label: "Contact", href: "#contact" },
 ];
+
 
