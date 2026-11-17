@@ -5,7 +5,7 @@ import { ChevronDown, HelpCircle } from 'lucide-react';
 const faqData = [
   {
     question: "What is Karim Chaouki's expertise?",
-    answer: "Karim Chaouki specializes in HCM and ERP software implementation, with deep expertise in ADP Workforce Now, cross-border US/Canada payroll systems, and enterprise transformation projects. He holds PMP, RMP, and Scrum Master certifications and has successfully delivered 50+ enterprise implementations with 100% on-time delivery."
+    answer: "Karim Chaouki specializes in HCM and ERP software implementation, with deep expertise in ADP Workforce Now, cross-border US/Canada payroll systems, and enterprise transformation projects. He holds PMP, RMP, and Scrum Master certifications and has successfully delivered 102 enterprise implementations with 100% on-time delivery."
   },
   {
     question: "What certifications does Karim hold?",
@@ -111,3 +111,4 @@ const FAQ = () => {
 };
 
 export default FAQ;
+
