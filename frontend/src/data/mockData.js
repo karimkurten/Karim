@@ -117,7 +117,7 @@ export const experience = [
     company: "Fiserv",
     subtitle: "Client Implementations & Conversions",
     role: "Bilingual Implementation Manager",
-    period: "2026 – Present",
+    period: "10/2026 – Present",
     location: "Mississauga, ON",
     achievements: [
       "Lead complex, high-priority client implementations and conversions for large, technical payment-solution deployments, from initiation to closure",
@@ -131,7 +131,7 @@ export const experience = [
     company: "ADP Canada",
     subtitle: "Center of Excellence",
     role: "Senior Project Implementation Consultant",
-    period: "2023 – 2026",
+    period: "06/2023 – 10/2026",
     location: "Toronto, ON",
     achievements: [
       "Lead HCM implementation projects specializing in complex cross-border deployments for enterprise clients across Canada and the US",
@@ -145,7 +145,7 @@ export const experience = [
     company: "Laurentian Bank",
     subtitle: "Financial Intelligence Unit",
     role: "Analyst, Financial Intelligence Unit",
-    period: "2022 – 2023",
+    period: "03/2022 – 06/2023",
     location: "Toronto, ON",
     achievements: [
       "Led implementation of new analytical frameworks for AML/KYC compliance, increasing detection by 30%",
@@ -157,7 +157,7 @@ export const experience = [
     company: "Laurentian Bank",
     subtitle: "Customer Service",
     role: "Bilingual Senior Customer Service Officer",
-    period: "2018 – 2022",
+    period: "12/2018 – 03/2022",
     location: "Toronto, ON",
     achievements: [
       "Contributed to 15% increase in customer retention rates maintaining 95% client satisfaction",
@@ -169,7 +169,7 @@ export const experience = [
     company: "Akalee",
     subtitle: "Project Management",
     role: "Project Coordinator",
-    period: "2017 – 2018",
+    period: "09/2017 – 11/2018",
     location: "Casablanca, Morocco",
     achievements: [
       "Achieved 100% project deadline adherence rate across multiple concurrent initiatives",
@@ -181,7 +181,7 @@ export const experience = [
     company: "Société Générale",
     subtitle: "Banking Operations",
     role: "Customer Relationship Manager",
-    period: "2001 – 2015",
+    period: "10/2001 – 02/2015",
     location: "Casablanca, Morocco",
     achievements: [
       "Recognized as Employee of the Year (2007) achieving 300% of acquisition targets",
