@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="640" viewBox="0 0 1200 640" role="img" aria-label="Offboarding dependency diagram: the employment record triggering access closure, final pay, asset return, handover, and records work">
+  <defs>
+    <linearGradient id="hdr" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#0f172a"/>
+      <stop offset="1" stop-color="#1e3a5f"/>
+    </linearGradient>
+  </defs>
+  <rect x="0" y="0" width="1200" height="640" fill="#ffffff"/>
+  <rect x="0" y="0" width="1200" height="88" fill="url(#hdr)"/>
+  <text x="48" y="40" font-family="Georgia, serif" font-size="29" fill="#ffffff">One Record Triggers Every Exit Task</text>
+  <text x="48" y="70" font-family="Arial, sans-serif" font-size="20" fill="#94A3B8">The employment record is the source — owners act from it, not from email</text>
+  <g>
+    <rect x="400" y="116" width="400" height="150" rx="12" fill="#F0F4F8" stroke="#2B6CB0" stroke-width="2"/>
+    <text x="424" y="150" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#1A202C">Employment Record</text>
+    <text x="424" y="182" font-family="Arial, sans-serif" font-size="16" fill="#475569">Person — Position — Manager</text>
+    <text x="424" y="208" font-family="Arial, sans-serif" font-size="16" fill="#475569">Location — Last Working Day</text>
+    <text x="424" y="234" font-family="Arial, sans-serif" font-size="16" fill="#475569">Exit type, in agreed broad categories</text>
+  </g>
+  <g>
+    <rect x="40" y="306" width="256" height="150" rx="12" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+    <text x="60" y="338" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#1A202C">Access and Assets</text>
+    <text x="60" y="366" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="#2B6CB0">Owner: IT</text>
+    <text x="60" y="394" font-family="Arial, sans-serif" font-size="16" fill="#475569">Close accounts at the</text>
+    <text x="60" y="418" font-family="Arial, sans-serif" font-size="16" fill="#475569">agreed time; recover</text>
+    <text x="60" y="442" font-family="Arial, sans-serif" font-size="16" fill="#475569">devices and badge.</text>
+  </g>
+  <g>
+    <rect x="316" y="306" width="256" height="150" rx="12" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+    <text x="336" y="338" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#1A202C">Final Pay Inputs</text>
+    <text x="336" y="366" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="#2B6CB0">Owner: Payroll</text>
+    <text x="336" y="394" font-family="Arial, sans-serif" font-size="16" fill="#475569">Pre-exit pay check;</text>
+    <text x="336" y="418" font-family="Arial, sans-serif" font-size="16" fill="#475569">correct cycle, dates,</text>
+    <text x="336" y="442" font-family="Arial, sans-serif" font-size="16" fill="#475569">balances, deductions.</text>
+  </g>
+  <g>
+    <rect x="592" y="306" width="256" height="150" rx="12" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+    <text x="612" y="338" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#1A202C">Handover</text>
+    <text x="612" y="366" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="#2B6CB0">Owner: Manager, Employee</text>
+    <text x="612" y="394" font-family="Arial, sans-serif" font-size="16" fill="#475569">Owned work moves to</text>
+    <text x="612" y="418" font-family="Arial, sans-serif" font-size="16" fill="#475569">named cover; receiver</text>
+    <text x="612" y="442" font-family="Arial, sans-serif" font-size="16" fill="#475569">confirms acceptance.</text>
+  </g>
+  <g>
+    <rect x="868" y="306" width="272" height="150" rx="12" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+    <text x="888" y="338" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#1A202C">Records and Retention</text>
+    <text x="888" y="366" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="#2B6CB0">Owner: HR</text>
+    <text x="888" y="394" font-family="Arial, sans-serif" font-size="16" fill="#475569">Close with correct</text>
+    <text x="888" y="418" font-family="Arial, sans-serif" font-size="16" fill="#475569">status and dates; retain</text>
+    <text x="888" y="442" font-family="Arial, sans-serif" font-size="16" fill="#475569">as policy defines.</text>
+  </g>
+  <rect x="40" y="488" width="1100" height="72" rx="12" fill="#ffffff" stroke="#E2E8F0" stroke-width="2"/>
+  <text x="64" y="520" font-family="Arial, sans-serif" font-size="17" font-weight="bold" fill="#1A202C">When the facts change, the tasks re-time</text>
+  <text x="64" y="546" font-family="Arial, sans-serif" font-size="16" fill="#64748B">A moved last day re-times access, assets, and pay — and every affected owner is notified.</text>
+  <text x="40" y="600" font-family="Arial, sans-serif" font-size="14" fill="#94A3B8">Figure 2 — Task ownership and dependencies</text>
+</svg>
