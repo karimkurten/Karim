@@ -170,7 +170,7 @@ export default function AboutPage() {
               <div className="space-y-4">
                 {[
                   { number: '22+', label: 'Years of experience' },
-                  { number: '20+', label: 'Implementations delivered' },
+                  { number: '102', label: 'Implementations delivered' },
                   { number: '3', label: 'Languages: EN, FR, AR' },
                   { number: '100%', label: 'On-time delivery rate' },
                 ].map((s) => (
@@ -269,6 +269,7 @@ export default function AboutPage() {
     </>
   );
 }
+
 
 
 
