@@ -97,25 +97,41 @@ export default function AboutPage() {
             <div className="md:col-span-2 prose max-w-none">
               <h2 className="text-3xl font-bold text-slate-900 mb-4">My Background</h2>
               <p className="text-slate-600 leading-relaxed mb-4">
-                For over 12 years, I've worked at the intersection of technology implementation and
-                regulatory compliance in Canada's financial services sector. My career has been defined
-                by one consistent challenge: taking complex, high-stakes projects that span multiple
-                systems, multiple provinces, and multiple regulatory frameworks — and delivering them
-                on time.
+                I lead complex client implementations from first plan to stable go-live — the kind
+                of projects where the technology is only half the challenge, and the other half is
+                getting every stakeholder, vendor, and client team moving in the same direction.
               </p>
               <p className="text-slate-600 leading-relaxed mb-4">
-                I started in project management and quickly specialized in two areas where the stakes
-                are highest: <strong className="text-slate-800">AML compliance programs</strong> and
-                <strong className="text-slate-800"> HCM/payroll system implementations</strong>. These
-                aren't glamorous disciplines — but they're mission-critical. A payroll error affects every
-                employee. An AML gap can result in regulatory sanctions. There's no room for "good enough."
+                As a Bilingual Implementation Manager at Fiserv (Mississauga), I run high-priority
+                client implementations and conversions for large, technical payment-solution
+                deployments. I build the project plans, coordinate product, engineering, sales, and
+                vendor teams, and stay accountable for milestones, quality, and the client's
+                experience through delivery and transition to ongoing service.
+              </p>
+              <p className="text-slate-600 leading-relaxed mb-4">
+                Before Fiserv, I spent three years in ADP Canada's Center of Excellence leading
+                enterprise HCM implementations across Canada and the United States — 50+ clients
+                delivered with a 100% on-time record. Structured delivery discipline is what moved
+                those numbers: client satisfaction up 20%, setup errors down 30%, system accuracy
+                at 98%. I also mentored 15+ implementation consultants, because a methodology that
+                only lives in one person's head is a risk, not a process.
+              </p>
+              <p className="text-slate-600 leading-relaxed mb-4">
+                My foundation is financial services. At Laurentian Bank I worked in the Financial
+                Intelligence Unit on AML/KYC analytical frameworks supporting FINTRAC audits, after
+                several years leading bilingual client service teams. That background is why risk
+                management is built into how I run projects rather than bolted on — I hold PMI's PMP
+                and RMP certifications, plus CSM and a Financial Intelligence Specialist designation.
+              </p>
+              <p className="text-slate-600 leading-relaxed mb-4">
+                I work fluently in English and French, including full project governance in French
+                for Quebec-based stakeholders, and I am a native Arabic speaker.
               </p>
               <p className="text-slate-600 leading-relaxed mb-8">
-                My bilingual (English/French) capability has made me a particularly valuable partner for
-                Canadian organizations operating across provincial boundaries — especially those with
-                Quebec operations, federal mandates, or Official Languages Act obligations. I've run
-                full project governance in French for Quebec-based clients and seamlessly managed
-                bilingual steering committees for national organizations.
+                The work I am best positioned for: complex, multi-stakeholder implementations and
+                conversions in payments, financial services, and enterprise software — programs
+                where delivery risk is real, clients are demanding, and "on time" has to mean
+                something.
               </p>
 
               <h3 className="text-xl font-bold text-slate-900 mb-3">My Approach</h3>
@@ -253,5 +269,6 @@ export default function AboutPage() {
     </>
   );
 }
+
 
 
