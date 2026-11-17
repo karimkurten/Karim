@@ -110,7 +110,7 @@ export default function AboutPage() {
               </p>
               <p className="text-slate-600 leading-relaxed mb-4">
                 Before Fiserv, I spent three years in ADP Canada's Center of Excellence leading
-                enterprise HCM implementations across Canada and the United States — 50+ clients
+                enterprise HCM implementations across Canada and the United States — 102 clients
                 delivered with a 100% on-time record. Structured delivery discipline is what moved
                 those numbers: client satisfaction up 20%, setup errors down 30%, system accuracy
                 at 98%. I also mentored 15+ implementation consultants, because a methodology that
@@ -269,6 +269,7 @@ export default function AboutPage() {
     </>
   );
 }
+
 
 
 
