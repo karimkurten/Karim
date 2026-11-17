@@ -30,7 +30,7 @@ const schema = {
       },
       {
         q: 'Can you handle cross-border US/Canada ADP Workforce Now deployments?',
-        a: 'Yes. Cross-border US/Canada implementations are my deepest specialty. I have managed 50+ such projects with 100% on-time delivery, including US payroll tax (federal/state/local), I-9 compliance, multi-state reciprocity, and integration between US and Canadian Workforce Now tenants.',
+        a: 'Yes. Cross-border US/Canada implementations are my deepest specialty. I have managed 102 such projects with 100% on-time delivery, including US payroll tax (federal/state/local), I-9 compliance, multi-state reciprocity, and integration between US and Canadian Workforce Now tenants.',
       },
       {
         q: 'How long does an ADP Workforce Now implementation take?',
@@ -71,7 +71,7 @@ const faqs = [
   },
   {
     q: 'What about cross-border US/Canada implementations?',
-    a: 'Cross-border US/Canada deployments are my deepest specialty. I have led 50+ such projects from ADP\'s Center of Excellence with 100% on-time delivery. This includes US federal/state/local payroll tax, I-9 compliance, multi-state reciprocity, and dual-country tenant configurations.',
+    a: 'Cross-border US/Canada deployments are my deepest specialty. I have led 102 such projects from ADP\'s Center of Excellence with 100% on-time delivery. This includes US federal/state/local payroll tax, I-9 compliance, multi-state reciprocity, and dual-country tenant configurations.',
   },
   {
     q: 'Can you rescue a troubled ADP Workforce Now implementation?',
@@ -294,4 +294,5 @@ export default function ServiceADPWorkforceNow() {
     </>
   );
 }
+
 
