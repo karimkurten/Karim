@@ -22,7 +22,7 @@ const schema = {
     buildFAQSchema([
       {
         q: 'What ADP Workforce Now modules do you implement?',
-        a: 'I implement the full ADP Workforce Now suite: Payroll (Canadian and US), HR Management, Benefits Administration, Time & Attendance, Talent (Recruitment, Performance, Compensation), Onboarding, Reporting, and ADP Marketplace integrations. I have led 50+ enterprise rollouts from ADP\'s Center of Excellence.',
+        a: 'I implement the full ADP Workforce Now suite: Payroll (Canadian and US), HR Management, Benefits Administration, Time & Attendance, Talent (Recruitment, Performance, Compensation), Onboarding, Reporting, and ADP Marketplace integrations. I have led 102 enterprise rollouts from ADP\'s Center of Excellence.',
       },
       {
         q: 'Are you familiar with Canadian payroll requirements in ADP Workforce Now?',
@@ -138,7 +138,7 @@ export default function ServiceADPWorkforceNow() {
                 As a <strong className="text-slate-800">senior ADP Workforce Now implementation consultant</strong>{' '}
                 currently leading projects in ADP&apos;s Center of Excellence, I bring project management
                 discipline and deep functional knowledge to every phase of your Workforce Now journey. I&apos;ve
-                delivered 50+ enterprise deployments across US and Canadian financial institutions, healthcare
+                delivered 102 enterprise deployments across US and Canadian financial institutions, healthcare
                 networks, manufacturing, and cross-border organizations — with a 100% on-time go-live record.
               </p>
               <p className="text-slate-600 leading-relaxed mb-8">
@@ -294,3 +294,4 @@ export default function ServiceADPWorkforceNow() {
     </>
   );
 }
+
