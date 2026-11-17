@@ -20,17 +20,11 @@ export const personalInfo = {
 };
 
 const getClientsServed = () => {
-  const baseValue = 100;
-  const startDate = new Date('2026-09-25T00:00:00-04:00');
-  const now = new Date();
-
-  const startYear = startDate.getFullYear();
-  const startMonth = startDate.getMonth();
-  const nowYear = now.getFullYear();
-  const nowMonth = now.getMonth();
-
-  const monthsElapsed = (nowYear - startYear) * 12 + (nowMonth - startMonth);
-  return Math.max(baseValue, baseValue + monthsElapsed);
+  // Frozen at 102 on Karim's instruction (2026-11-16) — the 102 delivered
+  // cross-border projects (each counted once, spanning US and Canada).
+  // Previously auto-incremented monthly from a base of 100 (Sep 2026);
+  // update this constant manually when the figure changes.
+  return 102;
 };
 
 export const stats = [
@@ -345,6 +339,7 @@ export const navLinks = [
   { label: "Testimonials", href: "#testimonials" },
   { label: "Contact", href: "#contact" },
 ];
+
 
 
 
