@@ -1,5 +1,286 @@
 [
   {
+    "slug": "offboarding-workflow-implementation",
+    "title": "Offboarding Workflow Implementation",
+    "excerpt": "Implement offboarding as a controlled exit: notice to final day, access removal, asset return, final pay inputs, handover, and record closure.",
+    "publishedAt": "2026-11-17",
+    "readingTime": "8 min read",
+    "cover": "/images/blog/offboarding-workflow-implementation-cover.webp",
+    "tags": [
+      "HCM",
+      "Implementation",
+      "Offboarding",
+      "HR Technology"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "Offboarding is where an organisation shows whether its controls work when someone leaves. Behind a respectful final day sits a workflow with a demanding job: turn a notice or an end of assignment into a complete, controlled exit. It sequences handover, final pay inputs, asset return, access removal, and record closure across a short window and several owners, with no second chance to ask the person who has gone."
+      },
+      {
+        "type": "p",
+        "text": "This guide treats offboarding as a designed workflow, not a leaving checklist. It covers the journey from notice to closure, task design by owner, timing, final pay, records, and testing."
+      },
+      {
+        "type": "h2",
+        "text": "The last workflow that touches the employment record"
+      },
+      {
+        "type": "p",
+        "text": "Offboarding is the last workflow that touches the employment record, and that position should shape the build order. It reads the person, position, manager, location, and terms held in Core HR, confirms the last working day and reason category at a practice level, and then closes the record every connected process depends on. If those facts are vague, payroll, access, and reporting inherit the vagueness in a more serious form."
+      },
+      {
+        "type": "p",
+        "text": "Design the closure explicitly. Agree which fields the manager confirms, which HR verifies, and which the departing employee supplies. This follows directly from [the Core HR implementation guide](/blog/core-hr-implementation-guide): the person model, effective dating, and termination-date rules agreed there are the inputs offboarding acts on. It also mirrors [onboarding module implementation](/blog/onboarding-module-implementation): entry created the record and access carefully, and exit should unwind each just as carefully."
+      },
+      {
+        "type": "steps",
+        "label": "Implementing offboarding, in order",
+        "intro": "Five moves that turn a leaving checklist into a controlled, respectful exit.",
+        "items": [
+          {
+            "title": "Map the journey by timing",
+            "text": "Separate notice, handover window, final day, first days after exit, and closure, and state what must be true at the end of each stage. Put access and pay decisions on explicit dates, not on habit."
+          },
+          {
+            "title": "Assign every task one owner",
+            "text": "Give each task to HR, the manager, IT, payroll, or the departing employee, with a trigger, a timing rule, and an escalation path. A task owned by everyone is owned by no one."
+          },
+          {
+            "title": "Connect the dependencies",
+            "text": "Link each step to the Core HR fact it needs: last day for access closure, position for successor cover, location for asset return and local rules. Test what happens when the last day moves."
+          },
+          {
+            "title": "Plan handover before the final week",
+            "text": "Capture owned work, open items, key contacts, and where knowledge lives while the person is still present. Handover written on the last day is usually a summary, not a transfer."
+          },
+          {
+            "title": "Test realistic exits and measure",
+            "text": "Run voluntary, involuntary at a practice level, retirement, end-of-contract, and rehire-eligible scenarios end to end, fix the breaks, then track on-time access closure and final-pay accuracy after go-live."
+          }
+        ]
+      },
+      {
+        "type": "img",
+        "src": "/images/blog/offboarding-workflow-implementation-1.svg",
+        "alt": "Offboarding journey diagram: five stages from notice received through the handover window and final day to access closed and record closed, with the lead owner named at each stage and a strip showing that every stage reads the employment record.",
+        "caption": "Offboarding journey: notice received, handover window, final day, access closed, and record closed, with owners at each stage."
+      },
+      {
+        "type": "h2",
+        "text": "Three stages: notice, the handover window, and closure"
+      },
+      {
+        "type": "p",
+        "text": "The notice stage begins when an exit becomes known: a resignation, a retirement date, an end of contract, or a decision the organisation has made. Its purpose is confirmation. Confirm the last working day, the type of exit in broad agreed categories, any notice arrangement at a practice level, and who needs to know now versus later. Each early task should exist because timing depends on it."
+      },
+      {
+        "type": "p",
+        "text": "The handover window is where most of the real work happens, and it is usually short. The departing employee documents owned work, open commitments, recurring duties, and key relationships. The manager confirms cover for each item, naming a person rather than a team. HR confirms final pay inputs and any documents the exit requires. IT prepares the access closure list from the systems the role actually used, which is rarely only the main account."
+      },
+      {
+        "type": "p",
+        "text": "Closure extends beyond the final day. Access closes at the agreed time, assets are received or followed up, final pay is processed in the correct cycle, and the record is closed with the correct dates and status. A short post-exit check confirms nothing is still open simply because nobody looked. Closure also sets up the future: rehire eligibility as the organisation defines it, how references are handled, and how the record is retained."
+      },
+      {
+        "type": "h2",
+        "text": "Designing tasks by owner: HR, manager, IT, payroll, and the departing employee"
+      },
+      {
+        "type": "p",
+        "text": "Every offboarding task needs five design decisions: the owner, the trigger, the timing rule, the evidence that proves it done, and the escalation that fires when it stalls. Exits make timing harder than entries, because the anchor date can move and some tasks must happen at an exact moment, not by a general deadline."
+      },
+      {
+        "type": "p",
+        "text": "HR tasks carry verification and coordination: confirming dates and exit category, checking documents, and holding the closure list. Manager tasks carry continuity: confirming handover quality, naming cover, and communicating changes at the right time. IT tasks carry access and assets: closing accounts at the agreed time, recovering devices and badges, and confirming closure rather than assuming it. Payroll tasks carry final pay inputs: last-day accuracy, balances and deductions as confirmed rules define them, and the correct pay cycle. Departing employee tasks carry supply and return: handover notes, returned property, and information only the person holds."
+      },
+      {
+        "type": "p",
+        "text": "Access removal deserves precision. Build the closure list from the position, the systems the person used, and any elevated permissions they held, not from a generic template alone. Define the exact timing: too early and the person cannot finish handover work; too late and access outlives employment. When a last day moves, the design must say which tasks re-time automatically and who is notified."
+      },
+      {
+        "type": "img",
+        "src": "/images/blog/offboarding-workflow-implementation-2.svg",
+        "alt": "Offboarding dependency diagram: the employment record of person, position, manager, location, and last working day triggering access and asset closure, final pay inputs, handover, and records and retention work, with a panel covering what happens when the last day moves.",
+        "caption": "Task ownership and dependencies: the employment record triggers access closure, final pay, asset return, handover, and records work."
+      },
+      {
+        "type": "h2",
+        "text": "Handover, final pay, records, and privacy"
+      },
+      {
+        "type": "p",
+        "text": "Handover is the part of offboarding most often described and least often verified. A useful standard is simple: for each owned item, a named successor can find the status, the next action, and the key contacts without asking the departed employee. That connects exit design to [knowledge transfer planning for implementations](/blog/knowledge-transfer-planning): knowledge moves when it is structured, owned, and checked, not when a document is merely filed. Where a whole role moves to a new owner, the discipline in [service transition and support handoff](/blog/service-transition-support-handoff) applies at a smaller scale: acceptance by the receiver matters more than completion claimed by the sender."
+      },
+      {
+        "type": "p",
+        "text": "Final pay is where date accuracy becomes money. The last working day, the pay cycle, and the treatment of balances and deductions depend on facts that must be confirmed before the person leaves, because correcting them afterwards is slower and more visible. Design a pre-exit pay check as its own task with its own owner, run early enough to fix errors while people are still available. Local rules vary, so the system should encode the organisation's confirmed rules rather than improvise case by case."
+      },
+      {
+        "type": "p",
+        "text": "Records and privacy close the workflow. The closed record needs the correct status, dates, and reason category, retained for the period policy and local requirements define, with access limited to those who need it. Personal data should not linger in shared drives and side spreadsheets assembled during the exit. The principles in [data privacy in HR migrations](/blog/data-privacy-hr-migrations) apply here too: share only what the exit genuinely needs, and clean up working copies at closure."
+      },
+      {
+        "type": "h2",
+        "text": "Testing with realistic exit scenarios"
+      },
+      {
+        "type": "p",
+        "text": "Test offboarding as complete exit stories, not isolated tasks. A standard voluntary scenario follows one person from notice through handover, final day, access closure, final pay, and record closure. A short-notice scenario tests whether the work compresses safely when the window is days, not weeks. An end-of-contract scenario tests whether dates agreed long in advance trigger the workflow without relying on memory."
+      },
+      {
+        "type": "p",
+        "text": "Other scenarios expose different breaks. A retirement tests long-service records and knowledge held by one person for years. A moved last day, after access closure has been scheduled, tests re-timing and notification. A rehire scenario confirms a correctly closed record can be reused as the organisation defines it, without resurrecting old access by accident. Cross-border exits between Canada and the United States need their own scenarios: final pay timing, documents, and retention differ, so a blended workflow usually serves neither population well."
+      },
+      {
+        "type": "h2",
+        "text": "Common mistakes"
+      },
+      {
+        "type": "p",
+        "text": "Most offboarding problems are quick design decisions: access closed on habit, handover claimed rather than checked, and final pay errors left for the last cycle to reveal."
+      },
+      {
+        "type": "accordion",
+        "label": "Offboarding mistakes, as a diagnostic",
+        "items": [
+          {
+            "q": "One generic checklist for every exit",
+            "a": "A resignation, a retirement, and an end of contract share some tasks but differ in timing, documents, and sensitivity. Vary task sets by exit type and population so each exit gets the steps it needs and no extra ones."
+          },
+          {
+            "q": "Access closed by habit, not by rule",
+            "a": "Closing access at a customary time instead of the agreed last-day rule either blocks handover work or leaves access open after employment ends. Define the timing per system group and confirm closure explicitly."
+          },
+          {
+            "q": "Handover claimed, never checked",
+            "a": "A filed handover document proves a document exists, not that a successor can act. Require the named receiver to confirm they can find status, next actions, and contacts before the final day."
+          },
+          {
+            "q": "Final pay checked in the final cycle",
+            "a": "Errors found in the last pay run have no slack left to fix them. Run a pre-exit pay check with its own owner early enough to correct dates, balances, and deductions while people are still available."
+          },
+          {
+            "q": "The manager informed but never tasked",
+            "a": "Managers hold handover quality, team communication, and cover decisions. If the workflow only notifies them, continuity depends on memory. Give managers owned tasks with timing rules and escalation."
+          },
+          {
+            "q": "Testing only the standard resignation",
+            "a": "Short notice, moved last days, retirements, and cross-border exits are where workflows break. Test those stories before go-live, including what happens when a closed record later needs to support a rehire."
+          }
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Key Takeaways"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "Offboarding is the last workflow to touch the employment record: it acts on the person, position, manager, and dates in Core HR.",
+          "Design by stage: notice confirms the facts, the handover window moves work, and closure proves access, pay, assets, and record complete.",
+          "Every task needs one owner, one trigger, one timing rule, proof of completion, and an escalation.",
+          "Time access closure from the last-day rule, check final pay before the final cycle, and require handover acceptance by a named receiver.",
+          "Retain the closed record correctly, clean up working copies of personal data, and test short-notice and cross-border exits before go-live."
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Frequently Asked Questions"
+      },
+      {
+        "type": "p",
+        "text": "When should access actually be closed? At the time the agreed rule sets, tied to the last working day and exit type — not at a customary hour. Handover access stays open until the final day's work is done, and closure is then confirmed system by system."
+      },
+      {
+        "type": "p",
+        "text": "Who should own offboarding: HR or the manager? Both own different parts. HR owns verification and the closure list. The manager owns handover quality, cover, and team communication. IT owns access and assets, payroll owns final pay, and the departing employee owns handover notes and returns."
+      },
+      {
+        "type": "p",
+        "text": "How is a rehire handled after a record has been closed? A correctly closed record keeps accurate dates, status, and history, so a later rehire can reuse the person record as the organisation defines it. Access is never restored automatically: new access follows the new position."
+      },
+      {
+        "type": "p",
+        "text": "When is offboarding ready to go live? When realistic scenarios pass end to end: a standard resignation, a short-notice exit, a retirement, an end of contract, and a moved last day, each producing the right tasks, access timing, and pay cycle."
+      },
+      {
+        "type": "h2",
+        "text": "Next Steps"
+      },
+      {
+        "type": "p",
+        "text": "Start with the journey on one page. List the tasks for each stage, assign each to one owner with its trigger and timing rule, and mark every dependency on the employment record beside it. Then build the access list from real role usage, add the pre-exit pay check, require receiver-confirmed handover, and agree the scenario set before the first real exit uses the workflow."
+      },
+      {
+        "type": "quiz",
+        "label": "Check your understanding",
+        "questions": [
+          {
+            "q": "Access for departing employees is closed every Friday afternoon, whatever day people actually leave. Handover work is blocked for some and access stays open for days for others. What is the design problem?",
+            "options": [
+              {
+                "text": "Friday is simply the wrong day and a different fixed day would fix it",
+                "correct": false,
+                "why": "Any fixed day has the same flaw. The problem is that closure is timed by habit rather than by each person's agreed last day and exit type."
+              },
+              {
+                "text": "Access closure is timed by habit instead of the last-day rule, so it is early for some exits and late for others",
+                "correct": true,
+                "why": "Access should close at the time the rule sets for that exit, tied to the confirmed last working day, with closure confirmed per system group rather than assumed."
+              },
+              {
+                "text": "Departing employees should close their own access on their last day",
+                "correct": false,
+                "why": "Self-closure is not a control. IT owns closure, verifies it, and confirms it, because the organisation cannot rely on the person leaving to remove their own permissions."
+              }
+            ]
+          },
+          {
+            "q": "A handover document was filed before the final day, so the exit was marked complete. Two weeks later the successor cannot find the status of three open items. What went wrong?",
+            "options": [
+              {
+                "text": "The document was probably too short and should have been longer",
+                "correct": false,
+                "why": "Length does not prove transfer. A longer document the receiver never tested would leave the same gap, only better hidden."
+              },
+              {
+                "text": "The successor should have asked more questions before the person left",
+                "correct": false,
+                "why": "Questions help, but the workflow set no acceptance standard. Relying on a successor to know what to ask, with no structured check, is the design gap."
+              },
+              {
+                "text": "Handover was claimed by the sender instead of accepted by the receiver, so filing was treated as proof of transfer",
+                "correct": true,
+                "why": "Handover is complete when a named receiver confirms they can find status, next actions, and contacts for each owned item. That check must happen before the final day, while gaps can still be fixed."
+              }
+            ]
+          },
+          {
+            "q": "Testing covered the standard resignation with four weeks of notice thoroughly, and go-live is next week. Short-notice, retirement, and cross-border exits were left for later. What should the programme do?",
+            "options": [
+              {
+                "text": "Go live anyway, because the standard resignation is the majority case",
+                "correct": false,
+                "why": "The untested cases are exactly where timing, documents, and pay cycles differ. A majority case passing does not make the minority cases safe."
+              },
+              {
+                "text": "Use the resignation workflow for every exit type to keep things simple",
+                "correct": false,
+                "why": "Different exits differ in timing, sensitivity, and required steps. One blended workflow either adds irrelevant steps or misses required ones."
+              },
+              {
+                "text": "Test short-notice, retirement, end-of-contract, moved last day, and separate Canada and United States scenarios before go-live, and phase populations if fixes need time",
+                "correct": true,
+                "why": "These stories exercise compressed handover, long-service knowledge, pre-agreed dates, re-timing, and country-specific steps. Phasing lets proven populations start while complex cases are fixed properly."
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
     "slug": "onboarding-module-implementation",
     "title": "Onboarding Module Implementation",
     "excerpt": "Implement onboarding as Core HR's first consumer: preboarding, day-one and 90-day tasks, owners, provisioning, and new-hire measurement.",
