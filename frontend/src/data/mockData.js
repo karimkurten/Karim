@@ -4,7 +4,7 @@ import employmentHistory from './employmentHistory.json';
 export const personalInfo = {
   name: "Karim Chaouki",
   headline: "Your Strategic Partner for HCM & ERP Transformation",
-  subtitle: "Senior Project Implementation Consultant | PMP | RMP | Scrum Master | Bilingual EN/FR",
+  subtitle: "Bilingual Implementation Manager | PMP | RMP | Scrum Master | Bilingual EN/FR",
   email: "karim.chaouki@gmail.com",
   phone: "437-688-9403",
   linkedin: "https://www.linkedin.com/in/karimchaouki",
@@ -16,7 +16,7 @@ export const personalInfo = {
     { lang: "Arabic", level: "Native" },
   ],
   summary:
-    "Strategic Project and Program Manager with 7+ years of progressive experience in HCM software implementation, multi-project portfolio management, and cross-border client onboarding. Currently leading implementations in ADP's Center of Excellence for enterprise clients across Canada and the United States.",
+    "Strategic Project and Program Manager with 7+ years of progressive experience in HCM software implementation, multi-project portfolio management, and cross-border client onboarding. Currently leading complex, high-priority client implementations and conversions at Fiserv, delivering payment solutions for enterprise clients across Canada and the United States.",
 };
 
 const getClientsServed = () => {
@@ -58,7 +58,7 @@ export const differentiators = [
   {
     title: "Enterprise HCM Specialist",
     description:
-      "ADP Center of Excellence lead with hands-on mastery of Workforce Now suite — payroll, benefits, time, talent, and HR workflows.",
+      "Former ADP Center of Excellence lead with hands-on mastery of Workforce Now suite — payroll, benefits, time, talent, and HR workflows.",
     icon: "building",
   },
   {
@@ -114,10 +114,24 @@ export const expertise = [
 
 export const experience = [
   {
+    company: "Fiserv",
+    subtitle: "Client Implementations & Conversions",
+    role: "Bilingual Implementation Manager",
+    period: "2026 – Present",
+    location: "Mississauga, ON",
+    achievements: [
+      "Lead complex, high-priority client implementations and conversions for large, technical payment-solution deployments, from initiation to closure",
+      "Develop, coordinate, and execute project plans, task schedules, and resource activities to ensure on-time delivery and quality outcomes",
+      "Coordinate cross-functional teams across product, engineering, sales, and vendor partners to deliver custom technical solutions",
+      "Identify opportunities to streamline procedures and improve product efficiency through process changes and technical solutions",
+      "Ensure adherence to project methodologies, delivery processes, and implementation management standards, resolving issues independently and escalating only the most complex matters",
+    ],
+  },
+  {
     company: "ADP Canada",
     subtitle: "Center of Excellence",
     role: "Senior Project Implementation Consultant",
-    period: "2023 – Present",
+    period: "2023 – 2026",
     location: "Toronto, ON",
     achievements: [
       "Lead HCM implementation projects specializing in complex cross-border deployments for enterprise clients across Canada and the US",
@@ -323,3 +337,4 @@ export const navLinks = [
   { label: "Testimonials", href: "#testimonials" },
   { label: "Contact", href: "#contact" },
 ];
+
