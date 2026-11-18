@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="640" viewBox="0 0 1200 640" role="img" aria-label="The self-service rollout journey: scope decided, data proven, security set, pilot run, phased launch, and adoption measured, with lead owners at each stage">
+  <defs>
+    <linearGradient id="hdr" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#0f172a"/>
+      <stop offset="1" stop-color="#1e3a5f"/>
+    </linearGradient>
+  </defs>
+  <rect x="0" y="0" width="1200" height="640" fill="#ffffff"/>
+  <rect x="0" y="0" width="1200" height="88" fill="url(#hdr)"/>
+  <text x="48" y="40" font-family="Georgia, serif" font-size="29" fill="#ffffff">Self-Service Rollout: From Scope to Adoption</text>
+  <text x="48" y="70" font-family="Arial, sans-serif" font-size="20" fill="#94A3B8">Six stages — each with a purpose and lead owners</text>
+  <g>
+    <rect x="40" y="108" width="168" height="252" rx="12" fill="#F0F4F8" stroke="#2B6CB0" stroke-width="2"/>
+    <text x="56" y="142" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#1A202C">Scope</text>
+    <text x="56" y="166" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#1A202C">Decided</text>
+    <text x="56" y="200" font-family="Arial, sans-serif" font-size="15" fill="#475569">Classify every</text>
+    <text x="56" y="222" font-family="Arial, sans-serif" font-size="15" fill="#475569">task: view,</text>
+    <text x="56" y="244" font-family="Arial, sans-serif" font-size="15" fill="#475569">approved change,</text>
+    <text x="56" y="266" font-family="Arial, sans-serif" font-size="15" fill="#475569">or direct update.</text>
+    <text x="56" y="330" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#2B6CB0">Lead: HR, Payroll</text>
+  </g>
+  <g>
+    <rect x="224" y="108" width="168" height="252" rx="12" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+    <text x="240" y="142" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#1A202C">Data</text>
+    <text x="240" y="166" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#1A202C">Proven</text>
+    <text x="240" y="200" font-family="Arial, sans-serif" font-size="15" fill="#475569">Audit pay,</text>
+    <text x="240" y="222" font-family="Arial, sans-serif" font-size="15" fill="#475569">balances, names,</text>
+    <text x="240" y="244" font-family="Arial, sans-serif" font-size="15" fill="#475569">and managers as</text>
+    <text x="240" y="266" font-family="Arial, sans-serif" font-size="15" fill="#475569">employees see them.</text>
+    <text x="240" y="330" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#2B6CB0">Lead: HR, Payroll</text>
+  </g>
+  <g>
+    <rect x="408" y="108" width="168" height="252" rx="12" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+    <text x="424" y="142" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#1A202C">Security</text>
+    <text x="424" y="166" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#1A202C">Set</text>
+    <text x="424" y="200" font-family="Arial, sans-serif" font-size="15" fill="#475569">Identity, shared-</text>
+    <text x="424" y="222" font-family="Arial, sans-serif" font-size="15" fill="#475569">device rules, and</text>
+    <text x="424" y="244" font-family="Arial, sans-serif" font-size="15" fill="#475569">approval routing</text>
+    <text x="424" y="266" font-family="Arial, sans-serif" font-size="15" fill="#475569">tested for real.</text>
+    <text x="424" y="330" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#2B6CB0">Lead: IT, HR</text>
+  </g>
+  <g>
+    <rect x="592" y="108" width="168" height="252" rx="12" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+    <text x="608" y="142" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#1A202C">Pilot</text>
+    <text x="608" y="166" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#1A202C">Run</text>
+    <text x="608" y="200" font-family="Arial, sans-serif" font-size="15" fill="#475569">One varied</text>
+    <text x="608" y="222" font-family="Arial, sans-serif" font-size="15" fill="#475569">population through</text>
+    <text x="608" y="244" font-family="Arial, sans-serif" font-size="15" fill="#475569">a full pay and</text>
+    <text x="608" y="266" font-family="Arial, sans-serif" font-size="15" fill="#475569">time-off cycle.</text>
+    <text x="608" y="330" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#2B6CB0">Lead: Programme</text>
+  </g>
+  <g>
+    <rect x="776" y="108" width="168" height="252" rx="12" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+    <text x="792" y="142" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#1A202C">Phased</text>
+    <text x="792" y="166" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#1A202C">Launch</text>
+    <text x="792" y="200" font-family="Arial, sans-serif" font-size="15" fill="#475569">Widen access in</text>
+    <text x="792" y="222" font-family="Arial, sans-serif" font-size="15" fill="#475569">deliberate waves,</text>
+    <text x="792" y="244" font-family="Arial, sans-serif" font-size="15" fill="#475569">with training and</text>
+    <text x="792" y="266" font-family="Arial, sans-serif" font-size="15" fill="#475569">support per wave.</text>
+    <text x="792" y="330" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#2B6CB0">Lead: HR, Comms</text>
+  </g>
+  <g>
+    <rect x="960" y="108" width="200" height="252" rx="12" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+    <text x="976" y="142" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#1A202C">Adoption</text>
+    <text x="976" y="166" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#1A202C">Measured</text>
+    <text x="976" y="200" font-family="Arial, sans-serif" font-size="15" fill="#475569">Completed tasks,</text>
+    <text x="976" y="222" font-family="Arial, sans-serif" font-size="15" fill="#475569">repeat use, and</text>
+    <text x="976" y="244" font-family="Arial, sans-serif" font-size="15" fill="#475569">falling routine</text>
+    <text x="976" y="266" font-family="Arial, sans-serif" font-size="15" fill="#475569">HR enquiries.</text>
+    <text x="976" y="330" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#2B6CB0">Lead: HR, Service Desk</text>
+  </g>
+  <rect x="40" y="392" width="1120" height="72" rx="12" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+  <text x="64" y="424" font-family="Arial, sans-serif" font-size="17" font-weight="bold" fill="#1A202C">Every stage depends on the Core HR record</text>
+  <text x="64" y="450" font-family="Arial, sans-serif" font-size="16" fill="#475569">Person, position, manager, and location drive what the portal shows, what can change, and who approves it.</text>
+  <rect x="40" y="488" width="1120" height="72" rx="12" fill="#ffffff" stroke="#E2E8F0" stroke-width="2"/>
+  <text x="64" y="520" font-family="Arial, sans-serif" font-size="17" font-weight="bold" fill="#1A202C">A pilot that changes nothing teaches people not to report problems</text>
+  <text x="64" y="546" font-family="Arial, sans-serif" font-size="16" fill="#64748B">Fix what the pilot surfaces, visibly, before widening access to the next wave.</text>
+  <text x="40" y="600" font-family="Arial, sans-serif" font-size="14" fill="#94A3B8">Figure 1 — Self-service rollout journey</text>
+</svg>
