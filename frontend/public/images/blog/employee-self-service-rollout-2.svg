@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="640" viewBox="0 0 1200 640" role="img" aria-label="Self-service control diagram: the Core HR record feeding view tasks, changes with approval, and direct updates, with security and audit controls">
+  <defs>
+    <linearGradient id="hdr" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#0f172a"/>
+      <stop offset="1" stop-color="#1e3a5f"/>
+    </linearGradient>
+  </defs>
+  <rect x="0" y="0" width="1200" height="640" fill="#ffffff"/>
+  <rect x="0" y="0" width="1200" height="88" fill="url(#hdr)"/>
+  <text x="48" y="40" font-family="Georgia, serif" font-size="29" fill="#ffffff">One Record, Three Kinds of Task</text>
+  <text x="48" y="70" font-family="Arial, sans-serif" font-size="20" fill="#94A3B8">Controls match the risk of the task — view, approved change, or direct update</text>
+  <g>
+    <rect x="400" y="116" width="400" height="150" rx="12" fill="#F0F4F8" stroke="#2B6CB0" stroke-width="2"/>
+    <text x="424" y="150" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#1A202C">Core HR Record</text>
+    <text x="424" y="182" font-family="Arial, sans-serif" font-size="16" fill="#475569">Person — Position — Manager</text>
+    <text x="424" y="208" font-family="Arial, sans-serif" font-size="16" fill="#475569">Location — Employment Status</text>
+    <text x="424" y="234" font-family="Arial, sans-serif" font-size="16" fill="#475569">Pay history and time-off balances</text>
+  </g>
+  <g>
+    <rect x="40" y="306" width="346" height="150" rx="12" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+    <text x="60" y="338" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#1A202C">View Tasks</text>
+    <text x="60" y="366" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="#2B6CB0">Control: proven data</text>
+    <text x="60" y="394" font-family="Arial, sans-serif" font-size="16" fill="#475569">Pay statements, schedules,</text>
+    <text x="60" y="418" font-family="Arial, sans-serif" font-size="16" fill="#475569">balances, and record</text>
+    <text x="60" y="442" font-family="Arial, sans-serif" font-size="16" fill="#475569">summary, read-only.</text>
+  </g>
+  <g>
+    <rect x="406" y="306" width="346" height="150" rx="12" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+    <text x="426" y="338" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#1A202C">Changes With Approval</text>
+    <text x="426" y="366" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="#2B6CB0">Control: routing and escalation</text>
+    <text x="426" y="394" font-family="Arial, sans-serif" font-size="16" fill="#475569">Time-off requests and</text>
+    <text x="426" y="418" font-family="Arial, sans-serif" font-size="16" fill="#475569">reviewed data changes,</text>
+    <text x="426" y="442" font-family="Arial, sans-serif" font-size="16" fill="#475569">with effective-date rules.</text>
+  </g>
+  <g>
+    <rect x="772" y="306" width="388" height="150" rx="12" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+    <text x="792" y="338" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#1A202C">Direct Updates</text>
+    <text x="792" y="366" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="#2B6CB0">Control: verification and audit</text>
+    <text x="792" y="394" font-family="Arial, sans-serif" font-size="16" fill="#475569">Contact details take effect</text>
+    <text x="792" y="418" font-family="Arial, sans-serif" font-size="16" fill="#475569">directly; sensitive fields need</text>
+    <text x="792" y="442" font-family="Arial, sans-serif" font-size="16" fill="#475569">stronger checks and a full trail.</text>
+  </g>
+  <rect x="40" y="488" width="1120" height="72" rx="12" fill="#ffffff" stroke="#E2E8F0" stroke-width="2"/>
+  <text x="64" y="520" font-family="Arial, sans-serif" font-size="17" font-weight="bold" fill="#1A202C">Around every path: identity, shared-device rules, and escalation</text>
+  <text x="64" y="546" font-family="Arial, sans-serif" font-size="16" fill="#64748B">Safe sign-in, sessions that end on shared devices, and a route when an approver does not act.</text>
+  <text x="40" y="600" font-family="Arial, sans-serif" font-size="14" fill="#94A3B8">Figure 2 — Task controls and dependencies</text>
+</svg>
