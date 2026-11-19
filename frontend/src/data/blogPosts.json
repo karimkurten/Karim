@@ -1,5 +1,302 @@
 [
   {
+    "slug": "manager-self-service-rollout",
+    "title": "Manager Self-Service Rollout",
+    "excerpt": "Roll out manager self-service managers actually use: team visibility, approvals, delegation, training, and support that prevents bottlenecks.",
+    "publishedAt": "2026-11-19",
+    "readingTime": "8 min read",
+    "cover": "/images/blog/manager-self-service-rollout-cover.webp",
+    "tags": [
+      "HCM",
+      "Implementation",
+      "Manager Self-Service",
+      "HR Technology"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "Manager self-service is where an HCM rollout succeeds or stalls in plain sight. Managers carry the workflow: they approve time off, confirm changes, answer first-line questions, and absorb the frustration when routing is wrong. If managers do not trust the tools, employees bypass them — and the old email process quietly becomes the real system again."
+      },
+      {
+        "type": "p",
+        "text": "This guide treats the manager rollout as a workflow programme, not a permissions switch: scope and visibility, approval quality, delegation and coverage, manager preparation, and how to know whether approvals are moving faster than before."
+      },
+      {
+        "type": "h2",
+        "text": "Managers are the workflow, not just another audience"
+      },
+      {
+        "type": "p",
+        "text": "Every other user group mainly completes its own tasks. Managers complete other people's tasks as well. One manager with a full approval queue can delay leave, overtime, and data changes for an entire team, visibly. Managers also see more sensitive information than employees do, so a visibility error is a privacy incident waiting for the wrong screen."
+      },
+      {
+        "type": "p",
+        "text": "That dual role changes the design. Managers need enough visibility to decide well, bounded tightly enough to protect privacy, and a workload the tools reduce rather than relocate. The foundation is the record discussed in [the Core HR implementation guide](/blog/core-hr-implementation-guide): reporting lines, positions, and acting arrangements decide who appears in each team view and whose requests land in which queue. If that structure is wrong, the system will faithfully route work to the wrong person at scale."
+      },
+      {
+        "type": "steps",
+        "label": "Rolling out manager self-service, in order",
+        "intro": "Five moves that turn manager access into a working approval and support workflow.",
+        "items": [
+          {
+            "title": "Decide what managers can see and decide",
+            "text": "List every manager task and classify it as team view, approval decision, or direct action. Viewing a team calendar, approving leave, and correcting a record carry different risk and need different controls."
+          },
+          {
+            "title": "Prove the reporting lines first",
+            "text": "Audit manager assignments, vacancies, and acting arrangements before launch. Every approval queue, team view, and escalation depends on this structure being right."
+          },
+          {
+            "title": "Design delegation and coverage",
+            "text": "Set how approvals move when a manager is away: named delegates, acting managers, time limits, and escalation when nobody acts. Test absence, not just the happy path."
+          },
+          {
+            "title": "Prepare managers before employees arrive",
+            "text": "Train managers on approvals, team data, and first-line questions before the employee launch, so the first requests they receive are ones they can already handle."
+          },
+          {
+            "title": "Measure queues, not logins",
+            "text": "Track approval turnaround, overdue items, and bypass behaviour — employees reverting to email — so adoption is judged on workflow health, not accounts activated."
+          }
+        ]
+      },
+      {
+        "type": "img",
+        "src": "/images/blog/manager-self-service-rollout-1.svg",
+        "alt": "Manager self-service rollout journey diagram: six stages from scope decided and reporting lines proven through delegation set and managers prepared to pilot run and adoption measured, with the lead owner named at each stage and a strip showing that every stage depends on accurate reporting lines.",
+        "caption": "Manager self-service rollout journey: scope decided, reporting lines proven, delegation set, managers prepared, pilot run, and adoption measured."
+      },
+      {
+        "type": "h2",
+        "text": "Scope: team visibility, decisions, and direct actions"
+      },
+      {
+        "type": "p",
+        "text": "Start with an inventory of manager tasks, not the vendor feature list. View tasks include team calendars, balances, schedules, and request status. Decision tasks include approving time off, overtime, and data changes. A smaller set of direct actions — confirming a schedule change, for example — may take effect without a second reviewer. Each category deserves its own control: a wrong view exposes data, a wrong approval commits the organisation, and a wrong direct action may be hard to reverse."
+      },
+      {
+        "type": "p",
+        "text": "Visibility needs the most discipline. A manager should see what is needed to manage the team — members, their requests, and the information relevant to the decision in front of them — and nothing beyond it. Access that follows the formal chart but ignores secondments, matrix reporting, or a restructure will show the wrong team to the wrong manager. Test the view with edge cases: a transferred employee in the handover week and a vacant manager position."
+      },
+      {
+        "type": "p",
+        "text": "Decide approval rules explicitly for each request type: who approves, whether a second approval is ever required, what must be checked, and the consequence of approving late. The decision screen should surface the facts the decision depends on — team coverage on the requested dates, remaining balance, and conflicting requests — so approval is a judgement, not a guess."
+      },
+      {
+        "type": "h2",
+        "text": "Approvals: fast, informed, and never a rubber stamp"
+      },
+      {
+        "type": "p",
+        "text": "Approval design fails in two opposite directions. In one, managers become a bottleneck: queues grow, employees chase by email, and HR intervenes manually, teaching everyone the portal is optional. In the other, managers become a rubber stamp, approving everything in seconds to clear the queue — defeating the control approval was meant to provide. Good design avoids both by making the right decision the easy decision: clear context, sensible reminders, and helpful escalation."
+      },
+      {
+        "type": "p",
+        "text": "Set expectations in operational terms. Define the normal turnaround for each request type, when a reminder fires, and when an unactioned request escalates to a delegate or the next level. Escalation should be framed as coverage, not failure: a manager on leave will miss requests, and the workflow should protect the employee automatically."
+      },
+      {
+        "type": "p",
+        "text": "Managers also need a legitimate way to decline or return a request. A decline with no explanation produces an angry employee and an HR ticket; a return-for-correction option, with a short reason the employee sees, keeps the workflow inside the system. The companion guide to [employee self-service portal rollout](/blog/employee-self-service-rollout) covers the employee side; the two designs must match."
+      },
+      {
+        "type": "img",
+        "src": "/images/blog/manager-self-service-rollout-2.svg",
+        "alt": "Manager self-service control diagram: the reporting structure of manager, team, positions, and acting arrangements feeding team view, approvals and decisions, and delegated coverage, with privacy boundaries, reminders, and escalation around each path.",
+        "caption": "Manager self-service control diagram: the reporting structure feeding team view, approval decisions, and delegated coverage, with privacy and escalation controls around each path."
+      },
+      {
+        "type": "h2",
+        "text": "Delegation, absence, and acting coverage"
+      },
+      {
+        "type": "p",
+        "text": "The most predictable failure is absence. Managers take leave, travel, change roles, and leave the organisation, and each event strands a queue unless coverage was designed in advance. Delegation rules should answer four questions before launch: who can delegate, to whom, for how long, and which decisions a delegate may not make. Sensitive approvals may escalate upward rather than sideways; that exception must be explicit, not discovered mid-incident."
+      },
+      {
+        "type": "p",
+        "text": "Acting managers deserve the same care. An acting arrangement recorded only in an email gives responsibility without system access, so work routes to a vacant queue the covering person cannot see. Record acting arrangements in the system with start and end dates, and test that views and queues move on the start date and back afterwards. When a manager leaves permanently, handover of open requests is part of offboarding."
+      },
+      {
+        "type": "p",
+        "text": "Test coverage the way you test approvals: simulate a manager on leave in a busy period, a delegate approving a routine request, and an escalation firing when neither acts. If any path requires HR to intervene manually, the design is not finished."
+      },
+      {
+        "type": "h2",
+        "text": "Preparing managers, phasing, and support"
+      },
+      {
+        "type": "p",
+        "text": "Managers should be live before their teams are. A short head start lets managers learn approvals on pilot requests, find team-view errors while the stakes are low, and arrive at the employee launch able to help rather than needing help. The sizing discipline in [training needs analysis for HCM rollouts](/blog/training-needs-analysis-hcm) applies directly: managers need decision-focused practice — real scenarios and the decline-and-return routes — not a feature tour. A manager who has approved a practice request with a calendar conflict is ready; one who watched a demonstration is not."
+      },
+      {
+        "type": "p",
+        "text": "Phase the rollout by population. Pilot with managers whose teams include shift workers, multiple locations, and an acting arrangement, through real events: a pay cycle, a leave peak, and an absence. Communication should follow the sequencing in [communication planning for go-live](/blog/go-live-communication-plan): managers hear first, with their responsibilities and support routes, before employees are asked to send them requests."
+      },
+      {
+        "type": "p",
+        "text": "Support design must respect the manager's position. Managers need a fast route for workflow problems — a stuck queue, a wrong team member, a delegate who cannot act — not the general employee queue. Name who fixes reporting-line errors and how quickly. A manager left without an answer becomes the system's loudest critic, and their team follows their lead."
+      },
+      {
+        "type": "h2",
+        "text": "Measuring whether the workflow actually works"
+      },
+      {
+        "type": "p",
+        "text": "Manager adoption is not logins; managers will log in if requests force them to. Measure workflow health instead: approval turnaround by request type, the number and age of overdue items, escalation frequency, and how often employees bypass the portal by emailing requests directly. The wider frame in [HCM adoption metrics that matter](/blog/hcm-adoption-metrics) applies too: the rollout has worked when the formal workflow is also the fastest route, so the shadow process withers."
+      },
+      {
+        "type": "p",
+        "text": "Segment by team and location. A healthy average can hide a department where approvals take two weeks or a site whose managers never received training. Act on the segment: coaching, a fixed routing rule, or a clearer decision screen beats another reminder campaign. Review queues again after the first leave peak and the first manager departure — absence is the stress test for delegation design."
+      },
+      {
+        "type": "h2",
+        "text": "Common mistakes"
+      },
+      {
+        "type": "p",
+        "text": "Most manager self-service failures are workflow design decisions."
+      },
+      {
+        "type": "accordion",
+        "label": "Manager self-service mistakes, as a diagnostic",
+        "items": [
+          {
+            "q": "Launching on unproven reporting lines",
+            "a": "Team views, queues, and escalations all follow the reporting structure. If manager assignments, vacancies, and acting arrangements were never audited, work routes to the wrong people at scale and every manager's first experience is an error."
+          },
+          {
+            "q": "Visibility copied from the org chart alone",
+            "a": "Secondments, matrix reporting, and restructures mean the formal chart is not the working structure. Managers see the wrong team — or miss their own — and sensitive data is exposed to people with no need for it."
+          },
+          {
+            "q": "No delegation design until the first absence",
+            "a": "A manager on leave with no delegate strands every pending request. Delegation, acting coverage, and escalation must be designed and tested before launch, not improvised during the first holiday period."
+          },
+          {
+            "q": "Approvals with no decision context",
+            "a": "A queue showing only a name and a date forces managers to guess, phone HR, or rubber-stamp. Surface the facts the decision depends on — coverage, balances, conflicts — on the decision screen itself."
+          },
+          {
+            "q": "Training managers with a feature tour",
+            "a": "Watching a demonstration does not prepare a manager to decline a request, handle a conflict, or act as a delegate. Managers need scenario practice on the decisions they will actually face, before their teams go live."
+          },
+          {
+            "q": "Counting manager logins as adoption",
+            "a": "Managers log in because requests compel them to. Judge the rollout on turnaround, overdue queues, escalation rates, and whether employees still bypass the portal by email."
+          }
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Key Takeaways"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "Managers are the workflow: their queues, decisions, and answers shape every employee's experience.",
+          "Bound visibility to the working reporting structure, not just the formal chart — and audit it before launch.",
+          "Design approvals for judgement: decision context on screen, defined turnaround, reminders, escalation as coverage.",
+          "Delegation and acting coverage are launch features, not absence improvisation — test them before the first leave period.",
+          "Measure queues, turnaround, and bypass behaviour — not logins."
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Frequently Asked Questions"
+      },
+      {
+        "type": "p",
+        "text": "What should managers be able to see in the first release? Their current team's requests, calendars, balances, and request status — what the decisions in scope require — and nothing beyond their team. Widen visibility only when a decision genuinely requires it."
+      },
+      {
+        "type": "p",
+        "text": "How should delegation work when a manager is away? A named delegate with a defined period and limits, recorded in the system so queues and team views move automatically. Sensitive approvals may escalate upward instead; decide that exception in advance and test the absence path before launch."
+      },
+      {
+        "type": "p",
+        "text": "When should managers go live relative to employees? Before them. A short head start lets managers practise approvals, surface routing errors at low stakes, and meet the first real requests already able to act."
+      },
+      {
+        "type": "p",
+        "text": "How do we stop approvals becoming a bottleneck? Give each request type a defined turnaround, reminders, and automatic escalation when a manager does not act — and measure overdue queues by team so a struggling area gets coaching or a design fix, not blame."
+      },
+      {
+        "type": "h2",
+        "text": "Next Steps"
+      },
+      {
+        "type": "p",
+        "text": "Start with the reporting structure: audit manager assignments, vacancies, and acting arrangements, and fix them at source. Then classify every manager task as view, approval, or direct action, write the delegation and escalation rules, choose pilot managers whose teams include the awkward cases, and agree the queue measures before the first manager logs in."
+      },
+      {
+        "type": "quiz",
+        "label": "Check your understanding",
+        "questions": [
+          {
+            "q": "Two weeks after launch, leave requests for one department are sitting unactioned because the manager is on extended leave and nobody else can see the queue. What is the design gap?",
+            "options": [
+              {
+                "text": "Employees should have emailed HR when they saw no response",
+                "correct": false,
+                "why": "Requiring employees to chase by email means the workflow has already failed. Coverage for absence is a design responsibility, not an employee workaround."
+              },
+              {
+                "text": "Delegation and escalation were never designed or tested: no named delegate holds the queue, and no escalation fires when the approver does not act",
+                "correct": true,
+                "why": "Absence is predictable. Named delegates with defined limits, recorded acting arrangements, and automatic escalation protect employees from a manager's absence without manual intervention."
+              },
+              {
+                "text": "Leave approval should be removed so requests take effect automatically",
+                "correct": false,
+                "why": "Removing approval removes a legitimate control over staffing and balances. The fix is coverage that works during absence, not the absence of control."
+              }
+            ]
+          },
+          {
+            "q": "A manager approves every request within minutes, including overlapping leave that leaves a shift uncovered. What does this pattern most likely indicate?",
+            "options": [
+              {
+                "text": "An efficient manager who trusts the team",
+                "correct": false,
+                "why": "Speed without checking is not efficiency when the decision screen hides the consequences. Approving conflicting leave sight-unseen is the rubber-stamp failure mode."
+              },
+              {
+                "text": "The approval is functioning as a rubber stamp, most likely because the decision screen shows no coverage, balance, or conflict context to judge from",
+                "correct": true,
+                "why": "Managers decide well when the facts the decision depends on are on the screen. Without team coverage and conflict information, fast approval is guessing, and the control the approval exists to provide is lost."
+              },
+              {
+                "text": "HR should add a second approver to every request",
+                "correct": false,
+                "why": "A second approver doubles the bottleneck without fixing the cause. Give the first approver the context to decide properly before adding layers."
+              }
+            ]
+          },
+          {
+            "q": "Three months after launch, every manager has logged in, but approval turnaround has not improved and employees still email leave requests directly to managers. How should this be read?",
+            "options": [
+              {
+                "text": "The rollout succeeded, because manager participation is universal",
+                "correct": false,
+                "why": "Logins are compelled by the queue; they prove access, not a working workflow. Unchanged turnaround and persistent email requests show the shadow process is still the real system."
+              },
+              {
+                "text": "Managers need a reminder campaign telling them to work the queue faster",
+                "correct": false,
+                "why": "Reminders do not fix why the workflow is slow or bypassed — missing context, wrong routing, or untrained segments. Segment the queue data and fix the cause in the affected teams."
+              },
+              {
+                "text": "The workflow has not been adopted in practice: measure turnaround and overdue items by team, find where and why it breaks down, and fix routing, context, or training there",
+                "correct": true,
+                "why": "Real adoption means the formal workflow is the fastest route, turnaround improves, and bypass behaviour fades. Segmentation shows whether the barrier is design, data, or preparation in a specific population."
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
     "slug": "employee-self-service-rollout",
     "title": "Employee Self-Service Portal Rollout",
     "excerpt": "Roll out employee self-service so it sticks: scope, data accuracy, security, phased launch, training, and the support model behind adoption.",
