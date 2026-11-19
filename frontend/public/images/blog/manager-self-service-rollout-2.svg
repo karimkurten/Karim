@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="640" viewBox="0 0 1200 640" role="img" aria-label="Manager self-service control diagram: the reporting structure feeding team view, approvals and decisions, and delegated coverage, with privacy and escalation controls">
+  <defs>
+    <linearGradient id="hdr" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#0f172a"/>
+      <stop offset="1" stop-color="#1e3a5f"/>
+    </linearGradient>
+  </defs>
+  <rect x="0" y="0" width="1200" height="640" fill="#ffffff"/>
+  <rect x="0" y="0" width="1200" height="88" fill="url(#hdr)"/>
+  <text x="48" y="40" font-family="Georgia, serif" font-size="29" fill="#ffffff">One Structure, Three Kinds of Manager Work</text>
+  <text x="48" y="70" font-family="Arial, sans-serif" font-size="20" fill="#94A3B8">Controls match the work — view, decide, or cover for an absent manager</text>
+  <g>
+    <rect x="400" y="116" width="400" height="150" rx="12" fill="#F0F4F8" stroke="#2B6CB0" stroke-width="2"/>
+    <text x="424" y="150" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#1A202C">Reporting Structure</text>
+    <text x="424" y="182" font-family="Arial, sans-serif" font-size="16" fill="#475569">Manager — Team — Positions</text>
+    <text x="424" y="208" font-family="Arial, sans-serif" font-size="16" fill="#475569">Locations — Acting Arrangements</text>
+    <text x="424" y="234" font-family="Arial, sans-serif" font-size="16" fill="#475569">Vacancies and recent transfers</text>
+  </g>
+  <g>
+    <rect x="40" y="306" width="346" height="150" rx="12" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+    <text x="60" y="338" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#1A202C">Team View</text>
+    <text x="60" y="366" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="#2B6CB0">Control: bounded visibility</text>
+    <text x="60" y="394" font-family="Arial, sans-serif" font-size="16" fill="#475569">Calendars, balances, and</text>
+    <text x="60" y="418" font-family="Arial, sans-serif" font-size="16" fill="#475569">request status for the</text>
+    <text x="60" y="442" font-family="Arial, sans-serif" font-size="16" fill="#475569">manager's own team only.</text>
+  </g>
+  <g>
+    <rect x="406" y="306" width="346" height="150" rx="12" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+    <text x="426" y="338" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#1A202C">Approvals and Decisions</text>
+    <text x="426" y="366" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="#2B6CB0">Control: context and turnaround</text>
+    <text x="426" y="394" font-family="Arial, sans-serif" font-size="16" fill="#475569">Coverage, balances, and</text>
+    <text x="426" y="418" font-family="Arial, sans-serif" font-size="16" fill="#475569">conflicts on screen, with</text>
+    <text x="426" y="442" font-family="Arial, sans-serif" font-size="16" fill="#475569">decline-and-return routes.</text>
+  </g>
+  <g>
+    <rect x="772" y="306" width="388" height="150" rx="12" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+    <text x="792" y="338" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#1A202C">Delegated Coverage</text>
+    <text x="792" y="366" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="#2B6CB0">Control: named delegates and limits</text>
+    <text x="792" y="394" font-family="Arial, sans-serif" font-size="16" fill="#475569">Queues move to a delegate</text>
+    <text x="792" y="418" font-family="Arial, sans-serif" font-size="16" fill="#475569">during absence; sensitive</text>
+    <text x="792" y="442" font-family="Arial, sans-serif" font-size="16" fill="#475569">approvals escalate upward.</text>
+  </g>
+  <rect x="40" y="488" width="1120" height="72" rx="12" fill="#ffffff" stroke="#E2E8F0" stroke-width="2"/>
+  <text x="64" y="520" font-family="Arial, sans-serif" font-size="17" font-weight="bold" fill="#1A202C">Around every path: privacy boundaries, reminders, and escalation</text>
+  <text x="64" y="546" font-family="Arial, sans-serif" font-size="16" fill="#64748B">Managers see only their team, reminders keep queues moving, and unactioned requests escalate as coverage.</text>
+  <text x="40" y="600" font-family="Arial, sans-serif" font-size="14" fill="#94A3B8">Figure 2 — Manager task controls and dependencies</text>
+</svg>
