@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="640" viewBox="0 0 1200 640" role="img" aria-label="The manager self-service rollout journey: scope decided, reporting lines proven, delegation set, managers prepared, pilot run, and adoption measured, with lead owners at each stage">
+  <defs>
+    <linearGradient id="hdr" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#0f172a"/>
+      <stop offset="1" stop-color="#1e3a5f"/>
+    </linearGradient>
+  </defs>
+  <rect x="0" y="0" width="1200" height="640" fill="#ffffff"/>
+  <rect x="0" y="0" width="1200" height="88" fill="url(#hdr)"/>
+  <text x="48" y="40" font-family="Georgia, serif" font-size="29" fill="#ffffff">Manager Self-Service: From Scope to Adoption</text>
+  <text x="48" y="70" font-family="Arial, sans-serif" font-size="20" fill="#94A3B8">Six stages — each with a purpose and lead owners</text>
+  <g>
+    <rect x="40" y="108" width="168" height="252" rx="12" fill="#F0F4F8" stroke="#2B6CB0" stroke-width="2"/>
+    <text x="56" y="142" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#1A202C">Scope</text>
+    <text x="56" y="166" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#1A202C">Decided</text>
+    <text x="56" y="200" font-family="Arial, sans-serif" font-size="15" fill="#475569">Classify every</text>
+    <text x="56" y="222" font-family="Arial, sans-serif" font-size="15" fill="#475569">manager task:</text>
+    <text x="56" y="244" font-family="Arial, sans-serif" font-size="15" fill="#475569">view, approval,</text>
+    <text x="56" y="266" font-family="Arial, sans-serif" font-size="15" fill="#475569">or direct action.</text>
+    <text x="56" y="330" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#2B6CB0">Lead: HR, Payroll</text>
+  </g>
+  <g>
+    <rect x="224" y="108" width="168" height="252" rx="12" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+    <text x="240" y="142" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#1A202C">Reporting</text>
+    <text x="240" y="166" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#1A202C">Lines Proven</text>
+    <text x="240" y="200" font-family="Arial, sans-serif" font-size="15" fill="#475569">Audit managers,</text>
+    <text x="240" y="222" font-family="Arial, sans-serif" font-size="15" fill="#475569">vacancies, and</text>
+    <text x="240" y="244" font-family="Arial, sans-serif" font-size="15" fill="#475569">acting roles as</text>
+    <text x="240" y="266" font-family="Arial, sans-serif" font-size="15" fill="#475569">teams will see them.</text>
+    <text x="240" y="330" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#2B6CB0">Lead: HR, Payroll</text>
+  </g>
+  <g>
+    <rect x="408" y="108" width="168" height="252" rx="12" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+    <text x="424" y="142" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#1A202C">Delegation</text>
+    <text x="424" y="166" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#1A202C">Set</text>
+    <text x="424" y="200" font-family="Arial, sans-serif" font-size="15" fill="#475569">Delegates, limits,</text>
+    <text x="424" y="222" font-family="Arial, sans-serif" font-size="15" fill="#475569">acting coverage,</text>
+    <text x="424" y="244" font-family="Arial, sans-serif" font-size="15" fill="#475569">and escalation</text>
+    <text x="424" y="266" font-family="Arial, sans-serif" font-size="15" fill="#475569">when nobody acts.</text>
+    <text x="424" y="330" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#2B6CB0">Lead: HR, IT</text>
+  </g>
+  <g>
+    <rect x="592" y="108" width="168" height="252" rx="12" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+    <text x="608" y="142" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#1A202C">Managers</text>
+    <text x="608" y="166" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#1A202C">Prepared</text>
+    <text x="608" y="200" font-family="Arial, sans-serif" font-size="15" fill="#475569">Decision practice</text>
+    <text x="608" y="222" font-family="Arial, sans-serif" font-size="15" fill="#475569">on real scenarios</text>
+    <text x="608" y="244" font-family="Arial, sans-serif" font-size="15" fill="#475569">before their teams</text>
+    <text x="608" y="266" font-family="Arial, sans-serif" font-size="15" fill="#475569">go live.</text>
+    <text x="608" y="330" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#2B6CB0">Lead: Programme</text>
+  </g>
+  <g>
+    <rect x="776" y="108" width="168" height="252" rx="12" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+    <text x="792" y="142" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#1A202C">Pilot</text>
+    <text x="792" y="166" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#1A202C">Run</text>
+    <text x="792" y="200" font-family="Arial, sans-serif" font-size="15" fill="#475569">Real teams through</text>
+    <text x="792" y="222" font-family="Arial, sans-serif" font-size="15" fill="#475569">a pay cycle, a leave</text>
+    <text x="792" y="244" font-family="Arial, sans-serif" font-size="15" fill="#475569">peak, and a manager</text>
+    <text x="792" y="266" font-family="Arial, sans-serif" font-size="15" fill="#475569">absence.</text>
+    <text x="792" y="330" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#2B6CB0">Lead: HR, Comms</text>
+  </g>
+  <g>
+    <rect x="960" y="108" width="200" height="252" rx="12" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+    <text x="976" y="142" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#1A202C">Adoption</text>
+    <text x="976" y="166" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#1A202C">Measured</text>
+    <text x="976" y="200" font-family="Arial, sans-serif" font-size="15" fill="#475569">Approval turnaround,</text>
+    <text x="976" y="222" font-family="Arial, sans-serif" font-size="15" fill="#475569">overdue queues, and</text>
+    <text x="976" y="244" font-family="Arial, sans-serif" font-size="15" fill="#475569">email bypass —</text>
+    <text x="976" y="266" font-family="Arial, sans-serif" font-size="15" fill="#475569">not logins.</text>
+    <text x="976" y="330" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#2B6CB0">Lead: HR, Service Desk</text>
+  </g>
+  <rect x="40" y="392" width="1120" height="72" rx="12" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+  <text x="64" y="424" font-family="Arial, sans-serif" font-size="17" font-weight="bold" fill="#1A202C">Every stage depends on accurate reporting lines</text>
+  <text x="64" y="450" font-family="Arial, sans-serif" font-size="16" fill="#475569">Manager, team, and acting arrangements drive team views, approval queues, and escalation.</text>
+  <rect x="40" y="488" width="1120" height="72" rx="12" fill="#ffffff" stroke="#E2E8F0" stroke-width="2"/>
+  <text x="64" y="520" font-family="Arial, sans-serif" font-size="17" font-weight="bold" fill="#1A202C">Absence is the stress test for the whole design</text>
+  <text x="64" y="546" font-family="Arial, sans-serif" font-size="16" fill="#64748B">Test delegation and escalation before the first leave period, not during it.</text>
+  <text x="40" y="600" font-family="Arial, sans-serif" font-size="14" fill="#94A3B8">Figure 1 — Manager self-service rollout journey</text>
+</svg>
