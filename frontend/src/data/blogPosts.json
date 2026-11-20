@@ -1,5 +1,290 @@
 [
   {
+    "slug": "time-tracking-implementation-guide",
+    "title": "Time Tracking Implementation Guide",
+    "excerpt": "Implement time tracking that pays correctly: capture methods, rounding and exception rules, approvals, and parallel testing before live payroll.",
+    "publishedAt": "2026-11-20",
+    "readingTime": "8 min read",
+    "cover": "/images/blog/time-tracking-implementation-guide-cover.webp",
+    "tags": [
+      "HCM",
+      "Implementation",
+      "Time Tracking",
+      "Workforce Management"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "Time tracking looks deceptively simple: record when work starts and ends, total the hours, and pay them. In an implementation it is anything but simple. Time data sits at the junction of schedules, pay rules, manager approvals, and employee trust — and an error is not abstract. It appears in someone's pay in the first cycle after go-live."
+      },
+      {
+        "type": "p",
+        "text": "This guide treats time tracking as a payroll control, not a clock purchase: inventory the rules first, choose capture for the workforce you actually have, design approvals and exceptions deliberately, and prove the whole cycle in parallel before live pay depends on it."
+      },
+      {
+        "type": "h2",
+        "text": "Time tracking is a payroll control, not a clock purchase"
+      },
+      {
+        "type": "p",
+        "text": "Projects that start with hardware start in the wrong place. A terminal, an app, or a web timesheet is only a capture device; the system behind it must interpret what was captured — which schedule applied, whether the shift crossed midnight, how rounding works, what counts as overtime, and who may correct a missed punch. Two organisations can buy the same clock and need entirely different implementations because their rules differ."
+      },
+      {
+        "type": "p",
+        "text": "The wider context is [the Complete Guide to Workforce Management Implementation](/blog/workforce-management-implementation-guide): time tracking feeds scheduling, absence, and payroll, so a decision in one place surfaces in the others. The foundation is [the Core HR implementation guide](/blog/core-hr-implementation-guide): positions, locations, and reporting lines decide which schedule and approver each employee's time belongs to. If that structure is wrong, even an accurate clock routes time to the wrong manager."
+      },
+      {
+        "type": "steps",
+        "label": "Implementing time tracking, in order",
+        "intro": "Five moves that turn a capture device into a trusted payroll control.",
+        "items": [
+          {
+            "title": "Inventory the rules before the devices",
+            "text": "List every way time is worked and paid: schedules, shift patterns, overtime triggers, rounding, breaks, on-call, and travel. The rules decide the configuration; the devices only capture against them."
+          },
+          {
+            "title": "Choose capture for the real workforce",
+            "text": "Match each population to a method it can actually use — terminal, mobile, web, or supervisor entry — including shared workplaces, field work, and places with poor connectivity."
+          },
+          {
+            "title": "Design approvals and exceptions",
+            "text": "Set who approves time, how missed punches and edits are handled, and what audit trail every correction carries. Exceptions are the daily workload, not an edge case."
+          },
+          {
+            "title": "Test a full cycle, not a happy path",
+            "text": "Exercise midnight-crossing shifts, overtime weeks, holidays, absences, and manager absence through capture, approval, and pay calculation before go-live."
+          },
+          {
+            "title": "Parallel-run and reconcile",
+            "text": "Run old and new time side by side for a full pay period and reconcile hours and pay outcomes line by line. Differences must be explained, not averaged away."
+          }
+        ]
+      },
+      {
+        "type": "img",
+        "src": "/images/blog/time-tracking-implementation-guide-1.svg",
+        "alt": "Time tracking implementation journey diagram: six stages from rules inventoried and capture chosen through approvals designed and full cycle tested to parallel run reconciled and live pay trusted, with the lead owner named at each stage and a strip showing that every stage depends on accurate schedules and reporting lines.",
+        "caption": "Time tracking implementation journey: rules inventoried, capture chosen, approvals designed, full cycle tested, parallel run reconciled, and live pay trusted."
+      },
+      {
+        "type": "h2",
+        "text": "Start with the rules: work, pay, and exception logic"
+      },
+      {
+        "type": "p",
+        "text": "Begin with an inventory of how time is actually worked, gathered from schedules, payroll practice, and supervisors — not from the policy document alone. Capture the patterns that repeat: standard weeks, rotating shifts, part-time arrangements, seasonal peaks, and informal practices such as a supervisor adjusting time after an outage. Each pattern needs an explicit answer for start and end, breaks paid or unpaid, rounding, grace periods at shift edges, and when overtime begins."
+      },
+      {
+        "type": "p",
+        "text": "Rounding deserves a plain-language decision. It is never neutral: applied carelessly it systematically favours one side, and employees notice within two pay cycles. Document the rule, test its effect on real historical time, and be able to explain it to an employee who asks. The same applies to automatic break deductions: deducting a break an employee did not take creates an underpayment no approval step will catch, because the timesheet looks complete."
+      },
+      {
+        "type": "p",
+        "text": "Exception logic is where the design earns its keep. Missed punches, late arrivals, unscheduled work, and time at a different location will happen every week. For each exception, decide who sees it, who may correct it, what reason is recorded, and how long after the fact a correction is allowed. An implementation that handles the standard shift beautifully and exceptions by email has moved the real work outside the system."
+      },
+      {
+        "type": "h2",
+        "text": "Capture: clocks, mobile, and offline reality"
+      },
+      {
+        "type": "p",
+        "text": "Choose capture methods population by population. A fixed terminal suits a single-site workforce that passes one entrance; it fails field crews, home workers, and multi-site staff who start where the work is. Mobile suits distributed work but raises its own questions: which devices, what location evidence is proportionate, and what happens with no signal. Web timesheets suit office staff — and invite exactly the estimation the project was meant to remove if they become the default for hourly work."
+      },
+      {
+        "type": "p",
+        "text": "Test capture in the conditions of use, not the project room. Try the terminal at shift change with a queue behind it, the app where coverage is intermittent, and the kiosk on the shared device the night shift uses. Decide offline behaviour explicitly: does the device store punches and sync later, and how are duplicates resolved when it reconnects? Employees will find every gap in the first week; the only choice is whether the project finds them first."
+      },
+      {
+        "type": "p",
+        "text": "Identity at capture matters as much as convenience. Buddy punching — one employee recording time for another — is a control failure the design should make difficult and visible, proportionate to the workplace. Apply the chosen verification consistently and explain it honestly as a payroll accuracy control. The employee side of entry and correction is covered in [employee self-service portal rollout](/blog/employee-self-service-rollout); the two designs must agree on what an employee can enter, edit, and see."
+      },
+      {
+        "type": "img",
+        "src": "/images/blog/time-tracking-implementation-guide-2.svg",
+        "alt": "Time tracking control diagram: schedules and pay rules covering schedules, rounding, overtime, breaks, and locations feeding capture methods, validation and exception handling, and approval and payroll, with an audit trail recording who changed time, when, the before and after values, and why.",
+        "caption": "Time tracking control diagram: schedules and pay rules feeding capture methods, validation and exception handling, and manager approval, with an audit trail around every correction before time reaches payroll."
+      },
+      {
+        "type": "h2",
+        "text": "Schedules, approvals, and the manager's queue"
+      },
+      {
+        "type": "p",
+        "text": "Time approval is a recurring duty, not a go-live event. Every pay period, every manager must review time for every report — including weeks when they are travelling, on leave, or covering another team. Design the queue for that reality: exceptions first rather than a wall of correct punches, the schedule visible beside the recorded time, and a route to return time for correction with a reason the employee sees. The discipline is the same one described in [manager self-service rollout](/blog/manager-self-service-rollout): approvals fail as bottlenecks or as rubber stamps, and both land in pay."
+      },
+      {
+        "type": "p",
+        "text": "Schedule accuracy is the approval's foundation. If the schedule says an employee was off while they worked a swapped shift, every comparison the manager sees is wrong. Decide who may change a schedule, until when, and how a same-day swap is recorded, and test approval with awkward cases: a shift crossing midnight, an employee with two roles at two rates in one week, and a manager approving for an acting team."
+      },
+      {
+        "type": "p",
+        "text": "Edits need the strongest control in the design. Any change to recorded time after capture should carry who changed it, when, the before and after values, and a reason. That audit trail protects employees and managers alike when pay is questioned months later."
+      },
+      {
+        "type": "h2",
+        "text": "Testing and parallel running: prove a full cycle"
+      },
+      {
+        "type": "p",
+        "text": "Test across a full pay cycle, with cases drawn from real history rather than invented tidy shifts. Include overtime weeks, holidays, absences, new starters mid-period, leavers, transfers between schedules, and at least one manager absence with delegated approval. Each case must travel the whole path — capture, exception handling, approval, and pay calculation — because most defects live at the hand-offs, not inside a single screen."
+      },
+      {
+        "type": "p",
+        "text": "Parallel running is the decisive proof. Run old and new methods together for at least one full pay period and reconcile outcomes employee by employee: hours by type, overtime, and pay elements. The approach in [parallel testing beyond payroll](/blog/parallel-testing-beyond-payroll) applies directly — define in advance what counts as an explained difference, such as a deliberate rule change, versus a defect. A difference nobody can explain is a stop signal for go-live."
+      },
+      {
+        "type": "p",
+        "text": "Switch capture at a period boundary wherever possible, train supervisors before employees, and keep old records accessible for questions that arrive with the first pay statements. Publish before go-live exactly how an employee queries time or pay and how quickly a confirmed error will be corrected — that commitment, kept, is what converts a difficult first cycle into trust."
+      },
+      {
+        "type": "h2",
+        "text": "Common mistakes"
+      },
+      {
+        "type": "p",
+        "text": "Most time tracking failures are rule and workflow decisions, not device failures."
+      },
+      {
+        "type": "accordion",
+        "label": "Time tracking mistakes, as a diagnostic",
+        "items": [
+          {
+            "q": "Buying clocks before inventorying rules",
+            "a": "Hardware captures whatever it is pointed at. If schedules, rounding, overtime, and exception rules were never inventoried, the devices go live faithfully recording time the system then interprets wrongly — and every error lands in pay."
+          },
+          {
+            "q": "One capture method for every population",
+            "a": "A terminal by one entrance does not serve field crews, home workers, or multi-site staff. When the assigned method does not fit the work, people invent workarounds — paper notes, supervisor spreadsheets — and the system holds a partial record presented as complete."
+          },
+          {
+            "q": "Automatic break deductions nobody validated",
+            "a": "Deducting a standard break regardless of whether it was taken produces timesheets that look complete and pay that is quietly short. Validate deduction rules against real working patterns and give employees a visible way to record a missed or shortened break."
+          },
+          {
+            "q": "Edits without an audit trail",
+            "a": "Time corrected without who, when, before-and-after values, and a reason cannot be defended when pay is questioned — and unrecorded editing invites abuse. The audit trail is a core requirement, not an administrator option."
+          },
+          {
+            "q": "Testing only standard shifts",
+            "a": "Midnight-crossing shifts, overtime weeks, holidays, and manager absence are where time systems break. A test set of tidy daytime shifts proves the demo, not the pay cycle."
+          },
+          {
+            "q": "Skipping the parallel run to hold the date",
+            "a": "Without a reconciled parallel period, the first live payroll is the test — conducted on real people's pay. An unexplained difference found in parallel is a defect fixed cheaply; the same difference found after payment is a trust incident."
+          }
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Key Takeaways"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "Time tracking is a payroll control: rules, approvals, and audit decide accuracy — the clock only captures.",
+          "Inventory how time is actually worked and paid before choosing devices, and test rounding and break rules on real history.",
+          "Match capture to each population and test it in real conditions, including queues, shared devices, and poor connectivity.",
+          "Design the manager queue around exceptions, with schedule accuracy underneath and a full audit trail on every edit.",
+          "Prove a full cycle in parallel and reconcile line by line; an unexplained difference is a stop signal."
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Frequently Asked Questions"
+      },
+      {
+        "type": "p",
+        "text": "Should we use terminals, mobile, or web timesheets? Usually a deliberate mix, matched population by population. Fixed sites suit terminals, distributed and field work suits mobile, and salaried office patterns may suit web entry. The test is whether the method fits how and where work starts — not which method is newest."
+      },
+      {
+        "type": "p",
+        "text": "How should rounding work? With a single documented rule, applied consistently, whose effect has been tested on real historical time before go-live. The team must be able to explain it plainly, and it must comply with the employment standards in each jurisdiction — take local advice where the rule is in doubt."
+      },
+      {
+        "type": "p",
+        "text": "Who should be able to edit recorded time? As few people as the operation allows, always with a recorded reason and a before-and-after audit trail. Employees should be able to flag and explain a missed punch, managers to approve corrections for their team, and administrators to intervene only through the same audited route."
+      },
+      {
+        "type": "p",
+        "text": "How long should the parallel run last? At least one full pay period, covering a representative cycle including overtime, absences, and approvals, reconciled employee by employee. Extend it when unexplained differences remain — the parallel run ends when the differences are explained, not when the calendar says so."
+      },
+      {
+        "type": "h2",
+        "text": "Next Steps"
+      },
+      {
+        "type": "p",
+        "text": "Start with the rules inventory: every schedule pattern, rounding and break rule, overtime trigger, and exception type, each with its owner. Then map each population to its capture method, write the approval and edit controls, build test cases from real history, and schedule the parallel run before anyone promises a go-live date."
+      },
+      {
+        "type": "quiz",
+        "label": "Check your understanding",
+        "questions": [
+          {
+            "q": "Two pay cycles after go-live, employees on one shift consistently lose a small amount of time to rounding, and complaints are rising. What does this most likely indicate?",
+            "options": [
+              {
+                "text": "Employees are misunderstanding a correct system and need a reminder about the policy",
+                "correct": false,
+                "why": "A consistent one-directional loss is a pattern in the rule's effect, not a comprehension problem. Dismissing it as misunderstanding leaves a systematic underpayment in place."
+              },
+              {
+                "text": "The rounding rule was never tested for its effect on real historical time, so its systematic impact was discovered by employees instead of the project",
+                "correct": true,
+                "why": "Rounding is never neutral in effect. Testing the configured rule against real past time before go-live shows who gains and who loses, while the rule can still be corrected cheaply and explained honestly."
+              },
+              {
+                "text": "Rounding should be removed so all time is paid to the exact minute",
+                "correct": false,
+                "why": "Removing rounding may or may not be the right answer, but it is a new rule decision with its own effects. The failure was going live without measuring the chosen rule's impact at all."
+              }
+            ]
+          },
+          {
+            "q": "Field crews cannot use the new terminal-based process because they start work at client sites, so supervisors keep a spreadsheet and upload totals weekly. What is the design gap?",
+            "options": [
+              {
+                "text": "Supervisors need more training on the terminal process",
+                "correct": false,
+                "why": "Training cannot fix a capture method that is physically absent from where work starts. The crews are not failing the design; the design never included them."
+              },
+              {
+                "text": "Capture was chosen as a single method for the whole organisation instead of matched population by population, so an entire workforce segment works outside the system",
+                "correct": true,
+                "why": "Terminals, mobile, and web each fit different working patterns. A population forced onto an unusable method creates a shadow record — here a spreadsheet — and the system holds partial data presented as complete."
+              },
+              {
+                "text": "Field crews should travel to a terminal before starting work",
+                "correct": false,
+                "why": "Adding unpaid travel to satisfy a device is neither practical nor defensible. Capture must go to where the work is, with proportionate identity and location controls."
+              }
+            ]
+          },
+          {
+            "q": "The parallel run shows a group of employees with materially fewer overtime hours in the new system, and nobody can explain why. The go-live date is next week. What should happen?",
+            "options": [
+              {
+                "text": "Go live as planned, because most employees reconciled correctly",
+                "correct": false,
+                "why": "An unexplained difference concentrated in overtime is precisely the failure parallel running exists to catch. Going live converts it into real underpayments for an identifiable group."
+              },
+              {
+                "text": "Average the two results for the affected group in the first live period",
+                "correct": false,
+                "why": "Averaging hides a rule, schedule, or configuration defect and still pays people incorrectly. Differences must be explained to a cause, not blended away."
+              },
+              {
+                "text": "Hold go-live for that population, trace the difference to its rule or configuration cause, fix it, and re-run the affected cases until every difference is explained",
+                "correct": true,
+                "why": "The parallel run ends when differences are explained, not when the calendar says so. A traced cause — an overtime trigger, a schedule assignment, a crossing-midnight rule — can be fixed and re-proved before anyone's pay depends on it."
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
     "slug": "manager-self-service-rollout",
     "title": "Manager Self-Service Rollout",
     "excerpt": "Roll out manager self-service managers actually use: team visibility, approvals, delegation, training, and support that prevents bottlenecks.",
