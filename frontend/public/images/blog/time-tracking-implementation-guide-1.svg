@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="640" viewBox="0 0 1200 640" role="img" aria-label="The time tracking implementation journey: rules inventoried, capture chosen, approvals designed, full cycle tested, parallel run reconciled, and live pay trusted, with lead owners at each stage">
+  <defs>
+    <linearGradient id="hdr" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#0f172a"/>
+      <stop offset="1" stop-color="#1e3a5f"/>
+    </linearGradient>
+  </defs>
+  <rect x="0" y="0" width="1200" height="640" fill="#ffffff"/>
+  <rect x="0" y="0" width="1200" height="88" fill="url(#hdr)"/>
+  <text x="48" y="40" font-family="Georgia, serif" font-size="29" fill="#ffffff">Time Tracking: From Rules to Trusted Pay</text>
+  <text x="48" y="70" font-family="Arial, sans-serif" font-size="20" fill="#94A3B8">Six stages — each with a purpose and lead owners</text>
+  <g>
+    <rect x="40" y="108" width="168" height="252" rx="12" fill="#F0F4F8" stroke="#2B6CB0" stroke-width="2"/>
+    <text x="56" y="142" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#1A202C">Rules</text>
+    <text x="56" y="166" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#1A202C">Inventoried</text>
+    <text x="56" y="200" font-family="Arial, sans-serif" font-size="15" fill="#475569">Schedules, rounding,</text>
+    <text x="56" y="222" font-family="Arial, sans-serif" font-size="15" fill="#475569">overtime, breaks,</text>
+    <text x="56" y="244" font-family="Arial, sans-serif" font-size="15" fill="#475569">and exceptions as</text>
+    <text x="56" y="266" font-family="Arial, sans-serif" font-size="15" fill="#475569">actually worked.</text>
+    <text x="56" y="330" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#2B6CB0">Lead: Payroll, HR</text>
+  </g>
+  <g>
+    <rect x="224" y="108" width="168" height="252" rx="12" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+    <text x="240" y="142" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#1A202C">Capture</text>
+    <text x="240" y="166" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#1A202C">Chosen</text>
+    <text x="240" y="200" font-family="Arial, sans-serif" font-size="15" fill="#475569">Terminal, mobile,</text>
+    <text x="240" y="222" font-family="Arial, sans-serif" font-size="15" fill="#475569">or web matched to</text>
+    <text x="240" y="244" font-family="Arial, sans-serif" font-size="15" fill="#475569">each population</text>
+    <text x="240" y="266" font-family="Arial, sans-serif" font-size="15" fill="#475569">and workplace.</text>
+    <text x="240" y="330" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#2B6CB0">Lead: HR, IT</text>
+  </g>
+  <g>
+    <rect x="408" y="108" width="168" height="252" rx="12" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+    <text x="424" y="142" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#1A202C">Approvals</text>
+    <text x="424" y="166" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#1A202C">Designed</text>
+    <text x="424" y="200" font-family="Arial, sans-serif" font-size="15" fill="#475569">Exception-first</text>
+    <text x="424" y="222" font-family="Arial, sans-serif" font-size="15" fill="#475569">queues, correction</text>
+    <text x="424" y="244" font-family="Arial, sans-serif" font-size="15" fill="#475569">routes, and a full</text>
+    <text x="424" y="266" font-family="Arial, sans-serif" font-size="15" fill="#475569">audit trail on edits.</text>
+    <text x="424" y="330" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#2B6CB0">Lead: HR, Payroll</text>
+  </g>
+  <g>
+    <rect x="592" y="108" width="168" height="252" rx="12" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+    <text x="608" y="142" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#1A202C">Full Cycle</text>
+    <text x="608" y="166" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#1A202C">Tested</text>
+    <text x="608" y="200" font-family="Arial, sans-serif" font-size="15" fill="#475569">Awkward shifts,</text>
+    <text x="608" y="222" font-family="Arial, sans-serif" font-size="15" fill="#475569">overtime weeks,</text>
+    <text x="608" y="244" font-family="Arial, sans-serif" font-size="15" fill="#475569">holidays, and</text>
+    <text x="608" y="266" font-family="Arial, sans-serif" font-size="15" fill="#475569">manager absence.</text>
+    <text x="608" y="330" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#2B6CB0">Lead: Programme</text>
+  </g>
+  <g>
+    <rect x="776" y="108" width="168" height="252" rx="12" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+    <text x="792" y="142" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#1A202C">Parallel Run</text>
+    <text x="792" y="166" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#1A202C">Reconciled</text>
+    <text x="792" y="200" font-family="Arial, sans-serif" font-size="15" fill="#475569">Old and new time</text>
+    <text x="792" y="222" font-family="Arial, sans-serif" font-size="15" fill="#475569">compared line by</text>
+    <text x="792" y="244" font-family="Arial, sans-serif" font-size="15" fill="#475569">line for a full</text>
+    <text x="792" y="266" font-family="Arial, sans-serif" font-size="15" fill="#475569">pay period.</text>
+    <text x="792" y="330" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#2B6CB0">Lead: Payroll</text>
+  </g>
+  <g>
+    <rect x="960" y="108" width="200" height="252" rx="12" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+    <text x="976" y="142" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#1A202C">Live Pay</text>
+    <text x="976" y="166" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#1A202C">Trusted</text>
+    <text x="976" y="200" font-family="Arial, sans-serif" font-size="15" fill="#475569">Pay built on time</text>
+    <text x="976" y="222" font-family="Arial, sans-serif" font-size="15" fill="#475569">employees can query</text>
+    <text x="976" y="244" font-family="Arial, sans-serif" font-size="15" fill="#475569">and corrections</text>
+    <text x="976" y="266" font-family="Arial, sans-serif" font-size="15" fill="#475569">fixed quickly.</text>
+    <text x="976" y="330" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#2B6CB0">Lead: HR, Payroll</text>
+  </g>
+  <rect x="40" y="392" width="1120" height="72" rx="12" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+  <text x="64" y="424" font-family="Arial, sans-serif" font-size="17" font-weight="bold" fill="#1A202C">Every stage depends on accurate schedules and reporting lines</text>
+  <text x="64" y="450" font-family="Arial, sans-serif" font-size="16" fill="#475569">Schedule, position, and manager decide how time is validated, approved, and costed.</text>
+  <rect x="40" y="488" width="1120" height="72" rx="12" fill="#ffffff" stroke="#E2E8F0" stroke-width="2"/>
+  <text x="64" y="520" font-family="Arial, sans-serif" font-size="17" font-weight="bold" fill="#1A202C">Exceptions are the daily workload, not an edge case</text>
+  <text x="64" y="546" font-family="Arial, sans-serif" font-size="16" fill="#64748B">Missed punches and corrections need owners and an audit trail before go-live, not after.</text>
+  <text x="40" y="600" font-family="Arial, sans-serif" font-size="14" fill="#94A3B8">Figure 1 — Time tracking implementation journey</text>
+</svg>
