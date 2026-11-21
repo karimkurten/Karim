@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="640" viewBox="0 0 1200 640" role="img" aria-label="The scheduling implementation journey: demand defined, constraints captured, changes designed, hardest week tested, publishing rhythm agreed, and live roster trusted, with lead owners at each stage">
+  <defs>
+    <linearGradient id="hdr" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#0f172a"/>
+      <stop offset="1" stop-color="#1e3a5f"/>
+    </linearGradient>
+  </defs>
+  <rect x="0" y="0" width="1200" height="640" fill="#ffffff"/>
+  <rect x="0" y="0" width="1200" height="88" fill="url(#hdr)"/>
+  <text x="48" y="40" font-family="Georgia, serif" font-size="29" fill="#ffffff">Scheduling: From Demand to a Trusted Roster</text>
+  <text x="48" y="70" font-family="Arial, sans-serif" font-size="20" fill="#94A3B8">Six stages — each with a purpose and lead owners</text>
+  <g>
+    <rect x="40" y="108" width="168" height="252" rx="12" fill="#F0F4F8" stroke="#2B6CB0" stroke-width="2"/>
+    <text x="56" y="142" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#1A202C">Demand</text>
+    <text x="56" y="166" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#1A202C">Defined</text>
+    <text x="56" y="200" font-family="Arial, sans-serif" font-size="15" fill="#475569">Coverage by hour,</text>
+    <text x="56" y="222" font-family="Arial, sans-serif" font-size="15" fill="#475569">role, and location,</text>
+    <text x="56" y="244" font-family="Arial, sans-serif" font-size="15" fill="#475569">with peaks and</text>
+    <text x="56" y="266" font-family="Arial, sans-serif" font-size="15" fill="#475569">minimum staffing.</text>
+    <text x="56" y="330" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#2B6CB0">Lead: Operations</text>
+  </g>
+  <g>
+    <rect x="224" y="108" width="168" height="252" rx="12" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+    <text x="240" y="142" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#1A202C">Constraints</text>
+    <text x="240" y="166" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#1A202C">Captured</text>
+    <text x="240" y="200" font-family="Arial, sans-serif" font-size="15" fill="#475569">Availability,</text>
+    <text x="240" y="222" font-family="Arial, sans-serif" font-size="15" fill="#475569">qualifications, and</text>
+    <text x="240" y="244" font-family="Arial, sans-serif" font-size="15" fill="#475569">rest rules as dated,</text>
+    <text x="240" y="266" font-family="Arial, sans-serif" font-size="15" fill="#475569">structured data.</text>
+    <text x="240" y="330" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#2B6CB0">Lead: HR, Ops</text>
+  </g>
+  <g>
+    <rect x="408" y="108" width="168" height="252" rx="12" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+    <text x="424" y="142" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#1A202C">Changes</text>
+    <text x="424" y="166" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#1A202C">Designed</text>
+    <text x="424" y="200" font-family="Arial, sans-serif" font-size="15" fill="#475569">Swaps, call-ins, and</text>
+    <text x="424" y="222" font-family="Arial, sans-serif" font-size="15" fill="#475569">absence cover with</text>
+    <text x="424" y="244" font-family="Arial, sans-serif" font-size="15" fill="#475569">re-validation on</text>
+    <text x="424" y="266" font-family="Arial, sans-serif" font-size="15" fill="#475569">every change.</text>
+    <text x="424" y="330" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#2B6CB0">Lead: HR, Ops</text>
+  </g>
+  <g>
+    <rect x="592" y="108" width="168" height="252" rx="12" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+    <text x="608" y="142" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#1A202C">Hardest Week</text>
+    <text x="608" y="166" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#1A202C">Tested</text>
+    <text x="608" y="200" font-family="Arial, sans-serif" font-size="15" fill="#475569">Peak demand, leave,</text>
+    <text x="608" y="222" font-family="Arial, sans-serif" font-size="15" fill="#475569">absence, expiring</text>
+    <text x="608" y="244" font-family="Arial, sans-serif" font-size="15" fill="#475569">qualifications, and</text>
+    <text x="608" y="266" font-family="Arial, sans-serif" font-size="15" fill="#475569">delegated approval.</text>
+    <text x="608" y="330" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#2B6CB0">Lead: Programme</text>
+  </g>
+  <g>
+    <rect x="776" y="108" width="168" height="252" rx="12" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+    <text x="792" y="142" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#1A202C">Publishing</text>
+    <text x="792" y="166" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#1A202C">Rhythm Agreed</text>
+    <text x="792" y="200" font-family="Arial, sans-serif" font-size="15" fill="#475569">A set publish date,</text>
+    <text x="792" y="222" font-family="Arial, sans-serif" font-size="15" fill="#475569">a clear firm point,</text>
+    <text x="792" y="244" font-family="Arial, sans-serif" font-size="15" fill="#475569">and notified</text>
+    <text x="792" y="266" font-family="Arial, sans-serif" font-size="15" fill="#475569">changes for all.</text>
+    <text x="792" y="330" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#2B6CB0">Lead: Operations</text>
+  </g>
+  <g>
+    <rect x="960" y="108" width="200" height="252" rx="12" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+    <text x="976" y="142" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#1A202C">Live Roster</text>
+    <text x="976" y="166" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#1A202C">Trusted</text>
+    <text x="976" y="200" font-family="Arial, sans-serif" font-size="15" fill="#475569">Shifts employees</text>
+    <text x="976" y="222" font-family="Arial, sans-serif" font-size="15" fill="#475569">can plan around</text>
+    <text x="976" y="244" font-family="Arial, sans-serif" font-size="15" fill="#475569">and errors fixed</text>
+    <text x="976" y="266" font-family="Arial, sans-serif" font-size="15" fill="#475569">quickly.</text>
+    <text x="976" y="330" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#2B6CB0">Lead: HR, Ops</text>
+  </g>
+  <rect x="40" y="392" width="1120" height="72" rx="12" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+  <text x="64" y="424" font-family="Arial, sans-serif" font-size="17" font-weight="bold" fill="#1A202C">Every stage depends on accurate positions, locations, and reporting lines</text>
+  <text x="64" y="450" font-family="Arial, sans-serif" font-size="16" fill="#475569">Position, location, and manager decide who can be scheduled where, and who approves the result.</text>
+  <rect x="40" y="488" width="1120" height="72" rx="12" fill="#ffffff" stroke="#E2E8F0" stroke-width="2"/>
+  <text x="64" y="520" font-family="Arial, sans-serif" font-size="17" font-weight="bold" fill="#1A202C">Changes are the daily workload, not an edge case</text>
+  <text x="64" y="546" font-family="Arial, sans-serif" font-size="16" fill="#64748B">Swaps and absence cover need owners and re-validation before go-live, not after.</text>
+  <text x="40" y="600" font-family="Arial, sans-serif" font-size="14" fill="#94A3B8">Figure 1 — Scheduling implementation journey</text>
+</svg>
