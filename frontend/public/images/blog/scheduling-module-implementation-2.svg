@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="640" viewBox="0 0 1200 640" role="img" aria-label="Scheduling control diagram: demand and staffing rules feeding schedule building, validation and publishing, and changes and time tracking, with an audit trail around every late change">
+  <defs>
+    <linearGradient id="hdr" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#0f172a"/>
+      <stop offset="1" stop-color="#1e3a5f"/>
+    </linearGradient>
+  </defs>
+  <rect x="0" y="0" width="1200" height="640" fill="#ffffff"/>
+  <rect x="0" y="0" width="1200" height="88" fill="url(#hdr)"/>
+  <text x="48" y="40" font-family="Georgia, serif" font-size="29" fill="#ffffff">Scheduling Controls: Demand to Time Tracking</text>
+  <text x="48" y="70" font-family="Arial, sans-serif" font-size="20" fill="#94A3B8">Rules first — then building, publishing, and controlled change</text>
+  <g>
+    <rect x="40" y="120" width="340" height="300" rx="12" fill="#F0F4F8" stroke="#2B6CB0" stroke-width="2"/>
+    <text x="64" y="156" font-family="Arial, sans-serif" font-size="19" font-weight="bold" fill="#1A202C">Demand and Staffing Rules</text>
+    <text x="64" y="196" font-family="Arial, sans-serif" font-size="16" fill="#475569">Coverage by hour and location</text>
+    <text x="64" y="226" font-family="Arial, sans-serif" font-size="16" fill="#475569">Minimum staffing levels</text>
+    <text x="64" y="256" font-family="Arial, sans-serif" font-size="16" fill="#475569">Qualifications and certifications</text>
+    <text x="64" y="286" font-family="Arial, sans-serif" font-size="16" fill="#475569">Availability and preferences</text>
+    <text x="64" y="316" font-family="Arial, sans-serif" font-size="16" fill="#475569">Rest and maximum-hour rules</text>
+    <text x="64" y="346" font-family="Arial, sans-serif" font-size="16" fill="#475569">Fair rotation of hard shifts</text>
+    <text x="64" y="392" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#2B6CB0">Owned by: Operations, HR</text>
+  </g>
+  <text x="392" y="278" font-family="Arial, sans-serif" font-size="28" fill="#2B6CB0">→</text>
+  <g>
+    <rect x="440" y="120" width="340" height="300" rx="12" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+    <text x="464" y="156" font-family="Arial, sans-serif" font-size="19" font-weight="bold" fill="#1A202C">Build, Validate, Publish</text>
+    <text x="464" y="196" font-family="Arial, sans-serif" font-size="16" fill="#475569">Draft from demand templates</text>
+    <text x="464" y="226" font-family="Arial, sans-serif" font-size="16" fill="#475569">Validate availability and rest</text>
+    <text x="464" y="256" font-family="Arial, sans-serif" font-size="16" fill="#475569">Check qualification fit</text>
+    <text x="464" y="286" font-family="Arial, sans-serif" font-size="16" fill="#475569">Review fairness and overtime</text>
+    <text x="464" y="316" font-family="Arial, sans-serif" font-size="16" fill="#475569">Publish on the agreed rhythm</text>
+    <text x="464" y="346" font-family="Arial, sans-serif" font-size="16" fill="#475569">Confirm employees have seen it</text>
+    <text x="464" y="392" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#2B6CB0">Owned by: Managers</text>
+  </g>
+  <text x="792" y="278" font-family="Arial, sans-serif" font-size="28" fill="#2B6CB0">→</text>
+  <g>
+    <rect x="840" y="120" width="320" height="300" rx="12" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+    <text x="864" y="156" font-family="Arial, sans-serif" font-size="19" font-weight="bold" fill="#1A202C">Changes and Time Tracking</text>
+    <text x="864" y="196" font-family="Arial, sans-serif" font-size="16" fill="#475569">Swaps re-checked for both people</text>
+    <text x="864" y="226" font-family="Arial, sans-serif" font-size="16" fill="#475569">Absence gaps shown at once</text>
+    <text x="864" y="256" font-family="Arial, sans-serif" font-size="16" fill="#475569">Late changes need approval</text>
+    <text x="864" y="286" font-family="Arial, sans-serif" font-size="16" fill="#475569">Affected staff notified</text>
+    <text x="864" y="316" font-family="Arial, sans-serif" font-size="16" fill="#475569">Roster feeds time validation</text>
+    <text x="864" y="346" font-family="Arial, sans-serif" font-size="16" fill="#475569">Exceptions trace to the schedule</text>
+    <text x="864" y="392" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#2B6CB0">Owned by: Managers, HR</text>
+  </g>
+  <rect x="40" y="452" width="1120" height="72" rx="12" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+  <text x="64" y="484" font-family="Arial, sans-serif" font-size="17" font-weight="bold" fill="#1A202C">Audit trail on every late change</text>
+  <text x="64" y="510" font-family="Arial, sans-serif" font-size="16" fill="#475569">Who changed the roster, when, what changed, and why — so patterns can be reviewed, not relitigated.</text>
+  <rect x="40" y="540" width="1120" height="52" rx="12" fill="#ffffff" stroke="#E2E8F0" stroke-width="2"/>
+  <text x="64" y="573" font-family="Arial, sans-serif" font-size="16" fill="#64748B">An unexplained coverage gap in parallel running is a stop signal for go-live.</text>
+  <text x="40" y="622" font-family="Arial, sans-serif" font-size="14" fill="#94A3B8">Figure 2 — Scheduling control diagram</text>
+</svg>
