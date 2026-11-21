@@ -1,5 +1,290 @@
 [
   {
+    "slug": "scheduling-module-implementation",
+    "title": "Employee Scheduling Module Implementation",
+    "excerpt": "Implement employee scheduling that holds: demand and availability, shift rules and swaps, publishing discipline, and testing before time and pay depend on it.",
+    "publishedAt": "2026-11-21",
+    "readingTime": "8 min read",
+    "cover": "/images/blog/scheduling-module-implementation-cover.webp",
+    "tags": [
+      "HCM",
+      "Implementation",
+      "Scheduling",
+      "Workforce Management"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "A schedule is a promise made in advance: this person, in this place, at this time, doing this work. When scheduling moves into a new system, that promise is rebuilt from rules — demand, availability, qualifications, rest requirements, and approval habits often held in a supervisor's head or a spreadsheet. If those rules are not made explicit, the system will produce schedules that look tidy and fail on the floor."
+      },
+      {
+        "type": "p",
+        "text": "This guide treats scheduling as an operating discipline, not a calendar feature: define demand honestly, capture constraints as data, design swaps and changes deliberately, and test the hardest week in the year before the first live roster depends on it."
+      },
+      {
+        "type": "h2",
+        "text": "Scheduling is an operating discipline, not a calendar feature"
+      },
+      {
+        "type": "p",
+        "text": "Projects that start with the calendar screen start in the wrong place. Dragging a shift is the easy part; the system behind it must know why that shift exists, who is qualified to work it, what rest the person had before it, whether it crosses into overtime, and who may approve a change after publication. Two organisations can use the same module and need entirely different implementations because their demand and labour rules differ."
+      },
+      {
+        "type": "p",
+        "text": "The wider context is [the Complete Guide to Workforce Management Implementation](/blog/workforce-management-implementation-guide): scheduling feeds time tracking, absence, and payroll, so a decision in one place surfaces in the others. The foundation is [the Core HR implementation guide](/blog/core-hr-implementation-guide): positions, locations, skills, and reporting lines decide who can be scheduled where and who approves the result. If that structure is wrong, even a careful manager builds the roster against the wrong team."
+      },
+      {
+        "type": "steps",
+        "label": "Implementing scheduling, in order",
+        "intro": "Five moves that turn a calendar into a roster people can rely on.",
+        "items": [
+          {
+            "title": "Define demand before templates",
+            "text": "Describe the work that must be covered by hour, day, location, and role, including peaks, quiet periods, and minimum staffing. Templates built without demand simply repeat last year's gaps faster."
+          },
+          {
+            "title": "Capture availability and constraints as data",
+            "text": "Record availability, qualifications, certifications, rest rules, and maximum hours in the system, with owners and review dates. A constraint that lives only in a supervisor's memory will be broken by the first automated schedule."
+          },
+          {
+            "title": "Design changes, swaps, and call-ins",
+            "text": "Set who may swap, trade, or pick up a shift, what approval is required, and how late a change can happen. Changes are the daily workload, not an exception to design later."
+          },
+          {
+            "title": "Test the hardest week, not an average one",
+            "text": "Build and publish a test roster for a peak week with absences, overtime, and a manager away. Average weeks hide the rule conflicts that break real operations."
+          },
+          {
+            "title": "Publish on a rhythm and freeze with care",
+            "text": "Agree how far ahead schedules are published, when they become firm, and how urgent changes are communicated. A predictable rhythm is what lets employees plan their lives around work."
+          }
+        ]
+      },
+      {
+        "type": "img",
+        "src": "/images/blog/scheduling-module-implementation-1.svg",
+        "alt": "Scheduling implementation journey diagram: six stages from demand defined and constraints captured through changes designed and hardest week tested to publishing rhythm agreed and live roster trusted, with the lead owner named at each stage and a strip showing that every stage depends on accurate positions, locations, and reporting lines.",
+        "caption": "Scheduling implementation journey: demand defined, constraints captured, changes designed, hardest week tested, publishing rhythm agreed, and live roster trusted."
+      },
+      {
+        "type": "h2",
+        "text": "Start with demand: coverage, peaks, and minimum staffing"
+      },
+      {
+        "type": "p",
+        "text": "Begin with the work, gathered from operations — rosters, service patterns, opening hours, and supervisors — not from last month's schedule alone. For each location and role, describe the coverage actually needed: when doors open and close, which hours peak, what minimum staffing keeps the service safe and lawful, and which tasks need a qualified person rather than any available person. A schedule built to a headcount rather than to demand will be overstaffed in quiet hours and short at the peak, every week, by design."
+      },
+      {
+        "type": "p",
+        "text": "Demand is rarely flat, and pretending otherwise is expensive. Seasonal peaks, promotional periods, school holidays, and local events all reshape the roster. Decide which variations a template should absorb, which need a special planning cycle, and who declares that a peak period has begun — making the consequences visible: overtime exposure, rest-rule pressure, and the point at which there are not enough qualified people, however the shifts are arranged."
+      },
+      {
+        "type": "p",
+        "text": "Templates come last, not first. A template is a demand pattern that repeats; it earns its place only after the pattern has been described and challenged. Keep templates few, named by the pattern they serve, and review them when the operation changes."
+      },
+      {
+        "type": "h2",
+        "text": "Availability, qualifications, and the rules that protect people"
+      },
+      {
+        "type": "p",
+        "text": "A schedule can only respect constraints it can see. Availability must be captured as structured data with an effective date and a review rhythm, not as a note on a profile. The same applies to qualifications: who may work alone, who may handle a regulated task, and whose certification expires next month. When a qualification lapses, the system should make the person unschedulable for that work before a manager discovers it on the day."
+      },
+      {
+        "type": "p",
+        "text": "Rest and maximum-hour rules deserve plain-language decisions, tested on real historical rosters. Minimum rest between shifts, limits on consecutive days, and weekly hour ceilings are protections, not inconveniences, and they interact: a late finish followed by an early start may satisfy each rule in isolation and still exhaust a team. Document each rule, test it on the busiest historical week, and be able to explain why a requested shift was refused."
+      },
+      {
+        "type": "p",
+        "text": "Fairness needs a design decision too. Desirable and undesirable shifts — weekends, evenings, holidays — will be distributed somehow; the only choice is whether the distribution is visible and deliberate or accidental and resented. Decide how rotation works and what a manager sees when one person has carried a disproportionate share. The system cannot make an unfair roster fair, but it can make the pattern visible while there is still time to correct it."
+      },
+      {
+        "type": "h2",
+        "text": "Publishing, swaps, and changes after the roster is live"
+      },
+      {
+        "type": "p",
+        "text": "Publication is the moment a draft becomes a commitment. Agree how far in advance schedules are published, what means draft and what means final, and how an employee confirms they have seen their shifts. The employee side is covered in [employee self-service portal rollout](/blog/employee-self-service-rollout); the two designs must agree on what an employee can view, request, and accept. The manager side follows the discipline in [manager self-service rollout](/blog/manager-self-service-rollout): approvals fail as bottlenecks or rubber stamps, and both land on the floor as uncovered shifts."
+      },
+      {
+        "type": "p",
+        "text": "Changes after publication are where scheduling earns or loses trust. Swaps, shifts offered to a pool, call-ins, and manager-initiated changes each need a clear route: who initiates, who approves, what checks run again — qualification, rest, and hours — and how the affected employees are notified. A swap approved without re-checking rest rules moves a violation from the draft roster to the live one. Set a cut-off after which changes need stronger approval, and record the reason for late changes so patterns can be reviewed."
+      },
+      {
+        "type": "p",
+        "text": "Absence is a scheduling input, not a surprise. When leave is approved or sickness is reported, the roster should show the gap immediately, with the options a manager actually has: redistribute, offer the shift, or run short with a recorded decision. The first absence after go-live will arrive in the first week."
+      },
+      {
+        "type": "img",
+        "src": "/images/blog/scheduling-module-implementation-2.svg",
+        "alt": "Scheduling control diagram: demand and staffing rules covering coverage, minimum staffing, qualifications, rest rules, and locations feeding schedule building, validation and publishing, and changes and time tracking, with an audit trail recording who changed the roster, when, what changed, and why.",
+        "caption": "Scheduling control diagram: demand and staffing rules feeding schedule building, validation against availability and rest rules, and publishing and changes, with an audit trail around every late change before the roster reaches time tracking."
+      },
+      {
+        "type": "h2",
+        "text": "Testing: prove the hardest week before go-live"
+      },
+      {
+        "type": "p",
+        "text": "Test with the hardest week the operation runs — a peak period with full demand, planned leave, an absence to cover, a qualification expiring, and a manager away with delegated authority. Each scenario must travel the whole path: demand to draft, validation, publication, a swap, a late change, and hand-off to time capture. The published schedule is what [the time tracking implementation guide](/blog/time-tracking-implementation-guide) validates recorded time against, so an error here becomes a false exception — or a missed one — in every pay cycle."
+      },
+      {
+        "type": "p",
+        "text": "Run old and new scheduling in parallel for at least one full cycle and compare shift by shift: coverage by hour, overtime created, rest-rule exceptions, and who was assigned the undesirable shifts. Define in advance what counts as an explained difference, such as a deliberate fairness rotation, versus a defect. A coverage gap nobody can explain is a stop signal for go-live."
+      },
+      {
+        "type": "p",
+        "text": "Switch over at a natural boundary — the start of a scheduling period, never mid-week — train managers before employees, and keep the old roster accessible for questions. Publish before go-live how an employee queries a shift, requests a change, and escalates an uncovered shift, and how quickly a confirmed error will be corrected. That commitment, kept, converts a difficult first roster into trust."
+      },
+      {
+        "type": "h2",
+        "text": "Common mistakes"
+      },
+      {
+        "type": "p",
+        "text": "Most scheduling failures are demand, rule, and workflow decisions, not calendar defects."
+      },
+      {
+        "type": "accordion",
+        "label": "Scheduling mistakes, as a diagnostic",
+        "items": [
+          {
+            "q": "Building templates before defining demand",
+            "a": "A template repeats whatever pattern it was copied from, including its gaps. If coverage by hour, role, and location was never described, the new system simply produces the old shortfalls faster and with more confidence."
+          },
+          {
+            "q": "Availability kept in supervisors' heads",
+            "a": "Availability and qualifications that are not structured data cannot be validated. The first automatically built roster will assign people to shifts they cannot work and tasks they are not qualified for, and every correction will be manual."
+          },
+          {
+            "q": "Swaps approved without re-checking the rules",
+            "a": "A swap changes rest, hours, and qualification fit for two people at once. Approving it on goodwill alone moves a rule violation from the draft into the live roster, where it surfaces as fatigue, overtime, or an uncovered regulated task."
+          },
+          {
+            "q": "No publishing rhythm or freeze discipline",
+            "a": "Schedules published late, changed silently, or firmed up at random teach employees to distrust every roster and check constantly. A predictable publish date, a clear firm point, and notified changes are part of the product, not administration around it."
+          },
+          {
+            "q": "Testing only an average week",
+            "a": "Average weeks hide peak demand, expiring qualifications, and delegated approvals. A test set built from a quiet week proves the demonstration, not the operation."
+          },
+          {
+            "q": "Treating absence as someone else's problem",
+            "a": "Leave and sickness create roster gaps from the first week. If the gap does not appear in the schedule with coverage options attached, managers rebuild the roster in spreadsheets and the system stops being the record."
+          }
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Key Takeaways"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "Scheduling is an operating discipline: demand, constraints, and change workflows decide whether a roster holds — the calendar only displays it.",
+          "Define coverage by hour, role, and location before building templates, and challenge templates when the operation changes.",
+          "Capture availability, qualifications, and rest rules as structured, dated data, and test their effect on the busiest historical week.",
+          "Design publication, swaps, and absence coverage deliberately, re-checking qualification, rest, and hours on every change.",
+          "Prove the hardest week in parallel and switch at a period boundary; an unexplained coverage gap is a stop signal."
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Frequently Asked Questions"
+      },
+      {
+        "type": "p",
+        "text": "How far ahead should schedules be published? Far enough ahead that employees can plan around them and managers can still respond to real demand — set the horizon deliberately for your operation, publish on the same rhythm every cycle, and define the point after which changes need stronger approval and a recorded reason."
+      },
+      {
+        "type": "p",
+        "text": "Should the system build schedules automatically? It can propose, but a manager must remain accountable for the result. Automatic building is only as good as the demand, availability, and rule data beneath it, so prove that data on historical weeks first and keep a human review step where coverage, fairness, and exceptions are judged."
+      },
+      {
+        "type": "p",
+        "text": "How should shift swaps be handled? Through a single in-system route: an employee offers or requests, the system re-checks qualification, rest, and hours for both people, a manager approves where the design requires it, and both employees are notified of the confirmed result. Email and message-thread swaps recreate the roster outside the record."
+      },
+      {
+        "type": "p",
+        "text": "How long should parallel scheduling run? At least one full scheduling cycle, including a demanding week, compared shift by shift for coverage, overtime, and rule exceptions. Extend it while unexplained differences remain — the parallel run ends when the differences are explained, not when the calendar says so."
+      },
+      {
+        "type": "h2",
+        "text": "Next Steps"
+      },
+      {
+        "type": "p",
+        "text": "Start with demand: coverage by hour, role, and location, minimum staffing, and the peak periods that reshape the roster. Then capture availability, qualifications, and rest rules as dated data, write the publishing and change workflows, build test cases from the hardest historical week, and schedule the parallel cycle before anyone promises a go-live date."
+      },
+      {
+        "type": "quiz",
+        "label": "Check your understanding",
+        "questions": [
+          {
+            "q": "The first automatically built roster assigns several employees to shifts they have long been unavailable for, even though their supervisors knew. What is the design gap?",
+            "options": [
+              {
+                "text": "The supervisors need more training on the new calendar",
+                "correct": false,
+                "why": "Training cannot supply data the system was never given. The supervisors' knowledge was real; it simply never became part of the implementation."
+              },
+              {
+                "text": "Availability was never captured as structured, dated data, so validation had nothing to check the roster against",
+                "correct": true,
+                "why": "A schedule can only respect constraints it can see. Availability held in memory or notes is invisible to building and validation, so the first automated roster breaks it at scale."
+              },
+              {
+                "text": "Automatic building should be switched off permanently",
+                "correct": false,
+                "why": "Manual building on the same missing data would fail more slowly, not less. The fix is capturing and maintaining the constraint data, then proving it on historical weeks."
+              }
+            ]
+          },
+          {
+            "q": "Two employees arrange a weekend swap by message and work it without telling their manager. The swap leaves one of them without minimum rest before a Monday shift. What failed?",
+            "options": [
+              {
+                "text": "Nothing — employee-led swaps are a sign of a healthy, flexible culture",
+                "correct": false,
+                "why": "Flexibility that bypasses rest checks creates exactly the fatigue and compliance risk the rules exist to prevent, and leaves the official roster describing a week nobody worked."
+              },
+              {
+                "text": "The swap route was not usable or not trusted, so changes moved outside the system where qualification, rest, and hours are never re-checked",
+                "correct": true,
+                "why": "Changes will happen regardless of the design. A single in-system route that re-validates both people's constraints and notifies everyone keeps flexibility and control together; an unusable route guarantees shadow scheduling."
+              },
+              {
+                "text": "Swaps should be banned so the published roster never changes",
+                "correct": false,
+                "why": "A ban does not remove the need that produced the swap; it only removes visibility. The design goal is a route people actually use, with checks attached."
+              }
+            ]
+          },
+          {
+            "q": "Parallel scheduling shows the new roster leaving a peak hour uncovered in one location, and nobody can explain why. Go-live is next week. What should happen?",
+            "options": [
+              {
+                "text": "Go live as planned, because every other location reconciled correctly",
+                "correct": false,
+                "why": "An unexplained gap at a peak hour is precisely the failure parallel running exists to catch. Going live converts it into a real uncovered shift in the busiest period."
+              },
+              {
+                "text": "Add a standing instruction for managers to watch that hour and improvise cover",
+                "correct": false,
+                "why": "Improvisation hides a demand, template, or constraint defect and makes cover depend on who is on duty. The gap needs a traced cause, not a workaround."
+              },
+              {
+                "text": "Hold go-live for that location, trace the gap to its demand, template, or constraint cause, fix it, and re-run the affected week until every difference is explained",
+                "correct": true,
+                "why": "The parallel run ends when differences are explained, not when the calendar says so. A traced cause — understated peak demand, a wrong template, an over-broad constraint — can be fixed and re-proved before a live roster depends on it."
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
     "slug": "time-tracking-implementation-guide",
     "title": "Time Tracking Implementation Guide",
     "excerpt": "Implement time tracking that pays correctly: capture methods, rounding and exception rules, approvals, and parallel testing before live payroll.",
