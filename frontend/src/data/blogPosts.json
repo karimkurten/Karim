@@ -1,5 +1,286 @@
 [
   {
+    "slug": "absence-management-implementation",
+    "title": "Absence Management Implementation",
+    "excerpt": "Implement absence management that holds: absence types and accruals, eligibility and approvals, privacy, and testing before schedules and pay depend on it.",
+    "publishedAt": "2026-11-22",
+    "readingTime": "8 min read",
+    "cover": "/images/blog/absence-management-implementation-cover.webp",
+    "tags": [
+      "HCM",
+      "Implementation",
+      "Absence Management",
+      "Workforce Management"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "Absence looks simple: an employee asks for time away, a manager agrees, and the calendar shows a gap. Underneath sits a dense set of rules — which type it is, whether the person is eligible, how the balance is earned and drawn down, what evidence is appropriate, and what happens to the schedule, the timesheet, and the paycheque while the person is away. Treating absence as a single request form will fail on the first protected leave and the first negative balance."
+      },
+      {
+        "type": "p",
+        "text": "This guide treats absence management as a rules discipline: define each type precisely, configure accruals so they can be explained, design approvals with privacy in mind, and test the difficult cases before go-live."
+      },
+      {
+        "type": "h2",
+        "text": "Absence is a rules discipline, not a request form"
+      },
+      {
+        "type": "p",
+        "text": "Projects that start with the request screen start in the wrong place. The system behind a request must know which type applies, whether any waiting period has been met, how much balance exists today and on the first day of leave, whether approval is required or notification is enough, and what the absence does to scheduling, time, and pay."
+      },
+      {
+        "type": "p",
+        "text": "The wider context is [the Complete Guide to Workforce Management Implementation](/blog/workforce-management-implementation-guide): absence feeds scheduling, time tracking, and payroll. The foundation is [the Core HR implementation guide](/blog/core-hr-implementation-guide): status, start date, service, and reporting line decide which plan applies and who approves the request. If that structure is wrong, the system offers the wrong leave to the wrong person with complete confidence."
+      },
+      {
+        "type": "steps",
+        "label": "Implementing absence management, in order",
+        "intro": "Five moves that turn a request form into absence handling people can trust.",
+        "items": [
+          {
+            "title": "Define every absence type in plain language",
+            "text": "Name each type employees and managers actually use — vacation, sick, statutory and protected leaves, bereavement, and others in your policy — and write what each one is for, in language a new employee can follow. A type nobody can explain will be misused from the first week."
+          },
+          {
+            "title": "Configure accruals and eligibility so they can be explained",
+            "text": "Set how balances are earned, when they become available, any waiting periods, and caps, then work the maths by hand for a new hire, a part-time employee, and a mid-year status change. If the team cannot explain a balance, it cannot defend it."
+          },
+          {
+            "title": "Design approvals, notification, and documentation",
+            "text": "Decide for each type whether approval is required, who approves, what happens when the approver is away, and what documentation — if any — is appropriate to ask for. Keep medical detail out of the workflow; the system needs dates and fitness-for-work status, not diagnoses."
+          },
+          {
+            "title": "Connect absence to scheduling, time, and payroll",
+            "text": "Agree what an approved absence does in each neighbouring module: the gap it creates in the roster, the code it places on the timesheet, and whether and how it is paid. Test the connections, not just the request."
+          },
+          {
+            "title": "Test the awkward cases and verify every balance",
+            "text": "Run absence spanning pay periods, a request larger than the balance, a leave that starts before approval, and a return to work that changes mid-leave. Reconcile every migrated balance to the source record before anyone requests leave in the new system."
+          }
+        ]
+      },
+      {
+        "type": "img",
+        "src": "/images/blog/absence-management-implementation-1.svg",
+        "alt": "Absence management implementation journey diagram: six stages from absence types defined and accruals configured through workflows designed and integrations tested to balances verified and live absence handling trusted, with the lead owner named at each stage and a strip showing that every stage depends on accurate employment status, service dates, and reporting lines.",
+        "caption": "Absence management implementation journey: types defined, accruals configured, workflows designed, integrations tested, balances verified, and live absence handling trusted."
+      },
+      {
+        "type": "h2",
+        "text": "Start with absence types: name what people actually take"
+      },
+      {
+        "type": "p",
+        "text": "Begin with the absence employees actually take, gathered from policy documents, collective agreements, and HR's records — not from the software's default type list. Most organisations need, at minimum, clear definitions for vacation, sick absence, statutory and protected leaves provided under applicable employment legislation, bereavement, and unpaid leave; many need more, such as jury duty and parental leaves. This article describes implementation practice only; which leaves are statutory and what job protection attaches are legal questions for your own advisors in each jurisdiction, and the configuration must follow those answers."
+      },
+      {
+        "type": "p",
+        "text": "Each type needs the same plain-language decisions, recorded in one place: who is eligible, whether a waiting period applies, whether it is paid, unpaid, or partially paid, whether it draws from an accruing balance or stands alone, what notice is expected, and what documentation is appropriate. Where two types could describe the same situation — a sickness that becomes a protected leave — define the boundary and the hand-off, because employees and managers will meet it on a difficult day, not in a workshop. Resist merging types: a single generic type forces managers to remember the real rules outside the system."
+      },
+      {
+        "type": "h2",
+        "text": "Accruals, balances, eligibility, and waiting periods"
+      },
+      {
+        "type": "p",
+        "text": "The balance is the number employees trust or dispute. For each accruing type, define how the balance is earned — per pay period, per hour worked, or as an annual grant — when it becomes available, whether a waiting period applies for new hires, how part-time employees accrue, and what cap applies. Then calculate, by hand, the expected balance for representative employees: a new hire in the waiting period, a part-time employee, and someone whose status changed mid-year. The system's answers must match, and every difference traced to a rule, not rounded away. Eligibility rules interact: service tiers, status, location, and jurisdiction can each change which plan applies, and a mid-year move between plans is the case most likely to be configured last and experienced first — decide which plan governs absence already booked, and how a balance transfers."
+      },
+      {
+        "type": "p",
+        "text": "Carryover and year-end need decisions before the first year-end arrives, not during it. Define what carries over, what is capped, what expires, and what — if anything — is paid out, per policy and applicable requirements, and test the year-end process during the implementation, communications included: a carryover rule discovered by employees in the first January is a trust problem the project created for itself. Negative balances likewise deserve an explicit policy position, not a default setting — the system must warn, block, or route for a decision accordingly, and payroll must know how one is treated if employment ends."
+      },
+      {
+        "type": "h2",
+        "text": "Approvals, documentation, and the privacy of medical information"
+      },
+      {
+        "type": "p",
+        "text": "Approval design differs by absence type, and treating every type alike damages both control and dignity. Planned vacation needs genuine approval: coverage checked, balance confirmed. Short sick absence is usually a notification with recording, not a permission request — a workflow that makes a sick employee wait for approval before the absence exists will drive reporting back to phone calls. Protected and statutory leaves follow their own requirements: record the leave and manage the return, without inventing approval gates the entitlement does not have. Define who acts when the approver is absent — workflows fail precisely when the approver is the one away."
+      },
+      {
+        "type": "p",
+        "text": "Documentation needs the same care. Define, per type, what may appropriately be asked for, when, and who may see it, following your policies and legal advice. The principle is minimisation: workflows need dates, expected duration, and fitness-for-work status — not medical detail. Keep documents restricted and access logged and reviewed during testing. The employee experience carries much of this: through [employee self-service portal rollout](/blog/employee-self-service-rollout), an employee should see their balances, submit a request in a few steps, and see its status without asking HR. If reporting an absence is harder than phoning, the phone is what people will keep using."
+      },
+      {
+        "type": "h2",
+        "text": "How absence touches scheduling, time, and payroll"
+      },
+      {
+        "type": "p",
+        "text": "An approved absence is an event in three other modules, and each connection must be designed and tested. In scheduling, following [the scheduling module implementation guide](/blog/scheduling-module-implementation), it should appear as a roster gap immediately. In time capture, following [the time tracking implementation guide](/blog/time-tracking-implementation-guide), it must land on the timesheet with the right code for each day covered, including partial days. In payroll, it must produce the intended pay treatment: paid from a balance, unpaid, or split."
+      },
+      {
+        "type": "p",
+        "text": "Changing absences are where the connections strain: an employee returns a day early, extends a leave, or works a partial day during a phased return. Each change must flow to roster, timesheet, and pay without re-entry in three places — make it once, in the absence record, and propagate it. The original request almost always works; the amendment is what breaks."
+      },
+      {
+        "type": "img",
+        "src": "/images/blog/absence-management-implementation-2.svg",
+        "alt": "Absence control diagram: an absence request validated against type, eligibility, waiting period, and balance, then approved or recorded, flowing into schedule gap and cover, time coding, and pay treatment effects, with an audit and privacy strip covering restricted documentation, logged access, and return-to-work changes.",
+        "caption": "Absence control diagram: a request validated against type, eligibility, and balance, then approved or recorded, flowing into schedule, time, and payroll effects, with an audit and privacy strip covering access, documentation limits, and return-to-work changes."
+      },
+      {
+        "type": "h2",
+        "text": "Testing: the awkward cases decide whether it works"
+      },
+      {
+        "type": "p",
+        "text": "Build the test set from cases that strain the rules, not simple vacation requests: an accrual calculation for each representative employee type, checked against hand-worked figures; a request larger than the balance; a request inside a waiting period; an absence spanning two pay periods and a year-end boundary; a return to work earlier, later, and phased; an approver who is themselves absent; and a mid-year status change between plans. Each scenario must travel the whole path — request, validation, recording, roster gap, timesheet coding, and pay result — because absence defects live in the hand-offs."
+      },
+      {
+        "type": "p",
+        "text": "Balance migration is its own test discipline. Every opening balance must reconcile to the source — per employee, per type, agreed in writing with HR and payroll before go-live, with differences investigated rather than adjusted silently. Freeze changes at a defined point, migrate, reconcile, and publish how an employee queries a balance they believe is wrong. The first disputed balance will arrive early; how it is handled sets the system's reputation."
+      },
+      {
+        "type": "h2",
+        "text": "Common mistakes"
+      },
+      {
+        "type": "p",
+        "text": "Most absence failures are definition, accrual, and workflow decisions."
+      },
+      {
+        "type": "accordion",
+        "label": "Absence management mistakes, as a diagnostic",
+        "items": [
+          {
+            "q": "One generic absence type for everything",
+            "a": "Vacation, sickness, and protected leaves differ in eligibility, pay treatment, balance effects, and privacy handling. A single type forces managers to apply the real rules from memory outside the system, so identical situations are handled differently across teams."
+          },
+          {
+            "q": "Accruals configured but never worked by hand",
+            "a": "If nobody calculated the expected balance for a new hire, a part-time employee, and a mid-year status change independently of the system, the first wrong balance is discovered by an employee. Accrual defects compound every pay period until they are found."
+          },
+          {
+            "q": "Approval gates on notification absence",
+            "a": "Sickness and many statutory leaves are notifications or entitlements, not permission requests. A workflow that leaves a reported absence unrecorded until a manager approves it drives reporting back to phone calls and leaves the official record wrong."
+          },
+          {
+            "q": "Medical detail collected in the routine workflow",
+            "a": "Absence handling needs dates, duration, and fitness-for-work status. Collecting diagnoses or open medical notes in general workflows exposes sensitive information to people who only need to plan coverage, and creates access and retention problems the project then owns."
+          },
+          {
+            "q": "Carryover and year-end decided at year-end",
+            "a": "What carries over, what is capped, and what expires must be configured, tested, and communicated during the implementation. Employees who learn the rule from their January balance have been failed by the project, not by the policy."
+          },
+          {
+            "q": "Opening balances migrated without reconciliation",
+            "a": "An unreconciled balance migration imports every legacy error and adds new ones. Employees check balances on day one; a wrong figure, unexplained, convinces them the entire system cannot be trusted."
+          }
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Key Takeaways"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "Absence is a rules discipline: type definitions, accruals, eligibility, and privacy handling decide whether it works — the request form only displays them.",
+          "Define every absence type in plain language, traced to a policy, agreement, or legal requirement.",
+          "Work accrual maths by hand for representative employees, and decide negative balances, carryover, and year-end during the implementation.",
+          "Match the workflow to the absence: genuine approval where it belongs, prompt recording where it does not, medical detail kept out of routine screens.",
+          "Test the awkward cases end to end and reconcile every migrated balance before go-live."
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Frequently Asked Questions"
+      },
+      {
+        "type": "p",
+        "text": "How many absence types should a system have? As many as your policies, agreements, and legal obligations genuinely distinguish — and no more. Each type should exist because its eligibility, pay treatment, balance effect, or privacy handling differs."
+      },
+      {
+        "type": "p",
+        "text": "Should sick absence require manager approval? In most designs, sickness is a notification recorded promptly, not a request awaiting permission. Capture the absence and its expected duration, and reserve approval gates for types where a decision is actually required."
+      },
+      {
+        "type": "p",
+        "text": "How should medical information be handled in the system? Collect the minimum: dates, expected duration, and fitness-for-work status. Keep documentation restricted to the few roles that need it, diagnoses out of routine screens, and audit who accesses absence records."
+      },
+      {
+        "type": "p",
+        "text": "What is the safest way to handle opening balances at go-live? Reconcile them per employee and per type against the source, agree the figures with HR and payroll in writing, freeze changes at a defined point before migration, and publish a clear query route — with a correction commitment — for employees who believe a balance is wrong."
+      },
+      {
+        "type": "h2",
+        "text": "Next Steps"
+      },
+      {
+        "type": "p",
+        "text": "Start with the type list: every absence employees actually take, defined in plain language with eligibility, waiting periods, pay treatment, and documentation expectations. Then work the accrual maths by hand, design approvals that match each type, agree the scheduling, time, and payroll effects, and reconcile opening balances before promising a go-live date."
+      },
+      {
+        "type": "quiz",
+        "label": "Check your understanding",
+        "questions": [
+          {
+            "q": "An employee reports sickness on Monday, but the absence does not appear in the system until their manager approves it on Wednesday — so the roster showed them as expected at work for two days. What is the design flaw?",
+            "options": [
+              {
+                "text": "The manager needs a reminder to approve faster",
+                "correct": false,
+                "why": "Faster approval does not fix a workflow that treats a notification as a permission request. The roster was wrong because the absence could not exist in the system until someone allowed it."
+              },
+              {
+                "text": "Sickness was built as an approval workflow instead of a notification that is recorded immediately and reviewed afterwards",
+                "correct": true,
+                "why": "Notification absence must land in the record — and on the roster — when it is reported. Review, documentation, and follow-up can happen after recording; coverage decisions cannot wait for them."
+              },
+              {
+                "text": "Employees should phone in as well as using the system",
+                "correct": false,
+                "why": "Dual reporting recreates the absence record outside the system and guarantees the two versions diverge. The fix is a workflow people can rely on, not a second channel."
+              }
+            ]
+          },
+          {
+            "q": "In the first month, several part-time employees show vacation balances noticeably higher than HR expected. Nobody worked an example by hand before go-live. What should happen now?",
+            "options": [
+              {
+                "text": "Adjust the balances down quietly so payroll is not affected",
+                "correct": false,
+                "why": "Silent adjustments destroy trust and may breach the organisation's own policy. Employees are entitled to an explained balance, and the underlying rule defect would remain for the next accrual cycle."
+              },
+              {
+                "text": "Trace the accrual rule against the policy for part-time staff, correct the configuration, recalculate transparently, and explain the correction to affected employees",
+                "correct": true,
+                "why": "The hand-worked examples that were skipped before go-live are the fix now: establish what the policy actually earns, find where configuration diverged, and correct openly so the same defect does not recur each period."
+              },
+              {
+                "text": "Leave the balances, because correcting them looks bad",
+                "correct": false,
+                "why": "An over-accrual compounds every period and creates a larger liability and a harder conversation later. Early, explained correction is cheaper in every sense."
+              }
+            ]
+          },
+          {
+            "q": "A manager asks HR to add an employee's diagnosis to the absence record so the team can 'plan better'. What is the right response?",
+            "options": [
+              {
+                "text": "Add it — better information leads to better planning",
+                "correct": false,
+                "why": "Coverage planning needs dates, expected duration, and return status. A diagnosis adds sensitive information without adding planning value, and exposes it to everyone who can see the record."
+              },
+              {
+                "text": "Ask the employee to share the details with the team directly",
+                "correct": false,
+                "why": "That shifts the disclosure pressure onto the employee and still puts medical detail into team circulation. The system design should make the minimum-data route the easy route."
+              },
+              {
+                "text": "Decline, record only dates, duration, and fitness-for-work status, and keep any supporting documentation in the restricted place with limited access",
+                "correct": true,
+                "why": "Minimisation protects the employee and the organisation: managers plan from availability information, HR holds any necessary documentation under tight access, and the audit trail shows who saw what."
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
     "slug": "scheduling-module-implementation",
     "title": "Employee Scheduling Module Implementation",
     "excerpt": "Implement employee scheduling that holds: demand and availability, shift rules and swaps, publishing discipline, and testing before time and pay depend on it.",
