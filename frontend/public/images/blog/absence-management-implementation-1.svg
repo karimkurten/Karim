@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="640" viewBox="0 0 1200 640" role="img" aria-label="The absence management implementation journey: types defined, accruals configured, workflows designed, integrations tested, balances verified, and live absence handling trusted, with lead owners at each stage">
+  <defs>
+    <linearGradient id="hdr" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#0f172a"/>
+      <stop offset="1" stop-color="#1e3a5f"/>
+    </linearGradient>
+  </defs>
+  <rect x="0" y="0" width="1200" height="640" fill="#ffffff"/>
+  <rect x="0" y="0" width="1200" height="88" fill="url(#hdr)"/>
+  <text x="48" y="40" font-family="Georgia, serif" font-size="29" fill="#ffffff">Absence: From Types Defined to Balances Trusted</text>
+  <text x="48" y="70" font-family="Arial, sans-serif" font-size="20" fill="#94A3B8">Six stages — each with a purpose and lead owners</text>
+  <g>
+    <rect x="40" y="108" width="168" height="252" rx="12" fill="#F0F4F8" stroke="#2B6CB0" stroke-width="2"/>
+    <text x="56" y="142" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#1A202C">Types</text>
+    <text x="56" y="166" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#1A202C">Defined</text>
+    <text x="56" y="200" font-family="Arial, sans-serif" font-size="15" fill="#475569">Vacation, sick,</text>
+    <text x="56" y="222" font-family="Arial, sans-serif" font-size="15" fill="#475569">protected leaves,</text>
+    <text x="56" y="244" font-family="Arial, sans-serif" font-size="15" fill="#475569">bereavement — in</text>
+    <text x="56" y="266" font-family="Arial, sans-serif" font-size="15" fill="#475569">plain language.</text>
+    <text x="56" y="330" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#2B6CB0">Lead: HR</text>
+  </g>
+  <g>
+    <rect x="224" y="108" width="168" height="252" rx="12" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+    <text x="240" y="142" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#1A202C">Accruals</text>
+    <text x="240" y="166" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#1A202C">Configured</text>
+    <text x="240" y="200" font-family="Arial, sans-serif" font-size="15" fill="#475569">Earning rules,</text>
+    <text x="240" y="222" font-family="Arial, sans-serif" font-size="15" fill="#475569">waiting periods,</text>
+    <text x="240" y="244" font-family="Arial, sans-serif" font-size="15" fill="#475569">caps, and part-time</text>
+    <text x="240" y="266" font-family="Arial, sans-serif" font-size="15" fill="#475569">maths by hand.</text>
+    <text x="240" y="330" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#2B6CB0">Lead: HR, Payroll</text>
+  </g>
+  <g>
+    <rect x="408" y="108" width="168" height="252" rx="12" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+    <text x="424" y="142" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#1A202C">Workflows</text>
+    <text x="424" y="166" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#1A202C">Designed</text>
+    <text x="424" y="200" font-family="Arial, sans-serif" font-size="15" fill="#475569">Approval where it</text>
+    <text x="424" y="222" font-family="Arial, sans-serif" font-size="15" fill="#475569">belongs, prompt</text>
+    <text x="424" y="244" font-family="Arial, sans-serif" font-size="15" fill="#475569">recording where</text>
+    <text x="424" y="266" font-family="Arial, sans-serif" font-size="15" fill="#475569">it does not.</text>
+    <text x="424" y="330" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#2B6CB0">Lead: HR, Ops</text>
+  </g>
+  <g>
+    <rect x="592" y="108" width="168" height="252" rx="12" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+    <text x="608" y="142" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#1A202C">Integrations</text>
+    <text x="608" y="166" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#1A202C">Tested</text>
+    <text x="608" y="200" font-family="Arial, sans-serif" font-size="15" fill="#475569">Roster gap, time</text>
+    <text x="608" y="222" font-family="Arial, sans-serif" font-size="15" fill="#475569">coding, and pay</text>
+    <text x="608" y="244" font-family="Arial, sans-serif" font-size="15" fill="#475569">treatment checked</text>
+    <text x="608" y="266" font-family="Arial, sans-serif" font-size="15" fill="#475569">end to end.</text>
+    <text x="608" y="330" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#2B6CB0">Lead: Programme</text>
+  </g>
+  <g>
+    <rect x="776" y="108" width="168" height="252" rx="12" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+    <text x="792" y="142" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#1A202C">Balances</text>
+    <text x="792" y="166" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#1A202C">Verified</text>
+    <text x="792" y="200" font-family="Arial, sans-serif" font-size="15" fill="#475569">Every opening</text>
+    <text x="792" y="222" font-family="Arial, sans-serif" font-size="15" fill="#475569">balance reconciled</text>
+    <text x="792" y="244" font-family="Arial, sans-serif" font-size="15" fill="#475569">per employee and</text>
+    <text x="792" y="266" font-family="Arial, sans-serif" font-size="15" fill="#475569">per type.</text>
+    <text x="792" y="330" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#2B6CB0">Lead: HR, Payroll</text>
+  </g>
+  <g>
+    <rect x="960" y="108" width="200" height="252" rx="12" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+    <text x="976" y="142" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#1A202C">Live and</text>
+    <text x="976" y="166" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#1A202C">Trusted</text>
+    <text x="976" y="200" font-family="Arial, sans-serif" font-size="15" fill="#475569">Requests people</text>
+    <text x="976" y="222" font-family="Arial, sans-serif" font-size="15" fill="#475569">use, balances they</text>
+    <text x="976" y="244" font-family="Arial, sans-serif" font-size="15" fill="#475569">believe, and errors</text>
+    <text x="976" y="266" font-family="Arial, sans-serif" font-size="15" fill="#475569">fixed openly.</text>
+    <text x="976" y="330" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#2B6CB0">Lead: HR</text>
+  </g>
+  <rect x="40" y="392" width="1120" height="72" rx="12" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+  <text x="64" y="424" font-family="Arial, sans-serif" font-size="17" font-weight="bold" fill="#1A202C">Every stage depends on accurate employment status, service dates, and reporting lines</text>
+  <text x="64" y="450" font-family="Arial, sans-serif" font-size="16" fill="#475569">Status, start date, and manager decide which absence plan applies, and who approves the request.</text>
+  <rect x="40" y="488" width="1120" height="72" rx="12" fill="#ffffff" stroke="#E2E8F0" stroke-width="2"/>
+  <text x="64" y="520" font-family="Arial, sans-serif" font-size="17" font-weight="bold" fill="#1A202C">The awkward cases decide whether it works</text>
+  <text x="64" y="546" font-family="Arial, sans-serif" font-size="16" fill="#64748B">Absence spanning pay periods, changing returns, and absent approvers need testing before go-live, not after.</text>
+  <text x="40" y="600" font-family="Arial, sans-serif" font-size="14" fill="#94A3B8">Figure 1 — Absence management implementation journey</text>
+</svg>
