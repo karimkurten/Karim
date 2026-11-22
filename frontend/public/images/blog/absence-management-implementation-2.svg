@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="640" viewBox="0 0 1200 640" role="img" aria-label="Absence control diagram: a request validated against type, eligibility, and balance, then approved or recorded, flowing into schedule, time, and payroll effects, with audit and privacy controls">
+  <defs>
+    <linearGradient id="hdr" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#0f172a"/>
+      <stop offset="1" stop-color="#1e3a5f"/>
+    </linearGradient>
+  </defs>
+  <rect x="0" y="0" width="1200" height="640" fill="#ffffff"/>
+  <rect x="0" y="0" width="1200" height="88" fill="url(#hdr)"/>
+  <text x="48" y="40" font-family="Georgia, serif" font-size="29" fill="#ffffff">One Absence, Three Effects: Schedule, Time, and Pay</text>
+  <text x="48" y="70" font-family="Arial, sans-serif" font-size="20" fill="#94A3B8">Request to validation to approval — with audit and privacy throughout</text>
+  <g>
+    <rect x="40" y="112" width="340" height="200" rx="12" fill="#F0F4F8" stroke="#2B6CB0" stroke-width="2"/>
+    <text x="64" y="146" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#1A202C">Absence Request</text>
+    <text x="64" y="180" font-family="Arial, sans-serif" font-size="15" fill="#475569">Employee selects the type,</text>
+    <text x="64" y="202" font-family="Arial, sans-serif" font-size="15" fill="#475569">dates, and expected duration.</text>
+    <text x="64" y="238" font-family="Arial, sans-serif" font-size="15" fill="#475569">Partial days and phased</text>
+    <text x="64" y="260" font-family="Arial, sans-serif" font-size="15" fill="#475569">returns start here too.</text>
+    <text x="64" y="292" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#2B6CB0">Owner: Employee</text>
+  </g>
+  <g>
+    <rect x="430" y="112" width="340" height="200" rx="12" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+    <text x="454" y="146" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#1A202C">Validation</text>
+    <text x="454" y="180" font-family="Arial, sans-serif" font-size="15" fill="#475569">Type, eligibility, waiting</text>
+    <text x="454" y="202" font-family="Arial, sans-serif" font-size="15" fill="#475569">period, and balance checked</text>
+    <text x="454" y="238" font-family="Arial, sans-serif" font-size="15" fill="#475569">Negative balance handled</text>
+    <text x="454" y="260" font-family="Arial, sans-serif" font-size="15" fill="#475569">by policy, not by default.</text>
+    <text x="454" y="292" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#2B6CB0">Owner: System, HR</text>
+  </g>
+  <g>
+    <rect x="820" y="112" width="340" height="200" rx="12" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+    <text x="844" y="146" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#1A202C">Approval or Recording</text>
+    <text x="844" y="180" font-family="Arial, sans-serif" font-size="15" fill="#475569">Planned leave approved;</text>
+    <text x="844" y="202" font-family="Arial, sans-serif" font-size="15" fill="#475569">sickness recorded promptly.</text>
+    <text x="844" y="238" font-family="Arial, sans-serif" font-size="15" fill="#475569">Delegated cover when the</text>
+    <text x="844" y="260" font-family="Arial, sans-serif" font-size="15" fill="#475569">approver is away.</text>
+    <text x="844" y="292" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#2B6CB0">Owner: Manager, HR</text>
+  </g>
+  <g>
+    <rect x="40" y="344" width="340" height="140" rx="12" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+    <text x="64" y="378" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#1A202C">Schedule Gap and Cover</text>
+    <text x="64" y="412" font-family="Arial, sans-serif" font-size="15" fill="#475569">The roster shows the gap</text>
+    <text x="64" y="434" font-family="Arial, sans-serif" font-size="15" fill="#475569">so cover can be arranged.</text>
+    <text x="64" y="464" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#2B6CB0">Effect: Scheduling</text>
+  </g>
+  <g>
+    <rect x="430" y="344" width="340" height="140" rx="12" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+    <text x="454" y="378" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#1A202C">Time Coding</text>
+    <text x="454" y="412" font-family="Arial, sans-serif" font-size="15" fill="#475569">Each absence day lands on</text>
+    <text x="454" y="434" font-family="Arial, sans-serif" font-size="15" fill="#475569">the timesheet, coded right.</text>
+    <text x="454" y="464" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#2B6CB0">Effect: Time Tracking</text>
+  </g>
+  <g>
+    <rect x="820" y="344" width="340" height="140" rx="12" fill="#F0F4F8" stroke="#E2E8F0" stroke-width="2"/>
+    <text x="844" y="378" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#1A202C">Pay Treatment</text>
+    <text x="844" y="412" font-family="Arial, sans-serif" font-size="15" fill="#475569">Paid from balance, unpaid,</text>
+    <text x="844" y="434" font-family="Arial, sans-serif" font-size="15" fill="#475569">or split — as designed.</text>
+    <text x="844" y="464" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#2B6CB0">Effect: Payroll</text>
+  </g>
+  <rect x="40" y="508" width="1120" height="72" rx="12" fill="#ffffff" stroke="#E2E8F0" stroke-width="2"/>
+  <text x="64" y="540" font-family="Arial, sans-serif" font-size="17" font-weight="bold" fill="#1A202C">Audit and privacy strip</text>
+  <text x="64" y="566" font-family="Arial, sans-serif" font-size="16" fill="#64748B">Restricted documentation, logged access, dates and fitness status only — changes and returns recorded once, propagated everywhere.</text>
+  <text x="40" y="612" font-family="Arial, sans-serif" font-size="14" fill="#94A3B8">Figure 2 — Absence control diagram</text>
+</svg>
