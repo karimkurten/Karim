@@ -1374,7 +1374,7 @@
       },
       {
         "type": "p",
-        "text": "Start with the inventory on one page: every task classified as view, approved change, or direct change, with its data source and payroll timing rule. Then audit the data, test approvals against awkward real cases, choose a representative pilot, and agree the adoption measures before the first invitation."
+        "text": "Start with the inventory on one page: every task classified as view, approved change, or direct change, with its data source and payroll timing rule. Then audit the data, test approvals against awkward real cases, choose a representative pilot, and agree the adoption measures before the first invitation. Plan the other end of the lifecycle as well: when an employee leaves, self-service access and personal records must close as cleanly as they opened, and [Offboarding Workflow Implementation](/blog/offboarding-workflow-implementation) walks through that controlled exit step by step."
       },
       {
         "type": "quiz",
@@ -1936,7 +1936,7 @@
       },
       {
         "type": "p",
-        "text": "Start with the journey on one page. List the tasks for each horizon, assign each to one owner with its trigger and due rule, and mark every dependency on Core HR beside it. Then enable managers with short guides, build the scenario set including rehire, transfer, and cross-border cases, and agree the measures before the first cohort starts."
+        "text": "Start with the journey on one page. List the tasks for each horizon, assign each to one owner with its trigger and due rule, and mark every dependency on Core HR beside it. Then enable managers with short guides, build the scenario set including rehire, transfer, and cross-border cases, and agree the measures before the first cohort starts. Design the exit with the same care as the entrance: [Offboarding Workflow Implementation](/blog/offboarding-workflow-implementation) covers the controlled close — access removal, asset return, final pay inputs, and record closure — that completes the lifecycle this module opens."
       },
       {
         "type": "quiz",
@@ -3977,7 +3977,7 @@
       },
       {
         "type": "p",
-        "text": "List the domains in scope, name the owner on each side, and start the pack from the next live cycle rather than from memory. Book shadowing and reverse-shadowing against real pay and period-end dates, agree where the readiness record will live, and set the acceptance review now — while there is still time to fix what the evidence exposes."
+        "text": "List the domains in scope, name the owner on each side, and start the pack from the next live cycle rather than from memory. Book shadowing and reverse-shadowing against real pay and period-end dates, agree where the readiness record will live, and set the acceptance review now — while there is still time to fix what the evidence exposes. One workflow support teams routinely inherit under-specified is the employee exit itself: [Offboarding Workflow Implementation](/blog/offboarding-workflow-implementation) details the access removal, asset return, final pay inputs, and record closure that the handover pack should point to."
       },
       {
         "type": "quiz",
@@ -5885,7 +5885,7 @@
       },
       {
         "type": "p",
-        "text": "Governance also owns the program's boundaries with the rest of the institution. Privacy obligations govern what customer data the program collects, retains, and shares — and AML's record-keeping and reporting duties have their own legal gateways that must be used exactly, not approximately. Employment and human-rights obligations govern how suspicion about individuals is handled internally. The tipping-off boundary governs what may be said to a customer who is the subject of a report. None of these boundaries is optional colour around the program; a program that breaches them while pursuing launderers creates institutional liability of a different kind and can compromise the very investigations it exists to support. This guide describes these as operational boundaries to be designed with counsel — it does not, and cannot, state any institution's legal position."
+        "text": "Governance also owns the program's boundaries with the rest of the institution. Privacy obligations govern what customer data the program collects, retains, and shares — and AML's record-keeping and reporting duties have their own legal gateways that must be used exactly, not approximately. Employment and human-rights obligations govern how suspicion about individuals is handled internally. The tipping-off boundary governs what may be said to a customer who is the subject of a report. None of these boundaries is optional colour around the program; a program that breaches them while pursuing launderers creates institutional liability of a different kind and can compromise the very investigations it exists to support. This guide describes these as operational boundaries to be designed with counsel — it does not, and cannot, state any institution's legal position. The wider discipline of connecting obligations, controls, and evidence across an enterprise programme is treated in [the complete guide to compliance and governance for enterprise implementations](/blog/complete-guide-compliance-governance-enterprise-implementations)."
       },
       {
         "type": "h2",
@@ -7927,7 +7927,7 @@
       },
       {
         "type": "p",
-        "text": "Rebuild your current estimate by family: for each one, write the driver, the owner and the assumption behind the number. Where an assumption has never been tested — data quality, integration count, expert capacity — that is where contingency belongs, and where a readiness check earns its keep. [The complete guide to HCM implementation](/blog/complete-guide-hcm-implementation) shows where each family is incurred across the lifecycle."
+        "text": "Rebuild your current estimate by family: for each one, write the driver, the owner and the assumption behind the number. Where an assumption has never been tested — data quality, integration count, expert capacity — that is where contingency belongs, and where a readiness check earns its keep. [The complete guide to HCM implementation](/blog/complete-guide-hcm-implementation) shows where each family is incurred across the lifecycle. Then pressure-test the rebuilt estimate against [HCM Implementation Mistakes](/blog/hcm-implementation-mistakes), the companion catalogue of the errors that most often turn a sound budget into an overrun."
       },
       {
         "type": "quiz",
@@ -8217,7 +8217,7 @@
       },
       {
         "type": "p",
-        "text": "Run a first pass this week: for each domain, write down the evidence you could show today, and mark where only assurance exists. Turn the weakest domains into named fixes with owners and dates, and agree which findings would justify delaying the start. You can find the readiness scorecard alongside [the complete guide to HCM implementation](/blog/complete-guide-hcm-implementation) — use it to structure the per-domain ratings and record the evidence behind each one."
+        "text": "Run a first pass this week: for each domain, write down the evidence you could show today, and mark where only assurance exists. Turn the weakest domains into named fixes with owners and dates, and agree which findings would justify delaying the start. You can find the readiness scorecard alongside [the complete guide to HCM implementation](/blog/complete-guide-hcm-implementation) — use it to structure the per-domain ratings and record the evidence behind each one. Before the start date hardens into a commitment, pressure-test the money as rigorously as the readiness: [HCM Implementation Cost](/blog/hcm-implementation-cost) shows how to rebuild the estimate by cost family, with the driver, the owner, and the assumption behind each number."
       },
       {
         "type": "quiz",
@@ -8336,7 +8336,7 @@
       },
       {
         "type": "p",
-        "text": "The guide builds on its companion pillars rather than repeating them. The [Complete Guide to HCM Implementation](/blog/complete-guide-hcm-implementation) covers the delivery lifecycle this risk system protects. The [Complete Guide to Project Management for Enterprise Implementations](/blog/project-management-for-enterprise-implementations) covers planning, governance, and control at program level. The earlier, focused article on the [HCM implementation risk management framework](/blog/hcm-implementation-risk-management) introduced risk categories and responses for one project type; this pillar is the full discipline — standards, evidence, quantification, governance, and templates — for enterprise implementations as a class. Where this guide needs a register's field-by-field anatomy, it points to the [implementation risk register template and field guide](/blog/implementation-risk-register-template) and then goes further: how the register earns trust, and what happens when it does not."
+        "text": "The guide builds on its companion pillars rather than repeating them. The [Complete Guide to HCM Implementation](/blog/complete-guide-hcm-implementation) covers the delivery lifecycle this risk system protects. The [Complete Guide to Project Management for Enterprise Implementations](/blog/project-management-for-enterprise-implementations) covers planning, governance, and control at program level. The [Complete Guide to Compliance and Governance for Enterprise Implementations](/blog/complete-guide-compliance-governance-enterprise-implementations) covers the obligations, controls, and evidence discipline that governance must satisfy. The earlier, focused article on the [HCM implementation risk management framework](/blog/hcm-implementation-risk-management) introduced risk categories and responses for one project type; this pillar is the full discipline — standards, evidence, quantification, governance, and templates — for enterprise implementations as a class. Where this guide needs a register's field-by-field anatomy, it points to the [implementation risk register template and field guide](/blog/implementation-risk-register-template) and then goes further: how the register earns trust, and what happens when it does not."
       },
       {
         "type": "p",
@@ -17092,7 +17092,7 @@
       },
       {
         "type": "p",
-        "text": "Build the privacy-by-design workflow into your project plan: inventory the personal data in Discover, classify it with the business in Design, get counsel's review before extraction, control the copies during Build and Test, verify the protections in Validate, and decommission every copy at Cutover. Log privacy risks — unclassified data, unmasked test environments, cross-border flows without assessments — in your risk register alongside the technical ones. Then review the migration guide and cleansing playbook for the data tasks these privacy decisions shape."
+        "text": "Build the privacy-by-design workflow into your project plan: inventory the personal data in Discover, classify it with the business in Design, get counsel's review before extraction, control the copies during Build and Test, verify the protections in Validate, and decommission every copy at Cutover. Log privacy risks — unclassified data, unmasked test environments, cross-border flows without assessments — in your risk register alongside the technical ones. Then review the migration guide and cleansing playbook for the data tasks these privacy decisions shape. Privacy is one obligation family among many on an enterprise programme; [the complete guide to compliance and governance for enterprise implementations](/blog/complete-guide-compliance-governance-enterprise-implementations) shows how to register every obligation, assign its owner, and keep the evidence an auditor will eventually ask for."
       }
     ]
   },
@@ -28011,6 +28011,10 @@
       {
         "type": "p",
         "text": "Continue to the go-live chapter of [The Complete Guide to Project Management for Enterprise Implementations](/blog/project-management-for-enterprise-implementations), confirm your testing closure with the [UAT Readiness Checklist: Are You Actually Ready to Start Testing?](/blog/uat-readiness-checklist), or contact Karim."
+      },
+      {
+        "type": "p",
+        "text": "Go deeper on the mechanics behind this checklist: build the minute-by-minute sequence with [the cutover planning runbook](/blog/cutover-planning-runbook), rehearse it through [mock go-lives and dress rehearsals](/blog/mock-go-lives-dress-rehearsals), protect the data position with [data freeze planning](/blog/data-freeze-planning), evidence the decision with [the go-live readiness assessment](/blog/go-live-readiness-assessment), and run the day itself with [the project manager's guide to go-live](/blog/project-managers-guide-to-go-live)."
       }
     ]
   },
@@ -29045,7 +29049,7 @@
       },
       {
         "type": "p",
-        "text": "Estimate bottom-up from the work breakdown structure, then sanity-check top-down against the risk register: every red risk should have a costed response or an explicit acceptance. A budget with no contingency line is a plan to renegotiate mid-project."
+        "text": "Estimate bottom-up from the work breakdown structure, then sanity-check top-down against the risk register: every red risk should have a costed response or an explicit acceptance. A budget with no contingency line is a plan to renegotiate mid-project. For the full cost picture behind that budget — the cost families, their drivers, and how contingency is sized and re-forecast — see [HCM Implementation Cost](/blog/hcm-implementation-cost)."
       },
       {
         "type": "h3",
