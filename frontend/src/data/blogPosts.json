@@ -1,5 +1,286 @@
 [
   {
+    "slug": "time-attendance-implementation",
+    "title": "Time and Attendance Implementation",
+    "excerpt": "Implement time and attendance that pays correctly: capture methods, pay rules and rounding, exceptions, approvals, and testing before payroll depends on it.",
+    "publishedAt": "2026-11-23",
+    "readingTime": "8 min read",
+    "cover": "/images/blog/time-attendance-implementation-cover.webp",
+    "tags": [
+      "HCM",
+      "Implementation",
+      "Time and Attendance",
+      "Workforce Management"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "Time and attendance looks like the simplest part of a workforce programme: record when people start and finish, total the hours, and send them to payroll. In practice it is where policy, collective agreements, employment standards, scheduling, and pay all meet in a single transaction — and where a small configuration error repeats, silently, for every employee on every shift until someone notices."
+      },
+      {
+        "type": "p",
+        "text": "This guide treats time and attendance as a pay-rules discipline: choose capture methods people will actually use, configure the rules so they can be explained, design exception handling that supervisors can sustain, and test the difficult shifts before go-live."
+      },
+      {
+        "type": "h2",
+        "text": "Time and attendance is a pay-rules discipline, not a clock"
+      },
+      {
+        "type": "p",
+        "text": "Projects that start with the device — which terminal, which app, which badge — start in the wrong place. Behind every punch sits a set of decisions: which schedule the time is compared against, which pay rule applies to this employee at this location on this day, how rounding works, when overtime begins, how a missed punch is corrected, and who approves the result. The clock only records an event; the rules turn that event into pay."
+      },
+      {
+        "type": "p",
+        "text": "The wider context is [the Complete Guide to Workforce Management Implementation](/blog/workforce-management-implementation-guide): time and attendance feeds payroll and is fed by scheduling and absence. The foundation is [the Core HR implementation guide](/blog/core-hr-implementation-guide): employment status, work location, job, and reporting line decide which rule group an employee belongs to. If that assignment is wrong, the system will apply the wrong overtime and premium rules with complete confidence, shift after shift."
+      },
+      {
+        "type": "steps",
+        "label": "Implementing time and attendance, in order",
+        "intro": "Five moves that turn time capture into pay people can trust.",
+        "items": [
+          {
+            "title": "Write every pay rule in plain language first",
+            "text": "List the rules that turn time into pay — regular hours, overtime triggers, premiums, rounding, meal breaks, and holiday treatment — in language a supervisor can explain. A rule nobody can state plainly cannot be configured or tested reliably."
+          },
+          {
+            "title": "Choose capture methods for each work setting",
+            "text": "Match the method to the place of work: terminal, mobile, desktop, or supervisor entry, with a defined fallback when the primary method fails. One method forced onto every setting creates workarounds from the first week."
+          },
+          {
+            "title": "Configure rule groups and assign them carefully",
+            "text": "Group employees who genuinely share the same rules, assign every employee to a group, and decide what happens when someone transfers, changes status, or works at a second location mid-period."
+          },
+          {
+            "title": "Design exceptions and approvals supervisors can sustain",
+            "text": "Define which exceptions appear, who clears them, by when, and what happens to unapproved time at the payroll deadline. An exception queue nobody can clear before the deadline will be bypassed, not managed."
+          },
+          {
+            "title": "Test the difficult shifts and reconcile to payroll",
+            "text": "Run overnight shifts, split shifts, holiday work, missed punches, and mid-period transfers end to end, and compare the pay result against hand-worked figures before anyone is paid from the new system."
+          }
+        ]
+      },
+      {
+        "type": "img",
+        "src": "/images/blog/time-attendance-implementation-1.svg",
+        "alt": "Time and attendance implementation journey diagram: six stages from pay rules written and capture methods chosen through rule groups assigned and exceptions designed to results reconciled and live time handling trusted, with the lead owner named at each stage and a strip showing that every stage depends on accurate employment status, work location, and reporting lines.",
+        "caption": "Time and attendance implementation journey: pay rules written, capture methods chosen, rule groups assigned, exceptions designed, results reconciled, and live time handling trusted."
+      },
+      {
+        "type": "h2",
+        "text": "Start with pay rules: write them before you configure them"
+      },
+      {
+        "type": "p",
+        "text": "Begin with the rules, gathered from policy documents, collective agreements, and payroll's working practice — not from the software's default rule set. Most organisations need clear, written positions on regular hours, daily and weekly overtime triggers, shift and weekend premiums, rounding, meal and rest break handling, statutory holiday treatment, and how travel or on-call time is treated. This article describes implementation practice only; what employment standards and agreements require in each jurisdiction is a question for your own advisors, and the configuration must follow those answers."
+      },
+      {
+        "type": "p",
+        "text": "Each rule needs the same plain-language record, kept in one place: who it applies to, when it starts and stops applying, how it interacts with neighbouring rules, and a worked example with real clock times. The worked example matters most. A rule described only in prose will be interpreted one way by the person configuring it and another way by the supervisor explaining a paycheque. Where two rules could apply to the same hours — a premium shift that is also overtime, for example — define the order in which they apply and whether they stack, because the system will make that decision on every affected shift whether the project defined it or not."
+      },
+      {
+        "type": "p",
+        "text": "Rounding deserves its own explicit decision, not a default. Define the rounding interval, whether it applies to the punch, the shift, or the day, and test its effect on short shifts and on punches just either side of a boundary. Rounding that is neutral in a demonstration can systematically favour one side in live use, and employees notice the pattern long before a report shows it."
+      },
+      {
+        "type": "h2",
+        "text": "Capture methods: match the method to the place of work"
+      },
+      {
+        "type": "p",
+        "text": "Capture is where design meets habit. A warehouse team, a retail floor, a field crew, and an office population do not work in the same place, and forcing one method onto all of them guarantees informal workarounds — shared badges, supervisor back-entry, paper notes retyped later — that destroy the audit trail the system was bought to create. For each population, choose a primary method and a fallback, and define what happens when the primary method is unavailable: a terminal offline, a phone without signal, a forgotten badge."
+      },
+      {
+        "type": "p",
+        "text": "Following [the time tracking implementation guide](/blog/time-tracking-implementation-guide), the capture layer must record more than a time: the location or device, the method used, and any later edit, with the original value preserved. Edits are a normal part of time and attendance — people forget, devices fail — so design for them openly: who may edit, whose approval an edit needs, and how an employee sees that their time was changed. A system where edits are invisible will be distrusted even when every edit is legitimate."
+      },
+      {
+        "type": "p",
+        "text": "Biometric capture needs particular care and early advice. Where it is considered, define what is collected, why, how long it is kept, and what non-biometric alternative exists, following your policies and legal advice in each jurisdiction. Do not let a hardware decision made for convenience create a privacy commitment the organisation has not deliberately accepted."
+      },
+      {
+        "type": "h2",
+        "text": "Schedules, absence, and the comparison that creates exceptions"
+      },
+      {
+        "type": "p",
+        "text": "Time and attendance earns its value in the comparison: actual time against [the scheduling module implementation guide](/blog/scheduling-module-implementation) roster, and against approved absence under [the absence management implementation guide](/blog/absence-management-implementation). An employee who works beyond the roster, arrives during approved leave, or is absent without a leave record creates an exception — and the design question is which of those events deserve a supervisor's attention and which are noise."
+      },
+      {
+        "type": "p",
+        "text": "Configure exception thresholds deliberately. If every one-minute variance flags, supervisors learn to clear the queue without reading it, and the one exception that matters — the unapproved overtime, the missed meal break, the pattern of early punches — hides inside the noise. Group exceptions by consequence: those that change pay, those that may breach a rule or agreement, and those that are informational. Set the payroll deadline behaviour for each group in advance, including what happens to time that is still unapproved when payroll must run, and communicate that behaviour before the first live period, not during it."
+      },
+      {
+        "type": "p",
+        "text": "Approvals need the same realism. Define who approves, who acts when the approver is away, and how an employee disputes a total they believe is wrong. The dispute route matters as much as the approval route: the first disputed paycheque will arrive early, and whether the employee can see their punches, edits, and applied rules — in language they can follow — decides whether the system keeps their trust."
+      },
+      {
+        "type": "img",
+        "src": "/images/blog/time-attendance-implementation-2.svg",
+        "alt": "Time and attendance control diagram: a time record captured and matched to schedule and approved absence, pay rules applied in order, exceptions reviewed and time approved before payroll, with an audit and privacy strip covering preserved original values, visible approved edits, and deliberate biometric decisions.",
+        "caption": "Time and attendance control diagram: a time record captured and matched to schedule and absence, rules applied, exceptions reviewed and time approved before payroll, with an audit and privacy strip covering preserved originals, edit approval, and retention."
+      },
+      {
+        "type": "h2",
+        "text": "Testing: the difficult shifts decide whether it works"
+      },
+      {
+        "type": "p",
+        "text": "Build the test set from shifts that strain the rules, not the clean daytime shift that works in every demonstration: an overnight shift crossing midnight and a pay-period boundary; a split shift; work on a statutory holiday; a missed punch corrected by a supervisor; an employee who transfers location or changes status mid-period; overtime that begins partway through a shift; and a meal break taken late, early, or not at all. Each scenario must travel the whole path — capture, schedule comparison, rule application, exception, approval, and pay result — checked against a hand-worked figure, because time and attendance defects live in the interactions between rules."
+      },
+      {
+        "type": "p",
+        "text": "Parallel running with payroll is the final proof, and it needs an agreed tolerance and an investigation rule before it starts: every difference above the tolerance is traced to a rule, a schedule, or a data cause — never explained away as rounding. Historical time data migration is usually limited compared with balances in other modules, but rule-group assignments, schedules in progress, and any open time records at cutover must be reconciled and agreed with operations and payroll in writing before go-live."
+      },
+      {
+        "type": "h2",
+        "text": "Common mistakes"
+      },
+      {
+        "type": "p",
+        "text": "Most time and attendance failures are rule, capture, and exception decisions made too quickly."
+      },
+      {
+        "type": "accordion",
+        "label": "Time and attendance mistakes, as a diagnostic",
+        "items": [
+          {
+            "q": "Starting with the device instead of the rules",
+            "a": "Terminals and apps only record events. If overtime, premiums, rounding, and holiday rules were never written in plain language with worked examples, the hardware will faithfully record time that the system then pays incorrectly."
+          },
+          {
+            "q": "One capture method forced onto every setting",
+            "a": "Field, floor, and office populations work in different places. A single method creates shared badges, back-entry, and paper workarounds that remove the audit trail and make the official record the least reliable version of the day."
+          },
+          {
+            "q": "Rounding left on a default setting",
+            "a": "Rounding interval and scope change real pay on short shifts and boundary punches. Left untested, a default can systematically favour one side, and employees will identify the pattern before any project report does."
+          },
+          {
+            "q": "Exception queues that flag everything",
+            "a": "When every minor variance demands attention, supervisors clear queues without reading them. Exceptions must be grouped by consequence — pay-changing, rule-related, informational — so the items that matter stay visible."
+          },
+          {
+            "q": "Edits with no visible audit trail",
+            "a": "Missed punches and corrections are normal. If original values are overwritten and employees cannot see what changed and who approved it, legitimate corrections look like manipulation and trust in every total falls."
+          },
+          {
+            "q": "Testing only the clean shift",
+            "a": "The standard daytime shift passes in any system. Overnight, split, holiday, and mid-period-change shifts are where rule interactions fail — and they are exactly the shifts employees remember when pay is wrong."
+          }
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Key Takeaways"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "Time and attendance is a pay-rules discipline: capture only records the event — rules, comparisons, and approvals turn it into pay.",
+          "Write every pay rule in plain language with a worked example, including rounding and the order in which overlapping rules apply.",
+          "Match capture methods to each work setting, design openly for edits, and treat biometric collection as a deliberate privacy decision.",
+          "Tune exceptions by consequence so supervisors read the queue, and publish what happens to unapproved time at the payroll deadline.",
+          "Test the difficult shifts end to end and reconcile parallel results to hand-worked figures before go-live."
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Frequently Asked Questions"
+      },
+      {
+        "type": "p",
+        "text": "Should an organisation start a time and attendance project by choosing clocks or an app? No. Start with the pay rules and the populations who will record time. Capture hardware and apps should be chosen to serve written rules and real work settings; chosen first, they quietly dictate both."
+      },
+      {
+        "type": "p",
+        "text": "How should missed punches be handled? As a designed, visible correction: the employee or supervisor records what actually happened, the original entry is preserved, an approval applies where your policy requires one, and the employee can see the correction. Invisible overwriting is the failure to avoid."
+      },
+      {
+        "type": "p",
+        "text": "What belongs in time and attendance testing? The shifts that strain rule interactions — overnight and split shifts, holiday work, mid-period transfers and status changes, missed punches, and overtime beginning mid-shift — each checked end to end against a hand-worked pay figure."
+      },
+      {
+        "type": "p",
+        "text": "How many exception types should supervisors see? Only as many as they can act on before the payroll deadline, grouped by consequence. Pay-changing and rule-related exceptions need attention; purely informational variance should be reported, not queued as work."
+      },
+      {
+        "type": "h2",
+        "text": "Next Steps"
+      },
+      {
+        "type": "p",
+        "text": "Start with the rule book: every rule that turns time into pay, written in plain language with a worked example and an owner. Then map each population to a capture method and fallback, assign rule groups and check the awkward assignments, tune the exception queue by consequence, and build the difficult-shift test set before promising a go-live date."
+      },
+      {
+        "type": "quiz",
+        "label": "Check your understanding",
+        "questions": [
+          {
+            "q": "After go-live, employees on short shifts notice their recorded time is consistently a few minutes less than they worked, always in the same direction. Configuration used the default rounding setting and it was never tested on short shifts. What is the right response?",
+            "options": [
+              {
+                "text": "Explain that rounding evens out over time and leave the setting unchanged",
+                "correct": false,
+                "why": "A pattern that always falls in one direction does not even out for the affected employees. Dismissing a visible, consistent effect teaches the workforce that the system favours the employer by design."
+              },
+              {
+                "text": "Test the rounding interval and scope against worked examples for short and boundary shifts, correct the configuration to match the written policy, and explain the correction openly",
+                "correct": true,
+                "why": "Rounding is a pay rule, not a technical default. The fix is the work that was skipped: define the intended treatment in plain language, prove it on the cases employees are raising, and correct transparently."
+              },
+              {
+                "text": "Turn rounding off entirely so every punch is recorded to the minute",
+                "correct": false,
+                "why": "That may contradict the organisation's policy and agreements and creates a different, untested rule. The question is what the written policy intends, not which setting avoids discussion."
+              }
+            ]
+          },
+          {
+            "q": "A supervisor clears two hundred exceptions the night before payroll without opening any of them, because the queue flags every variance over one minute. What is the design flaw?",
+            "options": [
+              {
+                "text": "The supervisor needs more training on working faster in the queue",
+                "correct": false,
+                "why": "No amount of training makes two hundred low-value items a meaningful review. The queue was designed to be cleared, not read."
+              },
+              {
+                "text": "The exception thresholds were never tuned by consequence, so pay-changing and rule-related items hide inside informational noise",
+                "correct": true,
+                "why": "Exceptions exist to direct attention. Grouping by consequence and setting thresholds supervisors can genuinely work through is what keeps the important items visible."
+              },
+              {
+                "text": "Exceptions should be removed so time flows straight to payroll",
+                "correct": false,
+                "why": "Removing review removes the control that catches unapproved overtime and rule breaches before they are paid. The answer is a readable queue, not no queue."
+              }
+            ]
+          },
+          {
+            "q": "A field crew shares one badge because the chosen terminal sits in a depot they rarely visit, and their hours are re-entered from paper at week end. What should the project do?",
+            "options": [
+              {
+                "text": "Discipline the crew for badge sharing and enforce the terminal",
+                "correct": false,
+                "why": "The crew adapted to a capture method that does not fit where they work. Enforcement without a workable method drives the workaround further underground and keeps the record unreliable."
+              },
+              {
+                "text": "Change the capture design for that population — a method that works in the field, with a defined fallback — and restore individual, auditable recording",
+                "correct": true,
+                "why": "Capture must match the place of work. A method people can actually use, with preserved originals and visible edits, is what makes the record trustworthy."
+              },
+              {
+                "text": "Accept paper re-entry as the permanent process for field staff",
+                "correct": false,
+                "why": "Retyped paper loses the audit trail, delays exception handling past the payroll deadline, and guarantees transcription errors. It is a workaround, not a design."
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
     "slug": "absence-management-implementation",
     "title": "Absence Management Implementation",
     "excerpt": "Implement absence management that holds: absence types and accruals, eligibility and approvals, privacy, and testing before schedules and pay depend on it.",
