@@ -1,5 +1,270 @@
 [
   {
+    "slug": "hcm-mobile-frontline-workers",
+    "title": "Mobile Rollout for Frontline Workers",
+    "excerpt": "Roll out HCM mobile for frontline workers: device access, offline and shared-device rules, manager workflows, pilot testing, and adoption that sticks.",
+    "publishedAt": "2026-11-24",
+    "readingTime": "8 min read",
+    "cover": "/images/blog/hcm-mobile-frontline-workers-cover.webp",
+    "tags": [
+      "HCM",
+      "Implementation",
+      "Mobile",
+      "Frontline Workers"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "A mobile rollout for frontline workers fails in a predictable way: the project treats the phone as a smaller self-service portal, launches it to people who may have no corporate email address, no company device, and no desk at which to learn it, and then reports download numbers while the real work still happens on paper. Frontline work is different in kind, not just in screen size: shifts start before offices open, connectivity comes and goes, devices are personal, shared, or absent, and the tasks that matter — a punch, a schedule check, a swap, a leave request, an approval — must work in the minutes between real work."
+      },
+      {
+        "type": "p",
+        "text": "This guide treats mobile as a frontline operating tool: design access around how people actually work, build offline and shared-device behaviour deliberately, give managers workflows they can sustain on the floor, pilot through a full pay cycle, and measure adoption by tasks completed correctly."
+      },
+      {
+        "type": "h2",
+        "text": "Mobile is not a smaller portal"
+      },
+      {
+        "type": "p",
+        "text": "The starting error is assuming the population reached by [an employee self-service rollout](/blog/employee-self-service-rollout) is the population mobile must now serve. Desk-based staff usually have a corporate email address, a managed laptop, and time to read instructions. Many frontline workers have none of those: some were never issued a work email address, some share a household phone or change numbers often, some work in a language other than the one the portal was written in, and some need accessibility support a desktop rollout never considered. That is not a deficit in the worker; it is the design brief."
+      },
+      {
+        "type": "p",
+        "text": "Identity is therefore the first workflow. If a person cannot sign in, nothing else exists. Design sign-in that does not depend on a corporate email address: a badge or employee number with a verified personal phone number, a one-time code sent by text, or in-person enrolment with a supervisor who confirms identity. Plan for a lost phone, a changed number, and a forgotten credential at the start of a night shift, with recovery that does not wait for an office to open. Offer the languages the workforce uses, write task labels in plain words, and test text size, contrast, and touch targets on the oldest devices in use, with real workers in real conditions."
+      },
+      {
+        "type": "steps",
+        "label": "Rolling out mobile to the frontline, in order",
+        "intro": "Five moves that turn a mobile launch into frontline work that actually moves.",
+        "items": [
+          {
+            "title": "Design access for people without a desk or work email",
+            "text": "Map each population first: who has a personal phone, who relies on a shared device, who has no corporate email or managed device, and which languages and accessibility needs apply. Access design follows that map, not the office rollout."
+          },
+          {
+            "title": "Decide the device model site by site",
+            "text": "Set where personal devices are used, where shared or kiosk devices are provided, and what happens when neither is available. Publish the choice, the data and privacy expectations, and the fallback for every site."
+          },
+          {
+            "title": "Build the few workflows that matter most",
+            "text": "Start with the tasks frontline work turns on: punching, viewing the schedule, requesting time off, swapping a shift where policy allows, and manager approvals. Each workflow must work offline or on a shared device where the setting requires it."
+          },
+          {
+            "title": "Pilot with one site or crew through a full pay cycle",
+            "text": "Run the pilot long enough to include schedule publication, punches, requests, approvals, corrections, and the pay result. Fix identity, sync, and training problems in the pilot before any wider wave is promised."
+          },
+          {
+            "title": "Roll out in waves and prove adoption by tasks",
+            "text": "Expand site by site with local support on shift, and measure completed punches, requests, and approvals against the old route. Downloads and enrolments are starting points, not adoption."
+          }
+        ]
+      },
+      {
+        "type": "img",
+        "src": "/images/blog/hcm-mobile-frontline-workers-1.svg",
+        "alt": "Mobile rollout journey diagram for frontline workers: six stages from access designed and devices ready through workflows built and a pilot run to waves rolled out and adoption proven by completed tasks, with the lead owner named at each stage and a strip showing that every stage depends on identity, devices, and connectivity that match real frontline work.",
+        "caption": "Mobile rollout journey for frontline workers: access designed, devices ready, workflows built, pilot run, waves rolled out, and adoption proven."
+      },
+      {
+        "type": "h2",
+        "text": "Devices: personal, shared, and the space between"
+      },
+      {
+        "type": "p",
+        "text": "Each site must answer the device question for itself. On personal devices, the organisation gains reach, but must state its obligations plainly: participation should be a genuine choice where a provided alternative exists, personal and employer data stay separate, and nobody quietly bears a data cost the project pretended was free. On shared or kiosk devices, the organisation controls the hardware but owns different risks: queues at shift change, a worker still signed in when the next person steps up, and a device missing or flat when the night shift needs it. Many rollouts need both, plus an assisted route for the worker who has neither."
+      },
+      {
+        "type": "p",
+        "text": "Shared-device rules must be enforced by the design, not reminders: sessions end automatically, the next user never sees the previous worker's schedule, pay information, or requests, and signing out is one obvious action. Name a site owner for charging, updates, and failures — a kiosk broken for a week teaches everyone that paper is the reliable route. Connectivity needs the same realism: warehouses, basements, and rural routes contain dead zones, so define which tasks must be captured offline — above all the punch that feeds [time and attendance implementation](/blog/time-attendance-implementation) — how it is stored safely, when it synchronises, and what the worker sees confirming it was recorded. Define conflict handling in advance too: if an offline punch and a supervisor entry cover the same period, which record wins, who reviews it, and how does the employee see the outcome? Without visible confirmation and a clear conflict rule, workers keep paper notes as insurance."
+      },
+      {
+        "type": "h2",
+        "text": "Workflows managers and workers will actually use"
+      },
+      {
+        "type": "p",
+        "text": "Choose the first workflows by frontline value, not by what is easiest to demonstrate. For workers, the core set is usually viewing the published schedule from [the scheduling module implementation](/blog/scheduling-module-implementation), punching or confirming time, requesting time off and seeing the decision, checking a pay statement where that is in scope, and the first steps a new hire meets through [the onboarding module implementation](/blog/onboarding-module-implementation). Each workflow must be completable in the few minutes before a shift, on a break, or at shift end, and confirm its result in plain language. A request that disappears without a visible status sends the worker to a supervisor, and the organisation ends up running both processes and trusting neither."
+      },
+      {
+        "type": "p",
+        "text": "Manager workflows decide whether the rollout survives a real week. Supervisors are rarely at a desk either, so approvals, swaps, exception reviews, and absence responses must be workable on a phone, in short sessions, with a queue that shows what needs a decision today. Notifications need discipline: notify for decisions and deadlines that require action, batch the rest, and never message workers at all hours for matters that can wait until a shift — people who mute the application have, in practice, left the rollout. Training must fit the same reality: short, task-based, at the site, and scheduled as paid work time, with workers learning on the clock rather than training unpaid in their own time. This article describes implementation practice only; how working time and training obligations apply in each setting is a question for your own advisors. Build sessions from [a training needs analysis for HCM](/blog/training-needs-analysis-hcm) — a picker, a cashier, and a supervisor do not need the same session — and leave one-page guides in the site's languages, with a named person on each shift workers can ask."
+      },
+      {
+        "type": "img",
+        "src": "/images/blog/hcm-mobile-frontline-workers-2.svg",
+        "alt": "Mobile task control diagram: a punch, request, or approval checked for identity, queued offline and synced, rules applied, and manager approval completed before Core HR and payroll, with a privacy and access strip covering personal-device choice, location only when justified, and shared-device sign-out.",
+        "caption": "Mobile task control diagram: a punch, request, or approval checked for identity, queued offline and synced, rules applied, and manager approval completed before Core HR and payroll, with a privacy and access strip covering personal-device choice, location only when justified, and shared-device sign-out."
+      },
+      {
+        "type": "h2",
+        "text": "Location, biometrics, and privacy as deliberate choices"
+      },
+      {
+        "type": "p",
+        "text": "Some mobile features collect more than a task requires, and each is a deliberate decision, not a configuration default. Location is the clearest example: in some settings, confirming a punch happened at a work site serves a real, stated purpose; in many more, it adds surveillance without improving pay accuracy or safety. Decide site by site whether location is used at all, state the purpose in plain language before enrolment, and limit collection to the moment of the relevant task rather than continuous tracking. Biometric sign-in needs the same treatment: what is collected, why, how long it is kept, and what non-biometric alternative exists, following your policies and advice in each jurisdiction. This is implementation practice, not legal advice — a privacy commitment should never be created accidentally by a toggle nobody discussed. Withdrawing from personal-device use should lead to the shared or assisted route, not exclusion from schedules, requests, or pay information."
+      },
+      {
+        "type": "h2",
+        "text": "Pilot, waves, and adoption that can be proven"
+      },
+      {
+        "type": "p",
+        "text": "Pilot with one site or crew chosen because it is representative — mixed shifts, real connectivity, a supervisor who reports problems honestly — not because it is easiest. Run it through a full pay cycle: schedule publication, punches, requests, approvals, corrections, exceptions, and the pay result workers can compare with their own records. Communicate it through [a go-live communication plan](/blog/go-live-communication-plan) naming what is changing, what is not, and where help sits on each shift. Hold wider rollout until identity failures, sync conflicts, shared-device problems, and training gaps are fixed and retested, then roll out in waves — one site at a time, away from peak periods, with floor support on the first shifts."
+      },
+      {
+        "type": "p",
+        "text": "Finally, measure adoption the way [HCM adoption metrics](/blog/hcm-adoption-metrics) should be measured: by work completed through the new route. Track punches captured without later correction, requests decided inside the system, approvals completed within the expected window, and repeat use across pay periods, broken down by site, shift, and population so a struggling night shift is not hidden inside a healthy average. Downloads and enrolments describe reach, not adoption. When a group is not completing tasks, watch the work at that site before sending another reminder — the cause is usually access, connectivity, language, timing, or trust."
+      },
+      {
+        "type": "h2",
+        "text": "Common mistakes"
+      },
+      {
+        "type": "p",
+        "text": "Most mobile failures for frontline workers are access, device, and timing decisions made from a desk."
+      },
+      {
+        "type": "accordion",
+        "label": "Mobile rollout mistakes, as a diagnostic",
+        "items": [
+          {
+            "q": "Treating mobile as a smaller self-service portal",
+            "a": "Desk-based design assumes a corporate email address, a managed device, and time to learn. Frontline workers may have none of those. Access, identity, language, and training must be designed for deskless work from the start."
+          },
+          {
+            "q": "Sign-in that depends on a corporate email address",
+            "a": "Workers who were never issued a work email cannot enrol, and recovery that waits for office hours fails on night and weekend shifts. Identity needs badge, number, or in-person routes with a recovery path that works on shift."
+          },
+          {
+            "q": "No offline design for real workplaces",
+            "a": "Dead zones are normal in warehouses, basements, and field work. If a punch needs a live connection and gives no visible confirmation, workers keep paper notes as insurance and the system record is trusted less than the notebook."
+          },
+          {
+            "q": "Shared devices with no session discipline",
+            "a": "A shared tablet that leaves the previous worker signed in exposes schedules and pay information and invites errors. Automatic sign-out, one obvious exit action, and a named site owner are design requirements, not housekeeping."
+          },
+          {
+            "q": "Training scheduled off the clock or off site",
+            "a": "Workers asked to learn a work system in their own time, or in a session built for office staff, start the rollout resentful or unprepared. Short, task-based training belongs on shift, at the site, in the languages the site uses."
+          },
+          {
+            "q": "Reporting downloads as adoption",
+            "a": "An installed application that nobody completes a task in has changed nothing. Adoption is punches, requests, and approvals completed through the new route, sustained across pay periods and visible by site and shift."
+          }
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Key Takeaways"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "Mobile for frontline workers is a different design problem, not a smaller portal: access, identity, language, and timing come first.",
+          "Decide the device model site by site — personal, shared, and assisted routes — with explicit privacy expectations and a fallback for every worker.",
+          "Offline capture needs visible confirmation and a defined conflict rule, or workers will keep paper records as insurance.",
+          "Manager approvals and notification discipline decide whether the rollout survives a real week on the floor.",
+          "Pilot one site or crew through a full pay cycle, then prove adoption by completed tasks, not downloads."
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Frequently Asked Questions"
+      },
+      {
+        "type": "p",
+        "text": "How should workers without a corporate email address sign in? Through a route designed for them: a badge or employee number with a verified personal phone number and a texted code, or in-person enrolment with a supervisor. The essential test is recovery — a lost phone or changed number must be fixable on shift, not only during office hours."
+      },
+      {
+        "type": "p",
+        "text": "Should frontline workers be required to use their personal phones? Treat personal-device use as a choice backed by a real alternative — a shared device or assisted route that still gives the worker their schedule, requests, and pay information. State plainly what the application can access, and decide site by site."
+      },
+      {
+        "type": "p",
+        "text": "What should the pilot prove before wider rollout? A full pay cycle at one representative site: enrolment without a work email, offline punches that sync and resolve conflicts visibly, shared-device sign-out, manager approvals completed on shift, and a pay result workers can verify."
+      },
+      {
+        "type": "p",
+        "text": "How is mobile adoption measured honestly? By completed tasks sustained over time: punches captured without correction by another route, requests decided in the system, and approvals finished within the expected window — reported by site, shift, and population. Downloads measure reach only."
+      },
+      {
+        "type": "h2",
+        "text": "Next Steps"
+      },
+      {
+        "type": "p",
+        "text": "Start with the access map: for each population, record who has a personal phone, who needs a shared or assisted route, which languages and accessibility needs apply, and how identity and recovery will work without a corporate email address. Then settle device and offline rules site by site, build the short list of workflows, schedule training on shift, and pilot with one crew through a full pay cycle before promising any wave dates."
+      },
+      {
+        "type": "quiz",
+        "label": "Check your understanding",
+        "questions": [
+          {
+            "q": "Enrolment stalls at a distribution site: many workers have no corporate email address, and the sign-in design requires one. What is the right response?",
+            "options": [
+              {
+                "text": "Issue email addresses quickly and keep the original sign-in design unchanged",
+                "correct": false,
+                "why": "That may help some workers but leaves recovery, shared phones, and changed numbers unaddressed, and delays the rollout for an account many workers will never use for anything else."
+              },
+              {
+                "text": "Redesign identity for the population — badge or employee number with a verified phone, or in-person enrolment — with a recovery path that works on shift",
+                "correct": true,
+                "why": "Identity is the first workflow. If people cannot sign in and recover access during their own shift pattern, every later workflow is unreachable, whatever the application can do."
+              },
+              {
+                "text": "Ask supervisors to sign workers in on the supervisors' own accounts",
+                "correct": false,
+                "why": "Shared credentials destroy the audit trail, expose personal information to the wrong people, and make every later correction impossible to attribute."
+              }
+            ]
+          },
+          {
+            "q": "A warehouse crew keeps paper notes of their hours after mobile go-live because punches made in a dead zone show no confirmation and sometimes appear twice after sync. What is the design flaw?",
+            "options": [
+              {
+                "text": "The crew needs a reminder that paper notes are no longer the official record",
+                "correct": false,
+                "why": "The crew is responding rationally to a system that gives no proof a punch was kept and no clear rule when records collide. Reminders do not repair missing confirmation or conflict handling."
+              },
+              {
+                "text": "Offline capture was launched without visible confirmation and a defined conflict rule for duplicates",
+                "correct": true,
+                "why": "Offline work must show the worker that the capture is stored, state what happens on sync, and route conflicts to a visible review with an outcome the employee can see."
+              },
+              {
+                "text": "Mobile punching should be withdrawn from any area without full signal coverage",
+                "correct": false,
+                "why": "That excludes exactly the settings frontline mobile exists to serve. The answer is offline design that earns trust, not a smaller rollout."
+              }
+            ]
+          },
+          {
+            "q": "A launch report celebrates that most frontline workers have downloaded the application, but leave requests still arrive on paper and supervisors approve almost nothing on mobile. How should the project respond?",
+            "options": [
+              {
+                "text": "Report the download figure as adoption and close the rollout",
+                "correct": false,
+                "why": "Downloads measure reach. The work the rollout exists to move — requests and approvals — is still happening on the old route, so the change has not landed."
+              },
+              {
+                "text": "Measure completed tasks by site and shift, then visit the sites where tasks are not moving to find the access, training, or workflow cause",
+                "correct": true,
+                "why": "Adoption is punches, requests, and approvals completed through the new route and sustained across pay periods. A gap by site or shift points to a local cause that observation finds faster than reminders."
+              },
+              {
+                "text": "Send repeated notifications to all workers until paper requests stop",
+                "correct": false,
+                "why": "Notification pressure on people whose barrier may be identity, language, connectivity, or trust produces muting and resentment, not completed tasks."
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
     "slug": "time-attendance-implementation",
     "title": "Time and Attendance Implementation",
     "excerpt": "Implement time and attendance that pays correctly: capture methods, pay rules and rounding, exceptions, approvals, and testing before payroll depends on it.",
