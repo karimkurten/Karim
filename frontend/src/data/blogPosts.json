@@ -1,5 +1,270 @@
 [
   {
+    "slug": "performance-module-implementation",
+    "title": "Performance Management Module Implementation",
+    "excerpt": "Implement a performance module that managers trust: goal cycles, calibration, review workflows, competencies, and reporting that supports fair decisions.",
+    "publishedAt": "2026-11-25",
+    "readingTime": "8 min read",
+    "cover": "/images/blog/performance-module-implementation-cover.webp",
+    "tags": [
+      "HCM",
+      "Implementation",
+      "Performance Management",
+      "Talent"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "A performance management module fails in a predictable way: the project configures the review form and discovers in the first live cycle that the goals do not cascade, the rating scale means something different in every department, managers were never taught to calibrate, and the reporting leadership asked for cannot be produced from the forms. The software worked. The management system around it was never implemented."
+      },
+      {
+        "type": "p",
+        "text": "This guide treats the module as an operating system for decisions — design the cycle and the scale before the form, build workflows around real manager–employee conversations, protect performance data, pilot one complete cycle including calibration, and measure success by reviews completed well — not by forms opened."
+      },
+      {
+        "type": "h2",
+        "text": "Design the cycle before the form"
+      },
+      {
+        "type": "p",
+        "text": "The first design decision is the cycle itself, and it belongs to the business. Decide which cycles will run — an annual review, mid-year check-ins, quarterly goal reviews, probationary reviews — and what each is for. A cycle that tries to judge the past year, set next year's goals, identify development needs, and feed pay decisions in one form usually does all four badly. Separate the moments where the purpose differs."
+      },
+      {
+        "type": "p",
+        "text": "Goal design follows the cycle. Decide how goals cascade from organisational priorities to teams and individuals, how many goals a person can carry, whether goals can be revised mid-cycle, and how completion is evidenced. Managers should see the team goals their own goals support, and employees how their work connects upward. These decisions depend on accurate data from [a Core HR implementation](/blog/core-hr-implementation-guide) — job, manager, and organisational unit — because a review routed to the wrong manager or a vacant position is a cycle defect, not a user error. Freeze the calendar early — goal setting, check-ins, self-review, manager review, calibration, sign-off — and test it against payroll and peak periods before anyone configures a notification."
+      },
+      {
+        "type": "steps",
+        "label": "Implementing the performance module, in order",
+        "intro": "Five moves that turn a configured form into a cycle managers trust.",
+        "items": [
+          {
+            "title": "Design the cycle, scale, and calendar first",
+            "text": "Settle which cycles run, what each is for, how goals cascade and can change mid-cycle, and the rating scale with behavioural anchors. Freeze the calendar against payroll and peak periods before configuring anything."
+          },
+          {
+            "title": "Build forms and workflows around real conversations",
+            "text": "Configure review forms, self-review, approvals, and notifications so each step matches a conversation a manager and employee actually have, with deadlines and escalation that reflect how work is supervised."
+          },
+          {
+            "title": "Connect Core HR data and protect performance data",
+            "text": "Feed job, manager, and organisation from Core HR, test what happens when managers change mid-cycle, and set visibility so performance data is seen only by the people with a legitimate role in the cycle."
+          },
+          {
+            "title": "Pilot one complete cycle including calibration",
+            "text": "Run a leadership group through goal setting, check-in, review, calibration, and reporting end to end. Fix scale interpretation, workflow gaps, and report defects in the pilot, not in the first enterprise cycle."
+          },
+          {
+            "title": "Enable managers, launch, and measure completion quality",
+            "text": "Train managers to write evidence-based reviews and run calibration, support the first cycle actively, and measure on-time completion, calibration movement, and review quality rather than form openings."
+          }
+        ]
+      },
+      {
+        "type": "img",
+        "src": "/images/blog/performance-module-implementation-1.svg",
+        "alt": "Performance cycle journey diagram: five stages from goals set and check-ins held through review written and calibration held to outcomes linked, with the lead owner named at each stage and a strip showing that every stage depends on accurate Core HR data and a scale people interpret the same way, and that calibration finishes before any pay process reads the outcomes.",
+        "caption": "Performance cycle journey: goals set, check-ins, review, calibration, and outcomes linked, with lead owners at each stage and a strip noting that every stage depends on accurate Core HR data and a scale people interpret the same way."
+      },
+      {
+        "type": "h2",
+        "text": "Rating scales, competencies, and calibration"
+      },
+      {
+        "type": "p",
+        "text": "The rating scale is the most argued-over artefact in the project. Keep the scale short enough to define precisely, and anchor every level in observable behaviour and outcomes, not adjectives: two managers reading the same anchor should rate the same evidence the same way. Decide whether the scale is absolute or comparative, and whether distribution guidance exists. State any distribution expectation in the design; a hidden curve, discovered after honest ratings are submitted, destroys trust."
+      },
+      {
+        "type": "p",
+        "text": "Competency models need the same discipline: choose the small set the organisation genuinely evaluates, define what each looks like at the levels people will rate, and decide whether competencies carry their own rating or inform the overall judgement. Calibration is where the module earns its keep: configure sessions by leadership group, give calibrators the views they need — proposed ratings, goal evidence, prior-cycle outcomes where policy allows — and record what changed and why. Build calibration before the first cycle opens; retrofitting it means running the most sensitive step of the year over email and spreadsheets."
+      },
+      {
+        "type": "h2",
+        "text": "Forms, workflows, and the two self-service roles"
+      },
+      {
+        "type": "p",
+        "text": "A review form should mirror the conversation it supports. Separate clearly what the employee writes in self-review, what the manager assesses, what goals contribute, and where development actions are recorded. Keep the form short, with room for evidence. Decide required fields, which ratings need a supporting comment, and what happens when a goal was cancelled mid-year through no fault of the employee — edge cases decided in design do not become grievances. Workflow design is role design. The employee experience runs through [an employee self-service rollout](/blog/employee-self-service-rollout): setting and updating goals, recording achievements during the year, completing self-review, and acknowledging the outcome."
+      },
+      {
+        "type": "p",
+        "text": "The manager experience runs through [a manager self-service rollout](/blog/manager-self-service-rollout): approving goals, documenting check-ins, drafting reviews, submitting to calibration, and completing sign-off for every direct report. Remind early enough to act, escalate when a step stalls, and never let a manager's missed deadline erase an employee's completed self-review. Test the awkward cases — a manager changing mid-cycle, two reporting lines, a leave spanning the review window — because the live cycle will find them all."
+      },
+      {
+        "type": "img",
+        "src": "/images/blog/performance-module-implementation-2.svg",
+        "alt": "Performance data control diagram: Core HR job, manager, and organisation data feeding forms and workflows, then employee and manager actions and calibration before reporting, with a privacy and access strip covering role-based visibility, calibration confidentiality, and retention, and a note that history migration is a decision, not a default.",
+        "caption": "Performance data control diagram: Core HR job, manager, and organisation data feeding forms and workflows, manager and employee actions, and calibration before reporting, with a privacy and access strip covering role-based visibility, calibration confidentiality, and retention."
+      },
+      {
+        "type": "h2",
+        "text": "Continuous feedback, history, and the compensation link"
+      },
+      {
+        "type": "p",
+        "text": "Many organisations arrive wanting continuous feedback to replace the annual review, and the honest answer is that the two do different work. Frequent check-ins keep goals current and prevent the year-end surprise; the formal cycle creates the recorded, calibrated judgement that development plans, succession discussions, and pay processes rely on. Configure both deliberately, with check-ins light enough for teams to sustain. A check-in process so heavy that managers abandon it by the second quarter is worse than a simpler one that survives."
+      },
+      {
+        "type": "p",
+        "text": "Historical reviews force a judgement call. Old forms carry old scales, departed managers, and uneven quality, and the migration effort is real. A common pattern: migrate the most recent completed cycle in structured form, archive older material as read-only documents where retention policy requires, and start clean beyond that. State plainly what employees and new managers will see, and what was not carried over. Performance data is among the most sensitive the organisation holds, so design visibility explicitly: who sees a review, a rating, and calibration notes at each stage, and how access changes when someone moves teams. This article describes implementation practice only; retention and access obligations in each jurisdiction are questions for your own advisors. Finally, handle the compensation linkage with care: decide whether ratings feed pay decisions directly, as one input among several, or not at all in the first cycle, and set the timing so calibration completes before any pay process reads the outcomes. Ambiguity here is the fastest route to managers rating for the budget instead of the evidence."
+      },
+      {
+        "type": "h2",
+        "text": "Pilot, manager enablement, and reporting that proves fairness"
+      },
+      {
+        "type": "p",
+        "text": "Pilot the module with one leadership group through the complete cycle, including calibration and the reports leadership will actually use. A pilot that stops at form completion proves almost nothing, because the defects that matter live in calibration and reporting: ratings that cannot be compared across teams, calibration views missing the evidence calibrators need, and reports that cannot show completion by organisation. Fix scale wording, workflow gaps, and report definitions in the pilot, and let pilot managers tell the wider population what changed."
+      },
+      {
+        "type": "p",
+        "text": "Manager enablement decides the first cycle. Managers need more than system navigation: practice writing evidence-based assessments, guidance on the scale anchors, and a worked example of how calibration runs. Build that enablement from [a training needs analysis for HCM](/blog/training-needs-analysis-hcm), sized by manager experience. New joiners meet the process through [the onboarding module implementation](/blog/onboarding-module-implementation), where probationary goals set expectations early. Then measure the rollout the way [HCM adoption metrics](/blog/hcm-adoption-metrics) should be measured: steps completed on time, calibration held for every group in scope, and completion visible by organisation so a struggling unit is helped rather than hidden inside an enterprise average. Define the cycle-end reporting pack — completion, rating distribution, calibration movement, development themes — before the cycle opens, so the module is configured to produce it."
+      },
+      {
+        "type": "h2",
+        "text": "Common mistakes"
+      },
+      {
+        "type": "accordion",
+        "label": "Performance module mistakes, as a diagnostic",
+        "items": [
+          {
+            "q": "Configuring the form before designing the cycle",
+            "a": "A form built before the cycle purpose, calendar, and scale are settled hard-codes confusion. Decide what each cycle is for, when it runs, and what the ratings mean first; configuration follows those decisions."
+          },
+          {
+            "q": "A rating scale defined in adjectives",
+            "a": "Levels described as excellent or strong mean different things in different teams. Anchor every level in observable behaviour and outcomes, and test the anchors by having two managers rate the same evidence independently."
+          },
+          {
+            "q": "Calibration bolted on after ratings are submitted",
+            "a": "Retrofitting calibration pushes the most sensitive step of the year into email and spreadsheets. Configure calibration groups, views, and reason-recording before the cycle opens, and complete calibration before any pay process reads outcomes."
+          },
+          {
+            "q": "Migrating every historical review by default",
+            "a": "Years of old forms carry obsolete scales and uneven quality at real migration cost. Migrate the recent cycle in structured form, archive older material under retention policy, and tell employees plainly what they and their managers will see."
+          },
+          {
+            "q": "Treating manager training as system navigation",
+            "a": "Knowing which button submits a review does not teach evidence-based writing or calibration judgement. Enablement must practise assessment writing, scale anchors, and the calibration conversation, sized by manager experience."
+          },
+          {
+            "q": "Measuring success by forms opened",
+            "a": "An opened form is not a completed, calibrated review. Measure on-time completion by step, calibration coverage, and reviews returned for weak evidence, reported by organisation."
+          }
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Key Takeaways"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "Design the cycle, calendar, and rating scale before configuring any form — the form only encodes decisions already made.",
+          "Anchor every rating level in observable behaviour, and build calibration, with recorded reasons for changes, before the first cycle opens.",
+          "The module runs on Core HR data: wrong manager, job, or organisation data becomes a cycle defect, so test mid-cycle changes.",
+          "Run check-ins and the formal cycle as different instruments, migrate only the history that earns its cost, and protect performance data with explicit visibility rules.",
+          "Pilot one complete cycle including calibration and reporting, and measure on-time completion and fairness — not form openings."
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Frequently Asked Questions"
+      },
+      {
+        "type": "p",
+        "text": "Should continuous feedback replace the annual review? No — they do different work. Check-ins keep goals current and prevent surprises, while the formal cycle produces the recorded, calibrated judgement that development and pay processes rely on. Implement both, keeping check-ins light."
+      },
+      {
+        "type": "p",
+        "text": "How much review history should be migrated into the new module? Usually the most recent completed cycle in structured form, with older material archived as read-only documents where retention policy requires it. State the decision plainly: what employees see, what a new manager sees, and what was not carried over."
+      },
+      {
+        "type": "p",
+        "text": "When should calibration happen relative to compensation decisions? Calibration must finish first: ratings moderated and reasons recorded before any pay process reads the outcomes. The design should state whether ratings feed pay directly or serve as one input among several."
+      },
+      {
+        "type": "p",
+        "text": "What should the pilot prove before the enterprise cycle opens? One leadership group completing the whole cycle: goals approved, a check-in held, reviews submitted, calibration run with views that show the needed evidence, sign-off completed, and the reporting pack produced from real data."
+      },
+      {
+        "type": "h2",
+        "text": "Next Steps"
+      },
+      {
+        "type": "p",
+        "text": "Start with the cycle design workshop: settle which cycles run, the calendar, the rating scale with behavioural anchors, and how competencies inform the judgement. Then map forms and workflows to the employee and manager conversations, confirm Core HR data feeds and visibility rules, decide the history scope, and pilot one complete cycle — calibration and reporting included — before committing enterprise dates."
+      },
+      {
+        "type": "quiz",
+        "label": "Check your understanding",
+        "questions": [
+          {
+            "q": "Two departments submit ratings for the first cycle and their distributions differ sharply; in calibration, neither group can explain what evidence separates the top level from the next. What is the root cause?",
+            "options": [
+              {
+                "text": "The departments need a forced distribution applied to bring them into line",
+                "correct": false,
+                "why": "Forcing outcomes onto an undefined scale hides the defect and punishes honest managers. The problem is that the levels were never anchored in evidence anyone could apply consistently."
+              },
+              {
+                "text": "The rating scale was defined in adjectives rather than behavioural anchors tested against real evidence",
+                "correct": true,
+                "why": "Calibration can only moderate judgements that share a meaning. Anchoring each level in observable behaviour and outcomes, and testing anchors before the cycle, gives calibrators a common standard."
+              },
+              {
+                "text": "Calibration should be removed so each manager's judgement stands as submitted",
+                "correct": false,
+                "why": "Removing calibration removes the fairness control entirely. The fix is a scale calibration can work with, plus recorded reasons when ratings change."
+              }
+            ]
+          },
+          {
+            "q": "A manager leaves mid-cycle and their team is reassigned. In the new module, the team's completed self-reviews route to the departed manager's vacant position and stall. What should have been tested?",
+            "options": [
+              {
+                "text": "Whether employees could still open their review forms",
+                "correct": false,
+                "why": "Form access was never the problem. The workflow routing depended on a position that became vacant, and nobody tested that transition before the live cycle found it."
+              },
+              {
+                "text": "Mid-cycle manager changes, acting assignments, and vacant-position routing during workflow design and testing",
+                "correct": true,
+                "why": "Performance workflows run for months, so organisational change during the cycle is certain, not exceptional. Routing, visibility, and sign-off must be tested for manager changes, dual reporting, and leave spanning the window."
+              },
+              {
+                "text": "Nothing — employees should ask HR to print the reviews until a new manager starts",
+                "correct": false,
+                "why": "A manual workaround in the first cycle teaches everyone that the module cannot be trusted with the process it was bought to run."
+              }
+            ]
+          },
+          {
+            "q": "Leadership asks, two weeks after the cycle closes, for rating distribution and calibration movement by organisation, but the module was never configured to report either. What went wrong in implementation?",
+            "options": [
+              {
+                "text": "The reporting pack was not defined before the cycle opened, so forms and calibration were never configured to produce it",
+                "correct": true,
+                "why": "Reporting is a design input, not an afterthought. The reports leadership will judge the cycle by must be specified early and proven in the pilot from real pilot data."
+              },
+              {
+                "text": "Managers entered too much free-text comment, making reporting impossible",
+                "correct": false,
+                "why": "Comments do not prevent distribution or calibration reporting when the underlying ratings and calibration changes are captured as structured data, as the design should ensure."
+              },
+              {
+                "text": "The data should be exported and rebuilt in spreadsheets each cycle",
+                "correct": false,
+                "why": "Rebuilding the fairness evidence outside the system breaks the audit trail and guarantees the same scramble every cycle. Configure the reporting the process needs."
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
     "slug": "hcm-mobile-frontline-workers",
     "title": "Mobile Rollout for Frontline Workers",
     "excerpt": "Roll out HCM mobile for frontline workers: device access, offline and shared-device rules, manager workflows, pilot testing, and adoption that sticks.",
