@@ -1,5 +1,282 @@
 [
   {
+    "slug": "ats-module-implementation",
+    "title": "Recruiting (ATS) Module Implementation",
+    "excerpt": "Implement a recruiting module hiring teams trust: requisition approvals, career site flow, pipeline stages, scorecards, offers, and privacy by design.",
+    "publishedAt": "2026-11-26",
+    "readingTime": "8 min read",
+    "cover": "/images/blog/ats-module-implementation-cover.webp",
+    "tags": [
+      "HCM",
+      "Implementation",
+      "Recruiting",
+      "Talent Acquisition"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "A recruiting module fails in a predictable way: the project configures the career site and discovers in the first live round that requisitions stall waiting for an approver nobody named, hiring managers invent their own pipeline stages, interview feedback lives in email, and the offer goes out with terms nobody approved. The software worked. The hiring system around it was never implemented."
+      },
+      {
+        "type": "p",
+        "text": "This guide treats the module as an operating system for hiring decisions — design the requisition and approvals before the job template, build the application flow around the candidate, keep pipeline stages few and consistently defined, protect candidate data, pilot one complete hiring round, and measure success by sound hires — not postings published."
+      },
+      {
+        "type": "h2",
+        "text": "Design the requisition before the job posting"
+      },
+      {
+        "type": "p",
+        "text": "The first design decision is the requisition itself. Decide what a requisition must contain before it can open — the role, the hiring manager, the organisation and location, the employment type, and the justification a manager records. Decide who approves, in what order, and what happens when an approver is away."
+      },
+      {
+        "type": "p",
+        "text": "Approvals are workflow design, not administration. Route the requisition through [a manager self-service rollout](/blog/manager-self-service-rollout), where each approver acts in sequence, with reminders and escalation when a step stalls. Test the awkward cases: an approver on leave, and a role that changes scope after approval. Freeze the job template library alongside the workflow, with sections a manager may edit and sections, such as required qualifications, that stay controlled. These decisions depend on accurate data from [a Core HR implementation](/blog/core-hr-implementation-guide) — job, manager, and organisational unit — because a requisition raised against the wrong job is a hiring defect."
+      },
+      {
+        "type": "steps",
+        "label": "Implementing the recruiting module, in order",
+        "intro": "Five moves that turn a configured career site into a hiring process teams trust.",
+        "items": [
+          {
+            "title": "Design the requisition and approvals first",
+            "text": "Settle what a requisition must contain, who approves in what order, and what happens when an approver is away. Freeze the job template library and the controlled sections before configuring any posting."
+          },
+          {
+            "title": "Build the career site and application flow around the candidate",
+            "text": "Configure the career site, job templates, and application form so a candidate can find a role, understand it, and apply without unnecessary steps, with internal candidates routed through the employee route."
+          },
+          {
+            "title": "Define few pipeline stages and consistent screening",
+            "text": "Agree a small set of pipeline stages every hiring team uses the same way, with screening and knockout questions tied to the role requirements and reviewed before the posting opens."
+          },
+          {
+            "title": "Connect interviews, offers, and the Core HR handoff",
+            "text": "Configure scheduling, structured scorecards, and an approved offer workflow, then test the handoff that turns an accepted candidate into an employee record ready for onboarding."
+          },
+          {
+            "title": "Pilot one hiring group, enable, and measure the round",
+            "text": "Run one hiring group through requisition, application, screening, interview, offer, and handoff end to end. Fix workflow, scorecard, and report defects in the pilot, then measure stage movement and completion, not postings."
+          }
+        ]
+      },
+      {
+        "type": "img",
+        "src": "/images/blog/ats-module-implementation-1.svg",
+        "alt": "Requisition-to-onboard journey diagram: five stages from requisition approved and job posted through applications screened and interviews held to offer accepted and the onboarding handoff, with the lead owner named at each stage and a strip showing that every stage depends on accurate Core HR job and organisation data, and that the accepted offer creates the employee record with no re-keying.",
+        "caption": "Requisition-to-onboard journey: requisition approved, job posted, applications screened, interviews held, and offer accepted to onboarding handoff, with lead owners at each stage and a strip noting that every stage depends on accurate Core HR job and organisation data."
+      },
+      {
+        "type": "h2",
+        "text": "Job templates, career site, and the application flow"
+      },
+      {
+        "type": "p",
+        "text": "A job template is a consistency control. Build templates for the roles the organisation hires repeatedly, each carrying the structure of a good posting: the purpose of the role, the work itself, and the required and preferred qualifications. Decide which fields the hiring manager completes, which come from the job record, and which are locked. Written from a blank page, every posting varies by manager and screening has nothing stable to screen against."
+      },
+      {
+        "type": "p",
+        "text": "The career site and application flow are the candidate's first experience of the organisation, and an implementation deliverable, not a marketing afterthought. Configure search a candidate can actually use, a posting page that states the role plainly, and an application form that asks only for what the hiring decision needs at that stage. Every extra required field is a decision: if the team cannot say how an answer will be used in screening, it does not belong on the initial application. Internal candidates need a deliberate route as well, through [an employee self-service rollout](/blog/employee-self-service-rollout), handled under the same stages. Test the flow on a phone before any posting opens."
+      },
+      {
+        "type": "h2",
+        "text": "Pipeline stages, screening, and knockout questions"
+      },
+      {
+        "type": "p",
+        "text": "The pipeline is the shared language of the hiring round, so keep it small. A common pattern uses stages such as applied, screening, interview, offer, and hired, with disposition reasons recorded whenever a candidate leaves. Decide what moving a candidate forward requires and who may move them. When one team adds private stages and another works from email, nobody can say where a requisition stands."
+      },
+      {
+        "type": "p",
+        "text": "Screening and knockout questions need the same discipline. Tie every screening question to a requirement in the approved job template, and use knockouts only for genuine minimum requirements — a required licence, a legal eligibility the role depends on, a non-negotiable working pattern — stated in the posting itself. A knockout used for a preference quietly removes candidates the hiring manager would have wanted to see, and nobody notices because rejected candidates are invisible by default. Review the knockout set before the posting opens, and check in the pilot who the questions removed. Candidate communication belongs here too: acknowledgements, updates, and respectful closure."
+      },
+      {
+        "type": "img",
+        "src": "/images/blog/ats-module-implementation-2.svg",
+        "alt": "Recruiting control diagram: requisition and job data feeding pipeline stages, then interview scheduling, scorecards, and the offer workflow before the Core HR handoff to onboarding, with a privacy and retention strip covering role-based access, candidate communication records, and retention review, and a note that reporting is defined before go-live.",
+        "caption": "Recruiting control diagram: requisition and job data feeding pipeline stages, then interview scheduling, scorecards, and the offer workflow before the Core HR handoff to onboarding, with a privacy and retention strip covering role-based access, candidate communication records, and retention review."
+      },
+      {
+        "type": "h2",
+        "text": "Interviews, scorecards, and the offer workflow"
+      },
+      {
+        "type": "p",
+        "text": "Interview scheduling is where good pipelines lose weeks. Configure scheduling so coordinators and hiring managers can propose times, confirm panels, and reschedule inside the system. The interview itself needs structure: assign each panellist the areas they will assess, and give every interview a scorecard tied to the role requirements, completed promptly while the conversation is fresh. A scorecard that mirrors the job template lets the team compare candidates on the same evidence; free-text impressions gathered days later cannot be compared."
+      },
+      {
+        "type": "p",
+        "text": "The offer workflow closes the round, with approval discipline equal to the requisition that opened it. Decide which offer terms require approval and who approves them, so the accepted offer — role, start date, and agreed terms — is the single record everyone works from. Then test the handoff that matters most: the accepted candidate becomes an employee record through the Core HR foundation, ready for [the onboarding module implementation](/blog/onboarding-module-implementation), with no re-keying between systems."
+      },
+      {
+        "type": "h2",
+        "text": "Candidate data, privacy, and integrations"
+      },
+      {
+        "type": "p",
+        "text": "A recruiting module holds personal data about people who may never become employees, so privacy design is part of configuration, not a policy document filed afterwards. Decide who can see candidate records, how long unsuccessful applications are retained, and how a candidate's request about their own data would be handled. Build that handling on the same discipline as [data privacy in HR migrations](/blog/data-privacy-hr-migrations): collect only what the hiring decision needs, restrict access by role, and review retention on a schedule. This article describes implementation practice only; the privacy and employment obligations in each jurisdiction are questions for your own advisors."
+      },
+      {
+        "type": "p",
+        "text": "Integrations should serve the flow, not multiply it. The essential connection is the Core HR handoff described above. Job boards and posting distribution can be treated as a generic concept in design: decide which channels a posting may go to, who approves external posting, and how applications from every channel land in the same pipeline with their source recorded. An application that arrives outside the pipeline must be brought into the system promptly, or the pipeline stops being the record of the round. Test each integration end to end in the pilot."
+      },
+      {
+        "type": "h2",
+        "text": "Pilot, enablement, and reporting defined before go-live"
+      },
+      {
+        "type": "p",
+        "text": "Pilot the module with one hiring group through a complete round: requisition approved, posting published from a template, applications screened, interviews scored, an offer accepted, and the new hire handed to onboarding. A pilot that stops at posting a job proves almost nothing, because the defects that matter live in approvals, scorecards, and the handoff. Fix workflow gaps, template wording, and report definitions in the pilot."
+      },
+      {
+        "type": "p",
+        "text": "Enablement decides the first round. Hiring managers need practice raising a complete requisition, screening consistently against the template, and writing scorecard evidence; recruiters need the pipeline and reporting routines. Then measure the rollout the way [HCM adoption metrics](/blog/hcm-adoption-metrics) should be measured: requisitions approved without rework, candidates dispositioned with reasons recorded, scorecards completed on time, and offers approved from the system — reported by hiring group, so a struggling team is helped rather than hidden inside an average. Define the reporting pack before go-live — requisitions by stage, time in each stage, and source of application — so the module produces it from the first round."
+      },
+      {
+        "type": "h2",
+        "text": "Common mistakes"
+      },
+      {
+        "type": "accordion",
+        "label": "Recruiting module mistakes, as a diagnostic",
+        "items": [
+          {
+            "q": "Opening postings before the requisition workflow is settled",
+            "a": "A posting published before approvers, order, and absence cover are agreed stalls or proceeds without authority. Settle what a requisition must contain and who approves it first; configuration follows those decisions."
+          },
+          {
+            "q": "Letting every team invent its own pipeline stages",
+            "a": "Private stages and email side-channels destroy the shared view of where a requisition stands. Agree a small common stage set with disposition reasons, and require every application to live in the pipeline."
+          },
+          {
+            "q": "Using knockout questions for preferences",
+            "a": "A knockout should test a genuine minimum requirement stated in the posting, such as a required licence. Used for a preference, it silently removes candidates the hiring manager would have wanted, and the loss stays invisible."
+          },
+          {
+            "q": "Collecting interview feedback as free-text email",
+            "a": "Impressions gathered outside the system, days later, cannot be compared across candidates. Use a structured scorecard tied to the job template, assigned by assessment area, and completed promptly after each interview."
+          },
+          {
+            "q": "Re-keying the accepted candidate into Core HR by hand",
+            "a": "Manual re-entry corrupts the start date, job, or name that onboarding and payroll will read. Test the handoff so the accepted offer creates the employee record directly, with no re-keying between systems."
+          },
+          {
+            "q": "Treating reporting as an afterthought",
+            "a": "If stage, source, and completion reporting is not defined before go-live, the first round cannot be evidenced. Specify the reporting pack early and prove it in the pilot from real pilot requisitions."
+          }
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Key Takeaways"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "Design the requisition, approval order, and job templates before configuring any posting.",
+          "Keep pipeline stages few, shared, and defined, with disposition reasons recorded when a candidate leaves.",
+          "Use knockout questions only for genuine minimum requirements stated in the posting, and review who they remove in the pilot.",
+          "Structure interviews with scorecards tied to the job template, approve offers in the system, and hand the accepted candidate to Core HR and onboarding without re-keying.",
+          "Protect candidate data with role-based access and a retention review, pilot one complete round, and measure stage movement — not postings published."
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Frequently Asked Questions"
+      },
+      {
+        "type": "p",
+        "text": "How many pipeline stages should a recruiting module use? Few enough that every team uses them the same way — commonly applied, screening, interview, offer, and hired, with disposition reasons for candidates who leave."
+      },
+      {
+        "type": "p",
+        "text": "What belongs on the initial application form? Only what the first screening decision needs: contact details, eligibility for genuine minimum requirements, and the documents the team will actually review. Anything else belongs later, or nowhere."
+      },
+      {
+        "type": "p",
+        "text": "Should interview feedback use a scorecard or free-text comments? A structured scorecard tied to the job template, with room for evidence. Scorecards let the team compare candidates on the same criteria; free-text impressions gathered days later cannot be compared."
+      },
+      {
+        "type": "p",
+        "text": "What should the pilot prove before enterprise recruiting opens? One hiring group completing the whole round: requisition approved, posting published from a template, applications screened, interviews scored, offer accepted, the Core HR record created without re-keying, and the reporting pack produced from real data."
+      },
+      {
+        "type": "h2",
+        "text": "Next Steps"
+      },
+      {
+        "type": "p",
+        "text": "Start with the requisition design workshop: settle what a requisition must contain, the approval order and absence cover, the job templates, and the pipeline stages. Then map the career site and application flow, agree screening and knockout questions, configure scheduling, scorecards, and the offer workflow, confirm the Core HR handoff and candidate-data rules, and pilot one complete round before committing enterprise dates."
+      },
+      {
+        "type": "quiz",
+        "label": "Check your understanding",
+        "questions": [
+          {
+            "q": "A requisition has been open for two weeks with no posting published, because the second approver is on leave and nobody else can act. What should have been designed?",
+            "options": [
+              {
+                "text": "A shorter job template so postings can bypass approval when an approver is away",
+                "correct": false,
+                "why": "Bypassing approval removes the control the requisition exists to provide. The defect is the missing absence cover, not the template length."
+              },
+              {
+                "text": "Approval order with named absence cover, delegation, reminders, and escalation, tested before go-live",
+                "correct": true,
+                "why": "Approvers taking leave during a hiring round is certain, not exceptional. The workflow must name who acts in their place and escalate a stalled step, and that path must be tested in configuration."
+              },
+              {
+                "text": "Nothing — the hiring manager should post the role on a job board directly",
+                "correct": false,
+                "why": "Posting outside the system breaks the requisition control and takes applications outside the pipeline, so the round can no longer be evidenced as consistent."
+              }
+            ]
+          },
+          {
+            "q": "After the first round, the hiring manager complains that strong candidates were rejected before screening, and the team finds a knockout question was set on a preferred, not required, qualification. What is the root cause?",
+            "options": [
+              {
+                "text": "Knockout questions were not reviewed against the approved job template and limited to genuine minimum requirements",
+                "correct": true,
+                "why": "A knockout silently removes everyone who fails it. Each one must trace to a minimum requirement stated in the posting — a required licence or a non-negotiable condition — and be reviewed with the hiring manager before the posting opens."
+              },
+              {
+                "text": "The career site needs more search filters so candidates can avoid that posting",
+                "correct": false,
+                "why": "Filtering does not repair a screening rule that rejects qualified candidates. The question itself was wrong for the stage at which it was applied."
+              },
+              {
+                "text": "Candidates should be told to reapply and answer differently",
+                "correct": false,
+                "why": "Asking candidates to work around a defective rule corrupts the record and treats the symptom. Fix the knockout set and re-screen the affected applications under the corrected rule."
+              }
+            ]
+          },
+          {
+            "q": "At the end of the first hiring round, leadership asks for time in each pipeline stage and applications by source, but neither can be reported because stages were used inconsistently and source was rarely recorded. What went wrong in implementation?",
+            "options": [
+              {
+                "text": "Recruiters entered too many comments on candidate records",
+                "correct": false,
+                "why": "Comments do not prevent stage or source reporting when stages are shared and source is captured as structured data, as the design should ensure."
+              },
+              {
+                "text": "The reporting pack was not defined before go-live, so shared stages and source capture were never configured or enforced",
+                "correct": true,
+                "why": "Reporting is a design input, not an afterthought. The reports leadership will judge the round by must be specified early, which forces the shared stage definitions and source fields the pilot then proves."
+              },
+              {
+                "text": "The data should be rebuilt in spreadsheets after each hiring round",
+                "correct": false,
+                "why": "Rebuilding hiring evidence outside the system breaks the audit trail and guarantees the same scramble every round. Configure the reporting the process needs."
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
     "slug": "performance-module-implementation",
     "title": "Performance Management Module Implementation",
     "excerpt": "Implement a performance module that managers trust: goal cycles, calibration, review workflows, competencies, and reporting that supports fair decisions.",
