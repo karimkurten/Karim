@@ -1,5 +1,282 @@
 [
   {
+    "slug": "compensation-module-implementation",
+    "title": "Compensation Module Implementation",
+    "excerpt": "Implement a compensation module managers trust: salary structures, merit and bonus cycles, approvals, budget guardrails, and pay privacy by design.",
+    "publishedAt": "2026-11-27",
+    "readingTime": "8 min read",
+    "cover": "/images/blog/compensation-module-implementation-cover.webp",
+    "tags": [
+      "HCM",
+      "Implementation",
+      "Compensation",
+      "Total Rewards"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "A compensation module fails in a predictable way: the project configures the salary fields and discovers in the first live cycle that ranges were built on job data nobody trusts, managers keep their own spreadsheets, approvals stall, and payroll receives changes nobody can trace to an approved decision. The software worked. The compensation system around it was never implemented."
+      },
+      {
+        "type": "p",
+        "text": "This guide treats the module as an operating system for pay decisions — settle structures and job architecture before the cycle, design the workflow around the manager, hold budgets with guardrails, protect the most sensitive data in the system, pilot one complete cycle, and measure success by decisions completed consistently and on budget — not screens configured."
+      },
+      {
+        "type": "h2",
+        "text": "Salary structures and ranges rest on job architecture"
+      },
+      {
+        "type": "p",
+        "text": "The first design decision is not the cycle; it is the structure the cycle will pay against. Decide how jobs are grouped into grades or bands, what each range contains — minimum, midpoint, maximum — and which employees sit in which range. Decide who owns range maintenance when the structure changes. A cycle configured on an unsettled structure simply automates the argument about whether the ranges were right."
+      },
+      {
+        "type": "p",
+        "text": "Structures are only as sound as the job architecture beneath them. Every employee's job, grade, and organisational placement comes from [a Core HR implementation](/blog/core-hr-implementation-guide), and a recommendation made against the wrong job or grade is a pay defect. Before any cycle is designed, reconcile the job catalogue: phantom jobs, stale employee mappings, grades carried as free text. Freeze the structure once planning starts, with a named owner for exceptions, because a range that moves mid-cycle changes the meaning of every recommendation already made."
+      },
+      {
+        "type": "steps",
+        "label": "Implementing the compensation module, in order",
+        "intro": "Five moves that turn configured salary fields into a pay cycle teams trust.",
+        "items": [
+          {
+            "title": "Settle structures and job architecture first",
+            "text": "Agree grades or bands, range components, and range ownership, and reconcile the job catalogue in Core HR so every employee maps to a real job and grade before any cycle is designed."
+          },
+          {
+            "title": "Design the cycle workflow around decisions",
+            "text": "Define each cycle type, its eligibility and timeline, and the recommendation workflow a manager follows, so merit, bonus, and adjustment decisions are made once, in the system, in a consistent sequence."
+          },
+          {
+            "title": "Build approvals, budgets, and guardrails together",
+            "text": "Configure approval order with absence cover, budget pools allocated before recommendations open, and guardrails that flag out-of-range or over-budget proposals while a manager can still correct them."
+          },
+          {
+            "title": "Protect pay data and connect payroll and performance",
+            "text": "Set role-based visibility so each person sees only the pay data their role requires, link performance outcomes to recommendations deliberately, and test the handoff of approved changes to payroll."
+          },
+          {
+            "title": "Pilot one cycle group, enable, and measure the cycle",
+            "text": "Run one cycle group through planning, recommendations, calibration, approval, payroll handoff, and letters end to end. Fix workflow, control, and report defects in the pilot, then measure completion and budget adherence, not logins."
+          }
+        ]
+      },
+      {
+        "type": "img",
+        "src": "/images/blog/compensation-module-implementation-1.svg",
+        "alt": "Compensation cycle journey diagram: five stages from structures set and cycle planned through recommendations made and approvals with calibration to payroll handoff and employee letters, with the lead owner named at each stage and a strip showing that every stage depends on accurate Core HR job and grade data, and that the approved record is the only source for payroll, letters, and reports.",
+        "caption": "Compensation cycle journey: structures set, cycle planned, recommendations made, approvals and calibration, then payroll and letters, with lead owners at each stage and a strip noting that every stage depends on accurate Core HR job and grade data."
+      },
+      {
+        "type": "h2",
+        "text": "Design the cycle workflow: merit, bonus, and adjustments"
+      },
+      {
+        "type": "p",
+        "text": "A compensation cycle is a sequence of decisions with a deadline, and each cycle type decides differently. A merit cycle distributes increases against ranges and performance; a bonus cycle applies a plan's rules to results; equity and promotion adjustments correct placement or recognise a changed role. Decide for each type who is eligible and what inputs a recommendation needs. One generic cycle stretched across all three fits none of them."
+      },
+      {
+        "type": "p",
+        "text": "Design the workflow from the manager's chair. A manager needs one screen: current pay, position in range, the performance outcome where the design uses one, and the effect of a proposal on the remaining budget. Recommendations draw on [a performance module implementation](/blog/performance-module-implementation) where outcomes feed the decision — decide explicitly how that link works: a required input, a guideline reference, or not at all, because an undocumented link becomes an argument in every calibration meeting. Build in a calibration step where leaders review recommendations across teams before approval, while changes are still proposals. Test a mid-cycle job change, a leave spanning the window, and a late recommendation."
+      },
+      {
+        "type": "h2",
+        "text": "Approvals, manager self-service, and budget guardrails"
+      },
+      {
+        "type": "p",
+        "text": "Approvals are workflow design, not administration. Route recommendations through [a manager self-service rollout](/blog/manager-self-service-rollout), where each approver acts in sequence, with reminders and escalation when a step stalls. Decide who may approve exceptions, what happens when an approver is away, and which changes — an increase beyond a range maximum, an out-of-cycle adjustment — need a higher level. An approval chain that exists only in a project document will be bypassed by email in the first cycle."
+      },
+      {
+        "type": "p",
+        "text": "Budget pools and guardrails are how the cycle stays honest. Allocate the pool before recommendations open, at the level where decisions are made, and show managers their remaining budget. Guardrails should work while a correction is still cheap: flag a recommendation outside the range, warn when proposals exceed the pool, and require a recorded reason for an exception rather than blocking it silently. Decide in advance how an over-budget cycle is resolved: whose pool absorbs it and who approves that. The worst outcome is a cycle that balances only because someone edited numbers after approval."
+      },
+      {
+        "type": "img",
+        "src": "/images/blog/compensation-module-implementation-2.svg",
+        "alt": "Compensation control diagram: Core HR job and salary data plus performance outcomes feeding the compensation cycle in manager self-service, budget pools and approval controls applied to recommendations, then the payroll handoff and employee letters generated from the approved record, with a privacy strip covering role-based visibility, exception reasons, and access review, and a note that reporting is defined before go-live.",
+        "caption": "Compensation control diagram: Core HR job and salary data plus performance outcomes feeding the cycle, budget pools and approval controls applied to recommendations, then the payroll handoff and employee letters, with a privacy strip covering role-based visibility, exception reasons, and access review."
+      },
+      {
+        "type": "h2",
+        "text": "Pay equity, privacy, and access control"
+      },
+      {
+        "type": "p",
+        "text": "Compensation data is the most sensitive data the system holds, so access design is part of configuration, not a policy document filed afterwards. Decide who can see what, field by field: a manager sees their own team's pay because the cycle requires it, not other teams or the wider population. Build role-based visibility that follows actual cycle responsibility, and review it before the cycle opens, because access granted for configuration convenience survives into production. Build that handling on the same discipline as [data privacy in HR migrations](/blog/data-privacy-hr-migrations): expose only what each role's decision needs, and review access on a schedule."
+      },
+      {
+        "type": "p",
+        "text": "Pay equity review belongs in the design conversation, handled carefully. The module can support a review by making like-for-like comparison possible — consistent job architecture, recorded recommendation reasons, and an audit trail of approvals and exceptions. The implementation must not improvise the review itself: which comparisons are run, how differences are assessed, and what remediation follows are questions for the organisation's own advisors. This article describes implementation practice only; pay equity and privacy obligations in each jurisdiction are questions for those advisors."
+      },
+      {
+        "type": "h2",
+        "text": "Integrations: payroll handoff and the performance link"
+      },
+      {
+        "type": "p",
+        "text": "The integration that matters most is the payroll handoff, and it should be boring. Approved changes — new salary amounts, bonus payments, effective dates — pass to payroll as a controlled, traceable transfer, with totals reconciled before payroll accepts them and a clear rule for changes approved after the payroll cutoff. Test the handoff end to end in the pilot, including a correction: an approved amount that must be reversed is where undocumented handoffs fail. Keep the design vendor-neutral: decide what data moves, when, and who confirms receipt."
+      },
+      {
+        "type": "p",
+        "text": "The second connection runs onward to the employee: statements and letters delivered through [an employee self-service rollout](/blog/employee-self-service-rollout), so what an employee is told matches what was approved and paid. A letter that disagrees with the payroll result destroys trust in the whole cycle. Generate employee communications from the approved record, never from a parallel spreadsheet."
+      },
+      {
+        "type": "h2",
+        "text": "Pilot, enablement, and reporting defined before go-live"
+      },
+      {
+        "type": "p",
+        "text": "Pilot the module with one cycle group through a complete cycle: structures confirmed, pool allocated, recommendations made, calibration held, approvals completed, changes handed to payroll, and letters produced. A pilot that stops at managers viewing their teams proves almost nothing: the defects that matter live in approvals, budget controls, and the handoff. Fix workflow gaps, guardrail behaviour, and report definitions while the deadline is not real."
+      },
+      {
+        "type": "p",
+        "text": "Enablement decides the first cycle. Managers need practice recommending against a range, reading their remaining budget, and recording reasons an approver can act on; approvers need the calibration and exception routines. Then measure the rollout the way [HCM adoption metrics](/blog/hcm-adoption-metrics) should be measured: recommendations completed on time, approvals finished without rework, exceptions carrying recorded reasons, and cycle totals reconciled to the allocated pools — reported by cycle group, so a struggling population is helped, not hidden inside an average. Define the reporting pack before go-live: completion, budget against pool, exceptions by type, payroll reconciliation."
+      },
+      {
+        "type": "h2",
+        "text": "Common mistakes"
+      },
+      {
+        "type": "accordion",
+        "label": "Compensation module mistakes, as a diagnostic",
+        "items": [
+          {
+            "q": "Configuring the cycle before the structure and job data are settled",
+            "a": "A cycle built on disputed ranges and unreconciled job mappings automates the argument about whether the inputs were right. Settle grades, ranges, and the job catalogue first; configuration follows those decisions."
+          },
+          {
+            "q": "Stretching one generic cycle across merit, bonus, and adjustments",
+            "a": "Each cycle type decides differently — eligibility, inputs, and rules differ. A single stretched workflow fits none of them. Design each cycle type deliberately, sharing the approval and reporting patterns where they genuinely match."
+          },
+          {
+            "q": "Allocating the budget after recommendations are made",
+            "a": "A pool set after managers have proposed changes is a negotiation, not a control. Allocate pools before recommendations open, show remaining budget as managers work, and decide in advance how an over-budget cycle is resolved and by whom."
+          },
+          {
+            "q": "Giving broad visibility into pay data for configuration convenience",
+            "a": "Access granted so a project team can work quickly tends to survive into production. Set role-based visibility that follows each person's actual responsibility in the cycle, and review it before the cycle opens and on a schedule afterwards."
+          },
+          {
+            "q": "Editing approved numbers to make the cycle balance",
+            "a": "Post-approval edits break the audit trail between the decision, the letter, and the payroll result. Resolve over-budget cycles through the approval route with recorded reasons, so every paid amount traces to an approved decision."
+          },
+          {
+            "q": "Treating reporting as an afterthought",
+            "a": "If completion, budget, and exception reporting is not defined before go-live, the first cycle cannot be evidenced. Specify the reporting pack early and prove it in the pilot from real pilot recommendations."
+          }
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Key Takeaways"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "Settle salary structures, ranges, and the job architecture in Core HR before designing any cycle.",
+          "Design each cycle type — merit, bonus, equity and promotion adjustments — as a workflow with defined eligibility, inputs, and a calibration step.",
+          "Route approvals through manager self-service with absence cover, allocate budget pools before recommendations open, and use guardrails that flag problems while they are cheap to correct.",
+          "Restrict pay data with role-based visibility following actual cycle responsibility, hand approved changes to payroll as a reconciled transfer, and generate letters from the approved record.",
+          "Pilot one cycle group, define the reporting pack before go-live, and measure completion and budget adherence — not logins."
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Frequently Asked Questions"
+      },
+      {
+        "type": "p",
+        "text": "What must be settled before a compensation cycle is configured? The salary structure itself: grades or bands, range components, range ownership, and a reconciled job catalogue, so every employee maps to a real job and grade."
+      },
+      {
+        "type": "p",
+        "text": "How should budget pools be handled in the cycle? Allocate each pool before recommendations open and show managers their remaining budget as they work. Guardrails flag out-of-range or over-budget proposals while they can still be corrected, with reasons recorded for exceptions."
+      },
+      {
+        "type": "p",
+        "text": "Who should be able to see compensation data in the module? Only what each role's part in the cycle requires — a manager sees their own team's pay to make recommendations, and nothing beyond it. Visibility follows responsibility and is reviewed before the cycle opens."
+      },
+      {
+        "type": "p",
+        "text": "What should the pilot prove before enterprise compensation opens? One cycle group completing the whole cycle: structures confirmed, pool allocated, recommendations made and calibrated, approvals completed, changes reconciled into payroll, letters generated from the approved record, and reporting produced."
+      },
+      {
+        "type": "h2",
+        "text": "Next Steps"
+      },
+      {
+        "type": "p",
+        "text": "Start with the structure workshop: settle grades and ranges, reconcile the job catalogue, and name the structure owner. Then design each cycle type, agree the approval order and absence cover, allocate the budget pools and guardrails, confirm role-based visibility and the payroll handoff, and pilot one cycle group before committing enterprise dates."
+      },
+      {
+        "type": "quiz",
+        "label": "Check your understanding",
+        "questions": [
+          {
+            "q": "Two weeks into the first live merit cycle, managers are disputing recommendations because several employees are mapped to jobs they no longer hold and one grade is stored as free text. What should have been done in implementation?",
+            "options": [
+              {
+                "text": "Let managers correct the job and grade on the recommendation screen as they go",
+                "correct": false,
+                "why": "Cycle-time corrections fragment the record and make ranges meaningless. The defect is the unreconciled foundation, and fixing it inside the cycle hides it rather than resolving it."
+              },
+              {
+                "text": "Reconcile the job catalogue and freeze the structure before the cycle was designed, with a named owner for exceptions",
+                "correct": true,
+                "why": "Structures and recommendations are only as sound as the job architecture beneath them. Jobs, grades, and employee mappings must be reconciled in Core HR and frozen for the cycle before recommendations open."
+              },
+              {
+                "text": "Nothing — payroll can sort out the correct job when the changes arrive",
+                "correct": false,
+                "why": "Payroll pays what the approved record says. Handing payroll a reconciliation problem turns an implementation defect into incorrect pay."
+              }
+            ]
+          },
+          {
+            "q": "At the end of a cycle, the total of approved increases exceeds the allocated pool, and a project member proposes editing several approved amounts down so the totals match. What is the right response?",
+            "options": [
+              {
+                "text": "Make the edits quietly, since the final paid amounts are what matter",
+                "correct": false,
+                "why": "Editing approved amounts breaks the trace between the decision, the employee letter, and the payroll result, and hides an over-budget cycle that leadership never approved."
+              },
+              {
+                "text": "Route the overage through the approval process with recorded reasons, using the resolution agreed before the cycle opened",
+                "correct": true,
+                "why": "An over-budget cycle is a decision, not a data fix. The design should have settled in advance whose pool absorbs an overage and who approves it, so every paid amount still traces to an approved decision."
+              },
+              {
+                "text": "Reduce every increase by the same proportion automatically",
+                "correct": false,
+                "why": "A blanket reduction rewrites individual decisions nobody re-approved and penalises teams that stayed within their pools. Resolve the overage deliberately, team by team, through approval."
+              }
+            ]
+          },
+          {
+            "q": "After go-live, an HR analyst discovers she can view executive salaries across the company, although her role only covers cycle reporting for one division. What went wrong in implementation?",
+            "options": [
+              {
+                "text": "The reporting pack was defined too broadly",
+                "correct": false,
+                "why": "A broad report does not by itself grant record-level visibility. The defect is in access design, not in which reports were specified."
+              },
+              {
+                "text": "Role-based visibility was not set to follow actual cycle responsibility, or was left over from configuration access and never reviewed",
+                "correct": true,
+                "why": "Pay data is the most sensitive data in the system. Visibility must follow what each role's decisions require, be reviewed before the cycle opens, and be re-checked on a schedule, because configuration access tends to survive into production."
+              },
+              {
+                "text": "Nothing — anyone in HR should be able to see all pay data",
+                "correct": false,
+                "why": "Working in HR does not create a need to see every salary. Unrestricted visibility exposes the organisation and the employees whose data it holds, with no decision that requires it."
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
     "slug": "ats-module-implementation",
     "title": "Recruiting (ATS) Module Implementation",
     "excerpt": "Implement a recruiting module hiring teams trust: requisition approvals, career site flow, pipeline stages, scorecards, offers, and privacy by design.",
