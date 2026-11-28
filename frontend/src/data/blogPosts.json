@@ -1,5 +1,282 @@
 [
   {
+    "slug": "workforce-analytics-implementation",
+    "title": "Workforce Analytics and Reporting Implementation",
+    "excerpt": "Implement workforce analytics as a decision system: questions and metric definitions first, dashboards by audience, privacy thresholds, real adoption.",
+    "publishedAt": "2026-11-28",
+    "readingTime": "8 min read",
+    "cover": "/images/blog/workforce-analytics-implementation-cover.webp",
+    "tags": [
+      "HCM",
+      "Implementation",
+      "Analytics",
+      "Reporting"
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "Workforce analytics fails in a predictable way: the project builds dashboards first and discovers later that nobody agreed what the numbers mean. Headcount is calculated three ways in three reports, turnover changes depending on who ran it, and a manager finds data about individuals that should never have been visible at that level. The charts rendered. The decision system behind them was never implemented."
+      },
+      {
+        "type": "p",
+        "text": "This guide treats analytics as a decision system, not a reporting feature — define questions and metrics before any dashboard, own and version every definition, build on foundations the organisation trusts, design each dashboard for its audience, protect sensitive data with aggregation thresholds, pilot with one audience, and measure adoption by decisions changed, not views."
+      },
+      {
+        "type": "h2",
+        "text": "Start with the decisions, not the dashboard"
+      },
+      {
+        "type": "p",
+        "text": "The first design decision is not which chart to draw; it is which decisions the reporting exists to support. Sit with each audience and name them plainly: where capacity is constrained, where attrition risk is concentrating, whether a team's absence pattern needs intervention. Every metric that survives this conversation earns its place because a named decision depends on it. The rest is decoration — and decoration dilutes attention and invites arguments about numbers nobody needed."
+      },
+      {
+        "type": "p",
+        "text": "Write the questions down before any build begins, in the audience's own words, and attach each question to the metrics that answer it. That document becomes the scope of the implementation. When a new request arrives mid-project — and it will — assess it against the decision list: which decision does this serve, and whose? Requests that serve no decision wait. The discipline feels slow in week one and pays off for years."
+      },
+      {
+        "type": "steps",
+        "label": "Implementing workforce analytics, in order",
+        "intro": "Five moves that turn configured reports into a decision system leaders trust.",
+        "items": [
+          {
+            "title": "Define the questions and decisions first",
+            "text": "Name the decisions each audience must make, write the questions in their own words, and attach each question to the metrics that answer it. That decision list is the scope of the build; requests that serve no decision wait."
+          },
+          {
+            "title": "Agree, own, and version the metric definitions",
+            "text": "For every metric, record the formula, inclusions and exclusions, effective dating, and a named owner in a single definitions register. Version changes so a number can always be traced to the definition that produced it."
+          },
+          {
+            "title": "Prove the data foundations",
+            "text": "Reconcile the Core HR record, time data, and payroll data the metrics depend on. A metric calculated from disputed source data will be disputed itself, no matter how polished the dashboard looks."
+          },
+          {
+            "title": "Build dashboards by audience, with privacy thresholds",
+            "text": "Give executives, HR, and managers separate views shaped to their decisions, and apply aggregation thresholds so small groups never expose an individual's sensitive data."
+          },
+          {
+            "title": "Pilot with one audience and measure decisions",
+            "text": "Run one audience through a full reporting cycle, fix definition and access defects, then measure adoption by decisions taken and followed through — not dashboard views."
+          }
+        ]
+      },
+      {
+        "type": "img",
+        "src": "/images/blog/workforce-analytics-implementation-1.svg",
+        "alt": "Workforce analytics implementation journey diagram: five stages from questions and decisions defined through metric definitions agreed and data foundations proven to dashboards built by audience and adoption measured by decisions, with the lead owner named at each stage and a strip showing that every stage depends on trusted Core HR, time, and payroll data, and that definitions are owned and versioned with one meaning per metric.",
+        "caption": "Workforce analytics journey: questions defined, definitions agreed, data foundations proven, dashboards built by audience, then adoption measured by decisions, with lead owners at each stage and a strip noting that every stage depends on trusted Core HR, time, and payroll data."
+      },
+      {
+        "type": "h2",
+        "text": "Metric definitions are owned, versioned, and deliberately boring"
+      },
+      {
+        "type": "p",
+        "text": "A metric is a definition before it is a number. Headcount sounds simple until someone asks whether it includes employees on leave, contractors, or staff starting next month. Turnover sounds simple until the argument starts over voluntary and involuntary exits, internal transfers, and the period covered. These are ownership questions, not technical ones. Every metric needs a written definition — formula, inclusions and exclusions, date handling, named owner — held in one register."
+      },
+      {
+        "type": "p",
+        "text": "Definitions also need versioning, because definitions legitimately change: a reorganisation redraws a population, a policy change alters what counts as absence. When one changes, record the version, effective date, and reason; never restate history under a new definition silently. A leader who sees a trend line move because the definition moved — and is not told — stops trusting every other line on the page. Boring, documented, versioned definitions are what make an insight believable."
+      },
+      {
+        "type": "h2",
+        "text": "Data foundations: Core HR, time, and payroll"
+      },
+      {
+        "type": "p",
+        "text": "Analytics inherits the quality of whatever it calculates from. Most workforce metrics draw on three foundations: the employee record, time and absence data, and payroll data. The employee record comes from [a Core HR implementation](/blog/core-hr-implementation-guide) and carries the fields metrics group by — job, organisation unit, location, manager, employment type. If those fields are stale or inconsistently coded, every dashboard built on them is wrong in a way no visual design can fix. Reconcile the high-use fields first: duplicate records, phantom organisation units, departed managers still listed against a team."
+      },
+      {
+        "type": "p",
+        "text": "Time and payroll data bring their own traps. Absence metrics depend on absence being recorded consistently — a behaviour problem as much as a configuration one, since late-logged absence understates it on every dashboard. Payroll-derived measures, such as overtime cost or the figures alongside [a compensation module implementation](/blog/compensation-module-implementation), depend on pay periods and effective dates aligning with the reporting calendar. Decide the grain — which date a record counts against, how corrections are handled — and test it on real, messy records in the pilot, including a retroactive correction and a mid-period team change."
+      },
+      {
+        "type": "img",
+        "src": "/images/blog/workforce-analytics-implementation-2.svg",
+        "alt": "Workforce analytics control diagram: Core HR, time, and payroll data sources flowing through a metric definitions and governance layer — one register with a named owner per metric and versioned changes — into dashboards shaped for executive, HR, and manager audiences, with a privacy strip covering aggregation thresholds and role-based access, and a note that adoption is measured by decisions, not views.",
+        "caption": "Workforce analytics control diagram: Core HR, time, and payroll data sources flowing through a definitions and governance layer into dashboards by audience — executive, HR, and manager — with a privacy strip covering aggregation thresholds, role-based access, and definition versioning."
+      },
+      {
+        "type": "h2",
+        "text": "Dashboards by audience: executive, HR, and manager"
+      },
+      {
+        "type": "p",
+        "text": "One dashboard for everyone serves no one. Executives need a small set of organisation-level measures, trends over time, and the ability to see where a pattern concentrates — not a wall of charts. Their questions are comparative: where is this moving, and where should attention go next? Design for a short, stable view, readable in minutes."
+      },
+      {
+        "type": "p",
+        "text": "HR needs the working layer beneath the executive view: the same metrics, cut by the dimensions HR acts on, with drill paths from a pattern to the population behind it. Managers need something narrower: their own team, the few measures tied to decisions they actually make, delivered where they already work, through [a manager self-service rollout](/blog/manager-self-service-rollout) rather than a separate destination. A manager view showing peer teams' sensitive detail, or metrics the manager cannot influence, teaches managers to ignore the tool. Performance measures deserve care in every view: figures from [a performance module implementation](/blog/performance-module-implementation) carry context — calibration, cycle timing, incomplete reviews — that a bare number strips away, so show them with definitions visible, not as league tables."
+      },
+      {
+        "type": "h2",
+        "text": "Privacy, aggregation thresholds, and sensitive data"
+      },
+      {
+        "type": "p",
+        "text": "Workforce data is personal data, and some of it — absence reasons, pay-related measures, performance outcomes — is sensitive in a way a headcount chart is not. The control that does most of the work is the aggregation threshold: below a minimum group size, a report shows nothing, because a metric about a group of two is a fact about two identifiable people. Set thresholds deliberately, per data type, before go-live."
+      },
+      {
+        "type": "p",
+        "text": "Access follows the same principle: each audience sees the population its decisions cover, and no wider. Build that handling on the discipline of [data privacy in HR migrations](/blog/data-privacy-hr-migrations) — expose only what a role's decisions require, and review access on a schedule. Handle the legal framing carefully: which obligations apply in each jurisdiction, what may be shown, and how long it is retained are questions for the organisation's own advisors. This article describes implementation practice only; it is not legal advice, and thresholds and access rules should be confirmed against that advice."
+      },
+      {
+        "type": "h2",
+        "text": "Cadence, pilot, and adoption measured by decisions"
+      },
+      {
+        "type": "p",
+        "text": "Reporting needs a rhythm or it decays. Agree the cadence per audience — which pack is produced monthly, which measures are reviewed quarterly, what triggers an out-of-cycle look — and name who produces it and who acts on it. The cadence is also where definition changes are announced: a standing slot for version changes and data-quality issues keeps trust compounding instead of eroding."
+      },
+      {
+        "type": "p",
+        "text": "Pilot with one audience before building for all three. One executive pack or one HR team's working view, run through a complete cycle — data extracted, definitions applied, thresholds tested, the pack discussed in a real meeting — exposes the defects that matter: the metric two leaders calculate differently, the small team the threshold failed to protect, the empty field. Fix those in the pilot, where the audience is small and forgiving. Then measure adoption the way [HCM adoption metrics](/blog/hcm-adoption-metrics) should be measured: decisions informed and actions followed through — not views or logins. A report viewed a hundred times that changed nothing has failed; one viewed six times that settled a resourcing decision has done its job."
+      },
+      {
+        "type": "h2",
+        "text": "Common mistakes"
+      },
+      {
+        "type": "accordion",
+        "label": "Workforce analytics mistakes, as a diagnostic",
+        "items": [
+          {
+            "q": "Building dashboards before agreeing the questions",
+            "a": "Charts built before the decisions are named become decoration that dilutes attention and invites arguments about numbers nobody needed. Write each audience's questions down first, attach the metrics that answer them, and let that decision list scope the build."
+          },
+          {
+            "q": "Letting the same metric be defined differently in different reports",
+            "a": "When headcount or turnover is calculated one way in one report and another way elsewhere, leaders stop trusting all of them. Hold every definition in one register, with a named owner, and let no report calculate outside it."
+          },
+          {
+            "q": "Changing a definition without versioning it",
+            "a": "A silent definition change moves a trend line and nobody is told why. Record the version, effective date, and reason for every change, and announce changes at the reporting cadence rather than restating history quietly."
+          },
+          {
+            "q": "Reporting on foundations nobody reconciled",
+            "a": "Stale organisation units, duplicate records, and late-logged absence flow straight into the dashboards. Reconcile the high-use Core HR fields and test time and payroll data on real, messy records before the build, not after the first challenge in a leadership meeting."
+          },
+          {
+            "q": "Skipping aggregation thresholds for small teams",
+            "a": "A metric about a group of two is a fact about two identifiable people. Set minimum group sizes per data type before go-live, and test the threshold in the pilot on the smallest real teams in scope."
+          },
+          {
+            "q": "Measuring adoption by dashboard views",
+            "a": "Views and logins measure curiosity, not value. Measure the decisions the reporting informed and the actions agreed and followed through. A little-viewed report that settles a real decision is succeeding; a popular one that changes nothing is not."
+          }
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Key Takeaways"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "Define each audience's decisions and questions before building anything, and let that list scope the implementation.",
+          "Hold every metric in one owned, versioned definitions register — formula, inclusions and exclusions, and a named owner.",
+          "Reconcile the Core HR, time, and payroll foundations first; analytics inherits the quality of its sources.",
+          "Design dashboards separately for executive, HR, and manager audiences; protect sensitive data with aggregation thresholds and role-based access.",
+          "Pilot with one audience, run reporting on an agreed cadence, and measure adoption by decisions followed through — not views."
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Frequently Asked Questions"
+      },
+      {
+        "type": "p",
+        "text": "What should be defined before any workforce dashboard is built? The decisions each audience must make, the questions that inform them, and the metrics that answer each question. That list scopes the build and gives later requests something to be assessed against."
+      },
+      {
+        "type": "p",
+        "text": "Who should own metric definitions, and how should changes be handled? Each metric has a named owner and a written definition in one register: formula, inclusions and exclusions, date handling. Changes are versioned with an effective date and reason, announced at the cadence — never applied silently."
+      },
+      {
+        "type": "p",
+        "text": "How do aggregation thresholds protect sensitive workforce data? A threshold sets a minimum group size below which a report shows nothing, so a metric about a very small team cannot expose facts about identifiable individuals. Set thresholds per data type before go-live and test them on the smallest real teams."
+      },
+      {
+        "type": "p",
+        "text": "How should adoption of workforce reporting be measured? By decisions, not views: decisions informed, actions agreed and followed through, definitions reused across audiences. Views and logins measure curiosity, not value."
+      },
+      {
+        "type": "h2",
+        "text": "Next Steps"
+      },
+      {
+        "type": "p",
+        "text": "Start with the decision workshop: name each audience's decisions, write the questions, and agree the first metrics in a definitions register with owners. Then reconcile the foundations, set thresholds and access per audience, build the pilot view for one audience, and run a complete reporting cycle before committing enterprise dates."
+      },
+      {
+        "type": "quiz",
+        "label": "Check your understanding",
+        "questions": [
+          {
+            "q": "In a leadership meeting, the executive pack shows one turnover figure and an HR report shows a different one for the same period. Both were calculated in good faith. What went wrong in implementation?",
+            "options": [
+              {
+                "text": "One of the reports has a charting error that a visual check would catch",
+                "correct": false,
+                "why": "Two different figures for the same period and metric is a definition problem, not a rendering problem. A chart can display a wrongly defined number perfectly."
+              },
+              {
+                "text": "The metric was never held in a single owned definition, so each report calculated it its own way",
+                "correct": true,
+                "why": "Turnover depends on inclusions, exclusions, and period handling that must be settled once, in a definitions register with a named owner. Without that, every report invents its own version and trust in all of them collapses."
+              },
+              {
+                "text": "Nothing — different audiences should expect slightly different numbers",
+                "correct": false,
+                "why": "Audiences may see different cuts of a metric, but the underlying definition must be identical. Different definitions for the same named metric is a defect, not audience tailoring."
+              }
+            ]
+          },
+          {
+            "q": "A manager opens a team absence report for a team of three and can work out exactly which colleague was absent and, from the category shown, why. What control should have prevented this?",
+            "options": [
+              {
+                "text": "A longer reporting delay, so the absence is older before it appears",
+                "correct": false,
+                "why": "Delay does not de-identify anyone. The record is still about a named-able individual in a very small group, whenever it is shown."
+              },
+              {
+                "text": "An aggregation threshold that suppresses reporting below a minimum group size, set per data type before go-live",
+                "correct": true,
+                "why": "Below a minimum group size, a metric about a group is a fact about identifiable people. Thresholds set deliberately — and tested on the smallest real teams — are the control that prevents exactly this exposure."
+              },
+              {
+                "text": "Removing absence reporting for all managers",
+                "correct": false,
+                "why": "That overcorrects: managers have legitimate decisions that team-level absence patterns inform. The fix is thresholds and audience-appropriate access, not removing the reporting."
+              }
+            ]
+          },
+          {
+            "q": "Six months after go-live, dashboard views are high, but no resourcing, retention, or absence decision in the review meetings has referenced the reporting. How should adoption be judged?",
+            "options": [
+              {
+                "text": "Adoption is strong — high views show the reporting is popular and embedded",
+                "correct": false,
+                "why": "Views measure curiosity, not value. Reporting that changes no decision is shelfware with good traffic, and judging it a success hides the failure."
+              },
+              {
+                "text": "Adoption is failing — the measure is decisions informed and actions followed through, and by that measure nothing has landed",
+                "correct": true,
+                "why": "Analytics is a decision system. Adoption should be measured by decisions the reporting informed and actions agreed and completed. High views with no decisions means the questions, cadence, or audience design needs revisiting."
+              },
+              {
+                "text": "The dashboards need more charts so viewers can find something useful",
+                "correct": false,
+                "why": "More charts built without named decisions adds decoration, which is how the problem started. The remedy is returning to the decision list, not expanding the catalogue."
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
     "slug": "compensation-module-implementation",
     "title": "Compensation Module Implementation",
     "excerpt": "Implement a compensation module managers trust: salary structures, merit and bonus cycles, approvals, budget guardrails, and pay privacy by design.",
